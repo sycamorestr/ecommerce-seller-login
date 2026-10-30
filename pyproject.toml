@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecommerce-seller-login"
+version = "0.1.0"
+description = "电商平台登录：千牛、京麦、拼多多、抖店、支付宝 Playwright 登录"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "playwright>=1.40",
+  "selenium>=4.15",
+  "Pillow>=10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools]
+py-modules = [
+  "qianniu_login",
+  "qianniu_login_pw",
+  "seller_common",
+  "captcha_helpers",
+  "jingmai_login_pw",
+  "pdd_login_pw",
+  "doudian_login_pw",
+  "alipay_login_pw",
+]

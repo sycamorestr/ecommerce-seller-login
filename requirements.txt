@@ -1,0 +1,4 @@
+playwright>=1.40
+selenium>=4.15
+Pillow>=10
+pytest>=8

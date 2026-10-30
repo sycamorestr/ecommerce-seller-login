@@ -1,0 +1,854 @@
+[
+  {
+    "name": "xbot_extensions.activity_7bca6d.抖店登录",
+    "statement": "process.invoke_activity",
+    "title": "抖店登录",
+    "keywords": "",
+    "description": "该指令实现自动登录抖店后台（若报错，请考虑切换至“抖店操作 - 抖店多店铺登录”）",
+    "comment": "登录抖店，保存网页对象至 %web_page%，退出已登录账户：%退出已登录账户%",
+    "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/air_play.png",
+    "function": "xbot_extensions.activity_7bca6d.process4",
+    "helpUrl": "/yddoc/rpa/zh-CN/711965188607086592",
+    "extension": "登录扩展操作",
+    "hidden": false,
+    "canDebug": true,
+    "isCondition": false,
+    "isLoop": false,
+    "isPseudo": false,
+    "inputs": [
+      {
+        "name": "username",
+        "label": "抖店账号",
+        "required": false,
+        "tips": "登录邮箱",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "textbox",
+          "placeholder": "请使用邮箱登录抖店后台"
+        },
+        "category": "general"
+      },
+      {
+        "name": "password",
+        "label": "抖店密码",
+        "required": false,
+        "tips": "登录密码",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "password"
+        },
+        "category": "general"
+      },
+      {
+        "name": "验证邮箱",
+        "label": "验证邮箱",
+        "required": false,
+        "tips": "输入账户绑定邮箱，或手机短线转发邮箱。邮箱验证时使用",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "textbox",
+          "placeholder": null
+        },
+        "category": "general"
+      },
+      {
+        "name": "邮箱授权码",
+        "label": "邮箱授权码",
+        "required": false,
+        "tips": "邮箱授权码，获取方式可百度 163邮箱获取授权码，或qq邮箱获取授权码",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "textbox",
+          "placeholder": null
+        },
+        "category": "general"
+      },
+      {
+        "name": "退出已登录账户",
+        "label": "",
+        "required": false,
+        "tips": "",
+        "type": "bool",
+        "default": "13:False",
+        "editor": {
+          "kind": "checkbox",
+          "label": "退出已登录账户"
+        },
+        "category": "general"
+      },
+      {
+        "name": "验证码失败最大重试次数",
+        "label": "验证码失败最大重试次数",
+        "required": false,
+        "tips": "",
+        "type": "int",
+        "default": "13:10",
+        "editor": {
+          "kind": "spin"
+        },
+        "category": "advanced"
+      },
+      {
+        "name": "获取授权码间隔时长",
+        "label": "获取授权码间隔时长",
+        "required": false,
+        "tips": "",
+        "type": "int",
+        "default": "13:20",
+        "editor": {
+          "kind": "spin"
+        },
+        "category": "advanced"
+      },
+      {
+        "name": "retry_cnt",
+        "label": "retry_cnt",
+        "required": false,
+        "tips": "登录流程失败重试次数",
+        "type": "int",
+        "default": "13:3",
+        "editor": {
+          "kind": "spin"
+        },
+        "category": "advanced"
+      },
+      {
+        "name": "网页对象",
+        "label": "网页对象",
+        "required": false,
+        "tips": "不填则默认打开一个新的网页对象",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "textbox",
+          "placeholder": null
+        },
+        "category": "general"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "web_page",
+        "label": "保存网页对象至",
+        "tips": "网页对象",
+        "name": "web_page",
+        "type": "xbot._web.browser.WebBrowser"
+      }
+    ]
+  },
+  {
+    "name": "xbot_extensions.activity_7bca6d.支付宝登录",
+    "statement": "process.invoke_activity",
+    "title": "支付宝登录",
+    "keywords": "",
+    "description": "该指令实现自动登录支付宝后台(注:识别验证码会产生额外费用)",
+    "comment": "在 %浏览器类型% 浏览器登录支付宝帐号 %登录账号%，保存网页对象到 %web_page% 中",
+    "icon": "BlockIcons/21-2.png",
+    "function": "xbot_extensions.activity_7bca6d.process20",
+    "helpUrl": "/yddoc/rpa/zh-CN/711962300366110720",
+    "extension": "登录扩展操作",
+    "hidden": false,
+    "canDebug": true,
+    "isCondition": false,
+    "isLoop": false,
+    "isPseudo": false,
+    "inputs": [
+      {
+        "name": "浏览器类型",
+        "label": "浏览器类型",
+        "required": false,
+        "tips": "",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "select",
+          "useVariableOptions": false,
+          "options": [
+            {
+              "display": "Google Chrome浏览器",
+              "value": "chrome",
+              "Unicode": null
+            },
+            {
+              "display": "影刀浏览器",
+              "value": "cef",
+              "Unicode": null
+            },
+            {
+              "display": "Microsoft Edge浏览器",
+              "value": "edge",
+              "Unicode": null
+            },
+            {
+              "display": "Mozilla Firefox浏览器",
+              "value": "firefox",
+              "Unicode": null
+            },
+            {
+              "display": "360安全浏览器",
+              "value": "360se",
+              "Unicode": null
+            }
+          ]
+        },
+        "category": "general"
+      },
+      {
+        "name": "登录账号",
+        "label": "登录账号",
+        "required": false,
+        "tips": "",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "textbox",
+          "placeholder": null
+        },
+        "category": "general"
+      },
+      {
+        "name": "登录密码",
+        "label": "登录密码",
+        "required": false,
+        "tips": "",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "password"
+        },
+        "category": "general"
+      },
+      {
+        "name": "重试次数",
+        "label": "重试次数",
+        "required": false,
+        "tips": "重试次数为点选验证码的重试次数, 必须大于等于1",
+        "type": "int",
+        "default": "13:5",
+        "editor": {
+          "kind": "spin"
+        },
+        "category": "advanced"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "web_page",
+        "label": "web_page",
+        "name": "web_page",
+        "type": "xbot._web.browser.WebBrowser"
+      }
+    ]
+  },
+  {
+    "name": "xbot_extensions.activity_7bca6d.拼多多登录",
+    "statement": "process.invoke_activity",
+    "title": "拼多多登录",
+    "keywords": "",
+    "description": "该指令实现自动登录拼多多后台（注:登录验证码识别会产生额外费用）",
+    "comment": "使用%账号%在%浏览器类型%登录拼多多后台 ，保存网页对象至%网页对象%",
+    "icon": "BlockIcons/21-2.png",
+    "function": "xbot_extensions.activity_7bca6d.process21",
+    "helpUrl": "/yddoc/rpa/zh-CN/711961282334330880",
+    "extension": "登录扩展操作",
+    "hidden": false,
+    "canDebug": true,
+    "isCondition": false,
+    "isLoop": false,
+    "isPseudo": false,
+    "inputs": [
+      {
+        "name": "浏览器类型",
+        "label": "浏览器类型",
+        "required": false,
+        "tips": "",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "select",
+          "useVariableOptions": false,
+          "options": [
+            {
+              "display": "Google Chrome浏览器",
+              "value": "chrome",
+              "Unicode": null
+            },
+            {
+              "display": "影刀浏览器",
+              "value": "cef",
+              "Unicode": null
+            },
+            {
+              "display": "Microsoft Edge浏览器",
+              "value": "edge",
+              "Unicode": null
+            },
+            {
+              "display": "Mozilla Firefox浏览器",
+              "value": "firefox",
+              "Unicode": null
+            },
+            {
+              "display": "360安全浏览器",
+              "value": "360se",
+              "Unicode": null
+            },
+            {
+              "display": "hubstudio浏览器",
+              "value": "hubstudio",
+              "Unicode": null
+            },
+            {
+              "display": "ADS浏览器",
+              "value": "SunBrowser",
+              "Unicode": null
+            }
+          ]
+        },
+        "category": "general"
+      },
+      {
+        "name": "识别引擎",
+        "label": "识别引擎",
+        "required": false,
+        "tips": "",
+        "type": "str",
+        "default": "10:云码引擎(付费增值服务)",
+        "editor": {
+          "kind": "select",
+          "useVariableOptions": false,
+          "options": [
+            {
+              "display": "云码引擎(付费增值服务)",
+              "value": "云码引擎(付费增值服务)",
+              "Unicode": null
+            }
+          ]
+        },
+        "category": "general"
+      },
+      {
+        "name": "账号",
+        "label": "账号",
+        "required": false,
+        "tips": "请输入拼多多账号",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "textbox",
+          "placeholder": "请输入拼多多账号"
+        },
+        "category": "general"
+      },
+      {
+        "name": "密码",
+        "label": "密码",
+        "required": false,
+        "tips": "请输入拼多多密码",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "password"
+        },
+        "category": "general"
+      },
+      {
+        "name": "是否创建新页面",
+        "label": "是否创建新页面",
+        "required": false,
+        "tips": "是否创建新页面",
+        "type": "bool",
+        "default": "13:False",
+        "editor": {
+          "kind": "checkbox",
+          "label": "是否创建新页面"
+        },
+        "category": "general"
+      },
+      {
+        "name": "验证码重试次数",
+        "label": "验证码重试次数",
+        "required": false,
+        "tips": "验证码重试次数",
+        "type": "int",
+        "default": "13:5",
+        "editor": {
+          "kind": "spin"
+        },
+        "category": "advanced"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "网页对象",
+        "label": "网页对象",
+        "name": "网页对象",
+        "type": "xbot._web.browser.WebBrowser"
+      }
+    ]
+  },
+  {
+    "name": "xbot_extensions.activity_7bca6d.测试_抖店登录",
+    "statement": "process.invoke_activity",
+    "title": "子流程1",
+    "keywords": "",
+    "description": null,
+    "comment": null,
+    "icon": "BlockIcons/21-2.png",
+    "function": "xbot_extensions.activity_7bca6d.process22",
+    "helpUrl": null,
+    "extension": "登录扩展操作",
+    "hidden": true,
+    "canDebug": true,
+    "isCondition": false,
+    "isLoop": false,
+    "isPseudo": false,
+    "inputs": [],
+    "outputs": []
+  },
+  {
+    "name": "xbot_extensions.activity_7bca6d.测试抖店登录",
+    "statement": "process.invoke_activity",
+    "title": "子流程1",
+    "keywords": "",
+    "description": null,
+    "comment": null,
+    "icon": "BlockIcons/21-2.png",
+    "function": "xbot_extensions.activity_7bca6d.process26",
+    "helpUrl": null,
+    "extension": "登录扩展操作",
+    "hidden": true,
+    "canDebug": true,
+    "isCondition": false,
+    "isLoop": false,
+    "isPseudo": false,
+    "inputs": [],
+    "outputs": []
+  },
+  {
+    "name": "xbot_extensions.activity_7bca6d.测试拼多多登录",
+    "statement": "process.invoke_activity",
+    "title": "子流程1",
+    "keywords": "",
+    "description": null,
+    "comment": null,
+    "icon": "BlockIcons/21-2.png",
+    "function": "xbot_extensions.activity_7bca6d.process30",
+    "helpUrl": null,
+    "extension": "登录扩展操作",
+    "hidden": true,
+    "canDebug": true,
+    "isCondition": false,
+    "isLoop": false,
+    "isPseudo": false,
+    "inputs": [],
+    "outputs": []
+  },
+  {
+    "name": "xbot_extensions.activity_7bca6d.测试_支付宝登录",
+    "statement": "process.invoke_activity",
+    "title": "子流程1",
+    "keywords": "",
+    "description": null,
+    "comment": null,
+    "icon": "BlockIcons/21-2.png",
+    "function": "xbot_extensions.activity_7bca6d.process37",
+    "helpUrl": null,
+    "extension": "登录扩展操作",
+    "hidden": true,
+    "canDebug": true,
+    "isCondition": false,
+    "isLoop": false,
+    "isPseudo": false,
+    "inputs": [],
+    "outputs": []
+  },
+  {
+    "name": "xbot_extensions.activity_7bca6d.测试_拼多多登录",
+    "statement": "process.invoke_activity",
+    "title": "子流程1",
+    "keywords": "",
+    "description": null,
+    "comment": null,
+    "icon": "BlockIcons/21-2.png",
+    "function": "xbot_extensions.activity_7bca6d.process38",
+    "helpUrl": null,
+    "extension": "登录扩展操作",
+    "hidden": true,
+    "canDebug": true,
+    "isCondition": false,
+    "isLoop": false,
+    "isPseudo": false,
+    "inputs": [],
+    "outputs": []
+  },
+  {
+    "name": "xbot_extensions.activity_7bca6d.京麦登录",
+    "statement": "process.invoke_activity",
+    "title": "京麦登录",
+    "keywords": "",
+    "description": "京麦登录指令，该指令实现滑动验证码时会产生费用",
+    "comment": "使用账号%京麦账号%登录京麦后台, 使用图鉴账号%图鉴账号%进行滑块验证，保存网页对象至  %保存网页对象%",
+    "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/04%E7%95%8C%E9%9D%A2/external.png",
+    "function": "xbot_extensions.activity_7bca6d.process56",
+    "helpUrl": "/yddoc/rpa/zh-CN/711828904958464000",
+    "extension": "登录扩展操作",
+    "hidden": false,
+    "canDebug": true,
+    "isCondition": false,
+    "isLoop": false,
+    "isPseudo": false,
+    "inputs": [
+      {
+        "name": "浏览器类型",
+        "label": "浏览器类型",
+        "required": false,
+        "tips": "",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "select",
+          "useVariableOptions": false,
+          "options": [
+            {
+              "display": "谷歌浏览器",
+              "value": "chrome",
+              "Unicode": null
+            },
+            {
+              "display": "影刀浏览器",
+              "value": "cef",
+              "Unicode": null
+            },
+            {
+              "display": "Edge浏览器",
+              "value": "edge",
+              "Unicode": null
+            },
+            {
+              "display": "ADS浏览器",
+              "value": "SunBrowser",
+              "Unicode": null
+            }
+          ]
+        },
+        "category": "general"
+      },
+      {
+        "name": "京麦账号",
+        "label": "京麦账号",
+        "required": false,
+        "tips": "",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "textbox",
+          "placeholder": "请输入京麦登录账号"
+        },
+        "category": "general"
+      },
+      {
+        "name": "京麦密码",
+        "label": "京麦密码",
+        "required": false,
+        "tips": "",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "password"
+        },
+        "category": "general"
+      },
+      {
+        "name": "识别引擎",
+        "label": "识别引擎",
+        "required": false,
+        "tips": "",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "select",
+          "useVariableOptions": false,
+          "options": [
+            {
+              "display": "影刀引擎",
+              "value": "影刀引擎",
+              "Unicode": null
+            }
+          ]
+        },
+        "category": "general"
+      },
+      {
+        "name": "图鉴账号",
+        "label": "图鉴账号",
+        "required": false,
+        "tips": "",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "textbox",
+          "placeholder": "请输入图鉴账号"
+        },
+        "category": "advanced"
+      },
+      {
+        "name": "图鉴密码",
+        "label": "图鉴密码",
+        "required": false,
+        "tips": "",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "password"
+        },
+        "category": "advanced"
+      },
+      {
+        "name": "重试次数",
+        "label": "重试次数",
+        "required": false,
+        "tips": "",
+        "type": "int",
+        "default": "13:5",
+        "editor": {
+          "kind": "spin"
+        },
+        "category": "advanced"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "保存网页对象",
+        "label": "保存网页对象",
+        "name": "保存网页对象",
+        "type": "xbot._web.browser.WebBrowser"
+      }
+    ]
+  },
+  {
+    "name": "xbot_extensions.activity_7bca6d.千牛登录",
+    "statement": "process.invoke_activity",
+    "title": "千牛登录",
+    "keywords": "",
+    "description": "该指令实现了在千牛登录页面实现千牛登录操作",
+    "comment": "",
+    "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/d9/75/d9751e7c6d6d902a7fca9d1f7cdea569.png",
+    "function": "xbot_extensions.activity_7bca6d.process62",
+    "helpUrl": null,
+    "extension": "登录扩展操作",
+    "hidden": true,
+    "canDebug": true,
+    "isCondition": false,
+    "isLoop": false,
+    "isPseudo": false,
+    "inputs": [
+      {
+        "name": "浏览器类型",
+        "label": "浏览器类型",
+        "required": false,
+        "tips": "选择操作的浏览器类型",
+        "type": "str",
+        "default": "10:chrome",
+        "editor": {
+          "kind": "select",
+          "useVariableOptions": false,
+          "options": [
+            {
+              "display": "chrome",
+              "value": "chrome",
+              "Unicode": null
+            },
+            {
+              "display": "edge",
+              "value": "edge",
+              "Unicode": null
+            }
+          ]
+        },
+        "category": "general"
+      },
+      {
+        "name": "账号",
+        "label": "账号",
+        "required": false,
+        "tips": "登录账号",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "textbox",
+          "placeholder": null
+        },
+        "category": "general"
+      },
+      {
+        "name": "密码",
+        "label": "密码",
+        "required": false,
+        "tips": "登录密码",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "textbox",
+          "placeholder": null
+        },
+        "category": "general"
+      },
+      {
+        "name": "重试次数",
+        "label": "重试次数",
+        "required": false,
+        "tips": "验证码最大尝试次数",
+        "type": "str",
+        "default": "10:3",
+        "editor": {
+          "kind": "textbox",
+          "placeholder": null
+        },
+        "category": "advanced"
+      }
+    ],
+    "outputs": []
+  },
+  {
+    "name": "xbot_extensions.activity_7bca6d.qn_login",
+    "statement": "process.invoke_activity",
+    "title": "千牛登录",
+    "keywords": "",
+    "description": "该指令实现了账号密码登录千牛的功能（注：验证码产生费用）",
+    "comment": "在%mode%浏览器上，实现千牛登录",
+    "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/8f/64/8f64bb2d9681c4f47688f7c6319fd255.png",
+    "function": "xbot_extensions.activity_7bca6d.qn_login",
+    "helpUrl": "/yddoc/rpa/zh-CN/742655584789909504",
+    "extension": "登录扩展操作",
+    "hidden": false,
+    "canDebug": true,
+    "isCondition": false,
+    "isLoop": false,
+    "isPseudo": false,
+    "inputs": [
+      {
+        "name": "mode",
+        "label": "网页类型",
+        "required": false,
+        "tips": "浏览器类型",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "select",
+          "useVariableOptions": false,
+          "options": [
+            {
+              "display": "Google Chrome浏览器",
+              "value": "chrome",
+              "Unicode": null
+            },
+            {
+              "display": "Microsoft Edge浏览器",
+              "value": "edge",
+              "Unicode": null
+            },
+            {
+              "display": "影刀浏览器",
+              "value": "cef",
+              "Unicode": null
+            },
+            {
+              "display": "ADS浏览器",
+              "value": "SunBrowser",
+              "Unicode": null
+            }
+          ]
+        },
+        "category": "general"
+      },
+      {
+        "name": "engine",
+        "label": "识别引擎",
+        "required": false,
+        "tips": "识别引擎",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "select",
+          "useVariableOptions": false,
+          "options": [
+            {
+              "display": "影刀引擎 (付费增值服务)",
+              "value": "xbot",
+              "Unicode": null
+            },
+            {
+              "display": "云码引擎 (高级自定义Token)",
+              "value": "ym",
+              "Unicode": null
+            }
+          ]
+        },
+        "category": "general"
+      },
+      {
+        "name": "username",
+        "label": "账号",
+        "required": false,
+        "tips": "登录账号",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "textbox",
+          "placeholder": null
+        },
+        "category": "general"
+      },
+      {
+        "name": "password",
+        "label": "密码",
+        "required": false,
+        "tips": "登录密码",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "password"
+        },
+        "category": "general"
+      },
+      {
+        "name": "retry_count",
+        "label": "重试次数",
+        "required": false,
+        "tips": "验证码重试次数",
+        "type": "int",
+        "default": "13:5",
+        "editor": {
+          "kind": "spin"
+        },
+        "category": "advanced"
+      },
+      {
+        "name": "token",
+        "label": "云码 Token",
+        "required": false,
+        "tips": "云码Token",
+        "type": "str",
+        "default": "10:",
+        "editor": {
+          "kind": "textbox",
+          "placeholder": null
+        },
+        "category": "advanced"
+      }
+    ],
+    "outputs": [
+      {
+        "id": "web_page",
+        "label": "web_page",
+        "name": "web_page",
+        "type": "xbot._web.browser.WebBrowser"
+      }
+    ]
+  }
+]
