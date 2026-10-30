@@ -1,0 +1,543 @@
+<root>
+  <item name="xbot_extensions.activity_26766b38" display="activity_26766b38" kind="module">
+    <item.method />
+    <item.desc>生意参谋数据获取
+该指令集实现了生意参谋后台数据的下载</item.desc>
+    <item name="xbot_extensions.activity_26766b38.process2" display="process2" kind="function" help="/yddoc/rpa/zh-CN/889705689640013824">
+      <item.method>process2(查询日期,保存文件夹,开启页面统计时间校验)</item.method>
+      <item.desc>品类-宏观监控核心指标监控数据获取
+品类板块下 宏观监控-核心指标监控-商品效率监控-下核心指标监控数据下载
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process3" display="process3" kind="function" help="/yddoc/rpa/zh-CN/889705663786516480">
+      <item.method>process3(保存文件夹,查询日期,开启页面统计时间校验,网页对象,选择视角,文件名)</item.method>
+      <item.desc>品类-全部商品排行数据获取
+品类板块下 商品排行-商品排行-全部商品排行 数据下载
+* @param 保存文件夹，
+* @param 查询日期，
+* @param 开启页面统计时间校验，
+* @param 网页对象，
+* @param 选择视角，
+* @param 文件名，需要带扩展名
+* @return 输出文件路径，
+* @return 执行状态，
+* @return 数据集对象列表，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process4" display="process4" kind="function" help="/yddoc/rpa/zh-CN/889705614380367872">
+      <item.method>process4(sku列表,终端选择,保存文件夹,查询日期,开启页面统计时间校验)</item.method>
+      <item.desc>品类-商品360销售分析核心概况数据获取
+品类板块下 商品360-销售分析-核心概况数据下载
+* @param sku列表，
+* @param 终端选择，无线端/所有终端
+* @param 保存文件夹，
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 开启页面统计时间校验，
+* @return 执行状态，
+* @return 失败sku列表，
+* @return 文件下载路径，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process5" display="process5" kind="function" help="/yddoc/rpa/zh-CN/889705586707599360">
+      <item.method>process5(sku列表,终端选择,保存文件夹,查询日期,开启页面统计时间校验)</item.method>
+      <item.desc>品类-商品360销售分析sku销售详情数据获取
+品类板块下 商品360-销售分析-sku销售详情 数据下载
+* @param sku列表，
+* @param 终端选择，
+* @param 保存文件夹，
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 开启页面统计时间校验，
+* @return 执行状态，
+* @return 失败sku列表，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process6" display="process6" kind="function" help="/yddoc/rpa/zh-CN/889705561491636224">
+      <item.method>process6(查询日期,类目选择,保存文件夹,开启页面统计时间校验,网页对象)</item.method>
+      <item.desc>品类-品类360排行数据获取
+品类板块下-品类360-品类排行 标准类目/导购类目 数据下载
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 类目选择，
+* @param 保存文件夹，
+* @param 开启页面统计时间校验，
+* @param 网页对象，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process7" display="process7" kind="function" help="/yddoc/rpa/zh-CN/889705218645032960">
+      <item.method>process7(查询日期,保存文件夹,开启页面统计时间校验)</item.method>
+      <item.desc>服务-核心监控-客服团队概况数据获取
+用于 生意参谋-服务-核心监控-客服团队概况数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期日周月
+* @param 保存文件夹，
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process8" display="process8" kind="function" help="/yddoc/rpa/zh-CN/889705244389670912">
+      <item.method>process8(查询日期,保存文件夹,排名方式,开启页面统计时间校验)</item.method>
+      <item.desc>服务-核心监控-客服排名数据获取
+用于 生意参谋-服务-核心监控-客服排名 数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期日周月
+* @param 保存文件夹，
+* @param 排名方式，客服排名/客服组排名
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process9" display="process9" kind="function" help="/yddoc/rpa/zh-CN/889705267806470144">
+      <item.method>process9(查询日期,保存文件夹,分析范围,汇总分析类型,开启页面统计时间校验)</item.method>
+      <item.desc>服务-店铺绩效-业绩分析数据获取
+用于 生意参谋-服务-店铺绩效-业绩分析 数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期日周月
+* @param 保存文件夹，
+* @param 分析范围，汇总分析/询单到下单/...
+* @param 汇总分析类型，店铺/客服/静默
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process10" display="process10" kind="function" help="/yddoc/rpa/zh-CN/889705290954833920">
+      <item.method>process10(查询日期,保存文件夹,售后退款处理类型,开启页面统计时间校验)</item.method>
+      <item.desc>服务-店铺绩效-售后分析数据获取
+用于 生意参谋-服务-店铺绩效-售后分析数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期日周月
+* @param 保存文件夹，
+* @param 售后退款处理类型，店铺/未发货仅退款
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process11" display="process11" kind="function" help="/yddoc/rpa/zh-CN/889705316219879424">
+      <item.method>process11(查询日期,保存文件夹,专项分析类型,分析内容,开启页面统计时间校验)</item.method>
+      <item.desc>服务_店铺绩效-专项分析数据获取
+用于 生意参谋-服务-店铺绩效-专项分析数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期日周月
+* @param 保存文件夹，
+* @param 专项分析类型，客单价分析/咨询接待分析/商品销售分析/...
+* @param 分析内容，店铺/客服/静默
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process12" display="process12" kind="function" help="/yddoc/rpa/zh-CN/889705339355660288">
+      <item.method>process12(查询日期,保存文件夹,分析范围,开启页面统计时间校验,web_page)</item.method>
+      <item.desc>服务-客服绩效-业绩分析数据获取
+用于 生意参谋-服务-客服绩效-业绩分析数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期日周月
+* @param 保存文件夹，
+* @param 分析范围，汇总分析/查询到下单/下单到付款/询单到付款/付款分析
+* @param 开启页面统计时间校验，
+* @param web_page，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process13" display="process13" kind="function" help="/yddoc/rpa/zh-CN/889705363313524736">
+      <item.method>process13(查询日期,保存文件夹,分析类型,开启页面统计时间校验,web_page)</item.method>
+      <item.desc>服务-客服绩效-专项分析数据获取
+用于 生意参谋-服务-客服绩效-专项分析数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期日周月
+* @param 保存文件夹，
+* @param 分析类型，
+* @param 开启页面统计时间校验，
+* @param web_page，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process14" display="process14" kind="function" help="/yddoc/rpa/zh-CN/889705411650125824">
+      <item.method>process14(查询日期,保存文件夹,售后分析类型,开启页面统计时间校验)</item.method>
+      <item.desc>服务-客服绩效-售后分析数据获取
+用于 生意参谋-服务-客服绩效-售后分析数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期日周月
+* @param 保存文件夹，
+* @param 售后分析类型，售后退款处理/售后挽留分析
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process15" display="process15" kind="function" help="/yddoc/rpa/zh-CN/889705411650125824">
+      <item.method>process15(查询日期,保存文件夹,接待明细类型,开启页面统计时间校验)</item.method>
+      <item.desc>服务-绩效明细-接待明细数据获取
+用于 生意参谋-服务-绩效明细-接待明细数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期日周月
+* @param 保存文件夹，
+* @param 接待明细类型，
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process16" display="process16" kind="function" help="/yddoc/rpa/zh-CN/889705443010936832">
+      <item.method>process16(查询日期,保存文件夹,成交明细类型,开启页面统计时间校验)</item.method>
+      <item.desc>服务-绩效明细-成交明细数据下载
+用于 生意参谋-服务-绩效明细-成交明细数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期日周月
+* @param 保存文件夹，
+* @param 成交明细类型，
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process17" display="process17" kind="function" help="/yddoc/rpa/zh-CN/889705466958970880">
+      <item.method>process17(查询日期,保存文件夹,开启页面统计时间校验)</item.method>
+      <item.desc>服务-绩效明细-流失明细数据获取
+用于 生意参谋-服务-绩效明细-流失明细数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期日周月
+* @param 保存文件夹，
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process18" display="process18" kind="function" help="/yddoc/rpa/zh-CN/889705499550154752">
+      <item.method>process18(查询日期,保存文件夹,质量明细类型,开启页面统计时间校验)</item.method>
+      <item.desc>服务-绩效明细-质量明细数据获取
+用于 生意参谋-服务-绩效明细-质量明细数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期日周月
+* @param 保存文件夹，
+* @param 质量明细类型，
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process19" display="process19" kind="function" help="/yddoc/rpa/zh-CN/889705529539428352">
+      <item.method>process19(查询日期,保存文件夹,售后明细类型,开启页面统计时间校验)</item.method>
+      <item.desc>服务-绩效明细-售后明细数据获取
+用于 生意参谋-服务-绩效明细-售后明细数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期日周月
+* @param 保存文件夹，
+* @param 售后明细类型，
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process20" display="process20" kind="function" help="/yddoc/rpa/zh-CN/889704732132392960">
+      <item.method>process20(查询日期,保存文件夹,快捷日期)</item.method>
+      <item.desc>交易-交易概况-交易总览数据获取
+用于 生意参谋-交易-交易概况-交易总览数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 快捷日期，
+* @return 输出文件路径，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process21" display="process21" kind="function" help="/yddoc/rpa/zh-CN/889704759888572416">
+      <item.method>process21(查询日期,保存文件夹)</item.method>
+      <item.desc>交易-交易构成-终端构成数据获取
+用于 生意参谋-交易-交易构成-终端构成数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @return 输出文件路径，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process22" display="process22" kind="function" help="/yddoc/rpa/zh-CN/889704702179143680">
+      <item.method>process22(查询日期,保存文件夹,终端选择)</item.method>
+      <item.desc>交易-交易构成-类目构成数据获取
+用于 生意参谋-交易-交易构成-类目构成数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 终端选择，
+* @return 输出文件路径，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process23" display="process23" kind="function" help="/yddoc/rpa/zh-CN/889704676845547520">
+      <item.method>process23(查询日期,保存文件夹,终端选择)</item.method>
+      <item.desc>交易-交易构成-品牌构成数据获取
+用于 生意参谋-交易-交易构成-品牌构成数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 终端选择，
+* @return 输出文件路径，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process24" display="process24" kind="function" help="/yddoc/rpa/zh-CN/889704639304056832">
+      <item.method>process24(查询日期,保存文件夹,终端选择)</item.method>
+      <item.desc>交易-交易构成-价格带构成数据获取
+用于 生意参谋-交易-交易构成-价格带构成数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 终端选择，
+* @return 输出文件路径，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process25" display="process25" kind="function" help="/yddoc/rpa/zh-CN/889704785645793280">
+      <item.method>process25(查询日期,保存文件夹,开启页面统计时间校验)</item.method>
+      <item.desc>内容-内容概况-内容全局表现数据获取
+用于 生意参谋-内容-内容概况-内容全局表现数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process33" display="process33" kind="function" help="/yddoc/rpa/zh-CN/889704944453550080">
+      <item.method>process33(查询日期,保存文件夹,开启页面统计时间校验)</item.method>
+      <item.desc>内容-订阅分析-单条效果数据获取
+用于 生意参谋-内容-订阅分析-单条效果数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process34" display="process34" kind="function" help="/yddoc/rpa/zh-CN/889704962110275584">
+      <item.method>process34(查询日期,保存文件夹,开启页面统计时间校验)</item.method>
+      <item.desc>内容-订阅分析-用户分析数据获取
+用于 生意参谋-内容-订阅分析-用户分析数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process35" display="process35" kind="function" help="/yddoc/rpa/zh-CN/889705044821950464">
+      <item.method>process35(查询日期,保存文件夹,开启页面统计时间校验)</item.method>
+      <item.desc>内容-订阅分析-整体概况数据获取
+用于 生意参谋-内容-订阅分析-整体概况数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process36" display="process36" kind="function" help="/yddoc/rpa/zh-CN/889705061402034176">
+      <item.method>process36(查询日期,保存文件夹,开启页面统计时间校验)</item.method>
+      <item.desc>内容-头图视频-整体概况数据获取
+用于 生意参谋-内容-头图视频-整体概况数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process37" display="process37" kind="function" help="/yddoc/rpa/zh-CN/889705197354745856">
+      <item.method>process37(查询日期,保存文件夹,开启页面统计时间校验)</item.method>
+      <item.desc>流量-流量看板-流量总览数据获取
+用于 生意参谋-流量-流量看板-流量总览数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+* @return 数据存放字典，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process38" display="process38" kind="function" help="/yddoc/rpa/zh-CN/889705176530026496">
+      <item.method>process38(查询日期,保存文件夹,开启页面统计时间校验)</item.method>
+      <item.desc>流量-流量看板-流量来源排行TOP10数据获取
+用于 生意参谋-流量-流量看板-流量来源排行TOP10数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 开启页面统计时间校验，
+* @return 流量来源排行TOP10_数据列表，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process39" display="process39" kind="function" help="/yddoc/rpa/zh-CN/889705152714768384">
+      <item.method>process39(查询日期,保存文件夹,开启页面统计时间校验)</item.method>
+      <item.desc>流量-流量看板-商品流量排行TOP数据获取
+用于 生意参谋-流量-流量看板-商品流量排行TOP数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 开启页面统计时间校验，
+* @return 商品流量排行TOP10_数据列表，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process41" display="process41" kind="function" help="/yddoc/rpa/zh-CN/889705112325079040">
+      <item.method>process41(查询日期,保存文件夹,抓取的页码数,开启页面统计时间校验,等待时间)</item.method>
+      <item.desc>流量-商品来源-本店商品排行榜数据获取
+用于 生意参谋-流量-商品来源-本店商品排行榜数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 抓取的页码数，
+* @param 开启页面统计时间校验，
+* @param 等待时间，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process42" display="process42" kind="function" help="/yddoc/rpa/zh-CN/889705083268235264">
+      <item.method>process42(查询日期,保存文件夹,商品ID列表,开启页面统计时间校验)</item.method>
+      <item.desc>流量-商品来源-商品进店来源数据获取
+用于 生意参谋-流量-商品来源-商品进店来源数据的获取
+* @param 查询日期，自定义单日2023-01-01和当前页面快捷日期选择
+* @param 保存文件夹，
+* @param 商品ID列表，
+* @param 开启页面统计时间校验，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process44" display="process44" kind="function" help="/yddoc/rpa/zh-CN/889705716802326528">
+      <item.method>process44(查询日期,保存文件夹,开启页面统计时间校验,web_page)</item.method>
+      <item.desc>首页-运营视窗整体看板数据获取
+用于 生意参谋-首页-运营视窗整体看板数据的下载
+* @param 查询日期，自定义单日2023-01-01
+* @param 保存文件夹，
+* @param 开启页面统计时间校验，
+* @param web_page，
+* @return 输出文件路径，
+* @return 执行状态，
+* @return 数据集对象列表，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process45" display="process45" kind="function" help="/yddoc/rpa/zh-CN/889704549800079360">
+      <item.method>process45(账号,密码,web_page)</item.method>
+      <item.desc>生意参谋登录Plus
+
+* @param 账号，
+* @param 密码，
+* @param web_page，
+* @return 网页对象，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process50" display="process50" kind="function" help="/yddoc/rpa/zh-CN/889705744719613952">
+      <item.method>process50(保存文件夹,终端选择)</item.method>
+      <item.desc>实时-实时总览数据获取
+用于 生意参谋-实时-实时总览数据的获取
+* @param 保存文件夹，
+* @param 终端选择，
+* @return 输出文件路径，
+* @return 执行状态，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process52" display="process52" kind="function" help="/yddoc/rpa/zh-CN/889704534759378944">
+      <item.method>process52(web_page)</item.method>
+      <item.desc>关闭右侧客服弹窗
+
+* @param web_page，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.process56" display="process56" kind="function" help="/yddoc/rpa/zh-CN/889705131470618624">
+      <item.method>process56(查询日期,保存文件夹,选择新版or旧版)</item.method>
+      <item.desc>流量_店铺来源_流量来源构成
+
+* @param 查询日期，仅支持单日，格式： 2023-01-01 
+* @param 保存文件夹，
+* @param 选择新版or旧版，
+* @return 文件路径，
+* @return 数据集对象列表，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.server_goods_detail_enquire" display="server_goods_detail_enquire" kind="function" help="/yddoc/rpa/zh-CN/757116634496303104">
+      <item.method />
+      <item.desc>服务-绩效明细-商品明细
+该指令实现了对生意参谋-服务-绩效服务-商品明细数据进行下载
+* @param web_page，网页对象
+* @param ww_group，填写一个旺旺分组选项
+* @param customer_ww，填写一个客服旺旺选项
+* @param buier_ww，填写一个买家旺旺
+* @param goods_id，填写一个商品ID或名称
+* @param enquiry_status，填写一个咨询状态选项
+* @param splite_flow，填写一个分组分流选项
+* @param file_folder，保存路径
+* @param file_name，保存文件名
+* @return save_path，保存文件路径
+</item.desc>
+      <item name="xbot_extensions.activity_26766b38.server_goods_detail_enquire.select" display="select" kind="function" help="/yddoc/rpa/zh-CN/757116634496303104">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_26766b38.server_goods_detail_enquire.set_options" display="set_options" kind="function" help="/yddoc/rpa/zh-CN/757116634496303104">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_26766b38.server_goods_detail_enquire.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/757116634496303104">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.server_goods_detail_sale" display="server_goods_detail_sale" kind="function" help="/yddoc/rpa/zh-CN/757852335013691392">
+      <item.method />
+      <item.desc>服务-绩效明细-商品明细(销售明细)
+该指令实现了对生意参谋-服务-绩效服务-商品明细(销售明细)数据进行下载
+* @param web_page，网页对象
+* @param customer_ww，填写一个客服旺旺选项
+* @param buier_ww，填写一个买家旺旺
+* @param splite_flow，填写一个分组分流选项
+* @param file_folder，保存路径
+* @param file_name，保存文件名
+* @param ww_type，填写一个旺旺类型选项
+* @param goods_title，输入指定商品标题
+* @param ww_group，填写一个旺旺分组选项
+* @param status，填写一个咨询状态选项
+* @return save_path，保存文件路径
+</item.desc>
+      <item name="xbot_extensions.activity_26766b38.server_goods_detail_sale.select" display="select" kind="function" help="/yddoc/rpa/zh-CN/757852335013691392">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_26766b38.server_goods_detail_sale.select_data" display="select_data" kind="function" help="/yddoc/rpa/zh-CN/757852335013691392">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_26766b38.server_goods_detail_sale.set_options" display="set_options" kind="function" help="/yddoc/rpa/zh-CN/757852335013691392">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_26766b38.server_goods_detail_sale.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/757852335013691392">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_26766b38.server_goods_detail_sale.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/757852335013691392">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_26766b38.service_performance_quality_detail" display="service_performance_quality_detail" kind="function" help="/yddoc/rpa/zh-CN/897100382670163968">
+      <item.method />
+      <item.desc>服务-绩效明细-质量明细(接待评价明细)
+该指令旨在在生意参谋-服务-绩效明细下载接待评价明细报表
+* @param web_page，网页对象
+* @param datetime，输入自定义时间，格式为YYYY-MM-DD_YYYY-MM-DD
+* @param ww_type，选择旺旺类型，不填则为全部
+* @param customer_service，选择客服旺旺类型，不填则为全部
+* @param evaluation_result，选择评价结果类型，不填则为全部
+* @param quick_datetime，快捷日期选择，支持["昨天", "近7天", "近30天", "自定义"]
+* @param file_path，保存文件夹路径
+* @param file_name，保存文件名
+* @return output_path，最终文件保存路径
+</item.desc>
+      <item name="xbot_extensions.activity_26766b38.service_performance_quality_detail.choose_select" display="choose_select" kind="function" help="/yddoc/rpa/zh-CN/897100382670163968">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_26766b38.service_performance_quality_detail.service_performance_quality_detail" display="service_performance_quality_detail" kind="function" help="/yddoc/rpa/zh-CN/897100382670163968">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_26766b38.service_performance_quality_detail.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/897100382670163968">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_26766b38.service_performance_quality_detail.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/897100382670163968">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+  </item>
+</root>

@@ -1,0 +1,421 @@
+<root>
+  <item name="xbot_extensions.activity_aliexpress" display="activity_aliexpress" kind="module">
+    <item.method />
+    <item.desc>速卖通商家后台
+该指令实现对速卖通商家后台的资金管理页面的订单退款记录，收支记录，资金中心数据汇总，待结算金额数据明细，收支明细，垫资记录等的操作，对交易中的批量订单下载的操作，对生意参谋中核心指标，实时概况数据汇总，商品支付排行榜数据下载，店铺流量来源数据下载，市场分析等的操作</item.desc>
+    <item name="xbot_extensions.activity_aliexpress.report_download" display="report_download" kind="function" help="/yddoc/rpa/zh-CN/854625195098611712">
+      <item.method />
+      <item.desc>商品支付排行榜数据下载
+「企业版专享」速卖通商家后台，通过多维度条件筛选（时间范围、APP类型、商品类目、业务模式、商品类型），智能查询并导出商品排行数据到Excel文件，为电商运营提供数据化决策支持。
+* @param date_range，日期范围
+* @param save_directory，文件保存路径
+* @param web_page，待操作的网页对象
+* @param file_name，文件名称
+* @param product_type，商品类型
+* @param product_name，商品名称
+* @param business_model，业务模式
+* @param app_type，APP类型
+* @return file_path，文件夹路径
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.report_download.export_product_ranking" display="export_product_ranking" kind="function" help="/yddoc/rpa/zh-CN/854625195098611712">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.report_download.test_export_product_ranking" display="test_export_product_ranking" kind="function" help="/yddoc/rpa/zh-CN/854625195098611712">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.report_download.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/854625195098611712">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.data_summary" display="data_summary" kind="function" help="/yddoc/rpa/zh-CN/854631850725851136">
+      <item.method />
+      <item.desc>实时概况数据汇总
+「企业版专享」速卖通商家后台店铺数据，智能抓取并解析三大核心经营数据：店铺基本信息（名称和行业分类）、实时运营概况（支付金额、访客数、浏览量等关键指标的数值、排名和占比），以及近30天的业绩层级数据（支付金额排行和结果），为电商运营提供全面的数据支持和决策依据。
+* @param web_page，待操作的网页对象
+* @return shop_info_dict，店铺数据字典
+* @return realtime_overview_dict，实时概况数据字典
+* @return shop_level_dict，店铺层级字典
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.data_summary.get_shop_data" display="get_shop_data" kind="function" help="/yddoc/rpa/zh-CN/854631850725851136">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.data_summary.test_get_shop_data" display="test_get_shop_data" kind="function" help="/yddoc/rpa/zh-CN/854631850725851136">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.data_summary.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/854631850725851136">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.order_refund" display="order_refund" kind="function" help="/yddoc/rpa/zh-CN/854635031212048384">
+      <item.method />
+      <item.desc>资金结算报表-订单退款记录
+「企业版专享」速卖通商家后台，导航到资金管理模块，筛选特定的订单退款记录，并将数据导出为本地文件。
+* @param start_date，开始日期
+* @param end_date，结束日期
+* @param order_type，订单范围
+* @param account_type，币种
+* @param save_directory，文件保存路径
+* @param web_page，待操作的网页对象
+* @param file_name，文件名称
+* @return file_path，文件输出路径
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.order_refund.fund_center_export" display="fund_center_export" kind="function" help="/yddoc/rpa/zh-CN/854635031212048384">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.order_refund.test_fund_center_export" display="test_fund_center_export" kind="function" help="/yddoc/rpa/zh-CN/854635031212048384">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.order_refund.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/854635031212048384">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.batch_order_export" display="batch_order_export" kind="function" help="/yddoc/rpa/zh-CN/857507186963021824">
+      <item.method />
+      <item.desc>订单批量导出
+「企业版专享」实现对速卖通商家后台根据订单状态，订单类型，日期筛选，开始和结束日期的选择后的订单批量导出
+* @param order_status_path，订单状态
+* @param business_model_path，订单业务模式
+* @param filter_date，筛选日期
+* @param start_date，开始日期 格式xxxx-xx-xx 例如（2025-08-20）
+* @param end_date，结束日期 格式xxxx-xx-xx 例如（2025-08-20）
+* @param web_page，待操作的网页对象
+* @param save_directory，保存文件夹 
+* @param file_name，文件名称
+* @param reason_download，下载原因
+* @return file_path，文件输出路径
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.batch_order_export.select_order_status" display="select_order_status" kind="function" help="/yddoc/rpa/zh-CN/857507186963021824">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.batch_order_export.select_business_model" display="select_business_model" kind="function" help="/yddoc/rpa/zh-CN/857507186963021824">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.batch_order_export.select_date_range" display="select_date_range" kind="function" help="/yddoc/rpa/zh-CN/857507186963021824">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.batch_order_export.export_orders" display="export_orders" kind="function" help="/yddoc/rpa/zh-CN/857507186963021824">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.batch_order_export.test_order_export" display="test_order_export" kind="function" help="/yddoc/rpa/zh-CN/857507186963021824">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.batch_order_export.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857507186963021824">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.core_metrics_download" display="core_metrics_download" kind="function" help="/yddoc/rpa/zh-CN/857520218310057984">
+      <item.method />
+      <item.desc>速卖通-核心指标下载
+「企业版专享」实现对速卖通数据概览中核心指标支付金额，税费，支付买家数，支付转化率，客单价，支付老买家占比，支付订单数，支付件数的明细数据下载
+* @param date_type，输入选择的时期参数
+* @param save_directory，文件保存路径
+* @param web_page，操作的网页对象
+* @param file_name，文件名称
+* @return file_path，文件的输出路径
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.core_metrics_download.download_core_data" display="download_core_data" kind="function" help="/yddoc/rpa/zh-CN/857520218310057984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.core_metrics_download.core_data_load_test" display="core_data_load_test" kind="function" help="/yddoc/rpa/zh-CN/857520218310057984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.core_metrics_download.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857520218310057984">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.export_income_expense_details" display="export_income_expense_details" kind="function" help="/yddoc/rpa/zh-CN/857520635042496512">
+      <item.method />
+      <item.desc>速卖通-收支明细（全部费用项）
+「企业版专享」速卖通商家后台，通过多条件筛选（时间范围、费用类型），智能查询并导出收支明细数据到Excel文件，为电商财务管理和对账提供一站式解决方案。定时下载收支记录明细和收支概览报表
+* @param web_page，待操作的网页对象
+* @param start_date，开始时间
+* @param end_date，结束时间
+* @param save_directory，文件夹路径
+* @param expense_type，费用类型的选择
+* @param file_name，文件名称
+* @return file_path，文件保存路径
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.export_income_expense_details.export_financial_report" display="export_financial_report" kind="function" help="/yddoc/rpa/zh-CN/857520635042496512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.export_income_expense_details.test_export_income_expense" display="test_export_income_expense" kind="function" help="/yddoc/rpa/zh-CN/857520635042496512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.export_income_expense_details.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857520635042496512">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.traffic_source_data_download" display="traffic_source_data_download" kind="function" help="/yddoc/rpa/zh-CN/857529341137727488">
+      <item.method />
+      <item.desc>店铺流量来源数据下载
+「企业版专享」速卖通商家后台，智能选择流量来源渠道（如APP、PC端、移动网页等）、访客类型（新访客或老访客）和时间范围（最近7天、30天等），然后一键导出详细的流量统计报表到本地Excel文件，为电商运营提供数据支撑和决策依据。
+* @param web_page，待操作的网页对象
+* @param app_type，APP类型
+* @param visit_type，访客类型
+* @param time_type，时间类型
+* @param save_directory，文件夹路径
+* @param file_name，文件名称
+* @return file_path，文件保存至
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.traffic_source_data_download.export_traffic_analysis" display="export_traffic_analysis" kind="function" help="/yddoc/rpa/zh-CN/857529341137727488">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.traffic_source_data_download.test_export_traffic_analysis" display="test_export_traffic_analysis" kind="function" help="/yddoc/rpa/zh-CN/857529341137727488">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.traffic_source_data_download.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857529341137727488">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.freight_statistics_export" display="freight_statistics_export" kind="function" help="/yddoc/rpa/zh-CN/857531995777277952">
+      <item.method />
+      <item.desc>速卖通运费统计加截图
+「企业版专享」速卖通平台的运费统计数据，包括日期范围筛选、支付类型选择、支付方式选择，并返回统计金额数据，支持截图保存功能。
+* @param web_page，网页对象
+* @param start_date，开始时间
+* @param end_date，结束时间
+* @param save_directory，文件夹路径
+* @param pay_type，支付类型
+* @param pay_method，
+* @return data_amount，运费统计
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.freight_statistics_export.export_freight_statistics" display="export_freight_statistics" kind="function" help="/yddoc/rpa/zh-CN/857531995777277952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.freight_statistics_export.test_export_freight_statistics" display="test_export_freight_statistics" kind="function" help="/yddoc/rpa/zh-CN/857531995777277952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.freight_statistics_export.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857531995777277952">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.financial_summary" display="financial_summary" kind="function" help="/yddoc/rpa/zh-CN/857537677123964928">
+      <item.method />
+      <item.desc>速卖通-资金中心数据汇总
+「企业版专享」从速卖通商家后台资金中心页面自动化提取账户资金信息，例如：账户信息中的账户总额，冻结资金，结算概述中的待结算金额，待平台付款金额，本月放款金额，欠费金额等信息并将其转换为结构化的数据格式。
+* @param web_page，网页对象
+* @return account_information，账户和结算概览信息
+* @return web_page2，网页对象
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.financial_summary.get_financial_summary" display="get_financial_summary" kind="function" help="/yddoc/rpa/zh-CN/857537677123964928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.financial_summary.test_financial_summary" display="test_financial_summary" kind="function" help="/yddoc/rpa/zh-CN/857537677123964928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.financial_summary.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857537677123964928">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.pending_settlement_data_export" display="pending_settlement_data_export" kind="function" help="/yddoc/rpa/zh-CN/857540083127734272">
+      <item.method />
+      <item.desc>速卖通-待结算金额数据明细
+「企业版专享」从速卖通商家后台根据指定的时间范围、订单状态和币种条件筛选结算记录，并自动下载导出文件到指定目录，极大提高了财务对账和数据导出的效率。
+* @param web_page，待操作网页对象
+* @param choice_date，筛选对应要查询的时间类型
+* @param choice_account，币种类型的选择
+* @param start_date，开始日期
+* @param end_date，结束日期
+* @param order_status，订单类型的选择
+* @param save_directory，文件夹路径
+* @param file_name，文件名称
+* @return file_path，文件保存路径
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.pending_settlement_data_export.process_settlement_data_export" display="process_settlement_data_export" kind="function" help="/yddoc/rpa/zh-CN/857540083127734272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.pending_settlement_data_export.test_pending_settlement_amount_detail" display="test_pending_settlement_amount_detail" kind="function" help="/yddoc/rpa/zh-CN/857540083127734272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.pending_settlement_data_export.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857540083127734272">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.fund_advance_record_export" display="fund_advance_record_export" kind="function" help="/yddoc/rpa/zh-CN/857542542551990272">
+      <item.method />
+      <item.desc>速卖通-垫资记录
+「企业版专享」速卖通商家后台，导航到资金管理中心，设置复杂的查询条件，执行垫资记录查询，并导出查询结果到本地Excel文件。
+* @param web_page，待操作的网页对象
+* @param start_date，开始时间
+* @param end_date，结束时间
+* @param choice_account，选择账户
+* @param advance_status，垫资状态
+* @param order_status，订单状态
+* @param save_directory，文件夹路径
+* @param file_name，文件名称
+* @return file_path，文件保存至
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.fund_advance_record_export.advance_settlement_export" display="advance_settlement_export" kind="function" help="/yddoc/rpa/zh-CN/857542542551990272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.fund_advance_record_export.test_advance_settlement_export" display="test_advance_settlement_export" kind="function" help="/yddoc/rpa/zh-CN/857542542551990272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.fund_advance_record_export.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857542542551990272">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.market_analysis" display="market_analysis" kind="function" help="/yddoc/rpa/zh-CN/857543922914213888">
+      <item.method />
+      <item.desc>速卖通-市场分析
+「企业版专享」录速卖通商家后台，智能选择分析条件，并抓取指定行业的市场趋势数据，为电商运营提供市场洞察和决策支持。
+* @param web_page，待操作的网页对象
+* @param date_type，
+* @param product_name，商品类型
+* @param app_type，APP类型
+* @return industry_data，行业趋势信息
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.market_analysis.get_market_analysis_data" display="get_market_analysis_data" kind="function" help="/yddoc/rpa/zh-CN/857543922914213888">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.market_analysis.test_get_market_analysis_data" display="test_get_market_analysis_data" kind="function" help="/yddoc/rpa/zh-CN/857543922914213888">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.market_analysis.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857543922914213888">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.order_loan_records" display="order_loan_records" kind="function" help="/yddoc/rpa/zh-CN/857545966710472704">
+      <item.method />
+      <item.desc>资金结算报表-订单放款记录
+「企业版专享」速卖通商家后台，通过多条件筛选（时间范围、订单类型、账户类型），查询订单放款明细数据，并同时提供结构化数据和原始数据的双重输出，为财务对账和资金管理提供全面支持。
+* @param web_page，网页对象
+* @param start_date，开始时间
+* @param end_date，结束时间
+* @param order_type，订单类型
+* @param account_type，币种类型
+* @param save_directory，文件夹路径
+* @param file_name，文件名称
+* @return file_path，文件保存至
+* @return loan_records_data，
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.order_loan_records.handle_order_loan_records" display="handle_order_loan_records" kind="function" help="/yddoc/rpa/zh-CN/857545966710472704">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.order_loan_records.test_handle_order_loan_records" display="test_handle_order_loan_records" kind="function" help="/yddoc/rpa/zh-CN/857545966710472704">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.order_loan_records.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857545966710472704">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.transaction_declaration_download" display="transaction_declaration_download" kind="function" help="/yddoc/rpa/zh-CN/857547983268749312">
+      <item.method />
+      <item.desc>交易申报数据下载
+「企业版专享」速卖通商家后台，通过多条件筛选（订单状态、国家地区、时间范围），智能查询并导出交易税务申报数据到Excel文件，为跨境电商税务合规和财务管理提供一站式解决方案。
+* @param web_page，网页对象
+* @param order_status，订单状态
+* @param country_name，国家名称
+* @param start_date，开始时间
+* @param end_date，结束时间
+* @param save_directory，文件夹路径
+* @param file_name，文件名称
+* @return file_path，文件保存至
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.transaction_declaration_download.download_transaction_declaration_data" display="download_transaction_declaration_data" kind="function" help="/yddoc/rpa/zh-CN/857547983268749312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.transaction_declaration_download.test_download_transaction_declaration_data" display="test_download_transaction_declaration_data" kind="function" help="/yddoc/rpa/zh-CN/857547983268749312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.transaction_declaration_download.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857547983268749312">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.store_marketing_stats" display="store_marketing_stats" kind="function" help="/yddoc/rpa/zh-CN/857549653669654528">
+      <item.method />
+      <item.desc>店铺营销数据统计
+「企业版专享」速卖通商家后台，智能抓取并解析三大核心经营数据模块：店铺基本信息、实时运营概况和店铺层级数据，为电商运营提供全面的数据化决策支持。
+* @param web_page，网页对象
+* @param promotion_type，折扣类型
+* @return day_1_data，过去1天数据
+* @return day_7_data，过去7天数据
+* @return day_30_data，过去30天数据
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.store_marketing_stats.analyze_store_marketing_data" display="analyze_store_marketing_data" kind="function" help="/yddoc/rpa/zh-CN/857549653669654528">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.store_marketing_stats.test_analyze_store_marketing_data" display="test_analyze_store_marketing_data" kind="function" help="/yddoc/rpa/zh-CN/857549653669654528">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.store_marketing_stats.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857549653669654528">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_aliexpress.aliexpress_login" display="aliexpress_login" kind="function" help="/yddoc/rpa/zh-CN/879288295990349824">
+      <item.method />
+      <item.desc>速卖通登录
+速卖通网站的登录
+* @param web_page，待操作的网页对象
+* @param account_user，账号
+* @param password，密码
+* @param email_type，邮箱类型
+* @param email_username，账户
+* @param authorization_code，授权码
+* @param emali_number，邮件数量
+* @param switch_language，切换语言
+* @return web_page2，操作后的网页对象
+</item.desc>
+      <item name="xbot_extensions.activity_aliexpress.aliexpress_login.aliexpress_login" display="aliexpress_login" kind="function" help="/yddoc/rpa/zh-CN/879288295990349824">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.aliexpress_login.test_aliexpress_login" display="test_aliexpress_login" kind="function" help="/yddoc/rpa/zh-CN/879288295990349824">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_aliexpress.aliexpress_login.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/879288295990349824">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+  </item>
+</root>

@@ -1,0 +1,1340 @@
+{
+  "uuid": "3613f400-e5f5-46f4-879b-8151d650d587",
+  "name": "亚马逊卖家后台",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/3d/78/3d78d38c1a5493368c1005dd950e5f2c.png",
+  "version": "1",
+  "tags": "official",
+  "software": null,
+  "software_title": null,
+  "package_version": 8,
+  "feature_list": [
+    2,
+    6,
+    8
+  ],
+  "description": "该指令集实现了亚马逊卖家后台常用的操作，例如：登录店铺、切换站点等等",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "amazon_ext_op",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "_amazon_core",
+      "filename": "_amazon_core",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "A 亚马逊环境验证操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "A1 亚马逊店铺登录",
+      "filename": "process1",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A 亚马逊环境验证操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "_amazon_api",
+      "filename": "_amazon_api",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "A 亚马逊环境验证操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "A2 亚马逊切换站点",
+      "filename": "process2",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A 亚马逊环境验证操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "A3 亚马逊-切换语言",
+      "filename": "process29",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A 亚马逊环境验证操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "A4 亚马逊-广告页切换语言",
+      "filename": "process30",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A 亚马逊环境验证操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "_payments_core",
+      "filename": "_payments_core",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "B1 付款报告下载",
+      "filename": "process3",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "B2 自动提现",
+      "filename": "process4",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "utils",
+      "filename": "utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "utils",
+      "enableCopilot": false
+    },
+    {
+      "name": "_payments_api",
+      "filename": "_payments_api",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "B3 结算一览截图",
+      "filename": "process5",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST B2 自动提现",
+      "filename": "process6",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST B3 结算一览截图",
+      "filename": "process7",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "_storage_fee_charges_core",
+      "filename": "_storage_fee_charges_core",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "C 库存和销量报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "_voice_customer_core",
+      "filename": "_voice_customer_core",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "D 绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "抓取url",
+      "filename": "process9",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "D1 买家之声",
+      "filename": "process10",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "D 绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "_performance_api",
+      "filename": "_performance_api",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "D 绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST D1买家之声",
+      "filename": "process11",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "_customer_returns_core",
+      "filename": "_customer_returns_core",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "C 库存和销量报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "C1 买家退货",
+      "filename": "process12",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "C 库存和销量报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "_reportcentral_api",
+      "filename": "_reportcentral_api",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "C 库存和销量报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST C1 买家退货",
+      "filename": "process13",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "C2 月度仓储费",
+      "filename": "process14",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "C 库存和销量报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST C2 月度仓储费",
+      "filename": "process15",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "test",
+      "filename": "test",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST A2",
+      "filename": "process16",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST E1 优惠券",
+      "filename": "process17",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST 优惠券抓数据",
+      "filename": "process18",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "_coupons_core",
+      "filename": "_coupons_core",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "E 广告",
+      "enableCopilot": false
+    },
+    {
+      "name": "E1 查询优惠券",
+      "filename": "process19",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "E 广告",
+      "enableCopilot": false
+    },
+    {
+      "name": "_ad_api",
+      "filename": "_ad_api",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "E 广告",
+      "enableCopilot": false
+    },
+    {
+      "name": "_vat_transaction_core",
+      "filename": "_vat_transaction_core",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "C 库存和销量报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "C3 增值税交易报告",
+      "filename": "process20",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "C 库存和销量报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST B1 付款报告下载",
+      "filename": "process21",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_utils",
+      "filename": "download_utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "utils",
+      "enableCopilot": false
+    },
+    {
+      "name": "网络监听",
+      "filename": "process23",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "module1",
+      "filename": "module1",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "_deal_core",
+      "filename": "_deal_core",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "E 广告",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST DEAL",
+      "filename": "process24",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "_new_deal_core",
+      "filename": "_new_deal_core",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "E 广告",
+      "enableCopilot": false
+    },
+    {
+      "name": "E3 广告爆款超预算数据抓取",
+      "filename": "process26",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "E 广告",
+      "enableCopilot": false
+    },
+    {
+      "name": "sponsored_activities_download",
+      "filename": "sponsored_activities_download",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "E 广告",
+      "enableCopilot": false
+    },
+    {
+      "name": "_inventory_reports_core",
+      "filename": "_inventory_reports_core",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "C 库存和销量报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "C4 库存报告",
+      "filename": "process27",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "C 库存和销量报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST 库存报告",
+      "filename": "process28",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "网络监听(副本)1",
+      "filename": "process31",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "B4 结算一览账户数据",
+      "filename": "process32",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST B4 结算一览账户数据",
+      "filename": "process33",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "_post_core",
+      "filename": "_post_core",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "E 广告",
+      "enableCopilot": false
+    },
+    {
+      "name": "E4 发送POST",
+      "filename": "process34",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "E 广告",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST E4 发送POST",
+      "filename": "process35",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "total_balance",
+      "filename": "total_balance",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "F 关键指标数据",
+      "enableCopilot": false
+    },
+    {
+      "name": "buyer_message",
+      "filename": "buyer_message",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "F 关键指标数据",
+      "enableCopilot": false
+    },
+    {
+      "name": "payment_report_lib_date",
+      "filename": "payment_report_lib_date",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "payment_report_lib_month",
+      "filename": "payment_report_lib_month",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_transaction_data_diy",
+      "filename": "get_transaction_data_diy",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "translation_view_trans",
+      "filename": "translation_view_trans",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "sale_control_pannel",
+      "filename": "sale_control_pannel",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "G数据报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "sales_flow_dep_date",
+      "filename": "sales_flow_dep_date",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "G数据报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST C3 增值税交易报告",
+      "filename": "process37",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "sponsored_ads_reports",
+      "filename": "sponsored_ads_reports",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "E 广告",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST 切换站点",
+      "filename": "process39",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "_amazon_core_beta",
+      "filename": "_amazon_core_beta",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "A 亚马逊环境验证操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "utils_beta",
+      "filename": "utils_beta",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "utils",
+      "enableCopilot": false
+    },
+    {
+      "name": "remove_order_detail",
+      "filename": "remove_order_detail",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_jc",
+      "filename": "process40",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "sku_cost_report",
+      "filename": "sku_cost_report",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "classified_product_reports",
+      "filename": "classified_product_reports",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_policy_compliance",
+      "filename": "get_policy_compliance",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_service_performance",
+      "filename": "get_service_performance",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_delivery_performance",
+      "filename": "get_delivery_performance",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "check_performance_notification",
+      "filename": "check_performance_notification",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "screenshot_price_discount",
+      "filename": "screenshot_price_discount",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "test_jx",
+      "filename": "test_jx",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "payments_past_settlements",
+      "filename": "payments_past_settlements",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "screenshot_manage_quote",
+      "filename": "screenshot_manage_quote",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "logistics_delivery_report",
+      "filename": "logistics_delivery_report",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "activities_utils",
+      "filename": "activities_utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_seller_news",
+      "filename": "get_seller_news",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "screenshot_return_mark",
+      "filename": "screenshot_return_mark",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_purchase_cost",
+      "filename": "download_purchase_cost",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "下载",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_shipping_report",
+      "filename": "download_shipping_report",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "下载",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_erppay_report",
+      "filename": "download_erppay_report",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "下载",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_returnfee_report",
+      "filename": "download_returnfee_report",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "下载",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_ad_productpromotion",
+      "filename": "download_ad_productpromotion",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "下载",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_competitor_info",
+      "filename": "get_competitor_info",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "fill_goods_ien",
+      "filename": "fill_goods_ien",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_popular_terms",
+      "filename": "download_popular_terms",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "下载",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_advertising_history",
+      "filename": "get_advertising_history",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_tax_invoice",
+      "filename": "download_tax_invoice",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "下载",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_rating_resale",
+      "filename": "download_rating_resale",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "下载",
+      "enableCopilot": false
+    },
+    {
+      "name": "screenshot_promotion_detail",
+      "filename": "screenshot_promotion_detail",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_business_report",
+      "filename": "download_business_report",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "下载",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_order_report",
+      "filename": "download_order_report",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "下载",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_message_response",
+      "filename": "get_message_response",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "check_dashboard_card",
+      "filename": "check_dashboard_card",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "check_home_exception",
+      "filename": "check_home_exception",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_product_policies",
+      "filename": "get_product_policies",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "create_element",
+      "filename": "create_element",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_order_unshipped",
+      "filename": "get_order_unshipped",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_inbound_performance",
+      "filename": "get_inbound_performance",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_lobby",
+      "filename": "get_lobby",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "test_date",
+      "filename": "test_date",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_date",
+      "filename": "get_date",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_inventory_miss",
+      "filename": "get_inventory_miss",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_quotes_quantity",
+      "filename": "get_quotes_quantity",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "return_red_warn",
+      "filename": "return_red_warn",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_stranded_inventory",
+      "filename": "get_stranded_inventory",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_pricing_unusual",
+      "filename": "get_pricing_unusual",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_history_day",
+      "filename": "get_history_day",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_reports_repository",
+      "filename": "download_reports_repository",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "下载",
+      "enableCopilot": false
+    },
+    {
+      "name": "test_nf",
+      "filename": "test_nf",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "_voice_customer_core(copy)1",
+      "filename": "_voice_customer_core(copy)1",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "D 绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_reports_trade",
+      "filename": "download_reports_trade",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "下载",
+      "enableCopilot": false
+    },
+    {
+      "name": "delivery_manage_storage",
+      "filename": "delivery_manage_storage",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "sale_deliver_goods",
+      "filename": "sale_deliver_goods",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "子流程1",
+      "filename": "process41",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "D 绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "子流程2",
+      "filename": "process42",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "D 绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "delivery_allmanage_storage",
+      "filename": "delivery_allmanage_storage",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "delivery_remove_order",
+      "filename": "delivery_remove_order",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "delivery_manage_health",
+      "filename": "delivery_manage_health",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "B2.1标准订单提现",
+      "filename": "process43",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "B2.2发票支付订单提现",
+      "filename": "process44",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "sale_all_orders",
+      "filename": "sale_all_orders",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "delivery_inventory_bill",
+      "filename": "delivery_inventory_bill",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "business_reports_sub",
+      "filename": "business_reports_sub",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "G数据报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "sales_comment",
+      "filename": "sales_comment",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "买家数据",
+      "enableCopilot": false
+    },
+    {
+      "name": "sales_listing_control",
+      "filename": "sales_listing_control",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "绩效",
+      "enableCopilot": false
+    },
+    {
+      "name": "TEST 店铺登录",
+      "filename": "process45",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_reports_returns",
+      "filename": "download_reports_returns",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "下载",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_ad_tax",
+      "filename": "download_ad_tax",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "下载",
+      "enableCopilot": false
+    },
+    {
+      "name": "sponsored_reports_download",
+      "filename": "sponsored_reports_download",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "E 广告",
+      "enableCopilot": false
+    },
+    {
+      "name": "epr_report",
+      "filename": "epr_report",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "new_get_deal",
+      "filename": "new_get_deal",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "E 广告",
+      "enableCopilot": false
+    },
+    {
+      "name": "delivery_fba_inventory",
+      "filename": "delivery_fba_inventory",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "pay_aged_report",
+      "filename": "pay_aged_report",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_payment_amount",
+      "filename": "get_payment_amount",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "tax_invoce",
+      "filename": "tax_invoce",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "all_settlements",
+      "filename": "all_settlements",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "test_download_fba",
+      "filename": "test_download_fba",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "remove_shipment_details",
+      "filename": "remove_shipment_details",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "print_patment_data",
+      "filename": "print_patment_data",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "compensation_amount",
+      "filename": "compensation_amount",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "order_sales_completed",
+      "filename": "order_sales_completed",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "vat_report",
+      "filename": "vat_report",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "switch_old_ul",
+      "filename": "switch_old_ul",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "reserved_inventory",
+      "filename": "reserved_inventory",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "H 配送报告",
+      "enableCopilot": false
+    },
+    {
+      "name": "子流程3",
+      "filename": "process46",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "A 亚马逊环境验证操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "new_ui_get_deal",
+      "filename": "new_ui_get_deal",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "E 广告",
+      "enableCopilot": false
+    },
+    {
+      "name": "test_guoke",
+      "filename": "test_guoke",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "Z 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "B2.0自定义类型提现",
+      "filename": "process47",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "B 付款面板操作",
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "A 亚马逊环境验证操作"
+    },
+    {
+      "name": "B 付款面板操作"
+    },
+    {
+      "name": "utils"
+    },
+    {
+      "name": "Z 测试"
+    },
+    {
+      "name": "C 库存和销量报告"
+    },
+    {
+      "name": "D 绩效"
+    },
+    {
+      "name": "E 广告"
+    },
+    {
+      "name": "F 关键指标数据"
+    },
+    {
+      "name": "G数据报告"
+    },
+    {
+      "name": "H 配送报告"
+    },
+    {
+      "name": "activities"
+    },
+    {
+      "name": "绩效"
+    },
+    {
+      "name": "下载"
+    },
+    {
+      "name": "买家数据"
+    }
+  ],
+  "variables": [
+    {
+      "name": "测试_站点",
+      "type": "str",
+      "value": "美国",
+      "kind": "Text"
+    },
+    {
+      "name": "测试_日期范围",
+      "type": "str",
+      "value": "2025/12/01_2025/12/12",
+      "kind": "Text"
+    }
+  ],
+  "external_dependencies": [
+    "python-dateutil==2.9.0.post0",
+    "lxml==5.4.0",
+    "requests==2.31.0",
+    "uiautomation==2.0.24"
+  ],
+  "internaldependencies": [
+    "iframe2==25.12.0",
+    "web_action==26.9.0",
+    "super_browser==26.9.8"
+  ],
+  "selectordependencies": [],
+  "internalautodependencies": [
+    "super_browser",
+    "web_action"
+  ],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {},
+  "terminalTags": "win,macos,linux"
+}

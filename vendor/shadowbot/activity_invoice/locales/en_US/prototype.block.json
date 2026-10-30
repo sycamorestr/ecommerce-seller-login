@@ -1,0 +1,1129 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/22/d9/22d94131726eac27b9dfc88d4a342121.png",
+      "name": "xbot_extensions.activity_invoice.main",
+      "title": "Digital Invoice (Mengbai)",
+      "hidden": true,
+      "inputs": [],
+      "isLoop": false,
+      "comment": "",
+      "helpUrl": null,
+      "outputs": [],
+      "canDebug": true,
+      "function": "xbot_extensions.activity_invoice.main",
+      "isPseudo": false,
+      "keywords": "",
+      "extension": "Digital Invoice (Mengbai)",
+      "statement": "process.invoke_activity",
+      "description": "This command set integrates third-party platforms to enable API-based invoicing functionality",
+      "isCondition": false
+    },
+    {
+      "icon": "BlockIcons/21-2.png",
+      "name": "xbot_extensions.activity_invoice.api_enum",
+      "title": "api_enum",
+      "hidden": true,
+      "inputs": [],
+      "isLoop": false,
+      "comment": null,
+      "helpUrl": null,
+      "outputs": [],
+      "canDebug": true,
+      "function": "xbot_extensions.activity_invoice.api_enum",
+      "isPseudo": false,
+      "keywords": "",
+      "extension": "数电开票扩展(蒙柏)",
+      "statement": "process.invoke_activity",
+      "description": null,
+      "isCondition": false
+    },
+    {
+      "icon": "BlockIcons/21-2.png",
+      "name": "xbot_extensions.activity_invoice.tax_invoice_api",
+      "title": "tax_invoice_api",
+      "hidden": true,
+      "inputs": [],
+      "isLoop": false,
+      "comment": null,
+      "helpUrl": null,
+      "outputs": [],
+      "canDebug": true,
+      "function": "xbot_extensions.activity_invoice.tax_invoice_api",
+      "isPseudo": false,
+      "keywords": "",
+      "extension": "数电开票扩展(蒙柏)",
+      "statement": "process.invoke_activity",
+      "description": null,
+      "isCondition": false
+    },
+    {
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/04%E7%95%8C%E9%9D%A2/login.png",
+      "name": "xbot_extensions.activity_invoice.tax_invoice_auth_login",
+      "title": "E-Tax Bureau Login",
+      "hidden": false,
+      "inputs": [
+        {
+          "name": "app_id",
+          "tips": "",
+          "type": "str",
+          "label": "App ID",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "secret",
+          "tips": "",
+          "type": "str",
+          "label": "App Secret",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "tax_account",
+          "tips": "",
+          "type": "str",
+          "label": "Tax Account",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "tax_password",
+          "tips": "",
+          "type": "str",
+          "label": "Tax Password",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "nsrrbh",
+          "tips": "",
+          "type": "str",
+          "label": "Taxpayer ID",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "qr_code_type",
+          "tips": "",
+          "type": "str",
+          "label": "QR Code Type",
+          "editor": {
+            "kind": "select",
+            "options": [
+              {
+                "value": "税局二维码",
+                "Unicode": null,
+                "display": "Tax Bureau QR Code"
+              }
+            ],
+            "useVariableOptions": false
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "is_qr_code",
+          "tips": "",
+          "type": "bool",
+          "label": "",
+          "editor": {
+            "kind": "checkbox",
+            "label": "Use QR Code Scan"
+          },
+          "default": "13:False",
+          "category": "general",
+          "required": false
+        }
+      ],
+      "isLoop": false,
+      "comment": "Log in to tax bureau account %tax_account% using application ID %app_id% and save the invoice connection object to %invoice_instance%",
+      "helpUrl": "/yddoc/rpa/zh-CN/729613723800752128",
+      "outputs": [
+        {
+          "id": "invoice_instance",
+          "name": "invoice_instance",
+          "type": "any",
+          "label": "Invoice Connection"
+        }
+      ],
+      "canDebug": true,
+      "function": "xbot_extensions.activity_invoice.tax_invoice_auth_login",
+      "isPseudo": false,
+      "keywords": "",
+      "extension": "Digital Invoice (Mengbai)",
+      "statement": "process.invoke_activity",
+      "description": "This command implements the functionality to log in to the tax bureau through the third-party platform Mengbai",
+      "isCondition": false
+    },
+    {
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/83/54/83549d8371473e56c86b29936fe9390b.png",
+      "name": "xbot_extensions.activity_invoice.tax_digital_invoicing",
+      "title": "Issue Digital Invoice (Single Line)",
+      "hidden": false,
+      "inputs": [
+        {
+          "name": "invoice_instance",
+          "tips": "",
+          "type": "any",
+          "label": "Invoice Connection",
+          "editor": {
+            "kind": "select",
+            "options": [],
+            "useVariableOptions": true
+          },
+          "default": "13:None",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "fpzl_dm",
+          "tips": "VAT Special Invoice/General Invoice",
+          "type": "str",
+          "label": "Invoice Type",
+          "editor": {
+            "kind": "select",
+            "options": [
+              {
+                "value": "普通发票",
+                "Unicode": null,
+                "display": "General Invoice"
+              },
+              {
+                "value": "增值税专用发票",
+                "Unicode": null,
+                "display": "VAT Special Invoice"
+              }
+            ],
+            "useVariableOptions": false
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "ghfqylx",
+          "tips": "Enterprise/Government Institution/Individual",
+          "type": "str",
+          "label": "Buyer Entity Type",
+          "editor": {
+            "kind": "select",
+            "options": [
+              {
+                "value": "企业",
+                "Unicode": null,
+                "display": "Enterprise"
+              },
+              {
+                "value": "个人",
+                "Unicode": null,
+                "display": "Individual"
+              },
+              {
+                "value": "机关事业单位",
+                "Unicode": null,
+                "display": "Government Institution"
+              }
+            ],
+            "useVariableOptions": false
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "ghfmc",
+          "tips": "",
+          "type": "str",
+          "label": "Buyer Name",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "ghf_nsrsbh",
+          "tips": "Required for special invoices when buyer entity type is Enterprise",
+          "type": "str",
+          "label": "Buyer Taxpayer ID",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "ghf_dz",
+          "tips": "",
+          "type": "str",
+          "label": "Buyer Address",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "Required for enterprise special invoices"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "ghf_dh",
+          "tips": "",
+          "type": "str",
+          "label": "Buyer Phone",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "Required for enterprise special invoices"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "ghf_yh",
+          "tips": "",
+          "type": "str",
+          "label": "Buyer Bank",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "Required for enterprise special invoices"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "ghf_zh",
+          "tips": "",
+          "type": "str",
+          "label": "Buyer Bank Account",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "Required for enterprise special invoices"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "kpxm",
+          "tips": "Item name must match project information",
+          "type": "str",
+          "label": "Item Name",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "xmmc",
+          "tips": "Project name must be prefixed with product abbreviation, format: *Product Abbreviation*Project Name. Only single-line items can be discounted, discount line must follow the discounted line immediately, with the same product name and code.",
+          "type": "str",
+          "label": "Project Name",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "spbm",
+          "tips": "Product code, pad with 0 if insufficient digits; for e-invoice list red-letter invoices, enter the corresponding blue invoice detail data",
+          "type": "str",
+          "label": "Product Code",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "ggxh",
+          "tips": "Specification and model",
+          "type": "str",
+          "label": "Specification",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "(Optional)"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "xmdw",
+          "tips": "",
+          "type": "str",
+          "label": "Item Unit",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "(Optional)"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "xmsl",
+          "tips": "Up to 8 decimal places",
+          "type": "str",
+          "label": "Item Quantity",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "(Optional)"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "xmdj",
+          "tips": "",
+          "type": "str",
+          "label": "Item Unit Price",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "(Optional)"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "xmje",
+          "tips": "2 decimal places, in yuan accurate to cents. Equals unit price * quantity, whether tax-inclusive depends on tax-inclusive flag.",
+          "type": "str",
+          "label": "Item Amount",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "sl",
+          "tips": "Keep 2 decimal places. If tax rate is 0, indicates tax-exempt (normal tax rate in decimal form, e.g., 0.17). Maximum 8 characters",
+          "type": "str",
+          "label": "Tax Rate",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "kphjje",
+          "tips": "2 decimal places, in yuan",
+          "type": "str",
+          "label": "Total Amount",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "lslbs",
+          "tips": "",
+          "type": "str",
+          "label": "Zero Tax Rate Flag",
+          "editor": {
+            "kind": "select",
+            "options": [
+              {
+                "value": "非零税率",
+                "Unicode": null,
+                "display": "Non-zero Tax Rate"
+              },
+              {
+                "value": "免税",
+                "Unicode": null,
+                "display": "Tax-exempt"
+              },
+              {
+                "value": "不征税",
+                "Unicode": null,
+                "display": "Non-taxable"
+              },
+              {
+                "value": "普通零税率",
+                "Unicode": null,
+                "display": "General Zero Tax Rate"
+              }
+            ],
+            "useVariableOptions": false
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "bz",
+          "tips": "Remarks",
+          "type": "str",
+          "label": "Remarks",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "xh",
+          "tips": "For multiple detail lines, line numbers must be sequential",
+          "type": "str",
+          "label": "Item Line Number",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "advanced",
+          "required": false
+        },
+        {
+          "name": "se",
+          "tips": "2 decimal places, in yuan accurate to cents.",
+          "type": "str",
+          "label": "Tax Amount",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "advanced",
+          "required": false
+        },
+        {
+          "name": "hsbz",
+          "tips": "Indicates whether item unit price and amount are tax-inclusive.",
+          "type": "str",
+          "label": "Tax-Inclusive Flag",
+          "editor": {
+            "kind": "select",
+            "options": [
+              {
+                "value": "含税",
+                "Unicode": null,
+                "display": "Tax-inclusive"
+              },
+              {
+                "value": "不含税",
+                "Unicode": null,
+                "display": "Tax-exclusive"
+              }
+            ],
+            "useVariableOptions": false
+          },
+          "default": "10:",
+          "category": "advanced",
+          "required": false
+        },
+        {
+          "name": "fphxz",
+          "tips": "Normal Item Line/Discount Line/Discounted Line",
+          "type": "str",
+          "label": "Invoice Line Type",
+          "editor": {
+            "kind": "select",
+            "options": [
+              {
+                "value": "正常商品行",
+                "Unicode": null,
+                "display": "Normal Item Line"
+              },
+              {
+                "value": "折扣行",
+                "Unicode": null,
+                "display": "Discount Line"
+              },
+              {
+                "value": "被折扣行",
+                "Unicode": null,
+                "display": "Discounted Line"
+              }
+            ],
+            "useVariableOptions": false
+          },
+          "default": "10:",
+          "category": "advanced",
+          "required": false
+        },
+        {
+          "name": "yhzcbs",
+          "tips": "Default is Not Used   Use/Not Use",
+          "type": "str",
+          "label": "Preferential Policy",
+          "editor": {
+            "kind": "select",
+            "options": [
+              {
+                "value": "不使用",
+                "Unicode": null,
+                "display": "Not Use"
+              },
+              {
+                "value": "使用",
+                "Unicode": null,
+                "display": "Use"
+              }
+            ],
+            "useVariableOptions": false
+          },
+          "default": "10:",
+          "category": "advanced",
+          "required": false
+        },
+        {
+          "name": "xsfzrr_bz",
+          "tips": "Y/N, default is N if not filled",
+          "type": "str",
+          "label": "Seller Natural Person",
+          "editor": {
+            "kind": "select",
+            "options": [
+              {
+                "value": "N",
+                "Unicode": null,
+                "display": "N"
+              },
+              {
+                "value": "Y",
+                "Unicode": null,
+                "display": "Y"
+              }
+            ],
+            "useVariableOptions": false
+          },
+          "default": "10:",
+          "category": "advanced",
+          "required": false
+        },
+        {
+          "name": "gmfzrr_bz",
+          "tips": "Y/N, default is N if not filled. Enterprise: N, Individual: Y",
+          "type": "str",
+          "label": "Buyer Natural Person",
+          "editor": {
+            "kind": "select",
+            "options": [
+              {
+                "value": "N",
+                "Unicode": null,
+                "display": "N"
+              },
+              {
+                "value": "Y",
+                "Unicode": null,
+                "display": "Y"
+              }
+            ],
+            "useVariableOptions": false
+          },
+          "default": "10:",
+          "category": "advanced",
+          "required": false
+        },
+        {
+          "name": "sfzsgmfyhzh",
+          "tips": "Y/N, default is Y if not filled",
+          "type": "str",
+          "label": "Show Buyer Bank Info",
+          "editor": {
+            "kind": "select",
+            "options": [
+              {
+                "value": "Y",
+                "Unicode": null,
+                "display": "Y"
+              },
+              {
+                "value": "N",
+                "Unicode": null,
+                "display": "N"
+              }
+            ],
+            "useVariableOptions": false
+          },
+          "default": "10:",
+          "category": "advanced",
+          "required": false
+        },
+        {
+          "name": "sfzsxsfyhzh",
+          "tips": "Y/N, default is Y if not filled",
+          "type": "str",
+          "label": "Show Seller Bank Info",
+          "editor": {
+            "kind": "select",
+            "options": [
+              {
+                "value": "Y",
+                "Unicode": null,
+                "display": "Y"
+              },
+              {
+                "value": "N",
+                "Unicode": null,
+                "display": "N"
+              }
+            ],
+            "useVariableOptions": false
+          },
+          "default": "10:",
+          "category": "advanced",
+          "required": false
+        }
+      ],
+      "isLoop": false,
+      "comment": "Issue invoice to buyer %ghfmc% using digital invoice object %invoice_instance% and save the result to %invoiced_result%",
+      "helpUrl": "/yddoc/rpa/zh-CN/729613860150968320",
+      "outputs": [
+        {
+          "id": "invoiced_result",
+          "name": "invoiced_result",
+          "type": "any",
+          "label": "invoiced_result"
+        }
+      ],
+      "canDebug": true,
+      "function": "xbot_extensions.activity_invoice.tax_digital_invoicing",
+      "isPseudo": false,
+      "keywords": "",
+      "extension": "Digital Invoice (Mengbai)",
+      "statement": "process.invoke_activity",
+      "description": "This command implements the functionality to automatically issue invoices on the Mengbai third-party platform",
+      "isCondition": false
+    },
+    {
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/d2/df/d2df3fba1a12076e268d6f2d18cd1584.png",
+      "name": "xbot_extensions.activity_invoice.tax_invocie_order_query",
+      "title": "Query Invoice Info",
+      "hidden": false,
+      "inputs": [
+        {
+          "name": "invoice_instance",
+          "tips": "",
+          "type": "any",
+          "label": "Invoice Connection",
+          "editor": {
+            "kind": "select",
+            "options": [],
+            "useVariableOptions": true
+          },
+          "default": "13:None",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "kplsh",
+          "tips": "",
+          "type": "str",
+          "label": "Invoice Serial No.",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        }
+      ],
+      "isLoop": false,
+      "comment": "Query invoice serial number %kplsh% using invoice connection object %invoice_instance% and save the query result to %invoice_detail%",
+      "helpUrl": "/yddoc/rpa/zh-CN/729613802108559360",
+      "outputs": [
+        {
+          "id": "invoice_detail",
+          "name": "invoice_detail",
+          "type": "any",
+          "label": "Query Result"
+        }
+      ],
+      "canDebug": true,
+      "function": "xbot_extensions.activity_invoice.tax_invocie_order_query",
+      "isPseudo": false,
+      "keywords": "",
+      "extension": "Digital Invoice (Mengbai)",
+      "statement": "process.invoke_activity",
+      "description": "This command implements the functionality to query invoice information on the Mengbai third-party platform",
+      "isCondition": false
+    },
+    {
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/47/27/47277aba03a00c48a9151c0cec5da420.png",
+      "name": "xbot_extensions.activity_invoice.tax_digital_invoicing_more",
+      "title": "Issue Digital Invoice (Multi-Line)",
+      "hidden": false,
+      "inputs": [
+        {
+          "name": "invoice_instance",
+          "tips": "",
+          "type": "any",
+          "label": "Invoice Connection",
+          "editor": {
+            "kind": "select",
+            "options": [],
+            "useVariableOptions": true
+          },
+          "default": "13:None",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "fpzl_dm",
+          "tips": "VAT Special Invoice/General Invoice",
+          "type": "str",
+          "label": "Invoice Type",
+          "editor": {
+            "kind": "select",
+            "options": [
+              {
+                "value": "普通发票",
+                "Unicode": null,
+                "display": "General Invoice"
+              },
+              {
+                "value": "增值税专用发票",
+                "Unicode": null,
+                "display": "VAT Special Invoice"
+              }
+            ],
+            "useVariableOptions": false
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "ghfqylx",
+          "tips": "Enterprise/Government Institution/Individual",
+          "type": "str",
+          "label": "Buyer Entity Type",
+          "editor": {
+            "kind": "select",
+            "options": [
+              {
+                "value": "企业",
+                "Unicode": null,
+                "display": "Enterprise"
+              },
+              {
+                "value": "个人",
+                "Unicode": null,
+                "display": "Individual"
+              },
+              {
+                "value": "机关事业单位",
+                "Unicode": null,
+                "display": "Government Institution"
+              }
+            ],
+            "useVariableOptions": false
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "ghfmc",
+          "tips": "",
+          "type": "str",
+          "label": "Buyer Name",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "ghf_nsrsbh",
+          "tips": "Required for special invoices when buyer entity type is Enterprise",
+          "type": "str",
+          "label": "Buyer Taxpayer ID",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "ghf_dz",
+          "tips": "",
+          "type": "str",
+          "label": "Buyer Address",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "Required for enterprise special invoices"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "ghf_dh",
+          "tips": "",
+          "type": "str",
+          "label": "Buyer Phone",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "Required for enterprise special invoices"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "ghf_yh",
+          "tips": "",
+          "type": "str",
+          "label": "Buyer Bank",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "Required for enterprise special invoices"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "ghf_zh",
+          "tips": "",
+          "type": "str",
+          "label": "Buyer Bank Account",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "Required for enterprise special invoices"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "kpxm",
+          "tips": "Item name must match project information",
+          "type": "str",
+          "label": "Item Name",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "xmmc",
+          "tips": "Project name must be prefixed with product abbreviation, format: *Product Abbreviation*Project Name. Only single-line items can be discounted, discount line must follow the discounted line immediately, with the same product name and code.",
+          "type": "str",
+          "label": "Project Name",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "spbm",
+          "tips": "Product code, pad with 0 if insufficient digits; for e-invoice list red-letter invoices, enter the corresponding blue invoice detail data",
+          "type": "str",
+          "label": "Product Code",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "ggxh",
+          "tips": "Specification and model",
+          "type": "str",
+          "label": "Specification",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "(Optional)"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "xmdw",
+          "tips": "",
+          "type": "str",
+          "label": "Item Unit",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "(Optional)"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "xmsl",
+          "tips": "Up to 8 decimal places",
+          "type": "str",
+          "label": "Item Quantity",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "(Optional)"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "xmdj",
+          "tips": "",
+          "type": "str",
+          "label": "Item Unit Price",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "(Optional)"
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "xmje",
+          "tips": "2 decimal places, in yuan accurate to cents. Equals unit price * quantity, whether tax-inclusive depends on tax-inclusive flag.",
+          "type": "str",
+          "label": "Item Amount",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "sl",
+          "tips": "Keep 2 decimal places. If tax rate is 0, indicates tax-exempt (normal tax rate in decimal form, e.g., 0.17). Maximum 8 characters",
+          "type": "str",
+          "label": "Tax Rate",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "kphjje",
+          "tips": "2 decimal places, in yuan",
+          "type": "str",
+          "label": "Total Amount",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": true
+        },
+        {
+          "name": "bz",
+          "tips": "Remarks",
+          "type": "str",
+          "label": "Remarks",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "10:",
+          "category": "general",
+          "required": false
+        },
+        {
+          "name": "fpkjxx_xmxxs",
+          "tips": "",
+          "type": "list",
+          "label": "Item Detail List",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "default": "13:[]",
+          "category": "general",
+          "required": false
+        }
+      ],
+      "isLoop": false,
+      "comment": "",
+      "helpUrl": "/yddoc/rpa/zh-CN/863753686736019456",
+      "outputs": [
+        {
+          "id": "invoiced_result",
+          "name": "invoiced_result",
+          "type": "any",
+          "label": "invoiced_result"
+        }
+      ],
+      "canDebug": true,
+      "function": "xbot_extensions.activity_invoice.tax_digital_invoicing_more",
+      "isPseudo": false,
+      "keywords": "",
+      "extension": "Digital Invoice (Mengbai)",
+      "statement": "process.invoke_activity",
+      "description": "This command implements the functionality to automatically issue invoices on the Mengbai third-party platform",
+      "isCondition": false
+    }
+  ]
+}

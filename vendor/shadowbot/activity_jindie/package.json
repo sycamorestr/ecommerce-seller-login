@@ -1,0 +1,146 @@
+{
+  "uuid": "da4378b2-a224-4175-9541-853499161e58",
+  "name": "金蝶云星空 - 网页端",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/a8/8e/a88e9c9ef269912465dc5ced4ca6795a.png",
+  "version": "1",
+  "tags": "",
+  "software": null,
+  "software_title": null,
+  "package_version": 8,
+  "feature_list": [
+    2,
+    8
+  ],
+  "description": "金蝶云星空浏览器自动化，支持登录与填写表单数据等操作",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_jindie",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "utils",
+      "filename": "utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "login",
+      "filename": "login",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_all_tab",
+      "filename": "get_all_tab",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "close_tab",
+      "filename": "close_tab",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_group_list",
+      "filename": "get_group_list",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "show_group",
+      "filename": "show_group",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "hide_group",
+      "filename": "hide_group",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "input_data",
+      "filename": "input_data",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "batch_input_data",
+      "filename": "batch_input_data",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "input_table",
+      "filename": "input_table",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_field_data",
+      "filename": "get_field_data",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "test"
+    },
+    {
+      "name": "activity"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [],
+  "internaldependencies": [
+    "activity_jfbym==26.4.1"
+  ],
+  "selectordependencies": [],
+  "internalautodependencies": [
+    "activity_jfbym"
+  ],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {},
+  "terminalTags": "win,macos,linux"
+}

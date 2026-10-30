@@ -271,6 +271,13 @@ def click_points_from_origin(
 # ---- types used by the remaining activity_7bca6d login blocks ----
 
 YUNMA_TYPE_ALI_SLIDER = 20226
+YUNMA_TYPE_ALPHANUM = "10103"
+YUNMA_TYPE_KINGDEE_ALPHANUM = "10110"
+ALPHANUM_CASE_EXTRA = "需要区分大小写"
+TTSHITU_CDRCBANK_TYPE = "4"
+TTSHITU_CDRCBANK_CODE = "ttshitu_4_predict"
+TTSHITU_MYCCBANK_TYPE = "66"
+TTSHITU_MYCCBANK_CODE = "ttshitu_66_predict"
 YUNMA_TYPE_JD_CLICK = 30330
 YUNMA_TYPE_JD_ROTATE = 30330
 YUNMA_TYPE_JD_TRACE = 100015
@@ -290,6 +297,22 @@ WALMART_HOLD_SECONDS = 7
 MEITUAN_TRACE_SKIP = 25
 
 _IMAGE_LEFT_RE = re.compile(r"(\d+),")
+
+
+def alphanum_payload(image_b64: str, token: str, captcha_type: str = YUNMA_TYPE_ALPHANUM, *, case_sensitive: bool = False) -> dict:
+    """std_alphanum_captcha body. Banks pass type 10103; 金蝶 uses 10110.
+
+    When ``is_trim`` is true the source sets extra to 需要区分大小写.
+    """
+    payload = {"image": image_b64, "token": token, "type": captcha_type}
+    if case_sensitive:
+        payload["extra"] = ALPHANUM_CASE_EXTRA
+    return payload
+
+
+def orangebank_gap_offset(background_x: float, gap_x: float) -> float:
+    """orangebank_slider_captcha.drag: gap left minus background left."""
+    return float(gap_x) - float(background_x)
 
 
 def ali_slider_payload(image_b64: str, token: str) -> dict:

@@ -1,0 +1,85 @@
+<root>
+  <item name="xbot_extensions.activity_d91a274e" display="activity_d91a274e" kind="module">
+    <item.method />
+    <item.desc>淘系推广数据获取
+阿里妈妈 各子平台汇总数据获取</item.desc>
+    <item name="xbot_extensions.activity_d91a274e.process1" display="process1" kind="function" help="/yddoc/rpa/zh-CN/711948418846289920">
+      <item.method>process1(报表类型,转化周期,日期,web_page)</item.method>
+      <item.desc>直通车-报表-汇总数据获取
+阿里妈妈直通车-报表-汇总数据获取
+* @param 报表类型，
+* @param 转化周期，
+* @param 日期，
+* @param web_page，
+* @return data，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_d91a274e.process6" display="process6" kind="function" help="/yddoc/rpa/zh-CN/712283922857672704">
+      <item.method>process6(平台名称,账户,密码,浏览器类型)</item.method>
+      <item.desc>阿里妈妈_平台登录
+
+* @param 平台名称，
+* @param 账户，
+* @param 密码，
+* @param 浏览器类型，
+* @return web_page，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_d91a274e.process7" display="process7" kind="function" help="/yddoc/rpa/zh-CN/711950583165939712">
+      <item.method>process7(日期,文件保存路径,效果,周期,web_page)</item.method>
+      <item.desc>引力魔方-报表-汇总数据获取
+阿里妈妈引力魔方-报表-自定义分析，汇总数据获取
+* @param 日期，
+* @param 文件保存路径，保存本地文件路径
+* @param 效果，['点击效果','展现效果']
+* @param 周期，['转化效果周期1天','转化效果周期3天','转化效果周期7天','转化效果周期15天','转化效果周期30天']
+* @param web_page，
+* @return file_path，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_d91a274e.process9" display="process9" kind="function" help="/yddoc/rpa/zh-CN/711952717006422016">
+      <item.method>process9(web_page,日期,周期)</item.method>
+      <item.desc>万象台-报表-汇总数据获取
+阿里妈妈万象台-报表-账户总览汇总数据获取
+* @param web_page，
+* @param 日期，
+* @param 周期，
+* @return 消耗汇总数据，
+* @return 推广汇总数据，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_d91a274e.process13" display="process13" kind="function" help="/yddoc/rpa/zh-CN/711951652080476160">
+      <item.method>process13(web_page,日期,周期,效果,文件保存路径)</item.method>
+      <item.desc>品销宝-报表-明星店铺报表数据获取
+阿里妈妈品销宝-报表-明星店铺报表数据获取
+* @param web_page，
+* @param 日期，
+* @param 周期，
+* @param 效果，
+* @param 文件保存路径，
+* @return file_path，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_d91a274e.process15" display="process15" kind="function" help="/yddoc/rpa/zh-CN/716924714313764864">
+      <item.method>process15(日期,周期,效果,web_page,文件保存路径)</item.method>
+      <item.desc>超级钻展-报表-账户汇总数据获取
+阿里妈妈超级钻展-报表-账户汇总数据获取
+* @param 日期，
+* @param 周期，
+* @param 效果，
+* @param web_page，
+* @param 文件保存路径，
+* @return file_path，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_d91a274e.process17" display="process17" kind="function" help="/yddoc/rpa/zh-CN/711949508821041152">
+      <item.method>process17(web_page,日期)</item.method>
+      <item.desc>商家中心-数据分析-汇总数据获取
+淘宝联盟商家中心-数据分析-推广概览，汇总数据获取
+* @param web_page，
+* @param 日期，
+* @return data，
+</item.desc>
+    </item>
+  </item>
+</root>

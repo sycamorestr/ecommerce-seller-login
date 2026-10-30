@@ -1,0 +1,78 @@
+{
+  "uuid": "fcc2db5b-9cc9-4ebf-8d19-b106a1a4935e",
+  "name": "巨量纵横",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/01/94/0194415db5d900c86da5ff50140cb208.png",
+  "version": "1",
+  "tags": "official",
+  "software": null,
+  "software_title": null,
+  "package_version": 2,
+  "feature_list": [
+    2
+  ],
+  "description": "该指令集实现巨量引擎后台登录的功能",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_52aea4a0",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "巨量引擎登录",
+      "filename": "process1",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "巨量引擎登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "module1",
+      "filename": "module1",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_jc",
+      "filename": "process2",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "巨量引擎登录"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [],
+  "internaldependencies": [
+    "activity_jfbym==26.10.9"
+  ],
+  "selectordependencies": [],
+  "internalautodependencies": [
+    "activity_jfbym"
+  ],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {},
+  "terminalTags": null
+}

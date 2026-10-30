@@ -1,0 +1,373 @@
+{
+  "uuid": "00eb9047-3306-4216-a3c3-3514a70053b2",
+  "name": "银行登录扩展",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/d3/0a/d30af7424ff20bb5719282cece0f0d57.png",
+  "version": "24.5.0",
+  "tags": "official",
+  "software": null,
+  "software_title": null,
+  "package_version": 8,
+  "feature_list": [
+    2,
+    8
+  ],
+  "description": "该指令集实现了常用银行登录的功能",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_e05c2690",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "test",
+      "filename": "test",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "test",
+      "enableCopilot": false
+    },
+    {
+      "name": "utils",
+      "filename": "utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    },
+    {
+      "name": "drag",
+      "filename": "drag",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    },
+    {
+      "name": "xtrace",
+      "filename": "xtrace",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    },
+    {
+      "name": "orangebank_slider_captcha",
+      "filename": "orangebank_slider_captcha",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "utils",
+      "enableCopilot": false
+    },
+    {
+      "name": "xztest",
+      "filename": "process1",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "test",
+      "enableCopilot": false
+    },
+    {
+      "name": "平安银行登录-流程版",
+      "filename": "process2",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "test",
+      "enableCopilot": false
+    },
+    {
+      "name": "中国银行登录-流程版",
+      "filename": "process3",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "test",
+      "enableCopilot": false
+    },
+    {
+      "name": "orangebank_load",
+      "filename": "orangebank_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "bankofchina_load",
+      "filename": "bankofchina_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "ghibank_load",
+      "filename": "ghibank_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "cdrcbank_load",
+      "filename": "cdrcbank_load",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "hkbea_load",
+      "filename": "hkbea_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "myccbank_load",
+      "filename": "myccbank_load",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "zybank_load",
+      "filename": "zybank_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "ccbbank_load",
+      "filename": "ccbbank_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "shanghaibank_load",
+      "filename": "shanghaibank_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "jsbchina_load",
+      "filename": "jsbchina_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "personalbank_load",
+      "filename": "personalbank_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "suzhoubank_load",
+      "filename": "suzhoubank_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "bankofbeijing_load",
+      "filename": "bankofbeijing_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "pbank_psbc_load",
+      "filename": "pbank_psbc_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "njcbbank_load",
+      "filename": "njcbbank_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "pbank_load",
+      "filename": "pbank_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "cebbank_load",
+      "filename": "cebbank_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "hyzx_load",
+      "filename": "hyzx_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "enbcb_load",
+      "filename": "enbcb_load",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "ebankhent_load",
+      "filename": "ebankhent_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "wzbank_load",
+      "filename": "wzbank_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "ecitic_load",
+      "filename": "ecitic_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "nper_load",
+      "filename": "nper_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "perbank_czbank_load",
+      "filename": "perbank_czbank_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "icbcbank_load",
+      "filename": "icbcbank_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_jc",
+      "filename": "process4",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "utils_jc",
+      "filename": "utils_jc",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "utils",
+      "enableCopilot": false
+    },
+    {
+      "name": "子流程1",
+      "filename": "process5",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "pbank_load_custom",
+      "filename": "pbank_load_custom",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "zsbank_load",
+      "filename": "zsbank_load",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "src"
+    },
+    {
+      "name": "utils"
+    },
+    {
+      "name": "test"
+    },
+    {
+      "name": "activity"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [
+    "base64-to-image==0.0.1",
+    "ddddocr==1.5.6"
+  ],
+  "internaldependencies": [
+    "activity_jfbym==26.5.3",
+    "activity_4db973e3==25.2.1"
+  ],
+  "selectordependencies": [],
+  "internalautodependencies": [
+    "activity_jfbym",
+    "activity_4db973e3"
+  ],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {},
+  "terminalTags": "win"
+}

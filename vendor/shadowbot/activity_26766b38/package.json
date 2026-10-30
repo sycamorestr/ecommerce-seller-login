@@ -1,0 +1,707 @@
+{
+  "uuid": "354d9098-7129-4725-91d3-908488ec0176",
+  "name": "生意参谋数据获取",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/23/ba/23ba79a15dc3ed4638ac8c9b5db9b0d0.png",
+  "version": "1",
+  "tags": "official",
+  "software": null,
+  "software_title": null,
+  "package_version": 8,
+  "feature_list": [
+    2,
+    4,
+    6,
+    7,
+    8
+  ],
+  "description": "该指令集实现了生意参谋后台数据的下载",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_26766b38",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "测试专用-文武",
+      "filename": "process1",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "品类-宏观监控核心指标监控数据获取",
+      "filename": "process2",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "品类",
+      "enableCopilot": false
+    },
+    {
+      "name": "品类-商品排行-全部商品",
+      "filename": "process3",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "品类",
+      "enableCopilot": false
+    },
+    {
+      "name": "品类-商品360销售分析核心概况数据获取",
+      "filename": "process4",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "品类",
+      "enableCopilot": false
+    },
+    {
+      "name": "品类-商品360销售分析sku销售详情数据获取",
+      "filename": "process5",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "品类",
+      "enableCopilot": false
+    },
+    {
+      "name": "品类-品类360排行数据获取",
+      "filename": "process6",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "品类",
+      "enableCopilot": false
+    },
+    {
+      "name": "服务-核心监控-客服团队概况数据获取",
+      "filename": "process7",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "服务-核心监控-客服排名数据获取",
+      "filename": "process8",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "服务-店铺绩效-业绩分析数据获取",
+      "filename": "process9",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "服务-店铺绩效-售后分析数据获取",
+      "filename": "process10",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "服务_店铺绩效-专项分析数据获取",
+      "filename": "process11",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "服务-客服绩效-业绩分析数据获取",
+      "filename": "process12",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "服务-客服绩效-专项分析数据获取",
+      "filename": "process13",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "服务-客服绩效-售后分析数据获取",
+      "filename": "process14",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "服务-绩效明细-接待明细数据获取",
+      "filename": "process15",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "服务-绩效明细-成交明细数据下载",
+      "filename": "process16",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "服务-绩效明细-流失明细数据获取",
+      "filename": "process17",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "服务-绩效明细-质量明细数据获取",
+      "filename": "process18",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "服务-绩效明细-售后明细数据获取",
+      "filename": "process19",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "交易-交易概况-交易总览数据获取",
+      "filename": "process20",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "交易",
+      "enableCopilot": false
+    },
+    {
+      "name": "交易-交易构成-终端构成数据获取",
+      "filename": "process21",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "交易",
+      "enableCopilot": false
+    },
+    {
+      "name": "交易-交易构成-类目构成数据获取",
+      "filename": "process22",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "交易",
+      "enableCopilot": false
+    },
+    {
+      "name": "交易-交易构成-品牌构成数据获取",
+      "filename": "process23",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "交易",
+      "enableCopilot": false
+    },
+    {
+      "name": "交易-交易构成-价格带构成数据获取",
+      "filename": "process24",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "交易",
+      "enableCopilot": false
+    },
+    {
+      "name": "内容_内容概况_内容全局表现",
+      "filename": "process25",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "内容",
+      "enableCopilot": false
+    },
+    {
+      "name": "内容_光合视频_单条效果",
+      "filename": "process26",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "内容",
+      "enableCopilot": false
+    },
+    {
+      "name": "内容_光合视频_商品分析",
+      "filename": "process27",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "内容",
+      "enableCopilot": false
+    },
+    {
+      "name": "内容_光合视频_整体概况",
+      "filename": "process28",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "内容",
+      "enableCopilot": false
+    },
+    {
+      "name": "内容_光合图文_整体概况",
+      "filename": "process29",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "内容",
+      "enableCopilot": false
+    },
+    {
+      "name": "内容_推荐分析_整体概况",
+      "filename": "process30",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "内容",
+      "enableCopilot": false
+    },
+    {
+      "name": "内容_逛逛分析_单条效果",
+      "filename": "process31",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "内容",
+      "enableCopilot": false
+    },
+    {
+      "name": "内容_逛逛分析_整体概况",
+      "filename": "process32",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "内容",
+      "enableCopilot": false
+    },
+    {
+      "name": "内容_订阅分析_单条效果",
+      "filename": "process33",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "内容",
+      "enableCopilot": false
+    },
+    {
+      "name": "内容_订阅分析_用户分析",
+      "filename": "process34",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "内容",
+      "enableCopilot": false
+    },
+    {
+      "name": "内容_订阅分析_整体概况",
+      "filename": "process35",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "内容",
+      "enableCopilot": false
+    },
+    {
+      "name": "内容_头图视频_整体概况",
+      "filename": "process36",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "内容",
+      "enableCopilot": false
+    },
+    {
+      "name": "流量_流量看板_流量总览",
+      "filename": "process37",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "流量",
+      "enableCopilot": false
+    },
+    {
+      "name": "流量_流量看板_流量来源排行TOP10",
+      "filename": "process38",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "流量",
+      "enableCopilot": false
+    },
+    {
+      "name": "流量_流量看板_商品流量排行TOP10",
+      "filename": "process39",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "流量",
+      "enableCopilot": false
+    },
+    {
+      "name": "流量_店铺来源_流量来源构成-【待下架】",
+      "filename": "process40",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "流量",
+      "enableCopilot": false
+    },
+    {
+      "name": "流量_商品来源_本店商品排行榜",
+      "filename": "process41",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "流量",
+      "enableCopilot": false
+    },
+    {
+      "name": "流量_商品来源_商品进店来源",
+      "filename": "process42",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "流量",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试专用-浪敛",
+      "filename": "process43",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "首页-运营视窗整体看板数据获取",
+      "filename": "process44",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "首页",
+      "enableCopilot": false
+    },
+    {
+      "name": "生意参谋登录",
+      "filename": "process45",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "功能组",
+      "enableCopilot": false
+    },
+    {
+      "name": "_页面数据统计时间校验",
+      "filename": "process46",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "功能组",
+      "enableCopilot": false
+    },
+    {
+      "name": "直播-本店商品成交明细数据获取",
+      "filename": "process47",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "直播",
+      "enableCopilot": false
+    },
+    {
+      "name": "直播-本店商品分场次效果明细获取",
+      "filename": "process49",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "直播",
+      "enableCopilot": false
+    },
+    {
+      "name": "实时-实时总览数据获取",
+      "filename": "process50",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "实时",
+      "enableCopilot": false
+    },
+    {
+      "name": "关闭重要消息提示",
+      "filename": "process51",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "功能组",
+      "enableCopilot": false
+    },
+    {
+      "name": "关闭右侧客服弹窗",
+      "filename": "process52",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "功能组",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_服务-客服绩效-专项分析数据获取",
+      "filename": "process53",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "TEST",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试-",
+      "filename": "process54",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "品类",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试-首页-运营视窗-整体看板数据",
+      "filename": "process55",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "TEST",
+      "enableCopilot": false
+    },
+    {
+      "name": "流量_店铺来源_流量来源构成",
+      "filename": "process56",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "流量",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试-流量来源",
+      "filename": "process57",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "TEST",
+      "enableCopilot": false
+    },
+    {
+      "name": "流量_店铺来源_流量来源构成_细分来源",
+      "filename": "process58",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "流量",
+      "enableCopilot": false
+    },
+    {
+      "name": "utils",
+      "filename": "utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "modules",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试专用-肯尼",
+      "filename": "process59",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "测试登录",
+      "filename": "process60",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "TEST",
+      "enableCopilot": false
+    },
+    {
+      "name": "子流程1",
+      "filename": "process61",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "直播",
+      "enableCopilot": false
+    },
+    {
+      "name": "子流程3",
+      "filename": "process63",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "交易",
+      "enableCopilot": false
+    },
+    {
+      "name": "server_goods_detail_enquire",
+      "filename": "server_goods_detail_enquire",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "server_goods_detail_sale",
+      "filename": "server_goods_detail_sale",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "service_store_after_analysis_data",
+      "filename": "service_store_after_analysis_data",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_新版流量看板",
+      "filename": "process64",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_jc",
+      "filename": "process65",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "service_performance_quality_detail",
+      "filename": "service_performance_quality_detail",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "服务",
+      "enableCopilot": false
+    },
+    {
+      "name": "jx_test",
+      "filename": "jx_test",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "TEST",
+      "enableCopilot": false
+    },
+    {
+      "name": "T SD测试",
+      "filename": "process66",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "品类"
+    },
+    {
+      "name": "交易"
+    },
+    {
+      "name": "服务"
+    },
+    {
+      "name": "流量"
+    },
+    {
+      "name": "内容"
+    },
+    {
+      "name": "首页"
+    },
+    {
+      "name": "直播"
+    },
+    {
+      "name": "实时"
+    },
+    {
+      "name": "功能组"
+    },
+    {
+      "name": "TEST"
+    },
+    {
+      "name": "modules"
+    }
+  ],
+  "variables": [
+    {
+      "name": "服务_通用内容",
+      "type": "str",
+      "value": "",
+      "kind": "Text"
+    },
+    {
+      "name": "服务_通用类型",
+      "type": "str",
+      "value": "",
+      "kind": "Text"
+    },
+    {
+      "name": "交易_交易构成_终端选择",
+      "type": "str",
+      "value": "",
+      "kind": "Text"
+    },
+    {
+      "name": "通用终端选择",
+      "type": "str",
+      "value": "",
+      "kind": "Text"
+    },
+    {
+      "name": "首页_快捷日期_index",
+      "type": "str",
+      "value": "",
+      "kind": "Text"
+    }
+  ],
+  "external_dependencies": [
+    "beautifulsoup4==4.12.2",
+    "bs4==0.0.1",
+    "DateTime==5.1",
+    "numpy==1.21.6",
+    "openpyxl==3.0.10",
+    "pandas==1.3.5",
+    "python-dateutil==2.8.2",
+    "pytz==2023.3",
+    "six==1.16.0",
+    "soupsieve==2.4.1",
+    "xlrd==2.0.1",
+    "xlwings==0.28.8",
+    "zope.interface==6.0"
+  ],
+  "internaldependencies": [
+    "activity_fe2a1069==23.11.0",
+    "iframe2==24.8.0",
+    "activity_47680f64==23.10.0",
+    "web_action==25.12.0",
+    "popup_detector==24.12.0",
+    "activity_excel_v2==25.10.4",
+    "activity_7bca6d==26.7.9",
+    "activity_jfbym==26.6.2",
+    "activity_c80700f1==26.9.2"
+  ],
+  "selectordependencies": [],
+  "internalautodependencies": [
+    "popup_detector",
+    "activity_7bca6d",
+    "activity_fe2a1069",
+    "iframe2",
+    "web_action",
+    "activity_jfbym",
+    "activity_47680f64"
+  ],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {},
+  "terminalTags": null
+}

@@ -1,0 +1,487 @@
+{
+  "uuid": "412bf678-8497-403d-ae8b-e108c9eacdc5",
+  "name": "Temu 商家后台",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/10/1a/101a78feca8aa8d670d489c139b6dfcb.png",
+  "version": "1",
+  "tags": "official",
+  "software": null,
+  "software_title": null,
+  "package_version": 8,
+  "feature_list": [
+    2,
+    6,
+    8
+  ],
+  "description": "该指令集实现了商家后台登录, 数据采集等操作",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_temu_shop",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "utils",
+      "filename": "utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "",
+      "enableCopilot": false
+    },
+    {
+      "name": "login",
+      "filename": "login",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "switch_store",
+      "filename": "switch_store",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "reconciliation",
+      "filename": "reconciliation",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "download_finance_report",
+      "filename": "download_finance_report",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "create_coupon",
+      "filename": "create_coupon",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "balance_screenshot",
+      "filename": "balance_screenshot",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "finish_data_export",
+      "filename": "finish_data_export",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "adjust_prices",
+      "filename": "adjust_prices",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "deliver_goods_opration",
+      "filename": "deliver_goods_opration",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "finishing_data_export",
+      "filename": "finishing_data_export",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "pending_data_export",
+      "filename": "pending_data_export",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "active_record",
+      "filename": "active_record",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "sale_manage_info",
+      "filename": "sale_manage_info",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "return_goods_info",
+      "filename": "return_goods_info",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "sold_out_info",
+      "filename": "sold_out_info",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "return_apply_data",
+      "filename": "return_apply_data",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "return_detail_data",
+      "filename": "return_detail_data",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "order_export",
+      "filename": "order_export",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "switch_area",
+      "filename": "switch_area",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "comment_data",
+      "filename": "comment_data",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "product_quality_dashboard",
+      "filename": "product_quality_dashboard",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "batch_participate_active",
+      "filename": "batch_participate_active",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "get_batch_active_module",
+      "filename": "get_batch_active_module",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "labor_bill",
+      "filename": "labor_bill",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "account_balance_collection",
+      "filename": "account_balance_collection",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "pending_data_screenshot",
+      "filename": "pending_data_screenshot",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "goods_list_download",
+      "filename": "goods_list_download",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "fix_web_download",
+      "filename": "fix_web_download",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    },
+    {
+      "name": "traffic_anaylise_collection",
+      "filename": "traffic_anaylise_collection",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "active_data_export",
+      "filename": "active_data_export",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "active_data_export_half",
+      "filename": "active_data_export_half",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "declared_value",
+      "filename": "declared_value",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "copy_new_goods",
+      "filename": "copy_new_goods",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "traffic_analysis_collection_half",
+      "filename": "traffic_analysis_collection_half",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "shipping_label_fee",
+      "filename": "shipping_label_fee",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "return_label_fee",
+      "filename": "return_label_fee",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "overstocked_returns",
+      "filename": "overstocked_returns",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "product_quality_details",
+      "filename": "product_quality_details",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "life_cycle_collection",
+      "filename": "life_cycle_collection",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "test2",
+      "filename": "test2",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "test",
+      "enableCopilot": false
+    },
+    {
+      "name": "order_list_export",
+      "filename": "order_list_export",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "advertisement_data_download",
+      "filename": "advertisement_data_download",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "advertisement_login",
+      "filename": "advertisement_login",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "advertisement_switch_store",
+      "filename": "advertisement_switch_store",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "advertisement_switch_area",
+      "filename": "advertisement_switch_area",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "advertisement_finance_management_export",
+      "filename": "advertisement_finance_management_export",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "vat_transaction_report",
+      "filename": "vat_transaction_report",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "erp_fee_deduction_download",
+      "filename": "erp_fee_deduction_download",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_utils",
+      "filename": "download_utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    },
+    {
+      "name": "test_wy",
+      "filename": "test_wy",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "test",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_shop_list",
+      "filename": "get_shop_list",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "src"
+    },
+    {
+      "name": "test"
+    },
+    {
+      "name": "activity"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [
+    "uiautomation==2.0.29",
+    "lxml==5.4.0",
+    "requests==2.31.0"
+  ],
+  "internaldependencies": [
+    "activity_jfbym==25.12.21",
+    "web_action==26.8.0",
+    "lazy_loading==25.12.1",
+    "popup_detector==25.12.0"
+  ],
+  "selectordependencies": [],
+  "internalautodependencies": [
+    "popup_detector",
+    "activity_jfbym",
+    "web_action"
+  ],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {},
+  "terminalTags": "win"
+}

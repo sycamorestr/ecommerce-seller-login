@@ -1,0 +1,1102 @@
+<root>
+  <item name="xbot_extensions.activity_temu_shop" display="activity_temu_shop" kind="module">
+    <item.method />
+    <item.desc>Temu 商家后台
+该指令集实现了商家后台登录, 数据采集等操作</item.desc>
+    <item name="xbot_extensions.activity_temu_shop.login" display="login" kind="function" help="/yddoc/rpa/zh-CN/771262214638489600">
+      <item.method />
+      <item.desc>Temu-账号登录
+该指令实现了打开Temu账号，并进行自动登录的功能
+* @param username，
+* @param password，
+* @param web_page，
+* @param target_store，
+* @param default_pwd，
+* @param site，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.login.login" display="login" kind="function" help="/yddoc/rpa/zh-CN/771262214638489600">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.login.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/771262214638489600">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.switch_store" display="switch_store" kind="function" help="/yddoc/rpa/zh-CN/771276199978946560">
+      <item.method />
+      <item.desc>Temu-切换店铺
+该指令实现了在Temu商家后台中，对店铺进行切换的功能
+* @param web_page，
+* @param store_name，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.switch_store._safe_get_active" display="_safe_get_active" kind="function" help="/yddoc/rpa/zh-CN/771276199978946560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.switch_store.switch_store" display="switch_store" kind="function" help="/yddoc/rpa/zh-CN/771276199978946560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.switch_store.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/771276199978946560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.switch_store.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/771276199978946560">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.reconciliation" display="reconciliation" kind="function" help="/yddoc/rpa/zh-CN/771278088904974336">
+      <item.method />
+      <item.desc>Temu-卖家中心-对账中心-财务明细下载
+该指令实现了在Temu卖家中心中，对Temu卖家中心-对账中心-财务明细导出列表下载的功能，若想要下载导出列表+财务明细，请使用导出列表+财务明细指令
+* @param web_page，
+* @param start_time，
+* @param end_time，
+* @param fund_mix，
+* @param fund_max，
+* @param capital_flow，
+* @param file_folder，
+* @param file_name，
+* @param confirm_download，
+* @param financial_type，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.reconciliation.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/771278088904974336">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.reconciliation.get_reconciliation" display="get_reconciliation" kind="function" help="/yddoc/rpa/zh-CN/771278088904974336">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.reconciliation.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/771278088904974336">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.download_finance_report" display="download_finance_report" kind="function" help="/yddoc/rpa/zh-CN/772992697877483520">
+      <item.method />
+      <item.desc>Temu-下载财务明细报表
+该指令实现了对Temu的财务报表进行批量下载的功能
+* @param web_page，
+* @param date，
+* @param file_folder，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.download_finance_report.download" display="download" kind="function" help="/yddoc/rpa/zh-CN/772992697877483520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.download_finance_report.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/772992697877483520">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.create_coupon" display="create_coupon" kind="function" help="/yddoc/rpa/zh-CN/793668557410856960">
+      <item.method />
+      <item.desc>Temu-创建优惠券
+该指令实现了自动批量创建优惠券的功能
+* @param web_page，
+* @param coupon_name，
+* @param start_time，
+* @param end_time，
+* @param coupon_file_path，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.create_coupon.create_coupon" display="create_coupon" kind="function" help="/yddoc/rpa/zh-CN/793668557410856960">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.create_coupon.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/793668557410856960">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.balance_screenshot" display="balance_screenshot" kind="function" help="/yddoc/rpa/zh-CN/775200191869087744">
+      <item.method />
+      <item.desc>Temu-资金中心-余额截图
+该指令实现了自动截取店铺内资金中心的余额
+* @param web_page，网页对象
+* @param folder_path，截图保存文件夹路径
+* @param station，站点名称
+* @return img_path，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.balance_screenshot.save_screenshot" display="save_screenshot" kind="function" help="/yddoc/rpa/zh-CN/775200191869087744">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.balance_screenshot.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/775200191869087744">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.finish_data_export" display="finish_data_export" kind="function" help="/yddoc/rpa/zh-CN/775258660518854656">
+      <item.method />
+      <item.desc>Temu-结算数据-已到账数据导出
+该指令实现了对Temu的结算数据进行导出
+* @param web_page，网页对象
+* @param start_time，输入报表开始日期
+* @param end_time，输入报表结束日期
+* @param folder_path，保存文件夹的地址
+* @param file_name，自定义文件名称
+* @param bill_type，账单类型
+* @param clear_create_time，清空创建时间
+* @return file_path，报表文件路径
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.finish_data_export.remove_path" display="remove_path" kind="function" help="/yddoc/rpa/zh-CN/775258660518854656">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.finish_data_export.export_data" display="export_data" kind="function" help="/yddoc/rpa/zh-CN/775258660518854656">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.finish_data_export.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/775258660518854656">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.adjust_prices" display="adjust_prices" kind="function" help="/yddoc/rpa/zh-CN/777450086620012544">
+      <item.method />
+      <item.desc>Temu-调价管理-拒绝调价(全托)
+该指令实现了对全托平台进行拒绝调价的功能
+* @param web_page，网页对象
+* @param reason，拒绝理由，拒绝理由统一
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.adjust_prices.rejuct_adjust_prices" display="rejuct_adjust_prices" kind="function" help="/yddoc/rpa/zh-CN/777450086620012544">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.adjust_prices.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/777450086620012544">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.deliver_goods_opration" display="deliver_goods_opration" kind="function" help="/yddoc/rpa/zh-CN/777451922611036160">
+      <item.method />
+      <item.desc>Temu-抢备货台
+该指令实现了将今日可发货的单批量加入发货台的功能
+* @param web_page，网页对象
+* @param retry_time，
+* @param orders_num，
+* @param ready_type，
+* @return result，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.deliver_goods_opration.excute_operation" display="excute_operation" kind="function" help="/yddoc/rpa/zh-CN/777451922611036160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.deliver_goods_opration.deliver_opration" display="deliver_opration" kind="function" help="/yddoc/rpa/zh-CN/777451922611036160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.deliver_goods_opration.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/777451922611036160">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.finishing_data_export" display="finishing_data_export" kind="function" help="/yddoc/rpa/zh-CN/779169399710244864">
+      <item.method />
+      <item.desc>Temu-结算数据-结算中数据导出
+该指令实现了对Temu的结算中数据进行导出
+* @param web_page，网页对象
+* @param folder_path，保存文件夹的地址
+* @param file_name，自定义文件名称
+* @return file_path，报表文件路径
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.finishing_data_export.export_data" display="export_data" kind="function" help="/yddoc/rpa/zh-CN/779169399710244864">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.finishing_data_export.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/779169399710244864">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.pending_data_export" display="pending_data_export" kind="function" help="/yddoc/rpa/zh-CN/779170544240910336">
+      <item.method />
+      <item.desc>Temu-结算数据-待处理数据导出
+该指令实现了对Temu的待处理数据进行导出
+* @param web_page，网页对象
+* @param folder_path，保存文件夹的地址
+* @param file_name，自定义文件名称
+* @param time_select，
+* @param hosted_type，
+* @return file_path，报表文件路径
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.pending_data_export.export_data" display="export_data" kind="function" help="/yddoc/rpa/zh-CN/779170544240910336">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.pending_data_export.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/779170544240910336">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.active_record" display="active_record" kind="function" help="/yddoc/rpa/zh-CN/786141403486613504">
+      <item.method />
+      <item.desc>Temu-营销活动-获取报名记录信息
+该指令实现了对全托平台进行获取报名记录信息的功能
+* @param web_page，
+* @param active_category，
+* @param active_type，
+* @param start_time，
+* @param end_time，
+* @param SPU，
+* @param goods_num，
+* @param active_status，
+* @param end_status，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.active_record.set_params" display="set_params" kind="function" help="/yddoc/rpa/zh-CN/786141403486613504">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.active_record.get_data" display="get_data" kind="function" help="/yddoc/rpa/zh-CN/786141403486613504">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.active_record.run" display="run" kind="function" help="/yddoc/rpa/zh-CN/786141403486613504">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.active_record.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/786141403486613504">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.sale_manage_info" display="sale_manage_info" kind="function" help="/yddoc/rpa/zh-CN/788326694266372096">
+      <item.method />
+      <item.desc>Temu-销售管理-销售管理数据获取
+该指令实现了在Temu平台对销售管理数据进行获取的功能
+* @param web_page，
+* @param page_key，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.sale_manage_info.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/788326694266372096">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.sale_manage_info.get_data" display="get_data" kind="function" help="/yddoc/rpa/zh-CN/788326694266372096">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.sale_manage_info.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/788326694266372096">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.return_goods_info" display="return_goods_info" kind="function" help="/yddoc/rpa/zh-CN/788382259556765696">
+      <item.method />
+      <item.desc>Temu-库存管理-退货单数据获取
+该指令实现了对Temu进行退货单数据抓取的功能
+* @param web_page，
+* @param start_time，
+* @param end_time，
+* @param status，
+* @param discard_type，
+* @param reason，
+* @param odds_number，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.return_goods_info.set_params" display="set_params" kind="function" help="/yddoc/rpa/zh-CN/788382259556765696">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.return_goods_info.get_data" display="get_data" kind="function" help="/yddoc/rpa/zh-CN/788382259556765696">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.return_goods_info.run" display="run" kind="function" help="/yddoc/rpa/zh-CN/788382259556765696">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.return_goods_info.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/788382259556765696">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.sold_out_info" display="sold_out_info" kind="function" help="/yddoc/rpa/zh-CN/788737790537986048">
+      <item.method />
+      <item.desc>Temu-销售管理-售罄看板信息获取
+该指令实现了在Temu平台对售罄看板数据进行获取的功能
+* @param web_page，
+* @param available_start_day，
+* @param available_end_day，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.sold_out_info.set_params" display="set_params" kind="function" help="/yddoc/rpa/zh-CN/788737790537986048">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.sold_out_info.get_data" display="get_data" kind="function" help="/yddoc/rpa/zh-CN/788737790537986048">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.sold_out_info.run" display="run" kind="function" help="/yddoc/rpa/zh-CN/788737790537986048">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.sold_out_info.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/788737790537986048">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.return_apply_data" display="return_apply_data" kind="function" help="/yddoc/rpa/zh-CN/790844049976418304">
+      <item.method />
+      <item.desc>Temu-库存管理-退货申请数据获取
+该指令实现了在Temu平台对退货申请数据进行获取的功能
+* @param web_page，
+* @param odds_number，
+* @param start_time，
+* @param end_time，
+* @param SKC，
+* @param stock，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.return_apply_data.set_params" display="set_params" kind="function" help="/yddoc/rpa/zh-CN/790844049976418304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.return_apply_data.get_data" display="get_data" kind="function" help="/yddoc/rpa/zh-CN/790844049976418304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.return_apply_data.run" display="run" kind="function" help="/yddoc/rpa/zh-CN/790844049976418304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.return_apply_data.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/790844049976418304">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.return_detail_data" display="return_detail_data" kind="function" help="/yddoc/rpa/zh-CN/790845108907802624">
+      <item.method />
+      <item.desc>Temu-库存管理-退货明细数据获取
+该指令实现了在Temu平台对退货明细数据进行获取的功能
+* @param web_page，
+* @param package_num，
+* @param start_time，
+* @param end_time，
+* @param SKU，
+* @param stock，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.return_detail_data.set_params" display="set_params" kind="function" help="/yddoc/rpa/zh-CN/790845108907802624">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.return_detail_data.get_data" display="get_data" kind="function" help="/yddoc/rpa/zh-CN/790845108907802624">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.return_detail_data.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/790845108907802624">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.order_export" display="order_export" kind="function" help="/yddoc/rpa/zh-CN/866288583831670784">
+      <item.method />
+      <item.desc>Temu-订单管理-订单导出
+
+* @param web_page，网页对象
+* @param time_select，时间范围选择
+* @param order_type，订单类型
+* @param order_state，订单状态
+* @param cnacled，已取消的商品
+* @param file_folder，文件夹路径
+* @param file_name，文件名称
+* @param export_fields，导出字段
+* @param over_time，
+* @return file_path，文件完整路径
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.order_export.order_export" display="order_export" kind="function" help="/yddoc/rpa/zh-CN/866288583831670784">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.order_export.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/866288583831670784">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.order_export.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/866288583831670784">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.switch_area" display="switch_area" kind="function" help="/yddoc/rpa/zh-CN/795933888705499136">
+      <item.method />
+      <item.desc>Temu-卖家中心-切换区域
+该指令实现了在Temu-卖家中心切换区域的功能
+* @param area，
+* @param web_page，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.switch_area.switch" display="switch" kind="function" help="/yddoc/rpa/zh-CN/795933888705499136">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.switch_area.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/795933888705499136">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.switch_area.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/795933888705499136">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.comment_data" display="comment_data" kind="function" help="/yddoc/rpa/zh-CN/798517129808707584">
+      <item.method />
+      <item.desc>Temu-商品管理-评价管理数据获取
+该指令实现了对半托平台进行获取商品评价的功能
+* @param web_page，
+* @param start_time，
+* @param end_time，
+* @param level，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.comment_data.handle_dropdown" display="handle_dropdown" kind="function" help="/yddoc/rpa/zh-CN/798517129808707584">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.comment_data.get_data" display="get_data" kind="function" help="/yddoc/rpa/zh-CN/798517129808707584">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.comment_data.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/798517129808707584">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.product_quality_dashboard" display="product_quality_dashboard" kind="function" help="/yddoc/rpa/zh-CN/798530482961530880">
+      <item.method />
+      <item.desc>Temu-店铺品质指标获取
+该指令实现了对Temu的店铺品质指标获取
+* @param web_page，
+* @return data_dict，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.product_quality_dashboard.get_quality_data" display="get_quality_data" kind="function" help="/yddoc/rpa/zh-CN/798530482961530880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.product_quality_dashboard.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/798530482961530880">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.batch_participate_active" display="batch_participate_active" kind="function" help="/yddoc/rpa/zh-CN/798896040988516352">
+      <item.method />
+      <item.desc>Temu-营销活动-批量报名活动
+该指令实现了对半托平台进行获取报名记录信息的功能
+* @param web_page，
+* @param file_path，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.batch_participate_active.participage_active" display="participage_active" kind="function" help="/yddoc/rpa/zh-CN/798896040988516352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.batch_participate_active.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/798896040988516352">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.get_batch_active_module" display="get_batch_active_module" kind="function" help="/yddoc/rpa/zh-CN/798896080112013312">
+      <item.method />
+      <item.desc>Temu-营销活动-生成批量报名活动模板
+该指令实现了对半托平台进行生成批量报名活动的模板
+* @param web_page，
+* @param active_type，
+* @param active_site，
+* @param SPU，
+* @param file_folder，
+* @param file_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.get_batch_active_module.handle_dropdown" display="handle_dropdown" kind="function" help="/yddoc/rpa/zh-CN/798896080112013312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.get_batch_active_module.get_active_module" display="get_active_module" kind="function" help="/yddoc/rpa/zh-CN/798896080112013312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.get_batch_active_module.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/798896080112013312">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.labor_bill" display="labor_bill" kind="function" help="/yddoc/rpa/zh-CN/861217250444316672">
+      <item.method />
+      <item.desc>账户资金-财务明细-导出列表+账务详情
+该指令实现在temu下载财务明细导出列表 + 账务详情的账单数据
+* @param web_page，
+* @param start_time，
+* @param end_time，
+* @param financial_type，
+* @param fund_mix，
+* @param fund_max，
+* @param capital_flow，
+* @param file_folder，
+* @param report_type，为空, 表示下载全部, "全球,美国"
+* @param file_name，自定义文件名称
+* @param time_out，
+* @return save_path_list，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.labor_bill.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/861217250444316672">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.labor_bill.download_labor_bill" display="download_labor_bill" kind="function" help="/yddoc/rpa/zh-CN/861217250444316672">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.labor_bill.check_saler_center" display="check_saler_center" kind="function" help="/yddoc/rpa/zh-CN/861217250444316672">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.labor_bill.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/861217250444316672">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.account_balance_collection" display="account_balance_collection" kind="function" help="/yddoc/rpa/zh-CN/859620240341803008">
+      <item.method />
+      <item.desc>Temu-资金中心-账户余额数据采集
+该指令实现了Temu店铺资金中心中的账户余额数据采集功能
+* @param web_page，网页对象
+* @return 输出结果，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.account_balance_collection.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/859620240341803008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.account_balance_collection.account_balance_collection" display="account_balance_collection" kind="function" help="/yddoc/rpa/zh-CN/859620240341803008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.account_balance_collection.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/859620240341803008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.account_balance_collection.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/859620240341803008">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.pending_data_screenshot" display="pending_data_screenshot" kind="function" help="/yddoc/rpa/zh-CN/859707965554581504">
+      <item.method />
+      <item.desc>Temu-结算数据-待结算数据截图
+该指令实现了Temu结算数据模块的待结算数据自动截图的功能
+* @param web_page，网页对象
+* @param file_folder，文件夹路径
+* @param station，站点
+* @return file_path，截图完整路径
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.pending_data_screenshot.add_time_watermark" display="add_time_watermark" kind="function" help="/yddoc/rpa/zh-CN/859707965554581504">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.pending_data_screenshot.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/859707965554581504">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.pending_data_screenshot.pending_data_screenshot" display="pending_data_screenshot" kind="function" help="/yddoc/rpa/zh-CN/859707965554581504">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.pending_data_screenshot.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/859707965554581504">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.pending_data_screenshot.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/859707965554581504">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.goods_list_download" display="goods_list_download" kind="function" help="/yddoc/rpa/zh-CN/862222205631148032">
+      <item.method />
+      <item.desc>Temu-商品管理-商品列表下载
+该指令实现了Temu店铺商品管理模块的商品列表的自动下载
+* @param web_page，网页对象
+* @param goods_type，商品列表类型
+* @param file_folder，报表保存的文件夹
+* @param file_name，报表名称
+* @return file_path，报表完整路径
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.goods_list_download.goods_list_download" display="goods_list_download" kind="function" help="/yddoc/rpa/zh-CN/862222205631148032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.goods_list_download.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/862222205631148032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.goods_list_download.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/862222205631148032">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.traffic_anaylise_collection" display="traffic_anaylise_collection" kind="function" help="/yddoc/rpa/zh-CN/862230926765510656">
+      <item.method />
+      <item.desc>Temu-数据中心-流量分析数据采集(全托)
+该指令实现了Temu全托店铺数据中心模块的流量分析数据采集的功能
+* @param web_page，
+* @param date_time，日期选择
+* @param need_rating，采集比率数据
+* @return data，输出结果
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.traffic_anaylise_collection.traffic_analysis_collection" display="traffic_analysis_collection" kind="function" help="/yddoc/rpa/zh-CN/862230926765510656">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.traffic_anaylise_collection.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/862230926765510656">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.traffic_anaylise_collection.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/862230926765510656">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.active_data_export" display="active_data_export" kind="function" help="/yddoc/rpa/zh-CN/864316233210437632">
+      <item.method />
+      <item.desc>Temu-数据中心-活动数据导出(全托)
+该指令实现了Temu全托店铺的活动数据导出
+* @param web_page，网页对象
+* @param time_range，时间范围
+* @param file_folder，文件夹路径
+* @param file_name，文件名称
+* @return file_path，文件完整路径
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.active_data_export.active_data_export" display="active_data_export" kind="function" help="/yddoc/rpa/zh-CN/864316233210437632">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.active_data_export.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/864316233210437632">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.active_data_export.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/864316233210437632">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.active_data_export_half" display="active_data_export_half" kind="function" help="/yddoc/rpa/zh-CN/864314324638539776">
+      <item.method />
+      <item.desc>Temu-数据中心-活动数据导出(半托)
+该指令实现了temu半托店铺的数据导出
+* @param web_page，网页对象
+* @param time_range，时间范围
+* @param file_folder，文件夹路径
+* @param file_name，文件名称
+* @return file_path，文件夹完整路径
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.active_data_export_half.active_data_export_half" display="active_data_export_half" kind="function" help="/yddoc/rpa/zh-CN/864314324638539776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.active_data_export_half.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/864314324638539776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.active_data_export_half.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/864314324638539776">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.declared_value" display="declared_value" kind="function" help="/yddoc/rpa/zh-CN/867694419476619264">
+      <item.method />
+      <item.desc>Temu-商品管理-申报价格
+该指令实现了temu店铺的价格自动申报
+* @param web_page，网页对象
+* @param two_list，用户传输的数据
+* @return data_list，返回结果
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.declared_value.declared_value" display="declared_value" kind="function" help="/yddoc/rpa/zh-CN/867694419476619264">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.declared_value.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/867694419476619264">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.declared_value.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/867694419476619264">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.copy_new_goods" display="copy_new_goods" kind="function" help="/yddoc/rpa/zh-CN/866649823716966400">
+      <item.method />
+      <item.desc>Temu-商品复制上新
+该指令实现了temu店铺商品复制上新的功能
+* @param web_page，网页对象
+* @param two_info_list，复制信息列表
+* @param station，复制的站点
+* @param create_or_save，创建或保存草稿
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.copy_new_goods.see_element" display="see_element" kind="function" help="/yddoc/rpa/zh-CN/866649823716966400">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.copy_new_goods.copy_new_goods" display="copy_new_goods" kind="function" help="/yddoc/rpa/zh-CN/866649823716966400">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.copy_new_goods.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/866649823716966400">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.copy_new_goods.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/866649823716966400">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.traffic_analysis_collection_half" display="traffic_analysis_collection_half" kind="function" help="/yddoc/rpa/zh-CN/872120415915130880">
+      <item.method />
+      <item.desc>Temu-数据中心-流量分析数据采集(半托)
+该指令实现了Temu半托店铺的流量分析数据采集的功能
+* @param web_page，
+* @param date_time，日期范围
+* @param need_rating，是否需要采集比率数据
+* @return data，输出结果
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.traffic_analysis_collection_half.traffic_analysis_collection" display="traffic_analysis_collection" kind="function" help="/yddoc/rpa/zh-CN/872120415915130880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.traffic_analysis_collection_half.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/872120415915130880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.traffic_analysis_collection_half.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/872120415915130880">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.shipping_label_fee" display="shipping_label_fee" kind="function" help="/yddoc/rpa/zh-CN/866657299259543552">
+      <item.method />
+      <item.desc>Temu-账户资金-发货面单费导出(半托)
+该指令实现了Temu半托店铺的发货面单费导出功能
+* @param web_page，网页对象
+* @param file_folder，文件夹路径
+* @param file_name，文件名称
+* @param start_time，开始时间
+* @param end_time，结束时间
+* @param over_time，
+* @return file_path，文件完整路径
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.shipping_label_fee.shipping_label_fee" display="shipping_label_fee" kind="function" help="/yddoc/rpa/zh-CN/866657299259543552">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.shipping_label_fee.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/866657299259543552">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.shipping_label_fee.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/866657299259543552">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.return_label_fee" display="return_label_fee" kind="function" help="/yddoc/rpa/zh-CN/867697633412390912">
+      <item.method />
+      <item.desc>Temu-账户资金-退货面单费导出(半托)
+该指令实现了半托店铺退货面单费导出的功能
+* @param web_page，
+* @param select_way，退至商家/第三方仓库
+* @param start_time，开始时间
+* @param end_time，结束时间
+* @param file_folder，文件夹位置
+* @param file_name，文件名称
+* @return file_path，文件完整路径
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.return_label_fee.return_label_fee" display="return_label_fee" kind="function" help="/yddoc/rpa/zh-CN/867697633412390912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.return_label_fee.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/867697633412390912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.return_label_fee.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/867697633412390912">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.overstocked_returns" display="overstocked_returns" kind="function" help="/yddoc/rpa/zh-CN/866972727759212544">
+      <item.method />
+      <item.desc>Temu-销售管理-滞销品退货
+该指令实现了Temu店铺的滞销品退货的功能
+* @param web_page，
+* @param onner_list，自己填写的退货列表
+* @param start_station_time，加入站点开始时长
+* @param end_station_time，加入站点结束时长
+* @param sku_inventroy，库存量
+* @param product_state，选品状态
+* @param date_time，销量日期
+* @param start_sales，开始销量
+* @param end_sales，结束销量
+* @param apply_reason，退货原因
+* @return data，输出结果
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.overstocked_returns.ADS_hidden" display="ADS_hidden" kind="function" help="/yddoc/rpa/zh-CN/866972727759212544">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.overstocked_returns.overstocked_returns" display="overstocked_returns" kind="function" help="/yddoc/rpa/zh-CN/866972727759212544">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.overstocked_returns.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/866972727759212544">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.overstocked_returns.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/866972727759212544">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.product_quality_details" display="product_quality_details" kind="function" help="/yddoc/rpa/zh-CN/872126750994460672">
+      <item.method />
+      <item.desc>Temu-质量管理-商品品质明细数据采集
+该指令实现了Temu店铺的商品品质分数据获取的功能
+* @param web_page，网页对象
+* @return data，输出结果
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.product_quality_details.product_quality_details" display="product_quality_details" kind="function" help="/yddoc/rpa/zh-CN/872126750994460672">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.product_quality_details.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/872126750994460672">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.product_quality_details.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/872126750994460672">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.life_cycle_collection" display="life_cycle_collection" kind="function" help="/yddoc/rpa/zh-CN/872121775107076096">
+      <item.method />
+      <item.desc>Temu-商品管理-生命周期数据采集
+改指令实现了Temu店铺生命周期中的已下架/已发布到站点数据采集的功能
+* @param web_page，
+* @param product_state，商品状态
+* @return data，输出结果
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.life_cycle_collection.To_tbody_top" display="To_tbody_top" kind="function" help="/yddoc/rpa/zh-CN/872121775107076096">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.life_cycle_collection.life_cycle_collection" display="life_cycle_collection" kind="function" help="/yddoc/rpa/zh-CN/872121775107076096">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.life_cycle_collection._iter_life_cycle_rows" display="_iter_life_cycle_rows" kind="function" help="/yddoc/rpa/zh-CN/872121775107076096">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.life_cycle_collection._collect_life_cycle_rows" display="_collect_life_cycle_rows" kind="function" help="/yddoc/rpa/zh-CN/872121775107076096">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.life_cycle_collection.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/872121775107076096">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.life_cycle_collection.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/872121775107076096">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.order_list_export" display="order_list_export" kind="function" help="/yddoc/rpa/zh-CN/874663819371401216">
+      <item.method />
+      <item.desc>Temu-订单管理-订单列表导出
+该指令实现了Temu店铺的订单列表导出的功能
+* @param web_page，
+* @param order_type，订单类型
+* @param order_state，订单状态
+* @param time_range，订单创建时间
+* @param file_folder，文件夹路径
+* @param file_name，文件名称
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.order_list_export.time_select" display="time_select" kind="function" help="/yddoc/rpa/zh-CN/874663819371401216">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.order_list_export.order_list_export" display="order_list_export" kind="function" help="/yddoc/rpa/zh-CN/874663819371401216">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.order_list_export.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/874663819371401216">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.order_list_export.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/874663819371401216">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.advertisement_data_download" display="advertisement_data_download" kind="function" help="/yddoc/rpa/zh-CN/876664086888898560">
+      <item.method />
+      <item.desc>Temu-数据报表-广告数据下载
+该指令实现了Temu广告平台，数据报表中的广告数据下载的功能
+* @param web_page，
+* @param report_type，报表类型
+* @param data_type，数据类型
+* @param date_range，日期
+* @param time_select，自定义时间
+* @param file_folder，文件夹路径
+* @param file_name，文件名称
+* @param area，
+* @return file_path，文件完整路径
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_data_download.advertisement_data_download" display="advertisement_data_download" kind="function" help="/yddoc/rpa/zh-CN/876664086888898560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_data_download.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/876664086888898560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_data_download.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/876664086888898560">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.advertisement_login" display="advertisement_login" kind="function" help="/yddoc/rpa/zh-CN/876655845617999872">
+      <item.method />
+      <item.desc> Temu-广告平台-登录
+该指令实现了Temu-广告平台的跨境登录功能
+* @param web_page，
+* @param default_pwd，默认登录
+* @param username，账号
+* @param password，密码
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_login.advertisement_login" display="advertisement_login" kind="function" help="/yddoc/rpa/zh-CN/876655845617999872">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_login.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/876655845617999872">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_login.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/876655845617999872">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.advertisement_switch_store" display="advertisement_switch_store" kind="function" help="/yddoc/rpa/zh-CN/876661020345163776">
+      <item.method />
+      <item.desc>Temu-广告平台-切换店铺
+该指令实现了Temu广告平台的店铺切换功能
+* @param web_page，
+* @param store_name，店铺名称
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_switch_store.switch_store" display="switch_store" kind="function" help="/yddoc/rpa/zh-CN/876661020345163776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_switch_store.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/876661020345163776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_switch_store.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/876661020345163776">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.advertisement_switch_area" display="advertisement_switch_area" kind="function" help="/yddoc/rpa/zh-CN/876662339013369856">
+      <item.method />
+      <item.desc>Temu-广告平台-切换站点
+该指令实现了Temu广告平台半托店铺的站点切换
+* @param web_page，
+* @param targe_area_name，站点名称
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_switch_area.switch_area" display="switch_area" kind="function" help="/yddoc/rpa/zh-CN/876662339013369856">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_switch_area.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/876662339013369856">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_switch_area.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/876662339013369856">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.advertisement_finance_management_export" display="advertisement_finance_management_export" kind="function" help="/yddoc/rpa/zh-CN/877357107640995840">
+      <item.method />
+      <item.desc>temu-广告平台-广告流水账单导出
+该指令实现了temu广告平台的财务管理模块中的广告流水导出的功能
+* @param web_page，
+* @param bill_type，账单类型
+* @param time_select，自定义时间
+* @param file_folder，文件夹路径
+* @param file_name，文件名称
+* @return file_path，输出路径
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_finance_management_export.advertisement_finance_management_export" display="advertisement_finance_management_export" kind="function" help="/yddoc/rpa/zh-CN/877357107640995840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_finance_management_export.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/877357107640995840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.advertisement_finance_management_export.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/877357107640995840">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.erp_fee_deduction_download" display="erp_fee_deduction_download" kind="function" help="/yddoc/rpa/zh-CN/889355795521355776">
+      <item.method />
+      <item.desc>erp已扣费费用下载
+该指令实现了temu店铺的ERP费用管理中的已扣费费用下载的功能
+* @param web_page，
+* @param fee_type，费用类型
+* @param start_time，开始时间
+* @param end_time，结束时间
+* @param file_folder，保存文件夹位置
+* @param file_name，文件名称
+* @return file_path，文件完整路径
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.erp_fee_deduction_download.transform_month" display="transform_month" kind="function" help="/yddoc/rpa/zh-CN/889355795521355776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.erp_fee_deduction_download.period_select" display="period_select" kind="function" help="/yddoc/rpa/zh-CN/889355795521355776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.erp_fee_deduction_download.erp_fee_download" display="erp_fee_download" kind="function" help="/yddoc/rpa/zh-CN/889355795521355776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.erp_fee_deduction_download.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/889355795521355776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.erp_fee_deduction_download.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/889355795521355776">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_temu_shop.get_shop_list" display="get_shop_list" kind="function" help="/yddoc/rpa/zh-CN/955704514003333120">
+      <item.method />
+      <item.desc>Temu-获取店铺列表
+该指令实现了获取当前打开的Temu账号全部店铺列表信息的功能
+* @param web_page，
+* @return shop_list，
+</item.desc>
+      <item name="xbot_extensions.activity_temu_shop.get_shop_list.get_shop_list" display="get_shop_list" kind="function" help="/yddoc/rpa/zh-CN/955704514003333120">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.get_shop_list.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/955704514003333120">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_temu_shop.get_shop_list.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/955704514003333120">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+  </item>
+</root>

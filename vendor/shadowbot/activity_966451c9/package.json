@@ -1,0 +1,287 @@
+{
+  "uuid": "a840bdb0-fd78-475a-9faf-9ba076f9271e",
+  "name": "抖店操作",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/6a/47/6a479b4c3a8774a3c6485d5ad208e42f.png",
+  "version": "1",
+  "tags": "official",
+  "software": null,
+  "software_title": null,
+  "package_version": 8,
+  "feature_list": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "description": "抖店相关的指令集，登录、时间选择等",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_966451c9",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店多店铺登录",
+      "filename": "process1",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "抖店多店铺登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "utils",
+      "filename": "utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店售后工作台时间选择",
+      "filename": "process3",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "时间选择",
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店订单管理时间选择",
+      "filename": "process4",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "时间选择",
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店商家助手隐藏显示",
+      "filename": "process5",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "抖店小工具",
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店资金日账单下载",
+      "filename": "process6",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店资金月账单下载",
+      "filename": "process7",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店店铺切换",
+      "filename": "process13",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "抖店多店铺登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店商家体验分",
+      "filename": "process14",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店订单管理时间选择-新版",
+      "filename": "process15",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "时间选择",
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店店铺切换（新）",
+      "filename": "process17",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "抖店多店铺登录（新）",
+      "enableCopilot": false
+    },
+    {
+      "name": "验证码-点选坐标",
+      "filename": "process20",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "抖店多店铺登录（新）",
+      "enableCopilot": false
+    },
+    {
+      "name": "退出已登录",
+      "filename": "process21",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "抖店多店铺登录（新）",
+      "enableCopilot": false
+    },
+    {
+      "name": "飞鸽工作台去除开屏广告",
+      "filename": "process22",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "抖店小工具",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试调用模块",
+      "filename": "process23",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T 测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店时分秒日期选择",
+      "filename": "process25",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "时间选择",
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店商家体验分(新版)",
+      "filename": "process26",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "DSR_requests",
+      "filename": "DSR_requests",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "get_screen",
+      "filename": "get_screen",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "抖店多店铺登录（新）",
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店体验分",
+      "filename": "process27",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店评价管理时间选择",
+      "filename": "process30",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "cuopon_date_select",
+      "filename": "cuopon_date_select",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "时间选择",
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店店铺切换(ID)",
+      "filename": "process35",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "抖店多店铺登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店店铺切换(ID)(新)",
+      "filename": "process36",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "抖店多店铺登录（新）",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试 SD抖店售后工作台时间选择",
+      "filename": "process37",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T 测试",
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "时间选择"
+    },
+    {
+      "name": "抖店多店铺登录"
+    },
+    {
+      "name": "T 测试"
+    },
+    {
+      "name": "抖店多店铺登录（新）"
+    },
+    {
+      "name": "抖店小工具"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [
+    "requests==2.31.0",
+    "PyExecJS==1.5.1"
+  ],
+  "internaldependencies": [
+    "shadowbot_date_select==24.11.0",
+    "activity_jfbym==26.10.0",
+    "activity_excel_v2==25.9.0",
+    "activity_fe2a1069==23.12.0",
+    "web_action==26.10.1",
+    "shadowbot_datatime==26.1.2"
+  ],
+  "selectordependencies": [],
+  "internalautodependencies": [
+    "activity_jfbym",
+    "activity_fe2a1069",
+    "web_action",
+    "shadowbot_datatime",
+    "shadowbot_date_select",
+    "activity_excel_v2"
+  ],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {
+    "videoUrl": null,
+    "imageUrl": null,
+    "imageName": null,
+    "gifUrl": null
+  },
+  "terminalTags": "win"
+}

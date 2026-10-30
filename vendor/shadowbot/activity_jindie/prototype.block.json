@@ -1,0 +1,651 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_jindie.main",
+      "statement": "process.invoke_activity",
+      "title": "金蝶云星空 - 网页端",
+      "keywords": "",
+      "description": "金蝶云星空浏览器自动化，支持登录与填写表单数据等操作",
+      "comment": "金蝶云星空扩展操作入口。通常无需直接调用该块。",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/a8/8e/a88e9c9ef269912465dc5ced4ca6795a.png",
+      "function": "xbot_extensions.activity_jindie.main",
+      "helpUrl": null,
+      "extension": "金蝶云星空 - 网页端",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jindie.utils",
+      "statement": "process.invoke_activity",
+      "title": "工具函数（内部）",
+      "keywords": "",
+      "description": "内部通用工具函数，通常无需直接调用。",
+      "comment": "内部工具模块。通常无需在流程中直接调用。",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jindie.utils",
+      "helpUrl": null,
+      "extension": "金蝶云星空 - 网页端",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jindie.login",
+      "statement": "process.invoke_activity",
+      "title": "登录金蝶云星空",
+      "keywords": "",
+      "description": "登录金蝶云星空平台并返回网页对象。",
+      "comment": "传入登录页网页对象%web_page%、账号%account%、密码%password%、平台%platform%，登录成功后输出网页对象到%out_web_page%。",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jindie.login",
+      "helpUrl": "/yddoc/rpa/zh-CN/938363553566621696",
+      "extension": "金蝶云星空 - 网页端",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "登录页网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "account",
+          "label": "账号",
+          "required": false,
+          "tips": "填写账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "密码",
+          "required": false,
+          "tips": "填写密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "platform",
+          "label": "平台",
+          "required": false,
+          "tips": "选择平台，不填则不进行选择操作",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "login_now",
+          "label": "是否顶号登录",
+          "required": false,
+          "tips": "选择当出现是否登录时，是否顶号",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "是否顶号登录"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out_web_page",
+          "label": "网页对象（输出）",
+          "tips": "输出网页对象",
+          "name": "web_page",
+          "type": "xbot._web.browser.WebBrowser"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_jindie.get_all_tab",
+      "statement": "process.invoke_activity",
+      "title": "获取标签页列表",
+      "keywords": "",
+      "description": "获取当前页面已打开的标签页名称列表。",
+      "comment": "传入网页对象%web_page%，输出当前已打开标签页名称列表到%out_all_tab_list%。",
+      "icon": null,
+      "function": "xbot_extensions.activity_jindie.get_all_tab",
+      "helpUrl": "/yddoc/rpa/zh-CN/938363560289357824",
+      "extension": "金蝶云星空 - 网页端",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out_all_tab_list",
+          "label": "标签页列表",
+          "tips": "输出所有tab列表",
+          "name": "all_tab_list",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_jindie.close_tab",
+      "statement": "process.invoke_activity",
+      "title": "关闭标签页",
+      "keywords": "",
+      "description": "按名称关闭一个或多个标签页。",
+      "comment": "传入网页对象%web_page%和标签页名称%tab_name%（支持单个或多个），执行关闭标签页。",
+      "icon": null,
+      "function": "xbot_extensions.activity_jindie.close_tab",
+      "helpUrl": "/yddoc/rpa/zh-CN/938363567227469824",
+      "extension": "金蝶云星空 - 网页端",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "选择网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "tab_name",
+          "label": "标签页名称",
+          "required": false,
+          "tips": "需要关闭的tab页，支持单个传入：采购合同；多个输入：[\"采购合同\", \"采购订单\"]",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jindie.get_group_list",
+      "statement": "process.invoke_activity",
+      "title": "获取分组列表",
+      "keywords": "",
+      "description": "获取当前页面可见分组名称列表。",
+      "comment": "传入网页对象%web_page%，输出当前可见分组名称列表到%out_group_list%。",
+      "icon": null,
+      "function": "xbot_extensions.activity_jindie.get_group_list",
+      "helpUrl": "/yddoc/rpa/zh-CN/938363574743662592",
+      "extension": "金蝶云星空 - 网页端",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out_group_list",
+          "label": "分组列表",
+          "tips": "获取到的全部分组",
+          "name": "group_list",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_jindie.show_group",
+      "statement": "process.invoke_activity",
+      "title": "展开分组",
+      "keywords": "",
+      "description": "展开指定分组或展开全部分组。",
+      "comment": "传入网页对象%web_page%，可按%group_name%展开指定分组，或勾选%show_all%展开全部。",
+      "icon": null,
+      "function": "xbot_extensions.activity_jindie.show_group",
+      "helpUrl": "/yddoc/rpa/zh-CN/938363581189574656",
+      "extension": "金蝶云星空 - 网页端",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "group_name",
+          "label": "分组名称",
+          "required": false,
+          "tips": "分组名称，支持str, list写入",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "show_all",
+          "label": "展开全部",
+          "required": false,
+          "tips": "是否显示所有",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "展开全部"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jindie.hide_group",
+      "statement": "process.invoke_activity",
+      "title": "收起分组",
+      "keywords": "",
+      "description": "收起指定分组或收起全部分组。",
+      "comment": "传入网页对象%web_page%，可按%group_name%收起指定分组，或勾选%hide_all%收起全部。",
+      "icon": null,
+      "function": "xbot_extensions.activity_jindie.hide_group",
+      "helpUrl": "/yddoc/rpa/zh-CN/938363588496785408",
+      "extension": "金蝶云星空 - 网页端",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "group_name",
+          "label": "分组名称",
+          "required": false,
+          "tips": "分组名称，支持str, list写入",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "hide_all",
+          "label": "收起全部",
+          "required": false,
+          "tips": "是否隐藏所有",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "收起全部"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jindie.input_data",
+      "statement": "process.invoke_activity",
+      "title": "填写字段",
+      "keywords": "",
+      "description": "按分组与字段名填写单个字段。",
+      "comment": "传入网页对象%web_page%、分组名%group_name%、字段名%key%、字段值%value%，执行单字段填写。",
+      "icon": null,
+      "function": "xbot_extensions.activity_jindie.input_data",
+      "helpUrl": "/yddoc/rpa/zh-CN/938363595664850944",
+      "extension": "金蝶云星空 - 网页端",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "group_name",
+          "label": "分组名称",
+          "required": false,
+          "tips": "分组名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "字段名称",
+          "required": false,
+          "tips": "字段名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "value",
+          "label": "字段值",
+          "required": false,
+          "tips": "填写内容，日期格式支持YYYY/MM/DD",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jindie.batch_input_data",
+      "statement": "process.invoke_activity",
+      "title": "批量填写字段",
+      "keywords": "",
+      "description": "按数据列表批量填写多个字段。",
+      "comment": "传入网页对象%web_page%和批量数据%data_list%（列表字典），依次执行字段填写。",
+      "icon": null,
+      "function": "xbot_extensions.activity_jindie.batch_input_data",
+      "helpUrl": "/yddoc/rpa/zh-CN/938363602593841152",
+      "extension": "金蝶云星空 - 网页端",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "data_list",
+          "label": "批量数据",
+          "required": false,
+          "tips": "批量填写数据，例如[{\"group_name\": \"基本信息\", \"key\": \"供应商\", \"value\": \"E00001\"}]",
+          "type": "list",
+          "default": "13:[{\"group_name\": \"基本信息\", \"key\": \"供应商\", \"value\": \"E00001\"}]",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jindie.input_table",
+      "statement": "process.invoke_activity",
+      "title": "填写表格单元格",
+      "keywords": "",
+      "description": "按表格序号、列名、行号填写表格单元格。",
+      "comment": "传入网页对象%web_page%、表格序号%sheet_index%、列名%col_name%、行号%row_num%、单元格值%data%，执行表格填写。",
+      "icon": null,
+      "function": "xbot_extensions.activity_jindie.input_table",
+      "helpUrl": "/yddoc/rpa/zh-CN/938363608696553472",
+      "extension": "金蝶云星空 - 网页端",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "sheet_index",
+          "label": "表格序号",
+          "required": false,
+          "tips": "默认为1，若当前页面存在多个表格，可以选择需要操作的表格",
+          "type": "int",
+          "default": "13:1",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        },
+        {
+          "name": "col_name",
+          "label": "列名",
+          "required": false,
+          "tips": "表头名称，支持直接传入数字",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "row_num",
+          "label": "行号",
+          "required": false,
+          "tips": "行号，所填内容所在的行号",
+          "type": "str",
+          "default": "13:1",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "data",
+          "label": "单元格值",
+          "required": false,
+          "tips": "填写内容，日期格式支持YYYY/MM/DD HH:mm:ss，复选框填写：是/否",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jindie.get_field_data",
+      "statement": "process.invoke_activity",
+      "title": "获取字段值",
+      "keywords": "",
+      "description": "按分组与字段名读取字段值。",
+      "comment": "传入网页对象%web_page%、分组名%group_name%、字段名%key%，输出字段值到%out_field_value%。",
+      "icon": null,
+      "function": "xbot_extensions.activity_jindie.get_field_data",
+      "helpUrl": "/yddoc/rpa/zh-CN/938363615218696192",
+      "extension": "金蝶云星空 - 网页端",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "group_name",
+          "label": "分组名称",
+          "required": false,
+          "tips": "分组名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "key",
+          "label": "字段名称",
+          "required": false,
+          "tips": "填写字段名称，暂不支持获取表格内容",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out_field_value",
+          "label": "字段值",
+          "tips": "获取到的字段值",
+          "name": "out_field_value",
+          "type": "str"
+        }
+      ]
+    }
+  ]
+}

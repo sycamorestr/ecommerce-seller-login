@@ -247,7 +247,7 @@ def test_wangdiantong_is_desktop_only():
 
 
 def test_docs_mentions_skipped():
-    text = open("docs/UNPORTED_BLOCKS.md", encoding="utf-8").read()
+    text = open("docs/unported.md", encoding="utf-8").read()
     assert "登录旺店通" in text
     assert "京东数坊" in text
     assert "trace_api" in text

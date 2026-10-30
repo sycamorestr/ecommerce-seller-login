@@ -1,0 +1,3271 @@
+<root>
+  <item name="xbot_extensions.amazon_ext_op" display="amazon_ext_op" kind="module">
+    <item.method />
+    <item.desc>亚马逊卖家后台
+该指令集实现了亚马逊卖家后台常用的操作，例如：登录店铺、切换站点等等</item.desc>
+    <item name="xbot_extensions.amazon_ext_op.process1" display="process1" kind="function" help="/yddoc/rpa/zh-CN/889696906272509952">
+      <item.method>process1(网页对象)</item.method>
+      <item.desc>亚马逊-店铺登录
+该指令实现了亚马逊店铺登录，只做点击登录按钮和提交验证码操作，不自动输入账号密码
+* @param 网页对象，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process2" display="process2" kind="function" help="/yddoc/rpa/zh-CN/889696920350244864">
+      <item.method>process2(网页对象,站点名称)</item.method>
+      <item.desc>亚马逊-切换站点
+该指令实现了亚马逊切换站点操作，自动点击切换过程出现的登录以及二次验证
+* @param 网页对象，
+* @param 站点名称，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process29" display="process29" kind="function" help="/yddoc/rpa/zh-CN/903903951574536192">
+      <item.method>process29(网页对象,切换语言)</item.method>
+      <item.desc>亚马逊-切换语言
+该指令实现了在亚马逊后台切换页面语言的操作
+* @param 网页对象，
+* @param 切换语言，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process30" display="process30" kind="function" help="/yddoc/rpa/zh-CN/903904201655717888">
+      <item.method>process30(网页对象,切换语言)</item.method>
+      <item.desc>亚马逊-广告页切换语言
+该指令实现了在亚马逊广告页切换语言的操作
+* @param 网页对象，
+* @param 切换语言，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process3" display="process3" kind="function" help="/yddoc/rpa/zh-CN/889696933402918912">
+      <item.method>process3(网页对象,站点名称,报告类型,报告标签,日期范围,保存文件夹,保存文件名,超时时间,账户类型)</item.method>
+      <item.desc>亚马逊-付款报告下载
+该指令实现了付款报告库-报告库页面的文件下载操作
+* @param 网页对象，
+* @param 站点名称，
+* @param 报告类型，
+* @param 报告标签，
+* @param 日期范围，
+* @param 保存文件夹，
+* @param 保存文件名，
+* @param 超时时间，
+* @param 账户类型，
+* @return run_status，
+* @return err_msg，
+* @return download_file_path，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process4" display="process4" kind="function" help="/yddoc/rpa/zh-CN/889696954997739520">
+      <item.method>process4(网页对象,站点名称,最小提现金额,逗号处理)</item.method>
+      <item.desc>亚马逊-自动提现
+该指令实现亚马逊切换站点并提现的操作
+* @param 网页对象，
+* @param 站点名称，
+* @param 最小提现金额，
+* @param 逗号处理，
+* @return run_status，
+* @return err_msg，
+* @return wd_amount，
+* @return standard_current_balance，
+* @return invoice_payment_current_balance，
+* @return total_amount，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process5" display="process5" kind="function" help="/yddoc/rpa/zh-CN/889696970244034560">
+      <item.method>process5(网页对象,站点名称,保存文件夹,保存文件名,结算周期,账户类型,截图区域)</item.method>
+      <item.desc>亚马逊-结算一览截图
+该指令实现亚马逊切换站点并在结算一览页面截图的操作
+* @param 网页对象，
+* @param 站点名称，
+* @param 保存文件夹，
+* @param 保存文件名，
+* @param 结算周期，
+* @param 账户类型，
+* @param 截图区域，
+* @return run_status，
+* @return err_msg，
+* @return screenshot_file_name，
+* @return currency_total_amount，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process10" display="process10" kind="function" help="/yddoc/rpa/zh-CN/889696986564071424">
+      <item.method>process10(网页对象,站点名称,ASIN列表,上次更新天数)</item.method>
+      <item.desc>亚马逊-买家之声
+该指令实现了自动切换站点，根据ASIN抓取买家之声页面的数据以及sku的详细数据的操作
+* @param 网页对象，
+* @param 站点名称，
+* @param ASIN列表，
+* @param 上次更新天数，
+* @return run_status，
+* @return err_msg，
+* @return asin_data，
+* @return not_exist_asin_list，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process12" display="process12" kind="function" help="/yddoc/rpa/zh-CN/889697006299922432">
+      <item.method>process12(网页对象,保存文件夹,保存文件名,下载类型,起始日期,等待时间,结束日期)</item.method>
+      <item.desc>亚马逊-买家退货
+该指令实现亚马逊切换站点并下载【买家退货报表】
+* @param 网页对象，
+* @param 保存文件夹，
+* @param 保存文件名，
+* @param 下载类型，
+* @param 起始日期，
+* @param 等待时间，
+* @param 结束日期，
+* @return run_status，
+* @return err_msg，
+* @return download_file_path，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process14" display="process14" kind="function" help="/yddoc/rpa/zh-CN/889697026091192320">
+      <item.method>process14(网页对象,保存文件夹,保存文件名,下载类型,下载年月,等待时间)</item.method>
+      <item.desc>亚马逊-月度仓储费
+该指令实现亚马逊切换站点并下载【月度仓储费报表】
+* @param 网页对象，
+* @param 保存文件夹，
+* @param 保存文件名，
+* @param 下载类型，
+* @param 下载年月，
+* @param 等待时间，
+* @return run_status，
+* @return err_msg，
+* @return download_file_path，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process19" display="process19" kind="function" help="/yddoc/rpa/zh-CN/889697046121938944">
+      <item.method>process19(网页对象,站点名称)</item.method>
+      <item.desc>亚马逊-查询优惠券
+该指令实现了自动切换站点，查找所有优惠券的操作
+* @param 网页对象，
+* @param 站点名称，
+* @return run_status，
+* @return err_msg，
+* @return coupons，
+* @return header_fields，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.sponsored_activities_download" display="sponsored_activities_download" kind="function" help="/yddoc/rpa/zh-CN/897086278875701248">
+      <item.method />
+      <item.desc>亚马逊-广告-广告活动数据下载
+该指令用于从亚马逊广告后台下载广告活动数据文件。支持按日期范围、国家/地区和广告活动状态进行筛选，并自动处理下载过程中的弹窗。
+* @param web_page，
+* @param file_folder，
+* @param file_name，
+* @param start_date，
+* @param end_date，
+* @param orgins，
+* @param status，
+* @param clicks_num，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_activities_download.wait_for_element_by_xpath" display="wait_for_element_by_xpath" kind="function" help="/yddoc/rpa/zh-CN/897086278875701248">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_activities_download.wait_page_elements_ready" display="wait_page_elements_ready" kind="function" help="/yddoc/rpa/zh-CN/897086278875701248">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_activities_download.wait_data_refresh_completed" display="wait_data_refresh_completed" kind="function" help="/yddoc/rpa/zh-CN/897086278875701248">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_activities_download.select_campaign_status" display="select_campaign_status" kind="function" help="/yddoc/rpa/zh-CN/897086278875701248">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_activities_download.to_campaigns_page_if_need" display="to_campaigns_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/897086278875701248">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_activities_download.set_campaigns_params" display="set_campaigns_params" kind="function" help="/yddoc/rpa/zh-CN/897086278875701248">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_activities_download.get_campaigns" display="get_campaigns" kind="function" help="/yddoc/rpa/zh-CN/897086278875701248">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_activities_download.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/897086278875701248">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_activities_download.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/897086278875701248">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process27" display="process27" kind="function" help="/yddoc/rpa/zh-CN/889697113092390912">
+      <item.method>process27(网页对象,站点名称,报告类型,保存文件夹,保存文件名)</item.method>
+      <item.desc>亚马逊-库存报告
+该指令实现亚马逊切换站点并进入库存报告页面，下载指定类型的报告
+* @param 网页对象，
+* @param 站点名称，
+* @param 报告类型，
+* @param 保存文件夹，
+* @param 保存文件名，
+* @return run_status，
+* @return err_msg，
+* @return download_file_path，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process32" display="process32" kind="function" help="/yddoc/rpa/zh-CN/889697099365683200">
+      <item.method>process32(网页对象,站点名称,结算周期,切换语言为中文,账户类型)</item.method>
+      <item.desc>亚马逊-结算一览账户数据
+该指令实现亚马逊切换站点并在结算一览页面抓取账户数据的操作
+* @param 网页对象，
+* @param 站点名称，
+* @param 结算周期，
+* @param 切换语言为中文，
+* @param 账户类型，
+* @return run_status，
+* @return err_msg，
+* @return amount_data，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process34" display="process34" kind="function" help="/yddoc/rpa/zh-CN/889697127874367488">
+      <item.method>process34(网页对象,品牌帖子网址,文件路径,标题,asin列表,开始时间,结束时间,发送类型)</item.method>
+      <item.desc>亚马逊-发送POST
+该指令实现了在亚马逊后台指定品牌发送POST的操作
+* @param 网页对象，
+* @param 品牌帖子网址，
+* @param 文件路径，
+* @param 标题，
+* @param asin列表，
+* @param 开始时间，
+* @param 结束时间，
+* @param 发送类型，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.total_balance" display="total_balance" kind="function" help="/yddoc/rpa/zh-CN/757538447602876416">
+      <item.method />
+      <item.desc>亚马逊-关键指标-总余额获取
+该指令实现了获取当前站点总余额的数据
+* @param web_page，
+* @return info，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.total_balance.run" display="run" kind="function" help="/yddoc/rpa/zh-CN/757538447602876416">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.total_balance.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/757538447602876416">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.buyer_message" display="buyer_message" kind="function" help="/yddoc/rpa/zh-CN/757536377676566528">
+      <item.method />
+      <item.desc>亚马逊-关键指标-买家消息数量获取
+该指令实现了获取当前站点买家消息数量的操作
+* @param web_page，
+* @return info，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.buyer_message.run" display="run" kind="function" help="/yddoc/rpa/zh-CN/757536377676566528">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.buyer_message.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/757536377676566528">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.payment_report_lib_month" display="payment_report_lib_month" kind="function" help="/yddoc/rpa/zh-CN/755400600482615296">
+      <item.method />
+      <item.desc>亚马逊-付款报告下载(按月)
+该指令实现了付款报告库-报告库页面的文件下载操作
+* @param web_page，
+* @param report_type，
+* @param month，
+* @param year，
+* @param file_fold，
+* @param file_name，
+* @param account_type，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.payment_report_lib_month.configure" display="configure" kind="function" help="/yddoc/rpa/zh-CN/755400600482615296">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.payment_report_lib_month.run" display="run" kind="function" help="/yddoc/rpa/zh-CN/755400600482615296">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.payment_report_lib_month.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755400600482615296">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.payment_report_lib_month.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/755400600482615296">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.translation_view_trans" display="translation_view_trans" kind="function" help="/yddoc/rpa/zh-CN/757438075817230336">
+      <item.method />
+      <item.desc>亚马逊-交易一览账户数据
+该指令实现亚马逊在交易一览页面抓取账户数据的操作
+* @param web_page，
+* @param account_type，账户类型
+* @param translation_type，交易类型
+* @param translation_status，交易状态
+* @param start_time，开始时间
+* @param end_time，结束时间
+* @param file_fold，保存文件路径
+* @param file_name，保存文件名
+* @return file_path，文件路径
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.translation_view_trans.configure" display="configure" kind="function" help="/yddoc/rpa/zh-CN/757438075817230336">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.translation_view_trans.to_page_if_needed" display="to_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/757438075817230336">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.translation_view_trans.run" display="run" kind="function" help="/yddoc/rpa/zh-CN/757438075817230336">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.translation_view_trans.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/757438075817230336">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.sale_control_pannel" display="sale_control_pannel" kind="function" help="/yddoc/rpa/zh-CN/760426870538555392">
+      <item.method />
+      <item.desc>亚马逊-数据报告-销售控制面板
+该指令实现了对亚马逊平台，数据报告下的销售控制面板数据进行下载
+* @param web_page，
+* @param mode，
+* @param start_time，
+* @param end_time，
+* @param sale_detail，
+* @param channel，
+* @param file_folder，
+* @param file_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.sale_control_pannel.handle_date" display="handle_date" kind="function" help="/yddoc/rpa/zh-CN/760426870538555392">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_control_pannel.handle_sale_detail" display="handle_sale_detail" kind="function" help="/yddoc/rpa/zh-CN/760426870538555392">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_control_pannel.handle_channel" display="handle_channel" kind="function" help="/yddoc/rpa/zh-CN/760426870538555392">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_control_pannel.run" display="run" kind="function" help="/yddoc/rpa/zh-CN/760426870538555392">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_control_pannel.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/760426870538555392">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.sales_flow_dep_date" display="sales_flow_dep_date" kind="function" help="/yddoc/rpa/zh-CN/760432199569055744">
+      <item.method />
+      <item.desc>亚马逊-数据报告-销量与访问量
+该指令实现了对亚马逊-数据报告-销量于访问量报表的下载
+* @param web_page，
+* @param check，
+* @param scale，
+* @param mode，
+* @param start_time，
+* @param end_time，
+* @param file_folder，
+* @param file_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.sales_flow_dep_date.handle_options" display="handle_options" kind="function" help="/yddoc/rpa/zh-CN/760432199569055744">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sales_flow_dep_date.run" display="run" kind="function" help="/yddoc/rpa/zh-CN/760432199569055744">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sales_flow_dep_date.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/760432199569055744">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.sponsored_ads_reports" display="sponsored_ads_reports" kind="function" help="/yddoc/rpa/zh-CN/770092331987369984">
+      <item.method />
+      <item.desc>亚马逊-广告-搜索广告报告
+该指令实现了对亚马逊广告搜索广告报告的创建及下载
+* @param web_page，
+* @param report_category，
+* @param report_type，
+* @param time_unit，
+* @param start_date，
+* @param end_date，
+* @param file_folder，
+* @param file_name，
+* @param timeout，
+* @param orgins，
+* @param 是否等待下载，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_ads_reports.wait_for_element_by_xpath" display="wait_for_element_by_xpath" kind="function" help="/yddoc/rpa/zh-CN/770092331987369984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_ads_reports.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/770092331987369984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_ads_reports.wait_report_completed" display="wait_report_completed" kind="function" help="/yddoc/rpa/zh-CN/770092331987369984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_ads_reports.transform_date" display="transform_date" kind="function" help="/yddoc/rpa/zh-CN/770092331987369984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_ads_reports.transform_params" display="transform_params" kind="function" help="/yddoc/rpa/zh-CN/770092331987369984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_ads_reports.set_report_params" display="set_report_params" kind="function" help="/yddoc/rpa/zh-CN/770092331987369984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_ads_reports.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/770092331987369984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_ads_reports.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/770092331987369984">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.remove_order_detail" display="remove_order_detail" kind="function" help="/yddoc/rpa/zh-CN/784342120299798528">
+      <item.method />
+      <item.desc>亚马逊-配送报告-移除订单详情
+该指令实现了对亚马逊-配送报告-移除订单详情报表的下载功能
+* @param web_page，
+* @param order_type，
+* @param order_status，
+* @param date，
+* @param start_time，
+* @param end_time，
+* @param download_type，
+* @param folder_path，
+* @param file_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.remove_order_detail.select_date" display="select_date" kind="function" help="/yddoc/rpa/zh-CN/784342120299798528">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.remove_order_detail.excute" display="excute" kind="function" help="/yddoc/rpa/zh-CN/784342120299798528">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.remove_order_detail.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/784342120299798528">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.remove_order_detail.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/784342120299798528">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.sku_cost_report" display="sku_cost_report" kind="function" help="/yddoc/rpa/zh-CN/856089871283671040">
+      <item.method />
+      <item.desc>亚马逊-市场-SKU报告下载
+该指令实现了对亚马逊市场SKU成本报告的下载
+* @param web_page，
+* @param report_configuration，
+* @param timeout，
+* @param file_folder，
+* @param file_name，
+* @param shopping_name，
+* @param date，
+* @param data_level，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.sku_cost_report.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/856089871283671040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sku_cost_report.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/856089871283671040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sku_cost_report.wait_for_element_by_xpath" display="wait_for_element_by_xpath" kind="function" help="/yddoc/rpa/zh-CN/856089871283671040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sku_cost_report.convert_date_format" display="convert_date_format" kind="function" help="/yddoc/rpa/zh-CN/856089871283671040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sku_cost_report.set_report_params" display="set_report_params" kind="function" help="/yddoc/rpa/zh-CN/856089871283671040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sku_cost_report.wait_report_completed" display="wait_report_completed" kind="function" help="/yddoc/rpa/zh-CN/856089871283671040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sku_cost_report.download_sku_cost_report" display="download_sku_cost_report" kind="function" help="/yddoc/rpa/zh-CN/856089871283671040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sku_cost_report.test_download_sku_cost_report" display="test_download_sku_cost_report" kind="function" help="/yddoc/rpa/zh-CN/856089871283671040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sku_cost_report.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/856089871283671040">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.classified_product_reports" display="classified_product_reports" kind="function" help="/yddoc/rpa/zh-CN/856098078526251008">
+      <item.method />
+      <item.desc>亚马逊-市场-分类商品报告下载
+该指令实现了对亚马逊分类商品报告的下载
+* @param web_page，
+* @param site_name，
+* @param report_category，
+* @param create_date，
+* @param state_filter，
+* @param file_folder，
+* @param file_name，
+* @param timeout，
+* @param is_download，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.classified_product_reports.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/856098078526251008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.classified_product_reports.validate_date_format" display="validate_date_format" kind="function" help="/yddoc/rpa/zh-CN/856098078526251008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.classified_product_reports.convert_date_format" display="convert_date_format" kind="function" help="/yddoc/rpa/zh-CN/856098078526251008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.classified_product_reports.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/856098078526251008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.classified_product_reports.wait_for_element_by_xpath" display="wait_for_element_by_xpath" kind="function" help="/yddoc/rpa/zh-CN/856098078526251008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.classified_product_reports.set_report_params" display="set_report_params" kind="function" help="/yddoc/rpa/zh-CN/856098078526251008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.classified_product_reports.wait_report_completed" display="wait_report_completed" kind="function" help="/yddoc/rpa/zh-CN/856098078526251008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.classified_product_reports.download_classified_product_report" display="download_classified_product_report" kind="function" help="/yddoc/rpa/zh-CN/856098078526251008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.classified_product_reports.test_download_classified_product_report" display="test_download_classified_product_report" kind="function" help="/yddoc/rpa/zh-CN/856098078526251008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.classified_product_reports.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/856098078526251008">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_policy_compliance" display="get_policy_compliance" kind="function" help="/yddoc/rpa/zh-CN/861135430673780736">
+      <item.method />
+      <item.desc>亚马逊-绩效-获取政策合规性信息
+该指令实现了获取亚马逊绩效中账户状况的政策合规性信息
+* @param web_page，
+* @param site_name，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_policy_compliance.goto_account_status" display="goto_account_status" kind="function" help="/yddoc/rpa/zh-CN/861135430673780736">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_policy_compliance.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/861135430673780736">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_policy_compliance.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/861135430673780736">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_policy_compliance.get_policy_compliance" display="get_policy_compliance" kind="function" help="/yddoc/rpa/zh-CN/861135430673780736">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_policy_compliance.get_data_account_status" display="get_data_account_status" kind="function" help="/yddoc/rpa/zh-CN/861135430673780736">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_policy_compliance.test_check_account_status" display="test_check_account_status" kind="function" help="/yddoc/rpa/zh-CN/861135430673780736">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_policy_compliance.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/861135430673780736">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_service_performance" display="get_service_performance" kind="function" help="/yddoc/rpa/zh-CN/861141339984367616">
+      <item.method />
+      <item.desc>亚马逊-绩效-获取客户服务绩效信息
+该指令实现了获取亚马逊绩效中账号状况的客户服务绩效信息
+* @param web_page，
+* @param site_name，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_service_performance.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/861141339984367616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_service_performance.trans" display="trans" kind="function" help="/yddoc/rpa/zh-CN/861141339984367616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_service_performance.match_number" display="match_number" kind="function" help="/yddoc/rpa/zh-CN/861141339984367616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_service_performance.standardize_goal_str" display="standardize_goal_str" kind="function" help="/yddoc/rpa/zh-CN/861141339984367616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_service_performance.is_status" display="is_status" kind="function" help="/yddoc/rpa/zh-CN/861141339984367616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_service_performance.process_row_data" display="process_row_data" kind="function" help="/yddoc/rpa/zh-CN/861141339984367616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_service_performance.get_service_performance" display="get_service_performance" kind="function" help="/yddoc/rpa/zh-CN/861141339984367616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_service_performance.get_invoice_data" display="get_invoice_data" kind="function" help="/yddoc/rpa/zh-CN/861141339984367616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_service_performance.get_data_account_status" display="get_data_account_status" kind="function" help="/yddoc/rpa/zh-CN/861141339984367616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_service_performance.test_check_account_status" display="test_check_account_status" kind="function" help="/yddoc/rpa/zh-CN/861141339984367616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_service_performance.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/861141339984367616">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_delivery_performance" display="get_delivery_performance" kind="function" help="/yddoc/rpa/zh-CN/861204116593725440">
+      <item.method />
+      <item.desc>亚马逊-绩效-获取配送绩效信息
+该指令实现了获取亚马逊绩效中账号状况的配送绩效信息
+* @param web_page，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_delivery_performance.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/861204116593725440">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_delivery_performance.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/861204116593725440">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_delivery_performance.parse_percentage" display="parse_percentage" kind="function" help="/yddoc/rpa/zh-CN/861204116593725440">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_delivery_performance.parse_target_info" display="parse_target_info" kind="function" help="/yddoc/rpa/zh-CN/861204116593725440">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_delivery_performance.is_status" display="is_status" kind="function" help="/yddoc/rpa/zh-CN/861204116593725440">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_delivery_performance.get_target_text_safe" display="get_target_text_safe" kind="function" help="/yddoc/rpa/zh-CN/861204116593725440">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_delivery_performance.get_distribution_performance" display="get_distribution_performance" kind="function" help="/yddoc/rpa/zh-CN/861204116593725440">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_delivery_performance.get_data_account_status" display="get_data_account_status" kind="function" help="/yddoc/rpa/zh-CN/861204116593725440">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_delivery_performance.test_check_account_status" display="test_check_account_status" kind="function" help="/yddoc/rpa/zh-CN/861204116593725440">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_delivery_performance.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/861204116593725440">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.check_performance_notification" display="check_performance_notification" kind="function" help="/yddoc/rpa/zh-CN/861207795829137408">
+      <item.method />
+      <item.desc>亚马逊-绩效-获取业绩通知信息
+该指令实现了获取亚马逊绩效中绩效通知的业绩通知信息
+* @param web_page，
+* @param start_date，
+* @param end_date，
+* @param site_name，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.check_performance_notification.convert_date_format" display="convert_date_format" kind="function" help="/yddoc/rpa/zh-CN/861207795829137408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_performance_notification.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/861207795829137408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_performance_notification.goto_performance_notices" display="goto_performance_notices" kind="function" help="/yddoc/rpa/zh-CN/861207795829137408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_performance_notification.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/861207795829137408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_performance_notification.check_performance_notices" display="check_performance_notices" kind="function" help="/yddoc/rpa/zh-CN/861207795829137408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_performance_notification.test_check_performance_notices" display="test_check_performance_notices" kind="function" help="/yddoc/rpa/zh-CN/861207795829137408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_performance_notification.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/861207795829137408">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.screenshot_price_discount" display="screenshot_price_discount" kind="function" help="/yddoc/rpa/zh-CN/861124450805964800">
+      <item.method />
+      <item.desc>亚马逊-市场-价格折扣截图
+该指令实现了对亚马逊价格折扣页面的查询结果截图保存
+* @param web_page，
+* @param region_name，
+* @param event_name，
+* @param country_name，
+* @param status_name，
+* @param start_date，
+* @param end_date，
+* @param custom_type，
+* @param file_folder，
+* @param file_name，
+* @return result_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_price_discount.transform_date" display="transform_date" kind="function" help="/yddoc/rpa/zh-CN/861124450805964800">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_price_discount.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/861124450805964800">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_price_discount.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/861124450805964800">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_price_discount.set_filter_parameters" display="set_filter_parameters" kind="function" help="/yddoc/rpa/zh-CN/861124450805964800">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_price_discount.screenshot_pages" display="screenshot_pages" kind="function" help="/yddoc/rpa/zh-CN/861124450805964800">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_price_discount.screenshot_price_discount" display="screenshot_price_discount" kind="function" help="/yddoc/rpa/zh-CN/861124450805964800">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_price_discount.test_screenshot_price_discount" display="test_screenshot_price_discount" kind="function" help="/yddoc/rpa/zh-CN/861124450805964800">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_price_discount.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/861124450805964800">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.payments_past_settlements" display="payments_past_settlements" kind="function" help="/yddoc/rpa/zh-CN/857517397835243520">
+      <item.method />
+      <item.desc>亚马逊-市场-所有结算V2文件下载
+该指令实现了对亚马逊所有结算V2文件的下载
+* @param web_page，
+* @param site_name，
+* @param account_type，
+* @param start_date，
+* @param end_date，
+* @param file_folder，
+* @param file_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.payments_past_settlements.scroll_and_load" display="scroll_and_load" kind="function" help="/yddoc/rpa/zh-CN/857517397835243520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.payments_past_settlements.get_shadowroot_element" display="get_shadowroot_element" kind="function" help="/yddoc/rpa/zh-CN/857517397835243520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.payments_past_settlements.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/857517397835243520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.payments_past_settlements.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/857517397835243520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.payments_past_settlements.wait_report_completed" display="wait_report_completed" kind="function" help="/yddoc/rpa/zh-CN/857517397835243520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.payments_past_settlements.convert_date_format" display="convert_date_format" kind="function" help="/yddoc/rpa/zh-CN/857517397835243520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.payments_past_settlements.sanitize_filename" display="sanitize_filename" kind="function" help="/yddoc/rpa/zh-CN/857517397835243520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.payments_past_settlements.payments_past_settlements" display="payments_past_settlements" kind="function" help="/yddoc/rpa/zh-CN/857517397835243520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.payments_past_settlements.test_payments_past_settlements" display="test_payments_past_settlements" kind="function" help="/yddoc/rpa/zh-CN/857517397835243520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.payments_past_settlements.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857517397835243520">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.screenshot_manage_quote" display="screenshot_manage_quote" kind="function" help="/yddoc/rpa/zh-CN/857495826857775104">
+      <item.method />
+      <item.desc>亚马逊-市场-管理报价结果截图
+该指令实现了亚马逊管理报价页面的结果截图
+* @param web_page，
+* @param site_name，
+* @param country_name，
+* @param file_folder，
+* @param file_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_manage_quote.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/857495826857775104">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_manage_quote.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/857495826857775104">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_manage_quote.screenshot_manage_quote" display="screenshot_manage_quote" kind="function" help="/yddoc/rpa/zh-CN/857495826857775104">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_manage_quote.test_screenshot_manage_quote" display="test_screenshot_manage_quote" kind="function" help="/yddoc/rpa/zh-CN/857495826857775104">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_manage_quote.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857495826857775104">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.logistics_delivery_report" display="logistics_delivery_report" kind="function" help="/yddoc/rpa/zh-CN/857196329334898688">
+      <item.method />
+      <item.desc>亚马逊-市场-物流入库配置服务费用报告下载
+该指令实现了亚马逊配送报告页面中的物流入库配置服务费用报告的下载
+* @param web_page，
+* @param event_date，
+* @param start_date，
+* @param end_date，
+* @param file_folder，
+* @param file_name，
+* @param file_type，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.logistics_delivery_report.transform_date" display="transform_date" kind="function" help="/yddoc/rpa/zh-CN/857196329334898688">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.logistics_delivery_report.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/857196329334898688">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.logistics_delivery_report.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/857196329334898688">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.logistics_delivery_report.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/857196329334898688">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.logistics_delivery_report.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/857196329334898688">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.logistics_delivery_report.logistics_delivery_report" display="logistics_delivery_report" kind="function" help="/yddoc/rpa/zh-CN/857196329334898688">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.logistics_delivery_report.test_logistics_delivery_report" display="test_logistics_delivery_report" kind="function" help="/yddoc/rpa/zh-CN/857196329334898688">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.logistics_delivery_report.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857196329334898688">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_seller_news" display="get_seller_news" kind="function" help="/yddoc/rpa/zh-CN/857193930487635968">
+      <item.method />
+      <item.desc>亚马逊-市场-获取所有新闻
+该指令实现了对亚马逊所有新闻页面的新闻内容收集
+* @param web_page，
+* @param country_name，
+* @param date_name，
+* @return result_data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_seller_news.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/857193930487635968">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_seller_news.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/857193930487635968">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_seller_news.set_filter_parameters" display="set_filter_parameters" kind="function" help="/yddoc/rpa/zh-CN/857193930487635968">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_seller_news.get_deal_data" display="get_deal_data" kind="function" help="/yddoc/rpa/zh-CN/857193930487635968">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_seller_news.get_seller_news" display="get_seller_news" kind="function" help="/yddoc/rpa/zh-CN/857193930487635968">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_seller_news.test_get_seller_news" display="test_get_seller_news" kind="function" help="/yddoc/rpa/zh-CN/857193930487635968">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_seller_news.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857193930487635968">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.screenshot_return_mark" display="screenshot_return_mark" kind="function" help="/yddoc/rpa/zh-CN/856103445607469056">
+      <item.method />
+      <item.desc>亚马逊-市场-退货标记信息截图
+该指令实现了亚马逊中买家之声页面的退货标记信息截图
+* @param web_page，
+* @param order_deliver，
+* @param seller_status，
+* @param last_time，
+* @param file_folder，
+* @param file_name，
+* @param flag_text，
+* @param product_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_return_mark.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/856103445607469056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_return_mark.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/856103445607469056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_return_mark.set_filter_parameters" display="set_filter_parameters" kind="function" help="/yddoc/rpa/zh-CN/856103445607469056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_return_mark.screenshot_pages" display="screenshot_pages" kind="function" help="/yddoc/rpa/zh-CN/856103445607469056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_return_mark.screenshot_return_mark" display="screenshot_return_mark" kind="function" help="/yddoc/rpa/zh-CN/856103445607469056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_return_mark.test_screenshot_return_mark" display="test_screenshot_return_mark" kind="function" help="/yddoc/rpa/zh-CN/856103445607469056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_return_mark.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/856103445607469056">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.download_purchase_cost" display="download_purchase_cost" kind="function" help="/yddoc/rpa/zh-CN/857190467982319616">
+      <item.method />
+      <item.desc>亚马逊-市场-下载采购成本文件
+该指令实现了亚马逊中批量管理您的采购成本页面中的文件下载
+* @param web_page，
+* @param market_name，
+* @param file_folder，
+* @param file_name，
+* @param method_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.download_purchase_cost.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/857190467982319616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_purchase_cost.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/857190467982319616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_purchase_cost.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/857190467982319616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_purchase_cost.download_handler" display="download_handler" kind="function" help="/yddoc/rpa/zh-CN/857190467982319616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_purchase_cost.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/857190467982319616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_purchase_cost.get_table_data" display="get_table_data" kind="function" help="/yddoc/rpa/zh-CN/857190467982319616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_purchase_cost.download_purchase_cost" display="download_purchase_cost" kind="function" help="/yddoc/rpa/zh-CN/857190467982319616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_purchase_cost.test_download_purchase_cost" display="test_download_purchase_cost" kind="function" help="/yddoc/rpa/zh-CN/857190467982319616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_purchase_cost.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857190467982319616">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.download_shipping_report" display="download_shipping_report" kind="function" help="/yddoc/rpa/zh-CN/857188943757975552">
+      <item.method />
+      <item.desc>亚马逊-市场-SIPP报告下载
+该指令实现了亚马逊的自有包装发货页面中SIPP报告的下载
+* @param web_page，
+* @param file_folder，
+* @param file_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.download_shipping_report.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/857188943757975552">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_shipping_report.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/857188943757975552">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_shipping_report.download_shipping_report" display="download_shipping_report" kind="function" help="/yddoc/rpa/zh-CN/857188943757975552">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_shipping_report.test_download_shipping_report" display="test_download_shipping_report" kind="function" help="/yddoc/rpa/zh-CN/857188943757975552">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_shipping_report.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857188943757975552">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.download_erppay_report" display="download_erppay_report" kind="function" help="/yddoc/rpa/zh-CN/857187422983036928">
+      <item.method />
+      <item.desc>亚马逊-市场-EPR代付报告下载
+该指令实现了亚马逊中生态费报告的下载
+* @param web_page，
+* @param year_num，
+* @param file_folder，
+* @param file_name，
+* @return file_list，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.download_erppay_report.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/857187422983036928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_erppay_report.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/857187422983036928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_erppay_report.download_handler" display="download_handler" kind="function" help="/yddoc/rpa/zh-CN/857187422983036928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_erppay_report.download_report" display="download_report" kind="function" help="/yddoc/rpa/zh-CN/857187422983036928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_erppay_report.download_erppay_report" display="download_erppay_report" kind="function" help="/yddoc/rpa/zh-CN/857187422983036928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_erppay_report.test_download_erppay_report" display="test_download_erppay_report" kind="function" help="/yddoc/rpa/zh-CN/857187422983036928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_erppay_report.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857187422983036928">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.download_returnfee_report" display="download_returnfee_report" kind="function" help="/yddoc/rpa/zh-CN/857183700760535040">
+      <item.method />
+      <item.desc>亚马逊-市场-退货处理费报告下载
+该指令实现了亚马逊的退货处理费（非服装和非鞋靴类商品）页面中报告的下载
+* @param web_page，
+* @param fee_month，
+* @param fee_year，
+* @param file_folder，
+* @param file_name，
+* @param file_type，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.download_returnfee_report.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/857183700760535040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_returnfee_report.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/857183700760535040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_returnfee_report.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/857183700760535040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_returnfee_report.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/857183700760535040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_returnfee_report.return_processing_fee_report" display="return_processing_fee_report" kind="function" help="/yddoc/rpa/zh-CN/857183700760535040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_returnfee_report.test_return_processing_fee_report" display="test_return_processing_fee_report" kind="function" help="/yddoc/rpa/zh-CN/857183700760535040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_returnfee_report.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/857183700760535040">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.download_ad_productpromotion" display="download_ad_productpromotion" kind="function" help="/yddoc/rpa/zh-CN/892755221705793536">
+      <item.method />
+      <item.desc>亚马逊-广告-下载广告活动批量表
+该指令实现了亚马逊搜索广告批量操作界面中商品推广表的下载
+* @param web_page，
+* @param start_date，
+* @param end_date，
+* @param filter_item，
+* @param contains_items，
+* @param file_folder，
+* @param file_name，
+* @param time_type，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_productpromotion.transform_date" display="transform_date" kind="function" help="/yddoc/rpa/zh-CN/892755221705793536">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_productpromotion.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/892755221705793536">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_productpromotion.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/892755221705793536">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_productpromotion.date_select" display="date_select" kind="function" help="/yddoc/rpa/zh-CN/892755221705793536">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_productpromotion.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/892755221705793536">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_productpromotion.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/892755221705793536">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_productpromotion.download_product_promotion" display="download_product_promotion" kind="function" help="/yddoc/rpa/zh-CN/892755221705793536">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_productpromotion.test_download_product_promotion" display="test_download_product_promotion" kind="function" help="/yddoc/rpa/zh-CN/892755221705793536">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_productpromotion.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/892755221705793536">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.fill_goods_ien" display="fill_goods_ien" kind="function" help="/yddoc/rpa/zh-CN/861081468320616448">
+      <item.method />
+      <item.desc>亚马逊-市场-IEN和MRN填写
+该指令实现了亚马逊的货件处理进度页面中货件进口详情不全的填写
+* @param web_page，
+* @param file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.fill_goods_ien.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/861081468320616448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.fill_goods_ien.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/861081468320616448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.fill_goods_ien.fill_import_details" display="fill_import_details" kind="function" help="/yddoc/rpa/zh-CN/861081468320616448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.fill_goods_ien.fill_goods_ien" display="fill_goods_ien" kind="function" help="/yddoc/rpa/zh-CN/861081468320616448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.fill_goods_ien.test_fill_goods_ien" display="test_fill_goods_ien" kind="function" help="/yddoc/rpa/zh-CN/861081468320616448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.fill_goods_ien.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/861081468320616448">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.download_popular_terms" display="download_popular_terms" kind="function" help="/yddoc/rpa/zh-CN/860081064472829952">
+      <item.method />
+      <item.desc>亚马逊-市场-下载热门搜索词报告
+该指令实现了亚马逊的热门搜索词页面中报告的下载
+* @param web_page，
+* @param country_name，
+* @param report_range，
+* @param select_date_day，
+* @param select_week，
+* @param select_year_month，
+* @param select_year_quarter，
+* @param product_asin，
+* @param brand_name，
+* @param category_name，
+* @param search_term_name，
+* @param file_folder，
+* @param file_name，
+* @param is_refined，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.download_popular_terms.transform_date" display="transform_date" kind="function" help="/yddoc/rpa/zh-CN/860081064472829952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_popular_terms.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/860081064472829952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_popular_terms.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/860081064472829952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_popular_terms.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/860081064472829952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_popular_terms.download_popular_terms_report" display="download_popular_terms_report" kind="function" help="/yddoc/rpa/zh-CN/860081064472829952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_popular_terms.download_popular_terms" display="download_popular_terms" kind="function" help="/yddoc/rpa/zh-CN/860081064472829952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_popular_terms.test_download_popular_terms" display="test_download_popular_terms" kind="function" help="/yddoc/rpa/zh-CN/860081064472829952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_popular_terms.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/860081064472829952">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_advertising_history" display="get_advertising_history" kind="function" help="/yddoc/rpa/zh-CN/893065004380971008">
+      <item.method />
+      <item.desc>亚马逊-广告-广告历史数据抓取
+该指令用于从亚马逊广告平台自动抓取广告历史数据。
+* @param web_page，
+* @param 开始日期，YYYY-MM-DD
+* @param 结束日期，YYYY-MM-DD
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_advertising_history.to_page_if_needed" display="to_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/893065004380971008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_advertising_history.select_single_date" display="select_single_date" kind="function" help="/yddoc/rpa/zh-CN/893065004380971008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_advertising_history.select_amazon_date_range" display="select_amazon_date_range" kind="function" help="/yddoc/rpa/zh-CN/893065004380971008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_advertising_history.setup_page_and_filter" display="setup_page_and_filter" kind="function" help="/yddoc/rpa/zh-CN/893065004380971008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_advertising_history.extract_row_data" display="extract_row_data" kind="function" help="/yddoc/rpa/zh-CN/893065004380971008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_advertising_history.scroll_to_row" display="scroll_to_row" kind="function" help="/yddoc/rpa/zh-CN/893065004380971008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_advertising_history.scrape_table_data" display="scrape_table_data" kind="function" help="/yddoc/rpa/zh-CN/893065004380971008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_advertising_history.get_advertising_history" display="get_advertising_history" kind="function" help="/yddoc/rpa/zh-CN/893065004380971008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_advertising_history.test_get_advertising_history" display="test_get_advertising_history" kind="function" help="/yddoc/rpa/zh-CN/893065004380971008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_advertising_history.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/893065004380971008">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.download_tax_invoice" display="download_tax_invoice" kind="function" help="/yddoc/rpa/zh-CN/860077696257974272">
+      <item.method />
+      <item.desc>亚马逊-市场-下载墨西哥税务发票
+该指令实现了亚马逊税务文件库页面中的墨西哥税务发票的下载
+* @param web_page，
+* @param invoice_type，
+* @param start_date，
+* @param end_date，
+* @param file_format，
+* @param file_folder，
+* @param file_name，
+* @return file_path_list，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.download_tax_invoice.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/860077696257974272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_tax_invoice.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/860077696257974272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_tax_invoice.is_date_range_included" display="is_date_range_included" kind="function" help="/yddoc/rpa/zh-CN/860077696257974272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_tax_invoice.transform_date" display="transform_date" kind="function" help="/yddoc/rpa/zh-CN/860077696257974272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_tax_invoice.download_mexico_tax_invoice" display="download_mexico_tax_invoice" kind="function" help="/yddoc/rpa/zh-CN/860077696257974272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_tax_invoice.download_tax_invoice" display="download_tax_invoice" kind="function" help="/yddoc/rpa/zh-CN/860077696257974272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_tax_invoice.test_download_tax_invoice" display="test_download_tax_invoice" kind="function" help="/yddoc/rpa/zh-CN/860077696257974272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_tax_invoice.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/860077696257974272">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.download_rating_resale" display="download_rating_resale" kind="function" help="/yddoc/rpa/zh-CN/862253539332427776">
+      <item.method />
+      <item.desc>亚马逊-市场-物流评级重售计划报告下载
+该指令实现了亚马逊配送报告页面中的物流评级重售计划报告的下载
+* @param web_page，
+* @param event_date，
+* @param start_date，
+* @param end_date，
+* @param file_folder，
+* @param file_name，
+* @param file_type，
+* @param site_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.download_rating_resale.transform_date" display="transform_date" kind="function" help="/yddoc/rpa/zh-CN/862253539332427776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_rating_resale.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/862253539332427776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_rating_resale.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/862253539332427776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_rating_resale.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/862253539332427776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_rating_resale.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/862253539332427776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_rating_resale.download_rating_resale" display="download_rating_resale" kind="function" help="/yddoc/rpa/zh-CN/862253539332427776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_rating_resale.test_download_rating_resale" display="test_download_rating_resale" kind="function" help="/yddoc/rpa/zh-CN/862253539332427776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_rating_resale.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/862253539332427776">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.screenshot_promotion_detail" display="screenshot_promotion_detail" kind="function" help="/yddoc/rpa/zh-CN/862256580353822720">
+      <item.method />
+      <item.desc>亚马逊-市场-截图促销详情和参与的商品
+该指令实现了亚马逊促销页面中促销详情和参与的商品的截图功能
+* @param web_page，
+* @param status_name，
+* @param category_name，
+* @param date_name，
+* @param start_date，
+* @param end_date，
+* @param store_name，
+* @param product_type，
+* @param file_folder，
+* @param file_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_promotion_detail.transform_date" display="transform_date" kind="function" help="/yddoc/rpa/zh-CN/862256580353822720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_promotion_detail.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/862256580353822720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_promotion_detail.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/862256580353822720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_promotion_detail.set_filter_parameters" display="set_filter_parameters" kind="function" help="/yddoc/rpa/zh-CN/862256580353822720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_promotion_detail.screenshot_pages" display="screenshot_pages" kind="function" help="/yddoc/rpa/zh-CN/862256580353822720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_promotion_detail.screenshot_promotion_detail" display="screenshot_promotion_detail" kind="function" help="/yddoc/rpa/zh-CN/862256580353822720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_promotion_detail.test_screenshot_promotion_detail" display="test_screenshot_promotion_detail" kind="function" help="/yddoc/rpa/zh-CN/862256580353822720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.screenshot_promotion_detail.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/862256580353822720">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.download_business_report" display="download_business_report" kind="function" help="/yddoc/rpa/zh-CN/862261121971048448">
+      <item.method />
+      <item.desc>亚马逊-市场-子商品业务报告下载
+该指令实现了亚马逊的业务报告中详情页面销售和流量（按子商品）报告的下载
+* @param web_page，
+* @param date_range，
+* @param start_date，
+* @param end_date，
+* @param control_view，
+* @param file_folder，
+* @param file_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.download_business_report.transform_date" display="transform_date" kind="function" help="/yddoc/rpa/zh-CN/862261121971048448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_business_report.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/862261121971048448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_business_report.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/862261121971048448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_business_report.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/862261121971048448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_business_report.download_business_report" display="download_business_report" kind="function" help="/yddoc/rpa/zh-CN/862261121971048448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_business_report.test_download_business_report" display="test_download_business_report" kind="function" help="/yddoc/rpa/zh-CN/862261121971048448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_business_report.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/862261121971048448">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.download_order_report" display="download_order_report" kind="function" help="/yddoc/rpa/zh-CN/862264356328886272">
+      <item.method />
+      <item.desc>亚马逊-市场-所有订单报告下载
+该指令实现了亚马逊的订单报告页面中所有订单报告的下载功能
+* @param web_page，
+* @param report_type，
+* @param event_date，
+* @param start_date，
+* @param end_date，
+* @param file_folder，
+* @param file_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.download_order_report.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/862264356328886272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_order_report.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/862264356328886272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_order_report.transform_date" display="transform_date" kind="function" help="/yddoc/rpa/zh-CN/862264356328886272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_order_report.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/862264356328886272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_order_report.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/862264356328886272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_order_report.download_order_report" display="download_order_report" kind="function" help="/yddoc/rpa/zh-CN/862264356328886272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_order_report.test_download_order_report" display="test_download_order_report" kind="function" help="/yddoc/rpa/zh-CN/862264356328886272">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_order_report.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/862264356328886272">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_message_response" display="get_message_response" kind="function" help="/yddoc/rpa/zh-CN/867375474486075392">
+      <item.method />
+      <item.desc>亚马逊-绩效-站内邮箱监控
+该指令获取亚马逊邮箱页面需要回复剩余时间及邮件数据
+* @param web_page，
+* @param max_pages，
+* @param site，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_message_response.convert_date_format" display="convert_date_format" kind="function" help="/yddoc/rpa/zh-CN/867375474486075392">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_message_response.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/867375474486075392">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_message_response.to_page_if_needed" display="to_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/867375474486075392">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_message_response.Message_Content_Data" display="Message_Content_Data" kind="function" help="/yddoc/rpa/zh-CN/867375474486075392">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_message_response.process_method" display="process_method" kind="function" help="/yddoc/rpa/zh-CN/867375474486075392">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_message_response.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/867375474486075392">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_message_response.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/867375474486075392">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.check_dashboard_card" display="check_dashboard_card" kind="function" help="/yddoc/rpa/zh-CN/864348464512520192">
+      <item.method />
+      <item.desc>亚马逊-绩效-账户弹窗监控
+该指令实现识别亚马逊商家账户状况是否存在弹窗
+* @param web_page，
+* @return 是否存在弹窗，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.check_dashboard_card.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/864348464512520192">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_dashboard_card.to_account_health_page_if_needed" display="to_account_health_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/864348464512520192">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_dashboard_card.check_for_notification_card" display="check_for_notification_card" kind="function" help="/yddoc/rpa/zh-CN/864348464512520192">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_dashboard_card.execute_account_health_popup_check" display="execute_account_health_popup_check" kind="function" help="/yddoc/rpa/zh-CN/864348464512520192">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_dashboard_card.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/864348464512520192">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_dashboard_card.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/864348464512520192">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.check_home_exception" display="check_home_exception" kind="function" help="/yddoc/rpa/zh-CN/864342582837846016">
+      <item.method />
+      <item.desc>亚马逊-绩效-账户异常监控
+该指令判断亚马逊后台主页是否有异常
+* @param web_page，
+* @return 是否有异常，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.check_home_exception.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/864342582837846016">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_home_exception.to_account_health_page_if_needed" display="to_account_health_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/864342582837846016">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_home_exception.check_for_account_anomaly" display="check_for_account_anomaly" kind="function" help="/yddoc/rpa/zh-CN/864342582837846016">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_home_exception.execute_account_health_popup_check" display="execute_account_health_popup_check" kind="function" help="/yddoc/rpa/zh-CN/864342582837846016">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_home_exception.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/864342582837846016">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.check_home_exception.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/864342582837846016">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_product_policies" display="get_product_policies" kind="function" help="/yddoc/rpa/zh-CN/867613632618176512">
+      <item.method />
+      <item.desc>亚马逊-绩效-政策合规性监控
+该指令实现在商品合规页获取账户评级分数及指定日期范围内的未解决合规性数据
+* @param start_input，
+* @param end_input，
+* @param web_page，
+* @param is_filter，
+* @param site_name，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_product_policies.convert_date_format" display="convert_date_format" kind="function" help="/yddoc/rpa/zh-CN/867613632618176512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_product_policies.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/867613632618176512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_product_policies.to_account_health_page_if_needed" display="to_account_health_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/867613632618176512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_product_policies.product_health_data" display="product_health_data" kind="function" help="/yddoc/rpa/zh-CN/867613632618176512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_product_policies.execute_account_health_popup_check" display="execute_account_health_popup_check" kind="function" help="/yddoc/rpa/zh-CN/867613632618176512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_product_policies.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/867613632618176512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_product_policies.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/867613632618176512">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_order_unshipped" display="get_order_unshipped" kind="function" help="/yddoc/rpa/zh-CN/867375389870186496">
+      <item.method />
+      <item.desc>亚马逊-绩效-濒临延迟发货监控
+该指令获取亚马逊濒临延迟发货商品订单号
+* @param web_page，
+* @return dataList，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_order_unshipped.convert_date_format" display="convert_date_format" kind="function" help="/yddoc/rpa/zh-CN/867375389870186496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_order_unshipped.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/867375389870186496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_order_unshipped.to_page_if_needed" display="to_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/867375389870186496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_order_unshipped.scrape_late_shipment_orders_v2" display="scrape_late_shipment_orders_v2" kind="function" help="/yddoc/rpa/zh-CN/867375389870186496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_order_unshipped.process_method" display="process_method" kind="function" help="/yddoc/rpa/zh-CN/867375389870186496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_order_unshipped.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/867375389870186496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_order_unshipped.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/867375389870186496">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_inbound_performance" display="get_inbound_performance" kind="function" help="/yddoc/rpa/zh-CN/867377332694597632">
+      <item.method />
+      <item.desc>亚马逊-绩效-入库绩效监控
+该指令获取入库绩效页面存在问题类别的类别-问题-货品编号-缺陷数量
+* @param web_page，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_inbound_performance.convert_date_format" display="convert_date_format" kind="function" help="/yddoc/rpa/zh-CN/867377332694597632">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_inbound_performance.to_page_if_needed" display="to_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/867377332694597632">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_inbound_performance.get_inbound_performance_defects" display="get_inbound_performance_defects" kind="function" help="/yddoc/rpa/zh-CN/867377332694597632">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_inbound_performance.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/867377332694597632">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_inbound_performance.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/867377332694597632">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_lobby" display="get_lobby" kind="function" help="/yddoc/rpa/zh-CN/867377067216125952">
+      <item.method />
+      <item.desc>亚马逊-绩效-管理支持问题监控
+该指令获取亚马逊支持问题单页面指定日期内需要注意的单数据
+* @param web_page，
+* @param begin_date_input，
+* @param end_date_input，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_lobby.convert_date_format" display="convert_date_format" kind="function" help="/yddoc/rpa/zh-CN/867377067216125952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_lobby.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/867377067216125952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_lobby.to_page_if_needed" display="to_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/867377067216125952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_lobby.lobby_Data" display="lobby_Data" kind="function" help="/yddoc/rpa/zh-CN/867377067216125952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_lobby.process_method" display="process_method" kind="function" help="/yddoc/rpa/zh-CN/867377067216125952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_lobby.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/867377067216125952">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_lobby.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/867377067216125952">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_inventory_miss" display="get_inventory_miss" kind="function" help="/yddoc/rpa/zh-CN/867377670210240512">
+      <item.method />
+      <item.desc>亚马逊-绩效-商品图片缺失监控
+该指令获取库存页面缺失图片的ASIN码
+* @param web_page，
+* @param 商品状态，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_inventory_miss.convert_date_format" display="convert_date_format" kind="function" help="/yddoc/rpa/zh-CN/867377670210240512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_inventory_miss.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/867377670210240512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_inventory_miss.to_page_if_needed" display="to_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/867377670210240512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_inventory_miss.asins_Data_old" display="asins_Data_old" kind="function" help="/yddoc/rpa/zh-CN/867377670210240512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_inventory_miss.asins_Data_new" display="asins_Data_new" kind="function" help="/yddoc/rpa/zh-CN/867377670210240512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_inventory_miss.asins_Data" display="asins_Data" kind="function" help="/yddoc/rpa/zh-CN/867377670210240512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_inventory_miss.process_method" display="process_method" kind="function" help="/yddoc/rpa/zh-CN/867377670210240512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_inventory_miss.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/867377670210240512">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_inventory_miss.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/867377670210240512">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_quotes_quantity" display="get_quotes_quantity" kind="function" help="/yddoc/rpa/zh-CN/867377747568357376">
+      <item.method />
+      <item.desc>亚马逊-绩效-B2B报价请求监控
+该指令获取亚马逊报价管理界面一件商品/多件商品中的请求数量
+* @param web_page，
+* @param quote_type，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_quotes_quantity.convert_date_format" display="convert_date_format" kind="function" help="/yddoc/rpa/zh-CN/867377747568357376">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_quotes_quantity.to_page_if_needed" display="to_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/867377747568357376">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_quotes_quantity.get_first_asin" display="get_first_asin" kind="function" help="/yddoc/rpa/zh-CN/867377747568357376">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_quotes_quantity.quotes_Data" display="quotes_Data" kind="function" help="/yddoc/rpa/zh-CN/867377747568357376">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_quotes_quantity.process_method" display="process_method" kind="function" help="/yddoc/rpa/zh-CN/867377747568357376">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_quotes_quantity.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/867377747568357376">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_quotes_quantity.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/867377747568357376">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.return_red_warn" display="return_red_warn" kind="function" help="/yddoc/rpa/zh-CN/867377249901604864">
+      <item.method />
+      <item.desc>亚马逊-绩效-货件处理进度监控
+该指令获取亚马逊-库存-货件页面指定条件下已发货、运输中的存在红色提醒字段数量及其编码
+* @param web_page，
+* @return count_shipping，
+* @return shipping_list，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.return_red_warn.convert_date_format" display="convert_date_format" kind="function" help="/yddoc/rpa/zh-CN/867377249901604864">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.return_red_warn.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/867377249901604864">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.return_red_warn.to_page_if_needed" display="to_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/867377249901604864">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.return_red_warn.shipping_Data" display="shipping_Data" kind="function" help="/yddoc/rpa/zh-CN/867377249901604864">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.return_red_warn.process_method" display="process_method" kind="function" help="/yddoc/rpa/zh-CN/867377249901604864">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.return_red_warn.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/867377249901604864">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.return_red_warn.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/867377249901604864">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_stranded_inventory" display="get_stranded_inventory" kind="function" help="/yddoc/rpa/zh-CN/867377599888539648">
+      <item.method />
+      <item.desc>亚马逊-绩效-修复无在售信息的亚马逊库存
+该指令获取亚马逊修复无在售信息的亚马逊库存页面的ASIN码数据
+* @param web_page，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_stranded_inventory.convert_date_format" display="convert_date_format" kind="function" help="/yddoc/rpa/zh-CN/867377599888539648">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_stranded_inventory.to_page_if_needed" display="to_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/867377599888539648">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_stranded_inventory.product_data" display="product_data" kind="function" help="/yddoc/rpa/zh-CN/867377599888539648">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_stranded_inventory.process_method" display="process_method" kind="function" help="/yddoc/rpa/zh-CN/867377599888539648">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_stranded_inventory.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/867377599888539648">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_stranded_inventory.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/867377599888539648">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_pricing_unusual" display="get_pricing_unusual" kind="function" help="/yddoc/rpa/zh-CN/867377145972572160">
+      <item.method />
+      <item.desc>亚马逊-绩效-丢购监控
+该指令获取亚马逊商品丢购ASIN码数据
+* @param web_page，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_pricing_unusual.to_page_if_needed" display="to_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/867377145972572160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_pricing_unusual.get_product_data" display="get_product_data" kind="function" help="/yddoc/rpa/zh-CN/867377145972572160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_pricing_unusual.check_buy_box_on_products" display="check_buy_box_on_products" kind="function" help="/yddoc/rpa/zh-CN/867377145972572160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_pricing_unusual.process_method" display="process_method" kind="function" help="/yddoc/rpa/zh-CN/867377145972572160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_pricing_unusual.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/867377145972572160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_pricing_unusual.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/867377145972572160">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_history_day" display="get_history_day" kind="function" help="/yddoc/rpa/zh-CN/873855200317100032">
+      <item.method />
+      <item.desc>亚马逊-库存-历史供货天数
+在亚马逊物流库存页面，获取指定SKU的历史供货天数数据
+* @param web_page，
+* @param file_path，
+* @param sheet_name，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_history_day.to_page_if_needed" display="to_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/873855200317100032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_history_day.read_msku_list_from_excel" display="read_msku_list_from_excel" kind="function" help="/yddoc/rpa/zh-CN/873855200317100032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_history_day.write_data_to_excel" display="write_data_to_excel" kind="function" help="/yddoc/rpa/zh-CN/873855200317100032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_history_day.search_msku" display="search_msku" kind="function" help="/yddoc/rpa/zh-CN/873855200317100032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_history_day.extract_msku_data" display="extract_msku_data" kind="function" help="/yddoc/rpa/zh-CN/873855200317100032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_history_day.process_method" display="process_method" kind="function" help="/yddoc/rpa/zh-CN/873855200317100032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_history_day.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/873855200317100032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_history_day.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/873855200317100032">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.download_reports_repository" display="download_reports_repository" kind="function" help="/yddoc/rpa/zh-CN/874625752194793472">
+      <item.method />
+      <item.desc>亚马逊-付款-报告库数据下载（自定义日期）
+该指令实现下载亚马逊商家后台报告库页面自定义日期报告数据
+* @param web_page，
+* @param account_type，
+* @param report_type，
+* @param start_date，
+* @param end_date，
+* @param download_path，
+* @param download_name，
+* @param is_chinese，
+* @param timeout，
+* @param wait_timeout_appear，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_repository.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/874625752194793472">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_repository.transform_date" display="transform_date" kind="function" help="/yddoc/rpa/zh-CN/874625752194793472">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_repository.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/874625752194793472">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_repository.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/874625752194793472">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_repository.download_order_report" display="download_order_report" kind="function" help="/yddoc/rpa/zh-CN/874625752194793472">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_repository.test_download_order_report" display="test_download_order_report" kind="function" help="/yddoc/rpa/zh-CN/874625752194793472">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_repository.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/874625752194793472">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.delivery_manage_storage" display="delivery_manage_storage" kind="function" help="/yddoc/rpa/zh-CN/882876063892652032">
+      <item.method />
+      <item.desc>亚马逊-配送报告-管理亚马逊物流库存（可售）
+在亚马逊配送报告-库存-管理亚马逊物流库存页面下载csv或txt文件
+* @param web_page，
+* @param file_folder，
+* @param file_name，
+* @param file_type，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.delivery_manage_storage.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/882876063892652032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_manage_storage.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/882876063892652032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_manage_storage.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/882876063892652032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_manage_storage.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/882876063892652032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_manage_storage.return_processing_report" display="return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/882876063892652032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_manage_storage.test_return_processing_report" display="test_return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/882876063892652032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_manage_storage.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/882876063892652032">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.sale_deliver_goods" display="sale_deliver_goods" kind="function" help="/yddoc/rpa/zh-CN/882920153639829504">
+      <item.method />
+      <item.desc>亚马逊-配送报告-销量配送货件
+在亚马逊-配送报告-销量配送货件库存页面下载指定日期的csv或txt文件
+* @param web_page，亚马逊商家后台页面
+* @param file_folder，下载文件夹路径
+* @param file_name，下载文件名
+* @param file_type，下载类型
+* @param start_date，开始时间YYYY-MM-DD
+* @param end_date，结束时间YYYY-MM-DD
+* @param wait_timeout_appear，等待对话框出现超时时间
+* @return file_path，下载的文件完整路径
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.sale_deliver_goods.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/882920153639829504">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_deliver_goods.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/882920153639829504">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_deliver_goods.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/882920153639829504">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_deliver_goods.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/882920153639829504">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_deliver_goods.return_processing_report" display="return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/882920153639829504">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_deliver_goods.test_return_processing_report" display="test_return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/882920153639829504">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_deliver_goods.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/882920153639829504">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.delivery_allmanage_storage" display="delivery_allmanage_storage" kind="function" help="/yddoc/rpa/zh-CN/882918939846000640">
+      <item.method />
+      <item.desc>亚马逊-配送报告-管理亚马逊物流库存（所有）
+在亚马逊配送报告-库存-管理亚马逊物流库存页面下载csv或txt文件
+* @param web_page，
+* @param file_folder，
+* @param file_name，
+* @param file_type，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.delivery_allmanage_storage.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/882918939846000640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_allmanage_storage.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/882918939846000640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_allmanage_storage.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/882918939846000640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_allmanage_storage.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/882918939846000640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_allmanage_storage.return_processing_report" display="return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/882918939846000640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_allmanage_storage.test_return_processing_report" display="test_return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/882918939846000640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_allmanage_storage.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/882918939846000640">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.delivery_manage_health" display="delivery_manage_health" kind="function" help="/yddoc/rpa/zh-CN/884012065431834624">
+      <item.method />
+      <item.desc>亚马逊-配送报告-库存状况
+在亚马逊配送报告-库存-库存状况页面下载csv或txt文件
+* @param web_page，
+* @param file_folder，
+* @param file_name，
+* @param file_type，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.delivery_manage_health.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/884012065431834624">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_manage_health.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/884012065431834624">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_manage_health.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/884012065431834624">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_manage_health.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/884012065431834624">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_manage_health.return_processing_report" display="return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/884012065431834624">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_manage_health.test_return_processing_report" display="test_return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/884012065431834624">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_manage_health.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/884012065431834624">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process43" display="process43" kind="function" help="/yddoc/rpa/zh-CN/885094529105711104">
+      <item.method>process43(网页对象,站点,最小提现金额,银行卡尾号)</item.method>
+      <item.desc>亚马逊-自动提现-标准订单
+该指令实现亚马逊切换站点并提现标准订单的操作
+* @param 网页对象，
+* @param 站点，
+* @param 最小提现金额，
+* @param 银行卡尾号，
+* @return 运行结果，
+* @return 错误信息，
+* @return 标准订单金额，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process44" display="process44" kind="function" help="/yddoc/rpa/zh-CN/885094679475703808">
+      <item.method>process44(网页对象,站点,最小提现金额,银行卡尾号)</item.method>
+      <item.desc>亚马逊-自动提现-发票支付订单
+该指令实现亚马逊切换站点并提现标准订单的操作
+* @param 网页对象，
+* @param 站点，
+* @param 最小提现金额，
+* @param 银行卡尾号，
+* @return 运行结果，
+* @return 错误信息，
+* @return 发票支付订单金额，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.sale_all_orders" display="sale_all_orders" kind="function" help="/yddoc/rpa/zh-CN/887320403889881088">
+      <item.method />
+      <item.desc>亚马逊-配送报告-所有订单
+在亚马逊配送报告-销量-所有订单页面下载指定日期的csv或txt文件
+* @param web_page，网页对象
+* @param file_folder，下载文件夹路径
+* @param file_name，下载文件名
+* @param start_date，开始日期
+* @param end_date，结束日期
+* @param wait_timeout_appear，等待对话框出现超时时间
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.sale_all_orders.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/887320403889881088">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_all_orders.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/887320403889881088">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_all_orders.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/887320403889881088">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_all_orders.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/887320403889881088">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_all_orders.return_processing_report" display="return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/887320403889881088">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_all_orders.test_return_processing_report" display="test_return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/887320403889881088">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sale_all_orders.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/887320403889881088">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.delivery_inventory_bill" display="delivery_inventory_bill" kind="function" help="/yddoc/rpa/zh-CN/887320147598184448">
+      <item.method />
+      <item.desc>亚马逊-配送报告-库存分类账
+在亚马逊-配送报告-库存分类账页面下载指定条件的报告
+* @param web_page，网页对象
+* @param file_folder，
+* @param file_name，
+* @param file_type，下载文件类型
+* @param start_date，开始日期：YYYY-MM-DD
+* @param end_date，结束日期：YYYY-MM-DD
+* @param location_report，一览试图才需填写，默认为：亚马逊运营中心
+* @param sum_report，只支持填入：每天
+* @param event_type，详细视图时事件类型：任何状况/盘点/买家退货/接收/货件/供应商退货/库房转移
+* @param wait_timeout，等待报告生成的最长时间（秒），默认 300
+* @param report_view，可填写"一览" 或 "详细"
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.delivery_inventory_bill.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/887320147598184448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_inventory_bill.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/887320147598184448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_inventory_bill.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/887320147598184448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_inventory_bill.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/887320147598184448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_inventory_bill.return_processing_report" display="return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/887320147598184448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_inventory_bill.test_return_processing_report" display="test_return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/887320147598184448">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_inventory_bill.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/887320147598184448">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.business_reports_sub" display="business_reports_sub" kind="function" help="/yddoc/rpa/zh-CN/887668692522893312">
+      <item.method />
+      <item.desc>亚马逊-报告-业务报告下载（子商品）
+在亚马逊-报告-业务报告按子商品页面下载指定日期条件得数据
+* @param web_page，网页对象
+* @param file_folder，文件路径
+* @param file_name，文件名，无需后缀
+* @param start_date，开始时间yyyy-mm-dd
+* @param end_date，结束时间yyyy-mm-dd
+* @param control_view，控制面板视图选择，默认为所有列
+* @return file_path，输出下载文件完整路径
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.business_reports_sub.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/887668692522893312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.business_reports_sub.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/887668692522893312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.business_reports_sub.select_start_time" display="select_start_time" kind="function" help="/yddoc/rpa/zh-CN/887668692522893312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.business_reports_sub.select_end_time" display="select_end_time" kind="function" help="/yddoc/rpa/zh-CN/887668692522893312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.business_reports_sub.time_compare" display="time_compare" kind="function" help="/yddoc/rpa/zh-CN/887668692522893312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.business_reports_sub.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/887668692522893312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.business_reports_sub.return_processing_report" display="return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/887668692522893312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.business_reports_sub.test_return_processing_report" display="test_return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/887668692522893312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.business_reports_sub.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/887668692522893312">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.sales_comment" display="sales_comment" kind="function" help="/yddoc/rpa/zh-CN/889490938101776384">
+      <item.method />
+      <item.desc>亚马逊-买家评论
+在亚马逊-买家评论页面根据条件获取评论的父子ASIN以及评论链接
+* @param web_page，
+* @param 订单类型，
+* @param 联系状态，
+* @param 星级评定，
+* @param 时间段，
+* @param 标记为已完成，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.sales_comment.get_product_data" display="get_product_data" kind="function" help="/yddoc/rpa/zh-CN/889490938101776384">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sales_comment.build_reviews_filter_url" display="build_reviews_filter_url" kind="function" help="/yddoc/rpa/zh-CN/889490938101776384">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sales_comment.process_method" display="process_method" kind="function" help="/yddoc/rpa/zh-CN/889490938101776384">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sales_comment.test_return_processing_report" display="test_return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/889490938101776384">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sales_comment.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/889490938101776384">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.sales_listing_control" display="sales_listing_control" kind="function" help="/yddoc/rpa/zh-CN/890488258535182336">
+      <item.method />
+      <item.desc>亚马逊-商品listing监控
+在亚马逊后台管理所有库存页面通过传入的ASIN获取所有商品链接,进入商品页判断是否有异常
+* @param web_page，
+* @param ASIN列表，ASIN列表,格式如:['B0123456','B0qwerty']
+* @param 最大购买数量，购物车最大购买数量,默认为5,若不符合,则属于异常
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.sales_listing_control.to_page_if_needed" display="to_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/890488258535182336">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sales_listing_control.search_asin_and_get_links" display="search_asin_and_get_links" kind="function" help="/yddoc/rpa/zh-CN/890488258535182336">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sales_listing_control.get_all_product_links" display="get_all_product_links" kind="function" help="/yddoc/rpa/zh-CN/890488258535182336">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sales_listing_control.process_product_pages" display="process_product_pages" kind="function" help="/yddoc/rpa/zh-CN/890488258535182336">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sales_listing_control.process_method" display="process_method" kind="function" help="/yddoc/rpa/zh-CN/890488258535182336">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sales_listing_control.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/890488258535182336">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sales_listing_control.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/890488258535182336">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.download_reports_returns" display="download_reports_returns" kind="function" help="/yddoc/rpa/zh-CN/892030322817245184">
+      <item.method />
+      <item.desc>亚马逊-报告-退货报告下载
+在亚马逊-报告-退货报告页面下载指定日期下的退货报告
+* @param web_page，
+* @param 下载文件路径，
+* @param 下载文件名，无需包含文件后缀
+* @param 下载文件类型，填写"xml"或"tsv"
+* @param 开始日期，YYYY-MM-DD
+* @param 结束日期，YYYY-MM-DD
+* @param 退货类型，填写"所有退货"或"Prime退货"
+* @return file_Path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_returns.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/892030322817245184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_returns.convert_date_format" display="convert_date_format" kind="function" help="/yddoc/rpa/zh-CN/892030322817245184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_returns.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/892030322817245184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_returns.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/892030322817245184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_returns.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/892030322817245184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_returns.return_processing_report" display="return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/892030322817245184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_returns.test_return_processing_report" display="test_return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/892030322817245184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_reports_returns.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/892030322817245184">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.download_ad_tax" display="download_ad_tax" kind="function" help="/yddoc/rpa/zh-CN/892752250078863360">
+      <item.method />
+      <item.desc>亚马逊-广告-发票已付款数据抓取和下载
+在亚马逊广告页的管理-发票页面，获取指定时间的发票顺序和下载pdf文件
+* @param web_page，
+* @param 开始日期，
+* @param 结束日期，
+* @param 操作类型，
+* @param 下载文件夹路径，
+* @param 文件名前缀，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_tax.see_element" display="see_element" kind="function" help="/yddoc/rpa/zh-CN/892752250078863360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_tax.to_page_if_needed" display="to_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/892752250078863360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_tax.get_current_month_year" display="get_current_month_year" kind="function" help="/yddoc/rpa/zh-CN/892752250078863360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_tax.select_month_year" display="select_month_year" kind="function" help="/yddoc/rpa/zh-CN/892752250078863360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_tax.select_single_date" display="select_single_date" kind="function" help="/yddoc/rpa/zh-CN/892752250078863360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_tax.select_tax_date_range" display="select_tax_date_range" kind="function" help="/yddoc/rpa/zh-CN/892752250078863360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_tax.setup_page_and_filter" display="setup_page_and_filter" kind="function" help="/yddoc/rpa/zh-CN/892752250078863360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_tax.extract_row_data" display="extract_row_data" kind="function" help="/yddoc/rpa/zh-CN/892752250078863360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_tax.download_invoice_pdf" display="download_invoice_pdf" kind="function" help="/yddoc/rpa/zh-CN/892752250078863360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_tax.scrape_and_download" display="scrape_and_download" kind="function" help="/yddoc/rpa/zh-CN/892752250078863360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_tax.download_ad_tax" display="download_ad_tax" kind="function" help="/yddoc/rpa/zh-CN/892752250078863360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_tax.test_download_ad_tax" display="test_download_ad_tax" kind="function" help="/yddoc/rpa/zh-CN/892752250078863360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.download_ad_tax.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/892752250078863360">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.sponsored_reports_download" display="sponsored_reports_download" kind="function" help="/yddoc/rpa/zh-CN/894425226112909312">
+      <item.method />
+      <item.desc>亚马逊-广告报告下载
+该指令实现在亚马逊广告报告页面下载指定名称的第一条记录报告文件
+* @param web_page，
+* @param country_name，
+* @param report_name，
+* @param file_folder，
+* @param file_name，
+* @param timeout，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_reports_download.normalize_country_code" display="normalize_country_code" kind="function" help="/yddoc/rpa/zh-CN/894425226112909312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_reports_download.to_reports_page_if_needed" display="to_reports_page_if_needed" kind="function" help="/yddoc/rpa/zh-CN/894425226112909312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_reports_download.select_country" display="select_country" kind="function" help="/yddoc/rpa/zh-CN/894425226112909312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_reports_download.search_report" display="search_report" kind="function" help="/yddoc/rpa/zh-CN/894425226112909312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_reports_download.find_and_download_report" display="find_and_download_report" kind="function" help="/yddoc/rpa/zh-CN/894425226112909312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_reports_download.download_sponsored_report" display="download_sponsored_report" kind="function" help="/yddoc/rpa/zh-CN/894425226112909312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_reports_download.test_download_report" display="test_download_report" kind="function" help="/yddoc/rpa/zh-CN/894425226112909312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.sponsored_reports_download.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/894425226112909312">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.epr_report" display="epr_report" kind="function" help="/yddoc/rpa/zh-CN/905653233905082368">
+      <item.method />
+      <item.desc>亚马逊-报告-生产者责任延申报告下载
+在亚马逊-报告-生产者责任延申报告页面下载指定条件的报告
+* @param web_page，
+* @param file_folder，
+* @param file_name，
+* @param report_type，
+* @param target_year，
+* @param time_period_index，
+* @param file_type，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.epr_report.convert_to_int" display="convert_to_int" kind="function" help="/yddoc/rpa/zh-CN/905653233905082368">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.epr_report.convert_time_period_index" display="convert_time_period_index" kind="function" help="/yddoc/rpa/zh-CN/905653233905082368">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.epr_report.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/905653233905082368">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.epr_report.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/905653233905082368">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.epr_report.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/905653233905082368">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.epr_report.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/905653233905082368">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.epr_report.return_epr_report" display="return_epr_report" kind="function" help="/yddoc/rpa/zh-CN/905653233905082368">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.epr_report.test_return_epr_report" display="test_return_epr_report" kind="function" help="/yddoc/rpa/zh-CN/905653233905082368">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.epr_report.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/905653233905082368">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.new_get_deal" display="new_get_deal" kind="function" help="/yddoc/rpa/zh-CN/889697063126896640">
+      <item.method />
+      <item.desc>亚马逊-获取Deal数据
+从亚马逊卖家后台获取Deal（促销）数据，支持按状态、国家、日期范围筛选，返回包含链接、促销名称、国家、状态、日期范围、促销费用、销售额、商品已售出、浏览量、转化率、费用/销售额等字段的数据列表
+* @param web_page，
+* @param campaignStatusFilter，
+* @param country，
+* @param date_range，
+* @return result，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.new_get_deal.transform_date" display="transform_date" kind="function" help="/yddoc/rpa/zh-CN/889697063126896640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_get_deal.parse_date_range" display="parse_date_range" kind="function" help="/yddoc/rpa/zh-CN/889697063126896640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_get_deal.to_deal_page" display="to_deal_page" kind="function" help="/yddoc/rpa/zh-CN/889697063126896640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_get_deal.set_status_filter" display="set_status_filter" kind="function" help="/yddoc/rpa/zh-CN/889697063126896640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_get_deal.set_country_filter" display="set_country_filter" kind="function" help="/yddoc/rpa/zh-CN/889697063126896640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_get_deal.set_date_filter" display="set_date_filter" kind="function" help="/yddoc/rpa/zh-CN/889697063126896640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_get_deal.check_no_data" display="check_no_data" kind="function" help="/yddoc/rpa/zh-CN/889697063126896640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_get_deal.extract_row_data" display="extract_row_data" kind="function" help="/yddoc/rpa/zh-CN/889697063126896640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_get_deal.get_all_data" display="get_all_data" kind="function" help="/yddoc/rpa/zh-CN/889697063126896640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_get_deal.get_deal_data" display="get_deal_data" kind="function" help="/yddoc/rpa/zh-CN/889697063126896640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_get_deal.test_get_deal_data" display="test_get_deal_data" kind="function" help="/yddoc/rpa/zh-CN/889697063126896640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_get_deal.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/889697063126896640">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.delivery_fba_inventory" display="delivery_fba_inventory" kind="function" help="/yddoc/rpa/zh-CN/912189063453560832">
+      <item.method />
+      <item.desc>亚马逊-配送-亚马逊物流库存
+在亚马逊卖家后台请求并下载配送-库存-亚马逊物流库存页面报告，支持CSV和TXT格式。
+* @param web_page，
+* @param file_folder，
+* @param file_name，
+* @param file_type，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.delivery_fba_inventory.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/912189063453560832">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_fba_inventory.to_reports_page_if_need" display="to_reports_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/912189063453560832">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_fba_inventory.set_filter_params" display="set_filter_params" kind="function" help="/yddoc/rpa/zh-CN/912189063453560832">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_fba_inventory.wait_download_report" display="wait_download_report" kind="function" help="/yddoc/rpa/zh-CN/912189063453560832">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_fba_inventory.return_processing_report" display="return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/912189063453560832">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_fba_inventory.test_return_processing_report" display="test_return_processing_report" kind="function" help="/yddoc/rpa/zh-CN/912189063453560832">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.delivery_fba_inventory.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/912189063453560832">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.pay_aged_report" display="pay_aged_report" kind="function" help="/yddoc/rpa/zh-CN/923847560233312256">
+      <item.method />
+      <item.desc>亚马逊-超龄库存附加费报告下载
+该指令实现亚马逊切换站点并下载【超龄库存附加费报告】，支持前1年当月到今年当月的年月范围。
+* @param web_page，
+* @param file_folder，
+* @param file_name，
+* @param file_type，
+* @param year_month，
+* @param wait_time，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.pay_aged_report.input_parameter_valid" display="input_parameter_valid" kind="function" help="/yddoc/rpa/zh-CN/923847560233312256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.pay_aged_report.check_params" display="check_params" kind="function" help="/yddoc/rpa/zh-CN/923847560233312256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.pay_aged_report.to_report_page_if_need" display="to_report_page_if_need" kind="function" help="/yddoc/rpa/zh-CN/923847560233312256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.pay_aged_report.set_download_params" display="set_download_params" kind="function" help="/yddoc/rpa/zh-CN/923847560233312256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.pay_aged_report.wait_request_completed" display="wait_request_completed" kind="function" help="/yddoc/rpa/zh-CN/923847560233312256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.pay_aged_report.return_aged_report" display="return_aged_report" kind="function" help="/yddoc/rpa/zh-CN/923847560233312256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.pay_aged_report.test_return_aged_report" display="test_return_aged_report" kind="function" help="/yddoc/rpa/zh-CN/923847560233312256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.pay_aged_report.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/923847560233312256">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.get_payment_amount" display="get_payment_amount" kind="function" help="/yddoc/rpa/zh-CN/925305926388563968">
+      <item.method />
+      <item.desc>亚马逊-结算一览获取金额
+在结算一览页面获取标准订单、发票支付订单、延迟交易、所有账户汇总的金额，输出为包含上述四项的字典。
+* @param web_page，
+* @return data，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.get_payment_amount.to_payments_dashboard_if_needed" display="to_payments_dashboard_if_needed" kind="function" help="/yddoc/rpa/zh-CN/925305926388563968">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_payment_amount.get_payment_amount" display="get_payment_amount" kind="function" help="/yddoc/rpa/zh-CN/925305926388563968">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_payment_amount.test_run" display="test_run" kind="function" help="/yddoc/rpa/zh-CN/925305926388563968">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.get_payment_amount.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/925305926388563968">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.tax_invoce" display="tax_invoce" kind="function" help="/yddoc/rpa/zh-CN/928100366850170880">
+      <item.method />
+      <item.desc>亚马逊-配送货件 – 税务发票下载
+该指令实现了亚马逊的亚马逊配送货件 的税务发票下载功能
+* @param web_page，
+* @param time_select，
+* @param time_range，
+* @param file_folder，
+* @param file_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.tax_invoce.get_domain_from_url" display="get_domain_from_url" kind="function" help="/yddoc/rpa/zh-CN/928100366850170880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.tax_invoce.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/928100366850170880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.tax_invoce.get_event_value" display="get_event_value" kind="function" help="/yddoc/rpa/zh-CN/928100366850170880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.tax_invoce.trans_month" display="trans_month" kind="function" help="/yddoc/rpa/zh-CN/928100366850170880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.tax_invoce.select_date" display="select_date" kind="function" help="/yddoc/rpa/zh-CN/928100366850170880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.tax_invoce.tax_invoice" display="tax_invoice" kind="function" help="/yddoc/rpa/zh-CN/928100366850170880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.tax_invoce.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/928100366850170880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.tax_invoce.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/928100366850170880">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.all_settlements" display="all_settlements" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+      <item.method />
+      <item.desc>亚马逊-付款-所有结算文件下载
+该指令实现了亚马逊-付款-所有结算页面的文件下载的功能
+* @param web_page，
+* @param account_type，
+* @param start_time，
+* @param end_time，
+* @param download_type，
+* @param file_folder，
+* @param file_name，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._normalize_date" display="_normalize_date" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._split_date_parts" display="_split_date_parts" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._get_page_language_by_title" display="_get_page_language_by_title" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._format_date_by_page_language" display="_format_date_by_page_language" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._normalize_account_type" display="_normalize_account_type" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._random_wait_5_10s" display="_random_wait_5_10s" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._adaptive_wait_seconds" display="_adaptive_wait_seconds" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._wait_page_ready" display="_wait_page_ready" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._set_account_type_if_need" display="_set_account_type_if_need" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._input_date_and_search" display="_input_date_and_search" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._click_request_report_buttons" display="_click_request_report_buttons" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._has_in_progress" display="_has_in_progress" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._has_download_buttons" display="_has_download_buttons" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._wait_until_no_in_progress" display="_wait_until_no_in_progress" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._refresh_and_research" display="_refresh_and_research" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._sanitize_filename_part" display="_sanitize_filename_part" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._get_file_stem_and_suffix" display="_get_file_stem_and_suffix" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._get_row_time_text" display="_get_row_time_text" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._build_download_name" display="_build_download_name" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements._download_all_files" display="_download_all_files" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements.download_all_settlements" display="download_all_settlements" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements.test_download_all_settlements" display="test_download_all_settlements" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.all_settlements.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/928255460985556992">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.remove_shipment_details" display="remove_shipment_details" kind="function" help="/yddoc/rpa/zh-CN/958300432520503296">
+      <item.method />
+      <item.desc>亚马逊-配送-移除货物详情下载
+在亚马逊商家后台的配送页面，进行移除货物详情下载
+* @param web_page，
+* @param range_data，
+* @param start_time，
+* @param end_time，
+* @param folder_path，
+* @param file_name，
+* @param wait_timeout，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.remove_shipment_details.remove_shipment_details" display="remove_shipment_details" kind="function" help="/yddoc/rpa/zh-CN/958300432520503296">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.remove_shipment_details.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/958300432520503296">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.remove_shipment_details.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/958300432520503296">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.print_patment_data" display="print_patment_data" kind="function" help="/yddoc/rpa/zh-CN/958254158055030784">
+      <item.method />
+      <item.desc>亚马逊-付款-结算一览PDF下载
+在结算一览页面进行筛选账户类型与结算周期，进行打印筛选后的结果
+* @param web_page，
+* @param site_name，
+* @param save_dir，
+* @param save_name，
+* @param cycle，
+* @param account_type，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.print_patment_data.to_account_summary_page" display="to_account_summary_page" kind="function" help="/yddoc/rpa/zh-CN/958254158055030784">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.print_patment_data.proceeds_screenshot" display="proceeds_screenshot" kind="function" help="/yddoc/rpa/zh-CN/958254158055030784">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.print_patment_data.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/958254158055030784">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.print_patment_data.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/958254158055030784">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.compensation_amount" display="compensation_amount" kind="function" help="/yddoc/rpa/zh-CN/958644435571097600">
+      <item.method />
+      <item.desc>亚马逊-配送-赔偿数量下载
+在亚马逊商家后台的配送页面，根据选择的时间周期，进行下载赔偿数量的文件
+* @param web_page，
+* @param range_data，
+* @param start_time，
+* @param end_time，
+* @param folder_path，
+* @param file_name，
+* @param wait_timeout，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.compensation_amount.compensation_amount" display="compensation_amount" kind="function" help="/yddoc/rpa/zh-CN/958644435571097600">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.compensation_amount.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/958644435571097600">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.compensation_amount.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/958644435571097600">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.order_sales_completed" display="order_sales_completed" kind="function" help="/yddoc/rpa/zh-CN/958647629080993792">
+      <item.method />
+      <item.desc>亚马逊-配送-已完成订单销售下载
+该指令实现了在亚马逊商家后台的配送页面，通过选择时间周期，进行下载已完成订单销售的操作
+* @param web_page，
+* @param range_data，
+* @param start_time，
+* @param end_time，
+* @param folder_path，
+* @param file_name，
+* @param wait_timeout，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.order_sales_completed.order_sales_completed" display="order_sales_completed" kind="function" help="/yddoc/rpa/zh-CN/958647629080993792">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.order_sales_completed.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/958647629080993792">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.order_sales_completed.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/958647629080993792">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.vat_report" display="vat_report" kind="function" help="/yddoc/rpa/zh-CN/959023588988338176">
+      <item.method />
+      <item.desc>亚马逊-配送-增值税报告导出
+在亚马逊商家后台的配送页面，根据选择的事件日期进行增值税报告的下载
+* @param web_page，
+* @param range_data，
+* @param start_time，
+* @param end_time，
+* @param folder_path，
+* @param file_name，
+* @param wait_timeout，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.vat_report.trans_value" display="trans_value" kind="function" help="/yddoc/rpa/zh-CN/959023588988338176">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.vat_report.compensation_amount" display="compensation_amount" kind="function" help="/yddoc/rpa/zh-CN/959023588988338176">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.vat_report.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/959023588988338176">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.vat_report.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/959023588988338176">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.switch_old_ul" display="switch_old_ul" kind="function" help="/yddoc/rpa/zh-CN/963047024995594240">
+      <item.method />
+      <item.desc>亚马逊-切换旧版页面
+该指令实现了在新版页面进行切换旧版页面的功能
+* @param web_page，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.switch_old_ul.switch_old_ui" display="switch_old_ui" kind="function" help="/yddoc/rpa/zh-CN/963047024995594240">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.switch_old_ul.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/963047024995594240">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.switch_old_ul.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/963047024995594240">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.reserved_inventory" display="reserved_inventory" kind="function" help="/yddoc/rpa/zh-CN/965164446098923520">
+      <item.method />
+      <item.desc>亚马逊-配送报告-预留库存下载
+该指令实现了在亚马逊配送报告页面，进行预留库存报告的下载功能
+* @param web_page，
+* @param folder_path，
+* @param file_name，
+* @param wait_timeout，
+* @return file_path，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.reserved_inventory.reserved_inventory" display="reserved_inventory" kind="function" help="/yddoc/rpa/zh-CN/965164446098923520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.reserved_inventory.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/965164446098923520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.reserved_inventory.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/965164446098923520">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.new_ui_get_deal" display="new_ui_get_deal" kind="function" help="/yddoc/rpa/zh-CN/986538178058129408">
+      <item.method />
+      <item.desc>亚马逊-获取Deal数据(新版页面)
+该指令实现了在亚马逊新版的管理促销页面进行数据采集的功能
+* @param web_page，
+* @param campaign_status_filter，
+* @param country，
+* @param date_range，
+* @return result，
+</item.desc>
+      <item name="xbot_extensions.amazon_ext_op.new_ui_get_deal.parse_date_range" display="parse_date_range" kind="function" help="/yddoc/rpa/zh-CN/986538178058129408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_ui_get_deal.to_deal_page" display="to_deal_page" kind="function" help="/yddoc/rpa/zh-CN/986538178058129408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_ui_get_deal.set_status_filter" display="set_status_filter" kind="function" help="/yddoc/rpa/zh-CN/986538178058129408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_ui_get_deal.set_country_filter" display="set_country_filter" kind="function" help="/yddoc/rpa/zh-CN/986538178058129408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_ui_get_deal.set_date_filter" display="set_date_filter" kind="function" help="/yddoc/rpa/zh-CN/986538178058129408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_ui_get_deal.check_no_data" display="check_no_data" kind="function" help="/yddoc/rpa/zh-CN/986538178058129408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_ui_get_deal.extract_row_data" display="extract_row_data" kind="function" help="/yddoc/rpa/zh-CN/986538178058129408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_ui_get_deal.get_all_data" display="get_all_data" kind="function" help="/yddoc/rpa/zh-CN/986538178058129408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_ui_get_deal.get_deal_data" display="get_deal_data" kind="function" help="/yddoc/rpa/zh-CN/986538178058129408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_ui_get_deal.test_get_deal_data" display="test_get_deal_data" kind="function" help="/yddoc/rpa/zh-CN/986538178058129408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.amazon_ext_op.new_ui_get_deal.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/986538178058129408">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.amazon_ext_op.process47" display="process47" kind="function" help="/yddoc/rpa/zh-CN/1005717781863370752">
+      <item.method>process47(网页对象,站点,最小提现金额,银行卡尾号,提现类型)</item.method>
+      <item.desc>亚马逊-自动提现-自定义类型
+该指令实现亚马逊切换站点并自定义提现类型操作提现的操作
+* @param 网页对象，
+* @param 站点，
+* @param 最小提现金额，
+* @param 银行卡尾号，
+* @param 提现类型，
+* @return 提现结果，
+</item.desc>
+    </item>
+  </item>
+</root>

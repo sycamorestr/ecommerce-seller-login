@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository xmlns:x="rpa://selector/core" xmlns:regex="rpa://selector/operator/regex" xmlns:wildcard="rpa://selector/operator/wildcard" xmlns:contains="rpa://selector/operator/contains" xmlns:notContains="rpa://selector/operator/notContains" xmlns:startsWith="rpa://selector/operator/startsWith" xmlns:notStartsWith="rpa://selector/operator/notStartsWith" xmlns:endsWith="rpa://selector/operator/endsWith" xmlns:notEndsWith="rpa://selector/operator/notEndsWith" xmlns:notEquals="rpa://selector/operator/notEquals" xmlns:greaterThan="rpa://selector/operator/greaterThan" xmlns:greaterThanOrEqual="rpa://selector/operator/greaterThanOrEqual" xmlns:lessThan="rpa://selector/operator/lessThan" xmlns:lessThanOrEqual="rpa://selector/operator/lessThanOrEqual">
+  <group id="d446c5c3-d801-4103-b538-ade43ac70df2" name="聚水潭ERP" type="Web" processName="chrome" icon=".dev\icon\a3e24b68-7770-4b81-b0dc-4c0a4065b322.png" criteria="https://www.erp321.com">
+    <selector id="0cdde373-6397-45df-ae33-9ba48856865b" name="密码框" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="聚水潭ERP" screenshot=".dev\screenshot\8c69cdf3-56c5-4621-bfe8-f582d52a20f1.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" id="root" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" class="login-warp___CPolV default___c71eE" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="1" class="login-container___Gt3_s" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" class="login-container-box___JrK6k" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="1" class="ant-spin-nested-loading spinner-warp___cE63N" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" class="ant-spin-container" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" class="login-form-warp___jMwSk" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" class="login-form-container___rtXTi" index="0" />
+      </web>
+      <web x:name="form">
+        <optional index-of-type="0" class="ant-form ant-form-vertical password-form___QbsRd" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="1" class="ant-form-item password" innerText="登录密码" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" class="ant-row ant-form-item-row" innerText="登录密码" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="1" class="ant-col ant-form-item-control" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" class="ant-form-item-control-input" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" class="ant-form-item-control-input-content" index="0" />
+      </web>
+      <web x:name="input" type="password">
+        <optional index-of-type="0" placeholder="请输入密码" id="password" class="ant-input" index="0" />
+      </web>
+    </selector>
+  </group>
+</repository>

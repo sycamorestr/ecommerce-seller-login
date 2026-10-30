@@ -1,0 +1,1046 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_d91a274e.main",
+      "statement": "process.invoke_activity",
+      "title": "淘系推广数据获取",
+      "keywords": "",
+      "description": "阿里妈妈 各子平台汇总数据获取",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/09/02/0902b69b6e41b8a5aa2f9a1bb9270584.png",
+      "function": "xbot_extensions.activity_d91a274e.main",
+      "helpUrl": null,
+      "extension": "淘系推广数据获取",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_d91a274e.A1 直通车",
+      "statement": "process.invoke_activity",
+      "title": "直通车-报表-汇总数据获取",
+      "keywords": "",
+      "description": "阿里妈妈直通车-报表-汇总数据获取",
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_d91a274e.process1",
+      "helpUrl": "/yddoc/rpa/zh-CN/711948418846289920",
+      "extension": "淘系推广数据获取",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": ""
+          },
+          "category": "general"
+        },
+        {
+          "name": "报表类型",
+          "label": "报表类型",
+          "required": false,
+          "tips": "可选参数：\r\n· 账户报表\r\n· 计划报表\r\n· 单元报表\r\n· 关键词报表\r\n· 人群报表\r\n· 创意报表\r\n· 权益报表\r\n· 地域报表",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "账户报表",
+                "value": "账户报表",
+                "Unicode": null
+              },
+              {
+                "display": "计划报表",
+                "value": "计划报表",
+                "Unicode": null
+              },
+              {
+                "display": "单元报表",
+                "value": "单元报表",
+                "Unicode": null
+              },
+              {
+                "display": "关键词报表",
+                "value": "关键词报表",
+                "Unicode": null
+              },
+              {
+                "display": "人群报表",
+                "value": "人群报表",
+                "Unicode": null
+              },
+              {
+                "display": "创意报表",
+                "value": "创意报表",
+                "Unicode": null
+              },
+              {
+                "display": "权益报表",
+                "value": "权益报表",
+                "Unicode": null
+              },
+              {
+                "display": "地域报表",
+                "value": "地域报表",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "转化周期",
+          "label": "转化周期",
+          "required": false,
+          "tips": "可选参数：\r\n· 1天转化数据\r\n· 3天转化数据\r\n· 7天转化数据\r\n· 15天转化数据\r\n· 15天累计数据\r\n· 30天累计数据",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "1天转化数据",
+                "value": "1天转化数据",
+                "Unicode": null
+              },
+              {
+                "display": "3天转化数据",
+                "value": "3天转化数据",
+                "Unicode": null
+              },
+              {
+                "display": "7天转化数据",
+                "value": "7天转化数据",
+                "Unicode": null
+              },
+              {
+                "display": "15天转化数据",
+                "value": "15天转化数据",
+                "Unicode": null
+              },
+              {
+                "display": "15天累计数据",
+                "value": "15天累计数据",
+                "Unicode": null
+              },
+              {
+                "display": "30天累计数据",
+                "value": "30天累计数据",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "日期",
+          "label": "日期",
+          "required": false,
+          "tips": "可选参数：\r\n· 昨天\r\n· 前天\r\n· 过去7天\r\n· 上周\r\n· 过去14天\r\n· 过去30天\r\n· 上月\r\n· 过去90天\r\n· 过去半年\r\n自定义日期格式：yyyy-mm-dd~yyyy-mm-dd",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "自定义日期格式：yyyy-mm-dd~yyyy-mm-dd；快捷日期见帮助文档"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data",
+          "label": "data",
+          "name": "data",
+          "type": "dict"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_d91a274e.C1 直通车_数据列表获取",
+      "statement": "process.invoke_activity",
+      "title": "店铺基础报表数据列表获取",
+      "keywords": "",
+      "description": null,
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_d91a274e.process2",
+      "helpUrl": null,
+      "extension": "淘系推广数据获取",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "转化周期",
+          "label": "转化周期",
+          "required": false,
+          "tips": "可选参数:\r\n15天累计\r\n30天累计\r\n1天转化\r\n3天转化\r\n7天转化\r\n15天转化",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": ""
+          },
+          "category": "general"
+        },
+        {
+          "name": "时间选择",
+          "label": "时间选择",
+          "required": false,
+          "tips": "自定义日期格式：yyyy-mm-dd~yyyy-mm-dd\r\n快捷日期支持：【昨日，过去7天，过去14天，过去30天】中的任一日期",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": ""
+          },
+          "category": "general"
+        },
+        {
+          "name": "数据维度",
+          "label": "数据维度",
+          "required": false,
+          "tips": "可选参数：汇总；分天",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "文件名称",
+          "label": "文件名称",
+          "required": false,
+          "tips": "报表数据保存到本地的文件名",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "报表类型",
+          "label": "报表类型",
+          "required": false,
+          "tips": "可选参数：\r\n账户报表\r\n计划报表\r\n单元报表\r\n关键词报表\r\n人群报表\r\n创意报表\r\n权益报表\r\n地域报表",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "数据内容",
+          "label": "数据内容",
+          "required": false,
+          "tips": "可选参数：\r\n账户\r\n计划\r\n单元\r\n关键词\r\n人群\r\n创意\r\n地域\r\n市级别地域\r\n权益",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "文件存储路径",
+          "label": "文件存储路径",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "浏览器类型",
+          "label": "浏览器类型",
+          "required": false,
+          "tips": "可选参数：\r\nchrome浏览器\r\nedge浏览器\r\n影刀浏览器\r\nfirefox浏览器\r\nie浏览器",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_d91a274e.D1 平台登录",
+      "statement": "process.invoke_activity",
+      "title": "阿里妈妈_平台登录",
+      "keywords": "",
+      "description": null,
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_d91a274e.process6",
+      "helpUrl": "/yddoc/rpa/zh-CN/712283922857672704",
+      "extension": "淘系推广数据获取",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "浏览器类型",
+          "label": "浏览器类型",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "Chrome浏览器",
+                "value": "chrome",
+                "Unicode": null
+              },
+              {
+                "display": "Edge浏览器",
+                "value": "edge",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "账户",
+          "label": "账户",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "密码",
+          "label": "密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "平台名称",
+          "label": "平台名称",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:引力魔方",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "直通车",
+                "value": "直通车",
+                "Unicode": null
+              },
+              {
+                "display": "品销宝",
+                "value": "品销宝",
+                "Unicode": null
+              },
+              {
+                "display": "万象台",
+                "value": "万象台",
+                "Unicode": null
+              },
+              {
+                "display": "引力魔方",
+                "value": "引力魔方",
+                "Unicode": null
+              },
+              {
+                "display": "商家中心",
+                "value": "商家中心",
+                "Unicode": null
+              },
+              {
+                "display": "超级钻展",
+                "value": "超级钻展",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "web_page",
+          "label": "web_page",
+          "name": "web_page",
+          "type": "xbot._web.browser.WebBrowser"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_d91a274e.A3 引力魔方",
+      "statement": "process.invoke_activity",
+      "title": "引力魔方-报表-汇总数据获取",
+      "keywords": "",
+      "description": "阿里妈妈引力魔方-报表-自定义分析，汇总数据获取",
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_d91a274e.process7",
+      "helpUrl": "/yddoc/rpa/zh-CN/711950583165939712",
+      "extension": "淘系推广数据获取",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": ""
+          },
+          "category": "general"
+        },
+        {
+          "name": "效果",
+          "label": "效果",
+          "required": false,
+          "tips": "['点击效果','展现效果']",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "点击效果",
+                "value": "点击效果",
+                "Unicode": null
+              },
+              {
+                "display": "展现效果",
+                "value": "展现效果",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "周期",
+          "label": "周期",
+          "required": false,
+          "tips": "['转化效果周期1天','转化效果周期3天','转化效果周期7天','转化效果周期15天','转化效果周期30天']",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "转化效果周期1天",
+                "value": "转化效果周期1天",
+                "Unicode": null
+              },
+              {
+                "display": "转化效果周期3天",
+                "value": "转化效果周期3天",
+                "Unicode": null
+              },
+              {
+                "display": "转化效果周期7天",
+                "value": "转化效果周期7天",
+                "Unicode": null
+              },
+              {
+                "display": "转化效果周期15天",
+                "value": "转化效果周期15天",
+                "Unicode": null
+              },
+              {
+                "display": "转化效果周期30天",
+                "value": "转化效果周期30天",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "日期",
+          "label": "日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "自定义日期格式：yyyy-mm-dd~yyyy-mm-dd；快捷日期见帮助文档"
+          },
+          "category": "general"
+        },
+        {
+          "name": "文件保存路径",
+          "label": "文件保存路径",
+          "required": false,
+          "tips": "保存本地文件路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "file_path",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_d91a274e.A2 万象台",
+      "statement": "process.invoke_activity",
+      "title": "万象台-报表-汇总数据获取",
+      "keywords": "",
+      "description": "阿里妈妈万象台-报表-账户总览汇总数据获取",
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_d91a274e.process9",
+      "helpUrl": "/yddoc/rpa/zh-CN/711952717006422016",
+      "extension": "淘系推广数据获取",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": ""
+          },
+          "category": "general"
+        },
+        {
+          "name": "周期",
+          "label": "周期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "效果转化周期7天",
+                "value": "效果转化周期7天",
+                "Unicode": null
+              },
+              {
+                "display": "效果转化周期15天",
+                "value": "效果转化周期15天",
+                "Unicode": null
+              },
+              {
+                "display": "效果转化周期30天",
+                "value": "效果转化周期30天",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "日期",
+          "label": "日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "自定义日期格式：yyyy-mm-dd~yyyy-mm-dd"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "消耗汇总数据",
+          "label": "消耗汇总数据",
+          "name": "消耗汇总数据",
+          "type": "dict"
+        },
+        {
+          "id": "推广汇总数据",
+          "label": "推广汇总数据",
+          "name": "推广汇总数据",
+          "type": "dict"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_d91a274e.utils",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_d91a274e.utils",
+      "helpUrl": null,
+      "extension": "淘系推广数据获取",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_d91a274e.A4 品销宝",
+      "statement": "process.invoke_activity",
+      "title": "品销宝-报表-明星店铺报表数据获取",
+      "keywords": "",
+      "description": "阿里妈妈品销宝-报表-明星店铺报表数据获取",
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_d91a274e.process13",
+      "helpUrl": "/yddoc/rpa/zh-CN/711951652080476160",
+      "extension": "淘系推广数据获取",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": ""
+          },
+          "category": "general"
+        },
+        {
+          "name": "周期",
+          "label": "周期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "3天转化数据",
+                "value": "3天转化数据",
+                "Unicode": null
+              },
+              {
+                "display": "7天转化数据",
+                "value": "7天转化数据",
+                "Unicode": null
+              },
+              {
+                "display": "15天转化数据",
+                "value": "15天转化数据",
+                "Unicode": null
+              },
+              {
+                "display": "30天转化数据",
+                "value": "30天转化数据",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "效果",
+          "label": "效果",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "点击效果",
+                "value": "点击效果",
+                "Unicode": null
+              },
+              {
+                "display": "展现效果",
+                "value": "展现效果",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "日期",
+          "label": "日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "自定义日期格式：yyyy-mm-dd~yyyy-mm-dd；快捷日期见帮助文档"
+          },
+          "category": "general"
+        },
+        {
+          "name": "文件保存路径",
+          "label": "文件保存路径",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "file_path",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_d91a274e.A5 超级钻展",
+      "statement": "process.invoke_activity",
+      "title": "超级钻展-报表-账户汇总数据获取",
+      "keywords": "",
+      "description": "阿里妈妈超级钻展-报表-账户汇总数据获取",
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_d91a274e.process15",
+      "helpUrl": "/yddoc/rpa/zh-CN/716924714313764864",
+      "extension": "淘系推广数据获取",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": ""
+          },
+          "category": "general"
+        },
+        {
+          "name": "周期",
+          "label": "周期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "效果转化周期 - 3天",
+                "value": "效果转化周期 - 3天",
+                "Unicode": null
+              },
+              {
+                "display": "效果转化周期 - 7天",
+                "value": "效果转化周期 - 7天",
+                "Unicode": null
+              },
+              {
+                "display": "效果转化周期 - 15天",
+                "value": "效果转化周期 - 15天",
+                "Unicode": null
+              },
+              {
+                "display": "效果转化周期 - 30天",
+                "value": "效果转化周期 - 30天",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "效果",
+          "label": "效果",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "点击效果",
+                "value": "点击效果",
+                "Unicode": null
+              },
+              {
+                "display": "展现效果",
+                "value": "展现效果",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "日期",
+          "label": "日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "自定义日期格式：yyyy-mm-dd~yyyy-mm-dd；快捷日期见帮助文档"
+          },
+          "category": "general"
+        },
+        {
+          "name": "文件保存路径",
+          "label": "文件保存路径",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "file_path",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_d91a274e.A6 淘宝客",
+      "statement": "process.invoke_activity",
+      "title": "商家中心-数据分析-汇总数据获取",
+      "keywords": "",
+      "description": "淘宝联盟商家中心-数据分析-推广概览，汇总数据获取",
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_d91a274e.process17",
+      "helpUrl": "/yddoc/rpa/zh-CN/711949508821041152",
+      "extension": "淘系推广数据获取",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": ""
+          },
+          "category": "general"
+        },
+        {
+          "name": "日期",
+          "label": "日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:今日实时",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "自定义日期格式：yyyy-mm-dd~yyyy-mm-dd；快捷日期见帮助文档"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data",
+          "label": "data",
+          "name": "data",
+          "type": "dict"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_d91a274e.D2 等待文件下载完成",
+      "statement": "process.invoke_activity",
+      "title": "子流程2",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_d91a274e.process19",
+      "helpUrl": null,
+      "extension": "淘系推广数据获取",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "文件保存路径",
+          "label": "文件保存路径",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "文件名",
+          "label": "文件名",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_d91a274e.T SD测试",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": null,
+      "function": "xbot_extensions.activity_d91a274e.process20",
+      "helpUrl": null,
+      "extension": "淘系推广数据获取",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    }
+  ]
+}

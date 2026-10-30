@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository xmlns:regex="rpa://selector/operator/regex" xmlns:wildcard="rpa://selector/operator/wildcard" xmlns:x="rpa://selector/core" xmlns:contains="rpa://selector/operator/contains" xmlns:notContains="rpa://selector/operator/notContains" xmlns:startsWith="rpa://selector/operator/startsWith" xmlns:notStartsWith="rpa://selector/operator/notStartsWith" xmlns:endsWith="rpa://selector/operator/endsWith" xmlns:notEndsWith="rpa://selector/operator/notEndsWith" xmlns:notEquals="rpa://selector/operator/notEquals" xmlns:greaterThan="rpa://selector/operator/greaterThan" xmlns:greaterThanOrEqual="rpa://selector/operator/greaterThanOrEqual" xmlns:lessThan="rpa://selector/operator/lessThan" xmlns:lessThanOrEqual="rpa://selector/operator/lessThanOrEqual">
+  <group id="8caef373-9ae0-4fc2-ab0d-93adadfe741a" name="本地元素" type="Unknown" processName="" icon="" criteria="">
+    <selector id="37d6ac63-cabc-4b7b-9204-60f06d003e62" name="ad_close" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="紫鸟浏览器专业版" screenshot=".dev\screenshot\567013b9-2365-4304-8179-4c75a9dcba96.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1">
+        <optional title="紫鸟浏览器专业版" app="superbrowser" />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND">
+        <optional uia-name="管理系统" title="Chrome Legacy Window" index="0" />
+      </wnd>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="3" />
+      </uia>
+      <uia x:name="Group" uia-name="设备到期提醒 请尽快续费，未续费的设备到期后将被永久注销，不支持找回！">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Custom" uia-name="设备到期提醒 请尽快续费，未续费的设备到期后将被永久注销，不支持找回！">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" index="1">
+        <optional />
+      </uia>
+    </selector>
+    <selector id="4d197bd6-ed04-417c-ba2b-ea677457b673" name="上传地址非当前环境指定上传文件地址" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="TIKTOK-US-BT" screenshot=".dev\screenshot\4707e0ae-4e8d-408b-9c0e-db63b2a217b3.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="上传地址非当前环境指定上传文件地址">
+        <optional />
+      </wnd>
+    </selector>
+    <selector id="77b48826-19d9-44f3-a6de-888b529fb05a" name="确定" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="【5】SL-中企-张永基-欧洲&amp;英国-陈冠柱" screenshot=".dev\screenshot\39ad79bd-74db-48ef-9a5e-f3dfbb9f3771.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" app="superbrowser">
+        <optional title="【5】SL-中企-张永基-欧洲&amp;英国-陈冠柱" />
+      </wnd>
+      <uia x:name="Pane">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Pane">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Pane">
+        <optional index="2" />
+      </uia>
+      <uia x:name="Pane">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Button" uia-name="确定">
+        <optional index="1" />
+      </uia>
+    </selector>
+    <selector id="e64e7fb0-9686-4a83-b759-2e5691766507" name="window" type="simple" framework="acc" processName="superbrowser" productName="" winTitle="紫鸟浏览器专业版" screenshot=".dev\screenshot\2790ae54-ebd9-427a-be55-cbb346effda0.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器专业版" app="superbrowser">
+        <optional />
+      </wnd>
+    </selector>
+  </group>
+  <group id="584e0a2d-6899-4104-b4f4-610f72a60db0" name="紫鸟浏览器-v6" type="Win32" processName="ziniao" icon=".dev\icon\27de3218-e17b-428e-ba5a-d44638acc762.png" criteria="">
+    <selector id="fb920fac-39d6-46e3-a5eb-4930063bdd74" name="ziniao-window" type="simple" framework="acc" processName="ziniao" productName="" winTitle="紫鸟浏览器" screenshot=".dev\screenshot\c5e51be2-a045-4e83-a9ab-3499db0a984f.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器" app="ziniao">
+        <optional />
+      </wnd>
+    </selector>
+    <selector id="385bb911-5888-4a3e-b7bb-df91934da87a" name="ziniao-client" type="simple" framework="acc" selectorOringin="Inspect" processName="ziniao" productName="" winTitle="紫鸟浏览器" screenshot=".dev\screenshot\6dd6a421-c36e-48b9-ac62-0e23516bfd4a.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器" app="ziniao">
+        <optional />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" uia-name="紫鸟浏览器" title="Chrome Legacy Window">
+        <optional index="0" />
+      </wnd>
+    </selector>
+    <selector id="a3456137-2825-4de1-89bb-cf8f67ceeef3" name="ziniao-store-client" type="simple" framework="acc" selectorOringin="Inspect" processName="ziniaobrowser" productName="" winTitle="TIKTOK-US-BT" screenshot=".dev\screenshot\ccaac6b1-d7da-400c-8538-363424d1d952.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" app="ziniaobrowser">
+        <optional title="TIKTOK-US-BT" />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window" index="0">
+        <optional uia-name="TIKTOK-US-...|TikTok Shop-美国-本土" />
+      </wnd>
+    </selector>
+    <selector id="96e8fca0-6a5f-4e27-8c48-9a723674e398" name="ziniao-store-window" type="simple" framework="acc" processName="ziniaobrowser" productName="" winTitle="TIKTOK-US-BT" screenshot=".dev\screenshot\5440c1ca-38db-4cfd-9d98-947714e85816.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" app="ziniaobrowser">
+        <optional title="TIKTOK-US-BT" />
+      </wnd>
+    </selector>
+    <selector id="5c4e9afb-d68f-4c54-a62b-693f98b645cf" name="上传提示窗口" type="simple" framework="win32" processName="ziniaobrowser" productName="" winTitle="TIKTOK-US-BT" screenshot=".dev\screenshot\f3169341-7daf-4584-b6e3-51ce07b9a166.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" regex:title="(?=.*上传地址.*)(?=.*非.*)(?=.*环境.*)">
+        <optional />
+      </wnd>
+    </selector>
+    <selector id="8809a055-17e2-4dfa-8551-48c4cfbb5f8f" name="提示窗口" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="TIKTOK-US-BT" screenshot=".dev\screenshot\1695e66a-c6ec-452f-abfb-984081bad4f0.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" wildcard:title="提示">
+        <optional app="superbrowser" />
+      </wnd>
+    </selector>
+    <selector id="eb241044-34dc-447c-8dcb-3e1c372f11ee" name="SB-Client" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="紫鸟浏览器专业版" screenshot=".dev\screenshot\8effeee6-72b6-442b-beff-efbea000dd43.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器专业版" app="superbrowser">
+        <optional />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" index="0">
+        <optional uia-name="管理系统" title="Chrome Legacy Window" />
+      </wnd>
+    </selector>
+    <selector id="98154c00-8d9b-4e00-82f3-d7585cf182b3" name="SB-Login-Client" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="紫鸟浏览器专业版" screenshot=".dev\screenshot\2ea93a36-a763-429b-a4a6-4e9bc368001e.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器专业版" app="superbrowser">
+        <optional />
+      </wnd>
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1">
+        <optional title="superbrowser web dia" />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND">
+        <optional title="Chrome Legacy Window" index="0" />
+      </wnd>
+    </selector>
+    <selector id="8cdb7fab-c490-4adc-b221-5356579a06ce" name="SB-Logout-Client" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="紫鸟浏览器专业版" screenshot=".dev\screenshot\846c034d-eff8-49d7-9c52-dc77cd85af19.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器专业版" app="superbrowser">
+        <optional />
+      </wnd>
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1">
+        <optional title="" />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" uia-name="Super Browser">
+        <optional title="Chrome Legacy Window" index="0" />
+      </wnd>
+    </selector>
+    <selector id="1474bcd1-905e-4480-92fd-97c1ead93d67" name="页码" type="simple" framework="win32" processName="ziniao" productName="" winTitle="紫鸟浏览器" screenshot=".dev\screenshot\23060d97-be08-4d0c-9cca-505987f60c44.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器" app="ziniao">
+        <optional />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" uia-name="紫鸟浏览器">
+        <optional title="Chrome Legacy Window" index="0" />
+      </wnd>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="root">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="2" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="workbenchWebview">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="2" />
+      </uia>
+      <uia x:name="List">
+        <optional index="7" />
+      </uia>
+      <uia x:name="ListItem">
+        <optional index="6" />
+      </uia>
+      <uia x:name="Group" uia-name="页码">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="ComboBox" uia-name="页码">
+        <optional uia-id="rc_select_0" index="0" />
+      </uia>
+    </selector>
+    <selector id="5f58187c-a12a-48c2-a1e9-1897374b24b6" name="筛选" type="simple" framework="win32" processName="ziniao" productName="" winTitle="紫鸟浏览器" screenshot=".dev\screenshot\0efef3c7-a61f-4ab4-9a44-b70b3d0d85fd.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器" app="ziniao">
+        <optional />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" uia-name="紫鸟浏览器">
+        <optional title="Chrome Legacy Window" index="0" />
+      </wnd>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="root">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="2" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="workbenchWebview">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="2" />
+      </uia>
+      <uia x:name="Button" uia-name="筛选">
+        <optional index="2" />
+      </uia>
+    </selector>
+    <selector id="ff5d8be7-3168-4f19-ad70-4efc4c7c03fb" name="sb-Client" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="huhuanxiasong@tom.com不续费" screenshot=".dev\screenshot\b3da7e14-5c6a-4aa6-be7f-f09c78e0a852.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" app="superbrowser" regex:title="^(?!.*\b紫鸟浏览器)(?!扩展程序)(?!另存为).*">
+        <optional />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" index="0" title="Chrome Legacy Window">
+        <optional uia-name="紫鸟浏览器专业版Superbrower-跨境电商环境安全提速系统" />
+      </wnd>
+    </selector>
+    <selector id="9a055486-9d90-4026-8f84-c379a91f2399" name="离开此网站" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="TIKTOK-US-BT" screenshot=".dev\screenshot\1695e66a-c6ec-452f-abfb-984081bad4f0.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" wildcard:title="离开此网站*">
+        <optional app="superbrowser" />
+      </wnd>
+    </selector>
+    <selector id="d02cb1b0-4147-4d32-8cd5-20bd858d7163" name="测试-win元素" type="simple" framework="win32" processName="ziniao" productName="" winTitle="紫鸟浏览器" screenshot=".dev\screenshot\29e85377-6b6f-4963-84b7-48aa8cdb6bc0.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器" app="ziniao">
+        <optional />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" uia-name="紫鸟浏览器">
+        <optional title="Chrome Legacy Window" index="0" />
+      </wnd>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="root">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="workbenchWebview">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="microSlot">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="rootManageNew">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="superManagerLayout">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="2" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="7" />
+      </uia>
+      <uia x:name="Group" uia-id="account-table">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="account">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" index="0">
+        <optional />
+      </uia>
+      <uia x:name="Group" index="1">
+        <optional />
+      </uia>
+    </selector>
+    <selector id="7ced1810-7d0b-4711-af9f-f97d1afa9797" name="元素" type="simple" framework="win32" processName="ziniao" productName="" winTitle="紫鸟浏览器" screenshot=".dev\screenshot\a27ae9d0-9471-4ef0-a82f-bbd107701749.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器" app="ziniao">
+        <optional />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" uia-name="紫鸟浏览器">
+        <optional title="Chrome Legacy Window" index="0" />
+      </wnd>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="root">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="workbenchWebview">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="microSlot">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="rootManageNew">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="superManagerLayout">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="2" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="7" />
+      </uia>
+      <uia x:name="Group" uia-id="account-table">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="account">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" index="1">
+        <optional />
+      </uia>
+      <uia x:name="Group" index="1">
+        <optional />
+      </uia>
+    </selector>
+    <selector id="65fb27fe-9f45-4e15-8be4-4ee76fc5f769" name="jx_test" type="simple" framework="win32" selectorOringin="Inspect" processName="ziniao" productName="" winTitle="紫鸟浏览器" screenshot=".dev\screenshot\c0fecb74-871d-45e7-9b2a-1e15b5a05c8d.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器" app="ziniao">
+        <optional />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" uia-name="紫鸟浏览器">
+        <optional title="Chrome Legacy Window" index="0" />
+      </wnd>
+    </selector>
+  </group>
+  <group id="603ca645-d6ed-40e1-8f42-eba17fdc390d" name="紫鸟浏览器专业版" type="Win32" processName="superbrowser" icon=".dev\icon\5a7c13ee-ed12-4145-b1a5-1dc1a782d32a.png" criteria="">
+    <selector id="86d61ba3-0666-4a5b-b21f-1ac701874166" name="sb-Client-firefox-v5" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="firefox" screenshot=".dev\screenshot\9d8b9db6-6f48-4652-bf7f-964f3c9cda5e.jpg">
+      <wnd x:name="Window" cls="MozillaWindowClass" app="superbrowser">
+        <optional title="firefox" />
+      </wnd>
+      <uia x:name="Group" uia-id="tabbrowser-tabpanels">
+        <optional index="7" />
+      </uia>
+    </selector>
+    <selector id="e805eb07-552d-4886-a457-e987a4b58b2c" name="Amazon.com. Spend less. Smile more." type="simple" framework="win32" processName="superbrowser" productName="" winTitle="紫鸟浏览器专业版" screenshot=".dev\screenshot\e38f5fc2-bbd7-4904-bef0-578c4519cafa.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器专业版" app="superbrowser">
+        <optional />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" uia-name="Amazon.com. Spend less. Smile more.">
+        <optional title="Chrome Legacy Window" index="0" />
+      </wnd>
+    </selector>
+    <selector id="334b4000-5a52-477c-aeeb-0a0c33a07426" name="SB-Client-EX" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="紫鸟浏览器专业版" screenshot=".dev\screenshot\548b063a-787e-447e-864e-35d052a58b72.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器专业版">
+        <optional app="superbrowser" />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" uia-name="管理系统">
+        <optional title="Chrome Legacy Window" index="0" />
+      </wnd>
+    </selector>
+    <selector id="a2bad365-a662-4b7c-b6e6-2698ef01784b" name="SB-Client_1" type="simple" framework="acc" processName="superbrowser" productName="" winTitle="紫鸟浏览器专业版" screenshot=".dev\screenshot\c319e98f-dd53-4a92-8cbb-989c7464fe20.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器专业版" app="superbrowser">
+        <optional />
+      </wnd>
+    </selector>
+    <selector id="1d89830c-b373-4687-911b-188aecfabe7b" name="SB-first-tab-client" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="紫鸟浏览器专业版" screenshot=".dev\screenshot\4e914100-d2d6-417e-a7c3-576f757631f0.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器专业版" app="superbrowser">
+        <optional />
+      </wnd>
+      <uia x:name="Pane">
+        <optional index="3" />
+      </uia>
+      <uia x:name="Pane">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Pane">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Pane" index="6">
+        <optional />
+      </uia>
+    </selector>
+    <selector id="8a1e255b-197a-46e2-a7e2-24b8cf08d366" name="紫鸟文件下载-确认按钮" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="PLUUSHUU(谢芳)公司注册" screenshot=".dev\screenshot\8c91ec4f-d42c-4f7a-849f-41ef86376df8.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" app="superbrowser">
+        <optional title="PLUUSHUU(谢芳)公司注册" />
+      </wnd>
+      <uia x:name="Pane">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Pane">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Pane">
+        <optional index="2" />
+      </uia>
+      <uia x:name="Pane">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Button" uia-name="确定">
+        <optional index="1" />
+      </uia>
+    </selector>
+    <selector id="97ca5a65-957d-49f1-a105-c75205e6cd9d" name="账号管理-v5" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="紫鸟浏览器专业版" screenshot=".dev\screenshot\2f62ce62-7ec6-4dbe-ae0d-4ce24f009a50.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器专业版" app="superbrowser">
+        <optional />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" uia-name="管理系统">
+        <optional title="Chrome Legacy Window" index="0" />
+      </wnd>
+      <uia x:name="Group" index="0">
+        <optional />
+      </uia>
+      <uia x:name="Group" index="0">
+        <optional />
+      </uia>
+      <uia x:name="Group" index="0">
+        <optional />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Tab">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="TabItem" uia-name="账号管理">
+        <optional index="0" />
+      </uia>
+    </selector>
+    <selector id="237462ef-0a61-4b5c-8981-644029c2a732" name="账号管理-v6" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="紫鸟浏览器专业版" screenshot=".dev\screenshot\97822e50-ebf1-4088-ba7f-fee14bdddcd3.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器专业版" app="superbrowser">
+        <optional />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" uia-name="管理系统">
+        <optional title="Chrome Legacy Window" index="0" />
+      </wnd>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Tab">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="TabItem" uia-name="账号管理">
+        <optional index="0" />
+      </uia>
+    </selector>
+    <selector id="f493fb91-a6af-4384-b6ce-28da62a48399" name="本地-账号管理-每页数量-v1" type="simple" framework="win32" selectorOringin="Inspect" processName="superbrowser" productName="" winTitle="紫鸟浏览器专业版" screenshot=".dev\screenshot\cf13e5ba-3ded-43d4-a044-9cebb0d70998.jpg">
+      <wnd x:name="Window" app="superbrowser" cls="Chrome_WidgetWin_1" title="紫鸟浏览器专业版">
+        <optional />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" uia-name="管理系统">
+        <optional index="0" title="Chrome Legacy Window" />
+      </wnd>
+      <uia x:name="Group">
+        <optional index="0" uia-id="root" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="4" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="List">
+        <optional index="0" />
+      </uia>
+      <uia x:name="ListItem">
+        <optional index="5" />
+      </uia>
+      <uia x:name="Group" uia-name="页码">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" index="1">
+        <optional uia-name="20 条/页" />
+      </uia>
+    </selector>
+    <selector id="265f549b-83d5-47bc-aa46-097651dbd59d" name="搜索结果_店铺名称-v6" type="simple" framework="win32" selectorOringin="Inspect" processName="superbrowser" productName="" winTitle="紫鸟浏览器专业版" screenshot=".dev\screenshot\b4573e62-0721-4781-85d1-7629678a08a0.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="紫鸟浏览器专业版" app="superbrowser">
+        <optional />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" uia-name="管理系统">
+        <optional title="Chrome Legacy Window" index="0" />
+      </wnd>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="root">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Group">
+        <optional uia-id="v6Container" index="0" />
+      </uia>
+      <uia x:name="Group" wildcard:uia-id="__qiankun_microapp_wrapper_for_ziniao_web_manager_*">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="rootManageNew">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="2" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="6" />
+      </uia>
+      <uia x:name="Group" uia-id="account-table">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group" uia-id="account">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Group">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Table">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Custom">
+        <optional index="0" />
+      </uia>
+      <uia x:name="DataItem" uia-name="jusjojo 电商后台">
+        <optional index="1" />
+      </uia>
+    </selector>
+  </group>
+  <group id="6622aa92-1724-4d25-9582-ee4613e114ca" name="亚马逊" type="Web" processName="superbrowser" icon=".dev\icon\c4383bd1-c1b4-43c0-b00e-8e3af42712be.png" criteria="https://sellercentral.amazon.co.uk">
+    <selector id="22170af6-670b-4d64-a265-03cf04a75938" name="下载 CSV 文件" type="simple" framework="chromium" processName="superbrowser" productName="superbrowser" winTitle="Business Reports" screenshot=".dev\screenshot\029759a0-d1db-449d-b399-325b31471ff5.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="a-page" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="sc-content-container" index-of-type="1" index="4" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="root" class="katal" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-k008qs" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-1hwrlfd" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-cmvzzh" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-pkldqj" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-8atqhb" index-of-type="7" index="7" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-awzfjy" index-of-type="0" index="0" />
+      </web>
+      <web x:name="kat-box" x:selected="false">
+        <optional innerText="Performance Alerts" class="css-1lx593h" index-of-type="0" variant="ltgrey" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional innerText="Performance Alerts" class="kat-row" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional innerText="Performance Alerts" class="css-pacyhg" index-of-type="0" index="0" />
+      </web>
+      <web x:name="kat-button" type="button" data-testid="BR_TABLE_BAR_DOWNLOAD_BUTTON">
+        <optional index-of-type="0" label="下载 (.csv)" variant="primary" size="base" index="0" />
+      </web>
+      <web x:name="xbotShadowRoot">
+        <optional />
+      </web>
+      <web x:name="button">
+        <optional innerText="下载 (.csv)" type="button" class="button" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional innerText="下载 (.csv)" class="content" index-of-type="1" index="1" />
+      </web>
+      <web x:name="slot" x:selected="false">
+        <optional innerText="下载 (.csv)" index-of-type="0" index="0" />
+      </web>
+      <web x:name="span" startsWith:innerText="下载 (.csv">
+        <optional index-of-type="0" index="0" />
+      </web>
+    </selector>
+  </group>
+  <group id="e47af1c0-0c93-4f62-9681-ab8acfd9f783" name="紫鸟基础公共元素" type="Win32" processName="superbrowser" icon=".dev\icon\448e2259-8dcc-4ee6-b006-dd5fc7ca26a4.png" criteria="">
+    <selector id="eca18f1a-ab15-4f34-9b98-4c7eb532680c" name="下载提示窗口" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="PHLA087" screenshot=".dev\screenshot\26d1398f-35d1-4e97-8fbd-3d7df796d1b8.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" regex:title=".*保存地址非.*环境.*">
+        <optional />
+      </wnd>
+    </selector>
+  </group>
+  <group id="758d1243-90ce-4588-9af0-a55ec0c317e9" name="亚马逊" type="Web" processName="superbrowser" icon=".dev\icon\50e2df43-416d-41f0-9311-cca2784b7888.png" criteria="https://sellercentral.amazon.com">
+    <selector id="f5c3964c-a0a5-4f04-8410-1dfd78299208" name="上传文件" type="simple" framework="chromium" processName="superbrowser" productName="superbrowser" winTitle="亚马逊" screenshot=".dev\screenshot\fb7b7c13-465c-4f2e-b473-1c88e96b0dbc.jpg">
+      <web x:name="div">
+        <optional id="a-page" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="sc-content-container" index="4" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional id="root" class="katal" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="fnge8dvgjaxt4nyx4pmp" index="2" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="qg8exzc3sll5ovq3qcx1" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="y6_ga1vhadall_7da21i" index="1" index-of-type="1" />
+      </web>
+      <web x:name="kat-box">
+        <optional variant="white" class="eveqizvbvfwy4gf8b4bq" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="_1p4_mevoneoctzocuux9 udpls6ydybjnths80t9o" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="cyyp5su8vfr7uyjabnae" index="1" index-of-type="0" />
+      </web>
+      <web x:name="kat-file-upload">
+        <optional id="image-upload" required="" multiple="" accept="image/JPEG,image/jpeg,image/JPG,image/jpg,image/PNG,image/png,image/GIF,image/gif" max-size="10485760" file-view="list-preview" variant="small" hide-clear-all="" data-testid="image-upload-input" max-files-per-grid-row="3" class="vyjxhvozyeqt81juj720" index="0" index-of-type="0" />
+      </web>
+      <web x:name="xbotShadowRoot">
+        <optional />
+      </web>
+      <web x:name="div">
+        <optional class="file-upload" />
+      </web>
+      <web x:name="div">
+        <optional class="file-upload-area" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="file-upload-input-overlay" index="1" index-of-type="1" />
+      </web>
+      <web x:name="kat-button">
+        <optional id="select-file" variant="secondary" size="base" part="file-upload-select-button" type="button" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="file-upload-button-label" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector id="eb7a10f7-e73d-439e-ad46-31935bf864dc" name="测试" type="simple" framework="chromium" selectorOringin="Inspect" processName="ziniaobrowser" productName="ziniaobrowser" winTitle="亚马逊" screenshot=".dev\screenshot\b8a8ddc0-47f2-4e09-a2b1-a526c624763e.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="a-page" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="sc-navbar-container" index-of-type="0" index="3" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="sc-header" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="sc-header-content" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="navbar" index-of-type="0" data-test-tag="navbar-redesign" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="nav-left-section" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="partner-switcher-container" index-of-type="1" data-test-tag="partner-switcher-container" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="flyoutTriggerWrap" index-of-type="0" tabindex="-1" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="dropdown-account-switcher-container" index-of-type="1" data-mode="default" data-nature="merchantMarketplace" data-test-tag="dropdown-account-switcher-container" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="dropdown-account-switcher account-switcher-root" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="dropdown-account-switcher-header" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" class="dropdown-account-switcher-header-label">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/0fbaba8f804520801d767fe16d868fcdc63ab6e2f6a6b25ef904f3db88b4ad75_semantic_False.png" rectangle="[180,22,71,22]" desc="" />
+    </selector>
+    <selector id="97044dfb-c9ef-4bb0-951c-e0b86eea6a35" name="下载" type="simple" framework="chromium" selectorOringin="Inspect" processName="superbrowser" productName="superbrowser" winTitle="配送报告" screenshot=".dev\screenshot\19ade2e9-43ac-4de5-9937-81ac27cf9d11.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="a-page" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="sc-content-container" index-of-type="1" index="4" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="root" class="katal" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="report-central-body" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="content-report-central-content" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="report-page-margin-style" index-of-type="2" index="3" />
+      </web>
+      <web x:name="kat-table" x:selected="false">
+        <optional role="table" index-of-type="0" index="1" />
+      </web>
+      <web x:name="kat-table-body" x:selected="false">
+        <optional role="rowgroup" index-of-type="0" index="1" />
+      </web>
+      <web x:name="kat-table-row" index-of-type="0">
+        <optional role="row" index="0" />
+      </web>
+      <web x:name="kat-table-cell" x:selected="false">
+        <optional role="cell" index-of-type="4" index="4" />
+      </web>
+      <web x:name="kat-button" label="下载">
+        <optional type="button" index-of-type="0" variant="secondary" size="small" index="0" />
+      </web>
+      <web x:name="xbotShadowRoot">
+        <optional />
+      </web>
+      <web x:name="button">
+        <optional innerText="下载" type="button" class="button" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional innerText="下载" class="content" index-of-type="1" index="1" />
+      </web>
+      <web x:name="slot" x:selected="false">
+        <optional innerText="下载" index-of-type="0" index="0" />
+      </web>
+      <web x:name="span" innerText="下载">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/e523769d32b9f5d45436c374168b528a3e9689f8d08ee9b31dc29787059ce95d_semantic_False.png" rectangle="[872,556,12,18]" desc="" />
+    </selector>
+  </group>
+  <group id="1603c4ad-b550-4cd4-903c-1f03250f7e0e" name="任务切换" type="Win32" processName="explorer" icon="" criteria="">
+  </group>
+  <group id="9f5a7564-d6db-4312-8598-44fe37bc6442" name="活动数据" type="Web" processName="superbrowser" icon=".dev\icon\add05ca0-5397-4c83-bdb7-b01a3eadcfc5.png" criteria="https://agentseller.temu.com">
+    <selector id="3f8af060-23b8-4563-98b2-0e35945a4427" name="批量导出数据" type="simple" framework="chromium" processName="ziniaobrowser" productName="ziniaobrowser" winTitle="Business Reports" screenshot=".dev\screenshot\6ffda566-638e-486b-8520-32068f1ab95d.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="a-page" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="sc-content-container" index-of-type="1" index="4" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="root" class="katal" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-k008qs" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-1hwrlfd" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-8atqhb" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="kat-row css-1uq1hkk" index-of-type="2" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="kat-col-sm-3 css-1bvc4cc" index-of-type="1" index="1" />
+      </web>
+      <web x:name="span" class="css-1dzeh5m" index-of-type="1">
+        <optional index="1" />
+      </web>
+      <web x:name="kat-button" index-of-type="0">
+        <optional type="button" variant="primary" label="下载" size="base" index="0" />
+      </web>
+      <web x:name="xbotShadowRoot">
+        <optional />
+      </web>
+      <web x:name="button" innerText="下载">
+        <optional type="button" class="button" />
+      </web>
+    </selector>
+    <selector id="e899b152-434f-4c37-aecf-ced462beb34e" name="确认" type="simple" framework="chromium" processName="superbrowser" productName="superbrowser" winTitle="活动数据" screenshot=".dev\screenshot\0f1f8418-30ea-40c7-abdb-1b31705bb381.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-modal" class="MDL_outerWrapper_5-120-1 MDL_alert_5-120-1 undefined" index-of-type="10" index="16" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-modal-container" class="MDL_container_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-modal-innerWrapper" class="MDL_innerWrapper_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-modal-inner" class="MDL_inner_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-modal-body" class="MDL_body_5-120-1 MDL_noHeader_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="body-module__modal___31SJ0" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="body-module__footer___2OliE" index-of-type="1" index="1" />
+      </web>
+      <web x:name="button" innerText="确认">
+        <optional data-testid="beast-core-button" type="button" class="BTN_outerWrapper_5-120-1 BTN_primary_5-120-1 BTN_medium_5-120-1 BTN_outerWrapperBtn_5-120-1" index-of-type="0" index="0" />
+      </web>
+    </selector>
+    <selector id="ac1ad3a2-aa9b-425b-b88d-02c5c339d03e" name="导出" type="simple" framework="chromium" processName="superbrowser" productName="superbrowser" winTitle="Business Reports" screenshot=".dev\screenshot\6e8eaaad-eb19-4b3b-b520-dc573b1e3f49.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="a-page" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="sc-content-container" index-of-type="1" index="4" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="root" class="katal" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-k008qs" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-1hwrlfd" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-8atqhb" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="kat-row css-1uq1hkk" index-of-type="2" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="kat-col-sm-3 css-1bvc4cc" index-of-type="1" index="1" />
+      </web>
+      <web x:name="span" class="css-1dzeh5m" index-of-type="1">
+        <optional index="1" />
+      </web>
+      <web x:name="kat-button" index-of-type="0">
+        <optional type="button" variant="primary" label="下载" size="base" index="0" />
+      </web>
+      <web x:name="xbotShadowRoot">
+        <optional />
+      </web>
+      <web x:name="button" innerText="下载">
+        <optional type="button" class="button" />
+      </web>
+    </selector>
+  </group>
+  <group id="e601e419-43ba-45c1-b482-5b2e155aa20a" name="感谢下载影刀-影刀RPA - 影刀官网" type="Web" processName="superbrowser" icon=".dev\icon\482b0dbe-a7b9-47a7-a0d8-699141583de2.png" criteria="https://www.yingdao.com">
+    <selector id="787ceee4-191e-427d-8cc9-dd4116231662" name="导出-jx" type="simple" framework="chromium" processName="ziniaobrowser" productName="ziniaobrowser" winTitle="Business Reports" screenshot=".dev\screenshot\7f528be3-9826-42c8-8057-5ee1ef522ae7.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="a-page" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="sc-content-container" index-of-type="1" index="4" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="root" class="katal" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-k008qs" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-1hwrlfd" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="css-8atqhb" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="kat-row css-1uq1hkk" index-of-type="2" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="kat-col-sm-3 css-1bvc4cc" index-of-type="1" index="1" />
+      </web>
+      <web x:name="span" class="css-1dzeh5m" index-of-type="1">
+        <optional index="1" />
+      </web>
+      <web x:name="kat-button" index-of-type="0">
+        <optional type="button" variant="primary" label="下载" size="base" index="0" />
+      </web>
+      <web x:name="xbotShadowRoot">
+        <optional />
+      </web>
+      <web x:name="button" innerText="下载">
+        <optional type="button" class="button" />
+      </web>
+    </selector>
+  </group>
+</repository>

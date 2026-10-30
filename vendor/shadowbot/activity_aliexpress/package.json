@@ -1,0 +1,207 @@
+{
+  "uuid": "93110ba0-eb76-4a44-9367-8c30742efe7d",
+  "name": "速卖通商家后台",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/e1/1c/e11ce8a3133c358384c4e82970f61e43.png",
+  "version": "1",
+  "tags": "official",
+  "software": null,
+  "software_title": null,
+  "package_version": 2,
+  "feature_list": [
+    2
+  ],
+  "description": "该指令实现对速卖通商家后台的资金管理页面的订单退款记录，收支记录，资金中心数据汇总，待结算金额数据明细，收支明细，垫资记录等的操作，对交易中的批量订单下载的操作，对生意参谋中核心指标，实时概况数据汇总，商品支付排行榜数据下载，店铺流量来源数据下载，市场分析等的操作",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_aliexpress",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "report_download",
+      "filename": "report_download",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "资金页面",
+      "enableCopilot": false
+    },
+    {
+      "name": "data_summary",
+      "filename": "data_summary",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "资金页面",
+      "enableCopilot": false
+    },
+    {
+      "name": "order_refund",
+      "filename": "order_refund",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "资金页面",
+      "enableCopilot": false
+    },
+    {
+      "name": "batch_order_export",
+      "filename": "batch_order_export",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "资金页面",
+      "enableCopilot": false
+    },
+    {
+      "name": "core_metrics_download",
+      "filename": "core_metrics_download",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "资金页面",
+      "enableCopilot": false
+    },
+    {
+      "name": "export_income_expense_details",
+      "filename": "export_income_expense_details",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "未分类",
+      "enableCopilot": false
+    },
+    {
+      "name": "traffic_source_data_download",
+      "filename": "traffic_source_data_download",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "未分类",
+      "enableCopilot": false
+    },
+    {
+      "name": "freight_statistics_export",
+      "filename": "freight_statistics_export",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "未分类",
+      "enableCopilot": false
+    },
+    {
+      "name": "financial_summary",
+      "filename": "financial_summary",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "后续",
+      "enableCopilot": false
+    },
+    {
+      "name": "pending_settlement_data_export",
+      "filename": "pending_settlement_data_export",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "后续",
+      "enableCopilot": false
+    },
+    {
+      "name": "fund_advance_record_export",
+      "filename": "fund_advance_record_export",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "后续",
+      "enableCopilot": false
+    },
+    {
+      "name": "market_analysis",
+      "filename": "market_analysis",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "最后",
+      "enableCopilot": false
+    },
+    {
+      "name": "order_loan_records",
+      "filename": "order_loan_records",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "最后",
+      "enableCopilot": false
+    },
+    {
+      "name": "transaction_declaration_download",
+      "filename": "transaction_declaration_download",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "最后",
+      "enableCopilot": false
+    },
+    {
+      "name": "store_marketing_stats",
+      "filename": "store_marketing_stats",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "最后",
+      "enableCopilot": false
+    },
+    {
+      "name": "utils",
+      "filename": "utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "aliexpress_login",
+      "filename": "aliexpress_login",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "alipay_international_withdraw_automation",
+      "filename": "alipay_international_withdraw_automation",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "资金页面"
+    },
+    {
+      "name": "未分类"
+    },
+    {
+      "name": "后续"
+    },
+    {
+      "name": "最后"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [
+    "keyboard==0.13.5"
+  ],
+  "internaldependencies": [
+    "iframe2==24.8.0"
+  ],
+  "selectordependencies": [],
+  "internalautodependencies": [],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {},
+  "terminalTags": "win,macos,linux"
+}

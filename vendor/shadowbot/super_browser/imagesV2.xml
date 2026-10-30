@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository xmlns:x="rpa://imageselector/core">
+  <group name="默认分组">
+    <imageelement name="左侧标签栏_环境管理_v1" sourcetype="screenshot" filepath="resources\images\dc911762-9e0a-4d38-9243-050fea5c6aa8.png" similarity="80" scalingfactor="1" adaptive="True" graying="False" />
+    <imageelement name="图像" sourcetype="screenshot" filepath="resources\images\f19efee4-31fd-49c4-ae04-f5c69cd6d105.png" similarity="80" scalingfactor="1.25" adaptive="True" graying="False" />
+  </group>
+</repository>

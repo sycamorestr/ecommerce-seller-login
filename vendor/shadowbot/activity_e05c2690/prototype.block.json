@@ -1,0 +1,3618 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_e05c2690.main",
+      "statement": "process.invoke_activity",
+      "title": "银行登录扩展",
+      "keywords": "",
+      "description": "该指令集实现了常用银行登录的功能",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/d3/0a/d30af7424ff20bb5719282cece0f0d57.png",
+      "function": "xbot_extensions.activity_e05c2690.main",
+      "helpUrl": null,
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.test",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_e05c2690.test",
+      "helpUrl": null,
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.utils",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_e05c2690.utils",
+      "helpUrl": null,
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.drag",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_e05c2690.drag",
+      "helpUrl": null,
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.xtrace",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_e05c2690.xtrace",
+      "helpUrl": null,
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.orangebank_slider_captcha",
+      "statement": "process.invoke_activity",
+      "title": "平安银行滑动验证码",
+      "keywords": "",
+      "description": "该指令可以通过那些类似于平安银行的加速度验证码",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/puzzle.png",
+      "function": "xbot_extensions.activity_e05c2690.orangebank_slider_captcha",
+      "helpUrl": null,
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎",
+                "value": "影刀引擎",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎(自定义云码Token)",
+                "value": "云码引擎(自定义云码Token)",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景图片元素",
+          "required": false,
+          "tips": "背景图片元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽滑块元素",
+          "required": false,
+          "tips": "拖拽滑块",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "gap_ele",
+          "label": "缺口滑块元素",
+          "required": false,
+          "tips": "缺口滑块元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "drag_distance",
+          "label": "滑块额外偏移距离",
+          "required": false,
+          "tips": "滑块额外偏移距离",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.xztest",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_e05c2690.process1",
+      "helpUrl": null,
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.平安银行登录-流程版",
+      "statement": "process.invoke_activity",
+      "title": "平安银行登录",
+      "keywords": "",
+      "description": "该指令含有验证码的处理，识别验证码会产生额外的费用",
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_e05c2690.process2",
+      "helpUrl": null,
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "识别引擎",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:影刀引擎",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎",
+                "value": "影刀引擎",
+                "Unicode": null
+              },
+              {
+                "display": "自定义云码Token",
+                "value": "自定义云码Token",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "登录账号",
+          "label": "登录账号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "登录密码",
+          "label": "登录密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "云码Token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.中国银行登录-流程版",
+      "statement": "process.invoke_activity",
+      "title": "中国银行登录",
+      "keywords": "",
+      "description": null,
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_e05c2690.process3",
+      "helpUrl": null,
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "登录账号",
+          "label": "登录账号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "登录密码",
+          "label": "登录密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.orangebank_load",
+      "statement": "process.invoke_activity",
+      "title": "平安银行登录",
+      "keywords": "",
+      "description": "通过账号密码登录中国银行",
+      "comment": "在网页对象%web_page%，通过账号%username%登录平安银行",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/4d/bc/4dbc90be47bc5efb66f90093c2c8f8b6.png",
+      "function": "xbot_extensions.activity_e05c2690.orangebank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/743398123545239552",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "drag_distance",
+          "label": "滑块额外偏移距离",
+          "required": false,
+          "tips": "滑块额外偏移距离",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.bankofchina_load",
+      "statement": "process.invoke_activity",
+      "title": "中国银行登录",
+      "keywords": "",
+      "description": "通过账号密码登录中国银行",
+      "comment": "在网页对象%web_page%，使用%username%登录中国银行",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/89/92/8992fd7d983b468e6db90d3fefaacd13.png",
+      "function": "xbot_extensions.activity_e05c2690.bankofchina_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/743393084990758912",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "drag_distance",
+          "label": "滑块额外偏移距离",
+          "required": false,
+          "tips": "滑块额外偏移距离",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.ghibank_load",
+      "statement": "process.invoke_activity",
+      "title": "广东华兴银行登录",
+      "keywords": "",
+      "description": "使用指令登录广东华兴银行，注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码登录广东华兴银行",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/36/9f/369f1fba816e3691d2637145b265be31.png",
+      "function": "xbot_extensions.activity_e05c2690.ghibank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/754974938567413760",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.cdrcbank_load",
+      "statement": "process.invoke_activity",
+      "title": "成都农商银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录成都农商银行个人版网银或企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%中，通过%username%,并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/96/bf/96bf936090f5654c41b473548dbdee44.png",
+      "function": "xbot_extensions.activity_e05c2690.cdrcbank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/754978483018534912",
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "影刀引擎 (付费增值服务)",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              },
+              {
+                "display": "企业网上银行",
+                "value": "企业网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.hkbea_load",
+      "statement": "process.invoke_activity",
+      "title": "东亚银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录东亚银行的个人版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用%load_type%%username%，并使用驱动输入密码登录",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/c1/c9/c1c971f01dd940745d33dde711f94252.png",
+      "function": "xbot_extensions.activity_e05c2690.hkbea_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755040837625589760",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "网银昵称",
+                "value": "网银昵称",
+                "Unicode": null
+              },
+              {
+                "display": "借记卡号",
+                "value": "借记卡号",
+                "Unicode": null
+              },
+              {
+                "display": "账号",
+                "value": "账号",
+                "Unicode": null
+              },
+              {
+                "display": "手机银行账户",
+                "value": "手机银行账户",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "网银昵称/借记卡号/账号/手机号码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:1",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.myccbank_load",
+      "statement": "process.invoke_activity",
+      "title": "绵阳市商业银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录绵阳市商业银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/d0/b2/d0b2a25dc01569a33fba933e9c3ab4c2.png",
+      "function": "xbot_extensions.activity_e05c2690.myccbank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755048608384028672",
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型，个人或者企业网银",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              },
+              {
+                "display": "企业网上银行",
+                "value": "企业网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.zybank_load",
+      "statement": "process.invoke_activity",
+      "title": "中原银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录中原银行的个人版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码登录个人版网银",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/e5/db/e5dbaad4d4e37a77b2e87650c7130c9f.png",
+      "function": "xbot_extensions.activity_e05c2690.zybank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755245389106319360",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.ccbbank_load",
+      "statement": "process.invoke_activity",
+      "title": "中国建设银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录中国建设银行个人版网银",
+      "comment": "在网页对象%web_page%，通过账号%username%登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/d2/83/d283a7cac1b1490eed7a1dc0b496434a.png",
+      "function": "xbot_extensions.activity_e05c2690.ccbbank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755257015350849536",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.shanghaibank_load",
+      "statement": "process.invoke_activity",
+      "title": "上海银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录上海银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/d5/e1/d5e1dab5e73cd3a5e4c5ac0a7320c6e9.png",
+      "function": "xbot_extensions.activity_e05c2690.shanghaibank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755261494643351552",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              },
+              {
+                "display": "企业网上银行",
+                "value": "企业网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "try_count",
+          "label": "验证码识别重试次数",
+          "required": false,
+          "tips": "验证码识别重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.jsbchina_load",
+      "statement": "process.invoke_activity",
+      "title": "江苏银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录江苏银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/30/c1/30c122235e795a5f192a354f028c6fe9.png",
+      "function": "xbot_extensions.activity_e05c2690.jsbchina_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755307695212290048",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              },
+              {
+                "display": "企业网上银行",
+                "value": "企业网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.personalbank_load",
+      "statement": "process.invoke_activity",
+      "title": "兴业银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录兴业银行的个人版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/ed/ea/edea79ac3b65e9664548b48e0447c238.png",
+      "function": "xbot_extensions.activity_e05c2690.personalbank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755305597837991936",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "sign_method",
+          "label": "账号类型",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "登录名",
+                "value": "登录名",
+                "Unicode": null
+              },
+              {
+                "display": "客户号",
+                "value": "客户号",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录/客户号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.suzhoubank_load",
+      "statement": "process.invoke_activity",
+      "title": "苏州银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录苏州银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%web_page%，并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/48/12/4812a15c9f5089a13bf22b18bf99d7a6.png",
+      "function": "xbot_extensions.activity_e05c2690.suzhoubank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755307695212290048",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              },
+              {
+                "display": "企业网上银行",
+                "value": "企业网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.bankofbeijing_load",
+      "statement": "process.invoke_activity",
+      "title": "北京银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录北京银行的个人版或企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用%username%,并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/a0/b1/a0b1e2d42d211100c56d2552df95a20f.png",
+      "function": "xbot_extensions.activity_e05c2690.bankofbeijing_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/754963113228328960",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              },
+              {
+                "display": "企业网上银行",
+                "value": "企业网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "tujian_username",
+          "label": "图鉴账号",
+          "required": false,
+          "tips": "图鉴账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "tujian_password",
+          "label": "图鉴密码",
+          "required": false,
+          "tips": "图鉴密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "drag_distance",
+          "label": "偏移距离",
+          "required": false,
+          "tips": "偏移距离",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "try_count",
+          "label": "滑块验证码重试次数",
+          "required": false,
+          "tips": "滑块验证码重试次数",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.pbank_psbc_load",
+      "statement": "process.invoke_activity",
+      "title": "中国邮政储蓄银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录中国邮政储蓄银行的个人版网银,注:该指令需要下载驱动输入的插",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/37/5d/375de9bed64ee44fe088b7b533a6ff2b.png",
+      "function": "xbot_extensions.activity_e05c2690.pbank_psbc_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755309890169344000",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.njcbbank_load",
+      "statement": "process.invoke_activity",
+      "title": "南京银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录南京银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/0e/8e/0e8e18049e58775c5ffe86bdbbba3d11.png",
+      "function": "xbot_extensions.activity_e05c2690.njcbbank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755321729749610496",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              },
+              {
+                "display": "企业网上银行",
+                "value": "企业网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "账户名",
+          "required": false,
+          "tips": "账户名",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.pbank_load",
+      "statement": "process.invoke_activity",
+      "title": "交通银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录交通银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/82/76/8276927b55fa9bcbdb9d900ac318db66.png",
+      "function": "xbot_extensions.activity_e05c2690.pbank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755324439729135616",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              },
+              {
+                "display": "企业网上银行",
+                "value": "企业网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移距离",
+          "required": false,
+          "tips": "偏移距离",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:1",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.cebbank_load",
+      "statement": "process.invoke_activity",
+      "title": "光大银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%中，通过%username%,并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/93/9d/939da0ade0933c32ac63f55452a8be14.png",
+      "function": "xbot_extensions.activity_e05c2690.cebbank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755348711013310464",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              },
+              {
+                "display": "企业网上银行",
+                "value": "企业网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "operation",
+          "label": "操作员账号",
+          "required": false,
+          "tips": "操作员账号(企业版需要)",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "操作员账号(登录企业版时需要这个账号)"
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.hyzx_load",
+      "statement": "process.invoke_activity",
+      "title": "杭州银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录杭州银行,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码登录杭州银行",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/04/e3/04e36fd125bc1a3a3493395beccb7353.png",
+      "function": "xbot_extensions.activity_e05c2690.hyzx_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755608905592725504",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.enbcb_load",
+      "statement": "process.invoke_activity",
+      "title": "宁波银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录宁波银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在%web_page%中，通过%username%,并使用驱动输入密码登录 %load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/08/a4/08a45adb426781820e6ea366dd641a63.png",
+      "function": "xbot_extensions.activity_e05c2690.enbcb_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755611093507125248",
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              },
+              {
+                "display": "企业网上银行",
+                "value": "企业网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "customer",
+          "label": "客户号",
+          "required": false,
+          "tips": "客户号(企业版登录的时候需要填写客户号)",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "客户号(登录企业版时需要这个账号)"
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "tujian_username",
+          "label": "图鉴账号",
+          "required": false,
+          "tips": "图鉴账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "tujian_password",
+          "label": "图鉴密码",
+          "required": false,
+          "tips": "图鉴密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.ebankhent_load",
+      "statement": "process.invoke_activity",
+      "title": "浦发银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录浦发银行的企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在%web_page%中，通过%username%和%customer%,并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/2a/a5/2aa5f6c184ac09f8bb103a6ac3db5b8d.png",
+      "function": "xbot_extensions.activity_e05c2690.ebankhent_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755617292324311040",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "企业网上银行",
+                "value": "企业网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "customer",
+          "label": "客户号",
+          "required": false,
+          "tips": "客户号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "客户号(登录企业版时需要这个账号)"
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.wzbank_load",
+      "statement": "process.invoke_activity",
+      "title": "温州银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录温州银行的个人版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/db/b9/dbb92e73ca38dd494add60bdf3343870.png",
+      "function": "xbot_extensions.activity_e05c2690.wzbank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755619048116051968",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.ecitic_load",
+      "statement": "process.invoke_activity",
+      "title": "中信银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录中信银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在%web_page%中，通过%username%,并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/00/33/00332717b7bcd77be410c6b64e4f1fff.png",
+      "function": "xbot_extensions.activity_e05c2690.ecitic_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755621183618428928",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              },
+              {
+                "display": "企业网上银行",
+                "value": "企业网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "drag_distance",
+          "label": "额外滑动距离",
+          "required": false,
+          "tips": "额外滑动距离",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "use_hardware_driver_input",
+          "label": "use_hardware_driver_input",
+          "required": false,
+          "tips": "是否关闭硬件驱动",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "是否关闭硬件驱动"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.nper_load",
+      "statement": "process.invoke_activity",
+      "title": "民生银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录民生银行的个人版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/8b/ff/8bff413fff2bb77aaa23527a7fdd0d9b.png",
+      "function": "xbot_extensions.activity_e05c2690.nper_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755623625152524288",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.perbank_czbank_load",
+      "statement": "process.invoke_activity",
+      "title": "浙商银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录浙商银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/58/ac/58ac9dbe26e2b91018c92cbbf4602c48.png",
+      "function": "xbot_extensions.activity_e05c2690.perbank_czbank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755677919771504640",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              },
+              {
+                "display": "企业网上银行",
+                "value": "企业网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.icbcbank_load",
+      "statement": "process.invoke_activity",
+      "title": "工商银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录工商银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码登录%load_type%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/e5/74/e574ef28c2f18540177209d76e6f3489.png",
+      "function": "xbot_extensions.activity_e05c2690.icbcbank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/755682284341420032",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "load_type",
+          "label": "登录类型",
+          "required": false,
+          "tips": "登录类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "个人网上银行",
+                "value": "个人网上银行",
+                "Unicode": null
+              },
+              {
+                "display": "企业网上银行",
+                "value": "企业网上银行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录账号",
+          "required": false,
+          "tips": "登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.测试_jc",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_e05c2690.process4",
+      "helpUrl": null,
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.utils_jc",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_e05c2690.utils_jc",
+      "helpUrl": null,
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.子流程1",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": null,
+      "function": "xbot_extensions.activity_e05c2690.process5",
+      "helpUrl": null,
+      "extension": "银行登录扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.pbank_load_custom",
+      "statement": "process.invoke_activity",
+      "title": "交通银行登录-客户号登录",
+      "keywords": "",
+      "description": "该指令实现了通过客户号登录交通银行的企业版网银,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%user_num%，并使用驱动输入密码登录",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/82/76/8276927b55fa9bcbdb9d900ac318db66.png",
+      "function": "xbot_extensions.activity_e05c2690.pbank_load_custom",
+      "helpUrl": "/yddoc/rpa/zh-CN/960371991330725888",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "custome_num",
+          "label": "客户号",
+          "required": false,
+          "tips": "客户号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "user_num",
+          "label": "用户编号",
+          "required": false,
+          "tips": "用户编号/别名",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "密码",
+          "required": false,
+          "tips": "密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:1",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移距离",
+          "required": false,
+          "tips": "偏移距离",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_e05c2690.zsbank_load",
+      "statement": "process.invoke_activity",
+      "title": "招商银行登录",
+      "keywords": "",
+      "description": "该指令实现了登录招商银行的企业版网银,通过证书登录,注:该指令需要下载驱动输入的插件",
+      "comment": "在网页对象%web_page%，使用账户%username%，并使用驱动输入密码证书登录招商银行企业版网银",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/de/71/de71c835d5e5d8907491fdb4cf2c21ae.png",
+      "function": "xbot_extensions.activity_e05c2690.zsbank_load",
+      "helpUrl": "/yddoc/rpa/zh-CN/1005649698692788224",
+      "extension": "银行登录扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "登录名",
+          "required": false,
+          "tips": "登录名",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请输入证书用户登录名"
+          },
+          "category": "general"
+        },
+        {
+          "name": "login_password",
+          "label": "登录密码",
+          "required": false,
+          "tips": "登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "certificate_password",
+          "label": "证书密码",
+          "required": false,
+          "tips": "证书密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    }
+  ]
+}

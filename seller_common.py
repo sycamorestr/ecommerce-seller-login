@@ -33,6 +33,10 @@ class CredentialsRejected(SellerLoginError):
     pass
 
 
+class DesktopOnlyLogin(SellerLoginError):
+    """The ShadowBot block drives a desktop client and has no web login URL."""
+
+
 @dataclass
 class SellerLoginResult:
     ok: bool

@@ -1,0 +1,209 @@
+{
+  "uuid": "10969ac3-18b9-4c05-bc08-b1bbc8e80a1e",
+  "name": "淘系推广数据获取",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/09/02/0902b69b6e41b8a5aa2f9a1bb9270584.png",
+  "version": "1",
+  "tags": "official",
+  "software": null,
+  "software_title": null,
+  "package_version": 8,
+  "feature_list": [
+    2,
+    8
+  ],
+  "description": "阿里妈妈 各子平台汇总数据获取",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_d91a274e",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "A1 直通车",
+      "filename": "process1",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A 汇总数据获取",
+      "enableCopilot": false
+    },
+    {
+      "name": "C1 直通车_数据列表获取",
+      "filename": "process2",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "C 列表数据获取",
+      "enableCopilot": false
+    },
+    {
+      "name": "D1 平台登录",
+      "filename": "process6",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "D 工具集",
+      "enableCopilot": false
+    },
+    {
+      "name": "A3 引力魔方",
+      "filename": "process7",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A 汇总数据获取",
+      "enableCopilot": false
+    },
+    {
+      "name": "A2 万象台",
+      "filename": "process9",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A 汇总数据获取",
+      "enableCopilot": false
+    },
+    {
+      "name": "utils",
+      "filename": "utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "D 工具集",
+      "enableCopilot": false
+    },
+    {
+      "name": "A4 品销宝",
+      "filename": "process13",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A 汇总数据获取",
+      "enableCopilot": false
+    },
+    {
+      "name": "A5 超级钻展",
+      "filename": "process15",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A 汇总数据获取",
+      "enableCopilot": false
+    },
+    {
+      "name": "A6 淘宝客",
+      "filename": "process17",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A 汇总数据获取",
+      "enableCopilot": false
+    },
+    {
+      "name": "D2 等待文件下载完成",
+      "filename": "process19",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "D 工具集",
+      "enableCopilot": false
+    },
+    {
+      "name": "T SD测试",
+      "filename": "process20",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "A 汇总数据获取"
+    },
+    {
+      "name": "C 列表数据获取"
+    },
+    {
+      "name": "D 工具集"
+    }
+  ],
+  "variables": [
+    {
+      "name": "table_type",
+      "type": "str",
+      "value": "",
+      "kind": "Text"
+    },
+    {
+      "name": "conversion_cycle",
+      "type": "str",
+      "value": "",
+      "kind": "Text"
+    },
+    {
+      "name": "select_time",
+      "type": "str",
+      "value": "",
+      "kind": "Text"
+    },
+    {
+      "name": "table_index",
+      "type": "str",
+      "value": null,
+      "kind": "Text"
+    },
+    {
+      "name": "table_name",
+      "type": "str",
+      "value": "",
+      "kind": "Text"
+    },
+    {
+      "name": "data_dimension",
+      "type": "str",
+      "value": "",
+      "kind": "Text"
+    },
+    {
+      "name": "data_content",
+      "type": "str",
+      "value": "",
+      "kind": "Text"
+    },
+    {
+      "name": "effect_select",
+      "type": "str",
+      "value": "",
+      "kind": "Text"
+    },
+    {
+      "name": "file_name",
+      "type": "str",
+      "value": "",
+      "kind": "Text"
+    }
+  ],
+  "external_dependencies": [
+    "DateTime==5.1",
+    "pytz==2023.3",
+    "zope.interface==6.0"
+  ],
+  "internaldependencies": [
+    "activity_d65f9fd7==26.8.0",
+    "activity_7daccc==23.11.0"
+  ],
+  "selectordependencies": [],
+  "internalautodependencies": [
+    "activity_d65f9fd7"
+  ],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {},
+  "terminalTags": null
+}

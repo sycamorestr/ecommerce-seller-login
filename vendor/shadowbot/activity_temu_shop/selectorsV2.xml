@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository xmlns:x="rpa://selector/core" xmlns:regex="rpa://selector/operator/regex" xmlns:wildcard="rpa://selector/operator/wildcard" xmlns:contains="rpa://selector/operator/contains" xmlns:notContains="rpa://selector/operator/notContains" xmlns:startsWith="rpa://selector/operator/startsWith" xmlns:notStartsWith="rpa://selector/operator/notStartsWith" xmlns:endsWith="rpa://selector/operator/endsWith" xmlns:notEndsWith="rpa://selector/operator/notEndsWith" xmlns:notEquals="rpa://selector/operator/notEquals" xmlns:greaterThan="rpa://selector/operator/greaterThan" xmlns:greaterThanOrEqual="rpa://selector/operator/greaterThanOrEqual" xmlns:lessThan="rpa://selector/operator/lessThan" xmlns:lessThanOrEqual="rpa://selector/operator/lessThanOrEqual">
+  <group id="c91427fd-8fda-40d3-891d-79e94f3f984b" name="跨境卖家中心" type="Web" processName="chrome" icon=".dev\icon\e8bc24f3-bf51-401b-bbe5-13ea86c4930e.png" criteria="https://seller.kuajingmaihuo.com">
+    <selector id="ddb1e023-3f78-4ac9-99d9-aff68a5d97f3" name="bg_elem" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="跨境卖家中心" screenshot=".dev\screenshot\5eb2d30a-7c74-4425-8330-4f3f4f3d0b3e.jpg">
+      <web x:name="div">
+        <optional class="reactmodalportal" index="8" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="bg-captcha-desktop-modal-overlay reactmodal__overlay reactmodal__overlay--after-open" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional tabindex="-1" role="dialog" aria-modal="true" class="bg-captcha-desktop-modal-content reactmodal__content reactmodal__content--after-open" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bg-captcha-desktop-modal-body" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="bg-captcha-wrapper bg-captcha-wrapper-slider" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bg-captcha-source" index="0" index-of-type="0" />
+      </web>
+      <web x:name="img" id="bg-captcha-slider-source">
+        <optional class="bg-captcha-source-image" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector id="4547c3cc-0435-4739-b8d5-7ddb698cd11f" name="dr_elem" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="跨境卖家中心" screenshot=".dev\screenshot\c5e17d8f-85b3-4605-a1b2-2309022e647c.jpg">
+      <web x:name="div">
+        <optional class="reactmodalportal" index="8" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="bg-captcha-desktop-modal-overlay reactmodal__overlay reactmodal__overlay--after-open" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional tabindex="-1" role="dialog" aria-modal="true" class="bg-captcha-desktop-modal-content reactmodal__content reactmodal__content--after-open" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bg-captcha-desktop-modal-body" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="bg-captcha-wrapper bg-captcha-wrapper-slider" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bg-captcha-slider-handlebar" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional class="bg-captcha-slide-btn-wrapper" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div" id="bg-captcha-slider-btn">
+        <optional class="bg-captcha-slide-btn" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector id="c62a81ef-0c9c-4e38-9179-236846fb1653" name="svg_弹窗_关闭" type="simple" framework="chromium" processName="ziniaobrowser" productName="ziniaobrowser" winTitle="卖家中心" screenshot=".dev\screenshot\88099a0f-23b3-49de-b759-9700e61cba88.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="root" index-of-type="0" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="layout_pageContainer__oIxPu" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="layout_bodyContainer__fraMW" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="site-main_homePage__mVcoL" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="site-main_section__MAbVx" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="site-main_siteSection__jHKe4" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="site-main_entrySection__54OMR" index-of-type="3" index="3" />
+      </web>
+      <web x:name="div" contains:class="site-main_btnGroup" index-of-type="1">
+        <optional index="1" />
+      </web>
+      <xpath enable="true">
+        <segment value="//div[contains(@class,&quot;MDL_iconWrapper&quot;)]" />
+      </xpath>
+    </selector>
+    <selector id="0338eda7-e6e0-44b4-933e-1af34c3961f1" name="全球" type="simple" framework="chromium" processName="ziniaobrowser" productName="ziniaobrowser" winTitle="卖家中心" screenshot=".dev\screenshot\1304642c-136b-4dcb-82ad-afe73d04c430.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="root" index-of-type="0" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="layout_pageContainer__oIxPu" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="layout_bodyContainer__fraMW" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="site-main_homePage__mVcoL" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="site-main_section__MAbVx" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="site-main_siteSection__jHKe4" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="site-main_entrySection__54OMR" index-of-type="3" index="3" />
+      </web>
+      <web x:name="div" contains:class="site-main_btnGroup" index-of-type="1">
+        <optional index="1" />
+      </web>
+    </selector>
+    <selector id="40335709-ed9d-4d6c-a138-a53113dcfa7d" name="货款账户" type="simple" framework="chromium" processName="ziniaobrowser" productName="ziniaobrowser" winTitle="资金中心" screenshot=".dev\screenshot\36df1dfb-ad92-4978-aec3-d949bc46e14d.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="sc-container-root" index-of-type="0" index="3" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="bg-shell-theme-mms" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__layoutContainer___2QUzR index-module__minWidthHeight___38maf bg-shell-theme-layoutContainer" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__bodyContainer___1ugLo" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="Symbol(shell_scroll_container)" class="index-module__contentContainer___tuTk8 bg-shell-theme-contentContainer" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="container" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="__qiankun_microapp_wrapper_for_bgb_gmp_labor__" index-of-type="0" data-name="bgb-gmp-labor" data-version="2.8.4" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="root" index-of-type="0" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="components_pageContainer__eWz5g" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-box" class="outerWrapper-1-3-1 outerWrapper-d0-1-3-2" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-box" innerText="货款账户&#xA;币种：美元USD" class="outerWrapper-1-3-1 outerWrapper-d1-1-3-3 index-module__container___1Uepi" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional innerText="货款账户" class="index-module__left___xNEei" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional innerText="货款账户" class="index-module__title___2GsjX" index-of-type="0" index="1" />
+      </web>
+      <web x:name="span" class="xh-highlight">
+        <optional innerText="货款账户" index-of-type="0" index="0" />
+      </web>
+    </selector>
+    <selector id="7dc3e0ac-1f80-4780-ba9a-231518c5bad2" name="下载数据报表" type="simple" framework="chromium" processName="superbrowser" productName="superbrowser" winTitle="对账中心" screenshot=".dev\screenshot\348629ec-15cb-4e5a-b9cb-4bf6035f717e.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-drawer" class="Drawer_outerWrapper_5-117-0 Drawer_right_5-117-0 Drawer_visible_5-117-0" index-of-type="3" index="7" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-drawer-content" class="Drawer_content_5-117-0 Drawer_right_5-117-0 Drawer_visible_5-117-0" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="export-history_exportHistoryBox__xxcIm" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="export-history_exportHistoryContent__QEN8Z" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="export-history_exportHistoryList__cb3dx" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" index-of-type="1">
+        <optional class="export-history_list__5Eto0" index="1" />
+      </web>
+      <web x:name="div" contains:class="export-history_right">
+        <optional index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional innerText="下载数据报表" index-of-type="0" index="0" />
+      </web>
+      <web x:name="button">
+        <optional data-testid="beast-core-button" innerText="下载数据报表" type="button" class="BTN_outerWrapper_5-117-0 BTN_secondary_5-117-0 BTN_medium_5-117-0 BTN_outerWrapperBtn_5-117-0" index-of-type="0" index="0" />
+      </web>
+      <web x:name="span">
+        <optional innerText="下载数据报表" index-of-type="0" index="1" />
+      </web>
+      <xpath enable="true">
+        <segment value="//div[2]/div[contains(@class, &quot;export-history_right&quot;)]//button/span" />
+      </xpath>
+    </selector>
+    <selector id="8daf2d8d-00da-4725-a97e-89173dbaaf38" name="授权勾选框svg" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="卖家中心" screenshot=".dev\screenshot\b3aee89f-29c2-47fd-a91b-b0a23c84b124.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="root" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="activity-login_container__JSr6D" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="activity-login_loginSection__NE1lz" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="activity-login_sellerLogin__Ma+cO" index-of-type="0" index="0" />
+      </web>
+      <web x:name="label" x:selected="false">
+        <optional data-testid="beast-core-checkbox" class="CBX_outerWrapper_5-123-0 CBX_checkbox_5-123-0 CBX_medium_5-123-0" index-of-type="0" data-checked="false" data-indeterminate="false" index="4" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-checkbox-checkIcon" class="CBX_squareInputWrapper_5-123-0" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="CBX_square_5-123-0 CBX_groupDisabled_5-123-0 CBX_hasCheckSquare_5-123-0 CBX_mount_5-123-0" index-of-type="0" index="1" />
+      </web>
+      <web x:name="svg" data-testid="beast-core-icon-check">
+        <optional class="ICN_outerWrapper_5-123-0 ICN_svgIcon_5-123-0 CBX_iconCheck_5-123-0" index-of-type="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" index="0" />
+      </web>
+      <xpath enable="false">
+        <segment value="//*[local-name()=&quot;svg&quot;][@data-testid=&quot;beast-core-icon-check&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="d1dbcff5-d5fb-43a3-88ed-b7ec2b9fa98e" name="授权登录按钮" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="卖家中心" screenshot=".dev\screenshot\89a851fc-6f30-4454-b2ee-b93ad4db6ef8.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="root" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="activity-login_container__JSr6D" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="activity-login_loginSection__NE1lz" index-of-type="1" index="1" />
+      </web>
+      <web x:name="button" data-testid="beast-core-button">
+        <optional innerText="授权登录" type="button" class="BTN_outerWrapper_5-123-0 BTN_primary_5-123-0 BTN_large_5-123-0 BTN_outerWrapperBtn_5-123-0" index-of-type="0" data-tracking-id="R0kOSogzTtxKFqqu" index="1" />
+      </web>
+      <xpath enable="false">
+        <segment value="//button[@data-testid=&quot;beast-core-button&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="43e6c21d-9254-41e5-bc35-214acf5338bd" name="同意协议svg" type="simple" framework="chromium" selectorOringin="Inspect" processName="" productName="" winTitle="" screenshot=".dev\screenshot\53193c3f-58ff-4b9f-91a9-8b85d201104d.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="root" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="activity-login_container__JSr6D" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="activity-login_loginSection__NE1lz" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="activity-login_sellerLogin__Ma+cO" index-of-type="0" index="0" />
+      </web>
+      <web x:name="label" x:selected="false">
+        <optional data-testid="beast-core-checkbox" class="CBX_outerWrapper_5-123-0 CBX_checkbox_5-123-0 CBX_medium_5-123-0 CBX_active_5-123-0" index-of-type="0" data-checked="true" data-indeterminate="false" index="4" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-checkbox-checkIcon" class="CBX_squareInputWrapper_5-123-0" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="CBX_square_5-123-0 CBX_groupDisabled_5-123-0 CBX_hasCheckSquare_5-123-0 CBX_active_5-123-0 CBX_mount_5-123-0" index-of-type="0" index="1" />
+      </web>
+      <web x:name="svg" data-testid="beast-core-icon-check">
+        <optional class="ICN_outerWrapper_5-123-0 ICN_svgIcon_5-123-0 CBX_iconCheck_5-123-0 CBX_active_5-123-0" index-of-type="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" index="0" />
+      </web>
+      <xpath enable="true">
+        <segment value="//*[local-name()=&quot;svg&quot;][@data-testid=&quot;beast-core-icon-check&quot;]" />
+      </xpath>
+      <semantic status="disabled" image="" desc="" />
+    </selector>
+    <selector id="31963b86-185e-4e76-9926-1d34b20f513f" name="同意协议后按钮" type="simple" framework="chromium" selectorOringin="Inspect" processName="" productName="" winTitle="" screenshot=".dev\screenshot\be04d894-5131-4cdd-bcdb-ec005da09523.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="root" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="activity-login_container__JSr6D" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="activity-login_loginSection__NE1lz" index-of-type="1" index="1" />
+      </web>
+      <web x:name="button">
+        <optional data-testid="beast-core-button" innerText="授权登录" type="button" class="BTN_outerWrapper_5-123-0 BTN_primary_5-123-0 BTN_large_5-123-0 BTN_outerWrapperBtn_5-123-0" index-of-type="0" data-tracking-id="R0kOSogzTtxKFqqu" index="1" />
+      </web>
+      <web x:name="span" innerText="授权登录">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <xpath enable="true">
+        <segment value="//button/span[.=&quot;授权登录&quot;]" />
+      </xpath>
+      <semantic status="disabled" image="" desc="" />
+    </selector>
+  </group>
+  <group id="06510c1d-d621-4e46-b70e-2002a9ca79c8" name="拼多多temu" type="Win32" processName="superbrowser" icon=".dev\icon\5ce8f9a9-2a74-49bc-8f56-f78c2d75b6dd.png" criteria="">
+    <selector id="d2580542-21a1-4b20-8cc2-f4ba648fa343" name="确定" type="simple" framework="win32" processName="superbrowser" productName="" winTitle="拼多多temu" screenshot=".dev\screenshot\02c81d91-15c4-4a13-a8e2-678d8d397693.jpg">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="拼多多temu" app="superbrowser">
+        <optional />
+      </wnd>
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="下载保存地址非当前环境指定保存地址">
+        <optional />
+      </wnd>
+      <uia x:name="Pane">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Pane">
+        <optional index="0" />
+      </uia>
+      <uia x:name="Pane">
+        <optional index="2" />
+      </uia>
+      <uia x:name="Pane">
+        <optional index="1" />
+      </uia>
+      <uia x:name="Button" uia-name="确定">
+        <optional index="1" />
+      </uia>
+    </selector>
+  </group>
+  <group id="7e350c47-f11a-4d88-8a42-b77bf9fc0cff" name="首页" type="Web" processName="ziniaobrowser" icon=".dev\icon\4c3c08ce-6527-4923-b291-39427bd6963e.png" criteria="https://agentseller.temu.com">
+    <selector id="99d2af9d-d726-4482-b1b6-8b24375a606b" name="HOTU Global Sho..." type="simple" framework="chromium" processName="ziniaobrowser" productName="ziniaobrowser" winTitle="首页" screenshot=".dev\screenshot\75170e9c-38e5-47dc-9f59-92a1690c048a.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="sca-container-root" index-of-type="0" index="3" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="bg-shell-theme-mms" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__layoutContainer___1Ew0- index-module__minWidthHeight___1Gjc4 bg-shell-theme-layoutContainer" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__headerContainer___D8YIx bg-shell-theme-mms-header" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__headerBox___312kB" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__content___1TM01 bg-shell-theme-mms-content" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__userInfo___31u4T bg-shell-theme-userInfo" index-of-type="2" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="account-info_userInfo__BtLbD" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" contains:class="accountInfo">
+        <optional innerText="HOTU Global Shopping" index-of-type="4" index="6" />
+      </web>
+    </selector>
+    <selector id="30aff7b3-ee45-4aed-81ce-d0ef6d35d154" name="全部消息_关闭按钮" type="simple" framework="chromium" processName="ziniaobrowser" productName="ziniaobrowser" winTitle="首页" screenshot=".dev\screenshot\3a4d339a-718d-4b08-8a4b-7cce977238b9.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-portal" class="PT_outerWrapper_5-120-1 PP_outerWrapper_5-120-1 PT_popover_5-120-1 PT_portalBottom_5-120-1 PT_portalWithArrow_5-120-1 PT_inCustom_5-120-1 PP_popover_5-120-1 PP_popoverWithTitle_5-120-1" index-of-type="3" index="7" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-portal-main" class="PT_portalMain_5-120-1 PP_popoverMain_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="PP_popoverTitle_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="new-bell_header__sABhU" index-of-type="0" index="0" />
+      </web>
+      <web x:name="svg" data-testid="beast-core-icon-close">
+        <optional class="ICN_outerWrapper_5-120-1 ICN_svgIcon_5-120-1" index-of-type="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" index="1" />
+      </web>
+      <xpath enable="true">
+        <segment value="//div/*[local-name()=&quot;svg&quot;][@data-testid=&quot;beast-core-icon-close&quot;]" />
+      </xpath>
+    </selector>
+    <selector id="67bcc4de-4e1c-4f61-ae1e-bfe7f979c25e" name="站点切换" type="simple" framework="chromium" processName="ziniaobrowser" productName="ziniaobrowser" winTitle="首页" screenshot=".dev\screenshot\80cc9d50-98a6-45c7-9e63-deb4c02f1146.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="sca-container-root" index-of-type="0" index="3" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="bg-shell-theme-mms" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__layoutContainer___1Ew0- index-module__minWidthHeight___1Gjc4 bg-shell-theme-layoutContainer" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__headerContainer___D8YIx bg-shell-theme-mms-header" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__headerBox___312kB" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__sysInfo___2t9ut bg-shell-theme-mms-sysInfo" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" contains:class="layout-main">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="2" index="3" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-select" class="ST_outerWrapper_5-120-1 ST_medium_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-select-header" class="ST_head_5-120-1" index-of-type="0" data-status="normal" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="ST_selectValueSingle_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" contains:class="head">
+        <optional data-testid="beast-core-input" index-of-type="0" data-status="normal" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="IPT_reunitBlock_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="IPT_inputWrapper_5-120-1 ST_inputWrapper_5-120-1 ST_inputPadding_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="IPT_inputBlock_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="IPT_inputBlockCell_5-120-1 ST_inputBlockCell_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="input">
+        <optional type="text" data-testid="beast-core-select-htmlInput" class="IPT_input_5-120-1" index-of-type="0" value="全球（除美国,欧区）" index="0" />
+      </web>
+    </selector>
+    <selector id="a628bc0f-dbd2-4b97-a19e-35bfe233ed90" name="结算数据" type="simple" framework="chromium" processName="ziniaobrowser" productName="ziniaobrowser" winTitle="结算数据" screenshot=".dev\screenshot\40426c18-3c22-4343-8d77-2db550c0f833.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="sca-container-root" index-of-type="0" index="3" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="bg-shell-theme-mms" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__layoutContainer___1Ew0- index-module__minWidthHeight___1Gjc4 bg-shell-theme-layoutContainer" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__bodyContainer___2z-nb" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="Symbol(shell_scroll_container)" class="index-module__contentContainer___2y5p8 bg-shell-theme-contentContainer" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="container" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="__microapp_wrapper_for_bgb_sca_settlement__" index-of-type="0" data-name="bgb-sca-settlement" data-version="1.0.0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="root" index-of-type="0" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="components_pageContainer__eWz5g" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-box" class="outerWrapper-1-3-1 outerWrapper-d0-1-3-2" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-box" class="outerWrapper-1-3-1 outerWrapper-d1-1-3-3" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-box" class="outerWrapper-1-3-1 outerWrapper-d2-1-3-4 index-module__container___2dn1k" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional innerText="结算数据" class="index-module__left___2KI0_" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional innerText="结算数据" class="index-module__title___2F-jJ" index-of-type="0" index="1" />
+      </web>
+      <web x:name="span">
+        <optional innerText="结算数据" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" data-testid="beast-core-box">
+        <optional innerText="结算数据" class="outerWrapper-1-3-1 outerWrapper-d3-1-3-5" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" data-testid="beast-core-box">
+        <optional innerText="结算数据" class="outerWrapper-1-3-1 outerWrapper-d4-1-3-6" index-of-type="0" index="0" />
+      </web>
+    </selector>
+    <selector id="20adc258-9b63-4073-9f7c-c8101d688892" name="日期框" type="simple" framework="chromium" processName="ziniaobrowser" productName="ziniaobrowser" winTitle="历史大盘数据" screenshot=".dev\screenshot\f89a0755-260f-44ca-81e3-d218530923d7.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-portal" class="PT_outerWrapper_5-120-1 PP_outerWrapper_5-120-1 PT_dropdown_5-120-1 PT_portalTopLeft_5-120-1 PT_inCustom_5-120-1 PP_dropdown_5-120-1" index-of-type="3" index="8" />
+      </web>
+      <web x:name="div" contains:class="portalMain">
+        <optional data-testid="beast-core-portal-main" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-testid="beast-core-rangePicker-dropdown-contentRoot" class="RPR_outerPickerWrapper_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="section">
+        <optional class="RPR_contentPickerWrapper_5-120-1" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" index-of-type="0">
+        <optional class="RPR_tableWrapper_5-120-1" index="0" />
+      </web>
+    </selector>
+    <selector id="df1b4722-e0e7-472c-bfed-ce104b8440a0" name="申报价格表格" type="simple" framework="chromium" processName="ziniaobrowser" productName="ziniaobrowser" winTitle="上新生命周期管理" screenshot=".dev\screenshot\2621c957-efcd-47e7-878b-06eb59d4a273.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-drawer" class="Drawer_outerWrapper_5-120-1 Drawer_right_5-120-1 Drawer_visible_5-120-1" index-of-type="4" index="8" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-drawer-content" class="Drawer_content_5-120-1 Drawer_right_5-120-1 Drawer_visible_5-120-1" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="bgb-pc-show-drawer-body" class="index-module__drawer-body___1X-rI" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="bgb-pc-show-drawer-content" class="index-module__content___149Ax" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-box" class="outerWrapper-1-3-1 outerWrapper-d51-1-3-53" index-of-type="1" index="1" />
+      </web>
+      <web x:name="form">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-table" class="TB_outerWrapper_5-120-1 TB_bordered_5-120-1 TB_notTreeStriped_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="TB_inner_5-120-1 TB_scrollPositionBoth_5-120-1 TB_innerOffFixedAndScrollX_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="TB_innerMiddle_5-120-1 TB_stickyTable_5-120-1 TB_scrollY_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-table-middle-body" class="TB_body_5-120-1" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="table">
+        <optional class="TB_tableWrapper_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="tbody">
+        <optional data-testid="beast-core-table-middle-tbody" index-of-type="0" index="1" />
+      </web>
+      <web x:name="tr" x:selected="false">
+        <optional data-testid="beast-core-table-body-tr" class="TB_tr_5-120-1 TB_whiteTr_5-120-1" index-of-type="17" index="17" />
+      </web>
+      <web x:name="td" x:selected="false">
+        <optional data-testid="beast-core-table-td" class="TB_td_5-120-1 TB_cellTextAlignRight_5-120-1 TB_cellVerticalAlignMiddle_5-120-1" index-of-type="4" index="4" />
+      </web>
+      <web x:name="div" x:selected="false" data-testid="beast-core-box" contains:class="outerWrapper-d621-1-3-623">
+        <optional index-of-type="0" index="0" />
+      </web>
+    </selector>
+    <selector id="2e05a0fe-c030-4688-aaec-1bc698d10812" name="扣费周期" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="EPR费用管理" screenshot=".dev\screenshot\121edfe3-f6fe-44c5-98db-f16809e9d899.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="sca-container-root" index-of-type="0" index="3" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="bg-shell-theme-mms" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__layoutContainer___2P3pc index-module__minWidthHeight___1ErsY bg-shell-theme-layoutContainer" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__bodyContainer___zzDth" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="Symbol(shell_scroll_container)" class="index-module__contentContainer___1hKXB bg-shell-theme-contentContainer" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="container" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="__microapp_wrapper_for_bgb_sca_settlement__" index-of-type="0" data-name="bgb-sca-settlement" data-version="1.0.0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="root" index-of-type="0" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="components_pageContainer__eWz5g" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-tab" class="TAB_outerWrapper_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="TAB_content_5-120-1" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="epr-fee_content__GefVV" index-of-type="2" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__twfContainer___2j5P8 pc-easy-twf" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__wrap___1TkSG" index-of-type="0" index="0" />
+      </web>
+      <web x:name="form">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__contentWrap___Eclu5" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-grid-row" class="Grid_row_5-120-1 Grid_rowHorizontal_5-120-1 Grid_rowJustifyStart_5-120-1 Grid_rowWrap_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-grid-col-wrapper" innerText="扣费费用周期" class="Grid_col_5-120-1 Grid_span20_5-120-1" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" id="billingCycle">
+        <optional data-testid="beast-core-form-item" innerText="扣费费用周期" class="Grid_row_5-120-1 Grid_rowHorizontal_5-120-1 Grid_rowJustifyStart_5-120-1 Form_item_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-grid-col-wrapper" class="Grid_col_5-120-1 Grid_colNotFixed_5-120-1 Form_itemWrapper_5-120-1" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-grid-row" class="Grid_row_5-120-1 Grid_rowHorizontal_5-120-1 Grid_rowJustifyStart_5-120-1 Form_itemContent_5-120-1 Form_itemContentCenter_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-grid-col-wrapper" class="Grid_col_5-120-1 Form_itemContentBody_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-monthPicker-input" class="IPT_outerWrapper_5-120-1 IPT_medium_5-120-1" index-of-type="0" data-status="normal" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="IPT_reunitBlock_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" contains:class="calendar">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="IPT_inputBlock_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="IPT_inputBlockCell_5-120-1" index-of-type="0" index="0" />
+      </web>
+      <web x:name="input">
+        <optional type="text" data-testid="beast-core-monthPicker-htmlInput" class="IPT_input_5-120-1 MPR_input_5-120-1" index-of-type="0" placeholder="选择月份" index="0" />
+      </web>
+    </selector>
+    <selector id="5b931de8-5641-4de7-a621-3632770e339c" name="时间块元素" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="EPR费用管理" screenshot=".dev\screenshot\14f87dd5-7043-4e26-9ce7-268c58e8e2f5.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional data-testid="beast-core-portal" class="PT_outerWrapper_5-120-1 PP_outerWrapper_5-120-1 PT_dropdown_5-120-1 PT_portalBottomLeft_5-120-1 PT_inCustom_5-120-1 PP_dropdown_5-120-1" index-of-type="6" index="11" />
+      </web>
+      <web x:name="div" contains:class="portalMain">
+        <optional data-testid="beast-core-portal-main" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-testid="beast-core-monthPicker-dropdown-contentRoot" index-of-type="0" index="0" />
+      </web>
+    </selector>
+  </group>
+  <group id="e497ef06-8b9a-459c-b14e-5b5ce1b5f04e" name="登录" type="Web" processName="chrome" icon=".dev\icon\8e24c71c-b0b9-4955-83cd-1dcc5e66482c.png" criteria="https://ads.temu.com">
+    <selector id="6a83f48d-6fcd-4300-bf68-444ef7666466" name="登录" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="登录" screenshot=".dev\screenshot\97e3ec89-0829-4dc7-b6e7-02d0ffa69785.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="main" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="_2cGXnzPW" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="A7TP-zK8" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="_2oe4S9-U" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="_3pgDTG3i" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" innerText="登录">
+        <optional role="button" class="_3yOxLjm0 _2pgGmJ7w Hwmr9_ab _24MDIL-E" index-of-type="1" tabindex="-1" index="1" />
+      </web>
+      <web x:name="span" class="_2ISpB3A2">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <xpath enable="true">
+        <segment value="(//div[normalize-space(.)=&quot;登录&quot;]/span[@class=&quot;_2ISpB3A2&quot;])[1]" />
+      </xpath>
+    </selector>
+  </group>
+  <group id="3fba1b72-7b32-4ef4-b786-ab2b6267fb9e" name="订单导出" type="Web" processName="ziniaobrowser" icon=".dev\icon\b51edd0b-7489-4438-813b-4001292c93b1.png" criteria="https://agentseller-eu.temu.com">
+    <selector id="aab2f2a0-41e5-4a99-a9e7-7e55375474d2" name="过滤" type="simple" framework="chromium" processName="ziniaobrowser" productName="ziniaobrowser" winTitle="首页" screenshot=".dev\screenshot\5d8b4067-9401-41c9-b200-04d6e3256f5a.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="sca-container-root" index-of-type="0" index="3" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="bg-shell-theme-mms" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__layoutContainer___2erAp index-module__minWidthHeight___3uONP bg-shell-theme-layoutContainer" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__bodyContainer___LRSyf" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__sidebarContainer___3EmIn bg-shell-theme-sidebarContainer" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="index-module__sidebarBox___3TFsp bg-shell-theme-mms-sidebarBox" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" contains:class="menuBox">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="index-module__menu___3hPrK bg-shell-theme-menu bg-shell-theme-menu-mms" index-of-type="3" index="3" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="a" data-report-click-text="商品管理">
+        <optional class="index-module__item___3Qogx index-module__highlight___12eXW bg-shell-theme-mms-menu-item bg-shell-theme-mms-menu-item-unfold" index-of-type="0" data-tracking-id="custom-nJ1BCjh_vbPBGvEt" index="0" />
+      </web>
+      <web x:name="div" contains:class="title">
+        <optional index-of-type="1" index="1" />
+      </web>
+    </selector>
+  </group>
+</repository>

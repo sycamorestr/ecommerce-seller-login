@@ -1,0 +1,2571 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_aliexpress.main",
+      "statement": "process.invoke_activity",
+      "title": "速卖通商家后台",
+      "keywords": "",
+      "description": "该指令实现对速卖通商家后台的资金管理页面的订单退款记录，收支记录，资金中心数据汇总，待结算金额数据明细，收支明细，垫资记录等的操作，对交易中的批量订单下载的操作，对生意参谋中核心指标，实时概况数据汇总，商品支付排行榜数据下载，店铺流量来源数据下载，市场分析等的操作",
+      "comment": "该指令实现对速卖通商家后台的资金管理页面的订单退款记录，收支记录，资金中心数据汇总，待结算金额数据明细，收支明细，垫资记录等的操作，对交易中的批量订单下载的操作，对生意参谋中核心指标，实时概况数据汇总，商品支付排行榜数据下载，店铺流量来源数据下载，市场分析等的操作",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/e1/1c/e11ce8a3133c358384c4e82970f61e43.png",
+      "function": "xbot_extensions.activity_aliexpress.main",
+      "helpUrl": null,
+      "extension": "速卖通商家后台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.report_download",
+      "statement": "process.invoke_activity",
+      "title": "商品支付排行榜数据下载",
+      "keywords": "",
+      "description": "「企业版专享」速卖通商家后台，通过多维度条件筛选（时间范围、APP类型、商品类目、业务模式、商品类型），智能查询并导出商品排行数据到Excel文件，为电商运营提供数据化决策支持。",
+      "comment": "在网页对象%web_page%，输入筛选的日期%date_range%，选择对应的APP方式%app_type%，商品名称%product_name%，业务模式%business_model%，商品类型%product_type%，最终将下载的文件路径输出%file_path%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.report_download",
+      "helpUrl": "/yddoc/rpa/zh-CN/854625195098611712",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "date_range",
+          "label": "日期范围",
+          "required": false,
+          "tips": "日期范围",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "最近7天",
+                "value": "最近7天",
+                "Unicode": null
+              },
+              {
+                "display": "最近1天",
+                "value": "最近1天",
+                "Unicode": null
+              },
+              {
+                "display": "最近30天",
+                "value": "最近30天",
+                "Unicode": null
+              },
+              {
+                "display": "自然日",
+                "value": "自然日",
+                "Unicode": null
+              },
+              {
+                "display": "自然周",
+                "value": "自然周",
+                "Unicode": null
+              },
+              {
+                "display": "自然月",
+                "value": "自然月",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "app_type",
+          "label": "APP类型",
+          "required": false,
+          "tips": "APP类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "所有平台",
+                "value": "所有平台",
+                "Unicode": null
+              },
+              {
+                "display": "APP",
+                "value": "APP",
+                "Unicode": null
+              },
+              {
+                "display": "非APP",
+                "value": "非APP",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "product_name",
+          "label": "商品名称",
+          "required": false,
+          "tips": "商品名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "所有类目",
+                "value": "所有类目",
+                "Unicode": null
+              },
+              {
+                "display": "玩具",
+                "value": "玩具",
+                "Unicode": null
+              },
+              {
+                "display": "鞋子",
+                "value": "鞋子",
+                "Unicode": null
+              },
+              {
+                "display": "母婴（含儿童服装/童鞋/儿童用品）",
+                "value": "母婴（含儿童服装/童鞋/儿童用品）",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "business_model",
+          "label": "业务模式",
+          "required": false,
+          "tips": "业务模式",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部业务模式",
+                "value": "全部业务模式",
+                "Unicode": null
+              },
+              {
+                "display": "可加入半托管",
+                "value": "可加入半托管",
+                "Unicode": null
+              },
+              {
+                "display": "已加入半托管",
+                "value": "已加入半托管",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "product_type",
+          "label": "商品类型",
+          "required": false,
+          "tips": "商品类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部商品",
+                "value": "全部商品",
+                "Unicode": null
+              },
+              {
+                "display": "30天内上架新品",
+                "value": "30天内上架新品",
+                "Unicode": null
+              },
+              {
+                "display": "品质商品",
+                "value": "品质商品",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "save_directory",
+          "label": "文件夹路径",
+          "required": true,
+          "tips": "文件保存路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件夹路径 例如：C:\\xxx\\xxx\\xxx\\",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": true,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "必须包含英文扩展名后缀"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "文件保存至",
+          "tips": "文件夹路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.data_summary",
+      "statement": "process.invoke_activity",
+      "title": "实时概况数据汇总",
+      "keywords": "",
+      "description": "「企业版专享」速卖通商家后台店铺数据，智能抓取并解析三大核心经营数据：店铺基本信息（名称和行业分类）、实时运营概况（支付金额、访客数、浏览量等关键指标的数值、排名和占比），以及近30天的业绩层级数据（支付金额排行和结果），为电商运营提供全面的数据支持和决策依据。",
+      "comment": "待网页对象%web_page%,店铺信息数据输出%shop_info_dict%，实时概况信息数据输出%realtime_overview_dict%，店铺层级信息数据输出%shop_level_dict%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.data_summary",
+      "helpUrl": "/yddoc/rpa/zh-CN/854631850725851136",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "shop_info_dict",
+          "label": "店铺信息",
+          "tips": "店铺数据字典",
+          "name": "shop_info_dict",
+          "type": "dict"
+        },
+        {
+          "id": "realtime_overview_dict",
+          "label": "实时概况信息",
+          "tips": "实时概况数据字典",
+          "name": "realtime_overview_dict",
+          "type": "dict"
+        },
+        {
+          "id": "shop_level_dict",
+          "label": "店铺层级信息",
+          "tips": "店铺层级字典",
+          "name": "shop_level_dict",
+          "type": "dict"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.order_refund",
+      "statement": "process.invoke_activity",
+      "title": "资金结算报表-订单退款记录",
+      "keywords": "",
+      "description": "「企业版专享」速卖通商家后台，导航到资金管理模块，筛选特定的订单退款记录，并将数据导出为本地文件。",
+      "comment": "在网页对象%web_page%中，根据时间选择订单范围%start_date%%end_date%，币种类型，，订单类型%order_type%导出数据明细%file_path%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.order_refund",
+      "helpUrl": "/yddoc/rpa/zh-CN/854635031212048384",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "order_type",
+          "label": "订单范围",
+          "required": false,
+          "tips": "订单范围",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部订单范围",
+                "value": "全部订单范围",
+                "Unicode": null
+              },
+              {
+                "display": "非俄罗斯订单",
+                "value": "非俄罗斯订单",
+                "Unicode": null
+              },
+              {
+                "display": "俄罗斯订单",
+                "value": "俄罗斯订单",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "account_type",
+          "label": "币种类型",
+          "required": false,
+          "tips": "币种",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "USD账户",
+                "value": "USD账户",
+                "Unicode": null
+              },
+              {
+                "display": "CNY账户",
+                "value": "CNY账户",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_date",
+          "label": "开始时间",
+          "required": true,
+          "tips": "开始日期",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "开始日期 格式xxxx-xx-xx 例如：2025-05-01"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_date",
+          "label": "结束时间",
+          "required": true,
+          "tips": "结束日期",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "结束日期 格式xxxx-xx-xx 例如：2025-05-01"
+          },
+          "category": "general"
+        },
+        {
+          "name": "save_directory",
+          "label": "文件夹路径",
+          "required": true,
+          "tips": "文件保存路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件夹路径 例如：C:\\xxxx\\xxx\\xxxxx\\",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": true,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "必须包含英文扩展名后缀"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "文件保存至",
+          "tips": "文件输出路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.batch_order_export",
+      "statement": "process.invoke_activity",
+      "title": "订单批量导出",
+      "keywords": "",
+      "description": "「企业版专享」实现对速卖通商家后台根据订单状态，订单类型，日期筛选，开始和结束日期的选择后的订单批量导出",
+      "comment": "在网页对象中%web_page%，选择订单状态%order_status_path%，订单类型%business_model_path%，日期筛选%filter_date%，开始%start_date%和结束%end_date%日期，输入文件夹路径%save_directory%，下载文件路径到%file_path%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.batch_order_export",
+      "helpUrl": "/yddoc/rpa/zh-CN/857507186963021824",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "order_status_path",
+          "label": "订单状态",
+          "required": false,
+          "tips": "订单状态",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "所有订单状态",
+                "value": "所有订单状态",
+                "Unicode": null
+              },
+              {
+                "display": "等待买家付款",
+                "value": "等待买家付款",
+                "Unicode": null
+              },
+              {
+                "display": "等待发货",
+                "value": "等待发货",
+                "Unicode": null
+              },
+              {
+                "display": "您已部分发货",
+                "value": "您已部分发货",
+                "Unicode": null
+              },
+              {
+                "display": "等待买家收货",
+                "value": "等待买家收货",
+                "Unicode": null
+              },
+              {
+                "display": "交易结束",
+                "value": "交易结束",
+                "Unicode": null
+              },
+              {
+                "display": "冻结中",
+                "value": "冻结中",
+                "Unicode": null
+              },
+              {
+                "display": "付款处理中",
+                "value": "付款处理中",
+                "Unicode": null
+              },
+              {
+                "display": "等待您确认金额",
+                "value": "等待您确认金额",
+                "Unicode": null
+              },
+              {
+                "display": "买家申请取消订单",
+                "value": "买家申请取消订单",
+                "Unicode": null
+              },
+              {
+                "display": "用户待补充信息",
+                "value": "用户待补充信息",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "business_model_path",
+          "label": "订单类型",
+          "required": false,
+          "tips": "订单业务模式",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "所有订单类型",
+                "value": "所有订单类型",
+                "Unicode": null
+              },
+              {
+                "display": "半托管订单",
+                "value": "半托管订单",
+                "Unicode": null
+              },
+              {
+                "display": "非半托管订单",
+                "value": "非半托管订单",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "filter_date",
+          "label": "筛选日期",
+          "required": false,
+          "tips": "筛选日期",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "下单时间",
+                "value": "下单时间",
+                "Unicode": null
+              },
+              {
+                "display": "付款时间",
+                "value": "付款时间",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "reason_download",
+          "label": "下载原因",
+          "required": false,
+          "tips": "下载原因",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "对账",
+                "value": "对账",
+                "Unicode": null
+              },
+              {
+                "display": "发货",
+                "value": "发货",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_date",
+          "label": "开始时间",
+          "required": true,
+          "tips": "开始日期 格式xxxx-xx-xx 例如（2025-08-20）",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "开始日期 格式xxxx-xx-xx 例如（2025-08-20）"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_date",
+          "label": "结束时间",
+          "required": true,
+          "tips": "结束日期 格式xxxx-xx-xx 例如（2025-08-20）",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入例如（2025-08-20）"
+          },
+          "category": "general"
+        },
+        {
+          "name": "save_directory",
+          "label": "文件夹路径",
+          "required": true,
+          "tips": "保存文件夹 ",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输出路径 例如C:\\Users\\...\\",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": true,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件名称，必须加上文件后缀名"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "文件输出路径",
+          "tips": "文件输出路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.core_metrics_download",
+      "statement": "process.invoke_activity",
+      "title": "速卖通-核心指标下载",
+      "keywords": "",
+      "description": "「企业版专享」实现对速卖通数据概览中核心指标支付金额，税费，支付买家数，支付转化率，客单价，支付老买家占比，支付订单数，支付件数的明细数据下载",
+      "comment": "网页对象%web_page%，选择日期%date_type%，文件夹路径%save_directory%，输出文件路径%file_path%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.core_metrics_download",
+      "helpUrl": "/yddoc/rpa/zh-CN/857520218310057984",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "date_type",
+          "label": "日期选择",
+          "required": false,
+          "tips": "输入选择的时期参数",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "最近一天",
+                "value": "最近一天",
+                "Unicode": null
+              },
+              {
+                "display": "最近7天",
+                "value": "最近7天",
+                "Unicode": null
+              },
+              {
+                "display": "最近30天",
+                "value": "最近30天",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "save_directory",
+          "label": "文件夹路径",
+          "required": true,
+          "tips": "文件保存路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件夹路径 例如：C:\\Users\\xxx\\xxx\\",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": true,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "必须包含英文扩展名后缀"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "文件保存至",
+          "tips": "文件的输出路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.export_income_expense_details",
+      "statement": "process.invoke_activity",
+      "title": "速卖通-收支明细（全部费用项）",
+      "keywords": "",
+      "description": "「企业版专享」速卖通商家后台，通过多条件筛选（时间范围、费用类型），智能查询并导出收支明细数据到Excel文件，为电商财务管理和对账提供一站式解决方案。定时下载收支记录明细和收支概览报表",
+      "comment": "在网页对象%web_page%，输入开始和结束日期%start_date%%end_date%，选择费用项类型，输入文件夹路径%save_directory%和要命名的文件名称%file_name%，输出的重命名后的文件路径%file_path%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.export_income_expense_details",
+      "helpUrl": "/yddoc/rpa/zh-CN/857520635042496512",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_date",
+          "label": "开始日期",
+          "required": true,
+          "tips": "开始时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "开始日期 格式xxxx-xx-xx 例如2025-04-30"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_date",
+          "label": "结束日期",
+          "required": true,
+          "tips": "结束时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "结束日期 格式xxxx-xx-xx 例如2025-04-30"
+          },
+          "category": "general"
+        },
+        {
+          "name": "save_directory",
+          "label": "文件夹路径",
+          "required": true,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件夹路径  例如：C:\\Users\\xxxx\\",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": true,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "必须包含英文扩展名后缀"
+          },
+          "category": "general"
+        },
+        {
+          "name": "expense_type",
+          "label": "费用项类型",
+          "required": false,
+          "tips": "费用类型的选择",
+          "type": "list",
+          "default": "13:[]",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入费用项类型例如 ['佣金'，'运费退款,'赔付商家']"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "文件保存至",
+          "tips": "文件保存路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.traffic_source_data_download",
+      "statement": "process.invoke_activity",
+      "title": "店铺流量来源数据下载",
+      "keywords": "",
+      "description": "「企业版专享」速卖通商家后台，智能选择流量来源渠道（如APP、PC端、移动网页等）、访客类型（新访客或老访客）和时间范围（最近7天、30天等），然后一键导出详细的流量统计报表到本地Excel文件，为电商运营提供数据支撑和决策依据。",
+      "comment": "待操作网页对象%web_page%，选择APP的类型%app_type%，选择访客类型%visit_type%，选择时间类型%time_type%等待加载之后到处汇总数据到本地%file_path%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.traffic_source_data_download",
+      "helpUrl": "/yddoc/rpa/zh-CN/857529341137727488",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "app_type",
+          "label": "APP类型",
+          "required": false,
+          "tips": "APP类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "APP",
+                "value": "APP",
+                "Unicode": null
+              },
+              {
+                "display": "非APP",
+                "value": "非APP",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "visit_type",
+          "label": "访客类型",
+          "required": false,
+          "tips": "访客类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部访客",
+                "value": "全部访客",
+                "Unicode": null
+              },
+              {
+                "display": "新访客",
+                "value": "新访客",
+                "Unicode": null
+              },
+              {
+                "display": "老访客",
+                "value": "老访客",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "time_type",
+          "label": "时间类型",
+          "required": false,
+          "tips": "时间类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "实时数据",
+                "value": "实时数据",
+                "Unicode": null
+              },
+              {
+                "display": "最近一天",
+                "value": "最近一天",
+                "Unicode": null
+              },
+              {
+                "display": "最近7天",
+                "value": "最近7天",
+                "Unicode": null
+              },
+              {
+                "display": "最近30天",
+                "value": "最近30天",
+                "Unicode": null
+              },
+              {
+                "display": "自然日",
+                "value": "自然日",
+                "Unicode": null
+              },
+              {
+                "display": "自然周",
+                "value": "自然周",
+                "Unicode": null
+              },
+              {
+                "display": "自然月",
+                "value": "自然月",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "save_directory",
+          "label": "文件夹路径",
+          "required": true,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件夹路径 例如：C:\\Users\\Administrator\\Desktop\\",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": true,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "必须包含英文扩展名后缀"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "文件保存至",
+          "tips": "文件保存至",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.freight_statistics_export",
+      "statement": "process.invoke_activity",
+      "title": "速卖通运费统计加截图",
+      "keywords": "",
+      "description": "「企业版专享」速卖通平台的运费统计数据，包括日期范围筛选、支付类型选择、支付方式选择，并返回统计金额数据，支持截图保存功能。",
+      "comment": "在网页对象%web_page%，输入开始和结束日期%start_date%%end_date%，选择支付类型%pay_type%，选择支付方式%pay_method%，获取运费统计金额%data_amount%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.freight_statistics_export",
+      "helpUrl": "/yddoc/rpa/zh-CN/857531995777277952",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "pay_type",
+          "label": "支付类型",
+          "required": false,
+          "tips": "支付类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "已支付",
+                "value": "已支付",
+                "Unicode": null
+              },
+              {
+                "display": "未支付",
+                "value": "未支付",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "pay_method",
+          "label": "支付方法",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部支付方式",
+                "value": "全部支付方式",
+                "Unicode": null
+              },
+              {
+                "display": "支付宝付款",
+                "value": "支付宝付款",
+                "Unicode": null
+              },
+              {
+                "display": "支付宝国际账户付款",
+                "value": "支付宝国际账户付款",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_date",
+          "label": "开始时间",
+          "required": true,
+          "tips": "开始时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "开始日期 格式xxxx-xx-xx 2025-04-30"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_date",
+          "label": "结束时间",
+          "required": true,
+          "tips": "结束时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "结束日期 格式xxxx-xx-xx 2025-04-30"
+          },
+          "category": "general"
+        },
+        {
+          "name": "save_directory",
+          "label": "文件夹路径",
+          "required": false,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "截图的文件保存路径（可为空，不要截图）",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data_amount",
+          "label": "运费统计",
+          "tips": "运费统计",
+          "name": "data_amount",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.financial_summary",
+      "statement": "process.invoke_activity",
+      "title": "速卖通-资金中心数据汇总",
+      "keywords": "",
+      "description": "「企业版专享」从速卖通商家后台资金中心页面自动化提取账户资金信息，例如：账户信息中的账户总额，冻结资金，结算概述中的待结算金额，待平台付款金额，本月放款金额，欠费金额等信息并将其转换为结构化的数据格式。",
+      "comment": "在网页对象%web_page%中获取资金中的账户信息和结算概述中的金额信息%account_information%和输出网页对象%web_page2%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.financial_summary",
+      "helpUrl": "/yddoc/rpa/zh-CN/857537677123964928",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "account_information",
+          "label": "资金数据信息",
+          "tips": "账户和结算概览信息",
+          "name": "account_information",
+          "type": "dict"
+        },
+        {
+          "id": "web_page2",
+          "label": "网页对象",
+          "tips": "网页对象",
+          "name": "web_page2",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.pending_settlement_data_export",
+      "statement": "process.invoke_activity",
+      "title": "速卖通-待结算金额数据明细",
+      "keywords": "",
+      "description": "「企业版专享」从速卖通商家后台根据指定的时间范围、订单状态和币种条件筛选结算记录，并自动下载导出文件到指定目录，极大提高了财务对账和数据导出的效率。",
+      "comment": "在网页对象%web_page%，进行时间筛选%choice_date%，输入开始结束时间%start_date%%start_date%，选择订单范围%start_date%，选择币种类型%choice_account%，查询后导出待结算金额数据明细",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.pending_settlement_data_export",
+      "helpUrl": "/yddoc/rpa/zh-CN/857540083127734272",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "待操作网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "choice_date",
+          "label": "筛选日期",
+          "required": false,
+          "tips": "筛选对应要查询的时间类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "按支付时间",
+                "value": "按支付时间",
+                "Unicode": null
+              },
+              {
+                "display": "按发货时间",
+                "value": "按发货时间",
+                "Unicode": null
+              },
+              {
+                "display": "按确认收货时间",
+                "value": "按确认收货时间",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "choice_account",
+          "label": "币种类型",
+          "required": false,
+          "tips": "币种类型的选择",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "USD账户",
+                "value": "USD账户",
+                "Unicode": null
+              },
+              {
+                "display": "CNY账户",
+                "value": "CNY账户",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "order_status",
+          "label": "订单范围",
+          "required": false,
+          "tips": "订单类型的选择",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部订单范围",
+                "value": "全部订单范围",
+                "Unicode": null
+              },
+              {
+                "display": "俄罗斯订单",
+                "value": "俄罗斯订单",
+                "Unicode": null
+              },
+              {
+                "display": "非俄罗斯订单",
+                "value": "非俄罗斯订单",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_date",
+          "label": "开始日期",
+          "required": true,
+          "tips": "开始日期",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "开始日期 格式XXXX-XX-XX 例如：2025-03-30"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_date",
+          "label": "结束日期",
+          "required": true,
+          "tips": "结束日期",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "结束日期 格式XXXX-XX-XX 例如：2025-03-30"
+          },
+          "category": "general"
+        },
+        {
+          "name": "save_directory",
+          "label": "文件夹路径",
+          "required": true,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "选择文件夹路径",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": true,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "必须包含英文扩展名后缀"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "文件保存路径",
+          "tips": "文件保存路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.fund_advance_record_export",
+      "statement": "process.invoke_activity",
+      "title": "速卖通-垫资记录",
+      "keywords": "",
+      "description": "「企业版专享」速卖通商家后台，导航到资金管理中心，设置复杂的查询条件，执行垫资记录查询，并导出查询结果到本地Excel文件。",
+      "comment": "网页对象%web_page%，输出开始和结束时间%start_date%%end_date%，选择币种类型%choice_account%，选择垫资状态%advance_status%，订单范围%order_status%，输出文件保存至%file_path%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.fund_advance_record_export",
+      "helpUrl": "/yddoc/rpa/zh-CN/857542542551990272",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "choice_account",
+          "label": "币种选择",
+          "required": false,
+          "tips": "选择账户",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "USD账户",
+                "value": "USD账户",
+                "Unicode": null
+              },
+              {
+                "display": "CNY账户",
+                "value": "CNY账户",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "advance_status",
+          "label": "垫资状态",
+          "required": false,
+          "tips": "垫资状态",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "未结清",
+                "value": "未结清",
+                "Unicode": null
+              },
+              {
+                "display": "全部",
+                "value": "全部",
+                "Unicode": null
+              },
+              {
+                "display": "已结清",
+                "value": "已结清",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "order_status",
+          "label": "订单状态",
+          "required": false,
+          "tips": "订单状态",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "非俄罗斯订单",
+                "value": "非俄罗斯订单",
+                "Unicode": null
+              },
+              {
+                "display": "俄罗斯订单",
+                "value": "俄罗斯订单",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_date",
+          "label": "开始时间",
+          "required": true,
+          "tips": "开始时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "开始时间 格式xxxx-xx-xx 例如：2025-02-01"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_date",
+          "label": "结束时间",
+          "required": true,
+          "tips": "结束时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "结束时间  格式xxxx-xx-xx 例如：2025-02-01"
+          },
+          "category": "general"
+        },
+        {
+          "name": "save_directory",
+          "label": "文件夹路径",
+          "required": true,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件夹路径  例如：C:\\Users\\25414\\Desktop\\",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": true,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "必须包含英文扩展名后缀"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "文件保存至",
+          "tips": "文件保存至",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.market_analysis",
+      "statement": "process.invoke_activity",
+      "title": "速卖通-市场分析",
+      "keywords": "",
+      "description": "「企业版专享」录速卖通商家后台，智能选择分析条件，并抓取指定行业的市场趋势数据，为电商运营提供市场洞察和决策支持。",
+      "comment": "在网页对象%web_page%，选择日期%date_type%，商品类型%date_type%，APP平台%app_type%，得到的行业数据信息%industry_data%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.market_analysis",
+      "helpUrl": "/yddoc/rpa/zh-CN/857543922914213888",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "date_type",
+          "label": "日期选择",
+          "required": false,
+          "tips": "日期类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "日",
+                "value": "日",
+                "Unicode": null
+              },
+              {
+                "display": "7天",
+                "value": "7天",
+                "Unicode": null
+              },
+              {
+                "display": "30天",
+                "value": "30天",
+                "Unicode": null
+              },
+              {
+                "display": "周",
+                "value": "周",
+                "Unicode": null
+              },
+              {
+                "display": "月",
+                "value": "月",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "app_type",
+          "label": "APP类型",
+          "required": false,
+          "tips": "APP类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部平台",
+                "value": "全部平台",
+                "Unicode": null
+              },
+              {
+                "display": "APP",
+                "value": "APP",
+                "Unicode": null
+              },
+              {
+                "display": "非APP",
+                "value": "非APP",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "product_name",
+          "label": "商品类型",
+          "required": true,
+          "tips": "商品类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "商品类型 例如:鞋子，玩具"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "industry_data",
+          "label": "行业趋势信息",
+          "tips": "行业趋势信息",
+          "name": "industry_data",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.order_loan_records",
+      "statement": "process.invoke_activity",
+      "title": "资金结算报表-订单放款记录",
+      "keywords": "",
+      "description": "「企业版专享」速卖通商家后台，通过多条件筛选（时间范围、订单类型、账户类型），查询订单放款明细数据，并同时提供结构化数据和原始数据的双重输出，为财务对账和资金管理提供全面支持。",
+      "comment": "在网页对象%web_page%中，根据时间选择订单范围%start_date%%end_date%，币种类型，，订单类型%order_type%导出数据明细%file_path%和输出订单放款信息%loan_records_data%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.order_loan_records",
+      "helpUrl": "/yddoc/rpa/zh-CN/857545966710472704",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "order_type",
+          "label": "订单类型",
+          "required": false,
+          "tips": "订单类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部订单范围",
+                "value": "全部订单范围",
+                "Unicode": null
+              },
+              {
+                "display": "俄罗斯订单",
+                "value": "俄罗斯订单",
+                "Unicode": null
+              },
+              {
+                "display": "非俄罗斯订单",
+                "value": "非俄罗斯订单",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "account_type",
+          "label": "币种类型",
+          "required": false,
+          "tips": "币种类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "USD账户",
+                "value": "USD账户",
+                "Unicode": null
+              },
+              {
+                "display": "CNY账户",
+                "value": "CNY账户",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_date",
+          "label": "开始时间",
+          "required": true,
+          "tips": "开始时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "开始时间 格式xxxx-xx-xx 例如：2025-03-01"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_date",
+          "label": "结束时间",
+          "required": true,
+          "tips": "结束时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "结束时间 格式xxxx-xx-xx 例如：2025-03-01"
+          },
+          "category": "general"
+        },
+        {
+          "name": "save_directory",
+          "label": "文件夹路径",
+          "required": true,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件夹路径  例如：C:\\Users\\xxxxx\\Desktop\\xxxx\\",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": true,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "必须包含英文扩展名后缀"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "文件保存至",
+          "tips": "文件保存至",
+          "name": "file_path",
+          "type": "str"
+        },
+        {
+          "id": "loan_records_data",
+          "label": "订单放款记录",
+          "name": "loan_records_data",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.transaction_declaration_download",
+      "statement": "process.invoke_activity",
+      "title": "交易申报数据下载",
+      "keywords": "",
+      "description": "「企业版专享」速卖通商家后台，通过多条件筛选（订单状态、国家地区、时间范围），智能查询并导出交易税务申报数据到Excel文件，为跨境电商税务合规和财务管理提供一站式解决方案。",
+      "comment": "网页对象%web_page%，选择订单状态类型%order_status%，国家名称%country_name%，，开始和结束日期%start_date%%end_date%，下载数据输出文件到%file_path%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.transaction_declaration_download",
+      "helpUrl": "/yddoc/rpa/zh-CN/857547983268749312",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "order_status",
+          "label": "订单状态",
+          "required": false,
+          "tips": "订单状态",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部",
+                "value": "全部",
+                "Unicode": null
+              },
+              {
+                "display": "等待发货",
+                "value": "等待发货",
+                "Unicode": null
+              },
+              {
+                "display": "部分发货",
+                "value": "部分发货",
+                "Unicode": null
+              },
+              {
+                "display": "等待收货",
+                "value": "等待收货",
+                "Unicode": null
+              },
+              {
+                "display": "完成",
+                "value": "完成",
+                "Unicode": null
+              },
+              {
+                "display": "订单取消中",
+                "value": "订单取消中",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "country_name",
+          "label": "国家名称",
+          "required": false,
+          "tips": "国家名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部",
+                "value": "全部",
+                "Unicode": null
+              },
+              {
+                "display": "奥地利",
+                "value": "奥地利",
+                "Unicode": null
+              },
+              {
+                "display": "比利时",
+                "value": "比利时",
+                "Unicode": null
+              },
+              {
+                "display": "保加利亚",
+                "value": "保加利亚",
+                "Unicode": null
+              },
+              {
+                "display": "塞浦路斯",
+                "value": "塞浦路斯",
+                "Unicode": null
+              },
+              {
+                "display": "捷克",
+                "value": "捷克",
+                "Unicode": null
+              },
+              {
+                "display": "德国",
+                "value": "德国",
+                "Unicode": null
+              },
+              {
+                "display": "丹麦",
+                "value": "丹麦",
+                "Unicode": null
+              },
+              {
+                "display": "爱沙尼亚",
+                "value": "爱沙尼亚",
+                "Unicode": null
+              },
+              {
+                "display": "西班牙",
+                "value": "西班牙",
+                "Unicode": null
+              },
+              {
+                "display": "芬兰",
+                "value": "芬兰",
+                "Unicode": null
+              },
+              {
+                "display": "法国",
+                "value": "法国",
+                "Unicode": null
+              },
+              {
+                "display": "英国",
+                "value": "英国",
+                "Unicode": null
+              },
+              {
+                "display": "希腊",
+                "value": "希腊",
+                "Unicode": null
+              },
+              {
+                "display": "克罗地亚",
+                "value": "克罗地亚",
+                "Unicode": null
+              },
+              {
+                "display": "匈牙利",
+                "value": "匈牙利",
+                "Unicode": null
+              },
+              {
+                "display": "爱尔兰",
+                "value": "爱尔兰",
+                "Unicode": null
+              },
+              {
+                "display": "意大利",
+                "value": "意大利",
+                "Unicode": null
+              },
+              {
+                "display": "立陶宛",
+                "value": "立陶宛",
+                "Unicode": null
+              },
+              {
+                "display": "卢森堡",
+                "value": "卢森堡",
+                "Unicode": null
+              },
+              {
+                "display": "拉脱维亚",
+                "value": "拉脱维亚",
+                "Unicode": null
+              },
+              {
+                "display": "马耳他",
+                "value": "马耳他",
+                "Unicode": null
+              },
+              {
+                "display": "荷兰",
+                "value": "荷兰",
+                "Unicode": null
+              },
+              {
+                "display": "波兰",
+                "value": "波兰",
+                "Unicode": null
+              },
+              {
+                "display": "葡萄牙",
+                "value": "葡萄牙",
+                "Unicode": null
+              },
+              {
+                "display": "罗马尼亚",
+                "value": "罗马尼亚",
+                "Unicode": null
+              },
+              {
+                "display": "瑞典",
+                "value": "瑞典",
+                "Unicode": null
+              },
+              {
+                "display": "斯洛文尼亚",
+                "value": "斯洛文尼亚",
+                "Unicode": null
+              },
+              {
+                "display": "斯洛伐克",
+                "value": "斯洛伐克",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_date",
+          "label": "开始时间",
+          "required": true,
+          "tips": "开始时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "开始时间 格式xxxx-xx-xx 例如：2025-03-30"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_date",
+          "label": "结束时间",
+          "required": true,
+          "tips": "结束时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "结束时间 格式xxxx-xx-xx 例如：2025-03-30"
+          },
+          "category": "general"
+        },
+        {
+          "name": "save_directory",
+          "label": "文件夹路径",
+          "required": true,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件夹路径(选择文件或者填写路径) 例如：C:\\Users\\xxx\\xx\\  ",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": true,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "必须包含英文扩展名后缀"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "文件保存至",
+          "tips": "文件保存至",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.store_marketing_stats",
+      "statement": "process.invoke_activity",
+      "title": "店铺营销数据统计",
+      "keywords": "",
+      "description": "「企业版专享」速卖通商家后台，智能抓取并解析三大核心经营数据模块：店铺基本信息、实时运营概况和店铺层级数据，为电商运营提供全面的数据化决策支持。",
+      "comment": "在网页对象%web_page%中选择折扣类型，输出1天%day_1_data%，7天%day_7_data%，30天%day_30_data%的详细信息",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.store_marketing_stats",
+      "helpUrl": "/yddoc/rpa/zh-CN/857549653669654528",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": true,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "promotion_type",
+          "label": "折扣类型",
+          "required": false,
+          "tips": "折扣类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部",
+                "value": "全部",
+                "Unicode": null
+              },
+              {
+                "display": "单品折扣",
+                "value": "单品折扣",
+                "Unicode": null
+              },
+              {
+                "display": "满减活动",
+                "value": "满减活动",
+                "Unicode": null
+              },
+              {
+                "display": "店铺Code",
+                "value": "店铺Code",
+                "Unicode": null
+              },
+              {
+                "display": "定向人群优惠",
+                "value": "定向人群优惠",
+                "Unicode": null
+              },
+              {
+                "display": "高净值买家专享折扣",
+                "value": "高净值买家专享折扣",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "day_1_data",
+          "label": "过去1天",
+          "tips": "过去1天数据",
+          "name": "day_1_data",
+          "type": "dict"
+        },
+        {
+          "id": "day_7_data",
+          "label": "过去7天",
+          "tips": "过去7天数据",
+          "name": "day_7_data",
+          "type": "dict"
+        },
+        {
+          "id": "day_30_data",
+          "label": "过去30天",
+          "tips": "过去30天数据",
+          "name": "day_30_data",
+          "type": "dict"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.utils",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.utils",
+      "helpUrl": null,
+      "extension": "速卖通商家后台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.aliexpress_login",
+      "statement": "process.invoke_activity",
+      "title": "速卖通登录",
+      "keywords": "",
+      "description": "速卖通网站的登录",
+      "comment": "在网页对象%web_page%，输入账号%account_user%在浏览器中登录速卖通网站",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.aliexpress_login",
+      "helpUrl": "/yddoc/rpa/zh-CN/879288295990349824",
+      "extension": "速卖通商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "account_user",
+          "label": "账号",
+          "required": true,
+          "tips": "账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请输入账号/邮箱"
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "密码",
+          "required": true,
+          "tips": "密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "switch_language",
+          "label": "语言切换",
+          "required": true,
+          "tips": "切换语言",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "中文页面",
+                "value": "zh_CN",
+                "Unicode": null
+              },
+              {
+                "display": "英文页面",
+                "value": "en_US",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "email_type",
+          "label": "邮件类型",
+          "required": false,
+          "tips": "邮箱类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "163邮箱",
+                "value": "163",
+                "Unicode": null
+              },
+              {
+                "display": "qq邮箱",
+                "value": "qq",
+                "Unicode": null
+              },
+              {
+                "display": "126邮箱",
+                "value": "126",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "email_username",
+          "label": "登录账户",
+          "required": false,
+          "tips": "账户",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "账户"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "authorization_code",
+          "label": "邮箱授权码",
+          "required": false,
+          "tips": "授权码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "授权码"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "emali_number",
+          "label": "邮箱数量",
+          "required": false,
+          "tips": "邮件数量",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "读取邮件数量"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "web_page2",
+          "label": "网页对象",
+          "tips": "操作后的网页对象",
+          "name": "web_page2",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_aliexpress.alipay_international_withdraw_automation",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_aliexpress.alipay_international_withdraw_automation",
+      "helpUrl": "322352fwfsfsf",
+      "extension": "速卖通商家后台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    }
+  ]
+}

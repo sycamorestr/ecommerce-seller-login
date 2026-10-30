@@ -1,0 +1,91 @@
+<root>
+  <item name="xbot_extensions.super_browser" display="super_browser" kind="module">
+    <item.method />
+    <item.desc>紫鸟控制台
+该指令集实现了紫鸟控制台的一些高频操作，如进入账号管理页面、打开店铺等待</item.desc>
+    <item name="xbot_extensions.super_browser.to_account_page" display="to_account_page" kind="function" help="/yddoc/rpa/zh-CN/889697978005188608">
+      <item.method>to_account_page()</item.method>
+      <item.desc>进入账号管理页面
+从紫鸟浏览器控制台进入账号管理页面
+</item.desc>
+    </item>
+    <item name="xbot_extensions.super_browser.open_store" display="open_store" kind="function" help="/yddoc/rpa/zh-CN/889697990621655040">
+      <item.method>open_store(店铺名称,匹配类型,打开账号,超时时间,隐私模式,处理在线人员上限)</item.method>
+      <item.desc>打开店铺
+该指令实现了根据店铺名称打开店铺的功能，调用这个指令会关闭正在打开的所有店铺
+* @param 店铺名称，
+* @param 匹配类型，
+* @param 打开账号，
+* @param 超时时间，
+* @param 隐私模式，
+* @param 处理在线人员上限，处理紫鸟在线人员弹窗
+* @return web_page，
+* @return 完整店铺名称，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.super_browser.get_download_path" display="get_download_path" kind="function" help="/yddoc/rpa/zh-CN/889698002609049600">
+      <item.method>get_download_path()</item.method>
+      <item.desc>获取下载文件保存位置
+获取紫鸟浏览器默认下载文件保存位置
+* @return download_path，
+* @return is_check，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.super_browser.process1" display="process1" kind="function" help="/yddoc/rpa/zh-CN/889698024088006656">
+      <item.method>process1(企业名称,企业用户名,密码,是否填写账号密码,是否退出登录,紫鸟版本)</item.method>
+      <item.desc>紫鸟登录
+该指令实现了自动打开紫鸟控制台，并登录企业号的操作
+* @param 企业名称，
+* @param 企业用户名，
+* @param 密码，
+* @param 是否填写账号密码，
+* @param 是否退出登录，
+* @param 紫鸟版本，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.super_browser.process2" display="process2" kind="function" help="/yddoc/rpa/zh-CN/889698034489880576">
+      <item.method>process2(网页对象,保存文件夹,保存文件名,超时时间,下载按钮,等待对话框出现)</item.method>
+      <item.desc>紫鸟文件下载
+该指令实现了紫鸟浏览器网页端的文件下载操作
+* @param 网页对象，
+* @param 保存文件夹，
+* @param 保存文件名，
+* @param 超时时间，
+* @param 下载按钮，
+* @param 等待对话框出现，
+* @return download_file_name，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.super_browser.process6" display="process6" kind="function" help="/yddoc/rpa/zh-CN/889698014239780864">
+      <item.method>process6(所属平台)</item.method>
+      <item.desc>获取店铺列表
+该指令实现了在紫鸟浏览器上获取指定平台的所有店铺名称操作
+* @param 所属平台，
+* @return store_name_list，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.super_browser.process7" display="process7" kind="function" help="/yddoc/rpa/zh-CN/889698044833107968">
+      <item.method>process7(网页对象,上传按钮,上传文件路径,等待对话框超时时间)</item.method>
+      <item.desc>上传文件到紫鸟
+该指令实现了从本地上传文件到紫鸟网页端的操作
+* @param 网页对象，
+* @param 上传按钮，
+* @param 上传文件路径，
+* @param 等待对话框超时时间，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.super_browser.process9" display="process9" kind="function" help="/yddoc/rpa/zh-CN/899104976750927872">
+      <item.method>process9(店铺名称,匹配类型,打开账号,超时时间,隐私模式)</item.method>
+      <item.desc>打开店铺(UIA)
+该指令通过uia实现了根据店铺名称打开店铺的功能，调用这个指令会关闭正在打开的所有店铺
+* @param 店铺名称，
+* @param 匹配类型，
+* @param 打开账号，
+* @param 超时时间，
+* @param 隐私模式，
+* @return web_page，
+* @return 完整店铺名称，
+</item.desc>
+    </item>
+  </item>
+</root>

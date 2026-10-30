@@ -1,0 +1,240 @@
+<root>
+  <item name="xbot_extensions.activity_jindie" display="activity_jindie" kind="module">
+    <item.method />
+    <item.desc>金蝶云星空 - 网页端
+金蝶云星空浏览器自动化，支持登录与填写表单数据等操作</item.desc>
+    <item name="xbot_extensions.activity_jindie.login" display="login" kind="function" help="/yddoc/rpa/zh-CN/938363553566621696">
+      <item.method />
+      <item.desc>登录金蝶云星空
+登录金蝶云星空平台并返回网页对象。
+* @param web_page，登录页网页对象
+* @param account，填写账号
+* @param password，填写密码
+* @param platform，选择平台，不填则不进行选择操作
+* @param login_now，选择当出现是否登录时，是否顶号
+* @return out_web_page，输出网页对象
+</item.desc>
+      <item name="xbot_extensions.activity_jindie.login.login" display="login" kind="function" help="/yddoc/rpa/zh-CN/938363553566621696">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.login.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/938363553566621696">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.login.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/938363553566621696">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jindie.get_all_tab" display="get_all_tab" kind="function" help="/yddoc/rpa/zh-CN/938363560289357824">
+      <item.method />
+      <item.desc>获取标签页列表
+获取当前页面已打开的标签页名称列表。
+* @param web_page，网页对象
+* @return out_all_tab_list，输出所有tab列表
+</item.desc>
+      <item name="xbot_extensions.activity_jindie.get_all_tab.get_all_tab" display="get_all_tab" kind="function" help="/yddoc/rpa/zh-CN/938363560289357824">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.get_all_tab.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/938363560289357824">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.get_all_tab.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/938363560289357824">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jindie.close_tab" display="close_tab" kind="function" help="/yddoc/rpa/zh-CN/938363567227469824">
+      <item.method />
+      <item.desc>关闭标签页
+按名称关闭一个或多个标签页。
+* @param web_page，选择网页对象
+* @param tab_name，需要关闭的tab页，支持单个传入：采购合同；多个输入：["采购合同", "采购订单"]
+</item.desc>
+      <item name="xbot_extensions.activity_jindie.close_tab.close_tab" display="close_tab" kind="function" help="/yddoc/rpa/zh-CN/938363567227469824">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.close_tab.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/938363567227469824">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.close_tab.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/938363567227469824">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jindie.get_group_list" display="get_group_list" kind="function" help="/yddoc/rpa/zh-CN/938363574743662592">
+      <item.method />
+      <item.desc>获取分组列表
+获取当前页面可见分组名称列表。
+* @param web_page，网页对象
+* @return out_group_list，获取到的全部分组
+</item.desc>
+      <item name="xbot_extensions.activity_jindie.get_group_list.get_group_list" display="get_group_list" kind="function" help="/yddoc/rpa/zh-CN/938363574743662592">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.get_group_list.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/938363574743662592">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.get_group_list.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/938363574743662592">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jindie.show_group" display="show_group" kind="function" help="/yddoc/rpa/zh-CN/938363581189574656">
+      <item.method />
+      <item.desc>展开分组
+展开指定分组或展开全部分组。
+* @param web_page，网页对象
+* @param group_name，分组名称，支持str, list写入
+* @param show_all，是否显示所有
+</item.desc>
+      <item name="xbot_extensions.activity_jindie.show_group.show_group" display="show_group" kind="function" help="/yddoc/rpa/zh-CN/938363581189574656">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.show_group.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/938363581189574656">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.show_group.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/938363581189574656">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jindie.hide_group" display="hide_group" kind="function" help="/yddoc/rpa/zh-CN/938363588496785408">
+      <item.method />
+      <item.desc>收起分组
+收起指定分组或收起全部分组。
+* @param web_page，网页对象
+* @param group_name，分组名称，支持str, list写入
+* @param hide_all，是否隐藏所有
+</item.desc>
+      <item name="xbot_extensions.activity_jindie.hide_group.hide_group" display="hide_group" kind="function" help="/yddoc/rpa/zh-CN/938363588496785408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.hide_group.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/938363588496785408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.hide_group.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/938363588496785408">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jindie.input_data" display="input_data" kind="function" help="/yddoc/rpa/zh-CN/938363595664850944">
+      <item.method />
+      <item.desc>填写字段
+按分组与字段名填写单个字段。
+* @param web_page，网页对象
+* @param group_name，分组名称
+* @param key，字段名称
+* @param value，填写内容，日期格式支持YYYY/MM/DD
+</item.desc>
+      <item name="xbot_extensions.activity_jindie.input_data.input_data" display="input_data" kind="function" help="/yddoc/rpa/zh-CN/938363595664850944">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.input_data.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/938363595664850944">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.input_data.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/938363595664850944">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jindie.batch_input_data" display="batch_input_data" kind="function" help="/yddoc/rpa/zh-CN/938363602593841152">
+      <item.method />
+      <item.desc>批量填写字段
+按数据列表批量填写多个字段。
+* @param web_page，网页对象
+* @param data_list，批量填写数据，例如[{"group_name": "基本信息", "key": "供应商", "value": "E00001"}]
+</item.desc>
+      <item name="xbot_extensions.activity_jindie.batch_input_data.batch_input_data" display="batch_input_data" kind="function" help="/yddoc/rpa/zh-CN/938363602593841152">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.batch_input_data.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/938363602593841152">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.batch_input_data.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/938363602593841152">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jindie.input_table" display="input_table" kind="function" help="/yddoc/rpa/zh-CN/938363608696553472">
+      <item.method />
+      <item.desc>填写表格单元格
+按表格序号、列名、行号填写表格单元格。
+* @param web_page，网页对象
+* @param sheet_index，默认为1，若当前页面存在多个表格，可以选择需要操作的表格
+* @param col_name，表头名称，支持直接传入数字
+* @param row_num，行号，所填内容所在的行号
+* @param data，填写内容，日期格式支持YYYY/MM/DD HH:mm:ss，复选框填写：是/否
+</item.desc>
+      <item name="xbot_extensions.activity_jindie.input_table.get_table" display="get_table" kind="function" help="/yddoc/rpa/zh-CN/938363608696553472">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.input_table.get_col_index" display="get_col_index" kind="function" help="/yddoc/rpa/zh-CN/938363608696553472">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.input_table.get_col_field_by_name" display="get_col_field_by_name" kind="function" help="/yddoc/rpa/zh-CN/938363608696553472">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.input_table.normalize_bool_value" display="normalize_bool_value" kind="function" help="/yddoc/rpa/zh-CN/938363608696553472">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.input_table.input_table" display="input_table" kind="function" help="/yddoc/rpa/zh-CN/938363608696553472">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.input_table.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/938363608696553472">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.input_table.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/938363608696553472">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jindie.get_field_data" display="get_field_data" kind="function" help="/yddoc/rpa/zh-CN/938363615218696192">
+      <item.method />
+      <item.desc>获取字段值
+按分组与字段名读取字段值。
+* @param web_page，网页对象
+* @param group_name，分组名称
+* @param key，填写字段名称，暂不支持获取表格内容
+* @return out_field_value，获取到的字段值
+</item.desc>
+      <item name="xbot_extensions.activity_jindie.get_field_data.get_field_value_from_container" display="get_field_value_from_container" kind="function" help="/yddoc/rpa/zh-CN/938363615218696192">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.get_field_data.get_field_data" display="get_field_data" kind="function" help="/yddoc/rpa/zh-CN/938363615218696192">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.get_field_data.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/938363615218696192">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jindie.get_field_data.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/938363615218696192">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+  </item>
+</root>

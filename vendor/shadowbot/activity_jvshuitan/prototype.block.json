@@ -1,0 +1,102 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_jvshuitan.main",
+      "statement": "process.invoke_activity",
+      "title": "聚水潭",
+      "keywords": "",
+      "description": "该指令集实现了聚水潭后台的登录, 下载报表相关操作",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/27/35/27351e2e4fbda562cb1b5ad4b455aa0c.png",
+      "function": "xbot_extensions.activity_jvshuitan.main",
+      "helpUrl": null,
+      "extension": "聚水潭",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jvshuitan.login",
+      "statement": "process.invoke_activity",
+      "title": "聚水潭登录",
+      "keywords": "",
+      "description": "该指令通过自动化操作登录聚水潭",
+      "comment": "获取网页对象%web_page%，通过账号%account%，登录聚水潭",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/f4/55/f4557609c089dea1896418cfd072bfb5.png",
+      "function": "xbot_extensions.activity_jvshuitan.login",
+      "helpUrl": "/yddoc/rpa/zh-CN/863752309821513728",
+      "extension": "聚水潭",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "account",
+          "label": "账号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jvshuitan.utils",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jvshuitan.utils",
+      "helpUrl": null,
+      "extension": "聚水潭",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    }
+  ]
+}

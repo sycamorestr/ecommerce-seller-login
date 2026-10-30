@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository xmlns:x="rpa://selector/core" xmlns:regex="rpa://selector/operator/regex" xmlns:wildcard="rpa://selector/operator/wildcard" xmlns:contains="rpa://selector/operator/contains" xmlns:notContains="rpa://selector/operator/notContains" xmlns:startsWith="rpa://selector/operator/startsWith" xmlns:notStartsWith="rpa://selector/operator/notStartsWith" xmlns:endsWith="rpa://selector/operator/endsWith" xmlns:notEndsWith="rpa://selector/operator/notEndsWith" xmlns:notEquals="rpa://selector/operator/notEquals" xmlns:greaterThan="rpa://selector/operator/greaterThan" xmlns:greaterThanOrEqual="rpa://selector/operator/greaterThanOrEqual" xmlns:lessThan="rpa://selector/operator/lessThan" xmlns:lessThanOrEqual="rpa://selector/operator/lessThanOrEqual">
+  <group id="b7033628-e730-4bac-99cd-d47c873c1618" name="巨量纵横" type="Web" processName="chrome" icon=".dev\icon\29c4316d-e37e-4d94-9ecc-a10663afdfe5.png" criteria="https://business.oceanengine.com">
+    <selector name="巨量引擎登录_邮箱输入框" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="巨量纵横" screenshot=".dev\screenshot\1b5e86e9-ff94-4eca-b186-c78184c7c939.png">
+      <web x:name="div">
+        <optional id="root" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="login-wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-sdk-wrap" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional id="account-sdk" index="0" index-of-type="0" />
+      </web>
+      <web x:name="section">
+        <optional class="account-center-sdk-container account-sdk-container email login login-code normal" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-center-sdk-form" index="3" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="account-center-input-row" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-center-input-item" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="fill-design group" index="0" index-of-type="0" />
+      </web>
+      <web x:name="span">
+        <optional class="ace-ui-input ace-ui-input-group-filled" index="1" index-of-type="0" />
+      </web>
+      <web x:name="input" type="text" name="email">
+        <optional status="" fill-type="filled" autocomplete="email" pattern="([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+" fieldname="item_label_email" required="" placeholder="请输入邮箱" max="128" label="" title="请输入邮箱" class="ace-input ace-ui-input-default ace-ui-input-filled" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="巨量引擎登录_密码输入框" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="巨量纵横" screenshot=".dev\screenshot\53898ce4-8b50-40da-8857-c6d7b7735338.png">
+      <web x:name="div">
+        <optional id="root" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="login-wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-sdk-wrap" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional id="account-sdk" index="0" index-of-type="0" />
+      </web>
+      <web x:name="section">
+        <optional class="account-center-sdk-container account-sdk-container email login login-code normal" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-center-sdk-form" index="3" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="ac-input-last-item account-center-input-row" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="account-center-input-item" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="fill-design group" index="0" index-of-type="0" />
+      </web>
+      <web x:name="span">
+        <optional class="ace-ui-input ace-ui-input-group-filled ace-ui-input-group-suffix ace-ui-input-group-wrapper" index="1" index-of-type="0" />
+      </web>
+      <web x:name="input" type="password" name="password">
+        <optional status="" fill-type="filled" fieldname="item_label_pwd" required="" pattern="" max="20" autocomplete="password" label="" placeholder="密码" title="密码" class="ace-input ace-ui-input-default ace-ui-input-filled" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="巨量引擎登录_邮箱登录" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="巨量纵横" screenshot=".dev\screenshot\f5b49004-8a93-4c03-aae4-f014583d018f.png">
+      <web x:name="div">
+        <optional id="root" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="login-wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-sdk-wrap" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional id="account-sdk" index="0" index-of-type="0" />
+      </web>
+      <web x:name="section">
+        <optional class="account-center-sdk-container account-sdk-container email login login-code normal" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-center-switch-row switch-type-switch" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" wildcard:class="account-center-switch-button email*">
+        <optional index="1" index-of-type="1" />
+      </web>
+    </selector>
+    <selector name="巨量引擎登录_切换登录方式" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="巨量纵横" screenshot=".dev\screenshot\d4c4644a-bfd8-4c4d-b1bf-d2917a7308aa.png">
+      <web x:name="div">
+        <optional id="root" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="login-wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-sdk-wrap" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional id="account-sdk" index="0" index-of-type="0" />
+      </web>
+      <web x:name="section">
+        <optional class="account-center-sdk-container account-sdk-container email login login-code normal" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-center-qrcode-switch" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-center-qrcode-switch-action" index="1" index-of-type="1" />
+      </web>
+      <web x:name="svg">
+        <optional width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" index="0" index-of-type="0" />
+      </web>
+      <web x:name="path">
+        <optional d="M0 0H52C58.6274 0 64 5.37258 64 12V64L0 0Z" fill="#2A55E5" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="巨量引擎登录_登录按钮" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="巨量纵横" screenshot=".dev\screenshot\6c1e8e6f-2857-4754-abda-70176fcb6102.png">
+      <web x:name="div">
+        <optional id="root" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="login-wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-sdk-wrap" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional id="account-sdk" index="0" index-of-type="0" />
+      </web>
+      <web x:name="section">
+        <optional class="account-center-sdk-container account-sdk-container login login-code mobile normal" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-center-submit" index="6" index-of-type="6" />
+      </web>
+      <web x:name="button">
+        <optional disabled="" title="手机号码不能为空" class="account-center-action-button ace-ui-btn ace-ui-btn-primary" innerText="登录" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="巨量引擎登录_我已阅读并同意勾选框" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="巨量纵横" screenshot=".dev\screenshot\e5b9693c-355f-4749-bb33-dbb5e0b334c5.png">
+      <web x:name="div">
+        <optional id="root" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="login-wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-sdk-wrap" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional id="account-sdk" index="0" index-of-type="0" />
+      </web>
+      <web x:name="section">
+        <optional class="account-center-sdk-container account-sdk-container email login login-code normal" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-center-input-agreement" index="4" index-of-type="4" />
+      </web>
+      <web x:name="div">
+        <optional class="check-box-container" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional visible="true" forwardref="[object HTMLDivElement]" class="ace-ui-tooltip-wrapper agreement-notice" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div" wildcard:class="account-center-agreement-*">
+        <optional index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="巨量引擎登录_退出账号按钮" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="巨量纵横" screenshot=".dev\screenshot\8db54b4d-bf4e-40df-ab0b-abadbab46236.png">
+      <web x:name="div">
+        <optional id="bp-app" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="false style_header-container__vqjdt" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="header-user" class="index_header-user__ne9zf" index="3" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="index_header-user-card__qfnvh" index="4" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional class="index_header-user-card-layout__vzg0m" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" class="index_header-user-card-layout-item__vsin6" index="2">
+        <optional index-of-type="2" />
+      </web>
+    </selector>
+    <selector name="巨量引擎登录_我已阅读并同意_已勾选状态" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="巨量纵横" screenshot=".dev\screenshot\69fd046e-9a1f-4021-bcb9-e5c76e6df542.png">
+      <web x:name="div">
+        <optional id="root" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="login-wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-sdk-wrap" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional id="account-sdk" index="0" index-of-type="0" />
+      </web>
+      <web x:name="section">
+        <optional class="account-center-sdk-container account-sdk-container email login login-code normal" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="account-center-input-agreement" index="4" index-of-type="4" />
+      </web>
+      <web x:name="div">
+        <optional class="check-box-container" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div" class="account-center-agreement-check checked">
+        <optional index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector id="4983984d-869d-449d-a9c5-aab742f2c3f0" name="巨量引擎登录_滑块验证_拖拽滑块" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="巨量引擎工作台" screenshot=".dev\screenshot\684c7252-22fd-4744-a357-4c452cdb675f.jpg">
+      <web x:name="div">
+        <optional id="account-sdk-slide-container" class="slide-container" index="3" index-of-type="2" />
+      </web>
+      <web x:name="iframe">
+        <optional index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="captcha_container" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="vc_captcha_box" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="slide vc-captcha-verify" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="vc-captcha-verify-visibility" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha-slider captcha_verify_slide--button" index="3" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha-slider-box" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="dragger-box" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="dragger-item" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" xbox-display="true">
+        <optional slot="dragger" class="captcha-slider-btn" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector id="3c57abf5-f440-470b-9768-c5974472ae3b" name="巨量引擎登录_滑块验证_底图" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="巨量引擎工作台" screenshot=".dev\screenshot\d125be99-2db0-43f8-a117-28a6d8fc1b74.jpg">
+      <web x:name="iframe">
+        <optional index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="captcha_container" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="vc_captcha_box" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="slide vc-captcha-verify" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="vc-captcha-verify-visibility" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_verify_img--wrapper verify-image" index="2" index-of-type="2" />
+      </web>
+      <web x:name="img" id="captcha_verify_image" xbox-display="true">
+        <optional src="https://p3-catpcha.byteimg.com/tos-cn-i-188rlo5p4y/0537f5e752784681841836c0f315da49~tplv-188rlo5p4y-2.jpeg" alt="basicImg" crossorigin="anonymous" class="captcha-verify-image" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="巨量引擎登录_滑块验证_刷新" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="巨量纵横" screenshot=".dev\screenshot\5ef6c425-1b56-4731-9d1b-8de614db4b57.png">
+      <web x:name="div">
+        <optional id="account-sdk-slide-container" class="slide-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional role="dialog" class="captcha_verify_container style__captchawrapper-sc-1gpeoge-0 zgyir" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_verify_action dhdxhn sc-jdwbtq" index="3" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="hdkdph sc-gpevay" index="0" index-of-type="0" />
+      </web>
+      <web x:name="a">
+        <optional class="jgmjrc refresh-button___styleda-sc-18f114n-0 secsdk_captcha_refresh" index="0" index-of-type="0" />
+      </web>
+      <web x:name="span" innerText="刷新">
+        <optional class="gbxrmn sc-bwzfxh secsdk_captcha_refresh--text" index="1" index-of-type="1" />
+      </web>
+    </selector>
+    <selector id="984431f1-bd3e-4d3c-b674-ad7ce126b5a9" name="账号界面_账号名称" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="巨量引擎工作台" screenshot=".dev\screenshot\4009aa04-d36e-4ad0-b557-5a6e01966d9b.jpg">
+      <web x:name="div">
+        <optional id="bp-app" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="false style_header-container__vqjdt" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="header-user" class="index_header-user__ne9zf undefined" index="3" index-of-type="3" />
+      </web>
+      <web x:name="div" class="index_header-user-info__ghkhf">
+        <optional index="0" index-of-type="0" />
+      </web>
+    </selector>
+  </group>
+</repository>

@@ -1,0 +1,4441 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_temu_shop.main",
+      "statement": "process.invoke_activity",
+      "title": "Temu 商家后台",
+      "keywords": "",
+      "description": "该指令集实现了商家后台登录, 数据采集等操作",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/10/1a/101a78feca8aa8d670d489c139b6dfcb.png",
+      "function": "xbot_extensions.activity_temu_shop.main",
+      "helpUrl": null,
+      "extension": "Temu 商家后台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.utils",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_temu_shop.utils",
+      "helpUrl": null,
+      "extension": "Temu 商家后台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.login",
+      "statement": "process.invoke_activity",
+      "title": "Temu-账号登录",
+      "keywords": "",
+      "description": "该指令实现了打开Temu账号，并进行自动登录的功能",
+      "comment": "在网页对象%web_page%中, 登录%username%账号进入Temu 商家后台",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/ad/c5/adc5107f9e1e9ad8db907ca86ec3eda2.png",
+      "function": "xbot_extensions.activity_temu_shop.login",
+      "helpUrl": "/yddoc/rpa/zh-CN/771262214638489600",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "账号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入Temu商家后台账号"
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "target_store",
+          "label": "选择店铺",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "选择登录一个指定的店铺，可为空，空则默认"
+          },
+          "category": "general"
+        },
+        {
+          "name": "default_pwd",
+          "label": "default_pwd",
+          "required": false,
+          "tips": "默认账号密码，不进行输入",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "checkbox",
+            "label": "默认登录"
+          },
+          "category": "general"
+        },
+        {
+          "name": "site",
+          "label": "site",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入站点，全球/美国/欧区/商家中心"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.switch_store",
+      "statement": "process.invoke_activity",
+      "title": "Temu-切换店铺",
+      "keywords": "",
+      "description": "该指令实现了在Temu商家后台中，对店铺进行切换的功能",
+      "comment": "在网页对象  中，切换当前店铺为",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/31/47/31477b644e08ec7f8d1f218ee20eea7f.png",
+      "function": "xbot_extensions.activity_temu_shop.switch_store",
+      "helpUrl": "/yddoc/rpa/zh-CN/771276199978946560",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "store_name",
+          "label": "store_name",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.reconciliation",
+      "statement": "process.invoke_activity",
+      "title": "Temu-卖家中心-对账中心-财务明细下载",
+      "keywords": "",
+      "description": "该指令实现了在Temu卖家中心中，对Temu卖家中心-对账中心-财务明细导出列表下载的功能，若想要下载导出列表+财务明细，请使用导出列表+财务明细指令",
+      "comment": "在网页对象 %web_page% 中，下载日期为%start_time%到%end_time%的报表，并保存于%file_path%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/c4/17/c4174b6a988d8f4e66ccb6bb8b10bb28.png",
+      "function": "xbot_extensions.activity_temu_shop.reconciliation",
+      "helpUrl": "/yddoc/rpa/zh-CN/771278088904974336",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_time",
+          "label": "开始日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "选择报表开始日期，格式为YYYY-MM-DD"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_time",
+          "label": "结束日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "选择报表结束日期，格式为YYYY-MM-DD"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "保存文件夹",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写文件保存地址"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "保存文件名",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写文件保存名称"
+          },
+          "category": "general"
+        },
+        {
+          "name": "confirm_download",
+          "label": "confirm_download",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:True",
+          "editor": {
+            "kind": "checkbox",
+            "label": "是否完成下载报表"
+          },
+          "category": "general"
+        },
+        {
+          "name": "capital_flow",
+          "label": "资金流向",
+          "required": false,
+          "tips": "",
+          "type": "any",
+          "default": "13:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写一个资金流向，若有多个则以列表的方式。如['xx', 'xx']"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "fund_mix",
+          "label": "收支金额最小值",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "fund_max",
+          "label": "收支金额最大值",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "financial_type",
+          "label": "财务类型",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "文件路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.download_finance_report",
+      "statement": "process.invoke_activity",
+      "title": "Temu-下载财务明细报表",
+      "keywords": "",
+      "description": "该指令实现了对Temu的财务报表进行批量下载的功能",
+      "comment": "在网页对象 %web_page% 中，下载日期大于%date%的财务明细报表，并存于%file_folder%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/43/df/43df879fde866d53a07d0e08874d3faf.png",
+      "function": "xbot_extensions.activity_temu_shop.download_finance_report",
+      "helpUrl": "/yddoc/rpa/zh-CN/772992697877483520",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "date",
+          "label": "日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写日期，格式为YYYY-MM-DD/YYYY-MM-DD HH:mm:ss"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "保存文件夹",
+          "required": false,
+          "tips": "",
+          "type": "directory",
+          "default": "13:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写一个报表文件的保存地址",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.create_coupon",
+      "statement": "process.invoke_activity",
+      "title": "Temu-创建优惠券",
+      "keywords": "",
+      "description": "该指令实现了自动批量创建优惠券的功能",
+      "comment": "在网页对象%web_page%，创一个优惠券名称为%coupon_name%，时间为%start_time%到%end_time%的优惠券",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/59/dc/59dcff3891ed3be7c07da01e0492f777.png",
+      "function": "xbot_extensions.activity_temu_shop.create_coupon",
+      "helpUrl": "/yddoc/rpa/zh-CN/793668557410856960",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "coupon_name",
+          "label": "优惠券名称",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请输入自定义优惠券名称"
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_time",
+          "label": "开始时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请输入优惠券开始时间，格式为YYYY-MM-DD"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_time",
+          "label": "结束时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请输入优惠券结束时间，格式为YYYY-MM-DD"
+          },
+          "category": "general"
+        },
+        {
+          "name": "coupon_file_path",
+          "label": "优惠券路径",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请输入优惠券模板文件路径",
+            "dialog": {
+              "type": "OpenFile",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.balance_screenshot",
+      "statement": "process.invoke_activity",
+      "title": "Temu-资金中心-余额截图",
+      "keywords": "",
+      "description": "该指令实现了自动截取店铺内资金中心的余额",
+      "comment": "在网页对象 %web_page% 中，截图店铺余额的图片并报错于%folder_path%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/12/63/1263a25df405d5cb85098f7c32e3b43b.png",
+      "function": "xbot_extensions.activity_temu_shop.balance_screenshot",
+      "helpUrl": "/yddoc/rpa/zh-CN/775200191869087744",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "folder_path",
+          "label": "保存文件夹",
+          "required": false,
+          "tips": "截图保存文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请选择存放截图的文件夹",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "station",
+          "label": "站点名称",
+          "required": false,
+          "tips": "站点名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "截图命名时拼接站点名称"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "img_path",
+          "label": "图片路径",
+          "name": "img_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.finish_data_export",
+      "statement": "process.invoke_activity",
+      "title": "Temu-结算数据-已到账数据导出",
+      "keywords": "",
+      "description": "该指令实现了对Temu的结算数据进行导出",
+      "comment": "在网页对象 %web_page% 中，选择%start_time%到%end_time%的报表进行导出，并保存于%file_path%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/93/8d/938d2d4c11018f8e48a5e32dc71c6946.png",
+      "function": "xbot_extensions.activity_temu_shop.finish_data_export",
+      "helpUrl": "/yddoc/rpa/zh-CN/775258660518854656",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "bill_type",
+          "label": "账单类型",
+          "required": false,
+          "tips": "账单类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "PO明细账单",
+                "value": "PO明细账单",
+                "Unicode": null
+              },
+              {
+                "display": "PO聚合账单",
+                "value": "PO聚合账单",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_time",
+          "label": "开始日期",
+          "required": false,
+          "tips": "输入报表开始日期",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写一个开始日期，格式为YYYY-MM-dd"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_time",
+          "label": "结束日期",
+          "required": false,
+          "tips": "输入报表结束日期",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写一个结束日期，格式为YYYY-MM-dd"
+          },
+          "category": "general"
+        },
+        {
+          "name": "folder_path",
+          "label": "保存文件夹",
+          "required": false,
+          "tips": "保存文件夹的地址",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入一个存储保存文件的地址",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "保存文件名",
+          "required": false,
+          "tips": "自定义文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "自定义一个文件名称"
+          },
+          "category": "general"
+        },
+        {
+          "name": "clear_create_time",
+          "label": "clear_create_time",
+          "required": false,
+          "tips": "清空订单创建时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "checkbox",
+            "label": "清空订单创建时间"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "文件路径",
+          "tips": "报表文件路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.adjust_prices",
+      "statement": "process.invoke_activity",
+      "title": "Temu-调价管理-拒绝调价(全托)",
+      "keywords": "",
+      "description": "该指令实现了对全托平台进行拒绝调价的功能",
+      "comment": "在网页对象 %web_page% 中，对商品管理-调价管理-待买家确认里进行拒绝调价的行为，拒绝理由为%reason%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/2c/b8/2cb87e522d30aea6f31d266463a6e977.png",
+      "function": "xbot_extensions.activity_temu_shop.adjust_prices",
+      "helpUrl": "/yddoc/rpa/zh-CN/777450086620012544",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "reason",
+          "label": "拒绝理由",
+          "required": false,
+          "tips": "拒绝理由，拒绝理由统一",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请输入拒绝的理由，例：商品没有利润空间，已申报营销活动"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.deliver_goods_opration",
+      "statement": "process.invoke_activity",
+      "title": "Temu-抢备货台",
+      "keywords": "",
+      "description": "该指令实现了将今日可发货的单批量加入发货台的功能",
+      "comment": "在网页对象 %web_page% 中，对今日可发货的单批量加入发货台",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/2f/09/2f09157e1acc6be08a35b6f445492223.png",
+      "function": "xbot_extensions.activity_temu_shop.deliver_goods_opration",
+      "helpUrl": "/yddoc/rpa/zh-CN/777451922611036160",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "orders_num",
+          "label": "备货单号",
+          "required": false,
+          "tips": "",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "格式为：\"全部\"，\"单号\"，单号列表，例[”aaa“,\"bbb\"]"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ready_type",
+          "label": "备货建议",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "可填紧急备货建议，普通备货建议等，默认为普通备货建议"
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_time",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "添加结果",
+          "name": "result",
+          "type": "any"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.finishing_data_export",
+      "statement": "process.invoke_activity",
+      "title": "Temu-结算数据-结算中数据导出",
+      "keywords": "",
+      "description": "该指令实现了对Temu的结算中数据进行导出",
+      "comment": "在网页对象 %web_page% 中， 将结算数据-结算中款项的数据下载到%folder_path%\\%file_name%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/2e/76/2e76e24a489bc896bfd5e2fc336466f4.png",
+      "function": "xbot_extensions.activity_temu_shop.finishing_data_export",
+      "helpUrl": "/yddoc/rpa/zh-CN/779169399710244864",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "folder_path",
+          "label": "保存文件夹",
+          "required": false,
+          "tips": "保存文件夹的地址",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null,
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "保存文件名",
+          "required": false,
+          "tips": "自定义文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "保存路径",
+          "tips": "报表文件路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.pending_data_export",
+      "statement": "process.invoke_activity",
+      "title": "Temu-结算数据-待处理数据导出",
+      "keywords": "",
+      "description": "该指令实现了对Temu的待处理数据进行导出",
+      "comment": "在网页对象 %web_page% 中， 将结算数据-结算中款项的数据下载到%folder_path% \\ %file_name%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/2e/e5/2ee51e3991f95e96685260352768f3e9.png",
+      "function": "xbot_extensions.activity_temu_shop.pending_data_export",
+      "helpUrl": "/yddoc/rpa/zh-CN/779170544240910336",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "hosted_type",
+          "label": "店铺托管类型",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:全托",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "传入当前店铺托管类型，全托/半托，默认为 全托"
+          },
+          "category": "general"
+        },
+        {
+          "name": "time_select",
+          "label": "时间选择",
+          "required": false,
+          "tips": "默认为 最近一个月",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "半托店铺可以选择订单创建时间，格式为 yyyy-mm-dd~yyyy-mm-dd"
+          },
+          "category": "general"
+        },
+        {
+          "name": "folder_path",
+          "label": "保存文件夹",
+          "required": false,
+          "tips": "保存文件夹的地址",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null,
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "保存文件名",
+          "required": false,
+          "tips": "自定义文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "保存路径",
+          "tips": "报表文件路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.active_record",
+      "statement": "process.invoke_activity",
+      "title": "Temu-营销活动-获取报名记录信息",
+      "keywords": "",
+      "description": "该指令实现了对全托平台进行获取报名记录信息的功能",
+      "comment": "在网页对象 %web_page% 中，选择%active_category%，%start_time%到%end_time%范围的报名记录存入到数据表格中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/5b/00/5b00ae2db01335b221009130c316cd2a.png",
+      "function": "xbot_extensions.activity_temu_shop.active_record",
+      "helpUrl": "/yddoc/rpa/zh-CN/786141403486613504",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "active_category",
+          "label": "活动分类",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_time",
+          "label": "开始时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_time",
+          "label": "结束时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "active_type",
+          "label": "活动类型",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "SPU",
+          "label": "SPU",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "goods_num",
+          "label": "货号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "active_status",
+          "label": "活动状态",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "end_status",
+          "label": "到期状态",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.sale_manage_info",
+      "statement": "process.invoke_activity",
+      "title": "Temu-销售管理-销售管理数据获取",
+      "keywords": "",
+      "description": "该指令实现了在Temu平台对销售管理数据进行获取的功能",
+      "comment": "在Temu销售管理网页%web_page%上，进行数据爬取",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/f8/cb/f8cb7d50c743efc4f2c63d9000c5862e.png",
+      "function": "xbot_extensions.activity_temu_shop.sale_manage_info",
+      "helpUrl": "/yddoc/rpa/zh-CN/788326694266372096",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "page_key",
+          "label": "采集页数",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "采集页数，不填则全部页进行采集"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data",
+          "label": "data",
+          "name": "data",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.return_goods_info",
+      "statement": "process.invoke_activity",
+      "title": "Temu-库存管理-退货单数据获取",
+      "keywords": "",
+      "description": "该指令实现了对Temu进行退货单数据抓取的功能",
+      "comment": "在网页对象%web_page%上，抓取%start_time%到%end_time%的退货单并存入数据表格中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/51/a2/51a29bfb113dcd080083ee477f9b0122.png",
+      "function": "xbot_extensions.activity_temu_shop.return_goods_info",
+      "helpUrl": "/yddoc/rpa/zh-CN/788382259556765696",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_time",
+          "label": "开始日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_time",
+          "label": "结束日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "odds_number",
+          "label": "退货单号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "status",
+          "label": "弃货状态",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "discard_type",
+          "label": "退货类型",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "reason",
+          "label": "退货原因",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.sold_out_info",
+      "statement": "process.invoke_activity",
+      "title": "Temu-销售管理-售罄看板信息获取",
+      "keywords": "",
+      "description": "该指令实现了在Temu平台对售罄看板数据进行获取的功能",
+      "comment": "在网页对象%web_page%中，抓取可售天数为%available_start_day%到%available_end_day%的售罄看板信息，并存入到数据表格中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/62/90/629076d7dd480d2b61657b78cf0bc821.png",
+      "function": "xbot_extensions.activity_temu_shop.sold_out_info",
+      "helpUrl": "/yddoc/rpa/zh-CN/788737790537986048",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "available_start_day",
+          "label": "起始库存可售天数",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "available_end_day",
+          "label": "结束库存可售天数",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.return_apply_data",
+      "statement": "process.invoke_activity",
+      "title": "Temu-库存管理-退货申请数据获取",
+      "keywords": "",
+      "description": "该指令实现了在Temu平台对退货申请数据进行获取的功能",
+      "comment": "在网页对象%web_page%中，将%start_time%到%end_time%的退货申请数据保存于数据表格中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/7d/1c/7d1c8f40404adc9df407c8f5c9d0ccdd.png",
+      "function": "xbot_extensions.activity_temu_shop.return_apply_data",
+      "helpUrl": "/yddoc/rpa/zh-CN/790844049976418304",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_time",
+          "label": "开始时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入开始时间，格式为YYYY-MM-dd，例:2025-01-01"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_time",
+          "label": "结束时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入结束时间，格式为YYYY-MM-dd，例:2025-01-01"
+          },
+          "category": "general"
+        },
+        {
+          "name": "odds_number",
+          "label": "申请单号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入指定的申请单号"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "SKC",
+          "label": "SKC",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入指定的SKC"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "stock",
+          "label": "备货单号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入指定的备货单号"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.return_detail_data",
+      "statement": "process.invoke_activity",
+      "title": "Temu-库存管理-退货明细数据获取",
+      "keywords": "",
+      "description": "该指令实现了在Temu平台对退货明细数据进行获取的功能",
+      "comment": "在网页对%web_page%中，将%start_time%到%end_time%的退货明细数据存于数据表格中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/d5/c0/d5c01eb41550cfae5c94ace8de894108.png",
+      "function": "xbot_extensions.activity_temu_shop.return_detail_data",
+      "helpUrl": "/yddoc/rpa/zh-CN/790845108907802624",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_time",
+          "label": "开始时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入开始时间，格式为YYYY-MM-dd，例:2025-01-01"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_time",
+          "label": "结束时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入结束时间，格式为YYYY-MM-dd，例:2025-01-01"
+          },
+          "category": "general"
+        },
+        {
+          "name": "package_num",
+          "label": "退货包裹号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入指定的快递包裹号"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "SKU",
+          "label": "SKU",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入指定的SKU"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "stock",
+          "label": "备货单号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入指定的备货单号"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data",
+          "label": "data",
+          "name": "data",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.order_export",
+      "statement": "process.invoke_activity",
+      "title": "Temu-订单管理-订单导出",
+      "keywords": "",
+      "description": null,
+      "comment": "在网页%web_page%中，进行参数的选择，将下载的订单信息保存至%file_path%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/87/c1/87c1fec33c64c6012086dd35ba5b1ea1.png",
+      "function": "xbot_extensions.activity_temu_shop.order_export",
+      "helpUrl": "/yddoc/rpa/zh-CN/866288583831670784",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "time_select",
+          "label": "时间范围",
+          "required": false,
+          "tips": "时间范围选择",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "订单的时间范围，格式为 yyyy-mm-dd~yyyy-mm-dd"
+          },
+          "category": "general"
+        },
+        {
+          "name": "order_type",
+          "label": "订单类型",
+          "required": false,
+          "tips": "订单类型",
+          "type": "list",
+          "default": "13:[]",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "订单类型，默认为卖家履约订单，参数可填 全选/卖家履约订单/合作对接仓履约订单"
+          },
+          "category": "general"
+        },
+        {
+          "name": "order_state",
+          "label": "订单状态",
+          "required": false,
+          "tips": "参数可填：\r\n\t全部/平台处理中/待发货/已发货/已签收/已取消",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "订单状态，默认为待发货"
+          },
+          "category": "general"
+        },
+        {
+          "name": "cnacled",
+          "label": "已取消的商品",
+          "required": false,
+          "tips": "已取消的商品",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "选择已取消的商品是否过滤，默认不过滤 参数可填：过滤/不过滤"
+          },
+          "category": "general"
+        },
+        {
+          "name": "export_fields",
+          "label": "导出字段",
+          "required": false,
+          "tips": "导出字段",
+          "type": "list",
+          "default": "13:[]",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "为空则不筛选，若全选可填 ['全选']，非全选则在列表中填入筛选信息"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "文件夹路径",
+          "required": false,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件保存文件夹位置，默认为桌面",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": false,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件保存的名称",
+            "dialog": {
+              "type": "SaveFile",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "over_time",
+          "label": "等待文件下载完成超时时间",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:300",
+          "editor": {
+            "kind": "spin",
+            "placeholder": "等待文件下载完成超时时间，默认300s",
+            "minValue": 20
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "输出路径",
+          "tips": "文件完整路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.switch_area",
+      "statement": "process.invoke_activity",
+      "title": "Temu-卖家中心-切换区域",
+      "keywords": "",
+      "description": "该指令实现了在Temu-卖家中心切换区域的功能",
+      "comment": "在网页对象%web_page%中，将当前的区域切换成%area%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/55/e5/55e5a45b9fe4da8e6a56eeef3be2e262.png",
+      "function": "xbot_extensions.activity_temu_shop.switch_area",
+      "helpUrl": "/yddoc/rpa/zh-CN/795933888705499136",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "area",
+          "label": "区域",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.comment_data",
+      "statement": "process.invoke_activity",
+      "title": "Temu-商品管理-评价管理数据获取",
+      "keywords": "",
+      "description": "该指令实现了对半托平台进行获取商品评价的功能",
+      "comment": "在网页对象%web_page%中，将%start_time%到%end_time%星级为%level%的评论数据保存到数据表格中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/87/c5/87c5005f3c6602274824602637337a0a.png",
+      "function": "xbot_extensions.activity_temu_shop.comment_data",
+      "helpUrl": "/yddoc/rpa/zh-CN/798517129808707584",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_time",
+          "label": "开始时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写日期，格式为YYYY-MM-DD/YYYY-MM-DD"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_time",
+          "label": "结束时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写日期，格式为YYYY-MM-DD/YYYY-MM-DD"
+          },
+          "category": "general"
+        },
+        {
+          "name": "level",
+          "label": "星级",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写评论星级，例:'1星', 多个星级则[\"1星\",'2星']"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.product_quality_dashboard",
+      "statement": "process.invoke_activity",
+      "title": "Temu-店铺品质指标获取",
+      "keywords": "",
+      "description": "该指令实现了对Temu的店铺品质指标获取",
+      "comment": "在网页对象%web_page%中，获取店铺品质指标并返回给%data_dict%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/47/8b/478b5f20924db75fdf043d84802ba79b.png",
+      "function": "xbot_extensions.activity_temu_shop.product_quality_dashboard",
+      "helpUrl": "/yddoc/rpa/zh-CN/798530482961530880",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data_dict",
+          "label": "店铺品质指标",
+          "name": "data_dict",
+          "type": "any"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.batch_participate_active",
+      "statement": "process.invoke_activity",
+      "title": "Temu-营销活动-批量报名活动",
+      "keywords": "",
+      "description": "该指令实现了对半托平台进行获取报名记录信息的功能",
+      "comment": "在网页对象%web_page%中，根据模板%file_path%批量报名活动",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/52/a0/52a0cd100d6694278faceb269044a9b8.png",
+      "function": "xbot_extensions.activity_temu_shop.batch_participate_active",
+      "helpUrl": "/yddoc/rpa/zh-CN/798896040988516352",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_path",
+          "label": "文件地址",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.get_batch_active_module",
+      "statement": "process.invoke_activity",
+      "title": "Temu-营销活动-生成批量报名活动模板",
+      "keywords": "",
+      "description": "该指令实现了对半托平台进行生成批量报名活动的模板",
+      "comment": "在网页对象%web_page%中，生成活动类型为%active_type%，选择报名活动的站点为%active_site%，商品SPU为%SPU%的批量活动模板，并保存于%file_folder%\\%file_name%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/85/7b/857b9375e63711a64969fe6ad8b3f528.png",
+      "function": "xbot_extensions.activity_temu_shop.get_batch_active_module",
+      "helpUrl": "/yddoc/rpa/zh-CN/798896080112013312",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "active_type",
+          "label": "报名活动类型",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "例：清仓甩卖，多个例：['清仓甩卖', '限时秒杀']"
+          },
+          "category": "general"
+        },
+        {
+          "name": "active_site",
+          "label": "选择活动站点",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "例：美国站，多个例：['美国站', '加拿大站']"
+          },
+          "category": "general"
+        },
+        {
+          "name": "SPU",
+          "label": "SPU",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "例：19999，多个例：['10099', '12333']"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "保存文件夹",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写保存文件夹地址",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "保存文件名",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写保存文件名"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "模板文件路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.labor_bill",
+      "statement": "process.invoke_activity",
+      "title": "账户资金-财务明细-导出列表+账务详情",
+      "keywords": "",
+      "description": "该指令实现在temu下载财务明细导出列表 + 账务详情的账单数据",
+      "comment": "在网页对象 %web_page% 中, 下载日期为%start_time%到%end_time%的导出列表 + 账务详情报表并保存至%save_path_list%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/ae/a7/aea774c52db5e757a793a6eca0da939a.png",
+      "function": "xbot_extensions.activity_temu_shop.labor_bill",
+      "helpUrl": "/yddoc/rpa/zh-CN/861217250444316672",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_time",
+          "label": "开始日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "选择报表开始日期，格式为YYYY-MM-DD"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_time",
+          "label": "结束日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "选择报表结束日期，格式为YYYY-MM-DD"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "保存文件夹",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写文件保存地址",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "capital_flow",
+          "label": "资金流向",
+          "required": false,
+          "tips": "",
+          "type": "any",
+          "default": "13:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写一个资金流向，若有多个则以列表的方式。如['xx', 'xx']"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "financial_type",
+          "label": "财务类型",
+          "required": false,
+          "tips": "",
+          "type": "any",
+          "default": "13:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写一个财务，若有多个则以列表的方式。如['xx', 'xx']"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "fund_mix",
+          "label": "收支金额最小值",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "fund_max",
+          "label": "收支金额最大值",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "report_type",
+          "label": "下载清单",
+          "required": false,
+          "tips": "为空, 表示下载全部, \"全球,美国\"表示下载全球,美国",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "为空, 表示下载全部, \"全球,美国\""
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": false,
+          "tips": "自定义文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "time_out",
+          "label": "等待下载框出现超时时间",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "save_path_list",
+          "label": "文件保存列表",
+          "name": "save_path_list",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.account_balance_collection",
+      "statement": "process.invoke_activity",
+      "title": "Temu-资金中心-账户余额数据采集",
+      "keywords": "",
+      "description": "该指令实现了Temu店铺资金中心中的账户余额数据采集功能",
+      "comment": "在网页%web_page%中进行账户余额数据采集，结果保存至%输出结果%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/54/37/54375af85fe3834d8a7f083059ed6d5f.png",
+      "function": "xbot_extensions.activity_temu_shop.account_balance_collection",
+      "helpUrl": "/yddoc/rpa/zh-CN/859620240341803008",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "输出结果",
+          "label": "输出结果",
+          "name": "输出结果",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.pending_data_screenshot",
+      "statement": "process.invoke_activity",
+      "title": "Temu-结算数据-待结算数据截图",
+      "keywords": "",
+      "description": "该指令实现了Temu结算数据模块的待结算数据自动截图的功能",
+      "comment": "在网页%web_page%中，进行待结算账户的截图，截图存放在%file_folder%文件夹下，截图完整路径保存至%file_path%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/99/58/9958eb2f023321f23053ff0d4b609172.png",
+      "function": "xbot_extensions.activity_temu_shop.pending_data_screenshot",
+      "helpUrl": "/yddoc/rpa/zh-CN/859707965554581504",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "file_folder",
+          "label": "文件夹",
+          "required": false,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "截图保存的文件夹位置",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "station",
+          "label": "站点",
+          "required": false,
+          "tips": "站点",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "站点名称，只用于截图文件的命名拼接，不进行站点转换"
+          },
+          "category": "general"
+        },
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "文件路径",
+          "tips": "截图完整路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.goods_list_download",
+      "statement": "process.invoke_activity",
+      "title": "Temu-商品管理-商品列表下载",
+      "keywords": "",
+      "description": "该指令实现了Temu店铺商品管理模块的商品列表的自动下载",
+      "comment": "在网页%web_page%中，选择商品列表类型%goods_type%进行下载，下载保存在%file_folder%文件夹下，报表名称为%file_name%，报表完整路径保存至%file_path%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/81/50/81509cf28d8fe8b1ed914c5535045ccf.png",
+      "function": "xbot_extensions.activity_temu_shop.goods_list_download",
+      "helpUrl": "/yddoc/rpa/zh-CN/862222205631148032",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "goods_type",
+          "label": "商品类型",
+          "required": false,
+          "tips": "商品列表类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "商品列表类型 参数有 全部/在售中/未发布到站点/已下架"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "文件夹路径",
+          "required": false,
+          "tips": "报表保存的文件夹",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "报表下载保存的文件夹",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": false,
+          "tips": "报表名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "报表名称",
+            "dialog": {
+              "type": "SaveFile",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "输出结果",
+          "tips": "报表完整路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.fix_web_download",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_temu_shop.fix_web_download",
+      "helpUrl": null,
+      "extension": "Temu 商家后台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.traffic_anaylise_collection",
+      "statement": "process.invoke_activity",
+      "title": "Temu-数据中心-流量分析数据采集(全托)",
+      "keywords": "",
+      "description": "该指令实现了Temu全托店铺数据中心模块的流量分析数据采集的功能",
+      "comment": "在网页%web_page%中选择%date_time%日期，进行数据采集，采集结果保存至%data%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/11/1c/111c8c7e7b25a50c3395a39a58b72010.png",
+      "function": "xbot_extensions.activity_temu_shop.traffic_anaylise_collection",
+      "helpUrl": "/yddoc/rpa/zh-CN/862230926765510656",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "date_time",
+          "label": "日期选择",
+          "required": false,
+          "tips": "日期选择",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "日期选择 参数有 昨日/今日/本周/本月/近7日/近30日"
+          },
+          "category": "general"
+        },
+        {
+          "name": "need_rating",
+          "label": "need_rating",
+          "required": false,
+          "tips": "勾选后采集实际数据与较日期相比上升或下降的比率",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "checkbox",
+            "label": "采集比率数据"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data",
+          "label": "输出结果",
+          "tips": "输出结果",
+          "name": "data",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.active_data_export",
+      "statement": "process.invoke_activity",
+      "title": "Temu-数据中心-活动数据导出(全托)",
+      "keywords": "",
+      "description": "该指令实现了Temu全托店铺的活动数据导出",
+      "comment": "在网页%web_page%中，选择时间范围%time_range%,文件保存至%file_path%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/25/17/2517754322b7338d6a09ff7a2a65c86a.png",
+      "function": "xbot_extensions.activity_temu_shop.active_data_export",
+      "helpUrl": "/yddoc/rpa/zh-CN/864316233210437632",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "time_range",
+          "label": "时间范围",
+          "required": false,
+          "tips": "时间范围",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "时间范围，格式为 yyyy-mm-dd~yyyy-mm-dd"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "文件夹路径",
+          "required": false,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "报表导出的文件夹位置",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": false,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "报表导出的名称",
+            "dialog": {
+              "type": "SaveFile",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "输出路径",
+          "tips": "文件完整路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.active_data_export_half",
+      "statement": "process.invoke_activity",
+      "title": "Temu-数据中心-活动数据导出(半托)",
+      "keywords": "",
+      "description": "该指令实现了temu半托店铺的数据导出",
+      "comment": "在网页%web_page%中，选择时间%time_range%，结果文件保存至%file_path%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/81/5e/815ee50a0c19345a5bb043400faf81ac.png",
+      "function": "xbot_extensions.activity_temu_shop.active_data_export_half",
+      "helpUrl": "/yddoc/rpa/zh-CN/864314324638539776",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "time_range",
+          "label": "时间范围",
+          "required": false,
+          "tips": "时间范围",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "时间范围， 格式为yyyy-dd-mm~yyyy-dd-mm"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "文件夹路径",
+          "required": false,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "导出的数据存储的文件夹位置",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "报表名称",
+          "required": false,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "导出文件的名称",
+            "dialog": {
+              "type": "SaveFile",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "输出路径",
+          "tips": "文件夹完整路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.declared_value",
+      "statement": "process.invoke_activity",
+      "title": "Temu-商品管理-申报价格",
+      "keywords": "",
+      "description": "该指令实现了temu店铺的价格自动申报",
+      "comment": "在网页%web_page%中，通过%two_list%数据进行申报价格",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/39/41/39414c86f5f33f8e198ef56d4f605322.png",
+      "function": "xbot_extensions.activity_temu_shop.declared_value",
+      "helpUrl": "/yddoc/rpa/zh-CN/867694419476619264",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "two_list",
+          "label": "核价信息",
+          "required": false,
+          "tips": "用户传输的数据",
+          "type": "list",
+          "default": "13:[]",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请传入一个二维列表，内容包含对应的原申报价格以及参考申报价格"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data_list",
+          "label": "data_list",
+          "tips": "返回结果",
+          "name": "data_list",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.copy_new_goods",
+      "statement": "process.invoke_activity",
+      "title": "Temu-商品复制上新",
+      "keywords": "",
+      "description": "该指令实现了temu店铺商品复制上新的功能",
+      "comment": "在网页%web_page%中，传入商品信息列表%two_info_list%，选择目标站点%station%，进行%create_or_save%操作",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/02/b8/02b811f15f5961f9bf54b61dc53fa496.png",
+      "function": "xbot_extensions.activity_temu_shop.copy_new_goods",
+      "helpUrl": "/yddoc/rpa/zh-CN/866649823716966400",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "two_info_list",
+          "label": "商品列表数据",
+          "required": false,
+          "tips": "复制信息列表",
+          "type": "list",
+          "default": "13:[]",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "二维列表，以[[sku_id,调整价格,库存量]...]的形式传入"
+          },
+          "category": "general"
+        },
+        {
+          "name": "station",
+          "label": "目标站点",
+          "required": false,
+          "tips": "复制的站点",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "复制的目标站点，默认为美国站"
+          },
+          "category": "general"
+        },
+        {
+          "name": "create_or_save",
+          "label": "操作",
+          "required": false,
+          "tips": "创建或保存草稿",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "创建或者保存草稿操作，参数 创建/保存草稿"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.traffic_analysis_collection_half",
+      "statement": "process.invoke_activity",
+      "title": "Temu-数据中心-流量分析数据采集(半托)",
+      "keywords": "",
+      "description": "该指令实现了Temu半托店铺的流量分析数据采集的功能",
+      "comment": "在网页%web_page%中，输入事件范围%date_time%，进行数据采集，结果保存至%data%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/35/f8/35f8cd3e8a7468463e9265c87fb6d33d.png",
+      "function": "xbot_extensions.activity_temu_shop.traffic_analysis_collection_half",
+      "helpUrl": "/yddoc/rpa/zh-CN/872120415915130880",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "date_time",
+          "label": "日期",
+          "required": false,
+          "tips": "日期范围",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "日期时间  参数有 实时/近1日/近7日/近30日/本周/本月"
+          },
+          "category": "general"
+        },
+        {
+          "name": "need_rating",
+          "label": "need_rating",
+          "required": false,
+          "tips": "勾选后采集实际数据与较日期相比上升或下降的比率",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "checkbox",
+            "label": "采集比率数据"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data",
+          "label": "输出结果",
+          "tips": "输出结果",
+          "name": "data",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.shipping_label_fee",
+      "statement": "process.invoke_activity",
+      "title": "Temu-账户资金-发货面单费导出(半托)",
+      "keywords": "",
+      "description": "该指令实现了Temu半托店铺的发货面单费导出功能",
+      "comment": "在网页%web_page%中，选择开始时间%start_time%和结束时间%end_time%，文件完整路径保存至%file_path%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/27/0d/270d2812df44c922f7249c378ccd6979.png",
+      "function": "xbot_extensions.activity_temu_shop.shipping_label_fee",
+      "helpUrl": "/yddoc/rpa/zh-CN/866657299259543552",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_time",
+          "label": "开始时间",
+          "required": false,
+          "tips": "开始时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "开始时间 格式为 yyyy-mm-dd"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_time",
+          "label": "结束时间",
+          "required": false,
+          "tips": "结束时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "结束时间 格式为 yyyy-mm-dd"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "文件夹路径",
+          "required": false,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件保存的文件夹位置  默认为桌面",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": false,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件保存的名称",
+            "dialog": {
+              "type": "SaveFile",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "over_time",
+          "label": "等待文件下载完成超时时间",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:300",
+          "editor": {
+            "kind": "spin",
+            "placeholder": "等待下载完成超时时间，默认 300秒",
+            "minValue": 20
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "输出路径",
+          "tips": "文件完整路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.return_label_fee",
+      "statement": "process.invoke_activity",
+      "title": "Temu-账户资金-退货面单费导出(半托)",
+      "keywords": "",
+      "description": "该指令实现了半托店铺退货面单费导出的功能",
+      "comment": "在网页%web_page%中，选择退货仓库%select_way%，输入开始时间%start_time%和结束时间%end_time%，报表完整路径保存至%file_path%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/c3/b0/c3b091e5d720dadca13d94f78b25341a.png",
+      "function": "xbot_extensions.activity_temu_shop.return_label_fee",
+      "helpUrl": "/yddoc/rpa/zh-CN/867697633412390912",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "select_way",
+          "label": "退货仓库",
+          "required": false,
+          "tips": "退至商家/第三方仓库",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "退至商家仓",
+                "value": "退至商家仓",
+                "Unicode": null
+              },
+              {
+                "display": "退至第三方仓库",
+                "value": "退至第三方仓库",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_time",
+          "label": "开始时间",
+          "required": false,
+          "tips": "开始时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "账单支持/退款时间 格式为 yyyy-mm-dd"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_time",
+          "label": "结束时间",
+          "required": false,
+          "tips": "结束时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "账单支持/退款时间 格式为 yyyy-mm-dd"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "文件夹路径",
+          "required": false,
+          "tips": "文件夹位置",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件保存的文件夹位置， 默认桌面",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": false,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件名称",
+            "dialog": {
+              "type": "SaveFile",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "输出路径",
+          "tips": "文件完整路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.overstocked_returns",
+      "statement": "process.invoke_activity",
+      "title": "Temu-销售管理-滞销品退货",
+      "keywords": "",
+      "description": "该指令实现了Temu店铺的滞销品退货的功能",
+      "comment": "在网页%web_page%中，进行数据筛选或根据列表退货，结果保存至%data%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/28/a9/28a93d9345d383e7e2c3801ee5e9af35.png",
+      "function": "xbot_extensions.activity_temu_shop.overstocked_returns",
+      "helpUrl": "/yddoc/rpa/zh-CN/866972727759212544",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "onner_list",
+          "label": "sku_id列表",
+          "required": false,
+          "tips": "自己填写的退货列表",
+          "type": "list",
+          "default": "13:[]",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "sku列表，若不想通过指令进行筛选进行退货可填写，将想要退货的sku放入列表中"
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_station_time",
+          "label": "加入站点开始时长",
+          "required": false,
+          "tips": "加入站点开始时长",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "加入站点开始时长，例： 60  默认为空"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_station_time",
+          "label": "加入站点结束时长",
+          "required": false,
+          "tips": "加入站点结束时长",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "加入站点结束时长 例 100   默认为空"
+          },
+          "category": "general"
+        },
+        {
+          "name": "sku_inventroy",
+          "label": "库存量",
+          "required": false,
+          "tips": "库存量",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "sku库存量，例 大于1 "
+          },
+          "category": "general"
+        },
+        {
+          "name": "product_state",
+          "label": "选品状态",
+          "required": false,
+          "tips": "选品状态",
+          "type": "list",
+          "default": "13:[]",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "选品状态 可多选，在列表中填写， 参数有 全部/待创建首单/已创建首单/已加入站点/已下架"
+          },
+          "category": "general"
+        },
+        {
+          "name": "date_time",
+          "label": "销量日期范围",
+          "required": false,
+          "tips": "销量日期",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "销量日期  默认今日  参数有 今日/近7天/近30天"
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_sales",
+          "label": "开始销量",
+          "required": false,
+          "tips": "开始销量",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "起始销量"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_sales",
+          "label": "结束销量",
+          "required": false,
+          "tips": "结束销量",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "终止销量"
+          },
+          "category": "general"
+        },
+        {
+          "name": "apply_reason",
+          "label": "退货原因",
+          "required": false,
+          "tips": "退货原因",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "退货原因"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data",
+          "label": "输出结果",
+          "tips": "输出结果",
+          "name": "data",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.product_quality_details",
+      "statement": "process.invoke_activity",
+      "title": "Temu-质量管理-商品品质明细数据采集",
+      "keywords": "",
+      "description": "该指令实现了Temu店铺的商品品质分数据获取的功能",
+      "comment": "在网页%web_page%中，进行品质分数据采集，结果保存至%data%中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/32/6f/326faec39514ba41c3beafef459d93a0.png",
+      "function": "xbot_extensions.activity_temu_shop.product_quality_details",
+      "helpUrl": "/yddoc/rpa/zh-CN/872126750994460672",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data",
+          "label": "输出结果",
+          "tips": "输出结果",
+          "name": "data",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.life_cycle_collection",
+      "statement": "process.invoke_activity",
+      "title": "Temu-商品管理-生命周期数据采集",
+      "keywords": "",
+      "description": "改指令实现了Temu店铺生命周期中的已下架/已发布到站点数据采集的功能",
+      "comment": "在网页中，选择商品状态进行数据采集，采集的结果保存到中",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/7a/25/7a2542b01781593007a3da706204cccf.png",
+      "function": "xbot_extensions.activity_temu_shop.life_cycle_collection",
+      "helpUrl": "/yddoc/rpa/zh-CN/872121775107076096",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "product_state",
+          "label": "product_state",
+          "required": false,
+          "tips": "商品状态",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data",
+          "label": "data",
+          "tips": "输出结果",
+          "name": "data",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.test2",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_temu_shop.test2",
+      "helpUrl": null,
+      "extension": "Temu 商家后台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.order_list_export",
+      "statement": "process.invoke_activity",
+      "title": "Temu-订单管理-订单列表导出",
+      "keywords": "",
+      "description": "该指令实现了Temu店铺的订单列表导出的功能",
+      "comment": "在网页%web_page%中，选择订单类型%order_type%以及订单状态%order_state%，保存导出的文件至%file_path%路径下",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/89/28/89283b3ce6878826390b3acb8432bc05.png",
+      "function": "xbot_extensions.activity_temu_shop.order_list_export",
+      "helpUrl": "/yddoc/rpa/zh-CN/874663819371401216",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "order_type",
+          "label": "订单类型",
+          "required": false,
+          "tips": "订单类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "卖家履约订单",
+                "value": "卖家履约订单",
+                "Unicode": null
+              },
+              {
+                "display": "合作对接仓履约订单",
+                "value": "合作对接仓履约订单",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "order_state",
+          "label": "订单状态",
+          "required": false,
+          "tips": "订单状态",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部",
+                "value": "全部",
+                "Unicode": null
+              },
+              {
+                "display": "平台处理中",
+                "value": "平台处理中",
+                "Unicode": null
+              },
+              {
+                "display": "待发货",
+                "value": "待发货",
+                "Unicode": null
+              },
+              {
+                "display": "已发货",
+                "value": "已发货",
+                "Unicode": null
+              },
+              {
+                "display": "已签收",
+                "value": "已签收",
+                "Unicode": null
+              },
+              {
+                "display": "已取消",
+                "value": "已取消",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "time_range",
+          "label": "订单创建时间",
+          "required": false,
+          "tips": "订单创建时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "订单创建时间，格式 yyyy-mm-dd~yyyy-mm-dd"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "文件夹路径",
+          "required": false,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "导出文件保存的文件夹路径",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": false,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "导出的文件保存的名称",
+            "dialog": {
+              "type": "SaveFile",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "输出路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.advertisement_data_download",
+      "statement": "process.invoke_activity",
+      "title": "Temu-数据报表-广告数据下载",
+      "keywords": "",
+      "description": "该指令实现了Temu广告平台，数据报表中的广告数据下载的功能",
+      "comment": "在网页%web_page%中，选择报表类型%report_type%与报表数据%data_type%，选择日期%date_range%进行文件下载，下载的路径保存至%file_path%下",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/8a/69/8a690f257ea6b4893b4192c18a95062a.png",
+      "function": "xbot_extensions.activity_temu_shop.advertisement_data_download",
+      "helpUrl": "/yddoc/rpa/zh-CN/876664086888898560",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "area",
+          "label": "区域",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "可填写半托店铺的区域，如 全球（除美国,欧区）"
+          },
+          "category": "general"
+        },
+        {
+          "name": "report_type",
+          "label": "报表类型",
+          "required": false,
+          "tips": "报表类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "店铺数据报表",
+                "value": "店铺数据报表",
+                "Unicode": null
+              },
+              {
+                "display": "商品数据报表",
+                "value": "商品数据报表",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "data_type",
+          "label": "数据类型",
+          "required": false,
+          "tips": "数据类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "推广出价",
+                "value": "推广出价",
+                "Unicode": null
+              },
+              {
+                "display": "全域出价",
+                "value": "全域出价",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "date_range",
+          "label": "日期",
+          "required": false,
+          "tips": "日期",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "今日",
+                "value": "今日",
+                "Unicode": null
+              },
+              {
+                "display": "昨日",
+                "value": "昨日",
+                "Unicode": null
+              },
+              {
+                "display": "近7日",
+                "value": "近7日",
+                "Unicode": null
+              },
+              {
+                "display": "近30日",
+                "value": "近30日",
+                "Unicode": null
+              },
+              {
+                "display": "自定义",
+                "value": "自定义",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "time_select",
+          "label": "自定义时间",
+          "required": false,
+          "tips": "自定义时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "若日期为自定义时填写，格式为 yyyy-mm-dd~yyyy-mm-dd"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "文件夹路径",
+          "required": false,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "报表下载保存的文件夹位置",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": false,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "导出的文件的名称",
+            "dialog": {
+              "type": "SaveFile",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "输出路径",
+          "tips": "文件完整路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.advertisement_login",
+      "statement": "process.invoke_activity",
+      "title": " Temu-广告平台-登录",
+      "keywords": "",
+      "description": "该指令实现了Temu-广告平台的跨境登录功能",
+      "comment": "在网页中，输入进行登录",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/66/f3/66f3e5534b98fa3d0af5980fa0455c51.png",
+      "function": "xbot_extensions.activity_temu_shop.advertisement_login",
+      "helpUrl": "/yddoc/rpa/zh-CN/876655845617999872",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "default_pwd",
+          "label": "default_pwd",
+          "required": false,
+          "tips": "默认登录",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "username",
+          "required": false,
+          "tips": "账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "password",
+          "required": false,
+          "tips": "密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.advertisement_switch_store",
+      "statement": "process.invoke_activity",
+      "title": "Temu-广告平台-切换店铺",
+      "keywords": "",
+      "description": "该指令实现了Temu广告平台的店铺切换功能",
+      "comment": "在网页%web_page%中，切换店铺为%store_name%店铺",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/45/47/45475f95d35b199f2097c8365a523edc.png",
+      "function": "xbot_extensions.activity_temu_shop.advertisement_switch_store",
+      "helpUrl": "/yddoc/rpa/zh-CN/876661020345163776",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "store_name",
+          "label": "店铺名称",
+          "required": false,
+          "tips": "店铺名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入切换的店铺名称"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.advertisement_switch_area",
+      "statement": "process.invoke_activity",
+      "title": "Temu-广告平台-切换站点",
+      "keywords": "",
+      "description": "该指令实现了Temu广告平台半托店铺的站点切换",
+      "comment": "在网页%web_page%中，进行站点切换，切换为%targe_area_name%站点",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/b4/06/b406393a45752fd8e74ebee57f7b3ac5.png",
+      "function": "xbot_extensions.activity_temu_shop.advertisement_switch_area",
+      "helpUrl": "/yddoc/rpa/zh-CN/876662339013369856",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "targe_area_name",
+          "label": "目标站点",
+          "required": false,
+          "tips": "站点名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.advertisement_finance_management_export",
+      "statement": "process.invoke_activity",
+      "title": "temu-广告平台-广告流水账单导出",
+      "keywords": "",
+      "description": "该指令实现了temu广告平台的财务管理模块中的广告流水导出的功能",
+      "comment": "在网页%web_page%中，选择账单类型%bill_type%进行下载，文件保存至%file_path%路径下",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/c4/be/c4be249972bc446f5c002fd540b32136.png",
+      "function": "xbot_extensions.activity_temu_shop.advertisement_finance_management_export",
+      "helpUrl": "/yddoc/rpa/zh-CN/877357107640995840",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "bill_type",
+          "label": "账单类型",
+          "required": false,
+          "tips": "账单类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "日账单",
+                "value": "日账单",
+                "Unicode": null
+              },
+              {
+                "display": "月账单",
+                "value": "月账单",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "time_select",
+          "label": "自定义时间",
+          "required": false,
+          "tips": "自定义时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "自定义时间，当账单类型为日账单时填写，格式为yyyy-mm-dd~yyyy-mm-dd"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "文件夹路径",
+          "required": false,
+          "tips": "文件夹路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "下载的账单保存的文件夹位置",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": false,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "下载的账单文件名称",
+            "dialog": {
+              "type": "SaveFile",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "输出路径",
+          "tips": "输出路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.vat_transaction_report",
+      "statement": "process.invoke_activity",
+      "title": "Temu-税务信息-增值税数据下载",
+      "keywords": "",
+      "description": "该指令实现了Temu店铺的税务信息模块的增值税下载的功能",
+      "comment": "在网页%web_page%中，选择数据范围%date_range%、数据类型%data_type%、时区%time_zone%和数据周期%time_select%进行文件下载，文件保存至%file_path%路径下",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/1a/1f/1a1f1e65d691ce6822708f1d22e54ee1.png",
+      "function": "xbot_extensions.activity_temu_shop.vat_transaction_report",
+      "helpUrl": null,
+      "extension": "Temu 商家后台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "date_range",
+          "label": "数据范围",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "欧区",
+                "value": "欧区",
+                "Unicode": null
+              },
+              {
+                "display": "全球",
+                "value": "全球",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "data_type",
+          "label": "数据类型",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "汇总",
+                "value": "汇总",
+                "Unicode": null
+              },
+              {
+                "display": "明细",
+                "value": "明细",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "time_zone",
+          "label": "时区",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "UTC-1(西一区)",
+                "value": "UTC-1(西一区)",
+                "Unicode": null
+              },
+              {
+                "display": "UTC(格林威治标准时间)",
+                "value": "UTC(格林威治标准时间)",
+                "Unicode": null
+              },
+              {
+                "display": "UTC+1(东一区)",
+                "value": "UTC+1(东一区)",
+                "Unicode": null
+              },
+              {
+                "display": "UTC+2(东二区)",
+                "value": "UTC+2(东二区)",
+                "Unicode": null
+              },
+              {
+                "display": "UTC+3(东三区)",
+                "value": "UTC+3(东三区)",
+                "Unicode": null
+              },
+              {
+                "display": "UTC+4(东四区)",
+                "value": "UTC+4(东四区)",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "time_select",
+          "label": "数据周期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "年月选择，格式惟yyyy-mm"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "文件夹路径",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "导出的文件保存的文件夹位置",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件的保存名称"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "输出路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.erp_fee_deduction_download",
+      "statement": "process.invoke_activity",
+      "title": "erp已扣费费用下载",
+      "keywords": "",
+      "description": "该指令实现了temu店铺的ERP费用管理中的已扣费费用下载的功能",
+      "comment": "在网页%web_page%中，选择费用类型%fee_type%，根据扣费时间%start_time%和%end_time%进行费用下载，文件保存至%file_path%路径下",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/68/59/68592db9ebc748bdb6c62665869b862f.png",
+      "function": "xbot_extensions.activity_temu_shop.erp_fee_deduction_download",
+      "helpUrl": "/yddoc/rpa/zh-CN/889355795521355776",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "fee_type",
+          "label": "费用类型",
+          "required": false,
+          "tips": "费用类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "商品环保费",
+                "value": "商品环保费",
+                "Unicode": null
+              },
+              {
+                "display": "物流包装环保费",
+                "value": "物流包装环保费",
+                "Unicode": null
+              },
+              {
+                "display": "代付服务费",
+                "value": "代付服务费",
+                "Unicode": null
+              },
+              {
+                "display": "授权代理费",
+                "value": "授权代理费",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_time",
+          "label": "开始时间",
+          "required": false,
+          "tips": "开始时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "扣费开始时间，格式为：yyyy-mm-dd"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_time",
+          "label": "结束时间",
+          "required": false,
+          "tips": "结束时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "扣费结束时间，格式为：yyyy-mm-dd"
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_folder",
+          "label": "文件夹路径",
+          "required": false,
+          "tips": "保存文件夹位置",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件保存文件夹路径",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "file_name",
+          "label": "文件名称",
+          "required": false,
+          "tips": "文件名称",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "文件保存名称",
+            "dialog": {
+              "type": "SaveFile",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "file_path",
+          "label": "输出路径",
+          "tips": "文件完整路径",
+          "name": "file_path",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.download_utils",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_temu_shop.download_utils",
+      "helpUrl": null,
+      "extension": "Temu 商家后台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.test_wy",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_temu_shop.test_wy",
+      "helpUrl": null,
+      "extension": "Temu 商家后台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_temu_shop.get_shop_list",
+      "statement": "process.invoke_activity",
+      "title": "Temu-获取店铺列表",
+      "keywords": "",
+      "description": "该指令实现了获取当前打开的Temu账号全部店铺列表信息的功能",
+      "comment": "在网页中，进行获取店铺列表的功能，获取的信息存放在中",
+      "icon": null,
+      "function": "xbot_extensions.activity_temu_shop.get_shop_list",
+      "helpUrl": "/yddoc/rpa/zh-CN/955704514003333120",
+      "extension": "Temu 商家后台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "shop_list",
+          "label": "shop_list",
+          "name": "shop_list",
+          "type": "list"
+        }
+      ]
+    }
+  ]
+}

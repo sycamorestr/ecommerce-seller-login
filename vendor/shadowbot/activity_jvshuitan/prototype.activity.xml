@@ -1,0 +1,28 @@
+<root>
+  <item name="xbot_extensions.activity_jvshuitan" display="activity_jvshuitan" kind="module">
+    <item.method />
+    <item.desc>聚水潭
+该指令集实现了聚水潭后台的登录, 下载报表相关操作</item.desc>
+    <item name="xbot_extensions.activity_jvshuitan.login" display="login" kind="function" help="/yddoc/rpa/zh-CN/863752309821513728">
+      <item.method />
+      <item.desc />
+      <item name="xbot_extensions.activity_jvshuitan.login.login" display="login" kind="function" help="/yddoc/rpa/zh-CN/863752309821513728">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jvshuitan.login.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/863752309821513728">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jvshuitan.login.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/863752309821513728">
+        <item.method>main(args)</item.method>
+        <item.desc>聚水潭登录
+该指令通过自动化操作登录聚水潭
+* @param web_page，
+* @param account，
+* @param password，
+</item.desc>
+      </item>
+    </item>
+  </item>
+</root>

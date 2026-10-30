@@ -1,0 +1,67 @@
+{
+  "uuid": "cc4f5b5f-4f40-483e-aff6-6879c7a9af4a",
+  "name": "聚水潭",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/27/35/27351e2e4fbda562cb1b5ad4b455aa0c.png",
+  "version": "1",
+  "tags": null,
+  "software": null,
+  "software_title": null,
+  "package_version": 8,
+  "feature_list": [
+    2,
+    8
+  ],
+  "description": "该指令集实现了聚水潭后台的登录, 下载报表相关操作",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_jvshuitan",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null
+    },
+    {
+      "name": "login",
+      "filename": "login",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity"
+    },
+    {
+      "name": "utils",
+      "filename": "utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src"
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "activity"
+    },
+    {
+      "name": "src"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [],
+  "internaldependencies": [],
+  "selectordependencies": [],
+  "internalautodependencies": [],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {},
+  "terminalTags": "win,macos,linux"
+}

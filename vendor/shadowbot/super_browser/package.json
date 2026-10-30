@@ -1,0 +1,342 @@
+{
+  "uuid": "3021f43b-d7f2-4cef-baa4-db52dee701c7",
+  "name": "紫鸟控制台",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/ae/7d/ae7d7e72ecd5815a87b39211b560ce0a.png",
+  "version": "1",
+  "tags": "official",
+  "software": null,
+  "software_title": null,
+  "package_version": 8,
+  "feature_list": [
+    2,
+    8
+  ],
+  "description": "该指令集实现了紫鸟控制台的一些高频操作，如进入账号管理页面、打开店铺等待",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "super_browser",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "A1 进入账号管理页面",
+      "filename": "to_account_page",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "接口",
+      "enableCopilot": false
+    },
+    {
+      "name": "A2 打开店铺",
+      "filename": "open_store",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "接口",
+      "enableCopilot": false
+    },
+    {
+      "name": "api",
+      "filename": "api",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "核心实现",
+      "enableCopilot": false
+    },
+    {
+      "name": "A3 获取下载文件保存位置",
+      "filename": "get_download_path",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "接口",
+      "enableCopilot": false
+    },
+    {
+      "name": "A4 紫鸟登录",
+      "filename": "process1",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "接口",
+      "enableCopilot": false
+    },
+    {
+      "name": "A5 紫鸟文件下载",
+      "filename": "process2",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "接口",
+      "enableCopilot": false
+    },
+    {
+      "name": "A6 获取店铺列表",
+      "filename": "process6",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "接口",
+      "enableCopilot": false
+    },
+    {
+      "name": "download_api",
+      "filename": "download_api",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "核心实现",
+      "enableCopilot": false
+    },
+    {
+      "name": "A7 上传文件到紫鸟",
+      "filename": "process7",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "接口",
+      "enableCopilot": false
+    },
+    {
+      "name": "ziniao_v6",
+      "filename": "ziniao_v6",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "核心实现",
+      "enableCopilot": false
+    },
+    {
+      "name": "utils_v6",
+      "filename": "utils_v6",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "核心实现",
+      "enableCopilot": false
+    },
+    {
+      "name": "ziniao_v5",
+      "filename": "ziniao_v5",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "核心实现",
+      "enableCopilot": false
+    },
+    {
+      "name": "create_instance_api",
+      "filename": "create_instance_api",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_user_list_api",
+      "filename": "get_user_list_api",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_store_list_api",
+      "filename": "get_store_list_api",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "open_store_api",
+      "filename": "open_store_api",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "close_store_api",
+      "filename": "close_store_api",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "ziniaoapi",
+      "filename": "ziniaoapi",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    },
+    {
+      "name": "ziniaogui",
+      "filename": "ziniaogui",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    },
+    {
+      "name": "close_app_api",
+      "filename": "close_app_api",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "utils_uia",
+      "filename": "utils_uia",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "gui_operate",
+      "enableCopilot": false
+    },
+    {
+      "name": "ziniao_v5_uia",
+      "filename": "ziniao_v5_uia",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "gui_operate",
+      "enableCopilot": false
+    },
+    {
+      "name": "ziniao_v6_uia",
+      "filename": "ziniao_v6_uia",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "gui_operate",
+      "enableCopilot": false
+    },
+    {
+      "name": "api_uia",
+      "filename": "api_uia",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "gui_operate",
+      "enableCopilot": false
+    },
+    {
+      "name": "A2 打开店铺 - uia",
+      "filename": "process9",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "接口",
+      "enableCopilot": false
+    },
+    {
+      "name": "get_all_zn_info",
+      "filename": "get_all_zn_info",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "create_account",
+      "filename": "create_account",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "delete_account",
+      "filename": "delete_account",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "store_auth_add",
+      "filename": "store_auth_add",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "store_auth_delete",
+      "filename": "store_auth_delete",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "query_department_list",
+      "filename": "query_department_list",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "query_role_list",
+      "filename": "query_role_list",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "test_uia",
+      "filename": "test_uia",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "gui_operate",
+      "enableCopilot": false
+    },
+    {
+      "name": "uia",
+      "filename": "uia",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "接口"
+    },
+    {
+      "name": "核心实现"
+    },
+    {
+      "name": "activity"
+    },
+    {
+      "name": "src"
+    },
+    {
+      "name": "gui_operate"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [
+    "requests==2.31.0",
+    "ziniao-oapi==0.1.1",
+    "rsa==4.9",
+    "pycryptodome==3.22.0",
+    "psutil==7.0.0",
+    "uiautomation==2.0.24"
+  ],
+  "internaldependencies": [],
+  "selectordependencies": [],
+  "internalautodependencies": [],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {},
+  "terminalTags": "win"
+}

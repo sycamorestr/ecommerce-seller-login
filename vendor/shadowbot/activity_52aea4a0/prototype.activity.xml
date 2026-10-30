@@ -1,0 +1,18 @@
+<root>
+  <item name="xbot_extensions.activity_52aea4a0" display="activity_52aea4a0" kind="module">
+    <item.method />
+    <item.desc>巨量纵横
+该指令集实现巨量引擎后台登录的功能</item.desc>
+    <item name="xbot_extensions.activity_52aea4a0.process1" display="process1" kind="function" help="/yddoc/rpa/zh-CN/712499558786961408">
+      <item.method>process1(邮箱账号,邮箱密码,图鉴账号,图鉴密码,是否退出已登录)</item.method>
+      <item.desc>巨量引擎登录
+巨量纵横登录
+* @param 邮箱账号，
+* @param 邮箱密码，
+* @param 图鉴账号，
+* @param 图鉴密码，
+* @param 是否退出已登录，
+</item.desc>
+    </item>
+  </item>
+</root>

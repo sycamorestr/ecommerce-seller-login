@@ -1,0 +1,1692 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_966451c9.main",
+      "statement": "process.invoke_activity",
+      "title": "抖店操作",
+      "keywords": "",
+      "description": "抖店相关的指令集，登录、时间选择等",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/6a/47/6a479b4c3a8774a3c6485d5ad208e42f.png",
+      "function": "xbot_extensions.activity_966451c9.main",
+      "helpUrl": null,
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店多店铺登录",
+      "statement": "process.invoke_activity",
+      "title": "抖店多店铺登录",
+      "keywords": "",
+      "description": "用于抖店登录操作（注意：该指令会产生\"影刀验证码-云码\"识别费用，调用\"通用单图滑块类型1\"）",
+      "comment": "登录抖店并进入%店铺名称%店铺",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/d1/ca/d1cad3c7e82f906d182491bd97605258.png",
+      "function": "xbot_extensions.activity_966451c9.process1",
+      "helpUrl": "/yddoc/rpa/zh-CN/711774957463900160",
+      "extension": "抖店操作",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "浏览器对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "输入的浏览器对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "选填  不填默认为谷歌浏览器"
+          },
+          "category": "general"
+        },
+        {
+          "name": "账号",
+          "label": "账号",
+          "required": false,
+          "tips": "请输入抖店邮箱登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "密码",
+          "label": "密码",
+          "required": false,
+          "tips": "请输入抖店邮箱登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "店铺名称",
+          "label": "店铺名称",
+          "required": false,
+          "tips": "请输入目标店铺名称全称；同时支持输入数字来选择第几个店铺进入。（单店铺账号无需进行店铺选择，请勿填写此项）",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "目标店铺全称 / 店铺索引（例：1、2）单店铺账号请勿填写"
+          },
+          "category": "general"
+        },
+        {
+          "name": "是否退出已登录",
+          "label": "是否退出已登录",
+          "required": false,
+          "tips": "勾选表示退出已登录店铺，不勾选反之",
+          "type": "bool",
+          "default": "13:True",
+          "editor": {
+            "kind": "checkbox",
+            "label": "是否退出已登录"
+          },
+          "category": "general"
+        },
+        {
+          "name": "图鉴账号",
+          "label": "图鉴账号",
+          "required": false,
+          "tips": "请输入您的图鉴账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "图鉴密码",
+          "label": "图鉴密码",
+          "required": false,
+          "tips": "请输入您的图鉴密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "加载超时时间",
+          "label": "加载超时时间",
+          "required": false,
+          "tips": "包含网页加载超时时间、等待元素超时时间等，请根据网速情况自行调整",
+          "type": "str",
+          "default": "10:20",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "验证重试次数",
+          "label": "验证重试次数",
+          "required": false,
+          "tips": "验证码的重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "web_page",
+          "label": "保存网页对象至",
+          "tips": "保存登录后的抖店网页对象至",
+          "name": "web_page",
+          "type": "xbot._web.browser.WebBrowser"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.utils",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.utils",
+      "helpUrl": null,
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店售后工作台时间选择",
+      "statement": "process.invoke_activity",
+      "title": "抖店售后工作台时间选择",
+      "keywords": "",
+      "description": "抖店售后工作台的时间选择",
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.process3",
+      "helpUrl": "/yddoc/rpa/zh-CN/711771858592542720",
+      "extension": "抖店操作",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "筛选类别",
+          "label": "筛选类别",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:申请时间",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "申请时间",
+                "value": "申请时间",
+                "Unicode": null
+              },
+              {
+                "display": "完结时间",
+                "value": "完结时间",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "时间类别",
+          "label": "时间类别",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:手动时间输入",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "手动时间输入",
+                "value": "手动时间输入",
+                "Unicode": null
+              },
+              {
+                "display": "今日",
+                "value": "今日",
+                "Unicode": null
+              },
+              {
+                "display": "昨日",
+                "value": "昨日",
+                "Unicode": null
+              },
+              {
+                "display": "近7日",
+                "value": "近7日",
+                "Unicode": null
+              },
+              {
+                "display": "近30日",
+                "value": "近30日",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "开始日期",
+          "label": "开始日期",
+          "required": false,
+          "tips": "2022/11/01 00:00:00  如果不是手动输入可以选择不填",
+          "type": "str",
+          "default": "10:2026/08/03 00:00:00",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "2022/11/01 00:00:00"
+          },
+          "category": "general"
+        },
+        {
+          "name": "结束日期",
+          "label": "结束日期",
+          "required": false,
+          "tips": "2022/11/19 23:59:59 如果不是手动输入可以选择不填",
+          "type": "str",
+          "default": "10:2026/09/05 23:59:59",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "2022/11/19 23:59:59"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店订单管理时间选择",
+      "statement": "process.invoke_activity",
+      "title": "抖店订单管理时间选择",
+      "keywords": "",
+      "description": "抖店订单管理处的时间选择",
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.process4",
+      "helpUrl": "/yddoc/rpa/zh-CN/711773102977552384",
+      "extension": "抖店操作",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "筛选类别",
+          "label": "筛选类别",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:下单时间",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "下单时间",
+                "value": "下单时间",
+                "Unicode": null
+              },
+              {
+                "display": "完成时间",
+                "value": "完成时间",
+                "Unicode": null
+              },
+              {
+                "display": "付款时间",
+                "value": "付款时间",
+                "Unicode": null
+              },
+              {
+                "display": "预约发货时间",
+                "value": "预约发货时间",
+                "Unicode": null
+              },
+              {
+                "display": "建议发货时间",
+                "value": "建议发货时间",
+                "Unicode": null
+              },
+              {
+                "display": "预约送达时间",
+                "value": "预约送达时间",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "时间类别",
+          "label": "时间类别",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:手动时间输入",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "手动时间输入",
+                "value": "手动时间输入",
+                "Unicode": null
+              },
+              {
+                "display": "今日",
+                "value": "今日",
+                "Unicode": null
+              },
+              {
+                "display": "昨日",
+                "value": "昨日",
+                "Unicode": null
+              },
+              {
+                "display": "近7日",
+                "value": "近7日",
+                "Unicode": null
+              },
+              {
+                "display": "近30日",
+                "value": "近30日",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "开始日期",
+          "label": "开始日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:2024/04/04 23:59:59",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "2022/11/01 00:00:00"
+          },
+          "category": "general"
+        },
+        {
+          "name": "结束日期",
+          "label": "结束日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:2024/04/10 23:59:59",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "2022/11/19 23:59:59"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店商家助手隐藏显示",
+      "statement": "process.invoke_activity",
+      "title": "抖店商家助手隐藏显示",
+      "keywords": "",
+      "description": "抖店页面旁边小图标隐藏和显示",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/5e/a7/5ea7be9454e6000c6773f51919cb22b4.png",
+      "function": "xbot_extensions.activity_966451c9.process5",
+      "helpUrl": "/yddoc/rpa/zh-CN/711774214392889344",
+      "extension": "抖店操作",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "隐藏显示",
+          "label": "隐藏显示",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "隐藏",
+                "value": "隐藏",
+                "Unicode": null
+              },
+              {
+                "display": "显示",
+                "value": "显示",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店资金日账单下载",
+      "statement": "process.invoke_activity",
+      "title": "抖店资金日账单下载",
+      "keywords": "",
+      "description": "抖店资金-资金账单-日账单下载",
+      "comment": "批量下载抖店资金-资金账单-日账单",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.process6",
+      "helpUrl": null,
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "账户类型",
+          "label": "账户类型",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:全部",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部",
+                "value": "全部",
+                "Unicode": null
+              },
+              {
+                "display": "微信",
+                "value": "微信",
+                "Unicode": null
+              },
+              {
+                "display": "支付宝-生效中",
+                "value": "支付宝-生效中",
+                "Unicode": null
+              },
+              {
+                "display": "支付宝",
+                "value": "支付宝",
+                "Unicode": null
+              },
+              {
+                "display": "抖音支付",
+                "value": "抖音支付",
+                "Unicode": null
+              },
+              {
+                "display": "聚合支付",
+                "value": "聚合支付",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "开始时间",
+          "label": "开始时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:2023-01-01",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "结束时间",
+          "label": "结束时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:2023-01-05",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "存放文件夹路径",
+          "label": "存放文件夹路径",
+          "required": false,
+          "tips": "",
+          "type": "directory",
+          "default": "13:r\"C:\\Users\\SHADOWBOT\\Desktop\\新建文件夹\"",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "表格地址列表",
+          "label": "表格地址列表",
+          "name": "表格地址列表",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店资金月账单下载",
+      "statement": "process.invoke_activity",
+      "title": "抖店资金月账单下载",
+      "keywords": "",
+      "description": "抖店资金-资金账单-月账单下载",
+      "comment": "批量下载抖店资金-资金账单-月账单",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.process7",
+      "helpUrl": null,
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "账户类型",
+          "label": "账户类型",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:全部",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部",
+                "value": "全部",
+                "Unicode": null
+              },
+              {
+                "display": "微信",
+                "value": "微信",
+                "Unicode": null
+              },
+              {
+                "display": "支付宝-生效中",
+                "value": "支付宝-生效中",
+                "Unicode": null
+              },
+              {
+                "display": "支付宝",
+                "value": "支付宝",
+                "Unicode": null
+              },
+              {
+                "display": "抖音支付",
+                "value": "抖音支付",
+                "Unicode": null
+              },
+              {
+                "display": "聚合支付",
+                "value": "聚合支付",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "开始月",
+          "label": "开始月",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:2022-01",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "结束月",
+          "label": "结束月",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:2022-02",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "存放文件夹路径",
+          "label": "存放文件夹路径",
+          "required": false,
+          "tips": "",
+          "type": "directory",
+          "default": "13:r\"C:\\Users\\SHADOWBOT\\Desktop\\新建文件夹\"",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "表格地址列表",
+          "label": "表格地址列表",
+          "name": "表格地址列表",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店店铺切换",
+      "statement": "process.invoke_activity",
+      "title": "抖店店铺切换",
+      "keywords": "",
+      "description": "抖店登录状态下，切换店铺",
+      "comment": "将抖店%网页对象%页面切换至%店铺名称%店铺",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/6f/67/6f673efd2a913c9cc91bcbf83a1cd3bb.png",
+      "function": "xbot_extensions.activity_966451c9.process13",
+      "helpUrl": "/yddoc/rpa/zh-CN/889700703258673152",
+      "extension": "抖店操作",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "请传入需要切换店铺的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "店铺名称",
+          "label": "店铺名称",
+          "required": false,
+          "tips": "请输入目标店铺名称全称（单店铺账号无需进行店铺选择，请勿填写此项）",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请输入店铺名称"
+          },
+          "category": "general"
+        },
+        {
+          "name": "全局超时时间",
+          "label": "全局超时时间",
+          "required": false,
+          "tips": "包含网页加载超时时间、等待元素超时时间等，请根据网速情况自行调整",
+          "type": "str",
+          "default": "10:20",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店商家体验分",
+      "statement": "process.invoke_activity",
+      "title": "抖店商家体验分",
+      "keywords": "",
+      "description": "新版抖店商家体验分数据获取",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/a1/28/a1288677e4935c575e970629b757f21f.png",
+      "function": "xbot_extensions.activity_966451c9.process14",
+      "helpUrl": "/yddoc/rpa/zh-CN/889700719385772032",
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "数据字典",
+          "label": "数据字典",
+          "name": "数据字典",
+          "type": "dict"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店订单管理时间选择-新版",
+      "statement": "process.invoke_activity",
+      "title": "抖店订单管理时间选择-新版",
+      "keywords": "",
+      "description": null,
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.process15",
+      "helpUrl": null,
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "筛选类别",
+          "label": "筛选类别",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:下单时间",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "下单时间",
+                "value": "下单时间",
+                "Unicode": null
+              },
+              {
+                "display": "完成时间",
+                "value": "完成时间",
+                "Unicode": null
+              },
+              {
+                "display": "预约发货时间",
+                "value": "预约发货时间",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "时间类别",
+          "label": "时间类别",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:手动时间输入",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "手动时间输入",
+                "value": "手动时间输入",
+                "Unicode": null
+              },
+              {
+                "display": "今日",
+                "value": "今日",
+                "Unicode": null
+              },
+              {
+                "display": "昨日",
+                "value": "昨日",
+                "Unicode": null
+              },
+              {
+                "display": "近7日",
+                "value": "近7日",
+                "Unicode": null
+              },
+              {
+                "display": "近30日",
+                "value": "近30日",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "开始日期",
+          "label": "开始日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:2022/11/01 00:00:00",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "结束日期",
+          "label": "结束日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:2022/11/19 23:59:59",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店店铺切换（新）",
+      "statement": "process.invoke_activity",
+      "title": "抖店店铺切换",
+      "keywords": "",
+      "description": "用于抖店页面的切换店铺操作",
+      "comment": "将抖店%网页对象%页面切换至%目标店铺名称%店铺",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/89/db/89db984577de1e246ca96ebfbe7f46a5.png",
+      "function": "xbot_extensions.activity_966451c9.process17",
+      "helpUrl": null,
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "请传入需要切换店铺的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "目标店铺名称",
+          "label": "目标店铺名称",
+          "required": false,
+          "tips": "请输入目标店铺名称全称（单店铺账号无需进行店铺选择，请勿填写此项）",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "目标店铺全称 / 店铺索引"
+          },
+          "category": "general"
+        },
+        {
+          "name": "全局超时时间",
+          "label": "全局超时时间",
+          "required": false,
+          "tips": "包含网页加载超时时间、等待元素超时时间等，请根据网速情况自行调整",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.验证码-点选坐标",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.process20",
+      "helpUrl": null,
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "tt_account",
+          "label": "tt_account",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "tt_password",
+          "label": "tt_password",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "time_out",
+          "label": "time_out",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:20",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.退出已登录",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.process21",
+      "helpUrl": null,
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "time_out",
+          "label": "time_out",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:20",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.飞鸽工作台去除开屏广告",
+      "statement": "process.invoke_activity",
+      "title": "飞鸽工作台去除开屏广告",
+      "keywords": "",
+      "description": "用于去除跳转飞鸽工作台后弹出的开屏广告",
+      "comment": "去除%网页对象%页面的飞鸽工作台开屏广告",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/03/d8/03d8e8019145a8d350aedf969f3945f5.png",
+      "function": "xbot_extensions.activity_966451c9.process22",
+      "helpUrl": "/yddoc/rpa/zh-CN/712236965826392064",
+      "extension": "抖店操作",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "请传入需要去除广告的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "全局超时时间",
+          "label": "全局超时时间",
+          "required": false,
+          "tips": "包含网页加载超时时间、等待元素超时时间等，请根据网速情况自行调整",
+          "type": "str",
+          "default": "10:20",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.测试调用模块",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.process23",
+      "helpUrl": null,
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店时分秒日期选择",
+      "statement": "process.invoke_activity",
+      "title": "抖店时分秒日期选择",
+      "keywords": "",
+      "description": "抖店平台带时分秒处的时间选择",
+      "comment": "点击%开始日期触发器%，将%开始时间%拆分成列表，之后进行一一匹配",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.process25",
+      "helpUrl": "/yddoc/rpa/zh-CN/889700685437075456",
+      "extension": "抖店操作",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "开始日期触发器",
+          "label": "开始日期触发器",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "开始时间",
+          "label": "开始时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请以为-隔开，如2026-08-06-00-00-00"
+          },
+          "category": "general"
+        },
+        {
+          "name": "结束时间",
+          "label": "结束时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请以为-隔开，如2026-08-06-00-00-00"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店商家体验分(新版)",
+      "statement": "process.invoke_activity",
+      "title": "抖店商家体验分(新版)",
+      "keywords": "",
+      "description": null,
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.process26",
+      "helpUrl": null,
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "数据字典",
+          "label": "数据字典",
+          "name": "数据字典",
+          "type": "dict"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.DSR_requests",
+      "statement": "process.invoke_activity",
+      "title": "抖店商家体验分",
+      "keywords": "",
+      "description": "根据接口请求的方式获取抖店商家体验分内容",
+      "comment": "在%web_page%网页对抖店商家体验分进行抓取，并返回给%数据字典%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/88/fe/88fe6e3228636f7b6ef372a957aa6f2b.png",
+      "function": "xbot_extensions.activity_966451c9.DSR_requests",
+      "helpUrl": "/yddoc/rpa/zh-CN/711921129901428736",
+      "extension": "抖店操作",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data_dict",
+          "label": "数据字典",
+          "name": "数据字典",
+          "type": "dict"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.get_screen",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.get_screen",
+      "helpUrl": null,
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店体验分",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.process27",
+      "helpUrl": null,
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店评价管理时间选择",
+      "statement": "process.invoke_activity",
+      "title": "抖店评价管理时间选择",
+      "keywords": "",
+      "description": "对抖店-订单-评价管理的时间进行选择",
+      "comment": "点开%开始日期触发器%根据%开始时间%选择后，再点击%结束日期触发器%根据%结束时间%进行选择",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.process30",
+      "helpUrl": "/yddoc/rpa/zh-CN/712196673463119872",
+      "extension": "抖店操作",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "开始时间",
+          "label": "开始时间",
+          "required": false,
+          "tips": "格式为YYYY-MM-DD_HH-MM-SS",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "结束时间",
+          "label": "结束时间",
+          "required": false,
+          "tips": "格式为YYYY-MM-DD_HH-MM-SS",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "开始日期触发器",
+          "label": "开始日期触发器",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "结束日期触发器",
+          "label": "结束日期触发器",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.cuopon_date_select",
+      "statement": "process.invoke_activity",
+      "title": "抖店优惠券日期选择",
+      "keywords": "",
+      "description": "该指令实现了对抖店创建优惠券的日期进行了自动选择",
+      "comment": "在网页%web_page%选择日期%start_time%到%end_time%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/75/7b/757b60e976d34c02664ffeac47a98de7.png",
+      "function": "xbot_extensions.activity_966451c9.cuopon_date_select",
+      "helpUrl": "/yddoc/rpa/zh-CN/786524476194193408",
+      "extension": "抖店操作",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_time",
+          "label": "开始时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "格式为YYYY-MM-DD hh:mm:ss,例：2025-01-01 12:59:34"
+          },
+          "category": "general"
+        },
+        {
+          "name": "end_time",
+          "label": "结束时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "格式为YYYY-MM-DD hh:mm:ss,例：2025-01-01 12:59:34"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店店铺切换(ID)",
+      "statement": "process.invoke_activity",
+      "title": "抖店店铺切换(ID)",
+      "keywords": "",
+      "description": "该指令实现了基于ID进行抖店店铺切换",
+      "comment": "在网页%网页对象%中，切换店铺ID为%店铺ID%的抖店店铺",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.process35",
+      "helpUrl": "/yddoc/rpa/zh-CN/904564372277456896",
+      "extension": "抖店操作",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": true,
+          "tips": "网页对象",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "店铺ID",
+          "label": "店铺ID",
+          "required": false,
+          "tips": "店铺ID",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": ""
+          },
+          "category": "general"
+        },
+        {
+          "name": "全局超时时间",
+          "label": "全局超时时间",
+          "required": false,
+          "tips": "全局超时时间",
+          "type": "str",
+          "default": "10:20",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.抖店店铺切换(ID)(新)",
+      "statement": "process.invoke_activity",
+      "title": "子流程2",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_966451c9.process36",
+      "helpUrl": null,
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "店铺ID",
+          "label": "店铺ID",
+          "required": false,
+          "tips": "店铺ID",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "全局超时时间",
+          "label": "全局超时时间",
+          "required": false,
+          "tips": "超时时间",
+          "type": "str",
+          "default": "10:20",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_966451c9.测试 SD抖店售后工作台时间选择",
+      "statement": "process.invoke_activity",
+      "title": "子流程2",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": null,
+      "function": "xbot_extensions.activity_966451c9.process37",
+      "helpUrl": null,
+      "extension": "抖店操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    }
+  ]
+}

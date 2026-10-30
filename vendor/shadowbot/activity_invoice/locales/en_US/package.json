@@ -1,0 +1,108 @@
+{
+  "uuid": "34b25216-7757-49e3-b81a-4b6a6bbeea88",
+  "name": "Digital Invoice (extended) (Mengbo)",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/22/d9/22d94131726eac27b9dfc88d4a342121.png",
+  "version": "1",
+  "tags": null,
+  "software": null,
+  "software_title": null,
+  "package_version": 2,
+  "feature_list": [
+    2
+  ],
+  "description": "This instruction set enables API-based invoicing through third-party platform integration",
+  "instruction": "",
+  "use_latest_pip": false,
+  "videoName": "",
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_invoice",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null
+    },
+    {
+      "name": "api_enum",
+      "filename": "api_enum",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src"
+    },
+    {
+      "name": "tax_invoice_api",
+      "filename": "tax_invoice_api",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src"
+    },
+    {
+      "name": "tax_invoice_auth_login",
+      "filename": "tax_invoice_auth_login",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity"
+    },
+    {
+      "name": "tax_digital_invoicing",
+      "filename": "tax_digital_invoicing",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity"
+    },
+    {
+      "name": "tax_invocie_order_query",
+      "filename": "tax_invocie_order_query",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity"
+    },
+    {
+      "name": "tax_digital_invoicing_more",
+      "filename": "tax_digital_invoicing_more",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity"
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "src"
+    },
+    {
+      "name": "activity"
+    }
+  ],
+  "variables": [
+    {
+      "name": "obj_api",
+      "type": "any",
+      "value": "None",
+      "kind": "Expression"
+    }
+  ],
+  "external_dependencies": [
+    "requests==2.31.0"
+  ],
+  "internaldependencies": [],
+  "selectordependencies": [],
+  "internalautodependencies": [],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {
+    "gifUrl": null,
+    "videoUrl": "",
+    "imageUrl": "",
+    "imageName": ""
+  },
+  "terminalTags": null
+}

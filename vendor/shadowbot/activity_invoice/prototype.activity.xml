@@ -1,0 +1,123 @@
+<root>
+  <item name="xbot_extensions.activity_invoice" display="activity_invoice" kind="module">
+    <item.method />
+    <item.desc>数电开票扩展(蒙柏)
+该指令集通过集成三方平台实现了接口开票的功能</item.desc>
+    <item name="xbot_extensions.activity_invoice.tax_invoice_auth_login" display="tax_invoice_auth_login" kind="function" help="/yddoc/rpa/zh-CN/729613723800752128">
+      <item.method />
+      <item.desc />
+      <item name="xbot_extensions.activity_invoice.tax_invoice_auth_login.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/729613723800752128">
+        <item.method>main(args)</item.method>
+        <item.desc>电子税局登录
+该指令实现了通过三方平台蒙柏登录税局的功能
+* @param app_id，
+* @param secret，
+* @param tax_account，
+* @param tax_password，
+* @param nsrrbh，
+* @param qr_code_type，
+* @param is_qr_code，
+* @return invoice_instance，
+</item.desc>
+      </item>
+      <item name="xbot_extensions.activity_invoice.tax_invoice_auth_login.init_api" display="init_api" kind="function" help="/yddoc/rpa/zh-CN/729613723800752128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_invoice.tax_invoice_auth_login.input_sms_code" display="input_sms_code" kind="function" help="/yddoc/rpa/zh-CN/729613723800752128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_invoice.tax_invoice_auth_login.check_qr_code_status" display="check_qr_code_status" kind="function" help="/yddoc/rpa/zh-CN/729613723800752128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_invoice.tax_invoice_auth_login.download_qr_code(code_type) -&gt; " display="download_qr_code(code_type) -&gt; " kind="function" help="/yddoc/rpa/zh-CN/729613723800752128">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_invoice.tax_digital_invoicing" display="tax_digital_invoicing" kind="function" help="/yddoc/rpa/zh-CN/729613860150968320">
+      <item.method />
+      <item.desc />
+      <item name="xbot_extensions.activity_invoice.tax_digital_invoicing.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/729613860150968320">
+        <item.method>main(args)</item.method>
+        <item.desc>数电发票开具(单行摘要)
+该指令实现了在蒙柏三方平台自动开票的功能
+* @param invoice_instance，
+* @param kpxm，货物名称，必须与项目信息
+* @param ghfqylx，企业/机关事业单位/个人
+* @param ghfmc，
+* @param ghf_nsrsbh，专票且购买方企业类型为企业时为必填
+* @param ghf_dz，
+* @param ghf_dh，
+* @param ghf_yh，
+* @param ghf_zh，
+* @param sfzsgmfyhzh，Y/N  不填默认Y
+* @param sfzsxsfyhzh，Y/N  不填默认Y
+* @param fpzl_dm，增值税专用发票/普通发票
+* @param xsfzrr_bz，Y/N 不填默认 N
+* @param gmfzrr_bz，Y/N 不填默认 N  企业：N, 个人：Y
+* @param kphjje，小数点后 2 位，以元为单位
+* @param xh，多明细行时序号需保证由
+* @param fphxz，正常商品行/折扣行/被折扣行
+* @param xmmc，项目名称前必须加商品简称，格式：*项目简称*项目名称。 只允许对单行商品进行折扣，折扣行紧挨被折行之后，折扣行的商品名称、商品编码与被折行相同。
+* @param xmdw，
+* @param xmsl，小数点后 8 位
+* @param hsbz，表示项目单价和项目金额是否含税。
+* @param spbm，商品编码，不足位时，请自行补 0； 电子发票清单发票冲红时，传入蓝票对应的发票明细数据
+* @param yhzcbs，默认不使用   使用/不使用
+* @param xmje，小数点后 2 位，以元为单位精确到分。  等于=单价*数量，根据含税标志，确定此金额是否为含税金额。
+* @param xmdj，
+* @param sl，保留两位有效小数。如果税率为 0，表示免税（正常税率以小数形式给出，如0.17）。最大 8 字符
+* @param se，小数点后 2 位，以元为单位精确到分。
+* @param ggxh，规格型号
+* @param lslbs，
+* @param bz，备注
+* @return invoiced_result，
+</item.desc>
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_invoice.tax_invocie_order_query" display="tax_invocie_order_query" kind="function" help="/yddoc/rpa/zh-CN/729613802108559360">
+      <item.method />
+      <item.desc />
+      <item name="xbot_extensions.activity_invoice.tax_invocie_order_query.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/729613802108559360">
+        <item.method>main(args)</item.method>
+        <item.desc>开票信息查询
+该指令实现了在蒙柏三方平台查询开票信息的功能
+* @param invoice_instance，
+* @param kplsh，
+* @return invoice_detail，
+</item.desc>
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_invoice.tax_digital_invoicing_more" display="tax_digital_invoicing_more" kind="function" help="/yddoc/rpa/zh-CN/863753686736019456">
+      <item.method />
+      <item.desc />
+      <item name="xbot_extensions.activity_invoice.tax_digital_invoicing_more.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/863753686736019456">
+        <item.method>main(args)</item.method>
+        <item.desc>数电发票开具(多行摘要)
+该指令实现了在蒙柏三方平台自动开票的功能
+* @param invoice_instance，
+* @param kpxm，货物名称，必须与项目信息
+* @param ghfqylx，企业/机关事业单位/个人
+* @param ghfmc，
+* @param ghf_nsrsbh，专票且购买方企业类型为企业时为必填
+* @param ghf_dz，
+* @param ghf_dh，
+* @param ghf_yh，
+* @param ghf_zh，
+* @param sfzsgmfyhzh，Y/N  不填默认Y
+* @param sfzsxsfyhzh，Y/N  不填默认Y
+* @param fpzl_dm，增值税专用发票/普通发票
+* @param xsfzrr_bz，Y/N 不填默认 N
+* @param gmfzrr_bz，Y/N 不填默认 N  企业：N, 个人：Y
+* @param kphjje，小数点后 2 位，以元为单位
+* @param bz，备注
+* @param fpkjxx_xmxxs，
+* @return invoiced_result，
+</item.desc>
+      </item>
+    </item>
+  </item>
+</root>

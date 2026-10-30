@@ -1,0 +1,147 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_52aea4a0.main",
+      "statement": "process.invoke_activity",
+      "title": "巨量纵横",
+      "keywords": "",
+      "description": "该指令集实现巨量引擎后台登录的功能",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/01/94/0194415db5d900c86da5ff50140cb208.png",
+      "function": "xbot_extensions.activity_52aea4a0.main",
+      "helpUrl": null,
+      "extension": "巨量纵横",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_52aea4a0.巨量引擎登录",
+      "statement": "process.invoke_activity",
+      "title": "巨量引擎登录",
+      "keywords": "",
+      "description": "巨量纵横登录",
+      "comment": "在网页巨量纵横登录%邮箱账号%账号",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_52aea4a0.process1",
+      "helpUrl": "/yddoc/rpa/zh-CN/712499558786961408",
+      "extension": "巨量纵横",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "邮箱账号",
+          "label": "邮箱账号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请输入邮箱账号"
+          },
+          "category": "general"
+        },
+        {
+          "name": "邮箱密码",
+          "label": "邮箱密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请输入邮箱密码"
+          },
+          "category": "general"
+        },
+        {
+          "name": "是否退出已登录",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:True",
+          "editor": {
+            "kind": "checkbox",
+            "label": "是否退出已登录"
+          },
+          "category": "general"
+        },
+        {
+          "name": "图鉴账号",
+          "label": "图鉴账号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "如果使用自己图鉴账号，请在此输入图鉴账号"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "图鉴密码",
+          "label": "图鉴密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "如果使用自己图鉴账号，请在此输入图鉴密码"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_52aea4a0.module1",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_52aea4a0.module1",
+      "helpUrl": null,
+      "extension": "巨量纵横",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_52aea4a0.测试_jc",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_52aea4a0.process2",
+      "helpUrl": null,
+      "extension": "巨量纵横",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    }
+  ]
+}

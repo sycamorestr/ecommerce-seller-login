@@ -1,0 +1,123 @@
+<root>
+  <item name="xbot_extensions.activity_invoice" display="activity_invoice" kind="module">
+    <item.method />
+    <item.desc>Digital Invoice Extension (MengBo)
+This instruction set implements interface-based invoicing by integrating a third-party platform.</item.desc>
+    <item name="xbot_extensions.activity_invoice.tax_invoice_auth_login" display="tax_invoice_auth_login" kind="function" help="/yddoc/rpa/zh-CN/729613723800752128">
+      <item.method />
+      <item.desc />
+      <item name="xbot_extensions.activity_invoice.tax_invoice_auth_login.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/729613723800752128">
+        <item.method>main(args)</item.method>
+        <item.desc>Electronic Tax Bureau Login
+Log in to the Tax Bureau via the MengBo third-party platform.
+* @param app_id, App ID
+* @param secret, Secret key
+* @param tax_account, Tax bureau account
+* @param tax_password, Tax bureau password
+* @param nsrsbh, Taxpayer identification number
+* @param qr_code_type, QR code type
+* @param is_qr_code, Whether to use QR code login
+* @return invoice_instance, Invoice instance object
+</item.desc>
+      </item>
+      <item name="xbot_extensions.activity_invoice.tax_invoice_auth_login.init_api" display="init_api" kind="function" help="/yddoc/rpa/zh-CN/729613723800752128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_invoice.tax_invoice_auth_login.input_sms_code" display="input_sms_code" kind="function" help="/yddoc/rpa/zh-CN/729613723800752128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_invoice.tax_invoice_auth_login.check_qr_code_status" display="check_qr_code_status" kind="function" help="/yddoc/rpa/zh-CN/729613723800752128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_invoice.tax_invoice_auth_login.download_qr_code(code_type) -&gt; " display="download_qr_code(code_type) -&gt; " kind="function" help="/yddoc/rpa/zh-CN/729613723800752128">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_invoice.tax_digital_invoicing" display="tax_digital_invoicing" kind="function" help="/yddoc/rpa/zh-CN/729613860150968320">
+      <item.method />
+      <item.desc />
+      <item name="xbot_extensions.activity_invoice.tax_digital_invoicing.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/729613860150968320">
+        <item.method>main(args)</item.method>
+        <item.desc>Digital Invoice Issuance (Single-Line Summary)
+Automate invoice issuance on the MengBo third-party platform.
+* @param invoice_instance, Invoice instance object
+* @param kpxm, Goods name; must match the item information
+* @param ghfqylx, Buyer type: Enterprise / Government Institution / Individual
+* @param ghfmc, Buyer name
+* @param ghf_nsrsbh, Required when invoice type is VAT special invoice and buyer type is Enterprise
+* @param ghf_dz, Buyer address
+* @param ghf_dh, Buyer phone number
+* @param ghf_yh, Buyer bank name
+* @param ghf_zh, Buyer bank account number
+* @param sfzsgmfyhzh, Whether to print buyer bank account: Y/N, defaults to Y if left blank
+* @param sfzsxsfyhzh, Whether to print seller bank account: Y/N, defaults to Y if left blank
+* @param fpzl_dm, Invoice type: VAT Special Invoice / General Invoice
+* @param xsfzrr_bz, Seller legal representative flag: Y/N, defaults to N if left blank
+* @param gmfzrr_bz, Buyer legal representative flag: Y/N, defaults to N if left blank; Enterprise: N, Individual: Y
+* @param kphjje, Total invoice amount, 2 decimal places, in CNY (yuan)
+* @param xh, Line item sequence number; must be in ascending order for multiple detail lines
+* @param fphxz, Line type: Normal Item / Discount Line / Discounted Line
+* @param xmmc, Item name; must be prefixed with the commodity abbreviation in the format: *Abbreviation*Item Name. Discounts are only allowed on single-line items; the discount line must immediately follow the discounted line and share the same item name and commodity code.
+* @param xmdw, Unit of measure
+* @param xmsl, Item quantity, up to 8 decimal places
+* @param hsbz, Indicates whether the unit price and amount are tax-inclusive
+* @param spbm, Commodity code; pad with leading zeros if shorter than required length; for red-letter reversal of e-invoice list invoices, pass in the corresponding blue invoice line item data
+* @param yhzcbs, Preferential policy flag: Use / Do Not Use; defaults to Do Not Use
+* @param xmje, Item amount, 2 decimal places, in CNY (yuan), accurate to fen; equals unit price × quantity; whether tax-inclusive is determined by hsbz
+* @param xmdj, Unit price
+* @param sl, Tax rate, retain two significant decimal places; if 0, indicates tax-exempt (standard rates provided as decimals, e.g., 0.17); max 8 characters
+* @param se, Tax amount, 2 decimal places, in CNY (yuan), accurate to fen
+* @param ggxh, Specification and model
+* @param lslbs, Zero-rate tax type flag
+* @param bz, Remarks
+* @return invoiced_result, Invoicing result
+</item.desc>
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_invoice.tax_invocie_order_query" display="tax_invocie_order_query" kind="function" help="/yddoc/rpa/zh-CN/729613802108559360">
+      <item.method />
+      <item.desc />
+      <item name="xbot_extensions.activity_invoice.tax_invocie_order_query.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/729613802108559360">
+        <item.method>main(args)</item.method>
+        <item.desc>Invoice Information Query
+Query invoice information on the MengBo third-party platform.
+* @param invoice_instance, Invoice instance object
+* @param kplsh, Invoice serial number
+* @return invoice_detail, Invoice detail information
+</item.desc>
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_invoice.tax_digital_invoicing_more" display="tax_digital_invoicing_more" kind="function" help="/yddoc/rpa/zh-CN/863753686736019456">
+      <item.method />
+      <item.desc />
+      <item name="xbot_extensions.activity_invoice.tax_digital_invoicing_more.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/863753686736019456">
+        <item.method>main(args)</item.method>
+        <item.desc>Digital Invoice Issuance (Multi-Line Summary)
+Automate invoice issuance on the MengBo third-party platform.
+* @param invoice_instance, Invoice instance object
+* @param kpxm, Goods name; must match the item information
+* @param ghfqylx, Buyer type: Enterprise / Government Institution / Individual
+* @param ghfmc, Buyer name
+* @param ghf_nsrsbh, Required when invoice type is VAT special invoice and buyer type is Enterprise
+* @param ghf_dz, Buyer address
+* @param ghf_dh, Buyer phone number
+* @param ghf_yh, Buyer bank name
+* @param ghf_zh, Buyer bank account number
+* @param sfzsgmfyhzh, Whether to print buyer bank account: Y/N, defaults to Y if left blank
+* @param sfzsxsfyhzh, Whether to print seller bank account: Y/N, defaults to Y if left blank
+* @param fpzl_dm, Invoice type: VAT Special Invoice / General Invoice
+* @param xsfzrr_bz, Seller legal representative flag: Y/N, defaults to N if left blank
+* @param gmfzrr_bz, Buyer legal representative flag: Y/N, defaults to N if left blank; Enterprise: N, Individual: Y
+* @param kphjje, Total invoice amount, 2 decimal places, in CNY (yuan)
+* @param bz, Remarks
+* @param fpkjxx_xmxxs, Invoice line item detail list
+* @return invoiced_result, Invoicing result
+</item.desc>
+      </item>
+    </item>
+  </item>
+</root>

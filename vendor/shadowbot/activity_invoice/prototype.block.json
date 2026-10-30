@@ -1,0 +1,1129 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_invoice.main",
+      "statement": "process.invoke_activity",
+      "title": "数电开票扩展(蒙柏)",
+      "keywords": "",
+      "description": "该指令集通过集成三方平台实现了接口开票的功能",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/22/d9/22d94131726eac27b9dfc88d4a342121.png",
+      "function": "xbot_extensions.activity_invoice.main",
+      "helpUrl": null,
+      "extension": "数电开票扩展(蒙柏)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_invoice.api_enum",
+      "statement": "process.invoke_activity",
+      "title": "api_enum",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_invoice.api_enum",
+      "helpUrl": null,
+      "extension": "数电开票扩展(蒙柏)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_invoice.tax_invoice_api",
+      "statement": "process.invoke_activity",
+      "title": "tax_invoice_api",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_invoice.tax_invoice_api",
+      "helpUrl": null,
+      "extension": "数电开票扩展(蒙柏)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_invoice.tax_invoice_auth_login",
+      "statement": "process.invoke_activity",
+      "title": "电子税局登录",
+      "keywords": "",
+      "description": "该指令实现了通过三方平台蒙柏登录税局的功能",
+      "comment": "通过应用标识为%app_id%登录税局账号%tax_account%保存开票连接对象至%invoice_instance%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/04%E7%95%8C%E9%9D%A2/login.png",
+      "function": "xbot_extensions.activity_invoice.tax_invoice_auth_login",
+      "helpUrl": "/yddoc/rpa/zh-CN/729613723800752128",
+      "extension": "数电开票扩展(蒙柏)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "app_id",
+          "label": "应用标识",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "secret",
+          "label": "应用密钥",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "tax_account",
+          "label": "税局账号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "tax_password",
+          "label": "税局密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "nsrrbh",
+          "label": "纳税人识别号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "qr_code_type",
+          "label": "二维码类型",
+          "required": true,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "税局二维码",
+                "value": "税局二维码",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "is_qr_code",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "是否扫码"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "invoice_instance",
+          "label": "开票连接对象",
+          "name": "invoice_instance",
+          "type": "any"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_invoice.tax_digital_invoicing",
+      "statement": "process.invoke_activity",
+      "title": "数电发票开具(单行摘要)",
+      "keywords": "",
+      "description": "该指令实现了在蒙柏三方平台自动开票的功能",
+      "comment": "通过数电发票对象%invoice_instance%给%ghfmc%购买方开票并将开票结果保存至%invoiced_result%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/83/54/83549d8371473e56c86b29936fe9390b.png",
+      "function": "xbot_extensions.activity_invoice.tax_digital_invoicing",
+      "helpUrl": "/yddoc/rpa/zh-CN/729613860150968320",
+      "extension": "数电开票扩展(蒙柏)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "invoice_instance",
+          "label": "开票连接对象",
+          "required": true,
+          "tips": "",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "fpzl_dm",
+          "label": "发票种类",
+          "required": true,
+          "tips": "增值税专用发票/普通发票",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "普通发票",
+                "value": "普通发票",
+                "Unicode": null
+              },
+              {
+                "display": "增值税专用发票",
+                "value": "增值税专用发票",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "ghfqylx",
+          "label": "购买方企业类型",
+          "required": true,
+          "tips": "企业/机关事业单位/个人",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "企业",
+                "value": "企业",
+                "Unicode": null
+              },
+              {
+                "display": "个人",
+                "value": "个人",
+                "Unicode": null
+              },
+              {
+                "display": "机关事业单位",
+                "value": "机关事业单位",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "ghfmc",
+          "label": "购买方名称",
+          "required": true,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "ghf_nsrsbh",
+          "label": "购买方纳税人识别号",
+          "required": false,
+          "tips": "专票且购买方企业类型为企业时为必填",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "ghf_dz",
+          "label": "购买方地址",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "当票为企业专票时需要填写"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ghf_dh",
+          "label": "购买方电话",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "当票为企业专票时需要填写"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ghf_yh",
+          "label": "购买方开户行",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "当票为企业专票时需要填写"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ghf_zh",
+          "label": "购买方银行账号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "当票为企业专票时需要填写"
+          },
+          "category": "general"
+        },
+        {
+          "name": "kpxm",
+          "label": "货物名称",
+          "required": true,
+          "tips": "货物名称，必须与项目信息",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "xmmc",
+          "label": "项目名称",
+          "required": true,
+          "tips": "项目名称前必须加商品简称，格式：*项目简称*项目名称。 只允许对单行商品进行折扣，折扣行紧挨被折行之后，折扣行的商品名称、商品编码与被折行相同。",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "spbm",
+          "label": "商品编码",
+          "required": true,
+          "tips": "商品编码，不足位时，请自行补 0； 电子发票清单发票冲红时，传入蓝票对应的发票明细数据",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "ggxh",
+          "label": "规格型号",
+          "required": false,
+          "tips": "规格型号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "（选填）"
+          },
+          "category": "general"
+        },
+        {
+          "name": "xmdw",
+          "label": "项目单位",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "（选填）"
+          },
+          "category": "general"
+        },
+        {
+          "name": "xmsl",
+          "label": "项目数量",
+          "required": false,
+          "tips": "小数点后 8 位",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "（选填）"
+          },
+          "category": "general"
+        },
+        {
+          "name": "xmdj",
+          "label": "项目单价",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "（选填）"
+          },
+          "category": "general"
+        },
+        {
+          "name": "xmje",
+          "label": "项目金额",
+          "required": true,
+          "tips": "小数点后 2 位，以元为单位精确到分。  等于=单价*数量，根据含税标志，确定此金额是否为含税金额。",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "sl",
+          "label": "税率",
+          "required": true,
+          "tips": "保留两位有效小数。如果税率为 0，表示免税（正常税率以小数形式给出，如0.17）。最大 8 字符",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "kphjje",
+          "label": "开票合计金额",
+          "required": true,
+          "tips": "小数点后 2 位，以元为单位",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "lslbs",
+          "label": "零税率标识",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "非零税率",
+                "value": "非零税率",
+                "Unicode": null
+              },
+              {
+                "display": "免税",
+                "value": "免税",
+                "Unicode": null
+              },
+              {
+                "display": "不征税",
+                "value": "不征税",
+                "Unicode": null
+              },
+              {
+                "display": "普通零税率",
+                "value": "普通零税率",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "bz",
+          "label": "备注",
+          "required": false,
+          "tips": "备注",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "xh",
+          "label": "商品行序号",
+          "required": false,
+          "tips": "多明细行时序号需保证由",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "se",
+          "label": "税额",
+          "required": false,
+          "tips": "小数点后 2 位，以元为单位精确到分。",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "hsbz",
+          "label": "含税标志",
+          "required": false,
+          "tips": "表示项目单价和项目金额是否含税。",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "含税",
+                "value": "含税",
+                "Unicode": null
+              },
+              {
+                "display": "不含税",
+                "value": "不含税",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "fphxz",
+          "label": "发票行性质",
+          "required": false,
+          "tips": "正常商品行/折扣行/被折扣行",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "正常商品行",
+                "value": "正常商品行",
+                "Unicode": null
+              },
+              {
+                "display": "折扣行",
+                "value": "折扣行",
+                "Unicode": null
+              },
+              {
+                "display": "被折扣行",
+                "value": "被折扣行",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "yhzcbs",
+          "label": "优惠政策标识",
+          "required": false,
+          "tips": "默认不使用   使用/不使用",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "不使用",
+                "value": "不使用",
+                "Unicode": null
+              },
+              {
+                "display": "使用",
+                "value": "使用",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "xsfzrr_bz",
+          "label": "销售方自然人标志",
+          "required": false,
+          "tips": "Y/N 不填默认 N",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "N",
+                "value": "N",
+                "Unicode": null
+              },
+              {
+                "display": "Y",
+                "value": "Y",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "gmfzrr_bz",
+          "label": "购买方自然人标志",
+          "required": false,
+          "tips": "Y/N 不填默认 N  企业：N, 个人：Y",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "N",
+                "value": "N",
+                "Unicode": null
+              },
+              {
+                "display": "Y",
+                "value": "Y",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "sfzsgmfyhzh",
+          "label": "是否显示购方银行账号",
+          "required": false,
+          "tips": "Y/N  不填默认Y",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "Y",
+                "value": "Y",
+                "Unicode": null
+              },
+              {
+                "display": "N",
+                "value": "N",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "sfzsxsfyhzh",
+          "label": "是否显示销方银行账号",
+          "required": false,
+          "tips": "Y/N  不填默认Y",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "Y",
+                "value": "Y",
+                "Unicode": null
+              },
+              {
+                "display": "N",
+                "value": "N",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "invoiced_result",
+          "label": "invoiced_result",
+          "name": "invoiced_result",
+          "type": "any"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_invoice.tax_invocie_order_query",
+      "statement": "process.invoke_activity",
+      "title": "开票信息查询",
+      "keywords": "",
+      "description": "该指令实现了在蒙柏三方平台查询开票信息的功能",
+      "comment": "通过发票连接对象%invoice_instance%查询%kplsh%开票流水号将查询接口保存至%invoice_detail%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/d2/df/d2df3fba1a12076e268d6f2d18cd1584.png",
+      "function": "xbot_extensions.activity_invoice.tax_invocie_order_query",
+      "helpUrl": "/yddoc/rpa/zh-CN/729613802108559360",
+      "extension": "数电开票扩展(蒙柏)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "invoice_instance",
+          "label": "开票连接对象",
+          "required": false,
+          "tips": "",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "kplsh",
+          "label": "开票流水号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "invoice_detail",
+          "label": "查询结果",
+          "name": "invoice_detail",
+          "type": "any"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_invoice.tax_digital_invoicing_more",
+      "statement": "process.invoke_activity",
+      "title": "数电发票开具(多行摘要)",
+      "keywords": "",
+      "description": "该指令实现了在蒙柏三方平台自动开票的功能",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/47/27/47277aba03a00c48a9151c0cec5da420.png",
+      "function": "xbot_extensions.activity_invoice.tax_digital_invoicing_more",
+      "helpUrl": "/yddoc/rpa/zh-CN/863753686736019456",
+      "extension": "数电开票扩展(蒙柏)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "invoice_instance",
+          "label": "开票连接对象",
+          "required": true,
+          "tips": "",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "fpzl_dm",
+          "label": "发票种类",
+          "required": true,
+          "tips": "增值税专用发票/普通发票",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "普通发票",
+                "value": "普通发票",
+                "Unicode": null
+              },
+              {
+                "display": "增值税专用发票",
+                "value": "增值税专用发票",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "ghfqylx",
+          "label": "购买方企业类型",
+          "required": true,
+          "tips": "企业/机关事业单位/个人",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "企业",
+                "value": "企业",
+                "Unicode": null
+              },
+              {
+                "display": "个人",
+                "value": "个人",
+                "Unicode": null
+              },
+              {
+                "display": "机关事业单位",
+                "value": "机关事业单位",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "ghfmc",
+          "label": "购买方名称",
+          "required": true,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "ghf_nsrsbh",
+          "label": "购买方纳税人识别号",
+          "required": false,
+          "tips": "专票且购买方企业类型为企业时为必填",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "ghf_dz",
+          "label": "购买方地址",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "当票为企业专票时需要填写"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ghf_dh",
+          "label": "购买方电话",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "当票为企业专票时需要填写"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ghf_yh",
+          "label": "购买方开户行",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "当票为企业专票时需要填写"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ghf_zh",
+          "label": "购买方银行账号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "当票为企业专票时需要填写"
+          },
+          "category": "general"
+        },
+        {
+          "name": "kpxm",
+          "label": "货物名称",
+          "required": true,
+          "tips": "货物名称，必须与项目信息",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "xmmc",
+          "label": "项目名称",
+          "required": true,
+          "tips": "项目名称前必须加商品简称，格式：*项目简称*项目名称。 只允许对单行商品进行折扣，折扣行紧挨被折行之后，折扣行的商品名称、商品编码与被折行相同。",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "spbm",
+          "label": "商品编码",
+          "required": true,
+          "tips": "商品编码，不足位时，请自行补 0； 电子发票清单发票冲红时，传入蓝票对应的发票明细数据",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "ggxh",
+          "label": "规格型号",
+          "required": false,
+          "tips": "规格型号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "（选填）"
+          },
+          "category": "general"
+        },
+        {
+          "name": "xmdw",
+          "label": "项目单位",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "（选填）"
+          },
+          "category": "general"
+        },
+        {
+          "name": "xmsl",
+          "label": "项目数量",
+          "required": false,
+          "tips": "小数点后 8 位",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "（选填）"
+          },
+          "category": "general"
+        },
+        {
+          "name": "xmdj",
+          "label": "项目单价",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "（选填）"
+          },
+          "category": "general"
+        },
+        {
+          "name": "xmje",
+          "label": "项目金额",
+          "required": true,
+          "tips": "小数点后 2 位，以元为单位精确到分。  等于=单价*数量，根据含税标志，确定此金额是否为含税金额。",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "sl",
+          "label": "税率",
+          "required": true,
+          "tips": "保留两位有效小数。如果税率为 0，表示免税（正常税率以小数形式给出，如0.17）。最大 8 字符",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "kphjje",
+          "label": "开票合计金额",
+          "required": true,
+          "tips": "小数点后 2 位，以元为单位",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "bz",
+          "label": "备注",
+          "required": false,
+          "tips": "备注",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "fpkjxx_xmxxs",
+          "label": "发票开具信息-项目明细信息列表",
+          "required": false,
+          "tips": "",
+          "type": "list",
+          "default": "13:[]",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "invoiced_result",
+          "label": "invoiced_result",
+          "name": "invoiced_result",
+          "type": "any"
+        }
+      ]
+    }
+  ]
+}

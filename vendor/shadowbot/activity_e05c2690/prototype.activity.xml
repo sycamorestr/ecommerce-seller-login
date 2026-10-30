@@ -1,0 +1,513 @@
+<root>
+  <item name="xbot_extensions.activity_e05c2690" display="activity_e05c2690" kind="module">
+    <item.method />
+    <item.desc>银行登录扩展
+该指令集实现了常用银行登录的功能</item.desc>
+    <item name="xbot_extensions.activity_e05c2690.orangebank_load" display="orangebank_load" kind="function" help="/yddoc/rpa/zh-CN/743398123545239552">
+      <item.method />
+      <item.desc>平安银行登录
+通过账号密码登录中国银行
+* @param web_page，
+* @param ai_engine，识别引擎
+* @param username，用户名
+* @param password，密码
+* @param ym_token，云码Token
+* @param drag_distance，
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.orangebank_load.orange_bank_login" display="orange_bank_login" kind="function" help="/yddoc/rpa/zh-CN/743398123545239552">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.orangebank_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/743398123545239552">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.bankofchina_load" display="bankofchina_load" kind="function" help="/yddoc/rpa/zh-CN/743393084990758912">
+      <item.method />
+      <item.desc>中国银行登录
+通过账号密码登录中国银行
+* @param web_page，
+* @param ai_engine，识别引擎
+* @param username，用户名
+* @param password，密码
+* @param ym_token，云码Token
+* @param drag_distance，额外偏移距离
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.bankofchina_load.bankodchina_login" display="bankodchina_login" kind="function" help="/yddoc/rpa/zh-CN/743393084990758912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.bankofchina_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/743393084990758912">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.ghibank_load" display="ghibank_load" kind="function" help="/yddoc/rpa/zh-CN/754974938567413760">
+      <item.method />
+      <item.desc>广东华兴银行登录
+使用指令登录广东华兴银行，注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param username，账号
+* @param password，密码
+* @param ym_token，云码Token
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.ghibank_load.ghi_bank_login" display="ghi_bank_login" kind="function" help="/yddoc/rpa/zh-CN/754974938567413760">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.ghibank_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/754974938567413760">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.hkbea_load" display="hkbea_load" kind="function" help="/yddoc/rpa/zh-CN/755040837625589760">
+      <item.method />
+      <item.desc>东亚银行登录
+该指令实现了登录东亚银行的个人版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param username，网银昵称/借记卡号/账号/手机号码
+* @param password，密码
+* @param retry_count，重试次数
+* @param ym_token，云码Token
+* @param load_type，登录类型
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.hkbea_load.hkbea_bank_login" display="hkbea_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755040837625589760">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.hkbea_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755040837625589760">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.zybank_load" display="zybank_load" kind="function" help="/yddoc/rpa/zh-CN/755245389106319360">
+      <item.method />
+      <item.desc>中原银行登录
+该指令实现了登录中原银行的个人版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param username，用户名
+* @param password，密码
+* @param ym_token，云码Token
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.zybank_load.zy_bank_login" display="zy_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755245389106319360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.zybank_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755245389106319360">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.ccbbank_load" display="ccbbank_load" kind="function" help="/yddoc/rpa/zh-CN/755257015350849536">
+      <item.method />
+      <item.desc>中国建设银行登录
+该指令实现了登录中国建设银行个人版网银
+* @param web_page，网页对象
+* @param ai_engine，
+* @param load_type，
+* @param username，
+* @param password，
+* @param ym_token，
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.ccbbank_load.ccb_bank_login" display="ccb_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755257015350849536">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.ccbbank_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755257015350849536">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.shanghaibank_load" display="shanghaibank_load" kind="function" help="/yddoc/rpa/zh-CN/755261494643351552">
+      <item.method />
+      <item.desc>上海银行登录
+该指令实现了登录上海银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param load_type，登录类型
+* @param username，账号
+* @param password，密码
+* @param ym_token，云码Token
+* @param try_count，验证码识别重试次数
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.shanghaibank_load.shanghai_bank_login" display="shanghai_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755261494643351552">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.shanghaibank_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755261494643351552">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.jsbchina_load" display="jsbchina_load" kind="function" help="/yddoc/rpa/zh-CN/755307695212290048">
+      <item.method />
+      <item.desc>江苏银行登录
+该指令实现了登录江苏银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param load_type，登录类型
+* @param username，用户名
+* @param password，密码
+* @param ym_token，云码Token
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.jsbchina_load.jsbchina_bank_login" display="jsbchina_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755307695212290048">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.jsbchina_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755307695212290048">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.personalbank_load" display="personalbank_load" kind="function" help="/yddoc/rpa/zh-CN/755305597837991936">
+      <item.method />
+      <item.desc>兴业银行登录
+该指令实现了登录兴业银行的个人版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，
+* @param load_type，登录类型
+* @param sign_method，
+* @param username，
+* @param password，登录密码
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.personalbank_load.personal_bank_login" display="personal_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755305597837991936">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.personalbank_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755305597837991936">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.suzhoubank_load" display="suzhoubank_load" kind="function" help="/yddoc/rpa/zh-CN/755307695212290048">
+      <item.method />
+      <item.desc>苏州银行登录
+该指令实现了登录苏州银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param load_type，登录类型
+* @param username，用户名
+* @param password，密码
+* @param ym_token，云码Token
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.suzhoubank_load.suzhou_bank_login" display="suzhou_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755307695212290048">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.suzhoubank_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755307695212290048">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.bankofbeijing_load" display="bankofbeijing_load" kind="function" help="/yddoc/rpa/zh-CN/754963113228328960">
+      <item.method />
+      <item.desc>北京银行登录
+该指令实现了登录北京银行的个人版或企业版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param load_type，登录类型
+* @param username，用户名
+* @param password，密码
+* @param ym_token，云码Token
+* @param tujian_username，图鉴账号
+* @param tujian_password，图鉴密码
+* @param drag_distance，偏移距离
+* @param try_count，滑块验证码重试次数
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.bankofbeijing_load.beijing_bank_login" display="beijing_bank_login" kind="function" help="/yddoc/rpa/zh-CN/754963113228328960">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.bankofbeijing_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/754963113228328960">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.pbank_psbc_load" display="pbank_psbc_load" kind="function" help="/yddoc/rpa/zh-CN/755309890169344000">
+      <item.method />
+      <item.desc>中国邮政储蓄银行登录
+该指令实现了登录中国邮政储蓄银行的个人版网银,注:该指令需要下载驱动输入的插
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param load_type，登录类型
+* @param username，用户名
+* @param password，密码
+* @param ym_token，云码Token
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.pbank_psbc_load.pbank_psbc_login" display="pbank_psbc_login" kind="function" help="/yddoc/rpa/zh-CN/755309890169344000">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.pbank_psbc_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755309890169344000">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.njcbbank_load" display="njcbbank_load" kind="function" help="/yddoc/rpa/zh-CN/755321729749610496">
+      <item.method />
+      <item.desc>南京银行登录
+该指令实现了登录南京银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param load_type，登录类型
+* @param username，账户名
+* @param password，密码
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.njcbbank_load.nj_bank_login" display="nj_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755321729749610496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.njcbbank_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755321729749610496">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.pbank_load" display="pbank_load" kind="function" help="/yddoc/rpa/zh-CN/755324439729135616">
+      <item.method />
+      <item.desc>交通银行登录
+该指令实现了登录交通银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param load_type，登录类型
+* @param username，用户名
+* @param password，密码
+* @param ym_token，云码Token
+* @param retry_count，重试次数
+* @param offset，偏移距离
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.pbank_load.pbank_bank_login" display="pbank_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755324439729135616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.pbank_load.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/755324439729135616">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.pbank_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755324439729135616">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.cebbank_load" display="cebbank_load" kind="function" help="/yddoc/rpa/zh-CN/755348711013310464">
+      <item.method />
+      <item.desc>光大银行登录
+该指令实现了登录银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param load_type，登录类型
+* @param operation，操作员账号(企业版需要)
+* @param username，用户名
+* @param password，密码
+* @param ym_token，云码Token
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.cebbank_load.ceb_bank_login" display="ceb_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755348711013310464">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.cebbank_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755348711013310464">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.hyzx_load" display="hyzx_load" kind="function" help="/yddoc/rpa/zh-CN/755608905592725504">
+      <item.method />
+      <item.desc>杭州银行登录
+该指令实现了登录杭州银行,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param username，用户名
+* @param password，密码
+* @param ym_token，云码Token
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.hyzx_load.hyzx_bank_login" display="hyzx_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755608905592725504">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.hyzx_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755608905592725504">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.ebankhent_load" display="ebankhent_load" kind="function" help="/yddoc/rpa/zh-CN/755617292324311040">
+      <item.method />
+      <item.desc>浦发银行登录
+该指令实现了登录浦发银行的企业版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param load_type，登录类型
+* @param username，用户名
+* @param customer，客户号
+* @param password，密码
+* @param ym_token，云码Token
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.ebankhent_load.ebankhent_bank_login" display="ebankhent_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755617292324311040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.ebankhent_load.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/755617292324311040">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.ebankhent_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755617292324311040">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.wzbank_load" display="wzbank_load" kind="function" help="/yddoc/rpa/zh-CN/755619048116051968">
+      <item.method />
+      <item.desc>温州银行登录
+该指令实现了登录温州银行的个人版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param load_type，登录类型
+* @param username，用户名
+* @param password，密码
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.wzbank_load.ebankp_wzbank_login" display="ebankp_wzbank_login" kind="function" help="/yddoc/rpa/zh-CN/755619048116051968">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.wzbank_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755619048116051968">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.ecitic_load" display="ecitic_load" kind="function" help="/yddoc/rpa/zh-CN/755621183618428928">
+      <item.method />
+      <item.desc>中信银行登录
+该指令实现了登录中信银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param load_type，登录类型
+* @param username，用户名
+* @param password，密码
+* @param ym_token，云码Token
+* @param drag_distance，额外滑动距离
+* @param use_hardware_driver_input，是否关闭硬件驱动
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.ecitic_load.get_active_by_web_page" display="get_active_by_web_page" kind="function" help="/yddoc/rpa/zh-CN/755621183618428928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.ecitic_load.ecitic_bank_login" display="ecitic_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755621183618428928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.ecitic_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755621183618428928">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.nper_load" display="nper_load" kind="function" help="/yddoc/rpa/zh-CN/755623625152524288">
+      <item.method />
+      <item.desc>民生银行登录
+该指令实现了登录民生银行的个人版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param load_type，登录类型
+* @param username，用户名
+* @param password，密码
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.nper_load.nper_bank__login" display="nper_bank__login" kind="function" help="/yddoc/rpa/zh-CN/755623625152524288">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.nper_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755623625152524288">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.perbank_czbank_load" display="perbank_czbank_load" kind="function" help="/yddoc/rpa/zh-CN/755677919771504640">
+      <item.method />
+      <item.desc>浙商银行登录
+该指令实现了登录浙商银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，
+* @param load_type，
+* @param username，
+* @param password，
+* @param ym_token，
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.perbank_czbank_load.czbank_bank_login" display="czbank_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755677919771504640">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.perbank_czbank_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755677919771504640">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.icbcbank_load" display="icbcbank_load" kind="function" help="/yddoc/rpa/zh-CN/755682284341420032">
+      <item.method />
+      <item.desc>工商银行登录
+该指令实现了登录工商银行的个人版网银或企业版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param load_type，登录类型
+* @param username，用户名
+* @param password，密码
+* @param ym_token，云码Token
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.icbcbank_load.icbc_bank_login" display="icbc_bank_login" kind="function" help="/yddoc/rpa/zh-CN/755682284341420032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.icbcbank_load.test_function" display="test_function" kind="function" help="/yddoc/rpa/zh-CN/755682284341420032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.icbcbank_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/755682284341420032">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.pbank_load_custom" display="pbank_load_custom" kind="function" help="/yddoc/rpa/zh-CN/960371991330725888">
+      <item.method />
+      <item.desc>交通银行登录-客户号登录
+该指令实现了通过客户号登录交通银行的企业版网银,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param ai_engine，识别引擎
+* @param user_num，用户编号/别名
+* @param password，密码
+* @param ym_token，云码Token
+* @param retry_count，重试次数
+* @param offset，偏移距离
+* @param custome_num，客户号
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.pbank_load_custom.pbank_bank_login" display="pbank_bank_login" kind="function" help="/yddoc/rpa/zh-CN/960371991330725888">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.pbank_load_custom.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/960371991330725888">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.pbank_load_custom.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/960371991330725888">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_e05c2690.zsbank_load" display="zsbank_load" kind="function" help="/yddoc/rpa/zh-CN/1005649698692788224">
+      <item.method />
+      <item.desc>招商银行登录
+该指令实现了登录招商银行的企业版网银,通过证书登录,注:该指令需要下载驱动输入的插件
+* @param web_page，网页对象
+* @param login_password，登录密码
+* @param certificate_password，证书密码
+* @param username，登录名
+</item.desc>
+      <item name="xbot_extensions.activity_e05c2690.zsbank_load.zs_bank_load" display="zs_bank_load" kind="function" help="/yddoc/rpa/zh-CN/1005649698692788224">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.zsbank_load.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/1005649698692788224">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_e05c2690.zsbank_load.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/1005649698692788224">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+  </item>
+</root>

@@ -1,0 +1,1992 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.super_browser.main",
+      "statement": "process.invoke_activity",
+      "title": "紫鸟控制台",
+      "keywords": "",
+      "description": "该指令集实现了紫鸟控制台的一些高频操作，如进入账号管理页面、打开店铺等待",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/ae/7d/ae7d7e72ecd5815a87b39211b560ce0a.png",
+      "function": "xbot_extensions.super_browser.main",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.A1 进入账号管理页面",
+      "statement": "process.invoke_activity",
+      "title": "进入账号管理页面",
+      "keywords": "",
+      "description": "从紫鸟浏览器控制台进入账号管理页面",
+      "comment": "从紫鸟浏览器控制台进入账号管理页面",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/contacts.png",
+      "function": "xbot_extensions.super_browser.to_account_page",
+      "helpUrl": "/yddoc/rpa/zh-CN/889697978005188608",
+      "extension": "紫鸟控制台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.A2 打开店铺",
+      "statement": "process.invoke_activity",
+      "title": "打开店铺",
+      "keywords": "",
+      "description": "该指令实现了根据店铺名称打开店铺的功能，调用这个指令会关闭正在打开的所有店铺",
+      "comment": "从紫鸟浏览器控制台打开店铺：%店铺名称%，%打开账号%打开账号，保存完整店铺名称至%完整店铺名称%，保存网页对象至%web_page%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/c0/44/c044ac003bfe6ff01f7876413092de94.png",
+      "function": "xbot_extensions.super_browser.open_store",
+      "helpUrl": "/yddoc/rpa/zh-CN/889697990621655040",
+      "extension": "紫鸟控制台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "店铺名称",
+          "label": "店铺名称",
+          "required": true,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "店铺名称"
+          },
+          "category": "general"
+        },
+        {
+          "name": "匹配类型",
+          "label": "匹配类型",
+          "required": true,
+          "tips": "",
+          "type": "str",
+          "default": "10:相等",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "相等",
+                "value": "相等",
+                "Unicode": null
+              },
+              {
+                "display": "模糊",
+                "value": "模糊",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "打开账号",
+          "label": "打开账号",
+          "required": true,
+          "tips": "点击，打开店铺后，点击打开账号按钮\r\n不点击，打开店铺后，直接返回，需要注意这个时候网页对象为空",
+          "type": "str",
+          "default": "10:点击",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "点击",
+                "value": "点击",
+                "Unicode": null
+              },
+              {
+                "display": "不点击",
+                "value": "不点击",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "隐私模式",
+          "label": "隐私模式",
+          "required": false,
+          "tips": "使用隐私模式打开店铺",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "隐私模式"
+          },
+          "category": "general"
+        },
+        {
+          "name": "超时时间",
+          "label": "超时时间",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:50",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "处理在线人员上限",
+          "label": "处理在线人员上限",
+          "required": false,
+          "tips": "处理紫鸟在线人员弹窗",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "申请访问名额",
+                "value": "申请访问名额",
+                "Unicode": null
+              },
+              {
+                "display": "取 消",
+                "value": "取 消",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "完整店铺名称",
+          "label": "完整店铺名称",
+          "name": "完整店铺名称",
+          "type": "str"
+        },
+        {
+          "id": "web_page",
+          "label": "返回网页对象至",
+          "name": "web_page",
+          "type": "xbot._web.browser.WebBrowser"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.api",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.api",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.A3 获取下载文件保存位置",
+      "statement": "process.invoke_activity",
+      "title": "获取下载文件保存位置",
+      "keywords": "",
+      "description": "获取紫鸟浏览器默认下载文件保存位置",
+      "comment": "获取紫鸟浏览器默认下载文件保存位置，保存路径至：%download_path%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/installing_updates.png",
+      "function": "xbot_extensions.super_browser.get_download_path",
+      "helpUrl": "/yddoc/rpa/zh-CN/889698002609049600",
+      "extension": "紫鸟控制台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "download_path",
+          "label": "保存位置",
+          "name": "download_path",
+          "type": "str"
+        },
+        {
+          "id": "is_check",
+          "label": "是否询问保存位置",
+          "name": "is_check",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.A4 紫鸟登录",
+      "statement": "process.invoke_activity",
+      "title": "紫鸟登录",
+      "keywords": "",
+      "description": "该指令实现了自动打开紫鸟控制台，并登录企业号的操作",
+      "comment": "使用企业%企业名称%的账号%企业用户名%登录紫鸟控制台",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/86/5f/865f2062562ad9786b5a5feecf7173a2.png",
+      "function": "xbot_extensions.super_browser.process1",
+      "helpUrl": "/yddoc/rpa/zh-CN/889698024088006656",
+      "extension": "紫鸟控制台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "紫鸟版本",
+          "label": "紫鸟版本",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:V5",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "V5",
+                "value": "V5",
+                "Unicode": null
+              },
+              {
+                "display": "V6",
+                "value": "V6",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "企业名称",
+          "label": "企业名称",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "企业用户名",
+          "label": "企业用户名",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "密码",
+          "label": "密码",
+          "required": false,
+          "tips": "如果不填，则不会填写密码框",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "是否填写账号密码",
+          "label": "是否填写账号密码",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "是否填写账号密码"
+          },
+          "category": "general"
+        },
+        {
+          "name": "是否退出登录",
+          "label": "是否退出登录",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "是否退出登录"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.A5 紫鸟文件下载",
+      "statement": "process.invoke_activity",
+      "title": "紫鸟文件下载",
+      "keywords": "",
+      "description": "该指令实现了紫鸟浏览器网页端的文件下载操作",
+      "comment": "在网页%网页对象%中，通过下载按钮%下载按钮%下载文件，保存至文件夹%保存文件夹%，文件命名为%保存文件名%，输出下载文件路径至%download_file_name%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/be/3f/be3fdad2be1e3bbac93eeb86a4d94202.png",
+      "function": "xbot_extensions.super_browser.process2",
+      "helpUrl": "/yddoc/rpa/zh-CN/889698034489880576",
+      "extension": "紫鸟控制台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": true,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "下载按钮",
+          "label": "下载按钮",
+          "required": true,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "保存文件夹",
+          "label": "保存文件夹",
+          "required": true,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null,
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "保存文件名",
+          "label": "保存文件名",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "非必填, 如果不填使用下载资源默认文件名, 若无默认文件名则自动为下载资源生成不重复的文件名"
+          },
+          "category": "general"
+        },
+        {
+          "name": "超时时间",
+          "label": "超时时间",
+          "required": true,
+          "tips": "等待文件下载超时时间，单位秒",
+          "type": "str",
+          "default": "10:100",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "等待对话框出现",
+          "label": "等待对话框出现",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:20",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "download_file_name",
+          "label": "download_file_name",
+          "name": "download_file_name",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.A6 获取店铺列表",
+      "statement": "process.invoke_activity",
+      "title": "获取店铺列表",
+      "keywords": "",
+      "description": "该指令实现了在紫鸟浏览器上获取指定平台的所有店铺名称操作",
+      "comment": "在紫鸟浏览器控制台上获取%所属平台%平台的所有店铺名称，输出至%store_name_list%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.process6",
+      "helpUrl": "/yddoc/rpa/zh-CN/889698014239780864",
+      "extension": "紫鸟控制台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "所属平台",
+          "label": "所属平台",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "选填，不填获取所有平台店铺。v5填写示例：亚马逊，v6填写示例：电商后台,亚马逊"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "store_name_list",
+          "label": "店铺名称列表",
+          "name": "store_name_list",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.download_api",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.download_api",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.A7 上传文件到紫鸟",
+      "statement": "process.invoke_activity",
+      "title": "上传文件到紫鸟",
+      "keywords": "",
+      "description": "该指令实现了从本地上传文件到紫鸟网页端的操作",
+      "comment": "在网页%网页对象%中点击%上传按钮%，在弹出的文件选择对话框中输入文件%上传文件路径%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/upload_to_the_cloud.png",
+      "function": "xbot_extensions.super_browser.process7",
+      "helpUrl": "/yddoc/rpa/zh-CN/889698044833107968",
+      "extension": "紫鸟控制台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": true,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "上传按钮",
+          "label": "上传按钮",
+          "required": true,
+          "tips": "选择要点击上传按钮对应的网页元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "上传文件路径",
+          "label": "上传文件路径",
+          "required": false,
+          "tips": "待上传文件完整路径， 若要选择多个文件，切换到Python模式下，输入文件列表，比如：[\"文件1路径\", \"文件2路径\"]",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null,
+            "dialog": {
+              "type": "OpenFile",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "等待对话框超时时间",
+          "label": "等待对话框超时时间",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:20",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.ziniao_v6",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.ziniao_v6",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.utils_v6",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.utils_v6",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.ziniao_v5",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.ziniao_v5",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.create_instance_api",
+      "statement": "process.invoke_activity",
+      "title": "连接紫鸟开放平台(API)🆕",
+      "keywords": "",
+      "description": "该指令通过紫鸟开放平台创建实例用于接口调用",
+      "comment": "通%app_id%连接紫鸟开放平台, 并返回实例保存至%ziniao_instance%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.create_instance_api",
+      "helpUrl": "/yddoc/rpa/zh-CN/811841706059862016",
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "app_id",
+          "label": "应用 ID",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "private_key",
+          "label": "应用 Key",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ziniao_instance",
+          "label": "紫鸟对象",
+          "name": "ziniao_instance",
+          "type": "any"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.get_user_list_api",
+      "statement": "process.invoke_activity",
+      "title": "获取用户列表(API)🆕",
+      "keywords": "",
+      "description": "通过紫鸟开放平台获取公司全部的账号信息",
+      "comment": "获取%ziniao_instance%对象的全部紫鸟账号保存至%user_list%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.get_user_list_api",
+      "helpUrl": "/yddoc/rpa/zh-CN/811841790265470976",
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "ziniao_instance",
+          "label": "紫鸟对象",
+          "required": false,
+          "tips": "",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "user_list",
+          "label": "用户列表",
+          "name": "user_list",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.get_store_list_api",
+      "statement": "process.invoke_activity",
+      "title": "获取店铺列表(API)🆕",
+      "keywords": "",
+      "description": "通过接口获取指定账号下的全部店铺ID",
+      "comment": "通过%ziniao_instance%获取%user_id%账号下的全部店铺保存至%store_list%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.get_store_list_api",
+      "helpUrl": "/yddoc/rpa/zh-CN/811841836088242176",
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "ziniao_instance",
+          "label": "紫鸟对象",
+          "required": false,
+          "tips": "",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "user_id",
+          "label": "用户ID",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "store_list",
+          "label": "店铺列表",
+          "name": "store_list",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.open_store_api",
+      "statement": "process.invoke_activity",
+      "title": "打开店铺(API)🆕",
+      "keywords": "",
+      "description": "该指令通过开放接口打开紫鸟店铺",
+      "comment": "通过%ziniao_instance%打开ID为%strore_id%的店铺",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.open_store_api",
+      "helpUrl": "/yddoc/rpa/zh-CN/811841875958067200",
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "ziniao_instance",
+          "label": "紫鸟对象",
+          "required": false,
+          "tips": "",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "user_id",
+          "label": "用户ID",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "strore_id",
+          "label": "店铺ID",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "timeout",
+          "label": "超时时间",
+          "required": false,
+          "tips": "单位, 为秒",
+          "type": "int",
+          "default": "13:30",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "auto_open",
+          "label": "是否打开默认网址",
+          "required": false,
+          "tips": "是否打开默认网址",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "是，打开默认网址为百度",
+                "value": "true",
+                "Unicode": null
+              },
+              {
+                "display": "否，不打开默认网址，需要手动点击打开账号",
+                "value": "false",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.close_store_api",
+      "statement": "process.invoke_activity",
+      "title": "关闭店铺(API)🆕",
+      "keywords": "",
+      "description": "该指令通过接口关闭指点的店铺",
+      "comment": "通过%ziniao_instance%关闭ID为%store_id%的店铺",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.close_store_api",
+      "helpUrl": "/yddoc/rpa/zh-CN/811841916295155712",
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "ziniao_instance",
+          "label": "紫鸟对象",
+          "required": false,
+          "tips": "",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "store_id",
+          "label": "店铺 ID",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.ziniaoapi",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.ziniaoapi",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.ziniaogui",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.ziniaogui",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.close_app_api",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.close_app_api",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.utils_uia",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.utils_uia",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.ziniao_v5_uia",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.ziniao_v5_uia",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.ziniao_v6_uia",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.ziniao_v6_uia",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.api_uia",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.api_uia",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.A2 打开店铺 - uia",
+      "statement": "process.invoke_activity",
+      "title": "打开店铺(UIA)",
+      "keywords": "",
+      "description": "该指令通过uia实现了根据店铺名称打开店铺的功能，调用这个指令会关闭正在打开的所有店铺",
+      "comment": "从紫鸟浏览器控制台打开店铺：%店铺名称%，%打开账号%打开账号，保存完整店铺名称至%完整店铺名称%，保存网页对象至%web_page%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/cloud_backup_restore.png",
+      "function": "xbot_extensions.super_browser.process9",
+      "helpUrl": "/yddoc/rpa/zh-CN/899104976750927872",
+      "extension": "紫鸟控制台",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "店铺名称",
+          "label": "店铺名称",
+          "required": true,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "匹配类型",
+          "label": "匹配类型",
+          "required": true,
+          "tips": "",
+          "type": "str",
+          "default": "10:相等",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "相等",
+                "value": "相等",
+                "Unicode": null
+              },
+              {
+                "display": "模糊",
+                "value": "模糊",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "打开账号",
+          "label": "打开账号",
+          "required": true,
+          "tips": "",
+          "type": "str",
+          "default": "10:点击",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "点击",
+                "value": "点击",
+                "Unicode": null
+              },
+              {
+                "display": "不点击",
+                "value": "不点击",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "隐私模式",
+          "label": "隐私模式",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "隐私模式"
+          },
+          "category": "general"
+        },
+        {
+          "name": "超时时间",
+          "label": "超时时间",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:50",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "web_page",
+          "label": "web_page",
+          "name": "web_page",
+          "type": "xbot._web.browser.WebBrowser"
+        },
+        {
+          "id": "完整店铺名称",
+          "label": "完整店铺名称",
+          "name": "完整店铺名称",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.get_all_zn_info",
+      "statement": "process.invoke_activity",
+      "title": "获取所有紫鸟版本信息",
+      "keywords": "",
+      "description": "该指令实现获取计算机上安装的所有版本信息",
+      "comment": "获取计算机安装的所有紫鸟的版本信息保存至%ziniao_info%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/02%E5%8A%9E%E5%85%AC/icons8-transaction_list.png",
+      "function": "xbot_extensions.super_browser.get_all_zn_info",
+      "helpUrl": "/yddoc/rpa/zh-CN/904279430841720832",
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "ziniao_info",
+          "label": "紫鸟版本信息",
+          "tips": "返回计算机上安装的所有紫鸟信息",
+          "name": "ziniao_info",
+          "type": "dict"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.create_account",
+      "statement": "process.invoke_activity",
+      "title": "员工新增v2🆕",
+      "keywords": "",
+      "description": "调用本接口实现员工新增",
+      "comment": "获取紫鸟对象%ziniao_instance%，创建用户账号%nickname%，角色为%name%，响应状态保存至%create_result%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.create_account",
+      "helpUrl": "/yddoc/rpa/zh-CN/922454569158127616",
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "ziniao_instance",
+          "label": "紫鸟对象",
+          "required": true,
+          "tips": "紫鸟对象",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "nickname",
+          "label": "用户账号",
+          "required": false,
+          "tips": "用户账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "name",
+          "label": "用户真实姓名",
+          "required": false,
+          "tips": "用户真实姓名",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "密码",
+          "required": false,
+          "tips": "密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "role_id",
+          "label": "角色id",
+          "required": false,
+          "tips": "角色id (number)",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "auth_device",
+          "label": "设备授权方式",
+          "required": false,
+          "tips": "设备授权方式",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "全部设备自动永久授权 ",
+                "value": "1",
+                "Unicode": null
+              },
+              {
+                "display": "首设备永久授权",
+                "value": "2",
+                "Unicode": null
+              },
+              {
+                "display": "每次登入新设备，都需要上级审批",
+                "value": "3",
+                "Unicode": null
+              },
+              {
+                "display": "首设备授权,后续终端需验证手机号",
+                "value": "4",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "is_update_person_info",
+          "label": "是否允许成员修改个人信息",
+          "required": false,
+          "tips": "是否允许成员修改个人信息",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "允许",
+                "value": "1",
+                "Unicode": null
+              },
+              {
+                "display": "不允许",
+                "value": "0",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "is_limit_login",
+          "label": "是否限制登录时间",
+          "required": false,
+          "tips": "是否限制登录时间",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "否",
+                "value": "0",
+                "Unicode": null
+              },
+              {
+                "display": "是",
+                "value": "1",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "is_two_step_verify",
+          "label": "开启二步验证",
+          "required": false,
+          "tips": "开启二步验证",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "否",
+                "value": "0",
+                "Unicode": null
+              },
+              {
+                "display": "是",
+                "value": "1",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "allow_login_windows",
+          "label": "允许登录windows",
+          "required": false,
+          "tips": "允许登录windows",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "允许",
+                "value": "1",
+                "Unicode": null
+              },
+              {
+                "display": "不允许",
+                "value": "0",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "allow_login_mac",
+          "label": "允许登录mac",
+          "required": false,
+          "tips": "允许登录mac",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "允许",
+                "value": "1",
+                "Unicode": null
+              },
+              {
+                "display": "不允许",
+                "value": "0",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "allow_login_android",
+          "label": "允许登录android",
+          "required": false,
+          "tips": "允许登录android",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "允许",
+                "value": "1",
+                "Unicode": null
+              },
+              {
+                "display": "不允许",
+                "value": "0",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "allow_login_web",
+          "label": "允许登录web",
+          "required": false,
+          "tips": "允许登录web",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "允许",
+                "value": "1",
+                "Unicode": null
+              },
+              {
+                "display": "不允许",
+                "value": "0",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "allow_login_ios",
+          "label": "允许登录IOS",
+          "required": false,
+          "tips": "允许登录IOS",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "允许",
+                "value": "1",
+                "Unicode": null
+              },
+              {
+                "display": "不允许",
+                "value": "0",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "allow_login_miniprog",
+          "label": "允许登录小程序",
+          "required": false,
+          "tips": "允许登录小程序",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "允许",
+                "value": "1",
+                "Unicode": null
+              },
+              {
+                "display": "不允许",
+                "value": "0",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "department_ids",
+          "label": "部门id列表",
+          "required": false,
+          "tips": "部门id列表",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "login_limit_start_time",
+          "label": "授权用户登入开始时间",
+          "required": false,
+          "tips": "授权用户登入开始时间 HH:mm ",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "login_limit_end_time",
+          "label": "授权用户登入结束时间",
+          "required": false,
+          "tips": "授权用户登入结束时间 HH:mm ",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "login_limit_start_date",
+          "label": "可登录起始时间",
+          "required": false,
+          "tips": "可登录起始时间 yyyy-MM-dd ",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "login_limit_end_date",
+          "label": "可登录结束时间",
+          "required": false,
+          "tips": "可登录结束时间 yyyy-MM-dd ",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "create_result",
+          "label": "响应结果",
+          "tips": "响应结果",
+          "name": "create_result",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.delete_account",
+      "statement": "process.invoke_activity",
+      "title": "员工启用禁用/删除(API)🆕",
+      "keywords": "",
+      "description": "调用本接口实现员工启用禁用",
+      "comment": "获取紫鸟对象%ziniao_instance%，将用户%staff_ids%状态改为%status%，响应状态保存至%delete_result%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.delete_account",
+      "helpUrl": "/yddoc/rpa/zh-CN/922454577307660288",
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "ziniao_instance",
+          "label": "紫鸟对象",
+          "required": true,
+          "tips": "紫鸟对象",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "staff_ids",
+          "label": "员工id",
+          "required": false,
+          "tips": "员工id",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "status",
+          "label": "执行状态",
+          "required": false,
+          "tips": "执行状态",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "启用",
+                "value": "0",
+                "Unicode": null
+              },
+              {
+                "display": "禁用",
+                "value": "1",
+                "Unicode": null
+              },
+              {
+                "display": "删除",
+                "value": "2",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "delete_result",
+          "label": "响应结果",
+          "tips": "响应结果",
+          "name": "delete_result",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.store_auth_add",
+      "statement": "process.invoke_activity",
+      "title": "账号授权新增(API)🆕",
+      "keywords": "",
+      "description": "调用本接口实现账号授权新增",
+      "comment": "获取紫鸟对象%ziniao_instance%，将店铺%store_id_list%分配给%staff_id%，响应结果保存至%result%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.store_auth_add",
+      "helpUrl": "/yddoc/rpa/zh-CN/922454585310392320",
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "ziniao_instance",
+          "label": "紫鸟对象",
+          "required": true,
+          "tips": "紫鸟对象",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "store_id_list",
+          "label": "店铺id列表",
+          "required": false,
+          "tips": "店铺id列表",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "staff_id",
+          "label": "授权用户id",
+          "required": false,
+          "tips": "授权用户id",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "响应结果",
+          "tips": "响应结果",
+          "name": "result",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.store_auth_delete",
+      "statement": "process.invoke_activity",
+      "title": "账号授权删除(API)🆕",
+      "keywords": "",
+      "description": "调用本接口实现账号授权删除",
+      "comment": "获取紫鸟对象%ziniao_instance%，将店铺%store_id_list%在%staff_id%下移除，响应结果保存至%result%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.store_auth_delete",
+      "helpUrl": "/yddoc/rpa/zh-CN/922454592906276864",
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "ziniao_instance",
+          "label": "紫鸟对象",
+          "required": true,
+          "tips": "紫鸟对象",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "store_id_list",
+          "label": "店铺id列表",
+          "required": false,
+          "tips": "店铺id列表",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "staff_id",
+          "label": "授权用户id",
+          "required": false,
+          "tips": "授权用户id",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "响应结果",
+          "tips": "响应结果",
+          "name": "result",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.query_department_list",
+      "statement": "process.invoke_activity",
+      "title": "部门列表查询(API)🆕",
+      "keywords": "",
+      "description": "调用本接口实现部门查询",
+      "comment": "获取紫鸟对象%ziniao_instance%，响应保存至%department_list%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.query_department_list",
+      "helpUrl": "/yddoc/rpa/zh-CN/922454599377608704",
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "ziniao_instance",
+          "label": "紫鸟对象",
+          "required": true,
+          "tips": "紫鸟对象",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "department_list",
+          "label": "部门列表",
+          "tips": "响应结果",
+          "name": "department_list",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.query_role_list",
+      "statement": "process.invoke_activity",
+      "title": "用户角色列表(API)🆕",
+      "keywords": "",
+      "description": " 调用本接口实现用户角色列表",
+      "comment": "获取紫鸟对象%ziniao_instance%，响应保存至%role_list%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.super_browser.query_role_list",
+      "helpUrl": "/yddoc/rpa/zh-CN/922454606700863488?",
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "ziniao_instance",
+          "label": "紫鸟对象",
+          "required": true,
+          "tips": "紫鸟对象",
+          "type": "any",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "role_list",
+          "label": "用户角色列表",
+          "tips": "响应结果",
+          "name": "role_list",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.super_browser.test_uia",
+      "statement": "process.invoke_activity",
+      "title": "module",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": null,
+      "function": "xbot_extensions.super_browser.test_uia",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.super_browser.uia",
+      "statement": "process.invoke_activity",
+      "title": "module",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": null,
+      "function": "xbot_extensions.super_browser.uia",
+      "helpUrl": null,
+      "extension": "紫鸟控制台",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    }
+  ]
+}

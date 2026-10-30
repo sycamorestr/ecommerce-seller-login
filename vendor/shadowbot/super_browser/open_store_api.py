@@ -1,0 +1,22 @@
+# 使用提醒:
+# 1. xbot包提供软件自动化、数据表格、Excel、日志、AI等功能
+# 2. package包提供访问当前应用数据的功能，如获取元素、访问全局变量、获取资源文件等功能
+# 3. 当此模块作为流程独立运行时执行main函数
+# 4. 可视化流程中可以通过"调用模块"的指令使用此模块
+
+import xbot
+from xbot import print, sleep
+from .import package
+from .package import variables as glv
+from .ziniaoapi  import ZiniaoAPI
+
+def main(args):
+    ziniao_instance: ZiniaoAPI = args.get("ziniao_instance")
+    user_id = args.get("user_id")
+    strore_id = args.get("strore_id")
+    timeout = args.get("timeout", 30)
+    auto_open = args.get('auto_open', 'true')
+
+    assert isinstance(ziniao_instance, ZiniaoAPI), "请选择紫鸟对象"
+    ziniao_instance.open_store(user_id, strore_id, timeout, auto_open)
+    pass
