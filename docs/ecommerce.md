@@ -31,13 +31,13 @@
 | 拼多多商家后台（待下架） | `pdd_mms_legacy_login_pw.py` | `process43.py` + 点选 type `19` | `https://mms.pinduoduo.com/home/` |
 | 1688 | `login_1688_pw.py` | `login_1688.py` | 淘宝登录页 `from=1688web` |
 | 天猫超市 | `tmall_supermarket_login_pw.py` | `login_tmall_supermarket.py` | `https://web.txcs.tmall.com/login?...` |
-| Cookie | `cookie_login_pw.py` | `cookie_login/process1–3` + `_core.py` | 使用当前页面，不另开登录站 |
+| Cookie | `platforms/cookie/` | `cookie_login/process1–3` + `_core.py` | 使用当前页面，不另开登录站 |
 
-中国银行：**没有登录指令，无法移植登录流。** 说明见 `docs/MISSING_BOC.md`。`bank_captcha` / `orangebank_slider_captcha` 只放在 `captcha_helpers.py`。
+中国银行：**没有登录指令，无法移植登录流。** 说明见 `docs/MISSING_BOC.md`。`bank_captcha` / `orangebank_slider_captcha` 只放在 各目录 `captcha.py`。
 
 登录旺店通是 Windows 客户端，没有网页地址，见 `docs/UNPORTED_BLOCKS.md`。京准通跳转表里的「京东数坊」在源码中是空 URL，不会跳转。拼多多商家后台（待下架）模块带 `DEPRECATED = True`。
 
-千牛的云码请求、拼图和选择器常量仍在 Selenium 同级模块 `qianniu_login.py`，Playwright 通过 `import qianniu_login as _se` 复用。其余平台共用 `captcha_helpers.py` 与 `seller_common.py`。
+千牛的云码请求、拼图和选择器常量仍在 Selenium 同级模块 `qianniu_login.py`，Playwright 通过 `import qianniu_login as _se` 复用。其余平台共用 各目录 `captcha.py` 与 `seller_common.py`。
 
 影刀原文（已去掉账号、密码、Token）在 `vendor/shadowbot/`。
 
@@ -51,14 +51,14 @@
 | `pdd_login_pw.py` | 拼多多登录 |
 | `doudian_login_pw.py` | 抖店登录 |
 | `alipay_login_pw.py` | 支付宝登录 |
-| `captcha_helpers.py` | 云码载荷、拖距、点选坐标、支付宝旋转、银行滑块公式 |
+| 各目录 `captcha.py` | 云码载荷、拖距、点选坐标、支付宝旋转、银行滑块公式 |
 | `seller_common.py` | 浏览器、`NeedsHumanError`、结果对象 |
 | `tests/` | 单元测试（不访问登录页，不需要真实凭据） |
 | `run_live_login_pw.py` | 千牛实机登录入口 |
 | `run_sms_get_code.py` | 千牛停在短信门时点击「点击获取验证码」 |
 | `docs/MISSING_BOC.md` | 中国银行登录缺失说明 |
 | `docs/UNPORTED_BLOCKS.md` | 没有网页登录地址、或只有子流程的影刀块 |
-| `cookie_login_pw.py` | 保存 / 写入 / 清除 Cookie 与 localStorage |
+| `platforms/cookie/` | 保存 / 写入 / 清除 Cookie 与 localStorage |
 | `vendor/shadowbot/` | 影刀源码副本（账号、密码、Token 已清空） |
 
 ## 安装

@@ -2,7 +2,7 @@
 import json
 from unittest import mock
 import pytest
-import qianniu_login_pw as q
+import platforms.qianniu.qianniu_login_pw as q
 
 
 def test_yunma_recg_payload(monkeypatch):

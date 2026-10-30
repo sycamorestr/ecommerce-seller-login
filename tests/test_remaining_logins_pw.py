@@ -3,25 +3,25 @@ import json
 
 import pytest
 
-import aikucun_login_pw as aikucun
-import alimama_login_pw as alimama
-import captcha_helpers as captcha
-import compass_login_pw as compass
-import compass_strategy_login_pw as strategy
-import cookie_login_pw as cookies
-import jd_login_pw as jd
-import jzt_login_pw as jzt
-import login_1688_pw as ali1688
-import oceanengine_email_login_pw as oe_mail
-import oceanengine_login_pw as ocean
-import oceanengine_zongheng_login_pw as zongheng
-import pdd_mms_legacy_login_pw as pdd_old
-import pdd_promote_login_pw as pdd_ad
-import taobao_login_pw as taobao
-import taobao_mini_login_pw as mini
-import tmall_supermarket_login_pw as tmall
-import wangdiantong_login_pw as wdt
-import youzan_login_pw as youzan
+import platforms.aikucun.aikucun_login_pw as aikucun
+import platforms.alimama.alimama_login_pw as alimama
+import platforms.jingmai.captcha as captcha
+import platforms.compass.compass_login_pw as compass
+import platforms.compass.compass_strategy_login_pw as strategy
+import platforms.cookie.cookie_login_pw as cookies
+import platforms.jd.jd_login_pw as jd
+import platforms.jzt.jzt_login_pw as jzt
+import platforms.ali1688.login_1688_pw as ali1688
+import platforms.oceanengine.oceanengine_email_login_pw as oe_mail
+import platforms.oceanengine.oceanengine_login_pw as ocean
+import platforms.oceanengine.oceanengine_zongheng_login_pw as zongheng
+import platforms.pdd.pdd_mms_legacy_login_pw as pdd_old
+import platforms.pdd.pdd_promote_login_pw as pdd_ad
+import platforms.taobao.taobao_login_pw as taobao
+import platforms.taobao.taobao_mini_login_pw as mini
+import platforms.tmall.tmall_supermarket_login_pw as tmall
+import platforms.wangdiantong.wangdiantong_login_pw as wdt
+import platforms.youzan.youzan_login_pw as youzan
 
 
 def test_login_urls():

@@ -1,10 +1,10 @@
 # 抖店多店铺 / 切店
 
-来源 `activity_966451c9`。单店登录仍是根目录 `doudian_login_pw.py`（`activity_7bca6d/process4.py`），这里不重复。
+来源 `activity_966451c9`。单店、多店和切店都在 `platforms/doudian/`（`activity_7bca6d/process4.py` 的单店入口是 `doudian_login_pw.py`）。
 
 | 指令 | 源文件 | 模块 | 状态 |
 | --- | --- | --- | --- |
-| 抖店多店铺登录 | `process1.py` | `doudian_multi_login_pw.py` | ported。地址 `https://fxg.jinritemai.com/login/common`，然后按店铺名走切店 |
+| 抖店多店铺登录 | `process1.py` | `platforms/doudian/doudian_multi_login_pw.py` | ported。地址 `https://fxg.jinritemai.com/login/common`，然后按店铺名走切店 |
 | 抖店店铺切换 | `process13.py` | `doudian_switch_shop_pw.switch_by_name` | ported。process13 只调用 process17 |
 | 抖店店铺切换（新） | `process17.py`（块标题在 JSON 里仍是「抖店店铺切换」，流程注释写「新」） | 同上 | ported。列表页 `https://fxg.jinritemai.com/ffa/multiShop`，名称在 `headerShopName` / `index_roleItem` |
 | 抖店店铺切换(ID) | `process35.py` | `doudian_switch_shop_pw.switch_by_id` | ported。process35 只调用 process36 |

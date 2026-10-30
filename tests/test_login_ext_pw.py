@@ -1,36 +1,34 @@
 """Offline checks for 登陆拓展合集 ports. No browser, no secrets."""
 import importlib
-import pkgutil
+from pathlib import Path
 
 import pytest
 
-import aliexpress_login_pw as ali
-import alimama_platform_login_pw as mama
-import amazon_login_pw as amazon
-import captcha_helpers as captcha
-import doudian_multi_login_pw as multi
-import doudian_switch_shop_pw as switch
-import jushuitan_login_pw as jst
-import kingdee_login_pw as kingdee
-import oceanengine_collection_login_pw as oe
-import oceanengine_email_login_pw as oe_mail
-import sycm_login_pw as sycm
-import tax_invoice_login_pw as tax
-import temu_ads_login_pw as temu_ads
-import temu_login_pw as temu
-import temu_switch_store_pw as temu_sw
-import ziniao_login_pw as ziniao
-from seller_common import DesktopOnlyLogin, NeedsHumanError
+import platforms.aliexpress.aliexpress_login_pw as ali
+import platforms.alimama.alimama_platform_login_pw as mama
+import platforms.amazon.amazon_login_pw as amazon
+import platforms.jd.captcha as captcha
+import platforms.doudian.doudian_multi_login_pw as multi
+import platforms.doudian.doudian_switch_shop_pw as switch
+import platforms.jushuitan.jushuitan_login_pw as jst
+import platforms.kingdee.kingdee_login_pw as kingdee
+import platforms.oceanengine.oceanengine_collection_login_pw as oe
+import platforms.oceanengine.oceanengine_email_login_pw as oe_mail
+import platforms.sycm.sycm_login_pw as sycm
+import platforms.tax_invoice.tax_invoice_login_pw as tax
+import platforms.temu.temu_ads_login_pw as temu_ads
+import platforms.temu.temu_login_pw as temu
+import platforms.temu.temu_switch_store_pw as temu_sw
+import platforms.ziniao.ziniao_login_pw as ziniao
+from platforms.tax_invoice.helpers import NeedsHumanError
+from platforms.ziniao.helpers import DesktopOnlyLogin
 
 
 def test_bank_urls_and_missing_creds(monkeypatch):
-    import banks
-
     modules = []
-    for info in pkgutil.iter_modules(banks.__path__):
-        if info.name.startswith("_") or info.name == "__init__":
-            continue
-        modules.append(importlib.import_module(f"banks.{info.name}"))
+    for folder in sorted(p for p in Path("banks").iterdir() if p.is_dir()):
+        for py in sorted(folder.glob("*_login_pw.py")):
+            modules.append(importlib.import_module(f"banks.{folder.name}.{py.stem}"))
     assert len(modules) >= 26
     monkeypatch.delenv("YUNMA_TOKEN", raising=False)
     for mod in modules:
