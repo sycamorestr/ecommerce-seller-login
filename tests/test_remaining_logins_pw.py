@@ -20,7 +20,6 @@ import platforms.pdd.pdd_promote_login_pw as pdd_ad
 import platforms.taobao.taobao_login_pw as taobao
 import platforms.taobao.taobao_mini_login_pw as mini
 import platforms.tmall.tmall_supermarket_login_pw as tmall
-import platforms.wangdiantong.wangdiantong_login_pw as wdt
 import platforms.youzan.youzan_login_pw as youzan
 
 
@@ -150,11 +149,7 @@ def test_payloads_and_distances():
     assert captcha.jd_legacy_slider_distance("120,88", 30, 1) == 150
     assert captcha.free_slider_drag_distance(40, captcha.AIKUCUN_FREE_SLIDER_OFFSET) == 36
     assert captcha.free_slider_drag_distance(40, 0, ppi=2, windows=True) == 40
-    assert captcha.meituan_slider_distance(300, 40) == 260
-    assert captcha.meituan_trace_points(list(range(30))) == list(range(25, 30))
-    assert captcha.WALMART_HOLD_SECONDS == 7
     assert captcha.TTSHITU_PDD_ONE_CLICK_TYPE == "19"
-    assert captcha.TTSHITU_WANGDIANTONG_TYPE == "3"
     assert captcha.legacy_click_point("10", "20", 5, 6, 1, 2, 1) == (11, 22)
     assert captcha.AIKUCUN_FREE_SLIDER_OFFSET == -4
     assert youzan.PHONE_GATE.startswith("登录失败")
@@ -162,7 +157,6 @@ def test_payloads_and_distances():
 
 def test_jzt_platform_map():
     assert jzt.platform_url("京东快车") == "https://jzt.jd.com/jdkc/survey.html#/survey"
-    assert jzt.platform_url("京东数坊") == ""
     assert jzt.platform_url("商智-商家版") == "https://sz.jd.com"
     assert "京东联盟" in jzt.PLATFORM_URLS
 
@@ -238,16 +232,3 @@ def test_cookie_roundtrip(tmp_path):
     with pytest.raises(Exception):
         cookies.save_cookies(None)
 
-
-def test_wangdiantong_is_desktop_only():
-    with pytest.raises(wdt.DesktopOnlyLogin):
-        wdt.wangdiantong_login()
-    assert wdt.CAPTCHA_TYPE == "3"
-    assert "ttshitu_3_predict" in wdt.REASON
-
-
-def test_docs_mentions_skipped():
-    text = open("docs/unported.md", encoding="utf-8").read()
-    assert "登录旺店通" in text
-    assert "京东数坊" in text
-    assert "trace_api" in text

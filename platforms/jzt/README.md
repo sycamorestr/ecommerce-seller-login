@@ -6,8 +6,6 @@
 
 短信 xpath `//*[text()="使用 手机短信验证码"]` 出现时抛 `NeedsHumanError("需要进行短信验证码，请手动通过！")`。登录后仍看不到「立即投放」则抛「登录失败，请联系运维人员进行维护。」
 
-`京东数坊` 在 `PLATFORM_URLS` 里的值是空字符串。`platform_url` 对它返回 `""`，登录成功后不会跳转，也不会编造地址。
-
 ## 目录与文件说明
 
 - `__init__.py`：包标记。
@@ -15,7 +13,7 @@
 - `helpers.py`：`open_page`、`finish`、`SellerLoginResult`。
 - `captcha.py`：本入口用标准滑块请求体和 `std_slider_distance`（偏移 0，速度 1）。
 
-`PLATFORM_URLS` 的键：京挑客、京准通、京准通-账户中心、商智-品牌版、商智-商家版、京东快车、京东联盟、推荐广告、互动广告、京东数坊（空）、站外广告、站外广告-账户中心、智能投放。具体 URL 以 `jzt_login_pw.py` 里的字典为准。
+`PLATFORM_URLS` 的键：京挑客、京准通、京准通-账户中心、商智-品牌版、商智-商家版、京东快车、京东联盟、推荐广告、互动广告、站外广告、站外广告-账户中心、智能投放。具体 URL 以 `jzt_login_pw.py` 里的字典为准。
 
 ## 实现逻辑
 
@@ -43,7 +41,6 @@ from platforms.jzt.jzt_login_pw import jzt_login, platform_url
 from platforms.jzt.helpers import close_result
 
 print(platform_url("京东快车"))
-print(repr(platform_url("京东数坊")))  # 空字符串
 
 result = jzt_login(platform="京准通", relogin=True)
 print(result.ok, result.error, result.yunma_calls)
@@ -57,14 +54,13 @@ close_result(result)
 ## 注意事项
 
 - 「 登录 」xpath 含首尾空格，改成 `text()="登录"` 会和源码不一致。
-- `京东数坊` 没有 URL。传入这个名字时登录停在京准通首页。
-- 未知平台名同样不跳转，函数不报「不支持」。
+- 未知平台名不跳转。
 - 短信不自动填。滑块要 `YUNMA_TOKEN`。
 - 不要把账号和 token 写进仓库。
 
 ## 测试
 
-`tests/test_remaining_logins_pw.py` 的 `test_jzt_platform_map` 断言京东快车 URL、京东数坊为空、商智商家版为 `https://sz.jd.com`。`test_login_urls` 核对网关地址。缺账号时期望 `ValueError`。
+`tests/test_remaining_logins_pw.py` 的 `test_jzt_platform_map` 断言京东快车 URL、商智商家版为 `https://sz.jd.com`。`test_login_urls` 核对网关地址。缺账号时期望 `ValueError`。
 
 ```bash
 pytest tests/test_remaining_logins_pw.py::test_jzt_platform_map tests/test_remaining_logins_pw.py::test_login_urls -q

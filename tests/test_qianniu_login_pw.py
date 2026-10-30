@@ -31,8 +31,7 @@ def test_yunma_recg_payload(monkeypatch):
             pass
 
     fake = FakeConn()
-    # yunma_recg lives in qianniu_login (re-exported); patch http.client there
-    monkeypatch.setattr(q._se.http.client, "HTTPConnection", lambda *a, **k: fake)
+    monkeypatch.setattr(q.http.client, "HTTPConnection", lambda *a, **k: fake)
     out = q.yunma_recg("tok", "abc")
     assert out["msg"] == "识别成功"
     assert fake.path == q.YUNMA_PATH
@@ -89,10 +88,8 @@ def test_login_url_constant():
     assert q.LOGIN_URL == "https://loginmyseller.taobao.com/"
 
 
-def test_selectors_match_selenium():
-    import qianniu_login as se
-
-    assert q.SEL_USERNAME == se.SEL_USERNAME
-    assert q.SEL_NC_SLIDE == se.SEL_NC_SLIDE
-    assert q.SEL_NC_VERIFY == se.SEL_NC_VERIFY
+def test_selectors():
+    assert q.SEL_USERNAME == "#fm-login-id"
+    assert q.SEL_NC_SLIDE == "#nc_1_n1z"
+    assert q.SEL_NC_VERIFY == "#nc_1__scale_text"
     assert q.YUNMA_TYPE_ALI_SLIDER == 20226

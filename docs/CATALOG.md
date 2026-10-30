@@ -53,13 +53,11 @@
 
 | 指令 | 模块 | 状态 |
 | --- | --- | --- |
-| 亚马逊-店铺登录 | `platforms/amazon/` | ported |
 | Temu-账号登录 | `platforms/temu/temu_login_pw.py` | ported |
 | Temu-切换店铺 | `platforms/temu/temu_switch_store_pw.py` | ported |
 | Temu-广告平台-登录 | `platforms/temu/temu_ads_login_pw.py` | ported |
 | Temu-广告平台-切换店铺 | `platforms/temu/temu_switch_store_pw.py` | ported |
 | 速卖通登录 | `platforms/aliexpress/` | ported |
-| 紫鸟登录 | `platforms/ziniao/` | desktop-only |
 
 ## 5. ERP / 税务 / 其他
 
@@ -69,17 +67,14 @@
 | --- | --- | --- |
 | 巨量引擎登录（合集 `activity_52aea4a0`） | `platforms/oceanengine/oceanengine_collection_login_pw.py` | ported，不是别名 |
 | 生意参谋登录Plus | `platforms/sycm/` | ported |
-| 电子税局登录 | `platforms/tax_invoice/` | ported（HTTP API，无浏览器 URL） |
 | 聚水潭登录 | `platforms/jushuitan/` | ported |
 | 阿里妈妈-平台登录 | `platforms/alimama/alimama_platform_login_pw.py` | ported |
-| 登录金蝶云星空 | `platforms/kingdee/` | ported（源码不提供 URL） |
-| 登录旺店通 | `platforms/wangdiantong/` | desktop-only |
 
 ## 6. Cookie / 验证码辅助
 
 | 指令 | 模块 | 状态 |
 | --- | --- | --- |
 | 保存 Cookie / Cookie 登录 / 退出 | `platforms/cookie/` | ported |
-| 云码、图鉴、银行滑块、美团距离、沃尔玛长按 | 各登录目录里的 `captcha.py` | captcha-only |
+| 云码、图鉴、银行滑块 | 各登录目录里的 `captcha.py` | captcha-only |
 
 未列入上表、且没有登录 URL 的子流程见 [`unported.md`](unported.md)。

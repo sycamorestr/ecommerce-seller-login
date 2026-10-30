@@ -6,15 +6,14 @@
 
 登录页固定为 `https://loginmyseller.taobao.com/`。滑块识别走云码类型 `20226`（主机 `api.jfbym.com`，路径 `/api/YmServer/customApi`）。短信、身份校验和其他人工闸门返回失败结果，不在这里自动填验证码。
 
-日常入口用 Playwright：`qianniu_login_pw.py`。同目录的 `qianniu_login.py` 是 Selenium 版本，HTTP 识别函数也放在那里，Playwright 入口通过 `from . import qianniu_login as _se` 复用 `yunma_recg`。
+入口是 `qianniu_login_pw.py`。云码请求 `yunma_recg` 在同一文件里。
 
 ## 目录与文件说明
 
 - `__init__.py`：空文件，使 `platforms.qianniu` 可以作为包导入。
-- `qianniu_login_pw.py`：Playwright 入口。公开函数是 `qianniu_login`、`login`、`close_result`、`main`，以及滑块辅助 `handle_verification`、`do_nc_mouse_drag`、`detect_human_gate`、`create_browser`。`login` 负责打开页面、填表、滑块和 NC 条；`qianniu_login` 读取环境变量并收成 `QianniuLoginResult`。
-- `qianniu_login.py`：Selenium 版同一流程。公开函数包括 `qianniu_login`（参数是 `driver` 而不是 `page`）、`yunma_recg`、`join_images`、`encode_image`、`decode_image`。拖动在这版里可以走 `xdotool`（默认 `DISPLAY`，缺省 `:2`）或 CDP。
-- `helpers.py`：一份通用内核（`SellerLoginResult`、`open_page`、`finish` 等）。千牛两个入口都没有 import 它。Playwright 入口自己定义 `QianniuLoginResult` 和 `OnError`，并写死代理 `http://127.0.0.1:8791`。
-- 本目录没有 `captcha.py`。云码请求写在 `qianniu_login.yunma_recg`。
+- `qianniu_login_pw.py`：Playwright 入口。公开函数是 `qianniu_login`、`login`、`close_result`、`main`、`yunma_recg`、`join_images`，以及滑块辅助 `handle_verification`、`do_nc_mouse_drag`、`detect_human_gate`、`create_browser`。
+- `helpers.py`：一份通用内核。本入口没有 import 它。Playwright 入口自己定义 `QianniuLoginResult` 和 `OnError`，并写死代理 `http://127.0.0.1:8791`。
+- 本目录没有 `captcha.py`。云码请求在 `yunma_recg`。
 
 ## 实现逻辑
 
@@ -36,11 +35,10 @@
 
 ## 依赖与环境
 
-- Python 3.10 及以上。Playwright `>=1.40`，Selenium `>=4.15`，Pillow `>=10`。
-- 环境变量：`QIANNIU_ACCOUNT`、`QIANNIU_PASSWORD`、`YUNMA_TOKEN`。`main()` 还会读 `QIANNIU_RETRIES`（默认 5）。Selenium 拖动读 `DISPLAY`（默认 `:2`）。
+- Python 3.10 及以上。Playwright `>=1.40`，Pillow `>=10`。
+- 环境变量：`QIANNIU_ACCOUNT`、`QIANNIU_PASSWORD`、`YUNMA_TOKEN`。`main()` 还会读 `QIANNIU_RETRIES`（默认 5）。
 - 代理写死为 `http://127.0.0.1:8791`，不受 `SELLER_HTTP_PROXY` 控制。机器上没有这个代理时，页面打不开。
-- 拷贝本目录即可运行千牛登录，不必再拷其他平台。`helpers.py` 可以不参与运行。
-- 仓库根上的 `qianniu_login_pw.py` 只是重新导出，请改用 `python -m platforms.qianniu.qianniu_login_pw`。
+- 拷贝本目录即可运行千牛登录。入口：`python -m platforms.qianniu.qianniu_login_pw`。
 
 实机脚本 `scripts/run_live_login_pw.py` 会设置 `DISPLAY` 默认 `:2`，缺三个环境变量时退出码 2。
 
@@ -70,15 +68,13 @@ with sync_playwright() as playwright:
     browser.close()
 ```
 
-Selenium 入口签名是 `qianniu_login(..., driver=None)`，返回 `QianniuLoginResult`（字段与 Playwright 版同类，浏览器对象不同）。
-
 `QianniuLoginResult` 字段：`ok`、`web_page`、`error`、`yunma_calls`、`shots`。截图落在本目录 `shots/`。
 
 ## 注意事项
 
 - 登录框在 `iframe#alibaba-login-box` 里，滑块弹层再套 `iframe#baxia-dialog-content`。选择器写在顶层页面上会找不到元素。
 - 云码 token 为空时，滑块步骤抛「云码 token 为空，无法识别滑块（影刀 ym 引擎）」。不要把 token 写进仓库。
-- Playwright 与 Selenium 都强制代理 `127.0.0.1:8791`。无头参数在 `create_browser` 里默认 `False`，`login` 也传 `headless=False`。
+- 代理固定 `127.0.0.1:8791`。`login` 使用有头 Chromium。
 - NC 条是整段拖动，不走云码。`div.errloading` 要点一次再重试。
 - 短信和身份验证返回 `ok=False`。页面留着，方便人工处理后再 `close_result`。
 - `captcha_cache/` 和 `shots/` 会被生成，不要提交。

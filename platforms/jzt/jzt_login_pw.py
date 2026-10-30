@@ -1,7 +1,4 @@
-"""Playwright port of 影刀「京东登录-京准通」 process40.py plus process41.
-
-京东数坊 is present in the source map with an empty URL and is not navigated.
-"""
+"""Playwright port of 影刀「京东登录-京准通」 process40.py plus process41."""
 from __future__ import annotations
 
 import os
@@ -43,7 +40,7 @@ XPATH_SMS = '//*[text()="使用 手机短信验证码"]'
 SMS_MESSAGE = "需要进行短信验证码，请手动通过！"
 FAIL = "登录失败，请联系运维人员进行维护。"
 
-# process41.url_map — 京东数坊 is intentionally empty in the source.
+# process41.url_map
 PLATFORM_URLS = {
     "京挑客": "https://jzt.jd.com/jtk/#/index",
     "京准通": "https://jzt.jd.com/home/#/index",
@@ -54,7 +51,6 @@ PLATFORM_URLS = {
     "京东联盟": "https://union.jd.com",
     "推荐广告": "https://jzt.jd.com/touch_point/index.html#/survey",
     "互动广告": "https://jzt.jd.com/jdzw/#/index",
-    "京东数坊": "",
     "站外广告": "https://jyt.jd.com/jyt/#/accountHome",
     "站外广告-账户中心": "https://jzt.jd.com/zt/#/index",
     "智能投放": "https://jzt.jd.com/jst/#/index",

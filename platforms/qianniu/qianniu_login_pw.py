@@ -1,15 +1,4 @@
-"""
-Playwright port of 影刀市场指令「千牛登录」
-(xbot_extensions.activity_7bca6d.qn_login + activity_jfbym.ali_slider_captcha).
-
-Behavior mirrors 影刀市场指令「千牛登录」(qn_login + ali_slider_captcha).
-Reverse notes: docs/qianniu_login_reverse_notes.md
-Selenium sibling: qianniu_login.py (imported below as _se).
-
-Do NOT invent alternate login URLs / captcha types. Mirror the ShadowBot steps.
-Unavoidable vs Selenium: page.mouse down/move/up instead of CDP Input.dispatchMouseEvent;
-Playwright FrameLocator instead of switch_to.frame (bounding_box already in top viewport CSS px).
-"""
+"""Playwright port of 影刀市场指令「千牛登录」."""
 from __future__ import annotations
 
 import base64
@@ -34,27 +23,23 @@ from playwright.sync_api import (
     sync_playwright,
 )
 
-# Re-export / reuse pure helpers from the Selenium port (identical API).
-from . import qianniu_login as _se
+LOGIN_URL = "https://loginmyseller.taobao.com/"
+YUNMA_HOST = "api.jfbym.com"
+YUNMA_PATH = "/api/YmServer/customApi"
+YUNMA_TYPE_ALI_SLIDER = 20226
 
-# ---- constants from ShadowBot sources (same as Selenium port) ----
-LOGIN_URL = _se.LOGIN_URL
-YUNMA_HOST = _se.YUNMA_HOST
-YUNMA_PATH = _se.YUNMA_PATH
-YUNMA_TYPE_ALI_SLIDER = _se.YUNMA_TYPE_ALI_SLIDER
-
-IFRAME_CSS = _se.IFRAME_CSS
-BAXIA_IFRAME_CSS = _se.BAXIA_IFRAME_CSS
-SEL_USERNAME = _se.SEL_USERNAME
-SEL_PASSWORD = _se.SEL_PASSWORD
-SEL_LOGIN_BTN = _se.SEL_LOGIN_BTN
-SEL_DRAG_LABEL = _se.SEL_DRAG_LABEL
-SEL_REFRESH = _se.SEL_REFRESH
-SEL_DRAG_ELE = _se.SEL_DRAG_ELE
-SEL_NC_VERIFY = _se.SEL_NC_VERIFY
-SEL_NC_SLIDE = _se.SEL_NC_SLIDE
-SEL_LOGIN_ERROR = _se.SEL_LOGIN_ERROR
-SEL_ERRLOADING = _se.SEL_ERRLOADING
+IFRAME_CSS = "iframe#alibaba-login-box"
+BAXIA_IFRAME_CSS = "iframe#baxia-dialog-content"
+SEL_USERNAME = "#fm-login-id"
+SEL_PASSWORD = "#fm-login-password"
+SEL_LOGIN_BTN = "button.fm-submit.password-login, button.fm-button.password-login, button.password-login"
+SEL_DRAG_LABEL = "canvas#captcha-question, .scratch-captcha-question-header, .drag-captcha-question"
+SEL_REFRESH = "i.icon-refresh.refresh.scratch, i.icon-refresh.scratch, i.refresh.scratch"
+SEL_DRAG_ELE = ".scratch-captcha-slider .button, #nocaptcha .scratch-captcha-slider .button"
+SEL_NC_VERIFY = "#nc_1__scale_text"
+SEL_NC_SLIDE = "#nc_1_n1z"
+SEL_LOGIN_ERROR = "div.login-error-msg"
+SEL_ERRLOADING = "div.errloading"
 
 HERE = Path(__file__).resolve().parent
 SHOT_DIR = HERE / "shots"
@@ -62,16 +47,57 @@ CACHE_DIR = HERE / "captcha_cache"
 
 _LAST_OWNED: dict = {}
 
-# Pure helpers — identical to Selenium port / ShadowBot sources
-yunma_recg = _se.yunma_recg
-encode_image = _se.encode_image
-decode_image = _se.decode_image
-join_images = _se.join_images
 
-OnError = _se.OnError
-QianniuLoginError = _se.QianniuLoginError
-NeedsHumanError = _se.NeedsHumanError
-CredentialsRejected = _se.CredentialsRejected
+class OnError(Enum):
+    TERMINATE = "terminate"
+    IGNORE = "ignore"
+    RETRY_STEP = "retry"
+
+
+class QianniuLoginError(Exception):
+    pass
+
+
+class NeedsHumanError(QianniuLoginError):
+    pass
+
+
+class CredentialsRejected(QianniuLoginError):
+    pass
+
+
+def yunma_recg(token: str, base64_im: str) -> dict:
+    conn = http.client.HTTPConnection(YUNMA_HOST, timeout=60)
+    headers = {"Content-Type": "application/json"}
+    data = {"image": base64_im, "token": token, "type": YUNMA_TYPE_ALI_SLIDER}
+    conn.request("POST", YUNMA_PATH, body=json.dumps(data), headers=headers)
+    response = conn.getresponse()
+    response_data = response.read().decode("utf-8")
+    conn.close()
+    return json.loads(response_data)
+
+
+def encode_image(image: Image.Image) -> str:
+    buf = BytesIO()
+    image.save(buf, format="PNG")
+    return base64.b64encode(buf.getvalue()).decode("utf-8")
+
+
+def decode_image(base64_string: str) -> Image.Image:
+    missing = len(base64_string) % 4
+    if missing:
+        base64_string += "=" * (4 - missing)
+    img = Image.open(BytesIO(base64.b64decode(base64_string)))
+    return img.convert("RGBA")
+
+
+def join_images(image1: Image.Image, image2: Image.Image) -> Image.Image:
+    w1, h1 = image1.size
+    w2, h2 = image2.size
+    new_image = Image.new("RGB", (max(w1, w2), h1 + h2 + 11), (255, 255, 255))
+    new_image.paste(image1, (0, 0))
+    new_image.paste(image2, (0, h1 + 11))
+    return new_image
 
 
 @dataclass

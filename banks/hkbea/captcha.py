@@ -288,13 +288,9 @@ TTSHITU_JD_LEGACY_SLIDER_TYPE = "18"
 TTSHITU_JD_LEGACY_SLIDER_CODE = "ttshitu_18_predict"
 TTSHITU_PDD_ONE_CLICK_TYPE = "19"
 TTSHITU_PDD_ONE_CLICK_CODE = "ttshitu_19_predict"
-TTSHITU_WANGDIANTONG_TYPE = "3"
-TTSHITU_WANGDIANTONG_CODE = "ttshitu_3_predict"
 
 AIKUCUN_FREE_SLIDER_OFFSET = -4
 AIKUCUN_FREE_SLIDER_SPEED = "fast"
-WALMART_HOLD_SECONDS = 7
-MEITUAN_TRACE_SKIP = 25
 
 _IMAGE_LEFT_RE = re.compile(r"(\d+),")
 
@@ -388,18 +384,6 @@ def free_slider_drag_distance(
     if windows:
         drag = drag / float(ppi or 1)
     return int(drag)
-
-
-def meituan_slider_distance(background_width: float, slider_width: float) -> float:
-    """process65: ``bound.width - bound_1.width``."""
-    return float(background_width) - float(slider_width)
-
-
-def meituan_trace_points(points: Sequence) -> list:
-    """process65 replays ``time_ease(...)[25:]``. The easing function itself
-    lives in ``resources.trace_api``, which is not in the export.
-    """
-    return list(points)[25:]
 
 
 def legacy_click_point(

@@ -35,9 +35,7 @@
 
 中国银行：**没有登录指令，无法移植登录流。** 说明见 `docs/MISSING_BOC.md`。`bank_captcha` / `orangebank_slider_captcha` 只放在 各目录 `captcha.py`。
 
-登录旺店通是 Windows 客户端，没有网页地址，见 `docs/UNPORTED_BLOCKS.md`。京准通跳转表里的「京东数坊」在源码中是空 URL，不会跳转。拼多多商家后台（待下架）模块带 `DEPRECATED = True`。
-
-千牛的云码请求、拼图和选择器常量仍在 Selenium 同级模块 `qianniu_login.py`，Playwright 通过 `import qianniu_login as _se` 复用。其余平台共用 各目录 `captcha.py` 与 `seller_common.py`。
+拼多多商家后台（待下架）模块带 `DEPRECATED = True`。其余平台共用各目录 `captcha.py`。
 
 影刀原文（已去掉账号、密码、Token）在 `vendor/shadowbot/`。
 
@@ -45,8 +43,7 @@
 
 | 路径 | 作用 |
 | --- | --- |
-| `qianniu_login_pw.py` | 千牛 Playwright 登录 |
-| `qianniu_login.py` | 千牛 Selenium 同级实现，以及被 Playwright 复用的纯函数 |
+| `platforms/qianniu/qianniu_login_pw.py` | 千牛 Playwright 登录 |
 | `jingmai_login_pw.py` | 京麦登录 |
 | `pdd_login_pw.py` | 拼多多登录 |
 | `doudian_login_pw.py` | 抖店登录 |
@@ -92,7 +89,7 @@ playwright install chromium
 | `OCEANENGINE_ZH_ACCOUNT` / `OCEANENGINE_ZH_PASSWORD` | 巨量纵横 |
 | `YOUZAN_ACCOUNT` / `YOUZAN_PASSWORD` | 有赞 |
 | `JD_ACCOUNT` / `JD_PASSWORD` | 京东。可选 `JD_LOGIN_URL`，默认同源码 |
-| `JZT_ACCOUNT` / `JZT_PASSWORD` / `JZT_PLATFORM` | 京准通。`JZT_PLATFORM` 取 process41 的平台名；京东数坊不跳转 |
+| `JZT_ACCOUNT` / `JZT_PASSWORD` / `JZT_PLATFORM` | 京准通。`JZT_PLATFORM` 取 process41 的平台名 |
 | `TAOBAO_ACCOUNT` / `TAOBAO_PASSWORD` | 淘宝 |
 | `TAOBAO_MINI_ACCOUNT` / `TAOBAO_MINI_PASSWORD` | 淘宝 mini |
 | `COMPASS_ACCOUNT` / `COMPASS_PASSWORD` / `COMPASS_SHOP` | 电商罗盘。店铺名可空，空则点第一条 |

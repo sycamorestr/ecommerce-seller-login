@@ -18,7 +18,7 @@ scripts/                 # 千牛实机入口
 
 巨量引擎的滑块和邮箱验证调用 `platforms/doudian/`（process48 / process49）。拷贝 `platforms/oceanengine/` 时请一并拷贝 `platforms/doudian/`。其余目录不依赖别的产品目录。
 
-仓库根上的 `qianniu_login_pw.py` 这类文件，以及 `banks/orangebank_login_pw.py` 这类旧路径，只是重新导出，已废弃。新代码请从 `platforms.*` 或 `banks.<银行目录>.*` 导入。
+仓库根上的 `banks/orangebank_login_pw.py` 这类旧路径只是重新导出。新代码请从 `platforms.*` 或 `banks.<银行目录>.*` 导入。
 
 ## 分类
 
@@ -27,8 +27,8 @@ scripts/                 # 千牛实机入口
 | 国内电商 | `platforms/qianniu` `jingmai` `pdd` `doudian` `alipay` `oceanengine` `youzan` `jd` `jzt` `taobao` `compass` `aikucun` `alimama` `ali1688` `tmall` |
 | 抖店多店 / 切店 | 与单店同在 `platforms/doudian/` |
 | 银行 | `banks/pingan` `boc` `ccb` `icbc` `cmb` `bocom` 等，见 [`docs/banks.md`](docs/banks.md) |
-| 跨境 | `platforms/amazon` `temu` `aliexpress` `ziniao` |
-| ERP / 税务 | `platforms/jushuitan` `kingdee` `tax_invoice` `sycm`；阿里妈妈平台登录在 `platforms/alimama/`；巨量合集登录在 `platforms/oceanengine/` |
+| 跨境 | `platforms/temu` `aliexpress` |
+| ERP / 税务 | `platforms/jushuitan` `sycm`；阿里妈妈平台登录在 `platforms/alimama/`；巨量合集登录在 `platforms/oceanengine/` |
 | Cookie | `platforms/cookie/` |
 | 未做成网页登录 | [`docs/unported.md`](docs/unported.md) |
 
@@ -51,4 +51,4 @@ python -m platforms.qianniu.qianniu_login_pw
 
 ## 安全
 
-不要把账号、密码、Token、手机号写进仓库。`.env`、`shots/`、`cookies/`、`captcha_cache/` 已被忽略。短信、扫码、人脸、UKey 停在该目录 `helpers.NeedsHumanError`。只有 Windows 客户端的流程抛出该目录的 `DesktopOnlyLogin`（旺店通、紫鸟）。
+不要把账号、密码、Token、手机号写进仓库。`.env`、`shots/`、`cookies/`、`captcha_cache/` 已被忽略。短信、扫码、人脸、UKey 停在该目录 `helpers.NeedsHumanError`。
