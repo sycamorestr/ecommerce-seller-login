@@ -81,7 +81,7 @@ with sync_playwright() as playwright:
 
 ## 测试
 
-`tests/test_qianniu_login_pw.py` 覆盖云码请求体类型 `20226`、拼图高度、距离公式、缺账号、`OnError.IGNORE`、`NeedsHumanError` 返回值、登录 URL，以及 Playwright 选择器与 Selenium 常量一致。不打开淘宝页面。
+`tests/test_qianniu_login_pw.py` 覆盖云码请求体类型 `20226`、拼图高度、距离公式、缺账号、`OnError.IGNORE`、`NeedsHumanError` 返回值、登录 URL 和选择器。不打开淘宝页面。
 
 ```bash
 pytest tests/test_qianniu_login_pw.py -q
