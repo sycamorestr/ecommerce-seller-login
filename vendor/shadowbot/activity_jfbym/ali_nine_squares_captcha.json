@@ -1,0 +1,14 @@
+{
+  "msg": "识别成功",
+  "code": 10000,
+  "data": {
+    "code": 0,
+    "data": {
+      "serial_number": [],
+      "click_pos": [],
+      "tips": "带狗的笔记本"
+    },
+    "time": 0.07979226112365723,
+    "unique_code": "2c3b114cb8855e384e7220b6d6e6edac"
+  }
+}

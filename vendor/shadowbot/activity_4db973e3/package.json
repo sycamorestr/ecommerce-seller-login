@@ -1,0 +1,281 @@
+{
+  "uuid": "f1ab9cf7-bf6e-43a4-9dab-0fda353e093c",
+  "name": "【付费】验证码识别(web)",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/30/aa/30aad4172f6546b59001d3395853aa30.png",
+  "version": "23.11.4",
+  "tags": null,
+  "software": null,
+  "software_title": null,
+  "package_version": 2,
+  "feature_list": [
+    2
+  ],
+  "description": "封装了常见但有使用难度的几类验证码，包含了滑动拼图验证、图片旋转验证、推理拼图验证以及点选验证等验证码识别指令",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_4db973e3",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null
+    },
+    {
+      "name": "utils",
+      "filename": "utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "modules"
+    },
+    {
+      "name": "计算滑块距离",
+      "filename": "process2",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "modules"
+    },
+    {
+      "name": "拖动滑块",
+      "filename": "process3",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "待删除20221201"
+    },
+    {
+      "name": "图片旋转验证",
+      "filename": "process15",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null
+    },
+    {
+      "name": "推理拼图验证",
+      "filename": "process16",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null
+    },
+    {
+      "name": "获取当前屏幕缩放比例",
+      "filename": "get_scaling",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null
+    },
+    {
+      "name": "滑动拼图验证（去除界面 bug）",
+      "filename": "process19",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null
+    },
+    {
+      "name": "超级鹰验证码识别",
+      "filename": "process20",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null
+    },
+    {
+      "name": "emphasize_color",
+      "filename": "emphasize_color",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "突出验证码颜色"
+    },
+    {
+      "name": "坐标点选验证（去除界面 bug）",
+      "filename": "process21",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null
+    },
+    {
+      "name": "测试-突出验证码颜色",
+      "filename": "process23",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "测试"
+    },
+    {
+      "name": "超级鹰本地验证码识别",
+      "filename": "process24",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null
+    },
+    {
+      "name": "测试-超级鹰本地验证码识别",
+      "filename": "process25",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "测试"
+    },
+    {
+      "name": "测试-滑动拼图验证码",
+      "filename": "process26",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "测试"
+    },
+    {
+      "name": "测试-获取屏幕缩放",
+      "filename": "process27",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "测试"
+    },
+    {
+      "name": "测试-图片旋转验证",
+      "filename": "process28",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "测试"
+    },
+    {
+      "name": "测试-坐标点选验证",
+      "filename": "process29",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "测试"
+    },
+    {
+      "name": "测试-推理图片验证",
+      "filename": "process30",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "测试"
+    },
+    {
+      "name": "test_invoke_modules",
+      "filename": "test_invoke_modules",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "测试"
+    },
+    {
+      "name": "淘宝新滑动验证-禁用",
+      "filename": "process31",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "淘宝新滑动验证"
+    },
+    {
+      "name": "A 单次运行",
+      "filename": "process32",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "淘宝新滑动验证"
+    },
+    {
+      "name": "B_Tools",
+      "filename": "B_Tools",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "淘宝新滑动验证"
+    },
+    {
+      "name": "taobo_object_reg",
+      "filename": "taobo_object_reg",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "淘宝新滑动验证"
+    },
+    {
+      "name": "测试-淘宝物体识别",
+      "filename": "process33",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "测试"
+    },
+    {
+      "name": "模拟人工拖拽",
+      "filename": "process34",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "淘宝新滑动验证"
+    },
+    {
+      "name": "京东风控滑块验证",
+      "filename": "process35",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "京东-虚竹"
+    },
+    {
+      "name": "jd_utiles",
+      "filename": "jd_utiles",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "京东-虚竹"
+    },
+    {
+      "name": "测试-京东风控滑动验证",
+      "filename": "process37",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "测试"
+    },
+    {
+      "name": "xz_utils",
+      "filename": "xz_utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "modules"
+    },
+    {
+      "name": "xtrace",
+      "filename": "xtrace",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "modules"
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "突出验证码颜色"
+    },
+    {
+      "name": "测试"
+    },
+    {
+      "name": "modules"
+    },
+    {
+      "name": "待删除20221201"
+    },
+    {
+      "name": "淘宝新滑动验证"
+    },
+    {
+      "name": "京东-虚竹"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [],
+  "internaldependencies": [
+    "activity_ea8fd401==23.6.4"
+  ],
+  "selectordependencies": [],
+  "internalautodependencies": [],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {
+    "videoUrl": null,
+    "imageUrl": null,
+    "imageName": null,
+    "gifUrl": null
+  },
+  "terminalTags": "win,macos,linux"
+}

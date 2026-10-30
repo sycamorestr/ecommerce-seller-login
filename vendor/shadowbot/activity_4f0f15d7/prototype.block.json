@@ -1,0 +1,2344 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.main",
+      "statement": "process.invoke_activity",
+      "title": "滑块拼图验证码(免费)",
+      "keywords": "",
+      "description": "该指令集解决大部分滑块拼图验证码",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/17/a1/17a1c148c522d40bf7e31a68809310a7.png",
+      "function": "xbot_extensions.activity_4f0f15d7.main",
+      "helpUrl": null,
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.通用滑块拼图验证码",
+      "statement": "process.invoke_activity",
+      "title": "滑块拼图验证码免费版",
+      "keywords": "",
+      "description": "解决大部分滑块拼图验证码",
+      "comment": "处理拼图滑块验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/puzzle.png",
+      "function": "xbot_extensions.activity_4f0f15d7.process1",
+      "helpUrl": "https://ydrpa.yuque.com/org-wiki-ydrpa-xtutvv/ga4dm6/gu8tob76f86ov85i",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "背景元素",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "缺块元素",
+          "label": "缺块元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "拖拽滑块",
+          "label": "拖拽滑块",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "偏移距离",
+          "label": "偏移距离",
+          "required": false,
+          "tips": "填5表示向右偏移5个像素",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin",
+            "placeholder": "填5表示向右偏移5个像素"
+          },
+          "category": "general"
+        },
+        {
+          "name": "重试次数",
+          "label": "重试次数",
+          "required": false,
+          "tips": "滑动失败时的重试次数，最小为0，默认为3",
+          "type": "str",
+          "default": "10:3",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "默认为3"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.测试",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4f0f15d7.process2",
+      "helpUrl": null,
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.test",
+      "statement": "process.invoke_activity",
+      "title": "module3",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4f0f15d7.test",
+      "helpUrl": null,
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.通用滑块拼图验证码(win)",
+      "statement": "process.invoke_activity",
+      "title": "滑块拼图验证免费版(win)",
+      "keywords": "",
+      "description": "解决大部分滑块拼图验证码(win)",
+      "comment": "处理拼图滑块验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/puzzle.png",
+      "function": "xbot_extensions.activity_4f0f15d7.process3",
+      "helpUrl": "/yddoc/rpa/zh-CN/889696586072498176",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "窗口对象",
+          "label": "窗口对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot.win32.window.Win32Window",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "背景元素",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot.win32.element.Win32Element",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "缺块元素",
+          "label": "缺块元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot.win32.element.Win32Element",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "拖拽滑块",
+          "label": "拖拽滑块",
+          "required": false,
+          "tips": "",
+          "type": "xbot.win32.element.Win32Element",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "偏移距离",
+          "label": "偏移距离",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        },
+        {
+          "name": "重试次数",
+          "label": "重试次数",
+          "required": false,
+          "tips": "滑动失败时的重试次数，最小为0，默认为3",
+          "type": "str",
+          "default": "10:3",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "默认为3"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.Replace_Chinese_Path",
+      "statement": "process.invoke_activity",
+      "title": "module3",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4f0f15d7.Replace_Chinese_Path",
+      "helpUrl": null,
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.utils",
+      "statement": "process.invoke_activity",
+      "title": "module3",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4f0f15d7.utils",
+      "helpUrl": null,
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.slider_captcha",
+      "statement": "process.invoke_activity",
+      "title": "滑块拼图验证免费版(web)",
+      "keywords": "",
+      "description": "该指令集调用CV的能力实现识别验证码并自动验证",
+      "comment": "拖动%web_page%网页对象上的%slider_ele%滑块在%background_ele%完成拼图验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4f0f15d7.slider_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/889696491021180928",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "滑块元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移距离",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "move_speed",
+          "label": "滑动速度",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "快速",
+                "value": "fast",
+                "Unicode": null
+              },
+              {
+                "display": "中速",
+                "value": "middle",
+                "Unicode": null
+              },
+              {
+                "display": "慢速",
+                "value": "slow",
+                "Unicode": null
+              },
+              {
+                "display": "变速",
+                "value": "variable",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.slider_acceleration_captcha",
+      "statement": "process.invoke_activity",
+      "title": "通用变速滑块验证(web)",
+      "keywords": "",
+      "description": "该指令集调用CV的能力实现识别验证码并自动完成变速滑块验证",
+      "comment": "在网页对象%web_page%，拖动滑块元素%drag_ele%，使得缺口元素%target_ele%拼接在背景元素%background_ele%上完成验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4f0f15d7.slider_acceleration_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/831794361654890496",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "拖拽元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "target_ele",
+          "label": "缺口元素",
+          "required": false,
+          "tips": "缺口元素（注意style属性是否含有px）",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素 选填，当验证码需要点击刷新元素才能进行下一次验证的时候填写",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移距离",
+          "required": false,
+          "tips": "偏移值",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.slider_wanliniu",
+      "statement": "process.invoke_activity",
+      "title": "万里牛滑块验证",
+      "keywords": "",
+      "description": null,
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4f0f15d7.slider_wanliniu",
+      "helpUrl": null,
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "background_ele",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "slider_ele",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "drag_ele",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "retry_count",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        },
+        {
+          "name": "offset",
+          "label": "offset",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.bank_captcha_green",
+      "statement": "process.invoke_activity",
+      "title": "银行滑块验证码识别(web)",
+      "keywords": "",
+      "description": "针对银行网页滑块验证码（绿色边框），自动截图识别缺口距离并模拟拖拽完成验证",
+      "comment": "获取网页对象%web_page%，通过CV拖拽%slider_ele%，使缺口元素%target_ele%至背景元素%background_ele%的缺口上",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/puzzle.png",
+      "function": "xbot_extensions.activity_4f0f15d7.bank_captcha_green",
+      "helpUrl": "/yddoc/rpa/zh-CN/952866222308691968",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "拖拽元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "target_ele",
+          "label": "缺口元素",
+          "required": false,
+          "tips": "缺口元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_elem",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证次数",
+          "required": false,
+          "tips": "验证次数",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移量",
+          "required": false,
+          "tips": "偏移量，填写正数",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.shopee_captcha",
+      "statement": "process.invoke_activity",
+      "title": "shopee弧形验证",
+      "keywords": "",
+      "description": "该指令集调用CV的能力实现识别验证码并自动验证",
+      "comment": "获取网页对象，在背景元素上拖动使拼图元素移动到指定位置",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/cloud_checked.png",
+      "function": "xbot_extensions.activity_4f0f15d7.shopee_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/960506202903846912",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "拖拽元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "bg_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "piece_ele",
+          "label": "拼图块元素",
+          "required": false,
+          "tips": "拼图块元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证次数",
+          "required": false,
+          "tips": "验证次数",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移量",
+          "required": false,
+          "tips": "偏移量",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "wait_time",
+          "label": "等待验证码加载时间",
+          "required": false,
+          "tips": "等待验证码加载时间",
+          "type": "int",
+          "default": "13:2",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.arithmetic_captcha",
+      "statement": "process.invoke_activity",
+      "title": "算术验证码",
+      "keywords": "",
+      "description": "该指令实现了算术验证码的识别处理",
+      "comment": "在网页%web_page%中识别算术验证码%picture_ele%，并将识别结果保存至%result%",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.arithmetic_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/962695405942493184",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "picture_ele",
+          "label": "图片元素",
+          "required": false,
+          "tips": "图片元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "识别结果",
+          "tips": "识别结果",
+          "name": "result",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha",
+      "statement": "process.invoke_activity",
+      "title": "支付宝四方格点击旋转验证",
+      "keywords": "",
+      "description": "该指令用来实现支付宝四方格的点击旋转验证",
+      "comment": "在%web_page%中处理支付宝四方格点击旋转验证码",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/970969587244412928",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "浏览器对象",
+          "required": false,
+          "tips": "浏览器对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "picture_ele_1",
+          "label": "左上角图片元素",
+          "required": false,
+          "tips": "左上角图片元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "picture_ele_2",
+          "label": "右上角图片元素",
+          "required": false,
+          "tips": "右上角图片元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "picture_ele_3",
+          "label": "左下角图片元素",
+          "required": false,
+          "tips": "左下角图片元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "picture_ele_4",
+          "label": "右下角图片元素",
+          "required": false,
+          "tips": "右下角图片元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "solve_size",
+          "label": "缩放大小",
+          "required": false,
+          "tips": "缩放大小",
+          "type": "str",
+          "default": "10:128",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "值越大，保留的图像细节越多，识别可能更准，但计算会更慢"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "band",
+          "label": "边缘比较像素",
+          "required": false,
+          "tips": "边缘比较像素",
+          "type": "str",
+          "default": "10:6",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "值越大，拼缝比较时看的边缘区域越宽；值太小可能信息不够，值太大可能把无关内容也算进去"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_times",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "str",
+          "default": "10:3",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "sure_ele",
+          "label": "确定按钮",
+          "required": false,
+          "tips": "确定按钮",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.dewu_captcha",
+      "statement": "process.invoke_activity",
+      "title": "得物旋转验证码",
+      "keywords": "",
+      "description": "该指令实现了得物旋转验证码的处理",
+      "comment": "在网页%web_page%中处理得物旋转验证码",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.dewu_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/974539563144032256",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "inner_ele",
+          "label": "内圈元素",
+          "required": false,
+          "tips": "内圈元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "out_ele",
+          "label": "外圈元素",
+          "required": false,
+          "tips": "外圈元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "滑块元素",
+          "required": false,
+          "tips": "滑块元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "滑动条元素",
+          "required": false,
+          "tips": "滑动条元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_time",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.temu_connect_captcha",
+      "statement": "process.invoke_activity",
+      "title": "temu连线验证码",
+      "keywords": "",
+      "description": "该指令实现了对temu连线验证码的处理",
+      "comment": "在网页%web_page%中对temu连线验证码进行处理，背景为%captcha_element%，确认按钮为%sure_element%",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.temu_connect_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/978629306453286912",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "浏览器对象",
+          "required": false,
+          "tips": "浏览器对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "captcha_element",
+          "label": "验证码背景图",
+          "required": false,
+          "tips": "验证码背景图",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "sure_element",
+          "label": "确认元素",
+          "required": false,
+          "tips": "确认元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "lw",
+          "label": "线条宽度",
+          "required": false,
+          "tips": "线条宽度",
+          "type": "any",
+          "default": "13:5",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "point_interval",
+          "label": "移动停顿时间",
+          "required": false,
+          "tips": "移动停顿时间",
+          "type": "any",
+          "default": "13:0.01",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "click_interval",
+          "label": "点击停留时间",
+          "required": false,
+          "tips": "点击停留时间",
+          "type": "any",
+          "default": "13:0.1",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "any",
+          "default": "13:3",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha",
+      "statement": "process.invoke_activity",
+      "title": "shopee弧形验证 - 物体位置",
+      "keywords": "",
+      "description": "该指令集调用CV的能力实现识别验证码并自动验证",
+      "comment": "获取网页对象，在背景元素上拖动使拼图元素移动到指定位置",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/981402677194027008",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "拖拽元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "bg_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "piece_ele",
+          "label": "拼图元素",
+          "required": false,
+          "tips": "拼图元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移量",
+          "required": false,
+          "tips": "偏移量",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "wait_time",
+          "label": "等待验证码加载时间",
+          "required": false,
+          "tips": "等待时间",
+          "type": "int",
+          "default": "13:2",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.temu_rotate_captcha",
+      "statement": "process.invoke_activity",
+      "title": "temu旋转图片验证码",
+      "keywords": "",
+      "description": "该指令实现了temu旋转图片验证码的处理",
+      "comment": "在%web_page%中处理temu旋转验证码，背景元素为%image_ele%，确认元素为%commit_ele%",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.temu_rotate_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/979000137577828352",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "image_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "commit_ele",
+          "label": "确认元素",
+          "required": false,
+          "tips": "确认元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "click_interval",
+          "label": "点击间隔",
+          "required": false,
+          "tips": "点击间隔",
+          "type": "any",
+          "default": "13:0.15",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "tile_xpath",
+          "label": "图片xpath",
+          "required": false,
+          "tips": "图片xpath",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha",
+      "statement": "process.invoke_activity",
+      "title": "temu图片拖动验证码",
+      "keywords": "",
+      "description": "该指令实现了temu平台图片拖动验证码的处理",
+      "comment": "在%web_page%中处理图片拖动验证码，图片背景元素为%image_ele%，确认按钮为%confirm_ele%",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/980637769058922496",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "image_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "confirm_ele",
+          "label": "确认元素",
+          "required": false,
+          "tips": "确认元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "image_xpath",
+          "label": "图片xpath路径",
+          "required": false,
+          "tips": "图片xpath路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "drag_only_matched",
+          "label": "是否有不需要拖拽的项",
+          "required": false,
+          "tips": "是否有不需要拖拽的项",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "drag_only_matched"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha",
+      "statement": "process.invoke_activity",
+      "title": "temu点击相同点数验证码",
+      "keywords": "",
+      "description": "该指令实现了temu点击相同点数验证码的处理",
+      "comment": "在网页对象%web_page%中处理temu点击相同点数验证码，背景元素为%image_ele%",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/980998184796336128",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "image_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "confirm_ele",
+          "label": "确认元素",
+          "required": false,
+          "tips": "确认元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha",
+      "statement": "process.invoke_activity",
+      "title": "shopee移动验证 - 物体位置",
+      "keywords": "",
+      "description": "该指令集调用CV的能力实现识别验证码并自动验证",
+      "comment": "获取网页对象%web_page%，在背景元素%bg_ele%上拖动拼图元素%piece_ele%移动到指定位置，点击验证元素%verify_ele%",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/981496637982560256",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "piece_ele",
+          "label": "拼图元素",
+          "required": false,
+          "tips": "拼图元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "bg_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "verify_ele",
+          "label": "验证元素",
+          "required": false,
+          "tips": "验证元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "min_score",
+          "label": "最小匹配分数",
+          "required": false,
+          "tips": "最小匹配分数",
+          "type": "float",
+          "default": "13:0.30",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "wait_time",
+          "label": "等待加载时间",
+          "required": false,
+          "tips": "等待加载时间",
+          "type": "int",
+          "default": "13:2",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset_y",
+          "label": "y轴偏移量",
+          "required": false,
+          "tips": "y轴偏移量",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset_x",
+          "label": "x轴偏移量",
+          "required": false,
+          "tips": "x轴偏移量",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证次数",
+          "required": false,
+          "tips": "验证次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.fruit_content_captcha",
+      "statement": "process.invoke_activity",
+      "title": "水果连线验证码",
+      "keywords": "",
+      "description": "该指令实现了水果连线验证码的处理",
+      "comment": "在%web_page%中处理背景为%img_ele%的水果连线验证码",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.fruit_content_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/983974182302892032",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "img_ele",
+          "label": "验证码图片元素",
+          "required": false,
+          "tips": "验证码图片元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "confirm_ele",
+          "label": "确认元素",
+          "required": false,
+          "tips": "确认元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.svg_animation_captcha",
+      "statement": "process.invoke_activity",
+      "title": "监管局动态匹配点选验证",
+      "keywords": "",
+      "description": "该指令实现了在国家市场监督管理总局网站，对SVG动态验证码进行目标图片的点选验证",
+      "comment": "在%web_page%上，在动态 SVG 图片元素中，找到目标元素%target_ele%所在位置并点击",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.svg_animation_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/986442250620354560",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "target_ele",
+          "label": "目标提示元素",
+          "required": false,
+          "tips": "目标提示元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证重试次数",
+          "required": false,
+          "tips": "验证重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "wait_time",
+          "label": "等待加载时间",
+          "required": false,
+          "tips": "等待验证码时间",
+          "type": "int",
+          "default": "13:2",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.gif_math_captcha",
+      "statement": "process.invoke_activity",
+      "title": "动态算数验证码",
+      "keywords": "",
+      "description": "该指令实现了动态图片中算数验证码的处理",
+      "comment": "获取验证码图片%target_ele%，保存计算结果到%result%中",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.gif_math_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/990930998492045312",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "target_ele",
+          "label": "验证码图片元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "计算结果",
+          "name": "result",
+          "type": "any"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.tysfrzcs_slider_captcha",
+      "statement": "process.invoke_activity",
+      "title": "变速旋转拼图验证码(综合服务平台)",
+      "keywords": "",
+      "description": "该指令通过计算实时角度，实现自动化通过变速旋转拼图验证码",
+      "comment": "在网页%web_page%中，拖动拼图元素%piece_ele%到背景%bg_ele%的正确位置",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.tysfrzcs_slider_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/993438980482334720",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "bg_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "piece_ele",
+          "label": "拼图元素",
+          "required": false,
+          "tips": "拼图元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖动元素",
+          "required": false,
+          "tips": "拖拽元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "wait_time",
+          "label": "等待验证码加载时间",
+          "required": false,
+          "tips": "等待验证码加载时间",
+          "type": "int",
+          "default": "13:2",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "rotation_ele",
+          "label": "拼图容器元素",
+          "required": false,
+          "tips": "(可选)拼图容器元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.captcha_vision",
+      "statement": "process.invoke_activity",
+      "title": "module",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.captcha_vision",
+      "helpUrl": null,
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca",
+      "statement": "process.invoke_activity",
+      "title": "keeta 相同颜色小球连线验证码",
+      "keywords": "",
+      "description": "该指令实现了在keeta登录页面，自动处理连线验证码",
+      "comment": "在网页%web_page%中，查找图片%target_ele%颜色为%color_hint_ele%的小球并连线",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca",
+      "helpUrl": "/yddoc/rpa/zh-CN/994194979097231360",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "target_ele",
+          "label": "目标图片元素",
+          "required": false,
+          "tips": "目标图片元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "color_hint_ele",
+          "label": "颜色提示元素",
+          "required": false,
+          "tips": "颜色提示元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证重试次数",
+          "required": false,
+          "tips": "验证重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "wait_time",
+          "label": "等待验证码刷新时间",
+          "required": false,
+          "tips": "等待验证码刷新时间",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha",
+      "statement": "process.invoke_activity",
+      "title": "唯品会颜色文本验证码",
+      "keywords": "",
+      "description": "该指令实现了，在唯品会商品搜索页面，识别验证码图片中指定颜色文本，并输出结果",
+      "comment": "在%web_page%中，提取%prompt_ele%的颜色信息，并输出%captcha_ele%中对应颜色的文本，保存结果到%result%",
+      "icon": null,
+      "function": "xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/998056811384647680",
+      "extension": "滑块拼图验证码(免费)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "prompt_ele",
+          "label": "颜色提示元素",
+          "required": false,
+          "tips": "颜色提示元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "captcha_ele",
+          "label": "验证码元素",
+          "required": false,
+          "tips": "验证码元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "result",
+          "label": "识别结果",
+          "tips": "识别结果",
+          "name": "result",
+          "type": "str"
+        }
+      ]
+    }
+  ]
+}

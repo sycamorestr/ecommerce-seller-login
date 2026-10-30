@@ -11,8 +11,27 @@
 | 拼多多 | `pdd_login_pw.py` | `process21.py` + `std_slider_captcha` + `cs_temu_captcha` | `https://mms.pinduoduo.com/login/` |
 | 抖店 | `doudian_login_pw.py` | `process4.py`、`process48/45/44`、`process49` | `https://fxg.jinritemai.com/login/common` |
 | 支付宝 | `alipay_login_pw.py` | `process20.py` → `zfb_login.py` | `https://auth.alipay.com/login/index.htm` |
+| 巨量 | `oceanengine_login_pw.py` | `process1.py` + `process48` | `https://business.oceanengine.com/login` |
+| 巨量引擎邮箱 | `oceanengine_email_login_pw.py` | `process47.py` + `process48` + `process49` | `https://business.oceanengine.com/login?appKey=51` |
+| 巨量纵横 | `oceanengine_zongheng_login_pw.py` | `process12.py` + `process48` | `https://business.oceanengine.com/login?appKey=51` |
+| 有赞 | `youzan_login_pw.py` | `process5.py` + `std_slider_captcha` | `https://account.youzan.com/login` |
+| 京东 | `jd_login_pw.py` | `process6.py` | `https://passport.jd.com/new/login.aspx` |
+| 京准通 | `jzt_login_pw.py` | `process40.py` + `process41.py` | `https://jzt.jd.com/gw/index` |
+| 淘宝 | `taobao_login_pw.py` | `process7.py` + `ali_slider_captcha` | `https://login.taobao.com/member/login.jhtml` |
+| 淘宝 mini | `taobao_mini_login_pw.py` | `taobao_mini.py` | `https://login.taobao.com/member/login.jhtml?style=minisimple&...` |
+| 电商罗盘 | `compass_login_pw.py` | `process15.py` + `dy_slider_captcha` | `https://compass.jinritemai.com/login` |
+| 电商罗盘策略 | `compass_strategy_login_pw.py` | `process59.py` + `dy_slider_captcha` | `https://compassbrand.jinritemai.com/login` |
+| 爱库存 | `aikucun_login_pw.py` | `process33.py` + `slider_captcha` offset `-4` | `https://merc.aikucun.com/login.html` |
+| 阿里妈妈数智 | `alimama_login_pw.py` | `process42.py` | `https://www.alimama.com/index.htm` |
+| 拼多多推广 | `pdd_promote_login_pw.py` | `process51.py` | `https://mms.pinduoduo.com/home/` |
+| 拼多多商家后台（待下架） | `pdd_mms_legacy_login_pw.py` | `process43.py` + 点选 type `19` | `https://mms.pinduoduo.com/home/` |
+| 1688 | `login_1688_pw.py` | `login_1688.py` | 淘宝登录页 `from=1688web` |
+| 天猫超市 | `tmall_supermarket_login_pw.py` | `login_tmall_supermarket.py` | `https://web.txcs.tmall.com/login?...` |
+| Cookie | `cookie_login_pw.py` | `cookie_login/process1–3` + `_core.py` | 使用当前页面，不另开登录站 |
 
 中国银行：**没有登录指令，无法移植登录流。** 说明见 `docs/MISSING_BOC.md`。`bank_captcha` / `orangebank_slider_captcha` 只放在 `captcha_helpers.py`。
+
+登录旺店通是 Windows 客户端，没有网页地址，见 `docs/UNPORTED_BLOCKS.md`。京准通跳转表里的「京东数坊」在源码中是空 URL，不会跳转。拼多多商家后台（待下架）模块带 `DEPRECATED = True`。
 
 千牛的云码请求、拼图和选择器常量仍在 Selenium 同级模块 `qianniu_login.py`，Playwright 通过 `import qianniu_login as _se` 复用。其余平台共用 `captcha_helpers.py` 与 `seller_common.py`。
 
@@ -34,7 +53,9 @@
 | `run_live_login_pw.py` | 千牛实机登录入口 |
 | `run_sms_get_code.py` | 千牛停在短信门时点击「点击获取验证码」 |
 | `docs/MISSING_BOC.md` | 中国银行登录缺失说明 |
-| `vendor/shadowbot/` | 影刀源码副本 |
+| `docs/UNPORTED_BLOCKS.md` | 没有网页登录地址、或只有子流程的影刀块 |
+| `cookie_login_pw.py` | 保存 / 写入 / 清除 Cookie 与 localStorage |
+| `vendor/shadowbot/` | 影刀源码副本（账号、密码、Token 已清空） |
 
 ## 安装
 
@@ -62,7 +83,23 @@ playwright install chromium
 | `DOUDIAN_EMAIL` / `DOUDIAN_EMAIL_AUTH` | 抖店邮箱验证用的邮箱与授权码（页面出现「发送验证码」且没有验证码时需要） |
 | `DOUDIAN_EMAIL_CODE` | 可选。已经拿到的邮箱验证码；不提供则停在邮箱门（`NeedsHumanError`） |
 | `ALIPAY_ACCOUNT` / `ALIPAY_PASSWORD` | 支付宝账号、密码 |
-| `YUNMA_TOKEN` | 云码 Token。千牛滑块 `type=20226`；京麦/拼多多单图滑块与 `bank_captcha` 为 `22222`；拼多多空间点选 `"9999"`；抖店滑块 `"20225"`；支付宝四图旋转 `276502` |
+| `OCEANENGINE_ACCOUNT` / `OCEANENGINE_PASSWORD` | 巨量登录。`OCEANENGINE_RELOGIN=1` 时先退出 |
+| `OCEANENGINE_EMAIL` / `OCEANENGINE_EMAIL_PASSWORD` / `OCEANENGINE_EMAIL_CODE` | 巨量引擎邮箱登录。没有验证码时停在邮箱门 |
+| `OCEANENGINE_ZH_ACCOUNT` / `OCEANENGINE_ZH_PASSWORD` | 巨量纵横 |
+| `YOUZAN_ACCOUNT` / `YOUZAN_PASSWORD` | 有赞 |
+| `JD_ACCOUNT` / `JD_PASSWORD` | 京东。可选 `JD_LOGIN_URL`，默认同源码 |
+| `JZT_ACCOUNT` / `JZT_PASSWORD` / `JZT_PLATFORM` | 京准通。`JZT_PLATFORM` 取 process41 的平台名；京东数坊不跳转 |
+| `TAOBAO_ACCOUNT` / `TAOBAO_PASSWORD` | 淘宝 |
+| `TAOBAO_MINI_ACCOUNT` / `TAOBAO_MINI_PASSWORD` | 淘宝 mini |
+| `COMPASS_ACCOUNT` / `COMPASS_PASSWORD` / `COMPASS_SHOP` | 电商罗盘。店铺名可空，空则点第一条 |
+| `COMPASS_STRATEGY_ACCOUNT` / `COMPASS_STRATEGY_PASSWORD` / `COMPASS_STRATEGY_SHOP` | 电商罗盘策略 |
+| `AIKUCUN_ACCOUNT` / `AIKUCUN_PASSWORD` | 爱库存 |
+| `ALIMAMA_ACCOUNT` / `ALIMAMA_PASSWORD` | 阿里妈妈数智 |
+| `PDD_PROMOTE_ACCOUNT` / `PDD_PROMOTE_PASSWORD` | 拼多多推广 |
+| `PDD_LEGACY_ACCOUNT` / `PDD_LEGACY_PASSWORD` | 拼多多商家后台（待下架） |
+| `LOGIN1688_ACCOUNT` / `LOGIN1688_PASSWORD` | 1688 |
+| `TMALL_SUPERMARKET_ACCOUNT` / `TMALL_SUPERMARKET_PASSWORD` / `TMALL_SUPERMARKET_SHOP` | 天猫超市 |
+| `YUNMA_TOKEN` | 云码 Token。千牛/淘宝滑块 `type=20226`；京麦/拼多多/有赞/京准通单图滑块与 `bank_captcha` 为 `22222`；拼多多空间点选 `"9999"`；抖店/罗盘滑块 `"20225"`；支付宝四图旋转 `276502`；京东点选 `30330`；京东点选 plus `30009` direction `bottom`；京东轨迹 `100015` |
 | `QIANNIU_RETRIES` / `JINGMAI_RETRIES` / `PDD_RETRIES` / `ALIPAY_RETRIES` | 可选，各模块 `main()` 的重试次数 |
 | `SELLER_HTTP_PROXY` | 可选。京麦/拼多多/抖店/支付宝默认不走代理；千牛仍使用源脚本里的 `127.0.0.1:8791` |
 

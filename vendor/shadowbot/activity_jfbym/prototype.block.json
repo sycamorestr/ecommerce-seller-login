@@ -1,0 +1,5809 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_jfbym.main",
+      "statement": "process.invoke_activity",
+      "title": "云码验证码扩展",
+      "keywords": "",
+      "description": "该指令集借助云码平台能力实现验证码自动化操作",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/57/ba/57bae48ebbcffa0410710a51209c83b2.png",
+      "function": "xbot_extensions.activity_jfbym.main",
+      "helpUrl": null,
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.jd_rotate_captcha",
+      "statement": "process.invoke_activity",
+      "title": "京东-旋转验证码",
+      "keywords": "",
+      "description": "该指令借助云码的能力实现了自动拖拽京东旋转验证码, 调用接口的 type 为 30330",
+      "comment": "在%web_page%网页对象上, 拖拽%drag_ele%滑块模拟人工旋转图片验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/restart.png",
+      "function": "xbot_extensions.activity_jfbym.jd_rotate_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/712902506045841408",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "rotate_ele",
+          "label": "旋转元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "滑块元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "滑条元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移距离",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.std_trace_captcha",
+      "statement": "process.invoke_activity",
+      "title": "通用轨迹验证",
+      "keywords": "",
+      "description": "该指令通过云码平台识别后按照轨迹绘制路径, 调用接口的 type 为 100016",
+      "comment": "在%web_page%网页对象上%background_ele%的元素按轨迹绘制路径",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/05%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/line_chart.png",
+      "function": "xbot_extensions.activity_jfbym.std_trace_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/712902466196131840",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.utils",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.utils",
+      "helpUrl": null,
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.drag",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.drag",
+      "helpUrl": null,
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.std_slider_captcha",
+      "statement": "process.invoke_activity",
+      "title": "通用单图滑块验证",
+      "keywords": "",
+      "description": "该指令通过云码平台识别后拖拽滑块验证的功能, 调用接口的 type 为 22222",
+      "comment": "在%web_page%网页对象上拖住%slider_ele%在%background_ele%进行滑块验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/04%E7%95%8C%E9%9D%A2/close_pane.png",
+      "function": "xbot_extensions.activity_jfbym.std_slider_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/712902431652761600",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码_Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移距离",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "speed",
+          "label": "滑块速度",
+          "required": false,
+          "tips": "滑块移动速度, 用于拖拽滑块和目标滑块拖拽速度不一致的场景",
+          "type": "int",
+          "default": "13:1",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "refresh_elem",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.std_slider_double_captcha",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.std_slider_double_captcha",
+      "helpUrl": null,
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.google_captcha",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.google_captcha",
+      "helpUrl": null,
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.xtrace",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.xtrace",
+      "helpUrl": null,
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.std_alphanum_captcha",
+      "statement": "process.invoke_activity",
+      "title": "通用数英验证码",
+      "keywords": "",
+      "description": "该指令调用云码接口针对常见数英验证码进行识别",
+      "comment": "在%web_page%上识别%ele%的%captcha_type%验证码并将结果保存在%data%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/05%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/font_size.png",
+      "function": "xbot_extensions.activity_jfbym.std_alphanum_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/712902392556130304",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "captcha_type",
+          "label": "验证类型",
+          "required": false,
+          "tips": "验证码类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "通用数英（≤5位）",
+                "value": "10110",
+                "Unicode": null
+              },
+              {
+                "display": "通用数英plus（≤5位）",
+                "value": "10103",
+                "Unicode": null
+              },
+              {
+                "display": "通用数英plus（≤6位）",
+                "value": "10104",
+                "Unicode": null
+              },
+              {
+                "display": "通用数英5-8位",
+                "value": "10111",
+                "Unicode": null
+              },
+              {
+                "display": "通用数英9~11位",
+                "value": "10112",
+                "Unicode": null
+              },
+              {
+                "display": "数英定制4",
+                "value": "15294",
+                "Unicode": null
+              },
+              {
+                "display": "通用数英12位及以上",
+                "value": "10113",
+                "Unicode": null
+              },
+              {
+                "display": "数英验证码(4位)",
+                "value": "131781",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "ele",
+          "label": "网页元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "timeout",
+          "label": "timeout",
+          "required": false,
+          "tips": "超时时间",
+          "type": "int",
+          "default": "13:20",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "is_trim",
+          "label": "is_trim",
+          "required": false,
+          "tips": "区分大小写",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "checkbox",
+            "label": "区分大小写"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data",
+          "label": "识别结果",
+          "tips": "验证码识别的结果",
+          "name": "data",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.chinatax_captcha",
+      "statement": "process.invoke_activity",
+      "title": "国税局发票验证",
+      "keywords": "",
+      "description": "该指令调用云码的接口识别国税局验证码, 调用接口的 type 为 10201",
+      "comment": "在%web_page%网页对象上识别%ele%元素的文字",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/briefcase.png",
+      "function": "xbot_extensions.activity_jfbym.chinatax_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/712902349795434496",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "ele",
+          "label": "网页元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "data",
+          "label": "识别结果",
+          "tips": "验证码识别的结果",
+          "name": "data",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.ali_slider_captcha",
+      "statement": "process.invoke_activity",
+      "title": "阿里滑块验证",
+      "keywords": "",
+      "description": "该指令调用云码接口实现阿里滑块验证, 调用接口的 type 为 20226",
+      "comment": "在%web_page%网页对象上拖动%drag_ele%元素进行阿里滑块验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/computer.png",
+      "function": "xbot_extensions.activity_jfbym.ali_slider_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/889697316860067840",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "滑块元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移距离",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "speed",
+          "label": "拖拽速度",
+          "required": false,
+          "tips": "滑块的拖拽速度",
+          "type": "str",
+          "default": "10:middle",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "中速",
+                "value": "middle",
+                "Unicode": null
+              },
+              {
+                "display": "快速",
+                "value": "fast",
+                "Unicode": null
+              },
+              {
+                "display": "慢速",
+                "value": "slow",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "monitor_time",
+          "label": "监听时间",
+          "required": false,
+          "tips": "监听验证码的时间",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.std_click_select_captcha",
+      "statement": "process.invoke_activity",
+      "title": "通用点选验证",
+      "keywords": "",
+      "description": "该指令调用云码接口针对常见点选验证码进行验证, 调用接口的 type 为 30332",
+      "comment": "在%web_page%对象上使用对%web_element%元素进行点选验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/03%E7%94%B5%E5%95%86/click_%26_collect.png",
+      "function": "xbot_extensions.activity_jfbym.std_click_select_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/712902315003449344",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "web_element",
+          "label": "网页元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "direction",
+          "label": "提示位置",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "底部",
+                "value": "bottom",
+                "Unicode": null
+              },
+              {
+                "display": "顶部",
+                "value": "top",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "13:5",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "confirm",
+          "label": "确认元素",
+          "required": false,
+          "tips": "可选，需要点击确认则加上",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.dy_slider_captcha",
+      "statement": "process.invoke_activity",
+      "title": "抖音滑块验证",
+      "keywords": "",
+      "description": "该指令通过云码平台识别抖音滑块并拖拽滑块进行验证, 调用接口的 type 为 20225",
+      "comment": "在抖店%web_page%网页对象上拖拽%slider_ele%在%background_ele%上进行滑块验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.dy_slider_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/712902279922524160",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "滑块元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移距离",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.tx_six_squares_captcha",
+      "statement": "process.invoke_activity",
+      "title": "腾讯六宫格验证",
+      "keywords": "",
+      "description": "该指令借助云码平台实现在腾讯六宫格验证, 调用接口的 type 为 30221",
+      "comment": "在网页对象上%web_page%根据%tip_ele%在%background_ele%上进行点选验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/06%E6%95%B0%E6%8D%AE/brick_wall.png",
+      "function": "xbot_extensions.activity_jfbym.tx_six_squares_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/712902053362065408",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "tip_ele",
+          "label": "提示元素",
+          "required": false,
+          "tips": "验证码提示元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "验证码背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ok_ele",
+          "label": "确定元素",
+          "required": false,
+          "tips": "验证码点击确定的元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "云码验证码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "验证码重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.dy_double_rotate_captcha",
+      "statement": "process.invoke_activity",
+      "title": "抖音双图旋转验证",
+      "keywords": "",
+      "description": "该指令集调用云码接口实现验证抖音双图旋转验证, 调用接口的 type 为 90004",
+      "comment": "在%web_page%网页对象上拖拽%double_rotate_darg_ele%实现双图旋转验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.dy_double_rotate_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/712902005249204224",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "double_rotate_outer_ele",
+          "label": "外圈元素",
+          "required": false,
+          "tips": "外圈元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "double_rotate_inner_ele",
+          "label": "内圈元素",
+          "required": false,
+          "tips": "内圈元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "double_rotate_darg_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "拖拽元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "double_rotate_slider_ele",
+          "label": "滑条元素",
+          "required": false,
+          "tips": "滑条元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.cs_space_same_object_captcha",
+      "statement": "process.invoke_activity",
+      "title": "空间推理点选验证(相同物体)",
+      "keywords": "",
+      "description": "该指令调用云码接口实现了点击验证上相同物体的功能, 调用接口的 type 为 30101",
+      "comment": "在%web_page%网页对象上的%background_ele%点击相同物体进行验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.cs_space_same_object_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/712901960989388800",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "confirm_ele",
+          "label": "确定元素",
+          "required": false,
+          "tips": "确认元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.orangebank_slider_captcha",
+      "statement": "process.invoke_activity",
+      "title": "平安银行滑动验证码",
+      "keywords": "",
+      "description": null,
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.orangebank_slider_captcha",
+      "helpUrl": null,
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景图片元素",
+          "required": false,
+          "tips": "背景图片元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽滑块元素",
+          "required": false,
+          "tips": "拖拽滑块",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "gap_ele",
+          "label": "缺口滑块元素",
+          "required": false,
+          "tips": "缺口滑块元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.jd_click_select_captcha",
+      "statement": "process.invoke_activity",
+      "title": "京东图片点选验证",
+      "keywords": "",
+      "description": "该指令调用云码接口实现了京东的点选验证, 调用接口的 type 为 30330",
+      "comment": "在%web_page%网页对象上对京东验证码%web_element%进行点选验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.jd_click_select_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/712901897250070528",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "engine",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "web_element",
+          "label": "验证元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "13:5",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "sure_element",
+          "label": "确定元素",
+          "required": false,
+          "tips": "有些京东点选有个确定按钮，需要在高级里面传入确定元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.cs_oocl_captcha",
+      "statement": "process.invoke_activity",
+      "title": "OOCL船司旋转验证",
+      "keywords": "",
+      "description": "该指令调用云码接口实现了OOCL船司旋转验证, 调用接口的 type 为 900025",
+      "comment": "在%web_page%网页对象上拖动%drag_ele%元素进行旋转验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/job.png",
+      "function": "xbot_extensions.activity_jfbym.cs_oocl_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/716969764410281984",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "滑条元素",
+          "required": false,
+          "tips": "滑条元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "拖拽元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.xhs_rotate_captcha",
+      "statement": "process.invoke_activity",
+      "title": "小红书旋转验证",
+      "keywords": "",
+      "description": "该指令调用云码的接口实现了小红书旋转验证码的验证, 调用接口的 type 为 41114",
+      "comment": "在%web_page%网页对象上拖拽%drag_ele%滑块实现旋转验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.xhs_rotate_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/716969830270611456",
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "",
+          "required": false,
+          "tips": "xbot\t影刀引擎 (付费增值服务)\r\nym\t云码引擎 (高级自定义Token)",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "滑条元素",
+          "required": false,
+          "tips": "滑条元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "拖拽元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.cs_word_order_click_select_captcha",
+      "statement": "process.invoke_activity",
+      "title": "定制-文字点选-语序点选",
+      "keywords": "",
+      "description": "该指令调用云码的接口实现了按照语序点击网页上的文字, 调用接口的 type 为 30114",
+      "comment": "在%web_page%网页对象上按照%web_element%元素的文字语序点选文字进行验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.cs_word_order_click_select_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/745611535937777664",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "engine",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "web_element",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新验证码的元素, 没有可不填",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ok_ele",
+          "label": "确定元素",
+          "required": false,
+          "tips": "验证码确认的元素, 没有可不填",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "13:5",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.cs_temu_captcha",
+      "statement": "process.invoke_activity",
+      "title": "定制-Temu 空间物体选择验证",
+      "keywords": "",
+      "description": "该指令调用云码接口实现了temu物体识别点选验证, 调用接口的 type 为 9999",
+      "comment": "通过对%background_ele%以及%text_ele%对验证码进行验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.cs_temu_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/724825871072481280",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "text_ele",
+          "label": "要求文本元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.dw_drag_captcha",
+      "statement": "process.invoke_activity",
+      "title": "得物拖动验证",
+      "keywords": "",
+      "description": "该指令调用云码的接口实现了得物拖动验证, 调用接口的 type 为 34228",
+      "comment": "在网页对象%web_page%中，根据背景元素%background_ele%对拖动验证码进行验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.dw_drag_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/734282580570263552",
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "待操作的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.ali_click_select_captcha",
+      "statement": "process.invoke_activity",
+      "title": "阿里点选验证",
+      "keywords": "",
+      "description": "该指令调用云码接口实现阿里点选验证",
+      "comment": "在网页对象%web_page%中，根据%label_elem%在%background_ele%进行点选验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.ali_click_select_captcha",
+      "helpUrl": "yddoc/rpa/734967396294094848",
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "label_elem",
+          "label": "识别元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "confirm_ele",
+          "label": "确认元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.jd_click_select_captcha_original",
+      "statement": "process.invoke_activity",
+      "title": "京东图片点选验证(原图版)",
+      "keywords": "",
+      "description": "该指令调用云码接口实现了京东的点选验证, 调用接口的 type 为 30330",
+      "comment": "在%web_page%网页对象上对京东验证码%background_element%进行点选验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.jd_click_select_captcha_original",
+      "helpUrl": "/yddoc/rpa/zh-CN/735105192367550464",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "engine",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_element",
+          "label": "背景图片元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "tip_element",
+          "label": "提示图片元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "13:5",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "sure_element",
+          "label": "确定元素",
+          "required": false,
+          "tips": "确定元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.jd_trace_captcha",
+      "statement": "process.invoke_activity",
+      "title": "京东滑动轨迹验证码",
+      "keywords": "",
+      "description": "该指令通过云码平台识别后按照轨迹绘制路径, 调用接口的 type 为 100015",
+      "comment": "在%web_page%网页对象上%background_ele%的元素按轨迹绘制路径",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.jd_trace_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/745612796574539776",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景图片元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.dw_route_captcha",
+      "statement": "process.invoke_activity",
+      "title": "得物旋转验证",
+      "keywords": "",
+      "description": "该指令实现了对得物登录平台旋转验证码进行验证, 调用接口的 type 为 90003",
+      "comment": "在网页对象 %web_page% 中，识别图片%background_ele%进行验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/68/f1/68f13e94633b18eb1b1df94c2ded3b2f.png",
+      "function": "xbot_extensions.activity_jfbym.dw_route_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/757177163329241088",
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景图片",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "滑条元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移量",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.wph_select_captcha",
+      "statement": "process.invoke_activity",
+      "title": "唯品会点选验证码",
+      "keywords": "",
+      "description": "该指令可以实现唯品会登录界面的点选验证码, 调用接口的 type 为 30026",
+      "comment": "在网页对象%web_page%，通过%engine%，对目标%background_element%图片进行点选",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.wph_select_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/773528813357690880",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_element",
+          "label": "背景图片元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "tip_element",
+          "label": "提示图片元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": ""
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试测试",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.shopee_point_captcha",
+      "statement": "process.invoke_activity",
+      "title": "shopee点选验证",
+      "keywords": "",
+      "description": "该指令实现了对虾皮平台的点选验证码进行了自动验证处理, 调用接口的 type 为 124371",
+      "comment": "在网页对象 %web_page% 中，设置背景图片为%bg_elem%，确认元素为%confirm%进行验证处理",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/22/89/2289333a23f12afc87e7cfc198ef586a.png",
+      "function": "xbot_extensions.activity_jfbym.shopee_point_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/773075848897318912",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "bg_elem",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "confirm",
+          "label": "确认元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "最大识别次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.wb_point_capycha",
+      "statement": "process.invoke_activity",
+      "title": "微博指向点选验证",
+      "keywords": "",
+      "description": "该指令通过云码平台识别后对微博指向验证码进行点选, 调用接口的 type 为 30332",
+      "comment": "在网页对象 %web_page% 上，根据%top_elem%依次在背景图%bg_elem%上进行点选验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/9f/43/9f4372bdfa5ec3f523860db267eb3ff4.png",
+      "function": "xbot_extensions.activity_jfbym.wb_point_capycha",
+      "helpUrl": "/yddoc/rpa/zh-CN/775904375161155584",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "识别引擎选择",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "bg_elem",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景图",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "top_elem",
+          "label": "提示元素",
+          "required": false,
+          "tips": "提示词区域",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "confirm",
+          "label": "确认元素",
+          "required": false,
+          "tips": "确认元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.std_click_select_captcha_plus",
+      "statement": "process.invoke_activity",
+      "title": "通用点选验证(plus)",
+      "keywords": "",
+      "description": "该指令调用云码接口针对常见点选验证码进行验证, 调用接口的 type 为 30009",
+      "comment": "在%web_page%对象上使用对%web_element%元素进行点选验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/03%E7%94%B5%E5%95%86/click_%26_collect.png",
+      "function": "xbot_extensions.activity_jfbym.std_click_select_captcha_plus",
+      "helpUrl": "/yddoc/rpa/zh-CN/712902315003449344",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "web_element",
+          "label": "网页元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "direction",
+          "label": "提示位置",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "底部",
+                "value": "bottom",
+                "Unicode": null
+              },
+              {
+                "display": "顶部",
+                "value": "top",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "13:5",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "confirm",
+          "label": "确认元素",
+          "required": false,
+          "tips": "可选，需要点击确认则加上",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "timeout",
+          "label": "请求超时时间",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:10",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.space_click_captcha",
+      "statement": "process.invoke_activity",
+      "title": "空间推理点选(请点击_字母)",
+      "keywords": "",
+      "description": "该指令借助云码的能力实现了点击空间推理验证码的功能, 调用接口的 type 为 50009",
+      "comment": "在网页%web_page%上，通过%text_ele%点击%background_ele%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.space_click_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/802813439460876288",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "text_ele",
+          "label": "提示元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "token",
+          "label": "云码token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.human_click",
+      "statement": "process.invoke_activity",
+      "title": "点选验证码-人工",
+      "keywords": "",
+      "description": "该指令采用云码接口以此通过复杂人工点选验证码, 调用接口的 type 为 88888",
+      "comment": "在网页对象%web_page%上，对%background_ele%进行人工点选",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.human_click",
+      "helpUrl": "/yddoc/rpa/zh-CN/813325961585664000",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页元素",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "验证码背景图",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "confirm_ele",
+          "label": "确认元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "timeout",
+          "label": "请求超时时间",
+          "required": false,
+          "tips": "请求超时时间",
+          "type": "int",
+          "default": "13:10",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.bank_captcha",
+      "statement": "process.invoke_activity",
+      "title": "std_slider_captcha(copy)1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.bank_captcha",
+      "helpUrl": null,
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "background_ele",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "slider_ele",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "retry_count",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        },
+        {
+          "name": "speed",
+          "label": "speed",
+          "required": false,
+          "tips": "滑块移动速度, 用于拖拽滑块和目标滑块拖拽速度不一致的场景",
+          "type": "int",
+          "default": "13:1",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "ym_token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "distance",
+          "label": "distance",
+          "name": "distance",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.jd_slider_captcha",
+      "statement": "process.invoke_activity",
+      "title": "京东滑块拼图验证",
+      "keywords": "",
+      "description": "该指令使用云码接口进行识别, 并模拟人工在网页上拖拽, 使用的type是22222",
+      "comment": "在%web_page%网页对象上, 拖拽%drag_ele%元素进行拼图验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.jd_slider_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/838327217571713024",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "滑块元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "offset",
+          "label": "偏移量",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:10",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.cs_word_order_click_select_30116_captcha",
+      "statement": "process.invoke_activity",
+      "title": "定制-文字点选4",
+      "keywords": "",
+      "description": "该指令调用云码的接口实现了按照语序点击网页上的文字, 调用接口的 type 为 30116",
+      "comment": "在%web_page%网页对象上按照%web_element%元素的文字语序点选文字进行验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.cs_word_order_click_select_30116_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/838699577025953792",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "云码引擎 (高级自定义Token)",
+                "value": "ym",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "web_element",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ok_ele",
+          "label": "确认元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "13:5",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.std_slider_change_captcha",
+      "statement": "process.invoke_activity",
+      "title": "通用变速滑块",
+      "keywords": "",
+      "description": "该指令通过云码平台识别后拖拽滑块验证的功能, 调用接口的 type 为 22222",
+      "comment": "在%web_page%网页对象上拖住%slider_ele%在%background_ele%进行滑块验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/puzzle.png",
+      "function": "xbot_extensions.activity_jfbym.std_slider_change_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/854896186614603776",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "target_ele",
+          "label": "缺口元素",
+          "required": false,
+          "tips": "缺口元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "拖拽元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "refresh_elem",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移距离",
+          "required": false,
+          "tips": "0",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "0",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.std_splicing_captcah",
+      "statement": "process.invoke_activity",
+      "title": "通用拼接滑块验证",
+      "keywords": "",
+      "description": "该指令通过云码平台识别后拖拽滑块验证的功能, 调用接口的 type 为 11268",
+      "comment": "获取网页对象%web_page%，将拖拽元素%drag_ele%拼接在背景元素%background_ele%的缺口上",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/puzzle.png",
+      "function": "xbot_extensions.activity_jfbym.std_splicing_captcah",
+      "helpUrl": "/yddoc/rpa/zh-CN/859691528658264064",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "拖拽元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素，该指令内置监听方式，需要传入刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码token",
+          "required": false,
+          "tips": "云码token，不填则走影刀钱包",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "monitor_time",
+          "label": "等待监听时间",
+          "required": false,
+          "tips": "等待监听时间",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.std_tx_click_icon",
+      "statement": "process.invoke_activity",
+      "title": "腾讯定制点选验证",
+      "keywords": "",
+      "description": "该指令借助云码平台实现在腾讯点选验证, 调用接口的 type 为 30340",
+      "comment": "获取网页对象%web_page%，根据传入图片元素%web_element%，通过点选验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/cloud.png",
+      "function": "xbot_extensions.activity_jfbym.std_tx_click_icon",
+      "helpUrl": "/yddoc/rpa/zh-CN/861514081422299136",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "web_element",
+          "label": "图片元素",
+          "required": false,
+          "tips": "图片元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token，不填则默认为影刀引擎",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "confirm",
+          "label": "确认元素",
+          "required": false,
+          "tips": "确认元素，可选，需要点击确认则加上",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证次数",
+          "required": false,
+          "tips": "验证次数",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.customization_alphanum_captcha",
+      "statement": "process.invoke_activity",
+      "title": "定制数英验证",
+      "keywords": "",
+      "description": "该指令调用云码接口针对定制数英验证码进行识别，type为10103",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/no_connection.png",
+      "function": "xbot_extensions.activity_jfbym.customization_alphanum_captcha",
+      "helpUrl": null,
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.common_puzzle",
+      "statement": "process.invoke_activity",
+      "title": "定制-滑动拼接验证",
+      "keywords": "",
+      "description": "该指令通过云码平台识别后拖拽拼接验证的功能, 调用接口的 type 为 52846",
+      "comment": "获取网页对象%web_page%，通过背景元素为%background_ele%，验证验证码",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/cloud.png",
+      "function": "xbot_extensions.activity_jfbym.common_puzzle",
+      "helpUrl": "/yddoc/rpa/zh-CN/862623486618312704",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "整个背景元素，style中包含图片base64",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele_up",
+          "label": "上拼图元素",
+          "required": false,
+          "tips": "上拼图背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "滑动元素",
+          "required": false,
+          "tips": "滑动元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.custom_icon_selection",
+      "statement": "process.invoke_activity",
+      "title": "定制-国家市场监督管理总局-点选验证",
+      "keywords": "",
+      "description": "该指令调用云码接口针对国家市场监督管理总局坐标点选定制进行识别，type为31112",
+      "comment": "在%web_page%对象上使用对%image_big%元素进行点选验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/cloud.png",
+      "function": "xbot_extensions.activity_jfbym.custom_icon_selection",
+      "helpUrl": "/yddoc/rpa/zh-CN/864388783727403008",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "image_big",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "image_label1",
+          "label": "提示元素1",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "image_label2",
+          "label": "提示元素2",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "image_label3",
+          "label": "提示元素3",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "confirm_ele",
+          "label": "确认元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.wb_click_captcha",
+      "statement": "process.invoke_activity",
+      "title": "定制-微博四方格点选",
+      "keywords": "",
+      "description": "该指令通过云码平台识别后对微博四方格验证码进行点选, 调用接口的 type 为 32110",
+      "comment": "获取网页对象%web_page%，根据图片提示元素对四方格元素%image_ele%进行点选",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/ba/0c/ba0c15c09c6c8a736000b47922235914.png",
+      "function": "xbot_extensions.activity_jfbym.wb_click_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/877016741817540608",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "传入网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "image_ele",
+          "label": "四方格元素",
+          "required": false,
+          "tips": "四方格网页元素，注意需要取到svg节点",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "retry_count",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.tm_slider_captcha",
+      "statement": "process.invoke_activity",
+      "title": "定制-Temu弧形验证",
+      "keywords": "",
+      "description": "该指令通过云码平台识别后对Temu弧形验证码进行拖动, 调用接口的 type 为 22229",
+      "comment": "获取网页对象%web_page%，将拖拽元素%slider_ele%拖拽至背景元素%background_ele%上，进行滑块验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/6a/7e/6a7e21fe2fccb8f68b20466f871977a4.png",
+      "function": "xbot_extensions.activity_jfbym.tm_slider_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/877109163780734976",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "传入网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "拖拽元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_elem",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移量",
+          "required": false,
+          "tips": "偏移量",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.test",
+      "statement": "process.invoke_activity",
+      "title": "module2",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.test",
+      "helpUrl": null,
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.common_puzzle_v2",
+      "statement": "process.invoke_activity",
+      "title": "定制-电子税务局验证",
+      "keywords": "",
+      "description": "该指令通过云码平台识别后拖拽拼接验证的功能, 调用接口的 type 为 20555",
+      "comment": "获取网页对象%web_page%，通过云码平台，拖动滑块，完成验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/happy_cloud.png",
+      "function": "xbot_extensions.activity_jfbym.common_puzzle_v2",
+      "helpUrl": "/yddoc/rpa/zh-CN/891624037486637056",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": true,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.common_puzzle_click",
+      "statement": "process.invoke_activity",
+      "title": "定制-税务局点选",
+      "keywords": "",
+      "description": "该指令通过云码平台识别后拖拽拼接验证的功能, 调用接口的 type 为 310700",
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.common_puzzle_click",
+      "helpUrl": null,
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.move_simulated",
+      "statement": "process.invoke_activity",
+      "title": "module2",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_jfbym.move_simulated",
+      "helpUrl": null,
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.zfb_four_click_captcha",
+      "statement": "process.invoke_activity",
+      "title": "支付宝四宫格点选验证",
+      "keywords": "",
+      "description": "该指令通过云码平台识别后对支付宝四宫格验证进行点选, 调用接口的 type 为 276502",
+      "comment": "在网页对象 %web_page% 上，依次在背景图%image_ele%上进行点选验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/edit.png",
+      "function": "xbot_extensions.activity_jfbym.zfb_four_click_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/900650936911179776",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "image_ele",
+          "label": "四宫格元素",
+          "required": false,
+          "tips": "四宫格元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "commit_ele",
+          "label": "确认元素",
+          "required": false,
+          "tips": "确认元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ym_token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证次数",
+          "required": false,
+          "tips": "验证次数",
+          "type": "int",
+          "default": "13:4",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.pdd_rotate_captcha",
+      "statement": "process.invoke_activity",
+      "title": "拼多多旋转验证",
+      "keywords": "",
+      "description": "该指令调用云码的接口实现了拼多多旋转验证码的验证, 调用接口的 type 为 48172",
+      "comment": "在%web_page%网页对象上拖拽%drag_ele%滑块实现旋转验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/restart.png",
+      "function": "xbot_extensions.activity_jfbym.pdd_rotate_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/908184312664383488",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "拖拽元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "滑条元素",
+          "required": false,
+          "tips": "滑条元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "timeout",
+          "label": "请求超时时间",
+          "required": false,
+          "tips": "人工请求时间",
+          "type": "int",
+          "default": "13:60",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证次数",
+          "required": false,
+          "tips": "验证次数",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移值",
+          "required": false,
+          "tips": "偏移量，单位为px，正数向右，复数向左",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.bd_rotate_captcha",
+      "statement": "process.invoke_activity",
+      "title": "百度旋转验证",
+      "keywords": "",
+      "description": "该指令调用云码的接口实现了百度旋转验证码的验证, 调用接口的 type 为 900011",
+      "comment": "在%web_page%网页对象上拖拽%drag_ele%滑块实现旋转验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/restart.png",
+      "function": "xbot_extensions.activity_jfbym.bd_rotate_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/910048637277282304",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "rotate_ele",
+          "label": "旋转元素",
+          "required": false,
+          "tips": "旋转元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "滑条元素",
+          "required": false,
+          "tips": "滑条元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "拖动元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证次数",
+          "required": false,
+          "tips": "验证码尝试次数",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "timeout",
+          "label": "请求时间",
+          "required": false,
+          "tips": "请求超时时间，该指令为人工接口，请适当延长超时时间",
+          "type": "int",
+          "default": "13:60",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移量",
+          "required": false,
+          "tips": "偏移量",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_wait_time",
+          "label": "验证等待时间",
+          "required": false,
+          "tips": "验证等待时间",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.aliyun_qst_captcha",
+      "statement": "process.invoke_activity",
+      "title": "定制-阿里云qst-滑块验证",
+      "keywords": "",
+      "description": "该指令调用云码接口实现阿里回复图片验证, 调用接口的 type 为 20333",
+      "comment": "在%web_page%网页对象上拖动%drag_ele%元素进行阿里qst滑块验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/mms.png",
+      "function": "xbot_extensions.activity_jfbym.aliyun_qst_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/923403161329643520",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "目标元素",
+          "required": false,
+          "tips": "目标元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "拖拽元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证次数",
+          "required": false,
+          "tips": "验证次数",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "monitor_time",
+          "label": "监听时间",
+          "required": false,
+          "tips": "监听时间",
+          "type": "int",
+          "default": "13:2",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.ali_nine_squares_captcha",
+      "statement": "process.invoke_activity",
+      "title": "定制-阿里云九宫格验证",
+      "keywords": "",
+      "description": "该指令调用云码接口实现阿里九宫格点选验证, 调用接口的 type 为 30223",
+      "comment": "在%web_page%网页对象上根据%tip_ele%在%background_ele%进行点选验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/menu.png",
+      "function": "xbot_extensions.activity_jfbym.ali_nine_squares_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/924596617874690048",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页元素",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "tip_ele",
+          "label": "提示词元素",
+          "required": false,
+          "tips": "提示词元素，注意元素属性需要包含id",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "ok_ele",
+          "label": "提交元素",
+          "required": false,
+          "tips": "提交元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "refresh_ele",
+          "label": "刷新元素",
+          "required": false,
+          "tips": "刷新元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码Token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "single_click_count",
+          "label": "单次点击次数",
+          "required": false,
+          "tips": "单次点击次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证次数",
+          "required": false,
+          "tips": "验证次数",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.db_nine_squares_captcha",
+      "statement": "process.invoke_activity",
+      "title": "通用九宫格拖拽验证",
+      "keywords": "",
+      "description": "该指令调用云码接口实现九宫格拖拽验证, 调用接口的 type 为 88888",
+      "comment": "在%web_page%网页对象上根据%background_ele%将目标图片拖拽至%drag_target_ele%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/checked.png",
+      "function": "xbot_extensions.activity_jfbym.db_nine_squares_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/943414012743725056",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "九宫格元素",
+          "required": false,
+          "tips": "九宫格元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_target_ele",
+          "label": "目标范围元素",
+          "required": false,
+          "tips": "目标范围元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "confirm_ele",
+          "label": "确认元素",
+          "required": false,
+          "tips": "网页元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "token",
+          "label": "云码Token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证次数",
+          "required": false,
+          "tips": "验证次数",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.dxm_rotate_captcha",
+      "statement": "process.invoke_activity",
+      "title": "定制-度小满旋转验证",
+      "keywords": "",
+      "description": "该指令实现了对度小满登录平台旋转验证码进行验证, 调用接口的 type 为 20555",
+      "comment": "在网页对象 %web_page% 中，识别图片，拖动%drag_ele%进行验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/checked.png",
+      "function": "xbot_extensions.activity_jfbym.dxm_rotate_captcha",
+      "helpUrl": "/yddoc/rpa/zh-CN/958653188012519424",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "拖拽元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "长条元素",
+          "required": false,
+          "tips": "拖拽元素所在的长条元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry_count",
+          "label": "验证次数",
+          "required": false,
+          "tips": "验证次数",
+          "type": "int",
+          "default": "13:3",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.zfb_click",
+      "statement": "process.invoke_activity",
+      "title": "module2",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": null,
+      "function": "xbot_extensions.activity_jfbym.zfb_click",
+      "helpUrl": null,
+      "extension": "云码验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_jfbym.picture_click",
+      "statement": "process.invoke_activity",
+      "title": "图片点选",
+      "keywords": "",
+      "description": "该指令通过云码平台识别后图片点选的功能, 调用接口的 type 为 30303",
+      "comment": "该指令实现了在%web_page%下处理图片点选验证码，图片元素为%background_ele%，提示词元素为%text_ele%",
+      "icon": null,
+      "function": "xbot_extensions.activity_jfbym.picture_click",
+      "helpUrl": "/yddoc/rpa/zh-CN/977896078261100544",
+      "extension": "云码验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "图片背景元素",
+          "required": false,
+          "tips": "图片背景元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "text_ele",
+          "label": "提示词元素",
+          "required": false,
+          "tips": "提示词元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "sure_ele",
+          "label": "确认元素",
+          "required": false,
+          "tips": "确认元素",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "token",
+          "label": "云码token",
+          "required": false,
+          "tips": "云码token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    }
+  ]
+}

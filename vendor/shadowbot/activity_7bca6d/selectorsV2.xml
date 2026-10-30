@@ -9032,7 +9032,7 @@
         <optional index="0" index-of-type="0" />
       </web>
       <web x:name="a">
-        <optional href="//i.taobao.com/my_taobao.htm?ad_id=&amp;am_id=&amp;cm_id=&amp;pm_id=1501036000a02c5c3739" target="_top" class="site-nav-login-info-nick" innerText="xaioj520" index="0" index-of-type="0" />
+        <optional href="//i.taobao.com/my_taobao.htm?ad_id=&amp;am_id=&amp;cm_id=&amp;pm_id=1501036000a02c5c3739" target="_top" class="site-nav-login-info-nick" innerText="" index="0" index-of-type="0" />
       </web>
     </selector>
     <selector id="c17982cc-0882-40a3-af78-cb49e1980347" name="淘宝登录_登录成功后_退出登录" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="淘宝网" screenshot=".dev\screenshot\70bd8742-f69d-4f73-ae1c-5ddb45fb18f4.jpg">

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository xmlns:x="rpa://selector/core" xmlns:regex="rpa://selector/operator/regex" xmlns:wildcard="rpa://selector/operator/wildcard" xmlns:contains="rpa://selector/operator/contains" xmlns:notContains="rpa://selector/operator/notContains" xmlns:startsWith="rpa://selector/operator/startsWith" xmlns:notStartsWith="rpa://selector/operator/notStartsWith" xmlns:endsWith="rpa://selector/operator/endsWith" xmlns:notEndsWith="rpa://selector/operator/notEndsWith" xmlns:notEquals="rpa://selector/operator/notEquals" xmlns:greaterThan="rpa://selector/operator/greaterThan" xmlns:greaterThanOrEqual="rpa://selector/operator/greaterThanOrEqual" xmlns:lessThan="rpa://selector/operator/lessThan" xmlns:lessThanOrEqual="rpa://selector/operator/lessThanOrEqual">
+  <group id="925fece6-1e91-4500-ab00-e971aa096a78" name="设置 - 下载内容 - Google Chrome" type="Win32" processName="chrome" icon=".dev\icon\417dc912-8276-4003-988a-61b3fa4c270d.png" criteria="">
+    <selector name="设置_下载设置_下载前询问每个文件的保存位置_按钮" type="simple" framework="acc" processName="chrome" productName="" winTitle="设置 - 下载内容 - Google Chrome" screenshot=".dev\screenshot\ae087461-e6dd-4e01-a047-8ad4ca2ac514.png">
+      <wnd x:name="Window" cls="Chrome_WidgetWin_1" title="设置 - 下载内容 - Google Chrome" app="chrome">
+        <optional />
+      </wnd>
+      <wnd x:name="Document" cls="Chrome_RenderWidgetHostHWND" uia-name="设置 - 下载内容">
+        <optional title="Chrome Legacy Window" index="1" />
+      </wnd>
+      <acc x:name="Document" acc-name="设置 - 下载内容">
+        <optional index="0" />
+      </acc>
+      <acc x:name="Grouping">
+        <optional index="2" />
+      </acc>
+      <acc x:name="Grouping">
+        <optional index="1" />
+      </acc>
+      <acc x:name="Grouping">
+        <optional index="0" />
+      </acc>
+      <acc x:name="Grouping">
+        <optional index="1" />
+      </acc>
+      <acc x:name="Grouping">
+        <optional index="1" />
+      </acc>
+      <acc x:name="PushButton" acc-name="下载前询问每个文件的保存位置">
+        <optional index="0" acc-local-name="按下按钮_下载前询问每个文件的保存位置" />
+      </acc>
+    </selector>
+    <selector name="版本_个人资料路径" type="simple" framework="acc" processName="chrome" productName="" winTitle="关于版本 - Google Chrome" screenshot=".dev\screenshot\75516c88-f1d2-4752-8879-31b03410d35e.png">
+      <wnd x:name="Window" wildcard:title="关于版本*">
+        <optional cls="Chrome_WidgetWin_1" wildcard:app="chrome*" />
+      </wnd>
+      <wnd x:name="Document" uia-name="关于版本">
+        <optional cls="Chrome_RenderWidgetHostHWND" title="Chrome Legacy Window" index="1" />
+      </wnd>
+      <acc x:name="Document" acc-name="关于版本">
+        <optional index="0" />
+      </acc>
+      <acc x:name="Grouping">
+        <optional index="0" />
+      </acc>
+      <acc x:name="Table">
+        <optional index="1" />
+      </acc>
+      <acc x:name="Row" index="7">
+        <optional />
+      </acc>
+      <acc x:name="Cell" index="1">
+        <optional wildcard:acc-name="C:\Users\45124\AppData\Local\Google\Chrome\User Da*" />
+      </acc>
+      <acc x:name="StaticText">
+        <optional wildcard:acc-name="C:\Users\45124\AppData\Local\Google\Chrome\User Da*" index="0" acc-local-name="文字_CUsers45124AppDataLocalGoogleChromeUser DataDefault" />
+      </acc>
+    </selector>
+  </group>
+  <group id="a0393b70-11e6-47c1-9cd6-52be15f72c8a" name="交易概况" type="Web" processName="chrome" icon=".dev\icon\0563ad78-cbf6-4687-83fe-18c5d11012bf.png" criteria="https://sz.jd.com">
+    <selector name="输入框" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="交易概况" screenshot=".dev\screenshot\df2c3f0b-d49b-40d1-85e8-42c163d9408a.jpg">
+      <web x:name="div">
+        <optional id="container" ng-controller="coreCtrl" class="container ng-scope" index="5" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional class="container-right" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="container-right-modules content-header" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="fr" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional grace-pack-datepicker="" config="config" ng-model="selectDate" class="fl grace-pack-datepicker ng-dirty ng-isolate-scope ng-not-empty ng-valid ng-valid-parse" index="0" index-of-type="0" />
+      </web>
+      <web x:name="p">
+        <optional ng-if="true" class="grace-sz-datepicker input-group ng-scope" index="0" index-of-type="0" />
+      </web>
+      <web x:name="input">
+        <optional show-by-mouseover="true" ng-model="picker.dts" readonly="" is-open="picker.opened" datepicker-options="dateOptions" ng-required="true" grace-sz-datepicker-popup="yyyy-MM-dd" datepicker-mode="picker.type" format="format" locale="locale" required="required" class="form-control ng-dirty ng-isolate-scope ng-not-empty ng-touched ng-valid ng-valid-date ng-valid-parse ng-valid-required" index="0" index-of-type="0" />
+      </web>
+    </selector>
+  </group>
+</repository>

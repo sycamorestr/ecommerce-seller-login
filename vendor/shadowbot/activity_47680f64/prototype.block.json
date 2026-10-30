@@ -1,0 +1,714 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_47680f64.main",
+      "statement": "process.invoke_activity",
+      "title": "小工具指令集",
+      "keywords": "",
+      "description": "操作系统相关",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/computer.png",
+      "function": "xbot_extensions.activity_47680f64.main",
+      "helpUrl": null,
+      "extension": "小工具指令集",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_47680f64.DownAndMoveFile",
+      "statement": "process.invoke_activity",
+      "title": "等待下载完成并保存文件",
+      "keywords": "",
+      "description": "检查当前用户下载文件夹，将最新的文件重新保存到【文件保存路径】",
+      "comment": "从【%浏览器下载保存路径%】获取文件保存到【%文件路径列表%】",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/document.png",
+      "function": "xbot_extensions.activity_47680f64.DownAndMoveFile",
+      "helpUrl": null,
+      "extension": "小工具指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "浏览器下载保存路径",
+          "label": "浏览器下载保存路径",
+          "required": false,
+          "tips": "",
+          "type": "directory",
+          "default": "13:None",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "下载文件文件夹路径，默认为 $HOME/Downloads",
+            "dialog": {
+              "type": "SelectFolder",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "下载前文件数量",
+          "label": "下载前文件数量",
+          "required": false,
+          "tips": "无比使用影刀自带获取文件列表来获取下载前文件数量，os会获取到文件夹",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        },
+        {
+          "name": "保存文件夹路径",
+          "label": "保存文件夹路径",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "重命名_文件名",
+          "label": "重命名_文件名",
+          "required": false,
+          "tips": "重命名True时生效",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "不需要写扩展名"
+          },
+          "category": "general"
+        },
+        {
+          "name": "是否重命名",
+          "label": "",
+          "required": false,
+          "tips": "勾选后重命名生效",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "是否重命名"
+          },
+          "category": "general"
+        },
+        {
+          "name": "等待下载完成最大时长",
+          "label": "等待下载完成最大时长",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:120",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "文件路径列表",
+          "label": "文件路径列表",
+          "name": "文件路径列表",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_47680f64.CreateDir",
+      "statement": "process.invoke_activity",
+      "title": "递归创建文件夹",
+      "keywords": "",
+      "description": "当创建目录上级不存在时使用",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/folder.png",
+      "function": "xbot_extensions.activity_47680f64.CreateDir",
+      "helpUrl": null,
+      "extension": "小工具指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "创建文件夹路径",
+          "label": "创建文件夹路径",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_47680f64.test",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": null,
+      "function": "xbot_extensions.activity_47680f64.test",
+      "helpUrl": null,
+      "extension": "小工具指令集",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_47680f64.MoveToPardir",
+      "statement": "process.invoke_activity",
+      "title": "移动文件到上一级目录",
+      "keywords": "",
+      "description": null,
+      "comment": "移动%文件路径%到上一级保存到%移动后文件路径%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/external_link.png",
+      "function": "xbot_extensions.activity_47680f64.MoveToPardir",
+      "helpUrl": null,
+      "extension": "小工具指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "文件路径",
+          "label": "文件路径",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "移动后文件路径",
+          "label": "移动后文件路径",
+          "name": "移动后文件路径",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_47680f64.解压文件到当前目录",
+      "statement": "process.invoke_activity",
+      "title": "解压文件到当前目录",
+      "keywords": "",
+      "description": null,
+      "comment": "解压缩%压缩文件路径%到当前路径，路径列表保存到%文件路径列表%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/add_folder.png",
+      "function": "xbot_extensions.activity_47680f64.process1",
+      "helpUrl": null,
+      "extension": "小工具指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "压缩文件路径",
+          "label": "压缩文件路径",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "删除原文件",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:True",
+          "editor": {
+            "kind": "checkbox",
+            "label": "删除原文件"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "文件路径列表",
+          "label": "文件路径列表",
+          "name": "文件路径列表",
+          "type": "list"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_47680f64.下载一个文件",
+      "statement": "process.invoke_activity",
+      "title": "下载一个文件",
+      "keywords": "",
+      "description": "兼容弹窗下载和无弹窗下载，弹窗下载不修改文件名",
+      "comment": "下载%文件名%保存到%保存文件夹%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/desktop_download.png",
+      "function": "xbot_extensions.activity_47680f64.process2",
+      "helpUrl": null,
+      "extension": "小工具指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "保存文件夹",
+          "label": "保存文件夹",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "文件名",
+          "label": "文件名",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:不带扩展名",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "是否弹窗下载",
+          "label": "是否弹窗下载",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "下载前文件数量",
+          "label": "下载前文件数量",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "浏览器下载保存路径",
+          "label": "浏览器下载保存路径",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "最大等待时长",
+          "label": "最大等待时长",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:120",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "文件路径",
+          "label": "文件路径",
+          "name": "文件路径",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_47680f64.快捷日期转换",
+      "statement": "process.invoke_activity",
+      "title": "快捷日期检验和转换",
+      "keywords": "",
+      "description": "检验快捷日期是否合规并转换为指定形式",
+      "comment": "把%日期范围或快捷日期%通过%quick_select_map%转换为%勾选日期%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/countdown.png",
+      "function": "xbot_extensions.activity_47680f64.process3",
+      "helpUrl": null,
+      "extension": "小工具指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "日期范围或快捷日期",
+          "label": "日期范围或快捷日期",
+          "required": false,
+          "tips": "日期输入字符串: 快捷日期: 近7天  或  2023-01-01~2023-01-10",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "quick_select_map",
+          "label": "quick_select_map",
+          "required": false,
+          "tips": "",
+          "type": "dict",
+          "default": "13:{}",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "勾选日期",
+          "label": "勾选日期",
+          "tips": "返回quick_select_map匹配结果 或 日期区间字符串 ",
+          "name": "勾选日期",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_47680f64.测试",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": null,
+      "function": "xbot_extensions.activity_47680f64.process4",
+      "helpUrl": null,
+      "extension": "小工具指令集",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_47680f64.入参校验",
+      "statement": "process.invoke_activity",
+      "title": "入参校验",
+      "keywords": "",
+      "description": "检验传入参数是否合规",
+      "comment": "校验%传入值%是否存在于%可选项列表%，多选参数：%是否多选%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/checked.png",
+      "function": "xbot_extensions.activity_47680f64.process5",
+      "helpUrl": null,
+      "extension": "小工具指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "传入值",
+          "label": "传入值",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "可选项列表",
+          "label": "可选项列表",
+          "required": false,
+          "tips": "",
+          "type": "list",
+          "default": "13:[]",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "是否多选",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "是否多选"
+          },
+          "category": "general"
+        },
+        {
+          "name": "分隔符",
+          "label": "分隔符",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:,",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_47680f64.DateStringCheck",
+      "statement": "process.invoke_activity",
+      "title": "日期检验",
+      "keywords": "",
+      "description": "检验日期格式，大小是否正确",
+      "comment": "检验日期格式，日期大小； 格式：%日期格式%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/date_span.png",
+      "function": "xbot_extensions.activity_47680f64.DateStringCheck",
+      "helpUrl": null,
+      "extension": "小工具指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "开始日期",
+          "label": "开始日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "结束日期",
+          "label": "结束日期",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "日期格式",
+          "label": "日期格式",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:%Y-%m-%d",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_47680f64.latest_email",
+      "statement": "process.invoke_activity",
+      "title": "获取收件箱最新的一封邮件",
+      "keywords": "",
+      "description": "支持 163， QQ， gmail",
+      "comment": "获取%select_from%的最新一条邮件保存到%latest_email%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/email.png",
+      "function": "xbot_extensions.activity_47680f64.latest_email",
+      "helpUrl": null,
+      "extension": "小工具指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "email",
+          "label": "email",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "password",
+          "label": "password",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "select_from",
+          "label": "select_from",
+          "required": false,
+          "tips": "INBOX, UNSEEN, Sent, Trash  > 收件，未读, 发件，垃圾箱",
+          "type": "str",
+          "default": "10:INBOX",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "INBOX",
+                "value": "INBOX",
+                "Unicode": null
+              },
+              {
+                "display": "UNSEEN",
+                "value": "UNSEEN",
+                "Unicode": null
+              },
+              {
+                "display": "Sent",
+                "value": "Sent",
+                "Unicode": null
+              },
+              {
+                "display": "Trash",
+                "value": "Trash",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "latest_email",
+          "label": "latest_email",
+          "tips": "返回示例：{'text': 'HELLO WORLD', 'send_time': '2023-07-24 19:17:06'}",
+          "name": "latest_email",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_47680f64.get_SMS_code",
+      "statement": "process.invoke_activity",
+      "title": "获取短信验证码",
+      "keywords": "",
+      "description": null,
+      "comment": "从%获取验证码接口%查询验证码保存到%验证码%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/job.png",
+      "function": "xbot_extensions.activity_47680f64.get_SMS_code",
+      "helpUrl": null,
+      "extension": "小工具指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "获取验证码接口",
+          "label": "获取验证码接口",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "验证码",
+          "label": "验证码",
+          "name": "验证码",
+          "type": "str"
+        }
+      ]
+    }
+  ]
+}

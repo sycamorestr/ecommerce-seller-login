@@ -1,0 +1,1793 @@
+<root>
+  <item name="xbot_extensions.activity_jfbym" display="activity_jfbym" kind="module">
+    <item.method />
+    <item.desc>云码验证码扩展
+该指令集借助云码平台能力实现验证码自动化操作</item.desc>
+    <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha" display="jd_rotate_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+      <item.method />
+      <item.desc>京东-旋转验证码
+该指令借助云码的能力实现了自动拖拽京东旋转验证码, 调用接口的 type 为 30330
+* @param web_page，
+* @param background_ele，
+* @param rotate_ele，
+* @param drag_ele，
+* @param retry_count，
+* @param offset，
+* @param slider_ele，
+* @param engine，
+* @param ym_token，云码token
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.get_data_by_distance" display="get_data_by_distance" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.decode_image" display="decode_image" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.encode_image" display="encode_image" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.get_ppi" display="get_ppi" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.ym_recg" display="ym_recg" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.yd_recg" display="yd_recg" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.ease_delta" display="ease_delta" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.time_ease" display="time_ease" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.generate_random_point" display="generate_random_point" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.gen_random_float" display="gen_random_float" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.drag_x" display="drag_x" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.gen_move_speed" display="gen_move_speed" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.drag_w" display="drag_w" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.drag_j" display="drag_j" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha._moveTo" display="_moveTo" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.drag_g" display="drag_g" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.drag_gen" display="drag_gen" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.get_web_page_by_web_page" display="get_web_page_by_web_page" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.handle_verification" display="handle_verification" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_rotate_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/712902506045841408">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.std_trace_captcha" display="std_trace_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902466196131840">
+      <item.method />
+      <item.desc>通用轨迹验证
+该指令通过云码平台识别后按照轨迹绘制路径, 调用接口的 type 为 100016
+* @param web_page，
+* @param background_ele，
+* @param ym_token，
+* @param retry_count，
+* @param engine，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.std_trace_captcha._moveTo" display="_moveTo" kind="function" help="/yddoc/rpa/zh-CN/712902466196131840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_trace_captcha.recg" display="recg" kind="function" help="/yddoc/rpa/zh-CN/712902466196131840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_trace_captcha.yd_recg" display="yd_recg" kind="function" help="/yddoc/rpa/zh-CN/712902466196131840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_trace_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902466196131840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_trace_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/712902466196131840">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.std_slider_captcha" display="std_slider_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902431652761600">
+      <item.method />
+      <item.desc>通用单图滑块验证
+该指令通过云码平台识别后拖拽滑块验证的功能, 调用接口的 type 为 22222
+* @param web_page，
+* @param background_ele，
+* @param slider_ele，
+* @param retry_count，
+* @param offset，
+* @param engine，
+* @param speed，滑块移动速度, 用于拖拽滑块和目标滑块拖拽速度不一致的场景
+* @param ym_token，
+* @param refresh_elem，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.std_slider_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902431652761600">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_slider_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902431652761600">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_slider_captcha.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/712902431652761600">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_slider_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902431652761600">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_slider_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/712902431652761600">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_slider_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/712902431652761600">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.std_alphanum_captcha" display="std_alphanum_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902392556130304">
+      <item.method />
+      <item.desc>通用数英验证码
+该指令调用云码接口针对常见数英验证码进行识别
+* @param web_page，待操作的网页对象
+* @param ele，
+* @param captcha_type，验证码类型
+* @param token，云码token
+* @param engine，
+* @param is_trim，区分大小写
+* @param timeout，超时时间
+* @return data，验证码识别的结果
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.std_alphanum_captcha.img_to_base64" display="img_to_base64" kind="function" help="/yddoc/rpa/zh-CN/712902392556130304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_alphanum_captcha.get_xbot_client" display="get_xbot_client" kind="function" help="/yddoc/rpa/zh-CN/712902392556130304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_alphanum_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902392556130304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_alphanum_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902392556130304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_alphanum_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902392556130304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_alphanum_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/712902392556130304">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.chinatax_captcha" display="chinatax_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902349795434496">
+      <item.method />
+      <item.desc>国税局发票验证
+该指令调用云码的接口识别国税局验证码, 调用接口的 type 为 10201
+* @param web_page，待操作的网页对象
+* @param ele，
+* @param token，云码token
+* @param engine，
+* @return data，验证码识别的结果
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.chinatax_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902349795434496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.chinatax_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902349795434496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.chinatax_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902349795434496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.chinatax_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/712902349795434496">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.ali_slider_captcha" display="ali_slider_captcha" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+      <item.method />
+      <item.desc>阿里滑块验证
+该指令调用云码接口实现阿里滑块验证, 调用接口的 type 为 20226
+* @param web_page，
+* @param drag_ele，
+* @param retry_count，
+* @param offset，
+* @param refresh_ele，
+* @param ym_token，
+* @param engine，
+* @param speed，
+* @param monitor_time，
+* @param background_ele，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.get_data_by_distance" display="get_data_by_distance" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.drag_gen" display="drag_gen" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha._moveTo" display="_moveTo" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.drag_g" display="drag_g" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.join_images" display="join_images" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.encode_image" display="encode_image" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.decode_image" display="decode_image" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.get_ppi" display="get_ppi" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.recg" display="recg" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.yd_recg" display="yd_recg" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.relative_drag" display="relative_drag" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.get_web_page_by_web_page" display="get_web_page_by_web_page" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.handle_verification" display="handle_verification" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_slider_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/889697316860067840">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.std_click_select_captcha" display="std_click_select_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902315003449344">
+      <item.method />
+      <item.desc>通用点选验证
+该指令调用云码接口针对常见点选验证码进行验证, 调用接口的 type 为 30332
+* @param web_element，
+* @param ym_token，
+* @param web_page，
+* @param retry_count，
+* @param direction，
+* @param engine，
+* @param confirm，可选，需要点击确认则加上
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.std_click_select_captcha.get_xbot_client" display="get_xbot_client" kind="function" help="/yddoc/rpa/zh-CN/712902315003449344">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_click_select_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902315003449344">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_click_select_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902315003449344">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_click_select_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902315003449344">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_click_select_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/712902315003449344">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.dy_slider_captcha" display="dy_slider_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+      <item.method />
+      <item.desc>抖音滑块验证
+该指令通过云码平台识别抖音滑块并拖拽滑块进行验证, 调用接口的 type 为 20225
+* @param web_page，
+* @param background_ele，
+* @param slider_ele，
+* @param retry_count，
+* @param offset，
+* @param token，
+* @param engine，
+* @param refresh_ele，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha._shape_features" display="_shape_features" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha._pool_stats" display="_pool_stats" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha.y_gain_for_dpr" display="y_gain_for_dpr" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha._clip_prefix" display="_clip_prefix" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha.generate_trajectory" display="generate_trajectory" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha.build_waypoints" display="build_waypoints" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha._ms_precision" display="_ms_precision" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha._approach_points" display="_approach_points" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha.select_ele" display="select_ele" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_slider_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/712902279922524160">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.tx_six_squares_captcha" display="tx_six_squares_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902053362065408">
+      <item.method />
+      <item.desc>腾讯六宫格验证
+该指令借助云码平台实现在腾讯六宫格验证, 调用接口的 type 为 30221
+* @param web_page，待操作的网页对象
+* @param tip_ele，验证码提示元素
+* @param background_ele，验证码背景元素
+* @param ok_ele，验证码点击确定的元素
+* @param token，云码验证码token
+* @param retry_count，验证码重试次数
+* @param engine，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.tx_six_squares_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902053362065408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.tx_six_squares_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902053362065408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.tx_six_squares_captcha.get_ppi" display="get_ppi" kind="function" help="/yddoc/rpa/zh-CN/712902053362065408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.tx_six_squares_captcha.tx_six_squares_captcha" display="tx_six_squares_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902053362065408">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.tx_six_squares_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/712902053362065408">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.dy_double_rotate_captcha" display="dy_double_rotate_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902005249204224">
+      <item.method />
+      <item.desc>抖音双图旋转验证
+该指令集调用云码接口实现验证抖音双图旋转验证, 调用接口的 type 为 90004
+* @param web_page，待操作的网页对象
+* @param double_rotate_outer_ele，外圈元素
+* @param double_rotate_inner_ele，内圈元素
+* @param retry_count，重试次数
+* @param double_rotate_slider_ele，滑条元素
+* @param token，
+* @param double_rotate_darg_ele，拖拽元素
+* @param engine，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.dy_double_rotate_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902005249204224">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_double_rotate_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902005249204224">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_double_rotate_captcha.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/712902005249204224">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_double_rotate_captcha.crop_to_circle" display="crop_to_circle" kind="function" help="/yddoc/rpa/zh-CN/712902005249204224">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_double_rotate_captcha.crop_to_ring" display="crop_to_ring" kind="function" help="/yddoc/rpa/zh-CN/712902005249204224">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_double_rotate_captcha.download_file" display="download_file" kind="function" help="/yddoc/rpa/zh-CN/712902005249204224">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_double_rotate_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902005249204224">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_double_rotate_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/712902005249204224">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dy_double_rotate_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/712902005249204224">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.cs_space_same_object_captcha" display="cs_space_same_object_captcha" kind="function" help="/yddoc/rpa/zh-CN/712901960989388800">
+      <item.method />
+      <item.desc>空间推理点选验证(相同物体)
+该指令调用云码接口实现了点击验证上相同物体的功能, 调用接口的 type 为 30101
+* @param web_page，待操作的网页对象
+* @param background_ele，背景元素
+* @param confirm_ele，确认元素
+* @param retry_count，重试次数
+* @param token，云码token
+* @param engine，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.cs_space_same_object_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712901960989388800">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_space_same_object_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712901960989388800">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_space_same_object_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/712901960989388800">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_space_same_object_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/712901960989388800">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha" display="jd_click_select_captcha" kind="function" help="/yddoc/rpa/zh-CN/712901897250070528">
+      <item.method />
+      <item.desc>京东图片点选验证
+该指令调用云码接口实现了京东的点选验证, 调用接口的 type 为 30330
+* @param web_element，
+* @param ym_token，
+* @param web_page，
+* @param retry_count，
+* @param engine，
+* @param sure_element，确定元素
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha.img_to_base64" display="img_to_base64" kind="function" help="/yddoc/rpa/zh-CN/712901897250070528">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712901897250070528">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712901897250070528">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/712901897250070528">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/712901897250070528">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/712901897250070528">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.cs_oocl_captcha" display="cs_oocl_captcha" kind="function" help="/yddoc/rpa/zh-CN/716969764410281984">
+      <item.method />
+      <item.desc>OOCL船司旋转验证
+该指令调用云码接口实现了OOCL船司旋转验证, 调用接口的 type 为 900025
+* @param web_page，待操作的网页对象
+* @param ym_token，云码token
+* @param drag_ele，拖拽元素
+* @param refresh_ele，刷新元素
+* @param retry_count，重试次数
+* @param slider_ele，滑条元素
+* @param engine，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.cs_oocl_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/716969764410281984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_oocl_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/716969764410281984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_oocl_captcha.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/716969764410281984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_oocl_captcha.encode_image" display="encode_image" kind="function" help="/yddoc/rpa/zh-CN/716969764410281984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_oocl_captcha.decode_image" display="decode_image" kind="function" help="/yddoc/rpa/zh-CN/716969764410281984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_oocl_captcha.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/716969764410281984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_oocl_captcha.relative_drag" display="relative_drag" kind="function" help="/yddoc/rpa/zh-CN/716969764410281984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_oocl_captcha.get_web_page_by_web_page" display="get_web_page_by_web_page" kind="function" help="/yddoc/rpa/zh-CN/716969764410281984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_oocl_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/716969764410281984">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_oocl_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/716969764410281984">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.cs_word_order_click_select_captcha" display="cs_word_order_click_select_captcha" kind="function" help="/yddoc/rpa/zh-CN/745611535937777664">
+      <item.method />
+      <item.desc>定制-文字点选-语序点选
+该指令调用云码的接口实现了按照语序点击网页上的文字, 调用接口的 type 为 30114
+* @param web_element，
+* @param ym_token，
+* @param web_page，
+* @param retry_count，
+* @param engine，
+* @param refresh_ele，
+* @param ok_ele，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.cs_word_order_click_select_captcha.get_xbot_client" display="get_xbot_client" kind="function" help="/yddoc/rpa/zh-CN/745611535937777664">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_word_order_click_select_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/745611535937777664">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_word_order_click_select_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/745611535937777664">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_word_order_click_select_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/745611535937777664">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_word_order_click_select_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/745611535937777664">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_word_order_click_select_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/745611535937777664">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.cs_temu_captcha" display="cs_temu_captcha" kind="function" help="/yddoc/rpa/zh-CN/724825871072481280">
+      <item.method />
+      <item.desc>定制-Temu 空间物体选择验证
+该指令调用云码接口实现了temu物体识别点选验证, 调用接口的 type 为 9999
+* @param web_page，待操作的网页对象
+* @param background_ele，背景元素
+* @param retry_count，重试次数
+* @param token，云码token
+* @param engine，
+* @param text_ele，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.cs_temu_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/724825871072481280">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_temu_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/724825871072481280">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_temu_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/724825871072481280">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_temu_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/724825871072481280">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha_original" display="jd_click_select_captcha_original" kind="function" help="/yddoc/rpa/zh-CN/735105192367550464">
+      <item.method />
+      <item.desc>京东图片点选验证(原图版)
+该指令调用云码接口实现了京东的点选验证, 调用接口的 type 为 30330
+* @param background_element，
+* @param ym_token，
+* @param web_page，
+* @param retry_count，
+* @param engine，
+* @param sure_element，确定元素
+* @param tip_element，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha_original.deal_base64" display="deal_base64" kind="function" help="/yddoc/rpa/zh-CN/735105192367550464">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha_original.get_ppi_" display="get_ppi_" kind="function" help="/yddoc/rpa/zh-CN/735105192367550464">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha_original.img_to_base64" display="img_to_base64" kind="function" help="/yddoc/rpa/zh-CN/735105192367550464">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha_original.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/735105192367550464">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha_original.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/735105192367550464">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha_original.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/735105192367550464">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_click_select_captcha_original.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/735105192367550464">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.jd_trace_captcha" display="jd_trace_captcha" kind="function" help="/yddoc/rpa/zh-CN/745612796574539776">
+      <item.method />
+      <item.desc>京东滑动轨迹验证码
+该指令通过云码平台识别后按照轨迹绘制路径, 调用接口的 type 为 100015
+* @param web_page，
+* @param background_ele，
+* @param ym_token，
+* @param retry_count，
+* @param engine，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.jd_trace_captcha._moveTo" display="_moveTo" kind="function" help="/yddoc/rpa/zh-CN/745612796574539776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_trace_captcha.recg" display="recg" kind="function" help="/yddoc/rpa/zh-CN/745612796574539776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_trace_captcha.yd_recg" display="yd_recg" kind="function" help="/yddoc/rpa/zh-CN/745612796574539776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_trace_captcha.calculate_bezier_point" display="calculate_bezier_point" kind="function" help="/yddoc/rpa/zh-CN/745612796574539776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_trace_captcha.comb" display="comb" kind="function" help="/yddoc/rpa/zh-CN/745612796574539776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_trace_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/745612796574539776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_trace_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/745612796574539776">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.wph_select_captcha" display="wph_select_captcha" kind="function" help="/yddoc/rpa/zh-CN/773528813357690880">
+      <item.method />
+      <item.desc>唯品会点选验证码
+该指令可以实现唯品会登录界面的点选验证码, 调用接口的 type 为 30026
+* @param web_page，
+* @param background_element，
+* @param tip_element，
+* @param ym_token，
+* @param retry_count，
+* @param engine，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.wph_select_captcha.get_ppi" display="get_ppi" kind="function" help="/yddoc/rpa/zh-CN/773528813357690880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wph_select_captcha.img_to_base64" display="img_to_base64" kind="function" help="/yddoc/rpa/zh-CN/773528813357690880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wph_select_captcha.image_to_base64" display="image_to_base64" kind="function" help="/yddoc/rpa/zh-CN/773528813357690880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wph_select_captcha.get_xbot_client" display="get_xbot_client" kind="function" help="/yddoc/rpa/zh-CN/773528813357690880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wph_select_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/773528813357690880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wph_select_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/773528813357690880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wph_select_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/773528813357690880">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wph_select_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/773528813357690880">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.shopee_point_captcha" display="shopee_point_captcha" kind="function" help="/yddoc/rpa/zh-CN/773075848897318912">
+      <item.method />
+      <item.desc>shopee点选验证
+该指令实现了对虾皮平台的点选验证码进行了自动验证处理, 调用接口的 type 为 124371
+* @param bg_elem，
+* @param confirm，
+* @param web_page，
+* @param retry_count，
+* @param ym_token，
+* @param engine，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.shopee_point_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/773075848897318912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.shopee_point_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/773075848897318912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.shopee_point_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/773075848897318912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.shopee_point_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/773075848897318912">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.wb_point_capycha" display="wb_point_capycha" kind="function" help="/yddoc/rpa/zh-CN/775904375161155584">
+      <item.method />
+      <item.desc>微博指向点选验证
+该指令通过云码平台识别后对微博指向验证码进行点选, 调用接口的 type 为 30332
+* @param web_page，网页对象
+* @param bg_elem，背景图
+* @param top_elem，提示词区域
+* @param ym_token，云码Token
+* @param confirm，确认元素
+* @param retry_count，重试次数
+* @param engine，识别引擎选择
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.wb_point_capycha.get_xbot_client" display="get_xbot_client" kind="function" help="/yddoc/rpa/zh-CN/775904375161155584">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wb_point_capycha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/775904375161155584">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wb_point_capycha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/775904375161155584">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wb_point_capycha.down_img" display="down_img" kind="function" help="/yddoc/rpa/zh-CN/775904375161155584">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wb_point_capycha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/775904375161155584">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wb_point_capycha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/775904375161155584">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.std_click_select_captcha_plus" display="std_click_select_captcha_plus" kind="function" help="/yddoc/rpa/zh-CN/712902315003449344">
+      <item.method />
+      <item.desc>通用点选验证(plus)
+该指令调用云码接口针对常见点选验证码进行验证, 调用接口的 type 为 30009
+* @param web_element，
+* @param ym_token，
+* @param web_page，
+* @param retry_count，
+* @param direction，
+* @param engine，
+* @param confirm，可选，需要点击确认则加上
+* @param timeout，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.std_click_select_captcha_plus.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902315003449344">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_click_select_captcha_plus.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/712902315003449344">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_click_select_captcha_plus.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/712902315003449344">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_click_select_captcha_plus.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/712902315003449344">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.space_click_captcha" display="space_click_captcha" kind="function" help="/yddoc/rpa/zh-CN/802813439460876288">
+      <item.method />
+      <item.desc>空间推理点选(请点击_字母)
+该指令借助云码的能力实现了点击空间推理验证码的功能, 调用接口的 type 为 50009
+* @param web_page，
+* @param background_ele，
+* @param text_ele，
+* @param retry_count，
+* @param token，
+* @param engine，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.space_click_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/802813439460876288">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.space_click_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/802813439460876288">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.space_click_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/802813439460876288">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.space_click_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/802813439460876288">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.human_click" display="human_click" kind="function" help="/yddoc/rpa/zh-CN/813325961585664000">
+      <item.method />
+      <item.desc>点选验证码-人工
+该指令采用云码接口以此通过复杂人工点选验证码, 调用接口的 type 为 88888
+* @param web_page，网页元素
+* @param background_ele，验证码背景图
+* @param token，云码token
+* @param retry_count，重试次数
+* @param confirm_ele，
+* @param engine，
+* @param timeout，请求超时时间
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.human_click.get_xbot_client" display="get_xbot_client" kind="function" help="/yddoc/rpa/zh-CN/813325961585664000">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.human_click.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/813325961585664000">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.human_click.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/813325961585664000">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.human_click.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/813325961585664000">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.human_click.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/813325961585664000">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.jd_slider_captcha" display="jd_slider_captcha" kind="function" help="/yddoc/rpa/zh-CN/838327217571713024">
+      <item.method />
+      <item.desc>京东滑块拼图验证
+该指令使用云码接口进行识别, 并模拟人工在网页上拖拽, 使用的type是22222
+* @param web_page，
+* @param background_ele，
+* @param slider_ele，
+* @param retry_count，
+* @param offset，
+* @param engine，
+* @param ym_token，
+* @param drag_ele，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.jd_slider_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/838327217571713024">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_slider_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/838327217571713024">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_slider_captcha._moveTo" display="_moveTo" kind="function" help="/yddoc/rpa/zh-CN/838327217571713024">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_slider_captcha.get_data_by_distance" display="get_data_by_distance" kind="function" help="/yddoc/rpa/zh-CN/838327217571713024">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_slider_captcha.drag_gen" display="drag_gen" kind="function" help="/yddoc/rpa/zh-CN/838327217571713024">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_slider_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/838327217571713024">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.jd_slider_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/838327217571713024">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.cs_word_order_click_select_30116_captcha" display="cs_word_order_click_select_30116_captcha" kind="function" help="/yddoc/rpa/zh-CN/838699577025953792">
+      <item.method />
+      <item.desc>定制-文字点选4
+该指令调用云码的接口实现了按照语序点击网页上的文字, 调用接口的 type 为 30116
+* @param web_element，
+* @param ym_token，
+* @param web_page，
+* @param retry_count，
+* @param engine，
+* @param refresh_ele，
+* @param ok_ele，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.cs_word_order_click_select_30116_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/838699577025953792">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_word_order_click_select_30116_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/838699577025953792">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_word_order_click_select_30116_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/838699577025953792">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.cs_word_order_click_select_30116_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/838699577025953792">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.std_slider_change_captcha" display="std_slider_change_captcha" kind="function" help="/yddoc/rpa/zh-CN/854896186614603776">
+      <item.method />
+      <item.desc>通用变速滑块
+该指令通过云码平台识别后拖拽滑块验证的功能, 调用接口的 type 为 22222
+* @param web_page，网页对象
+* @param background_ele，背景元素
+* @param slider_ele，拖拽元素
+* @param target_ele，缺口元素
+* @param retry_count，0
+* @param offset，0
+* @param ym_token，
+* @param refresh_elem，刷新元素
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.std_slider_change_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/854896186614603776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_slider_change_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/854896186614603776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_slider_change_captcha.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/854896186614603776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_slider_change_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/854896186614603776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_slider_change_captcha.test_fun" display="test_fun" kind="function" help="/yddoc/rpa/zh-CN/854896186614603776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_slider_change_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/854896186614603776">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.std_splicing_captcah" display="std_splicing_captcah" kind="function" help="/yddoc/rpa/zh-CN/859691528658264064">
+      <item.method />
+      <item.desc>通用拼接滑块验证
+该指令通过云码平台识别后拖拽滑块验证的功能, 调用接口的 type 为 11268
+* @param web_page，网页对象
+* @param drag_ele，拖拽元素
+* @param background_ele，背景元素
+* @param refresh_ele，刷新元素，该指令内置监听方式，需要传入刷新元素
+* @param retry_count，重试次数
+* @param monitor_time，等待监听时间
+* @param ym_token，云码token，不填则走影刀钱包
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.std_splicing_captcah.get_proportion" display="get_proportion" kind="function" help="/yddoc/rpa/zh-CN/859691528658264064">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_splicing_captcah.get_element" display="get_element" kind="function" help="/yddoc/rpa/zh-CN/859691528658264064">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_splicing_captcah.save_image_from_body" display="save_image_from_body" kind="function" help="/yddoc/rpa/zh-CN/859691528658264064">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_splicing_captcah.image_to_base64" display="image_to_base64" kind="function" help="/yddoc/rpa/zh-CN/859691528658264064">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_splicing_captcah.recg" display="recg" kind="function" help="/yddoc/rpa/zh-CN/859691528658264064">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_splicing_captcah.yd_recg" display="yd_recg" kind="function" help="/yddoc/rpa/zh-CN/859691528658264064">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_splicing_captcah.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/859691528658264064">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_splicing_captcah.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/859691528658264064">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_splicing_captcah.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/859691528658264064">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_splicing_captcah.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/859691528658264064">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.std_tx_click_icon" display="std_tx_click_icon" kind="function" help="/yddoc/rpa/zh-CN/861514081422299136">
+      <item.method />
+      <item.desc>腾讯定制点选验证
+该指令借助云码平台实现在腾讯点选验证, 调用接口的 type 为 30340
+* @param web_page，网页对象
+* @param web_element，图片元素
+* @param ym_token，云码Token，不填则默认为影刀引擎
+* @param confirm，确认元素，可选，需要点击确认则加上
+* @param retry_count，重试次数
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.std_tx_click_icon.get_xbot_client" display="get_xbot_client" kind="function" help="/yddoc/rpa/zh-CN/861514081422299136">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_tx_click_icon.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/861514081422299136">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_tx_click_icon.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/861514081422299136">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_tx_click_icon.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/861514081422299136">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_tx_click_icon.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/861514081422299136">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.std_tx_click_icon.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/861514081422299136">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.common_puzzle" display="common_puzzle" kind="function" help="/yddoc/rpa/zh-CN/862623486618312704">
+      <item.method />
+      <item.desc>定制-滑动拼接验证
+该指令通过云码平台识别后拖拽拼接验证的功能, 调用接口的 type 为 52846
+* @param web_page，网页对象
+* @param background_ele，整个背景元素，style中包含图片base64
+* @param slider_ele，滑动元素
+* @param retry_count，重试次数
+* @param ym_token，
+* @param background_ele_up，上拼图背景元素
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle.save_image_from_body" display="save_image_from_body" kind="function" help="/yddoc/rpa/zh-CN/862623486618312704">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/862623486618312704">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/862623486618312704">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/862623486618312704">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/862623486618312704">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/862623486618312704">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/862623486618312704">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.custom_icon_selection" display="custom_icon_selection" kind="function" help="/yddoc/rpa/zh-CN/864388783727403008">
+      <item.method />
+      <item.desc>定制-国家市场监督管理总局-点选验证
+该指令调用云码接口针对国家市场监督管理总局坐标点选定制进行识别，type为31112
+* @param web_page，
+* @param image_big，
+* @param image_label1，
+* @param image_label2，
+* @param image_label3，
+* @param confirm_ele，
+* @param retry_count，
+* @param ym_token，
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.custom_icon_selection.download_image" display="download_image" kind="function" help="/yddoc/rpa/zh-CN/864388783727403008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.custom_icon_selection.get_proportion" display="get_proportion" kind="function" help="/yddoc/rpa/zh-CN/864388783727403008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.custom_icon_selection.image_to_base64" display="image_to_base64" kind="function" help="/yddoc/rpa/zh-CN/864388783727403008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.custom_icon_selection.recg" display="recg" kind="function" help="/yddoc/rpa/zh-CN/864388783727403008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.custom_icon_selection.yd_recg" display="yd_recg" kind="function" help="/yddoc/rpa/zh-CN/864388783727403008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.custom_icon_selection.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/864388783727403008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.custom_icon_selection.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/864388783727403008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.custom_icon_selection.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/864388783727403008">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.wb_click_captcha" display="wb_click_captcha" kind="function" help="/yddoc/rpa/zh-CN/877016741817540608">
+      <item.method />
+      <item.desc>定制-微博四方格点选
+该指令通过云码平台识别后对微博四方格验证码进行点选, 调用接口的 type 为 32110
+* @param web_page，传入网页对象
+* @param image_ele，四方格网页元素，注意需要取到svg节点
+* @param ym_token，云码token
+* @param retry_count，重试次数
+* @param refresh_ele，刷新元素
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.wb_click_captcha.monitor_network" display="monitor_network" kind="function" help="/yddoc/rpa/zh-CN/877016741817540608">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wb_click_captcha.get_latest_images" display="get_latest_images" kind="function" help="/yddoc/rpa/zh-CN/877016741817540608">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wb_click_captcha.get_xbot_client" display="get_xbot_client" kind="function" help="/yddoc/rpa/zh-CN/877016741817540608">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wb_click_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/877016741817540608">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wb_click_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/877016741817540608">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wb_click_captcha.get_point_position" display="get_point_position" kind="function" help="/yddoc/rpa/zh-CN/877016741817540608">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wb_click_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/877016741817540608">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wb_click_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/877016741817540608">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.wb_click_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/877016741817540608">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.tm_slider_captcha" display="tm_slider_captcha" kind="function" help="/yddoc/rpa/zh-CN/877109163780734976">
+      <item.method />
+      <item.desc>定制-Temu弧形验证
+该指令通过云码平台识别后对Temu弧形验证码进行拖动, 调用接口的 type 为 22229
+* @param web_page，传入网页对象
+* @param background_ele，背景元素
+* @param slider_ele，拖拽元素
+* @param retry_count，重试次数
+* @param offset，偏移量
+* @param ym_token，云码Token
+* @param refresh_elem，刷新元素
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.tm_slider_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/877109163780734976">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.tm_slider_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/877109163780734976">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.tm_slider_captcha.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/877109163780734976">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.tm_slider_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/877109163780734976">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.tm_slider_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/877109163780734976">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.tm_slider_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/877109163780734976">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.common_puzzle_v2" display="common_puzzle_v2" kind="function" help="/yddoc/rpa/zh-CN/891624037486637056">
+      <item.method />
+      <item.desc>定制-电子税务局验证
+该指令通过云码平台识别后拖拽拼接验证的功能, 调用接口的 type 为 20555
+* @param web_page，网页对象
+* @param refresh_ele，刷新元素
+* @param retry_count，重试次数
+* @param ym_token，云码Token
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle_v2._moveTo" display="_moveTo" kind="function" help="/yddoc/rpa/zh-CN/891624037486637056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle_v2.save_image_from_body" display="save_image_from_body" kind="function" help="/yddoc/rpa/zh-CN/891624037486637056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle_v2.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/891624037486637056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle_v2.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/891624037486637056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle_v2.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/891624037486637056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle_v2.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/891624037486637056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle_v2.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/891624037486637056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.common_puzzle_v2.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/891624037486637056">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.zfb_four_click_captcha" display="zfb_four_click_captcha" kind="function" help="/yddoc/rpa/zh-CN/900650936911179776">
+      <item.method />
+      <item.desc>支付宝四宫格点选验证
+该指令通过云码平台识别后对支付宝四宫格验证进行点选, 调用接口的 type 为 276502
+* @param web_page，网页对象
+* @param image_ele，四宫格元素
+* @param commit_ele，确认元素
+* @param ym_token，云码token
+* @param retry_count，验证次数
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.zfb_four_click_captcha.img_to_base64" display="img_to_base64" kind="function" help="/yddoc/rpa/zh-CN/900650936911179776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.zfb_four_click_captcha.get_xbot_client" display="get_xbot_client" kind="function" help="/yddoc/rpa/zh-CN/900650936911179776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.zfb_four_click_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/900650936911179776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.zfb_four_click_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/900650936911179776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.zfb_four_click_captcha._get_rotate_deg_from_style" display="_get_rotate_deg_from_style" kind="function" help="/yddoc/rpa/zh-CN/900650936911179776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.zfb_four_click_captcha._get_candidate_tile_nodes" display="_get_candidate_tile_nodes" kind="function" help="/yddoc/rpa/zh-CN/900650936911179776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.zfb_four_click_captcha._resolve_tile_node_by_offset" display="_resolve_tile_node_by_offset" kind="function" help="/yddoc/rpa/zh-CN/900650936911179776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.zfb_four_click_captcha._get_rotate_info_by_offset" display="_get_rotate_info_by_offset" kind="function" help="/yddoc/rpa/zh-CN/900650936911179776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.zfb_four_click_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/900650936911179776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.zfb_four_click_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/900650936911179776">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.zfb_four_click_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/900650936911179776">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.pdd_rotate_captcha" display="pdd_rotate_captcha" kind="function" help="/yddoc/rpa/zh-CN/908184312664383488">
+      <item.method />
+      <item.desc>拼多多旋转验证
+该指令调用云码的接口实现了拼多多旋转验证码的验证, 调用接口的 type 为 48172
+* @param web_page，网页对象
+* @param drag_ele，拖拽元素
+* @param refresh_ele，刷新元素
+* @param slider_ele，滑条元素
+* @param retry_count，验证次数
+* @param timeout，人工请求时间
+* @param token，云码token
+* @param offset，偏移量，单位为px，正数向右，复数向左
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.pdd_rotate_captcha.get_xbot_client" display="get_xbot_client" kind="function" help="/yddoc/rpa/zh-CN/908184312664383488">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.pdd_rotate_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/908184312664383488">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.pdd_rotate_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/908184312664383488">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.pdd_rotate_captcha.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/908184312664383488">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.pdd_rotate_captcha.encode_image" display="encode_image" kind="function" help="/yddoc/rpa/zh-CN/908184312664383488">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.pdd_rotate_captcha.decode_image" display="decode_image" kind="function" help="/yddoc/rpa/zh-CN/908184312664383488">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.pdd_rotate_captcha.relative_drag" display="relative_drag" kind="function" help="/yddoc/rpa/zh-CN/908184312664383488">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.pdd_rotate_captcha.get_web_page_by_web_page" display="get_web_page_by_web_page" kind="function" help="/yddoc/rpa/zh-CN/908184312664383488">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.pdd_rotate_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/908184312664383488">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.pdd_rotate_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/908184312664383488">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.pdd_rotate_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/908184312664383488">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.bd_rotate_captcha" display="bd_rotate_captcha" kind="function" help="/yddoc/rpa/zh-CN/910048637277282304">
+      <item.method />
+      <item.desc>百度旋转验证
+该指令调用云码的接口实现了百度旋转验证码的验证, 调用接口的 type 为 900011
+* @param web_page，网页对象
+* @param rotate_ele，旋转元素
+* @param drag_ele，拖动元素
+* @param retry_count，验证码尝试次数
+* @param token，云码token
+* @param timeout，请求超时时间，该指令为人工接口，请适当延长超时时间
+* @param offset，偏移量
+* @param slider_ele，滑条元素
+* @param retry_wait_time，验证等待时间
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.bd_rotate_captcha.get_xbot_client" display="get_xbot_client" kind="function" help="/yddoc/rpa/zh-CN/910048637277282304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.bd_rotate_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/910048637277282304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.bd_rotate_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/910048637277282304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.bd_rotate_captcha.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/910048637277282304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.bd_rotate_captcha.encode_image" display="encode_image" kind="function" help="/yddoc/rpa/zh-CN/910048637277282304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.bd_rotate_captcha.decode_image" display="decode_image" kind="function" help="/yddoc/rpa/zh-CN/910048637277282304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.bd_rotate_captcha.relative_drag" display="relative_drag" kind="function" help="/yddoc/rpa/zh-CN/910048637277282304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.bd_rotate_captcha.get_web_page_by_web_page" display="get_web_page_by_web_page" kind="function" help="/yddoc/rpa/zh-CN/910048637277282304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.bd_rotate_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/910048637277282304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.bd_rotate_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/910048637277282304">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.bd_rotate_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/910048637277282304">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha" display="aliyun_qst_captcha" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+      <item.method />
+      <item.desc>定制-阿里云qst-滑块验证
+该指令调用云码接口实现阿里回复图片验证, 调用接口的 type 为 20333
+* @param web_page，网页对象
+* @param background_ele，背景元素
+* @param slider_ele，目标元素
+* @param drag_ele，拖拽元素
+* @param refresh_ele，刷新元素
+* @param token，云码Token
+* @param retry_count，验证次数
+* @param monitor_time，监听时间
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha.get_data_by_distance" display="get_data_by_distance" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha.drag_gen" display="drag_gen" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha._moveTo" display="_moveTo" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha.drag_g" display="drag_g" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha.join_images" display="join_images" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha.encode_image" display="encode_image" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha.decode_image" display="decode_image" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha.get_ppi" display="get_ppi" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha.recg" display="recg" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha.yd_recg" display="yd_recg" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha.handle_verification" display="handle_verification" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.aliyun_qst_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/923403161329643520">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.ali_nine_squares_captcha" display="ali_nine_squares_captcha" kind="function" help="/yddoc/rpa/zh-CN/924596617874690048">
+      <item.method />
+      <item.desc>定制-阿里云九宫格验证
+该指令调用云码接口实现阿里九宫格点选验证, 调用接口的 type 为 30223
+* @param web_page，网页对象
+* @param tip_ele，提示词元素，注意元素属性需要包含id
+* @param background_ele，背景元素
+* @param ok_ele，提交元素
+* @param refresh_ele，刷新元素
+* @param token，云码Token
+* @param retry_count，验证次数
+* @param single_click_count，单次点击次数
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.ali_nine_squares_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/924596617874690048">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_nine_squares_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/924596617874690048">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_nine_squares_captcha.tip_base64" display="tip_base64" kind="function" help="/yddoc/rpa/zh-CN/924596617874690048">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_nine_squares_captcha.get_ppi" display="get_ppi" kind="function" help="/yddoc/rpa/zh-CN/924596617874690048">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_nine_squares_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/924596617874690048">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_nine_squares_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/924596617874690048">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.ali_nine_squares_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/924596617874690048">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.db_nine_squares_captcha" display="db_nine_squares_captcha" kind="function" help="/yddoc/rpa/zh-CN/943414012743725056">
+      <item.method />
+      <item.desc>通用九宫格拖拽验证
+该指令调用云码接口实现九宫格拖拽验证, 调用接口的 type 为 88888
+* @param web_page，网页对象
+* @param background_ele，九宫格元素
+* @param drag_target_ele，目标范围元素
+* @param confirm_ele，网页元素
+* @param retry_count，验证次数
+* @param token，云码token
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.db_nine_squares_captcha.get_xbot_client" display="get_xbot_client" kind="function" help="/yddoc/rpa/zh-CN/943414012743725056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.db_nine_squares_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/943414012743725056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.db_nine_squares_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/943414012743725056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.db_nine_squares_captcha.get_ppi" display="get_ppi" kind="function" help="/yddoc/rpa/zh-CN/943414012743725056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.db_nine_squares_captcha.drag_image_to_target" display="drag_image_to_target" kind="function" help="/yddoc/rpa/zh-CN/943414012743725056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.db_nine_squares_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/943414012743725056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.db_nine_squares_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/943414012743725056">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.db_nine_squares_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/943414012743725056">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.dxm_rotate_captcha" display="dxm_rotate_captcha" kind="function" help="/yddoc/rpa/zh-CN/958653188012519424">
+      <item.method />
+      <item.desc>定制-度小满旋转验证
+该指令实现了对度小满登录平台旋转验证码进行验证, 调用接口的 type 为 20555
+* @param web_page，网页对象
+* @param drag_ele，拖拽元素
+* @param slider_ele，拖拽元素所在的长条元素
+* @param retry_count，验证次数
+* @param token，云码token
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.dxm_rotate_captcha.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/958653188012519424">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dxm_rotate_captcha.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/958653188012519424">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dxm_rotate_captcha.encode_image" display="encode_image" kind="function" help="/yddoc/rpa/zh-CN/958653188012519424">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dxm_rotate_captcha.decode_image" display="decode_image" kind="function" help="/yddoc/rpa/zh-CN/958653188012519424">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dxm_rotate_captcha.get_image_size_from_base64" display="get_image_size_from_base64" kind="function" help="/yddoc/rpa/zh-CN/958653188012519424">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dxm_rotate_captcha.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/958653188012519424">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dxm_rotate_captcha.get_web_page_by_web_page" display="get_web_page_by_web_page" kind="function" help="/yddoc/rpa/zh-CN/958653188012519424">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dxm_rotate_captcha.get_cache_folder" display="get_cache_folder" kind="function" help="/yddoc/rpa/zh-CN/958653188012519424">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dxm_rotate_captcha.clean_base64" display="clean_base64" kind="function" help="/yddoc/rpa/zh-CN/958653188012519424">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dxm_rotate_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/958653188012519424">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dxm_rotate_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/958653188012519424">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.dxm_rotate_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/958653188012519424">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_jfbym.picture_click" display="picture_click" kind="function" help="/yddoc/rpa/zh-CN/977896078261100544">
+      <item.method />
+      <item.desc>图片点选
+该指令通过云码平台识别后图片点选的功能, 调用接口的 type 为 30303
+* @param web_page，网页对象
+* @param background_ele，图片背景元素
+* @param text_ele，提示词元素
+* @param retry_count，重试次数
+* @param token，云码token
+* @param sure_ele，确认元素
+</item.desc>
+      <item name="xbot_extensions.activity_jfbym.picture_click.yd_captcha_recognition" display="yd_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/977896078261100544">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.picture_click.ym_captcha_recognition" display="ym_captcha_recognition" kind="function" help="/yddoc/rpa/zh-CN/977896078261100544">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.picture_click.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/977896078261100544">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_jfbym.picture_click.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/977896078261100544">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+  </item>
+</root>

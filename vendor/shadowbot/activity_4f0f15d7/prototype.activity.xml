@@ -1,0 +1,1476 @@
+<root>
+  <item name="xbot_extensions.activity_4f0f15d7" display="activity_4f0f15d7" kind="module">
+    <item.method />
+    <item.desc>滑块拼图验证码(免费)
+该指令集解决大部分滑块拼图验证码</item.desc>
+    <item name="xbot_extensions.activity_4f0f15d7.process3" display="process3" kind="function" help="/yddoc/rpa/zh-CN/889696586072498176">
+      <item.method>process3(背景元素,缺块元素,拖拽滑块,偏移距离,窗口对象,重试次数)</item.method>
+      <item.desc>滑块拼图验证免费版(win)
+解决大部分滑块拼图验证码(win)
+* @param 背景元素，
+* @param 缺块元素，
+* @param 拖拽滑块，
+* @param 偏移距离，
+* @param 窗口对象，
+* @param 重试次数，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.slider_captcha" display="slider_captcha" kind="function" help="/yddoc/rpa/zh-CN/889696491021180928">
+      <item.method />
+      <item.desc>滑块拼图验证免费版(web)
+该指令集调用CV的能力实现识别验证码并自动验证
+* @param web_page，
+* @param background_ele，
+* @param slider_ele，
+* @param drag_ele，
+* @param retry_count，
+* @param offset，
+* @param move_speed，
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_captcha.contains_chinese" display="contains_chinese" kind="function" help="/yddoc/rpa/zh-CN/889696491021180928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_captcha.create_cache_dir" display="create_cache_dir" kind="function" help="/yddoc/rpa/zh-CN/889696491021180928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_captcha.get_ppi_local" display="get_ppi_local" kind="function" help="/yddoc/rpa/zh-CN/889696491021180928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_captcha.generate_trajectory" display="generate_trajectory" kind="function" help="/yddoc/rpa/zh-CN/889696491021180928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_captcha.build_waypoints" display="build_waypoints" kind="function" help="/yddoc/rpa/zh-CN/889696491021180928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_captcha.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/889696491021180928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_captcha.get_x" display="get_x" kind="function" help="/yddoc/rpa/zh-CN/889696491021180928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/889696491021180928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/889696491021180928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/889696491021180928">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.slider_acceleration_captcha" display="slider_acceleration_captcha" kind="function" help="/yddoc/rpa/zh-CN/831794361654890496">
+      <item.method />
+      <item.desc>通用变速滑块验证(web)
+该指令集调用CV的能力实现识别验证码并自动完成变速滑块验证
+* @param web_page，网页对象
+* @param background_ele，背景元素
+* @param drag_ele，拖拽元素
+* @param target_ele，缺口元素（注意style属性是否含有px）
+* @param retry，重试次数
+* @param refresh_ele，刷新元素 选填，当验证码需要点击刷新元素才能进行下一次验证的时候填写
+* @param offset，偏移值
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_acceleration_captcha.get_xbot_activity_cache_folder" display="get_xbot_activity_cache_folder" kind="function" help="/yddoc/rpa/zh-CN/831794361654890496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_acceleration_captcha.imread_unicode" display="imread_unicode" kind="function" help="/yddoc/rpa/zh-CN/831794361654890496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_acceleration_captcha.get_x" display="get_x" kind="function" help="/yddoc/rpa/zh-CN/831794361654890496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_acceleration_captcha.detect_captcha_type" display="detect_captcha_type" kind="function" help="/yddoc/rpa/zh-CN/831794361654890496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_acceleration_captcha.calculate_slider_distance" display="calculate_slider_distance" kind="function" help="/yddoc/rpa/zh-CN/831794361654890496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_acceleration_captcha.get_ppi" display="get_ppi" kind="function" help="/yddoc/rpa/zh-CN/831794361654890496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_acceleration_captcha.drag" display="drag" kind="function" help="/yddoc/rpa/zh-CN/831794361654890496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_acceleration_captcha.handle_slider_captcha" display="handle_slider_captcha" kind="function" help="/yddoc/rpa/zh-CN/831794361654890496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_acceleration_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/831794361654890496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_acceleration_captcha.test_handle_captcha" display="test_handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/831794361654890496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.slider_acceleration_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/831794361654890496">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.shopee_captcha" display="shopee_captcha" kind="function" help="/yddoc/rpa/zh-CN/960506202903846912">
+      <item.method />
+      <item.desc>shopee弧形验证
+该指令集调用CV的能力实现识别验证码并自动验证
+* @param web_page，网页对象
+* @param drag_ele，拖拽元素
+* @param bg_ele，背景元素
+* @param piece_ele，拼图块元素
+* @param retry_count，验证次数
+* @param offset，偏移量
+* @param refresh_ele，刷新元素
+* @param wait_time，等待验证码加载时间
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_captcha.decode_data_uri" display="decode_data_uri" kind="function" help="/yddoc/rpa/zh-CN/960506202903846912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_captcha._get_image_src" display="_get_image_src" kind="function" help="/yddoc/rpa/zh-CN/960506202903846912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_captcha.get_captcha_images" display="get_captcha_images" kind="function" help="/yddoc/rpa/zh-CN/960506202903846912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_captcha.detect_angle" display="detect_angle" kind="function" help="/yddoc/rpa/zh-CN/960506202903846912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_captcha._get_drag_path_by_distance" display="_get_drag_path_by_distance" kind="function" help="/yddoc/rpa/zh-CN/960506202903846912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_captcha.ease_drag" display="ease_drag" kind="function" help="/yddoc/rpa/zh-CN/960506202903846912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/960506202903846912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/960506202903846912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/960506202903846912">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.arithmetic_captcha" display="arithmetic_captcha" kind="function" help="/yddoc/rpa/zh-CN/962695405942493184">
+      <item.method />
+      <item.desc>算术验证码
+该指令实现了算术验证码的识别处理
+* @param picture_ele，图片元素
+* @param web_page，网页对象
+* @return result，识别结果
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.arithmetic_captcha._load_templates" display="_load_templates" kind="function" help="/yddoc/rpa/zh-CN/962695405942493184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.arithmetic_captcha._mask" display="_mask" kind="function" help="/yddoc/rpa/zh-CN/962695405942493184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.arithmetic_captcha._char_boxes" display="_char_boxes" kind="function" help="/yddoc/rpa/zh-CN/962695405942493184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.arithmetic_captcha._norm" display="_norm" kind="function" help="/yddoc/rpa/zh-CN/962695405942493184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.arithmetic_captcha._classify" display="_classify" kind="function" help="/yddoc/rpa/zh-CN/962695405942493184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.arithmetic_captcha.solve" display="solve" kind="function" help="/yddoc/rpa/zh-CN/962695405942493184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.arithmetic_captcha._resolve_element" display="_resolve_element" kind="function" help="/yddoc/rpa/zh-CN/962695405942493184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.arithmetic_captcha._capture_element_image" display="_capture_element_image" kind="function" help="/yddoc/rpa/zh-CN/962695405942493184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.arithmetic_captcha.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/962695405942493184">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.arithmetic_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/962695405942493184">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha" display="zfb_rotate_captcha" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+      <item.method />
+      <item.desc>支付宝四方格点击旋转验证
+该指令用来实现支付宝四方格的点击旋转验证
+* @param web_page，浏览器对象
+* @param picture_ele_1，左上角图片元素
+* @param refresh_ele，刷新元素
+* @param solve_size，缩放大小
+* @param band，边缘比较像素
+* @param retry_times，重试次数
+* @param picture_ele_2，右上角图片元素
+* @param picture_ele_3，左下角图片元素
+* @param picture_ele_4，右下角图片元素
+* @param sure_ele，确定按钮
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha.solve" display="solve" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha._resolve_element" display="_resolve_element" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha._resolve_picture_elements" display="_resolve_picture_elements" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha._get_current_picture_elements" display="_get_current_picture_elements" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha._capture_element_image" display="_capture_element_image" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha._capture_picture_images" display="_capture_picture_images" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha._picture_group_exists" display="_picture_group_exists" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha._get_image_node_from_element" display="_get_image_node_from_element" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha._get_rotate_info" display="_get_rotate_info" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha._write_debug_image" display="_write_debug_image" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha._click_element" display="_click_element" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha._click_solution" display="_click_solution" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha._wait_until_pictures_disappear" display="_wait_until_pictures_disappear" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.zfb_rotate_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/970969587244412928">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha" display="dewu_captcha" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+      <item.method />
+      <item.desc>得物旋转验证码
+该指令实现了得物旋转验证码的处理
+* @param web_page，网页对象
+* @param inner_ele，内圈元素
+* @param out_ele，外圈元素
+* @param drag_ele，滑块元素
+* @param slider_ele，滑动条元素
+* @param retry_time，重试次数
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha._moveTo" display="_moveTo" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.get_data_by_distance" display="get_data_by_distance" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha._get_image_node_from_element" display="_get_image_node_from_element" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.drag_gen" display="drag_gen" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha._capture_picture_images" display="_capture_picture_images" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha._resolve_element" display="_resolve_element" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.load" display="load" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.comp_white" display="comp_white" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.center_of" display="center_of" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.to_polar" display="to_polar" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.high_pass" display="high_pass" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.hue_feat" display="hue_feat" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.edge_feat" display="edge_feat" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.circular_corr" display="circular_corr" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.znorm" display="znorm" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.argmax" display="argmax" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.circdiff" display="circdiff" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.solve" display="solve" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.confidence" display="confidence" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.rotate_disc" display="rotate_disc" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.render_seam" display="render_seam" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.write_json" display="write_json" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.dewu_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/974539563144032256">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha" display="temu_connect_captcha" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+      <item.method />
+      <item.desc>temu连线验证码
+该指令实现了对temu连线验证码的处理
+* @param web_page，浏览器对象
+* @param captcha_element，验证码背景图
+* @param sure_element，确认元素
+* @param lw，线条宽度
+* @param point_interval，移动停顿时间
+* @param click_interval，点击停留时间
+* @param retry，重试次数
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._as_bool" display="_as_bool" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._read_image" display="_read_image" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._write_image" display="_write_image" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha.segment_colored_dots" display="segment_colored_dots" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha.detect_circle" display="detect_circle" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._chamfer" display="_chamfer" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._resample_polyline" display="_resample_polyline" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._angle_of" display="_angle_of" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._point_at" display="_point_at" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._make_arc" display="_make_arc" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._single_path_mask" display="_single_path_mask" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._clear_disk" display="_clear_disk" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._build_obstacle" display="_build_obstacle" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._to_grid_point" display="_to_grid_point" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._line_free" display="_line_free" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._simplify_polyline" display="_simplify_polyline" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._astar_route" display="_astar_route" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._count_cross" display="_count_cross" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._draw_debug_image" display="_draw_debug_image" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha.solve_paths_clockwise" display="solve_paths_clockwise" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._move_to" display="_move_to" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha._draw_path" display="_draw_path" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_connect_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/978629306453286912">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha" display="shopee_similarity_silder_captcha" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+      <item.method />
+      <item.desc>shopee弧形验证 - 物体位置
+该指令集调用CV的能力实现识别验证码并自动验证
+* @param web_page，网页对象
+* @param drag_ele，拖拽元素
+* @param bg_ele，背景元素
+* @param piece_ele，拼图元素
+* @param retry_count，重试次数
+* @param offset，偏移量
+* @param refresh_ele，刷新元素
+* @param wait_time，等待时间
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha.decode_data_uri" display="decode_data_uri" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha._get_image_src" display="_get_image_src" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha.get_captcha_images" display="get_captcha_images" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha._piece_mask" display="_piece_mask" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha._darkness_map" display="_darkness_map" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha._edge_response" display="_edge_response" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha._rank_curve" display="_rank_curve" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha._find_target_region" display="_find_target_region" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha._axis_angle" display="_axis_angle" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha._find_salient_region" display="_find_salient_region" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha._region_edge_score" display="_region_edge_score" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha._rotated_template" display="_rotated_template" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha._refine_theta" display="_refine_theta" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha._relative_darkness" display="_relative_darkness" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha._cross_check" display="_cross_check" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha.detect_angle" display="detect_angle" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha._get_drag_path_by_distance" display="_get_drag_path_by_distance" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha.ease_drag" display="ease_drag" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_silder_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/981402677194027008">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha" display="temu_rotate_captcha" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+      <item.method />
+      <item.desc>temu旋转图片验证码
+该指令实现了temu旋转图片验证码的处理
+* @param web_page，网页对象
+* @param image_ele，背景元素
+* @param commit_ele，确认元素
+* @param retry_count，重试次数
+* @param tile_xpath，图片xpath
+* @param click_interval，点击间隔
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._safe_int" display="_safe_int" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._safe_float" display="_safe_float" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._cache_folder" display="_cache_folder" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._get_rotate_deg_from_style" display="_get_rotate_deg_from_style" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._get_node_style" display="_get_node_style" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._resolve_element" display="_resolve_element" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._get_image_node_from_element" display="_get_image_node_from_element" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._get_node_rotate_deg" display="_get_node_rotate_deg" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._angle_delta" display="_angle_delta" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._click_is_counterclockwise" display="_click_is_counterclockwise" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._node_center_96dpi" display="_node_center_96dpi" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._click_node" display="_click_node" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._find_tile_nodes" display="_find_tile_nodes" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._read_attr" display="_read_attr" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._get_image_url_from_element" display="_get_image_url_from_element" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._write_bytes" display="_write_bytes" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._download_image_to_file" display="_download_image_to_file" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._capture_element_to_file" display="_capture_element_to_file" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._save_tile_images" display="_save_tile_images" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha.imread_any" display="imread_any" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha.alpha_of" display="alpha_of" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha.rgba_of" display="rgba_of" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha.bbox_from_alpha" display="bbox_from_alpha" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha.normalize_subject" display="normalize_subject" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha.orientation_signature" display="orientation_signature" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha.best_clockwise_clicks" display="best_clockwise_clicks" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha.solve_tile_clicks" display="solve_tile_clicks" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha.score_clicks" display="score_clicks" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._ensure_dir" display="_ensure_dir" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._debug_dir" display="_debug_dir" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._copy_debug_image" display="_copy_debug_image" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._write_debug_sheet" display="_write_debug_sheet" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha._write_debug_files" display="_write_debug_files" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha.apply_clicks" display="apply_clicks" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_rotate_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/979000137577828352">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha" display="temu_drag_photo_captcha" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+      <item.method />
+      <item.desc>temu图片拖动验证码
+该指令实现了temu平台图片拖动验证码的处理
+* @param web_page，网页对象
+* @param image_ele，背景元素
+* @param image_xpath，图片xpath路径
+* @param confirm_ele，确认元素
+* @param drag_only_matched，是否有不需要拖拽的项
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._log" display="_log" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._as_path" display="_as_path" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._load_payload" display="_load_payload" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._summarize" display="_summarize" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._resolve_element" display="_resolve_element" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._read_attr" display="_read_attr" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._is_image_node" display="_is_image_node" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._node_style" display="_node_style" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._image_url" display="_image_url" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._write_bytes" display="_write_bytes" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._download_image" display="_download_image" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._capture_element" display="_capture_element" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._screen_scale" display="_screen_scale" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._screen_rect" display="_screen_rect" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._screen_center" display="_screen_center" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._randomized_point" display="_randomized_point" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._randomized_center" display="_randomized_center" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._click_node_randomized" display="_click_node_randomized" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._image_size" display="_image_size" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._move_to" display="_move_to" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._trajectory_database_path" display="_trajectory_database_path" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._trajectory_bucket" display="_trajectory_bucket" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._target_angle" display="_target_angle" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._read_trajectory" display="_read_trajectory" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._scale_trajectory" display="_scale_trajectory" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._drag_node_by_trajectory" display="_drag_node_by_trajectory" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha.drag_type2_matches" display="drag_type2_matches" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha._find_image_nodes" display="_find_image_nodes" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha.capture_type2_images" display="capture_type2_images" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha.run_type2_from_web" display="run_type2_from_web" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha.run_type2_classification" display="run_type2_classification" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_drag_photo_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/980637769058922496">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha" display="temu_click_same_point_captcha" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+      <item.method />
+      <item.desc>temu点击相同点数验证码
+该指令实现了temu点击相同点数验证码的处理
+* @param web_page，网页对象
+* @param image_ele，背景元素
+* @param confirm_ele，确认元素
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha._log" display="_log" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha._resolve_element" display="_resolve_element" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha._screen_scale" display="_screen_scale" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha._screen_rect" display="_screen_rect" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha._capture_element" display="_capture_element" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha._move_to" display="_move_to" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha._randomized_point" display="_randomized_point" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha._click_randomized" display="_click_randomized" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha._analyze_captcha" display="_analyze_captcha" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha._matched_items" display="_matched_items" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha._save_debug_image" display="_save_debug_image" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha.click_same_dot_patterns" display="click_same_dot_patterns" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.temu_click_same_point_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/980998184796336128">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha" display="shopee_similarity_move_captcha" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+      <item.method />
+      <item.desc>shopee移动验证 - 物体位置
+该指令集调用CV的能力实现识别验证码并自动验证
+* @param bg_ele，背景元素
+* @param piece_ele，拼图元素
+* @param verify_ele，验证元素
+* @param refresh_ele，刷新元素
+* @param retry_count，验证次数
+* @param offset_x，x轴偏移量
+* @param offset_y，y轴偏移量
+* @param wait_time，等待加载时间
+* @param min_score，最小匹配分数
+* @param web_page，网页对象
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha.decode_data_uri" display="decode_data_uri" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._get_image_src" display="_get_image_src" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha.get_captcha_images" display="get_captcha_images" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._piece_mask" display="_piece_mask" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._prepare_piece" display="_prepare_piece" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._bgr" display="_bgr" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._gray" display="_gray" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._edge_response" display="_edge_response" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._local_darkness" display="_local_darkness" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._flatness" display="_flatness" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._safe_match" display="_safe_match" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._pick_peaks" display="_pick_peaks" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._rank_values" display="_rank_values" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._template_features" display="_template_features" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha.find_similarity_target" display="find_similarity_target" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._save_debug_image" display="_save_debug_image" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._element_box" display="_element_box" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._target_delta" display="_target_delta" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._apply_dpi_compensation" display="_apply_dpi_compensation" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha.ease_drag" display="ease_drag" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._selector_given" display="_selector_given" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._is_visible" display="_is_visible" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha._wait_piece_hidden" display="_wait_piece_hidden" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.shopee_similarity_move_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/981496637982560256">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.fruit_content_captcha" display="fruit_content_captcha" kind="function" help="/yddoc/rpa/zh-CN/983974182302892032">
+      <item.method />
+      <item.desc>水果连线验证码
+该指令实现了水果连线验证码的处理
+* @param web_page，网页对象
+* @param retry，重试次数
+* @param img_ele，验证码图片元素
+* @param confirm_ele，确认元素
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.fruit_content_captcha._read_image" display="_read_image" kind="function" help="/yddoc/rpa/zh-CN/983974182302892032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.fruit_content_captcha._normalize_target" display="_normalize_target" kind="function" help="/yddoc/rpa/zh-CN/983974182302892032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.fruit_content_captcha._count_score" display="_count_score" kind="function" help="/yddoc/rpa/zh-CN/983974182302892032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.fruit_content_captcha._capture" display="_capture" kind="function" help="/yddoc/rpa/zh-CN/983974182302892032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.fruit_content_captcha._routing_waypoints" display="_routing_waypoints" kind="function" help="/yddoc/rpa/zh-CN/983974182302892032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.fruit_content_captcha._drag" display="_drag" kind="function" help="/yddoc/rpa/zh-CN/983974182302892032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.fruit_content_captcha._handle_captcha" display="_handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/983974182302892032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.fruit_content_captcha.test" display="test" kind="function" help="/yddoc/rpa/zh-CN/983974182302892032">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.fruit_content_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/983974182302892032">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha" display="svg_animation_captcha" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+      <item.method />
+      <item.desc>监管局动态匹配点选验证
+该指令实现了在国家市场监督管理总局网站，对SVG动态验证码进行目标图片的点选验证
+* @param web_page，网页对象
+* @param target_ele，目标提示元素
+* @param refresh_ele，刷新元素
+* @param retry_count，验证重试次数
+* @param wait_time，等待验证码时间
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.css_block" display="css_block" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.frame_number" display="frame_number" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.render_svgs_batch" display="render_svgs_batch" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.make_icon" display="make_icon" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.image_mask" display="image_mask" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.similarity" display="similarity" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.visible_interval" display="visible_interval" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.get_svg_markup" display="get_svg_markup" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.get_target_image_bytes" display="get_target_image_bytes" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.get_click_coords" display="get_click_coords" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.check_captcha_passed" display="check_captcha_passed" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.svg_animation_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/986442250620354560">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.gif_math_captcha" display="gif_math_captcha" kind="function" help="/yddoc/rpa/zh-CN/990930998492045312">
+      <item.method />
+      <item.desc>动态算数验证码
+该指令实现了动态图片中算数验证码的处理
+* @param target_ele，
+* @param web_page，
+* @return result，
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.gif_math_captcha.merge_gif_frames_from_bytes" display="merge_gif_frames_from_bytes" kind="function" help="/yddoc/rpa/zh-CN/990930998492045312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.gif_math_captcha.make_mask" display="make_mask" kind="function" help="/yddoc/rpa/zh-CN/990930998492045312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.gif_math_captcha.make_core" display="make_core" kind="function" help="/yddoc/rpa/zh-CN/990930998492045312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.gif_math_captcha._core_box" display="_core_box" kind="function" help="/yddoc/rpa/zh-CN/990930998492045312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.gif_math_captcha._norm_crop" display="_norm_crop" kind="function" help="/yddoc/rpa/zh-CN/990930998492045312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.gif_math_captcha.roi_glyph" display="roi_glyph" kind="function" help="/yddoc/rpa/zh-CN/990930998492045312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.gif_math_captcha.roi_op" display="roi_op" kind="function" help="/yddoc/rpa/zh-CN/990930998492045312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.gif_math_captcha.classify_digit" display="classify_digit" kind="function" help="/yddoc/rpa/zh-CN/990930998492045312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.gif_math_captcha.solve_captcha_core" display="solve_captcha_core" kind="function" help="/yddoc/rpa/zh-CN/990930998492045312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.gif_math_captcha.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/990930998492045312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.gif_math_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/990930998492045312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.gif_math_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/990930998492045312">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.gif_math_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/990930998492045312">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.tysfrzcs_slider_captcha" display="tysfrzcs_slider_captcha" kind="function" help="/yddoc/rpa/zh-CN/993438980482334720">
+      <item.method />
+      <item.desc>变速旋转拼图验证码(综合服务平台)
+该指令通过计算实时角度，实现自动化通过变速旋转拼图验证码
+* @param web_page，网页对象
+* @param drag_ele，拖拽元素
+* @param bg_ele，背景元素
+* @param piece_ele，拼图元素
+* @param refresh_ele，刷新元素
+* @param retry_count，重试次数
+* @param wait_time，等待验证码加载时间
+* @param rotation_ele，(可选)拼图容器元素
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.tysfrzcs_slider_captcha.decode" display="decode" kind="function" help="/yddoc/rpa/zh-CN/993438980482334720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.tysfrzcs_slider_captcha.get_captcha_images" display="get_captcha_images" kind="function" help="/yddoc/rpa/zh-CN/993438980482334720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.tysfrzcs_slider_captcha.current_rotation" display="current_rotation" kind="function" help="/yddoc/rpa/zh-CN/993438980482334720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.tysfrzcs_slider_captcha.fit_line" display="fit_line" kind="function" help="/yddoc/rpa/zh-CN/993438980482334720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.tysfrzcs_slider_captcha.solve_drag" display="solve_drag" kind="function" help="/yddoc/rpa/zh-CN/993438980482334720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.tysfrzcs_slider_captcha.captcha_present" display="captcha_present" kind="function" help="/yddoc/rpa/zh-CN/993438980482334720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.tysfrzcs_slider_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/993438980482334720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.tysfrzcs_slider_captcha.self_check" display="self_check" kind="function" help="/yddoc/rpa/zh-CN/993438980482334720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.tysfrzcs_slider_captcha.select_ele" display="select_ele" kind="function" help="/yddoc/rpa/zh-CN/993438980482334720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.tysfrzcs_slider_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/993438980482334720">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.tysfrzcs_slider_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/993438980482334720">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca" display="keeta_color_connect_capthca" kind="function" help="/yddoc/rpa/zh-CN/994194979097231360">
+      <item.method />
+      <item.desc>keeta 相同颜色小球连线验证码
+该指令实现了在keeta登录页面，自动处理连线验证码
+* @param web_page，网页对象
+* @param target_ele，目标图片元素
+* @param color_hint_ele，颜色提示元素
+* @param retry_count，验证重试次数
+* @param wait_time，等待验证码刷新时间
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca.read_image" display="read_image" kind="function" help="/yddoc/rpa/zh-CN/994194979097231360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca.detect_color_points" display="detect_color_points" kind="function" help="/yddoc/rpa/zh-CN/994194979097231360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca.find_color_points" display="find_color_points" kind="function" help="/yddoc/rpa/zh-CN/994194979097231360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca._read_style_image" display="_read_style_image" kind="function" help="/yddoc/rpa/zh-CN/994194979097231360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca._parse_color" display="_parse_color" kind="function" help="/yddoc/rpa/zh-CN/994194979097231360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca.get_ppi" display="get_ppi" kind="function" help="/yddoc/rpa/zh-CN/994194979097231360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca._moveTo" display="_moveTo" kind="function" help="/yddoc/rpa/zh-CN/994194979097231360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca._screen_points" display="_screen_points" kind="function" help="/yddoc/rpa/zh-CN/994194979097231360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca._drag" display="_drag" kind="function" help="/yddoc/rpa/zh-CN/994194979097231360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca.handle_color_captcha" display="handle_color_captcha" kind="function" help="/yddoc/rpa/zh-CN/994194979097231360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/994194979097231360">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.keeta_color_connect_capthca.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/994194979097231360">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha" display="wph_color_charactor_captcha" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+      <item.method />
+      <item.desc>唯品会颜色文本验证码
+该指令实现了，在唯品会商品搜索页面，识别验证码图片中指定颜色文本，并输出结果
+* @param web_page，网页对象
+* @param prompt_ele，颜色提示元素
+* @param captcha_ele，验证码元素
+* @return result，识别结果
+</item.desc>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha.read_bgr" display="read_bgr" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha.color_mask" display="color_mask" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha.parse_question" display="parse_question" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha.color_components" display="color_components" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha.normalize" display="normalize" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha.load_model" display="load_model" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha.softmax" display="softmax" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha.solve_images" display="solve_images" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha._resolve_element" display="_resolve_element" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha.gen_selector" display="gen_selector" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha._image_from_src" display="_image_from_src" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha._capture_element" display="_capture_element" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_4f0f15d7.wph_color_charactor_captcha.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/998056811384647680">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+  </item>
+</root>

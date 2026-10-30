@@ -1,0 +1,430 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_bintuo.main",
+      "statement": "process.invoke_activity",
+      "title": "冰拓验证码扩展",
+      "keywords": "",
+      "description": "该指令集借助冰拓平台能力实现验证码自动化操作",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/0c/fa/0cfa57b8d2260276eb821b03d018161f.png",
+      "function": "xbot_extensions.activity_bintuo.main",
+      "helpUrl": null,
+      "extension": "冰拓验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_bintuo.utils",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_bintuo.utils",
+      "helpUrl": null,
+      "extension": "冰拓验证码扩展",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_bintuo.zfb_click",
+      "statement": "process.invoke_activity",
+      "title": "支付宝点选验证",
+      "keywords": "",
+      "description": "该指令调用冰拓的接口实现了支付宝点选验证码的验证",
+      "comment": "在网页对象%web_page%中，进行支付宝点选验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_bintuo.zfb_click",
+      "helpUrl": "/yddoc/rpa/zh-CN/788248698962046976",
+      "extension": "冰拓验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "冰拓引擎 (高级自定义账号和密码)",
+                "value": "bintuo",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "retry",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:5",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "username",
+          "label": "账号名称",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "password",
+          "label": "账号密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_bintuo.jd_route",
+      "statement": "process.invoke_activity",
+      "title": "京东旋转验证-冰拓",
+      "keywords": "",
+      "description": "该指令调用冰拓的接口实现了京东选择验证码的验证",
+      "comment": "在网页对象%web_page%中，对%background_ele%实现了通过元素的功能",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_bintuo.jd_route",
+      "helpUrl": "/yddoc/rpa/zh-CN/791562641532317696",
+      "extension": "冰拓验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "冰拓引擎 (高级自定义账号和密码)",
+                "value": "bintuo",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_elem",
+          "label": "滑条元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_elem",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "账号名称",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "password",
+          "label": "账号密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_bintuo.dw_slider",
+      "statement": "process.invoke_activity",
+      "title": "得物拼图滑动验证",
+      "keywords": "",
+      "description": "该指令调用冰拓的接口实现了得物滑块拼图验证码的验证",
+      "comment": "在网页对象%web_page%中，通过滑块元素%drag_elem%，滑条元素%slider_elem%，根据背景图%background_ele%进行验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/75/fd/75fde8b34b8fb68ef3ded0792725ffc8.png",
+      "function": "xbot_extensions.activity_bintuo.dw_slider",
+      "helpUrl": "/yddoc/rpa/zh-CN/803180005163638784",
+      "extension": "冰拓验证码扩展",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "engine",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎 (付费增值服务)",
+                "value": "xbot",
+                "Unicode": null
+              },
+              {
+                "display": "冰拓引擎 (高级自定义账号和密码)",
+                "value": "bintuo",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "背景元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_elem",
+          "label": "滑块元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_elem",
+          "label": "滑条元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "username",
+          "label": "账号名称",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "password",
+          "label": "账号密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry",
+          "label": "重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    }
+  ]
+}

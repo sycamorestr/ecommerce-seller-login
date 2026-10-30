@@ -1,0 +1,521 @@
+{
+  "uuid": "f70c49b4-c116-4044-a63e-6b069fdba2f1",
+  "name": "云码验证码扩展",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/57/ba/57bae48ebbcffa0410710a51209c83b2.png",
+  "version": "25.3.7",
+  "tags": "official",
+  "software": null,
+  "software_title": null,
+  "package_version": 8,
+  "feature_list": [
+    2,
+    8
+  ],
+  "description": "该指令集借助云码平台能力实现验证码自动化操作",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_jfbym",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "jd_rotate_captcha",
+      "filename": "jd_rotate_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "std_trace_captcha",
+      "filename": "std_trace_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "utils",
+      "filename": "utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    },
+    {
+      "name": "drag",
+      "filename": "drag",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    },
+    {
+      "name": "std_slider_captcha",
+      "filename": "std_slider_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "std_slider_double_captcha",
+      "filename": "std_slider_double_captcha",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "google_captcha",
+      "filename": "google_captcha",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "xtrace",
+      "filename": "xtrace",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    },
+    {
+      "name": "std_alphanum_captcha",
+      "filename": "std_alphanum_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "chinatax_captcha",
+      "filename": "chinatax_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "ali_slider_captcha",
+      "filename": "ali_slider_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "std_click_select_captcha",
+      "filename": "std_click_select_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "dy_slider_captcha",
+      "filename": "dy_slider_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "tx_six_squares_captcha",
+      "filename": "tx_six_squares_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "dy_double_rotate_captcha",
+      "filename": "dy_double_rotate_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "cs_space_same_object_captcha",
+      "filename": "cs_space_same_object_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "orangebank_slider_captcha",
+      "filename": "orangebank_slider_captcha",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "jd_click_select_captcha",
+      "filename": "jd_click_select_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "cs_oocl_captcha",
+      "filename": "cs_oocl_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "xhs_rotate_captcha",
+      "filename": "xhs_rotate_captcha",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "cs_word_order_click_select_captcha",
+      "filename": "cs_word_order_click_select_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "cs_temu_captcha",
+      "filename": "cs_temu_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "dw_drag_captcha",
+      "filename": "dw_drag_captcha",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "ali_click_select_captcha",
+      "filename": "ali_click_select_captcha",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "jd_click_select_captcha_original",
+      "filename": "jd_click_select_captcha_original",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "jd_trace_captcha",
+      "filename": "jd_trace_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "dw_route_captcha",
+      "filename": "dw_route_captcha",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "wph_select_captcha",
+      "filename": "wph_select_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "shopee_point_captcha",
+      "filename": "shopee_point_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "wb_point_capycha",
+      "filename": "wb_point_capycha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "std_click_select_captcha_plus",
+      "filename": "std_click_select_captcha_plus",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "space_click_captcha",
+      "filename": "space_click_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "human_click",
+      "filename": "human_click",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "bank_captcha",
+      "filename": "bank_captcha",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "jd_slider_captcha",
+      "filename": "jd_slider_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "cs_word_order_click_select_30116_captcha",
+      "filename": "cs_word_order_click_select_30116_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "std_slider_change_captcha",
+      "filename": "std_slider_change_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "std_splicing_captcah",
+      "filename": "std_splicing_captcah",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "std_tx_click_icon",
+      "filename": "std_tx_click_icon",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "customization_alphanum_captcha",
+      "filename": "customization_alphanum_captcha",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "common_puzzle",
+      "filename": "common_puzzle",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "custom_icon_selection",
+      "filename": "custom_icon_selection",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "wb_click_captcha",
+      "filename": "wb_click_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "tm_slider_captcha",
+      "filename": "tm_slider_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "test",
+      "filename": "test",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "test",
+      "enableCopilot": false
+    },
+    {
+      "name": "common_puzzle_v2",
+      "filename": "common_puzzle_v2",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "common_puzzle_click",
+      "filename": "common_puzzle_click",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "move_simulated",
+      "filename": "move_simulated",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "zfb_four_click_captcha",
+      "filename": "zfb_four_click_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "pdd_rotate_captcha",
+      "filename": "pdd_rotate_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "bd_rotate_captcha",
+      "filename": "bd_rotate_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "aliyun_qst_captcha",
+      "filename": "aliyun_qst_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "ali_nine_squares_captcha",
+      "filename": "ali_nine_squares_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "db_nine_squares_captcha",
+      "filename": "db_nine_squares_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "dxm_rotate_captcha",
+      "filename": "dxm_rotate_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "zfb_click",
+      "filename": "zfb_click",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "activities",
+      "enableCopilot": false
+    },
+    {
+      "name": "picture_click",
+      "filename": "picture_click",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activities",
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "src"
+    },
+    {
+      "name": "activities"
+    },
+    {
+      "name": "test"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [
+    "base64-to-image==0.0.1",
+    "requests==2.31.0"
+  ],
+  "internaldependencies": [],
+  "selectordependencies": [],
+  "internalautodependencies": [],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {
+    "videoUrl": null,
+    "imageUrl": null,
+    "imageName": null,
+    "gifUrl": null
+  },
+  "terminalTags": "win"
+}

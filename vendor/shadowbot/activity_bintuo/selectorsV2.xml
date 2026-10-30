@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository xmlns:x="rpa://selector/core" xmlns:regex="rpa://selector/operator/regex" xmlns:wildcard="rpa://selector/operator/wildcard" xmlns:contains="rpa://selector/operator/contains" xmlns:notContains="rpa://selector/operator/notContains" xmlns:startsWith="rpa://selector/operator/startsWith" xmlns:notStartsWith="rpa://selector/operator/notStartsWith" xmlns:endsWith="rpa://selector/operator/endsWith" xmlns:notEndsWith="rpa://selector/operator/notEndsWith" xmlns:notEquals="rpa://selector/operator/notEquals" xmlns:greaterThan="rpa://selector/operator/greaterThan" xmlns:greaterThanOrEqual="rpa://selector/operator/greaterThanOrEqual" xmlns:lessThan="rpa://selector/operator/lessThan" xmlns:lessThanOrEqual="rpa://selector/operator/lessThanOrEqual">
+  <group id="0a142eee-1315-4d44-a764-4f7a8e8d8c71" name="登录 - 支付宝" type="Web" processName="chrome" icon=".dev\icon\3025794c-d19d-4f6d-a613-2abe91673b91.png" criteria="https://auth.alipay.com">
+    <selector id="b1d236ec-d774-4bd6-a310-ac4dfddedd75" name="请在下图依次点击" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="登录 - 支付宝" screenshot=".dev\screenshot\f8d426b9-f6b1-47b7-a23d-41bc966e29d6.jpg">
+      <web x:name="div">
+        <optional class="captcha jshield-captcha-component" index="19" index-of-type="5" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha page-container" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha detail-page" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div" class="captcha detail-page-container">
+        <optional index="1" index-of-type="1" />
+      </web>
+    </selector>
+  </group>
+  <group id="ace86f93-e095-4503-a003-7f20d3e9c8d8" name="京东创作服务平台" type="Web" processName="msedge" icon=".dev\icon\baa0d43f-2fcb-46a7-ac05-66c308826d57.png" criteria="https://dr.jd.com">
+    <selector id="b5f5779e-d21f-44f9-b133-2e2105852e09" name="jd_test" type="simple" framework="edge" processName="msedge" productName="Microsoft Edge" winTitle="京东创作服务平台" screenshot=".dev\screenshot\4cf10be8-3322-4ba0-8865-fe5e073d7d41.jpg">
+      <web x:name="div">
+        <optional id="captcha_dom" index="18" index-of-type="5" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_drop" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="captcha_modal" class="captcha_modal_pc captcha_modal_popup" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional data-v-52dc0c79="" aria-modal="true" role="dialog" lang="zh" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_body errtip" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div" class="drag-content">
+        <optional data-v-52dc0c79="" index="2" index-of-type="2" />
+      </web>
+      <web x:name="img" index="0" xbox-display="true">
+        <optional data-v-52dc0c79="" index-of-type="0" />
+      </web>
+    </selector>
+    <selector id="7e928dec-a6a2-4759-bc78-30704021e88c" name="slider" type="simple" framework="edge" processName="msedge" productName="Microsoft Edge" winTitle="京东创作服务平台" screenshot=".dev\screenshot\c9219eaf-05c8-4928-b5c1-af1e8c88eb64.jpg">
+      <web x:name="div">
+        <optional id="captcha_dom" index="18" index-of-type="5" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_drop" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="captcha_modal" class="captcha_modal_pc captcha_modal_popup" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional data-v-52dc0c79="" aria-modal="true" role="dialog" lang="zh" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_footer" index="3" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional data-v-52dc0c79="" id="local_footer" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional data-v-52dc0c79="" class="beforesliding drag-box" index="1" index-of-type="1" />
+      </web>
+      <web x:name="img" id="slider-div">
+        <optional data-v-52dc0c79="" index="1" index-of-type="0" />
+      </web>
+    </selector>
+    <selector id="1188d858-28b9-4578-9d83-04c55e07488b" name="xxxx" type="simple" framework="edge" processName="msedge" productName="Microsoft Edge" winTitle="京东创作服务平台" screenshot=".dev\screenshot\2b2b8a9b-babe-495e-9bf3-1531783e1f96.jpg">
+      <web x:name="div">
+        <optional id="captcha_dom" index="18" index-of-type="5" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_drop" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="captcha_modal" class="captcha_modal_pc captcha_modal_popup" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional data-v-52dc0c79="" aria-modal="true" role="dialog" lang="zh" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_footer" index="3" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional data-v-52dc0c79="" id="local_footer" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div" class="beforesliding drag-box">
+        <optional data-v-52dc0c79="" index="1" index-of-type="1" />
+      </web>
+    </selector>
+  </group>
+  <group id="7cb60d9c-eb3d-4b1b-b578-1ee53d245370" name="得物招商入驻官网&amp;商家后台" type="Web" processName="chrome" icon=".dev\icon\5c181ebe-af98-4b2f-b334-76f6c280ce70.png" criteria="https://stark.dewu.com">
+    <selector id="5a4a19a4-4055-4050-a2fb-5a72e94a31ab" name="得物拖动验证码的背景元素" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="得物招商入驻官网&amp;商家后台" screenshot=".dev\screenshot\0c809b9a-a364-464e-9e49-e712992063fb.jpg">
+      <web x:name="div">
+        <optional id="dw-slider" data-otel_dangerous_fmpingore="1" class="interaction-change-ignore" index="22" index-of-type="4" />
+      </web>
+      <web x:name="div">
+        <optional id="dw-slide" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional id="yuntuBody" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional index="0" index-of-type="0" />
+      </web>
+      <web x:name="div" id="sortBg">
+        <optional index="2" index-of-type="2" />
+      </web>
+    </selector>
+    <selector id="81bfa0a6-9a4b-44f9-97c6-10cb181f9121" name="得物拖动验证码的滑块" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="得物招商入驻官网&amp;商家后台" screenshot=".dev\screenshot\4791cb19-d5b2-4c52-a312-5ebe3764fdc7.jpg">
+      <web x:name="div">
+        <optional id="dw-slider" data-otel_dangerous_fmpingore="1" class="interaction-change-ignore" index="22" index-of-type="4" />
+      </web>
+      <web x:name="div">
+        <optional id="dw-slide" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional id="yuntuBody" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional id="slideHint" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" id="slideBtn">
+        <optional index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector id="847ffdf2-590c-42f1-b08c-7c78fcd7a121" name="得物拖动验证码的滑条" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="得物招商入驻官网&amp;商家后台" screenshot=".dev\screenshot\86992a5d-5cb5-4e18-ac9f-d35b900be2cc.jpg">
+      <web x:name="div">
+        <optional id="dw-slider" data-otel_dangerous_fmpingore="1" class="interaction-change-ignore" index="22" index-of-type="4" />
+      </web>
+      <web x:name="div">
+        <optional id="dw-slide" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional id="yuntuBody" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" id="slideHint">
+        <optional index="1" index-of-type="1" />
+      </web>
+    </selector>
+  </group>
+</repository>

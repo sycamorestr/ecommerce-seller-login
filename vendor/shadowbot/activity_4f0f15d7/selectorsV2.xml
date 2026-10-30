@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository xmlns:x="rpa://selector/core" xmlns:regex="rpa://selector/operator/regex" xmlns:wildcard="rpa://selector/operator/wildcard" xmlns:contains="rpa://selector/operator/contains" xmlns:notContains="rpa://selector/operator/notContains" xmlns:startsWith="rpa://selector/operator/startsWith" xmlns:notStartsWith="rpa://selector/operator/notStartsWith" xmlns:endsWith="rpa://selector/operator/endsWith" xmlns:notEndsWith="rpa://selector/operator/notEndsWith" xmlns:notEquals="rpa://selector/operator/notEquals" xmlns:greaterThan="rpa://selector/operator/greaterThan" xmlns:lessThan="rpa://selector/operator/lessThan" xmlns:greaterThanOrEqual="rpa://selector/operator/greaterThanOrEqual" xmlns:lessThanOrEqual="rpa://selector/operator/lessThanOrEqual">
+  <group id="46f5bd0d-ee9d-443f-bcef-69ed055477b8" name="算术验证码测试页" type="Web" processName="chrome" icon="" criteria="file:///D:/download/test-okcis/test-okcis/test_captcha.html" selectorOringin="Inspect">
+    <selector id="717c6789-32c9-4372-b6ec-8eb7c7da173a" name="图片" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="验证码本地测试页" screenshot=".dev\screenshot\f7b829ca-f2dd-471e-a7de-d3d63d8ce337.jpg" version="2">
+      <web x:name="main" x:selected="false">
+        <optional class="card" index-of-type="0" index="0" />
+      </web>
+      <web x:name="section" x:selected="false">
+        <optional class="layout" index-of-type="0" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="panel" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="stage" index-of-type="0" index="1" />
+      </web>
+      <web x:name="img" id="captcha">
+        <optional index-of-type="0" alt="验证码图片" src="data/captchas/captcha_001.png" index="0" />
+      </web>
+      <semantic status="disabledPoorNet" image="" rectangle="[315,503,120,72]" desc="" />
+    </selector>
+  </group>
+  <group id="d2ac63e0-2459-4ff2-b64c-7682ab014708" name="支付宝旋转验证码测试页" type="Web" processName="chrome" icon="" criteria="file:///D:/download/test_wx/alipay_rotate_test.html" selectorOringin="Inspect">
+    <selector id="ea74eb23-1c31-45fa-9ff8-a3804ee45a2b" name="图片_ele" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="支付宝旋转验证码测试页" screenshot=".dev\screenshot\9a29b382-49f3-4712-a36a-e03610a877ae.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional class="app" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="workspace" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="captcha-panel" class="card" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" id="picture_ele">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/b1c0d7364d437f0f441c4a5add6bff02a936e1417b15e8cce5d3d842bd6fdf9d_semantic_False.png" rectangle="[223,280,248,455]" desc="" />
+    </selector>
+    <selector id="e1b30598-36a3-4ec4-b565-d875709cf29d" name="刷新验证码" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="支付宝旋转验证码测试页" screenshot=".dev\screenshot\66dd9437-0c46-49f9-81d3-845c708b3bb3.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional class="app" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="workspace" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="captcha-panel" class="card" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="toolbar" index-of-type="1" index="1" />
+      </web>
+      <web x:name="button" id="refresh_ele">
+        <optional innerText="刷新验证码" type="button" index-of-type="0" index="0" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/1889c3b057c2701bcb225e1b1e0bd5c1ac8b15c49ae59792c60acbde3d1217d0_semantic_False.png" rectangle="[223,768,70,55]" desc="" />
+    </selector>
+    <selector id="75f00898-77a8-4d5a-bfd3-dc7fed71f2eb" name="图片1" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="支付宝旋转验证码测试页" screenshot=".dev\screenshot\bcea21ce-0509-4148-b86a-31d959b9a8d6.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional class="app" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="workspace" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="captcha-panel" class="card" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="picture_ele" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="captcha-grid" index-of-type="0" index="0" />
+      </web>
+      <web x:name="button" class="tile" index-of-type="0">
+        <optional type="button" index="0" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/1c906323dfb4288b2ba85872a850f3c5f66d6524797fd81fb18a4a8a99172564_semantic_False.png" rectangle="[226,281,120,225]" desc="" />
+    </selector>
+    <selector id="0bce3fd5-0c02-4b2f-84f7-c294b84af6bd" name="图片2" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="支付宝旋转验证码测试页" screenshot=".dev\screenshot\9e71f477-b2c3-46a5-9c8a-5382116b1ee9.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional class="app" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="workspace" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="captcha-panel" class="card" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="picture_ele" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="captcha-grid" index-of-type="0" index="0" />
+      </web>
+      <web x:name="button" class="tile" index-of-type="1">
+        <optional type="button" index="1" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/4f9fb75997df1c018ea4886572c36df781c71115b32914069e74218a5c157fed_semantic_False.png" rectangle="[348,281,120,225]" desc="" />
+    </selector>
+    <selector id="b546aef4-b85a-4f98-9ea1-c5e5f003f4e2" name="图片3" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="支付宝旋转验证码测试页" screenshot=".dev\screenshot\61db5f4b-d3c8-4a80-ac05-be1b6282232c.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional class="app" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="workspace" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="captcha-panel" class="card" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="picture_ele" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="captcha-grid" index-of-type="0" index="0" />
+      </web>
+      <web x:name="button" class="tile" index-of-type="2">
+        <optional type="button" index="2" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/4f9fb75997df1c018ea4886572c36df781c71115b32914069e74218a5c157fed_semantic_False.png" rectangle="[226,508,120,225]" desc="" />
+    </selector>
+    <selector id="a1c3d100-25f5-437e-93b2-c4d7953c36cb" name="图片4" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="支付宝旋转验证码测试页" screenshot=".dev\screenshot\bd6f8c6e-bd01-4767-b8e7-cb02698505db.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional class="app" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="workspace" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="captcha-panel" class="card" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="picture_ele" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="captcha-grid" index-of-type="0" index="0" />
+      </web>
+      <web x:name="button" class="tile" index-of-type="3">
+        <optional type="button" index="3" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/4f9fb75997df1c018ea4886572c36df781c71115b32914069e74218a5c157fed_semantic_False.png" rectangle="[348,508,120,225]" desc="" />
+    </selector>
+  </group>
+  <group id="b26e2e3a-3b3f-43c6-b7ef-cd5e92c3dbe2" name="图片展示" type="Web" processName="chrome" icon="" criteria="file:///C:/Users/think/Desktop/test.html" selectorOringin="Inspect">
+    <selector id="e6dc53d4-a4aa-4829-acf0-0a7d117018bf" name="图片_1" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="图片展示" screenshot=".dev\screenshot\0c89f70a-138e-47a5-a2c0-3a4c5cd1ff5a.jpg" version="2">
+      <web x:name="img">
+        <optional index-of-type="0" src="C:\Users\think\Desktop\20260727-201644.png" alt="图片描述" index="0" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/3d7a7936700e31c97a25aa3d83c9fb77d21860893ccc01fc873a9ffa0ca98d72_semantic_False.png" rectangle="[5,10,334,820]" desc="" />
+    </selector>
+    <selector id="3e03ac31-c0ab-418b-b1e4-69b408e877e9" name="图片_2" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="图片展示" screenshot=".dev\screenshot\389b321c-fed3-4f99-9128-7c906ff674c2.jpg" version="2">
+      <web x:name="img">
+        <optional index-of-type="0" src="C:\Users\think\Desktop\屏幕截图 2026-08-04 162028.png" alt="图片描述" index="0" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/3f898986b921edcd192e40c1b4d396ec52df76a393eed0424c07f220a9dcdc9a_semantic_False.png" rectangle="[5,10,334,645]" desc="" />
+    </selector>
+  </group>
+  <group id="ff52df9b-192c-469e-aeae-e8939adc6011" name="Temu Type-1 Rotate Captcha Test" type="Web" processName="chrome" icon="" criteria="file:///C:/Users/think/Desktop/test/temu_type1_test_site/index.html" selectorOringin="Inspect">
+    <selector id="f15b2958-8ec4-43d0-b8c2-6c17db8a669d" name="temu_1" type="simple" framework="edge" selectorOringin="Inspect" processName="msedge" productName="Microsoft Edge" winTitle="安全验证" screenshot=".dev\screenshot\97407a30-bbfa-48af-bb3b-6391845be790.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="main" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="verification" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="container-19oLu" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="mask-2an7O" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" role="dialog">
+        <optional class="baseDialog-2DgKh" index-of-type="0" index="0" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/0f9bb7a4f3f426c353d110060479adb54e967332e4527197e9bb53de0371ca6d_semantic_False.png" rectangle="[330,79,332,841]" desc="" />
+    </selector>
+    <selector id="4114ee81-0584-489d-91e2-c11a15307a22" name="temu_2" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="Security verification" screenshot=".dev\screenshot\71cd8c67-29ba-49f1-8347-9fa6dab462b3.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="main" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="verification" index-of-type="0" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="container-19oLu" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="mask-2an7O" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional role="dialog" class="baseDialog-2DgKh" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional index-of-type="2" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional innerText="Submit" class="wrapper-submit-O4Px6" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional role="button" innerText="Submit" class="btn-3Kspx primary-3rODZ loose-1-CtA lg-1EtMb submitBtn-A-LnC" index-of-type="0" aria-hidden="true" index="0" />
+      </web>
+      <web x:name="span">
+        <optional class="inner-5kRxo" index-of-type="0" index="0" />
+      </web>
+      <anchor text="Submit" targetRectangle="[582,577,320,42]" anchorRectangle="[717,590,51,16]" version="1" threshold="0.6" />
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/9aeb4b4b01e2c214421f5421633ebd89603b701df43be65c47bb511173072ba0_semantic_False.png" rectangle="[387,776,218,57]" desc="" />
+    </selector>
+  </group>
+  <group id="1bcb4e8e-2d29-4174-bb6c-a13f3e4feb27" name="小裂变｜私域营销一体化系统" type="Web" processName="chrome" icon=".dev\icon\02182e5d-22c0-437c-8db0-e97644c93391.png" criteria="https://wechat.xiaoliebian.com" selectorOringin="Inspect">
+    <selector id="1ac26e4e-1aa4-41f8-9b9b-a099be289b51" name="块元素_slideBg" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="小裂变｜私域营销一体化系统" screenshot=".dev\screenshot\4dded374-16c1-40a0-9d34-97daa2577b00.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="tcaptcha_transform_dy" class="tcaptcha-transform" index-of-type="1" index="10" />
+      </web>
+      <web x:name="iframe" name="https://turing.captcha.qcloud.com">
+        <optional id="tcaptcha_iframe_dy" index-of-type="0" scrolling="no" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional role="dialog" aria-label="验证码" id="tcWrap" class="tc-captcha tc-drag" index-of-type="0" aria-modal="true" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="bodyWrap" class="body-wrap" index-of-type="2" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="tcOperation" class="tc-opera" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="tcImgArea" class="tc-imgarea" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="slideBgWrap" class="tc-bg" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" id="slideBg">
+        <optional class="tc-bg-img unselectable" index-of-type="0" index="0" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/1f9773c543825909bdd4de04aff19ea1614ee5a55ec681f55bb1384d25338eec_semantic_False.png" rectangle="[386,351,227,326]" desc="" />
+    </selector>
+    <selector id="ed5d5dc7-7792-4c71-a8f0-5dc66758de2d" name="块元素_tc-fg-item" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="小裂变｜私域营销一体化系统" screenshot=".dev\screenshot\fa02f2cf-f45a-43d1-898a-833d44493048.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="tcaptcha_transform_dy" class="tcaptcha-transform" index-of-type="1" index="10" />
+      </web>
+      <web x:name="iframe" name="https://turing.captcha.qcloud.com">
+        <optional id="tcaptcha_iframe_dy" index-of-type="0" scrolling="no" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional role="dialog" aria-label="验证码" id="tcWrap" class="tc-captcha tc-drag" index-of-type="0" aria-modal="true" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="bodyWrap" class="body-wrap" index-of-type="2" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="tcOperation" class="tc-opera" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" class="tc-fg-item" index-of-type="7">
+        <optional aria-label="拖动下方滑块完成拼图" alt="拖动下方滑块完成拼图" index="7" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/1f9773c543825909bdd4de04aff19ea1614ee5a55ec681f55bb1384d25338eec_semantic_False.png" rectangle="[386,638,227,21]" desc="" />
+    </selector>
+    <selector id="ff06a561-9b84-49c3-bdbf-43cca8bbcc50" name="nbsp;" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="小裂变｜私域营销一体化系统" screenshot=".dev\screenshot\98087391-1774-4f84-b5b7-a9701fb5ecac.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="tcaptcha_transform_dy" class="tcaptcha-transform" index-of-type="1" index="10" />
+      </web>
+      <web x:name="iframe" name="https://turing.captcha.qcloud.com">
+        <optional id="tcaptcha_iframe_dy" index-of-type="0" scrolling="no" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional role="dialog" aria-label="验证码" id="tcWrap" class="tc-captcha tc-drag" index-of-type="0" aria-modal="true" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="bodyWrap" class="body-wrap" index-of-type="2" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="tcOperation" class="tc-opera" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div">
+        <optional aria-label="拖动下方滑块完成拼图" innerText="&amp;nbsp;" class="tc-fg-item tc-slider-normal" index-of-type="6" alt="拖动下方滑块完成拼图" index="6" />
+      </web>
+      <anchor text="&amp;nbsp;" targetRectangle="[33,273,66,35]" anchorRectangle="[56,273,0,35]" version="1" threshold="0.75001" />
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/1f9773c543825909bdd4de04aff19ea1614ee5a55ec681f55bb1384d25338eec_semantic_False.png" rectangle="[401,626,44,46]" desc="" />
+    </selector>
+    <selector id="35ef0155-cd10-4dd3-b134-b7573d625599" name="块元素_tc-fg-item_1" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="小裂变｜私域营销一体化系统" screenshot=".dev\screenshot\5ab320ab-ad64-46f4-9b3f-a36c99386619.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="tcaptcha_transform_dy" class="tcaptcha-transform" index-of-type="1" index="10" />
+      </web>
+      <web x:name="iframe" name="https://turing.captcha.qcloud.com">
+        <optional id="tcaptcha_iframe_dy" index-of-type="0" scrolling="no" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional role="dialog" aria-label="验证码" id="tcWrap" class="tc-captcha tc-drag" index-of-type="0" aria-modal="true" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="bodyWrap" class="body-wrap" index-of-type="2" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="tcOperation" class="tc-opera" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" class="tc-fg-item" index-of-type="7">
+        <optional aria-label="拖动下方滑块完成拼图" alt="拖动下方滑块完成拼图" index="7" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/e05f8d95459bfb66c2c15ae20dc85e22f4ea26b44753ad195736996d574b5ad8_semantic_False.png" rectangle="[402,489,41,82]" desc="" />
+    </selector>
+  </group>
+  <group id="d414037f-d726-47f2-8eda-ba221f265a52" name="compass.jinritemai.com/login" type="Web" processName="chrome" icon=".dev\icon\41c5c620-36b7-475e-8a11-6e962f1854b5.png" criteria="https://compass.jinritemai.com" selectorOringin="Inspect">
+    <selector id="19b3d28b-991c-43de-a64b-ac4afef29048" name="删除 - 抖音滑块" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="抖店登录-抖店后台-抖音电商后台" screenshot=".dev\screenshot\1850c7f5-1a8f-4fec-b9e2-7e3061f9379e.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="captcha_container" index-of-type="5" index="8" />
+      </web>
+      <web x:name="iframe" index-of-type="0">
+        <optional index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="captcha_container" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="vc_captcha_box" class="vc_captcha_box_theme" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="vc-captcha-verify slide" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="vc-captcha-verify-visibility" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="verify-image captcha_verify_img--wrapper" index-of-type="2" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="dragger-box" index-of-type="0" index="2" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="dragger-item" index-of-type="0" index="0" />
+      </web>
+      <web x:name="img" id="captcha-verify_img_slide">
+        <optional class="captcha-verify-image-slide" index-of-type="0" data-vc-id="img" alt="actionImg" crossorigin="anonymous" slot="dragger" index="0" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/a072d1614bdd0d07712b58b8ddd343b2ab9535aa2d57da13f253c4d8300194ea_semantic_False.png" rectangle="[374,477,49,100]" desc="" />
+    </selector>
+    <selector id="eacd48b8-1e07-45e5-983a-b49af3a785a9" name="删除 - 抖音拖拽" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="抖店登录-抖店后台-抖音电商后台" screenshot=".dev\screenshot\0e9b8ae4-e845-4781-83e5-9020d34c94ce.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="captcha_container" index-of-type="5" index="8" />
+      </web>
+      <web x:name="iframe" index-of-type="0">
+        <optional index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="captcha_container" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="vc_captcha_box" class="vc_captcha_box_theme" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="vc-captcha-verify slide" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="vc-captcha-verify-visibility" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional innerText="按住左边按钮拖动完成上方拼图" class="captcha-slider captcha_verify_slide--button" index-of-type="3" index="3" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional innerText="按住左边按钮拖动完成上方拼图" class="captcha-slider-box" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="dragger-box" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="dragger-item" index-of-type="1" index="1" />
+      </web>
+      <web x:name="div" class="captcha-slider-btn">
+        <optional index-of-type="0" slot="dragger" data-vc-id="ntb" index="0" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/a072d1614bdd0d07712b58b8ddd343b2ab9535aa2d57da13f253c4d8300194ea_semantic_False.png" rectangle="[376,640,46,59]" desc="" />
+    </selector>
+    <selector id="c3a3c258-4253-43c9-8947-57f767769bff" name="删除 - 抖音背景" type="simple" framework="chrome" selectorOringin="Inspect" processName="chrome" productName="Google Chrome" winTitle="抖店登录-抖店后台-抖音电商后台" screenshot=".dev\screenshot\84640488-3f80-4c92-aad2-eda95d5f6f7b.jpg" version="2">
+      <web x:name="div" x:selected="false">
+        <optional id="captcha_container" index-of-type="5" index="8" />
+      </web>
+      <web x:name="iframe" index-of-type="0">
+        <optional index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="captcha_container" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional id="vc_captcha_box" class="vc_captcha_box_theme" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="vc-captcha-verify slide" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="vc-captcha-verify-visibility" index-of-type="0" index="0" />
+      </web>
+      <web x:name="div" x:selected="false">
+        <optional class="verify-image captcha_verify_img--wrapper" index-of-type="2" index="2" />
+      </web>
+      <web x:name="img" id="captcha_verify_image">
+        <optional class="captcha-verify-image" index-of-type="0" alt="basicImg" crossorigin="anonymous" index="0" />
+      </web>
+      <semantic status="disabled" image="https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/42778da5-0bc9-4095-a62f-52c6d82de0ca/file/client/element/a072d1614bdd0d07712b58b8ddd343b2ab9535aa2d57da13f253c4d8300194ea_semantic_False.png" rectangle="[374,317,250,313]" desc="" />
+    </selector>
+  </group>
+  <group id="053aa89d-c6f6-4ce9-8b53-cc80b293c0d3" name="天津市综合认证服务平台-用户登录" type="Web" processName="chrome" icon=".dev\icon\aee04b2f-3395-4a87-ac93-599a635f825e.png" criteria="https://tysfrzcs.tj.gov.cn" selectorOringin="Inspect">
+  </group>
+</repository>

@@ -1,0 +1,1209 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_fe2a1069.main",
+      "statement": "process.invoke_activity",
+      "title": "Chrome指令集",
+      "keywords": "",
+      "description": "个性化的chrome操作",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/04%E7%95%8C%E9%9D%A2/advertisement_page.png",
+      "function": "xbot_extensions.activity_fe2a1069.main",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_fe2a1069.Start",
+      "statement": "process.invoke_activity",
+      "title": "高级启动Chrome",
+      "keywords": "",
+      "description": "快速配置启动参数",
+      "comment": "使用启动参数启动chrome",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/04%E7%95%8C%E9%9D%A2/open_in_browser.png",
+      "function": "xbot_extensions.activity_fe2a1069.Start",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "URL",
+          "label": "URL",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "超时时长",
+          "label": "超时时长",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:60",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        },
+        {
+          "name": "缓存路径",
+          "label": "缓存路径",
+          "required": false,
+          "tips": "重定义缓存路径",
+          "type": "file",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "禁用图片",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:True",
+          "editor": {
+            "kind": "checkbox",
+            "label": "禁用图片"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "禁用缓存",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "禁用缓存"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "窗口最大化",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:True",
+          "editor": {
+            "kind": "checkbox",
+            "label": "窗口最大化"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "禁用弹窗阻止",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:True",
+          "editor": {
+            "kind": "checkbox",
+            "label": "禁用弹窗阻止"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "每个TAB使用单独进程",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "每个TAB使用单独进程"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "每个站点使用单独进程",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "每个站点使用单独进程"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "调试端口",
+          "label": "调试端口",
+          "required": false,
+          "tips": "0不开启",
+          "type": "int",
+          "default": "13:9222",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "web_page",
+          "label": "web_page",
+          "name": "web_page",
+          "type": "xbot._web.browser.WebBrowser"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_fe2a1069.PopupBlocker",
+      "statement": "process.invoke_activity",
+      "title": "弹窗屏蔽",
+      "keywords": "",
+      "description": "开启页面后调用，自动隐藏平台弹窗, 页面刷新后失效",
+      "comment": "屏蔽%平台名称%弹窗",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/cancel.png",
+      "function": "xbot_extensions.activity_fe2a1069.PopupBlocker",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "平台名称",
+          "label": "平台名称",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:抖店",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "抖店",
+                "value": "抖店",
+                "Unicode": null
+              },
+              {
+                "display": "生意参谋",
+                "value": "生意参谋",
+                "Unicode": null
+              },
+              {
+                "display": "引力魔方",
+                "value": "引力魔方",
+                "Unicode": null
+              },
+              {
+                "display": "拼多多商家后台",
+                "value": "拼多多商家后台",
+                "Unicode": null
+              },
+              {
+                "display": "拼多多推广平台",
+                "value": "拼多多推广平台",
+                "Unicode": null
+              },
+              {
+                "display": "万相台",
+                "value": "万相台",
+                "Unicode": null
+              },
+              {
+                "display": "巨量千川",
+                "value": "巨量千川",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_fe2a1069.ClickByXpath",
+      "statement": "process.invoke_activity",
+      "title": "点击Xpath元素",
+      "keywords": "",
+      "description": "",
+      "comment": "点击 > 【%xpathSelector%】； 执行后等待【%执行成功后等待%】秒 ；模拟人工 > 【%是否模拟人工%】",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/04%E7%95%8C%E9%9D%A2/facebook_like.png",
+      "function": "xbot_extensions.activity_fe2a1069.ClickByXpath",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "为None/不填默认匹配当前激活的窗帘",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "xpathSelector",
+          "label": "xpathSelector",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "获取元素超时",
+          "label": "获取元素超时",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        },
+        {
+          "name": "执行成功后等待",
+          "label": "执行成功后等待",
+          "required": false,
+          "tips": "默认等待1秒钟",
+          "type": "int",
+          "default": "13:1",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        },
+        {
+          "name": "是否模拟人工",
+          "label": "",
+          "required": false,
+          "tips": "默认人工操作",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "是否模拟人工"
+          },
+          "category": "general"
+        },
+        {
+          "name": "按钮",
+          "label": "按钮",
+          "required": false,
+          "tips": "left or right",
+          "type": "str",
+          "default": "10:left",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "left",
+                "value": "left",
+                "Unicode": null
+              },
+              {
+                "display": "right",
+                "value": "right",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "retry_count",
+          "required": false,
+          "tips": "重试次数，失败后重新查找，可配合自动刷新使用",
+          "type": "int",
+          "default": "13:1",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "refresh",
+          "label": "",
+          "required": false,
+          "tips": "查找元素失败后是否刷新页面",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "refresh"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "是否为iframe对象",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "是否为iframe对象"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_fe2a1069.InputByXpath",
+      "statement": "process.invoke_activity",
+      "title": "输入内容ByXpath",
+      "keywords": "",
+      "description": "使用xpath定位元素后输入内容",
+      "comment": "在【%xpath%】内输入【%输入内容%】",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/02%E5%8A%9E%E5%85%AC/icons8-comments.png",
+      "function": "xbot_extensions.activity_fe2a1069.InputByXpath",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "xpath",
+          "label": "xpath",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "输入内容",
+          "label": "输入内容",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "memoedit",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "iframe跨域元素",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "iframe跨域元素"
+          },
+          "category": "general"
+        },
+        {
+          "name": "输入方式",
+          "label": "输入方式",
+          "required": false,
+          "tips": "剪切板/模拟人工",
+          "type": "str",
+          "default": "10:剪切板",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "剪切板",
+                "value": "剪切板",
+                "Unicode": null
+              },
+              {
+                "display": "模拟人工",
+                "value": "模拟人工",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "追加按键",
+          "label": "追加按键",
+          "required": false,
+          "tips": "{ENTER} {ALT} {CTRL}",
+          "type": "str",
+          "default": "10:{ENTER}",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "等待元素存在",
+          "label": "等待元素存在",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:20",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "操作完成后等待",
+          "label": "操作完成后等待",
+          "required": false,
+          "tips": "秒",
+          "type": "int",
+          "default": "13:1",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "追加输入",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "追加输入"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_fe2a1069.DataSelection",
+      "statement": "process.invoke_activity",
+      "title": "通用日期勾选框架",
+      "keywords": "",
+      "description": "填入对应xpath后自动勾选目标日期",
+      "comment": "勾选【%日期%】",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/calendar.png",
+      "function": "xbot_extensions.activity_fe2a1069.DataSelection",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "日期",
+          "label": "日期",
+          "required": false,
+          "tips": "勾选目标日期,格式必须 yyyy-mm-dd",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "上一月_xpath",
+          "label": "上一月_xpath",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "下一月_xpath",
+          "label": "下一月_xpath",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "当前年_xpath",
+          "label": "当前年_xpath",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "当前月_xpath",
+          "label": "当前月_xpath",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "目标日期_xpath",
+          "label": "目标日期_xpath",
+          "required": false,
+          "tips": "假设勾选目标为1月某一天，填入可以定位到1月份全部的31天的相似元素xpath",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "年正则",
+          "label": "年正则",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:(\\d+)年",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "月正则",
+          "label": "月正则",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:(\\d+)月",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "仅切换选择面板",
+          "label": "",
+          "required": false,
+          "tips": "只把面板切换到目标年月，不勾选",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "仅切换选择面板"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "模拟人工点击",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:True",
+          "editor": {
+            "kind": "checkbox",
+            "label": "模拟人工点击"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_fe2a1069.GetElementInnerText",
+      "statement": "process.invoke_activity",
+      "title": "获取元素String",
+      "keywords": "",
+      "description": "包含所有子元素的文本",
+      "comment": "获取【%xpath%】的内部文本保存为%元素内部文本%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/file.png",
+      "function": "xbot_extensions.activity_fe2a1069.GetElementInnerText",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "为空则选择当前激活的chrome",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "xpath",
+          "label": "xpath",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "等待元素存在",
+          "label": "等待元素存在",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:20",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "元素内部文本",
+          "label": "元素内部文本",
+          "name": "元素内部文本",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_fe2a1069.GetDownloadPath",
+      "statement": "process.invoke_activity",
+      "title": "获取当前下载保存路径",
+      "keywords": "",
+      "description": "获取chrome文件保存路径并自动关闭下载保存询问",
+      "comment": "获取chrome下载路径并保存到%默认下载路径%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/installing_updates.png",
+      "function": "xbot_extensions.activity_fe2a1069.GetDownloadPath",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "默认下载路径",
+          "label": "默认下载路径",
+          "name": "默认下载路径",
+          "type": "str"
+        },
+        {
+          "id": "是否弹窗下载",
+          "label": "是否弹窗下载",
+          "name": "是否弹窗下载",
+          "type": "bool"
+        },
+        {
+          "id": "下载路径下已存在文件数",
+          "label": "下载路径下已存在文件数",
+          "name": "下载路径下已存在文件数",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_fe2a1069.打开下载文件询问",
+      "statement": "process.invoke_activity",
+      "title": "打开下载文件询问窗口",
+      "keywords": "",
+      "description": "临时指令，保证流程运行完毕后还原浏览器设置",
+      "comment": "",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_fe2a1069.process1",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_fe2a1069.IsElementExists",
+      "statement": "process.invoke_activity",
+      "title": "元素是否存在",
+      "keywords": "",
+      "description": null,
+      "comment": "在%web_page%中查找%xpathSelector%保存到%是否存在%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/checked.png",
+      "function": "xbot_extensions.activity_fe2a1069.IsElementExists",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "为None/不填默认匹配当前激活的窗帘",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "获取元素超时",
+          "label": "获取元素超时",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:2",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        },
+        {
+          "name": "xpathSelector",
+          "label": "xpathSelector",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "是否为iframe对象",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "是否为iframe对象"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "是否存在",
+          "label": "是否存在",
+          "name": "是否存在",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_fe2a1069.GetShopName",
+      "statement": "process.invoke_activity",
+      "title": "获取店铺名",
+      "keywords": "",
+      "description": "获取当前选择平台已登录的账户名【页面右上角的名称，暂不支持多店铺切换页面的多店铺获取】",
+      "comment": "获取%平台名称%的店铺名保存到%店铺名%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/address_book.png",
+      "function": "xbot_extensions.activity_fe2a1069.GetShopName",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "平台名称",
+          "label": "平台名称",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "拼多多推广平台",
+                "value": "拼多多推广平台",
+                "Unicode": null
+              },
+              {
+                "display": "拼多多商家后台",
+                "value": "拼多多商家后台",
+                "Unicode": null
+              },
+              {
+                "display": "拼多多对账中心",
+                "value": "拼多多对账中心",
+                "Unicode": null
+              },
+              {
+                "display": "京准通",
+                "value": "京准通",
+                "Unicode": null
+              },
+              {
+                "display": "京东商智-品牌版",
+                "value": "京东商智-品牌版",
+                "Unicode": null
+              },
+              {
+                "display": "京东商智-商家版",
+                "value": "京东商智-商家版",
+                "Unicode": null
+              },
+              {
+                "display": "引力魔方",
+                "value": "引力魔方",
+                "Unicode": null
+              },
+              {
+                "display": "品销宝",
+                "value": "品销宝",
+                "Unicode": null
+              },
+              {
+                "display": "生意参谋",
+                "value": "生意参谋",
+                "Unicode": null
+              },
+              {
+                "display": "阿里妈妈",
+                "value": "阿里妈妈",
+                "Unicode": null
+              },
+              {
+                "display": "巨量千川",
+                "value": "巨量千川",
+                "Unicode": null
+              },
+              {
+                "display": "抖店/电商罗盘",
+                "value": "抖店/电商罗盘",
+                "Unicode": null
+              },
+              {
+                "display": "巨量引擎",
+                "value": "巨量引擎",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "店铺名",
+          "label": "店铺名",
+          "tips": "已登录页面右上角的名称，暂不支持多店铺切换页面的多店铺获取",
+          "name": "店铺名",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_fe2a1069.URL检查",
+      "statement": "process.invoke_activity",
+      "title": "URL检查",
+      "keywords": "",
+      "description": "检查页面url是否正确，不正确自动跳转",
+      "comment": "当前URL是否包含%url%，否则跳转到目标页面",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/countdown.png",
+      "function": "xbot_extensions.activity_fe2a1069.process2",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "url",
+          "label": "url",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "跳转最大次数",
+          "label": "跳转最大次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_fe2a1069.测试",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_fe2a1069.process3",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_fe2a1069.HoverByXpath",
+      "statement": "process.invoke_activity",
+      "title": "鼠标悬浮在元素上",
+      "keywords": "",
+      "description": null,
+      "comment": "鼠标悬浮在%xpathSelector%上，模拟人工：%模拟人工%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/preview_pane.png",
+      "function": "xbot_extensions.activity_fe2a1069.HoverByXpath",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "xpathSelector",
+          "label": "xpathSelector",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "iframe跨域元素",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "iframe跨域元素"
+          },
+          "category": "general"
+        },
+        {
+          "name": "模拟人工",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "模拟人工"
+          },
+          "category": "general"
+        },
+        {
+          "name": "等待元素存在",
+          "label": "等待元素存在",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_fe2a1069.test",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_fe2a1069.test",
+      "helpUrl": null,
+      "extension": "Chrome指令集",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    }
+  ]
+}

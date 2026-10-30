@@ -1,0 +1,1556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository xmlns:x="rpa://selector/core" xmlns:regex="rpa://selector/operator/regex" xmlns:wildcard="rpa://selector/operator/wildcard" xmlns:contains="rpa://selector/operator/contains" xmlns:notContains="rpa://selector/operator/notContains" xmlns:startsWith="rpa://selector/operator/startsWith" xmlns:notStartsWith="rpa://selector/operator/notStartsWith" xmlns:endsWith="rpa://selector/operator/endsWith" xmlns:notEndsWith="rpa://selector/operator/notEndsWith" xmlns:notEquals="rpa://selector/operator/notEquals" xmlns:greaterThan="rpa://selector/operator/greaterThan" xmlns:greaterThanOrEqual="rpa://selector/operator/greaterThanOrEqual" xmlns:lessThan="rpa://selector/operator/lessThan" xmlns:lessThanOrEqual="rpa://selector/operator/lessThanOrEqual">
+  <group id="3f3ec7de-6edf-4963-8b94-acfb61b9d0e6" name="图片点选验证码_图片验证码_验证码接口_在线体验_网易易盾" type="Web" processName="msedge" icon=".dev\icon\5bcaa20a-23a7-4cc2-bfd0-df54ab7b72e5.png" criteria="https://dun.163.com">
+    <selector name="块元素_yidun_tips" type="simple" framework="edge" processName="msedge" winTitle="图片点选验证码_图片验证码_验证码接口_在线体验_网易易盾" screenshot=".dev\screenshot\b0646d76-155e-4c71-b12f-6a0581ddf32e.png">
+      <web x:name="main">
+        <optional index="3" />
+      </web>
+      <web x:name="div">
+        <optional class="g-bd" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="g-in g-in-top" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="g-mn2" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="m-tcapt" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt-type__container" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="active tcapt-type__item" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="is-center tcapt_item" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt_wrap" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt_content" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="u-fitem u-fitem-capt" index="2" />
+      </web>
+      <web x:name="div">
+        <optional data-type="point" class="j-captcha" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="yidun yidun--float yidun--light yidun--point" index="0" />
+      </web>
+      <web x:name="div">
+        <optional tabindex="0" role="button" class="yidun_control" index="1" />
+      </web>
+      <web x:name="div" class="yidun_tips">
+        <optional aria-live="polite" index="2" />
+      </web>
+    </selector>
+    <selector name="块元素_yidun_bgimg" type="simple" framework="edge" processName="msedge" winTitle="图片点选验证码_图片验证码_验证码接口_在线体验_网易易盾" screenshot=".dev\screenshot\461adfa6-265d-4fe7-b8b9-b2975168bf0c.png">
+      <web x:name="main">
+        <optional index="3" />
+      </web>
+      <web x:name="div">
+        <optional class="g-bd" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="g-in g-in-top" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="g-mn2" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="m-tcapt" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt-type__container" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="active tcapt-type__item" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="is-center tcapt_item" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt_wrap" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt_content" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="u-fitem u-fitem-capt" index="2" />
+      </web>
+      <web x:name="div">
+        <optional data-type="point" class="j-captcha" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="yidun yidun--float yidun--light yidun--point" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="yidun_panel" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="yidun_panel-placeholder" index="0" />
+      </web>
+      <web x:name="div" class="yidun_bgimg">
+        <optional index="1" />
+      </web>
+    </selector>
+    <selector name="块元素_yidun_bgimg2" type="simple" framework="chrome" processName="chrome" winTitle="图片点选验证码_图片验证码_验证码接口_在线体验_网易易盾" screenshot=".dev\screenshot\8a4edf36-8506-4dbc-984e-73a328f807fd.png">
+      <web x:name="main">
+        <optional index="3" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="g-bd" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="g-in g-in-top" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="g-mn2" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="m-tcapt" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt-type__container" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="active tcapt-type__item" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="is-center tcapt_item" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt_wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt_content" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="u-fitem u-fitem-capt" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional data-type="point" class="j-captcha" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="yidun yidun--float yidun--light yidun--point yidun--size-small yidun-custom" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="yidun_panel" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="yidun_panel-placeholder" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div" class="yidun_bgimg">
+        <optional index="1" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="集 弃 普" type="simple" framework="chrome" processName="chrome" winTitle="图片点选验证码_图片验证码_验证码接口_在线体验_网易易盾" screenshot=".dev\screenshot\7d33ade9-717f-4922-a7e3-783a6bbbff1a.png">
+      <web x:name="main">
+        <optional index="3" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="g-bd" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="g-in g-in-top" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="g-mn2" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="m-tcapt" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt-type__container" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="active tcapt-type__item" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="is-center tcapt_item" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt_wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt_content" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="u-fitem u-fitem-capt" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional data-type="point" class="j-captcha" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="yidun yidun--float yidun--light yidun--point yidun--size-small yidun-custom" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional tabindex="0" role="button" class="yidun_control" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional aria-live="polite" class="yidun_tips" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional class="yidun_tips__content" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div" class="yidun_tips__answer">
+        <optional index="2" index-of-type="0" />
+      </web>
+      <web x:name="span">
+        <optional innerText="&quot;集&quot; &quot;弃&quot; &quot;普&quot;" class="yidun_tips__point" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="测试-推理图片验证码-网易" type="simple" framework="chrome" processName="chrome" winTitle="拼图验证码_推理拼图验证码_拼图验证码实现_网易易盾" screenshot=".dev\screenshot\0aa6f56d-aea3-416d-b58a-6a3623ed0211.png">
+      <web x:name="main">
+        <optional index="3" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="g-bd" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="g-in g-in-top" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="g-mn2" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="m-tcapt" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt-type__container" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="active tcapt-type__item" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="is-center tcapt_item" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt_wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="tcapt_content" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="u-fitem u-fitem-capt" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional data-type="inference" class="j-captcha" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="yidun yidun--embed yidun--inference yidun--light yidun--size-small yidun-custom" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="yidun_panel" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="yidun_panel-placeholder" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div" class="yidun_bgimg">
+        <optional index="0" index-of-type="0" />
+      </web>
+    </selector>
+  </group>
+  <group id="5b4d0d5e-8366-43d5-8b5b-3a798ef9b31a" name="国家税务总局上海市电子税务局" type="Web" processName="msedge" icon=".dev\icon\bedeb427-e7ca-49b1-a42f-f15109fd6fe9.png" criteria="https://etax.shanghai.chinatax.gov.cn">
+    <selector name="块元素_请依次点击图中的腥 捡 厮 ..." type="simple" framework="edge" processName="msedge" winTitle="国家税务总局上海市电子税务局" screenshot=".dev\screenshot\9a5d84c6-5822-44da-b9f8-390a6b391662.png">
+      <web x:name="div">
+        <optional class="bszm-page-index main" index="3" />
+      </web>
+      <web x:name="div">
+        <optional class="indexbf-top sh-indexbefore-bg" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="top-first" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="right-menu" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="menu-login" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="login-dom-new" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="app" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0" class="theme" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0.2" index="1" />
+      </web>
+      <web x:name="section">
+        <optional data-reactid=".0.0.2.0" index="0" />
+      </web>
+      <web x:name="section">
+        <optional data-reactid=".0.0.2.0.0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0.2.0.0.0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0.2.0.0.0.1" class="pt20" index="1" />
+      </web>
+      <web x:name="section">
+        <optional data-reactid=".0.0.2.0.0.0.1.0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0.2.0.0.0.1.0.1" class="pt20" index="1" />
+      </web>
+      <web x:name="section">
+        <optional data-reactid=".0.0.2.0.0.0.1.0.1.0" class="user-login" index="0" />
+      </web>
+      <web x:name="section">
+        <optional data-reactid=".0.0.2.0.0.0.1.0.1.0.2" class="wrap" index="2" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0.2.0.0.0.1.0.1.0.2.0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0.2.0.0.0.1.0.1.0.2.0.0" class="codebox" index="0" />
+      </web>
+      <web x:name="div" id="yzmID">
+        <optional data-reactid=".0.0.2.0.0.0.1.0.1.0.2.0.0.1" innerText="请依次点击图中的&quot;腥 捡 厮 替 &quot;" index="1" />
+      </web>
+    </selector>
+    <selector name="图片_clickTipCaptcha" type="simple" framework="edge" processName="msedge" winTitle="国家税务总局上海市电子税务局" screenshot=".dev\screenshot\e06a459c-6b85-47b0-9c45-94eb2e9ed716.png">
+      <web x:name="div">
+        <optional class="bszm-page-index main" index="3" />
+      </web>
+      <web x:name="div">
+        <optional class="indexbf-top sh-indexbefore-bg" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="top-first" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="right-menu" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="menu-login" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="login-dom-new" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="app" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0" class="theme" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0.2" index="1" />
+      </web>
+      <web x:name="section">
+        <optional data-reactid=".0.0.2.0" index="0" />
+      </web>
+      <web x:name="section">
+        <optional data-reactid=".0.0.2.0.0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0.2.0.0.0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0.2.0.0.0.1" class="pt20" index="1" />
+      </web>
+      <web x:name="section">
+        <optional data-reactid=".0.0.2.0.0.0.1.0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0.2.0.0.0.1.0.1" class="pt20" index="1" />
+      </web>
+      <web x:name="section">
+        <optional data-reactid=".0.0.2.0.0.0.1.0.1.0" class="user-login" index="0" />
+      </web>
+      <web x:name="section">
+        <optional data-reactid=".0.0.2.0.0.0.1.0.1.0.2" class="wrap" index="2" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0.2.0.0.0.1.0.1.0.2.0" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0.2.0.0.0.1.0.1.0.2.0.0" class="codebox" index="0" />
+      </web>
+      <web x:name="div">
+        <optional data-reactid=".0.0.2.0.0.0.1.0.1.0.2.0.0.0" class="show yzmpic" index="0" />
+      </web>
+      <web x:name="img">
+        <optional id="clickTipCaptcha" src="/login-web/api/captcha/clicktip/shlogin/get?modelId=&amp;t=1642405273045" draggable="false" data-reactid=".0.0.2.0.0.0.1.0.1.0.2.0.0.0.0" index="0" />
+      </web>
+    </selector>
+  </group>
+  <group id="919eec7b-bc4c-4088-998e-5a2732abf1ed" name="车辆环保信息随车清单-上汽通用五菱官方网站" type="Web" processName="msedge" icon=".dev\icon\99bb798e-ce7e-4699-b2c8-3ff3a5b1d383.png" criteria="https://www.sgmw.com.cn">
+    <selector name="背景图" type="simple" framework="edge" processName="msedge" winTitle="车辆环保信息随车清单-上汽通用五菱官方网站" screenshot=".dev\screenshot\b2959ef8-f16f-4237-b9d9-d1f37d6d8e18.png">
+      <web x:name="div">
+        <optional id="slider-touch" class="slider-touch" index="4" />
+      </web>
+      <web x:name="div">
+        <optional class="main" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="book" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="slideBar" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="slide-box" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="slide-img-block" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="slide-img-border" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="slide-img-div" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="slide-img-nopadding" index="0" />
+      </web>
+      <web x:name="img" id="slideImg">
+        <optional src="./images/slide_3.jpg" class="slide-img" index="0" />
+      </web>
+    </selector>
+    <selector name="缺口图块" type="simple" framework="edge" processName="msedge" winTitle="车辆环保信息随车清单-上汽通用五菱官方网站" screenshot=".dev\screenshot\a2922dcb-8247-4c21-b8d1-31be8b16c9c0.png">
+      <web x:name="div">
+        <optional id="slider-touch" class="slider-touch" index="4" />
+      </web>
+      <web x:name="div">
+        <optional class="main" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="book" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="slideBar" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="slide-box" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="slide-img-block" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="slide-img-border" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="slide-img-div" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="slide-img-nopadding" index="0" />
+      </web>
+      <web x:name="div" id="slideBlock">
+        <optional class="slide-block" index="1" />
+      </web>
+    </selector>
+    <selector name="滑动图块" type="simple" framework="edge" processName="msedge" winTitle="车辆环保信息随车清单-上汽通用五菱官方网站" screenshot=".dev\screenshot\11436d10-325c-49b2-8d04-4d19272f451c.png">
+      <web x:name="div">
+        <optional id="slider-touch" class="slider-touch" index="4" />
+      </web>
+      <web x:name="div">
+        <optional class="main" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="book" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="slideBar" index="1" />
+      </web>
+      <web x:name="div">
+        <optional class="slide-box" index="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scroll-background scroll-bar" index="1" />
+      </web>
+      <web x:name="div" id="slideBtn">
+        <optional class="scroll-background slide-btn" index="0" />
+      </web>
+    </selector>
+  </group>
+  <group id="0bd16e2a-7ec2-45be-9709-c1b2334029f1" name="爱库存 商户云平台 登录界面" type="Web" processName="msedge" icon=".dev\icon\8a80021c-88d5-4983-a9c7-191841daa595.png" criteria="https://merc.aikucun.com">
+    <selector name="图像滑块" type="simple" framework="edge" processName="msedge" winTitle="爱库存 商户云平台 登录界面" screenshot=".dev\screenshot\1311f7d2-e2c7-4438-9d60-106339e9171b.png">
+      <web x:name="div">
+        <optional id="merchant_login" zn_id="46" class="merchant_login_main" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="login-captcha" data-dx-idx="1" zn_id="24" class="dx_captcha dx_captcha-type-basic dx_captcha_basic dx_captcha_basic-style-popup dx_captcha_loading-style-popup" index="3" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_wrapper_1" zn_id="100" class="dx_captcha_basic_wrapper" index="0" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_main-box_1" class="dx_captcha_basic_main-box" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_box_1" class="dx_captcha_basic_box" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_content_1" zn_id="106" class="dx_captcha_basic_content" index="0" />
+      </web>
+      <web x:name="div" class="dx_captcha_basic_sub-slider">
+        <optional id="dx_captcha_basic_sub-slider_1" zn_id="107" index="0" />
+      </web>
+      <web x:name="img" index="0">
+        <optional src="https://cap.aikucun.com/api/p2?sid=2dfc28bb53cbfad79b69a058fbf035df&amp;aid=dx-1655195144560-60652788-1&amp;ak=59b53fa1af3fd4b6376d5d660f9327bd&amp;type=0&amp;c=62a8433eQGkZYGZu4GasfAUD4yTw4F4t9PCdYVc1&amp;_r=0.94800545297821" alt="" draggable="false" zn_id="111" />
+      </web>
+    </selector>
+    <selector name="背景" type="simple" framework="edge" processName="msedge" winTitle="爱库存 商户云平台 登录界面" screenshot=".dev\screenshot\9b190f19-2914-4203-ba9c-e9a8814d4f6e.png">
+      <web x:name="div">
+        <optional id="merchant_login" zn_id="46" class="merchant_login_main" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="login-captcha" data-dx-idx="1" zn_id="24" class="dx_captcha dx_captcha-type-basic dx_captcha_basic dx_captcha_basic-style-popup dx_captcha_loading-style-popup" index="3" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_wrapper_1" zn_id="100" class="dx_captcha_basic_wrapper" index="0" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_main-box_1" class="dx_captcha_basic_main-box" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_box_1" class="dx_captcha_basic_box" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_content_1" zn_id="106" class="dx_captcha_basic_content" index="0" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_pic_1" zn_id="108" class="dx_captcha_basic_pic" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_bg_1" class="dx_captcha_basic_bg" index="1" />
+      </web>
+      <web x:name="canvas">
+        <optional width="400" height="200" zn_id="99" index="0" />
+      </web>
+    </selector>
+    <selector name="拖动滑块" type="simple" framework="edge" processName="msedge" winTitle="爱库存 商户云平台 登录界面" screenshot=".dev\screenshot\472feeaf-ce41-4a11-9f27-741cd121ee8f.png">
+      <web x:name="div">
+        <optional id="merchant_login" zn_id="46" class="merchant_login_main" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="login-captcha" data-dx-idx="1" zn_id="24" class="dx_captcha dx_captcha-type-basic dx_captcha_basic dx_captcha_basic-style-popup dx_captcha_loading-style-popup" index="3" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_wrapper_1" zn_id="100" class="dx_captcha_basic_wrapper" index="0" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_main-box_1" class="dx_captcha_basic_main-box" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_box_1" class="dx_captcha_basic_box" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_bar_1" class="dx_captcha_basic_bar" index="1" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_slider_1" class="dx_captcha_basic_slider" index="0" />
+      </web>
+      <web x:name="div">
+        <optional id="dx_captcha_basic_slider-img-animated-wrap_1" class="dx_captcha_basic_slider-img-animated-wrap" index="0" />
+      </web>
+      <web x:name="img" index="4">
+        <optional src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABMCAMAAACRUYNbAAAA1VBMVEUAAADQ0NDV1dXOzs7KysrIyMjV1dXT09PJycnS0tLJycne3t709PT9/f3////Ozs7x8fHo+/lP3tEN0sA12crL9vIAz7wL0r/C9O/B9O/A9O/1/v3f+fbl+vj9///e+feY7OSr8On5/v4M0sDN9vLq+/q08Ouy8OrB8+78//668+0J0b8z2cr2/v0g1sXw/fy/8u3e+fYu2MmU6+MX1MOF6d+28evV9/QO0sB05dvK9fHp+/lR39K48u33/f3F8+/a+PXn+/lC3M6H6eD6/v79/v77//43GhZXAAAACnRSTlMANsH3/v8Gx/7qp8lFZwAAAWpJREFUeAHEzQcBRSEMRbEyDpuCf7N/ergvBmJfIaaMSE4x2F+pDalWy+/tjLm2i+w1B/07V851qXuoZqGN62J3tGCR6XKTaInlcotkme1ym2zgD4B3u3aR2DAQQwH0BOV2oEzhxC4z0/1vZPpTnE1B9m8bafVX8xKzLSlcbymssMIKKzwzOze/wIBnjTHWEeA5A7lxeN5AbhxesJB90/CkC7L7GkyQARNkwAQZMEEGLCx7eVhOloUnfZAXheCl5ZXV57y2vrEZ5Y/y1rYI3Gp3Ot0ecn9gzHAU5Y9ykkrAO52idpH3ymX3o/xa7qCSDyXgoxI+Rj4pVz2Ncj3wWQmfI1+Uq15GuZ5NfXXdad+EfHtnBvdxlj+4UA+Przl9irLw6fT18l+8gBBcwAQXMMEFTHABE1zABPfPP97OB5f0CuNJL21+jF5TUQorrLDCUqWwwrSmJq2NS2tc01r1rOEE2jgGbwCFNnKTAx0U6vfTM8teAAAAAElFTkSuQmCC" id="dx_captcha_basic_slider-img-normal_1" draggable="false" zn_id="113" />
+      </web>
+    </selector>
+  </group>
+  <group id="a14bad6b-e697-41ca-8d57-2c7b854b03c1" name="Login - 安能单点登录系统" type="Web" processName="chrome" icon=".dev\icon\3f64f506-8bd0-47c6-aa3e-2309875769bb.png" criteria="https://lbcas.ane56.com">
+    <selector name="图片_validate_big" type="simple" framework="chrome" processName="chrome" winTitle="Login - 安能单点登录系统" screenshot=".dev\screenshot\5d098a79-9657-4737-8c59-990f4a200e38.png">
+      <web x:name="main">
+        <optional role="main" class="container mb-3 mt-3" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="content" class="contentform row" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="col-md" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="warpBackground" class="warp" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="common login_box" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="card-body login-con" index="1" index-of-type="1" />
+      </web>
+      <web x:name="form">
+        <optional method="post" id="fm1" action="login" class="sign_in_html" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="slide" class="login_box_row" index="8" index-of-type="4" />
+      </web>
+      <web x:name="div">
+        <optional class="trigger_slider" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="validate_main" index="0" index-of-type="0" />
+      </web>
+      <web x:name="img" class="validate_big">
+        <optional src="/getimage?id=d2af19e916594dedb42b4c23227a2716&amp;type=2" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="图片_validate_block" type="simple" framework="chrome" processName="chrome" winTitle="Login - 安能单点登录系统" screenshot=".dev\screenshot\f0f7d253-73a9-45d9-8491-0c939d371d53.png">
+      <web x:name="main">
+        <optional role="main" class="container mb-3 mt-3" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="content" class="contentform row" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="col-md" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="warpBackground" class="warp" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="common login_box" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="card-body login-con" index="1" index-of-type="1" />
+      </web>
+      <web x:name="form">
+        <optional method="post" id="fm1" action="login" class="sign_in_html" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="slide" class="login_box_row" index="8" index-of-type="4" />
+      </web>
+      <web x:name="div">
+        <optional class="trigger_slider" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="validate_main" index="0" index-of-type="0" />
+      </web>
+      <web x:name="img" class="validate_block">
+        <optional src="/getimage?id=d2af19e916594dedb42b4c23227a2716&amp;type=1" index="1" index-of-type="1" />
+      </web>
+    </selector>
+    <selector name="块元素_validate_button" type="simple" framework="chrome" processName="chrome" winTitle="Login - 安能单点登录系统" screenshot=".dev\screenshot\72ed744e-d048-42cd-839d-c190692ca390.png">
+      <web x:name="main">
+        <optional role="main" class="container mb-3 mt-3" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="content" class="contentform row" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="col-md" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="warpBackground" class="warp" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="common login_box" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="card-body login-con" index="1" index-of-type="1" />
+      </web>
+      <web x:name="form">
+        <optional method="post" id="fm1" action="login" class="sign_in_html" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="slide" class="login_box_row" index="8" index-of-type="4" />
+      </web>
+      <web x:name="div">
+        <optional class="trigger_slider" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="validate_box" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" class="validate_button">
+        <optional index="1" index-of-type="1" />
+      </web>
+    </selector>
+  </group>
+  <group id="b9392f0e-bdfd-4fec-87d9-96d868d478f3" name="京东-欢迎登录" type="Web" processName="chrome" icon=".dev\icon\b4bd3aed-5fc0-4c14-bc71-0dded3ae3213.png" criteria="https://passport.jd.com">
+    <selector name="图片" type="simple" framework="chrome" processName="chrome" winTitle="京东-欢迎登录" screenshot=".dev\screenshot\8d512f9d-05e7-496c-8fe2-09505f0378ff.png">
+      <web x:name="div">
+        <optional id="JDJRV-wrap-loginsubmit" class="jdjrv-bind-suspend-wrap jdjrv-suspend-warp" index="18" index-of-type="4" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-suspend-slide" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdvalidate-wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional classname="JDJRV-slide" class="jdjrv-slide" index="2" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-click-bind-suspend jdjrv-img-panel" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-img-wrap" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" class="jdjrv-bigimg">
+        <optional index="0" index-of-type="0" />
+      </web>
+      <web x:name="img">
+        <optional index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="图片2" type="simple" framework="chrome" processName="chrome" winTitle="京东-欢迎登录" screenshot=".dev\screenshot\2fe9bc81-a0e9-46c9-87c0-e579fea75af4.png">
+      <web x:name="div">
+        <optional id="JDJRV-wrap-loginsubmit" class="jdjrv-bind-suspend-wrap jdjrv-suspend-warp" index="18" index-of-type="4" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-suspend-slide" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdvalidate-wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional classname="JDJRV-slide" class="jdjrv-slide" index="2" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-click-bind-suspend jdjrv-img-panel" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-img-wrap" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" class="jdjrv-smallimg">
+        <optional index="1" index-of-type="1" />
+      </web>
+      <web x:name="img">
+        <optional index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="块元素" type="simple" framework="chrome" processName="chrome" winTitle="京东-欢迎登录" screenshot=".dev\screenshot\869427cb-dfcc-4ad2-b2cc-b6fd218cb5b7.png">
+      <web x:name="div">
+        <optional id="JDJRV-wrap-loginsubmit" class="jdjrv-bind-suspend-wrap jdjrv-suspend-warp" index="18" index-of-type="4" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-suspend-slide" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdvalidate-wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional classname="JDJRV-slide" class="jdjrv-slide" index="2" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-slide-bg" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" class="jdjrv-slide-btn jdjrv-slide-inner">
+        <optional classname="JDJRV-slide-inner JDJRV-slide-btn" index="2" index-of-type="2" />
+      </web>
+    </selector>
+    <selector name="测试-背景-京东" type="simple" framework="chrome" processName="chrome" winTitle="京东-欢迎登录" screenshot=".dev\screenshot\53e56929-cd25-4669-babd-c70b5439259b.png">
+      <web x:name="div">
+        <optional id="JDJRV-wrap-loginsubmit" class="jdjrv-bind-suspend-wrap jdjrv-suspend-warp" index="16" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-suspend-slide" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdvalidate-wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-slide" index="2" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-click-bind-suspend jdjrv-img-panel" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-img-wrap" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" class="jdjrv-bigimg">
+        <optional index="0" index-of-type="0" />
+      </web>
+      <web x:name="img" xbox-display="true">
+        <optional index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="测试-目标滑块-京东" type="simple" framework="chrome" processName="chrome" winTitle="京东-欢迎登录" screenshot=".dev\screenshot\6023a24a-1f97-41e3-8e31-0a9283ff5809.png">
+      <web x:name="div">
+        <optional id="JDJRV-wrap-loginsubmit" class="jdjrv-bind-suspend-wrap jdjrv-suspend-warp" index="16" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-suspend-slide" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdvalidate-wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-slide" index="2" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-click-bind-suspend jdjrv-img-panel" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-img-wrap" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" class="jdjrv-smallimg">
+        <optional index="1" index-of-type="1" />
+      </web>
+      <web x:name="img" xbox-display="true">
+        <optional index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="测试-拖动滑块-京东" type="simple" framework="chrome" processName="chrome" winTitle="京东-欢迎登录" screenshot=".dev\screenshot\ef23e816-2b8a-4aee-98e3-440505a20ebd.png">
+      <web x:name="div">
+        <optional id="JDJRV-wrap-loginsubmit" class="jdjrv-bind-suspend-wrap jdjrv-suspend-warp" index="16" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-suspend-slide" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdvalidate-wrap" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-slide" index="2" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="jdjrv-slide-bg" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" class="jdjrv-slide-btn jdjrv-slide-inner">
+        <optional index="2" index-of-type="2" />
+      </web>
+    </selector>
+  </group>
+  <group id="59a8fc39-b2aa-4a01-be0b-39c837506220" name="快手小店" type="Web" processName="chrome" icon=".dev\icon\550523cc-ac9b-477b-9900-247261c9712e.png" criteria="https://login.kwaixiaodian.com">
+    <selector name="fream 元素" type="simple" framework="chrome" processName="chrome" winTitle="快手小店" screenshot=".dev\screenshot\215ba5f4-e159-4444-9b57-cf59ea197713.png">
+      <web x:name="div">
+        <optional index="5" index-of-type="1" />
+      </web>
+      <web x:name="iframe">
+        <optional frameboarder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" src="https://captcha.zt.kuaishou.com/iframe/index.html?captchaSession=Cgp6dC5jYXB0Y2hhEoMCYicZ6mzBqkKzAiXuwnlkgrNIKpjfH6zBK4hEQQtoWFzOGBfrROUgrXfRrq8qGQ92OlamJOMx6_nhIbfnJ29-Dpf0cbSHUvoXtPvVuMepipfAdikiETeie0GOdzr0lBZRd_eDcidV_kWL6ASUJLFqGqbdwTBi-UAEO5w6YG1g2X_8sXuVETvgbg2yetL6jjtQStL2pRZeJooMtIW4AWC9Ku8z9dsh1UMN3_J-o4MdHCvMwT1jSg9SllJQby8iVcZRA2GVdB7h8fKxDDe0-MhW5VmufBBSyG3p3fG66DmrG9I9CDyzXIBPdNZNYSGg9Yn8uLEOEwPz2_WFJCk1HMm3pd6ZhhoSEBxAdeNTOXi_qDqJfwEa5sXwKAUwAg&amp;type=1&amp;configUrl=https%3A%2F%2Fcaptcha.zt.kuaishou.com%2Frest%2Fzt%2Fcaptcha%2Fsliding%2Fconfig&amp;bizName=LOGIN_FROM_WEB&amp;displayType=popup" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="container popup" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div" class="kwai-captcha-page kwai-captcha-slider-wrapper">
+        <optional index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="斜体文本_btn-icon" type="simple" framework="chrome" processName="chrome" winTitle="快手小店" screenshot=".dev\screenshot\b8b1970f-1023-4b0b-91ce-5bcd4e0fe2c7.png">
+      <web x:name="div">
+        <optional index="5" index-of-type="1" />
+      </web>
+      <web x:name="iframe">
+        <optional frameboarder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" src="https://captcha.zt.kuaishou.com/iframe/index.html?captchaSession=Cgp6dC5jYXB0Y2hhEoMCYicZ6mzBqkKzAiXuwnlkgrNIKpjfH6zBK4hEQQtoWFzOGBfrROUgrXfRrq8qGQ92OlamJOMx6_nhIbfnJ29-Dpf0cbSHUvoXtPvVuMepipfAdikiETeie0GOdzr0lBZRd_eDcidV_kWL6ASUJLFqGqbdwTBi-UAEO5w6YG1g2X_8sXuVETvgbg2yetL6jjtQStL2pRZeJooMtIW4AWC9Ku8z9dsh1UMN3_J-o4MdHCvMwT1jSg9SllJQby8iVcZRA2GVdB7h8fKxDDe0-MhW5VmufBBSyG3p3fG66DmrG9I9CDyzXIBPdNZNYSGg9Yn8uLEOEwPz2_WFJCk1HMm3pd6ZhhoSEBxAdeNTOXi_qDqJfwEa5sXwKAUwAg&amp;type=1&amp;configUrl=https%3A%2F%2Fcaptcha.zt.kuaishou.com%2Frest%2Fzt%2Fcaptcha%2Fsliding%2Fconfig&amp;bizName=LOGIN_FROM_WEB&amp;displayType=popup" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="container popup" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="kwai-captcha-page kwai-captcha-slider-wrapper" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bar-container" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional data-v-01490eec="" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional data-v-01490eec="" class="slider" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional data-v-01490eec="" class="slider-shadow" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional data-v-01490eec="" class="slider-btn" index="0" index-of-type="0" />
+      </web>
+      <web x:name="i">
+        <optional data-v-01490eec="" class="btn-icon" index="0" index-of-type="0" />
+      </web>
+    </selector>
+  </group>
+  <group id="3361000b-9fb3-46e6-bed5-67fd38c053d8" name="抖店登录-抖店后台-抖音电商后台" type="Web" processName="chrome" icon=".dev\icon\0b68d352-5a18-450a-9ae8-dc0c1b16b64f.png" criteria="https://fxg.jinritemai.com">
+    <selector name="测试-背景" type="simple" framework="chrome" processName="chrome" winTitle="抖店登录-抖店后台-抖音电商后台" screenshot=".dev\screenshot\221a5046-2e5c-4e64-a288-dc0d5096fd3e.png">
+      <web x:name="div">
+        <optional id="sdk-login-box-slide-container" class="slide-container" index="4" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional role="dialog" class="captcha_verify_container style__captchawrapper-sc-1gpeoge-0 zgyir" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_verify_img--wrapper jzvbym sc-gzmcbi" index="1" index-of-type="1" />
+      </web>
+      <web x:name="img" id="captcha-verify-image">
+        <optional draggable="false" src="https://p6-catpcha.byteimg.com/tos-cn-i-188rlo5p4y/fa1797666b4847a2b32978590c9cb9ea~tplv-188rlo5p4y-2.jpeg" alt="" class="chbgdz itlnmx sc-gqjmru sc-ifakcx" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="测试_目标滑块" type="simple" framework="chrome" processName="chrome" winTitle="抖店登录-抖店后台-抖音电商后台" screenshot=".dev\screenshot\9f6371d7-6ae9-4cb0-85b4-6c02520440e6.png">
+      <web x:name="div">
+        <optional id="sdk-login-box-slide-container" class="slide-container" index="4" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional role="dialog" class="captcha_verify_container style__captchawrapper-sc-1gpeoge-0 zgyir" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_verify_img--wrapper jzvbym sc-gzmcbi" index="1" index-of-type="1" />
+      </web>
+      <web x:name="img" class="captcha_verify_img_slide ggnwog react-draggable sc-vigvt">
+        <optional alt="" src="https://p6-catpcha.byteimg.com/tos-cn-i-188rlo5p4y/1be054ce0f7c4904949e4e3fd3688006~tplv-188rlo5p4y-1.png" index="1" index-of-type="1" />
+      </web>
+    </selector>
+    <selector name="测试_拖拽滑块" type="simple" framework="chrome" processName="chrome" winTitle="抖店登录-抖店后台-抖音电商后台" screenshot=".dev\screenshot\7b3270cc-303c-4cbd-90e0-bccaf7f7ad3a.png">
+      <web x:name="div">
+        <optional id="sdk-login-box-slide-container" class="slide-container" index="4" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional role="dialog" class="captcha_verify_container style__captchawrapper-sc-1gpeoge-0 zgyir" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_verify_slide--button fqdbft slide-button___styleddiv-sc-11qn0r0-0" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional id="secsdk-captcha-drag-wrapper" class="iqgfys react-draggable react-draggable-dragged sc-enqaej" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" class="fiqtnm sc-keyyzf secsdk-captcha-drag-icon">
+        <optional index="1" index-of-type="1" />
+      </web>
+    </selector>
+  </group>
+  <group id="e8069458-1f43-484c-b6f5-c2750294fef7" name="验证码拦截" type="Web" processName="msedge" icon=".dev\icon\31c50e9d-d1ba-481c-8cdd-e008304f3764.png" criteria="https://zhaoshang.tmall.com">
+    <selector name="tip_ele" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="验证码拦截" screenshot=".dev\screenshot\8900be20-0d89-42f8-9743-1942d7843879.jpg">
+      <web x:name="div">
+        <optional id="baxia-punish" class="baxia-punish captchacapslidev2 pc" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="wrapper" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="content-inside" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bannar" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha-tips" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="nocaptcha" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-question" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-question-header" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="info" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="title" index="0" index-of-type="0" />
+      </web>
+      <web x:name="canvas">
+        <optional id="captcha-question" width="288" height="30" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="buttom_ele" type="simple" framework="edge" processName="msedge" productName="" winTitle="验证码拦截" screenshot=".dev\screenshot\7aadeb46-432d-4e3c-b2b5-6f8738971340.jpg">
+      <web x:name="div">
+        <optional id="baxia-punish" class="baxia-punish captchacapslidev2 pc" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="wrapper" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="content-inside" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bannar" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha-tips" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="nocaptcha" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-question" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="scratch-captcha-question-container" class="scratch-captcha-question-bg" index="1" index-of-type="1" />
+      </web>
+      <web x:name="img" id="scratch-captcha-question-img">
+        <optional class="img" index="1" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="drag_ele" type="simple" framework="edge" processName="msedge" productName="Microsoft Edge" winTitle="验证码拦截" screenshot=".dev\screenshot\6b4af46e-f9f9-4162-8ea8-4348f1c2e3b1.jpg">
+      <web x:name="div">
+        <optional id="baxia-punish" class="baxia-punish captchacapslidev2 pc" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="wrapper" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="content-inside" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bannar" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha-tips" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="nocaptcha" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-slider" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="slide" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="scratch-captcha-btn" class="button" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional id="scratch-captcha-inner-btn" class="inner" index="0" index-of-type="0" />
+      </web>
+      <web x:name="i">
+        <optional id="scratch-captcha-btn-icon" class="sc-iconfont" innerText="" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="taobao-object-refresh" type="simple" framework="edge" processName="msedge" productName="Microsoft Edge" winTitle="验证码拦截" screenshot=".dev\screenshot\a3d89bb1-b60a-450a-8245-c1ab9f6e2e66.jpg">
+      <web x:name="div">
+        <optional id="baxia-punish" class="baxia-punish captchacapslidev2 pc" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="wrapper" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="content-inside" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bannar" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha-tips" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="nocaptcha" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-question" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-question-header" index="0" index-of-type="0" />
+      </web>
+      <web x:name="i" innerText="">
+        <optional class="refresh sc-iconfont" index="1" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="块元素_scratch-captcha-mask" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="验证码拦截" screenshot=".dev\screenshot\f497c79d-9449-448a-86d0-d3a1a1259eb3.jpg">
+      <web x:name="div">
+        <optional id="baxia-punish" class="baxia-punish captchacapslidev2 pc" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="wrapper" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="content-inside" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bannar" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha-tips" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="nocaptcha" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-question" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="scratch-captcha-question-container" class="scratch-captcha-question-bg" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" class="scratch-captcha-mask">
+        <optional index="2" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="图形_captcha-answer" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="验证码拦截" screenshot=".dev\screenshot\4c8eeda6-137b-497e-9ad8-99b64c276047.jpg">
+      <web x:name="div">
+        <optional id="baxia-punish" class="baxia-punish captchacapslidev2 pc" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="wrapper" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="content-inside" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bannar" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha-tips" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="nocaptcha" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-question" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="scratch-captcha-question-container" class="scratch-captcha-question-bg" index="1" index-of-type="1" />
+      </web>
+      <web x:name="canvas" id="captcha-answer">
+        <optional width="320" height="180" index="1" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="图形_captcha-answer2" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="验证码拦截" screenshot=".dev\screenshot\8a926998-86aa-4fbe-93c0-4014a67b6373.jpg">
+      <web x:name="div">
+        <optional id="baxia-punish" class="baxia-punish captchacapslidev2 pc" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="wrapper" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="content-inside" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bannar" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha-tips" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="nocaptcha" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-question" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="scratch-captcha-question-container" class="scratch-captcha-question-bg" index="1" index-of-type="1" />
+      </web>
+      <web x:name="canvas" id="captcha-answer">
+        <optional width="320" height="180" index="1" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="slider_ele" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="验证码拦截" screenshot=".dev\screenshot\794ebb33-c219-416d-bb6d-dc4e07496e08.jpg">
+      <web x:name="div">
+        <optional id="baxia-punish" class="baxia-punish captchacapslidev2 pc" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="wrapper" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="content-inside" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bannar" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha-tips" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="nocaptcha" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" class="scratch-captcha-slider">
+        <optional index="1" index-of-type="1" />
+      </web>
+    </selector>
+    <selector name="tb_background_ele" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="验证码拦截" screenshot=".dev\screenshot\56434ba8-ff2a-41a7-834a-c72d9f62f968.jpg">
+      <web x:name="div">
+        <optional id="baxia-punish" class="baxia-punish captchacapslidev2 pc" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="wrapper" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="content-inside" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bannar" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha-tips" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="nocaptcha" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-question" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="scratch-captcha-question-container" class="scratch-captcha-question-bg" index="1" index-of-type="1" />
+      </web>
+      <web x:name="canvas" id="captcha-answer">
+        <optional width="320" height="180" index="1" index-of-type="0" />
+      </web>
+    </selector>
+  </group>
+  <group id="f3a2971c-ebad-452b-b982-470064c78664" name="百度一下，你就知道" type="Web" processName="chrome" icon=".dev\icon\511b998e-a769-4337-a33c-48e95ad24dbb.png" criteria="https://www.baidu.com">
+    <selector id="f54b9b1b-df82-43bc-af15-83d3740f402f" name="图片_passmod_spin-background" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="链接提交_加快网站内容抓取，快速提交数据工具_站长工具_网站支持_百度搜索资源平台" screenshot=".dev\screenshot\3385acf2-f721-4c04-be0f-3a25027a5928.jpg">
+      <web x:name="div">
+        <optional class="passmod_dialog-wrapper passmod_show" index="34" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional class="passmod_dialog-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="passmod_dialog-body" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="passmod_code-container" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="spin-0" class="passmod_spin-wrapper passmod_verify-item" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="passmod_spin-context-wrap" index="2" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="passmod_spin-context" index="0" index-of-type="0" />
+      </web>
+      <web x:name="img" class="passmod_spin-background">
+        <optional src="https://passport.baidu.com/cap/img?ak=ecufIZkFOt4DBhoSHZDu3qWRqrP3kZRf&amp;id=6713-P%2BSqOBTGetfYIGWi2s05Umn9EqgcehT3YfcMf5F0%2BDhskQ3y7br3oHJLkMxJkAbrom9S%2BcpfTNFql8JzQ4NZGnqsvHk6Me2MV%2F%2Fe%2FMxt6xap%2BR0HaJIEF8vDWtB50vkoxSNt1fKF73KZ9RxLgqWRpT8jLEM%2FaUB%2FQJxshjFHpb0t65otXrgRcXMGvw9sfnxUdt6iDn4BRBFoaYB8BlhBu7entUwogm8Fw%2BY5dHuRMJKs2Tz8y6kb4i%2Bj%2B%2FAAqb9V&amp;tk=8860QdNeelRDMgszTDRx73ctli9aU1Mkt6ds733UZK8eA6w%2BboX7IyKR196s0jB7JXRDW9HdRxDj9F%2FyDicUp0SjHSs4jppjF%2F42ZqaQfPkjdzWjkcdosQj2lYro4M6WcITmtYTojRGbaASOhuSrSExO2swN2C5GwvlADgC4h4mV3Ao%3D" alt="" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector id="90e06faf-87df-4768-8c78-88a7eb26d6c6" name="块元素_passmod_slide-btn" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="链接提交_加快网站内容抓取，快速提交数据工具_站长工具_网站支持_百度搜索资源平台" screenshot=".dev\screenshot\8acdb05b-9e5e-47b7-9d92-6146083a643c.jpg">
+      <web x:name="div">
+        <optional class="passmod_dialog-wrapper passmod_show" index="34" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional class="passmod_dialog-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="passmod_dialog-body" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="passmod_code-container" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div" id="spin-0">
+        <optional class="passmod_spin-wrapper passmod_verify-item" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="passmod_spin-context-wrap" index="2" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="passmod_spin-footer" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="passmod_slide-control passmod_slide-control_ia0k" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div" class="passmod_slide-btn passmod_slide-btn-loading">
+        <optional index="2" index-of-type="1" />
+      </web>
+    </selector>
+  </group>
+  <group id="b4f0de6c-3c08-4332-b555-0c9ee4007da2" name="淘宝网 - 淘！我喜欢" type="Web" processName="chrome" icon="" criteria="file:///C:/Users/32075/OneDrive/%E6%A1%8C%E9%9D%A2/%E6%B7%98%E5%AE%9D%E7%BD%91%20-%20%E6%B7%98%EF%BC%81%E6%88%91%E5%96%9C%E6%AC%A2%20(2023_11_28%2015_47_25).html">
+    <selector name="图片_veins" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="淘宝网 - 淘！我喜欢" screenshot=".dev\screenshot\427fd1aa-ce74-4c7d-a3d7-e394c95b8226.jpg">
+      <web x:name="div">
+        <optional class="auto baxia-dialog" index="2" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="baxia-dialog-content" index="1" index-of-type="1" />
+      </web>
+      <web x:name="iframe">
+        <optional id="baxia-dialog-content" frameborder="none" sandbox="allow-popups allow-top-navigation allow-top-navigation-by-user-activation" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="baxia-punish" class="baxia-punish captchacapslidev2 pc-ajax" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="wrapper" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="content-inside" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bannar" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha-tips" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="nocaptcha" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-question" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="scratch-captcha-question-container" class="scratch-captcha-question-bg" index="1" index-of-type="1" />
+      </web>
+      <web x:name="img" class="veins">
+        <optional index="1" index-of-type="1" />
+      </web>
+    </selector>
+    <selector name="tb_drag_ele" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="验证码拦截" screenshot=".dev\screenshot\ce9d175c-e596-4f31-895c-0462da55c122.jpg">
+      <web x:name="div">
+        <optional id="baxia-punish" class="baxia-punish captchacapslidev2 pc" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="wrapper" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="content-inside" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bannar" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha-tips" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="nocaptcha" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-slider" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" id="scratch-captcha-btn">
+        <optional class="button" index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="块元素_scratch-captcha-mask2" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="淘宝网 - 淘！我喜欢" screenshot=".dev\screenshot\3ceb6630-74d7-4339-85da-0f7c0f6453ec.jpg">
+      <web x:name="div">
+        <optional class="auto baxia-dialog" index="2" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="baxia-dialog-content" index="1" index-of-type="1" />
+      </web>
+      <web x:name="iframe">
+        <optional id="baxia-dialog-content" frameborder="none" sandbox="allow-popups allow-top-navigation allow-top-navigation-by-user-activation" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="baxia-punish" class="baxia-punish captchacapslidev2 pc-ajax" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="wrapper" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="content-inside" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="bannar" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha-tips" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="nocaptcha" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-container" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional class="scratch-captcha-question" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="scratch-captcha-question-container" class="scratch-captcha-question-bg" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div" class="scratch-captcha-mask">
+        <optional index="3" index-of-type="0" />
+      </web>
+    </selector>
+  </group>
+  <group id="69802d15-3693-4ea6-8643-022c8f172b93" name="京东验证" type="Web" processName="chrome" icon=".dev\icon\8e4cb026-f14c-4982-909b-63830ede4955.png" criteria="https://cfe.m.jd.com">
+    <selector name="京东风控背景" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="京东验证" screenshot=".dev\screenshot\0b63d6ee-c7d5-4754-b1ac-4fe68afbf87b.jpg">
+      <web x:name="div">
+        <optional id="captcha_dom" index="5" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_drop" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="captcha_modal" class="captcha_modal_pc captcha_modal_popup captcha_modal_radius" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional data-v-61c78f86="" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_body commontippc errtip" index="1" index-of-type="1" />
+      </web>
+      <web x:name="img" id="cpc_img">
+        <optional data-v-61c78f86="" index="2" index-of-type="0" />
+      </web>
+    </selector>
+    <selector name="目标图块" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="京东验证" screenshot=".dev\screenshot\a1a63455-70ef-41d8-aae6-82b670369e2f.jpg">
+      <web x:name="div">
+        <optional id="captcha_dom" index="5" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_drop" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="captcha_modal" class="captcha_modal_pc captcha_modal_popup captcha_modal_radius" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional data-v-61c78f86="" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_body commontippc errtip" index="1" index-of-type="1" />
+      </web>
+      <web x:name="img" id="small_img">
+        <optional data-v-61c78f86="" index="3" index-of-type="1" />
+      </web>
+    </selector>
+    <selector id="01f2956c-8b54-4c20-a7ef-3bb731faca09" name="拖拽" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="京东验证" screenshot=".dev\screenshot\e6a74d21-4ab7-4382-8163-d392b406dc20.jpg">
+      <web x:name="div">
+        <optional id="captcha_dom" index="5" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_drop" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="captcha_modal" class="captcha_modal_pc captcha_modal_popup captcha_modal_radius" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional data-v-61c78f86="" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_footer" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional data-v-61c78f86="" class="slidetip sp_msg" index="0" index-of-type="0" />
+      </web>
+      <web x:name="img" xbox-display="true">
+        <optional data-v-61c78f86="" class="move-img" index="2" index-of-type="0" />
+      </web>
+    </selector>
+    <selector id="d3e10bdb-a201-4e25-9240-24a8ac1e82d1" name="图片_cpc_img" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="京东验证" screenshot=".dev\screenshot\996c59bc-801a-468d-aa64-49a079964a29.jpg">
+      <web x:name="div">
+        <optional id="captcha_dom" index="5" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_drop" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="captcha_modal" class="captcha_modal_pc captcha_modal_popup captcha_modal_radius" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional data-v-61c78f86="" aria-modal="true" role="dialog" lang="zh" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_body commontippc errtip" index="1" index-of-type="1" />
+      </web>
+      <web x:name="img" id="cpc_img">
+        <optional data-v-61c78f86="" index="2" index-of-type="0" />
+      </web>
+    </selector>
+    <selector id="9ed87c7e-f407-4a97-952f-c1dc4d8e805e" name="图片_small_img" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="京东验证" screenshot=".dev\screenshot\b1f429f1-8609-4e53-b535-23a170112554.jpg">
+      <web x:name="div">
+        <optional id="captcha_dom" index="5" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_drop" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="captcha_modal" class="captcha_modal_pc captcha_modal_popup captcha_modal_radius" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional data-v-61c78f86="" aria-modal="true" role="dialog" lang="zh" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_body commontippc errtip" index="1" index-of-type="1" />
+      </web>
+      <web x:name="img" id="small_img">
+        <optional data-v-61c78f86="" index="3" index-of-type="1" />
+      </web>
+    </selector>
+    <selector id="43185033-046a-44cf-9267-ba7ab8dd43d2" name="图片_move-img" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="京东验证" screenshot=".dev\screenshot\f584f4c8-a51d-4b14-9c5a-9c1e1812cfc1.jpg">
+      <web x:name="div">
+        <optional id="captcha_dom" index="5" index-of-type="3" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_drop" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional id="captcha_modal" class="captcha_modal_pc captcha_modal_popup captcha_modal_radius" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional data-v-61c78f86="" aria-modal="true" role="dialog" lang="zh" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="captcha_footer" index="2" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional data-v-61c78f86="" class="slidetip sp_msg" index="0" index-of-type="0" />
+      </web>
+      <web x:name="img">
+        <optional data-v-61c78f86="" class="move-img" index="2" index-of-type="0" />
+      </web>
+    </selector>
+  </group>
+  <group id="52811280-002e-4e80-887e-8837c3539220" name="中国邮政速递物流" type="Web" processName="chrome" icon=".dev\icon\61997ca1-d3dc-4a09-9c2d-5b6527687fa6.png" criteria="https://www.ems.com.cn">
+    <selector name="test_huakuai" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="中国邮政速递物流" screenshot=".dev\screenshot\4b834435-44c5-4399-9c20-f50c5acb2c26.jpg">
+      <web x:name="div">
+        <optional data-v-44731f48="" class="el-dialog__wrapper" index="7" index-of-type="2" />
+      </web>
+      <web x:name="div">
+        <optional role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional class="el-dialog__body" index="1" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional data-v-201f3987="" data-v-44731f48="" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional data-v-201f3987="" id="slideVerify" onselectstart="return false;" class="slide-verify" index="1" index-of-type="0" />
+      </web>
+      <web x:name="div">
+        <optional data-v-201f3987="" class="slide-verify-slider" index="4" index-of-type="1" />
+      </web>
+      <web x:name="div">
+        <optional data-v-201f3987="" class="slide-verify-slider-mask" index="0" index-of-type="0" />
+      </web>
+      <web x:name="div" class="slide-verify-slider-mask-item">
+        <optional data-v-201f3987="" index="0" index-of-type="0" />
+      </web>
+    </selector>
+  </group>
+  <group id="54273692-9faf-4741-bb27-885f4729ed19" name="登录-VIP-供应商平台" type="Web" processName="chrome" icon=".dev\icon\23e5fe95-4663-4094-9374-7f21e76b9486.png" criteria="https://vis.vip.com">
+    <selector id="40fd8906-3428-4867-87d2-da6be5528793" name="唯品会验证码背景" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="登录-VIP-供应商平台" screenshot=".dev\screenshot\7657c573-fa72-4aa7-8f3d-1df705036809.jpg">
+      <web x:name="iframe">
+        <optional frameborder="0" scrolling="no" width="430" height="531" src="https://passport.vip.com/login/bLogin?whereFrom=vc&amp;gotype=2&amp;src=https://vis.vip.com/newloginPassport.php" class="login_new_iframe" index="2" index-of-type="0" />
+      </web>
+      <web x:name="div" class="vipsc_pop_inner">
+        <optional index="0" index-of-type="0" />
+      </web>
+    </selector>
+    <selector id="b072123c-4304-401b-89dd-d72a3bb4d009" name="块元素_1" type="simple" framework="chrome" processName="chrome" productName="Google Chrome" winTitle="登录-VIP-供应商平台" screenshot=".dev\screenshot\b9cd7200-f7b0-42a7-858d-7f53b677233b.jpg">
+      <web x:name="iframe">
+        <optional frameborder="0" scrolling="no" width="430" height="531" src="https://passport.vip.com/login/bLogin?whereFrom=vc&amp;gotype=2&amp;src=https://vis.vip.com/newloginPassport.php" class="login_new_iframe" index="2" index-of-type="0" />
+      </web>
+      <web x:name="div" class="vipsc_qimg_inner" xbox-display="true">
+        <optional index="1" index-of-type="1" />
+      </web>
+    </selector>
+  </group>
+</repository>

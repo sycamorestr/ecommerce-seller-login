@@ -1,0 +1,227 @@
+<root>
+  <item name="xbot_extensions.activity_fe2a1069" display="activity_fe2a1069" kind="module">
+    <item.method />
+    <item.desc>Chrome指令集
+个性化的chrome操作</item.desc>
+    <item name="xbot_extensions.activity_fe2a1069.Start" display="Start" kind="function" help="">
+      <item.method />
+      <item.desc>高级启动Chrome
+快速配置启动参数
+* @param URL，
+* @param 超时时长，
+* @param 窗口最大化，
+* @param 每个TAB使用单独进程，
+* @param 每个站点使用单独进程，
+* @param 调试端口，0不开启
+* @param 禁用弹窗阻止，
+* @param 缓存路径，重定义缓存路径
+* @param 禁用缓存，
+* @param 禁用图片，
+* @return web_page，
+</item.desc>
+      <item name="xbot_extensions.activity_fe2a1069.Start.get_start_args" display="get_start_args" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_fe2a1069.Start.main" display="main" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_fe2a1069.PopupBlocker" display="PopupBlocker" kind="function" help="">
+      <item.method />
+      <item.desc>弹窗屏蔽
+开启页面后调用，自动隐藏平台弹窗, 页面刷新后失效
+* @param 平台名称，
+</item.desc>
+      <item name="xbot_extensions.activity_fe2a1069.PopupBlocker.get_feature" display="get_feature" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_fe2a1069.PopupBlocker.hide_element" display="hide_element" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_fe2a1069.PopupBlocker.main" display="main" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_fe2a1069.ClickByXpath" display="ClickByXpath" kind="function" help="">
+      <item.method />
+      <item.desc>点击Xpath元素
+
+* @param xpathSelector，
+* @param 获取元素超时，
+* @param retry_count，重试次数，失败后重新查找，可配合自动刷新使用
+* @param refresh，查找元素失败后是否刷新页面
+* @param 按钮，left or right
+* @param 是否模拟人工，默认人工操作
+* @param 执行成功后等待，默认等待1秒钟
+* @param web_page，为None/不填默认匹配当前激活的窗帘
+* @param 是否为iframe对象，
+</item.desc>
+      <item name="xbot_extensions.activity_fe2a1069.ClickByXpath.test" display="test" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_fe2a1069.ClickByXpath.main" display="main" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_fe2a1069.InputByXpath" display="InputByXpath" kind="function" help="">
+      <item.method />
+      <item.desc>输入内容ByXpath
+使用xpath定位元素后输入内容
+* @param web_page，
+* @param xpath，
+* @param 输入内容，
+* @param 输入方式，剪切板/模拟人工
+* @param 等待元素存在，
+* @param 追加按键，不写就是不追加
+* @param 追加输入，
+* @param 操作完成后等待，秒
+* @param iframe跨域元素，
+</item.desc>
+      <item name="xbot_extensions.activity_fe2a1069.InputByXpath.do_press" display="do_press" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_fe2a1069.InputByXpath.main" display="main" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_fe2a1069.DataSelection" display="DataSelection" kind="function" help="">
+      <item.method />
+      <item.desc>通用日期勾选框架
+填入对应xpath后自动勾选目标日期
+* @param 日期，
+* @param 上一月_xpath，
+* @param 下一月_xpath，
+* @param 当前年_xpath，
+* @param 目标日期_xpath，
+* @param 年正则，
+* @param 月正则，
+* @param 当前月_xpath，
+* @param web_page，
+* @param 仅切换选择面板，只把面板切换到目标年月，不勾选
+* @param 模拟人工点击，
+</item.desc>
+      <item name="xbot_extensions.activity_fe2a1069.DataSelection.is_current_month" display="is_current_month" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_fe2a1069.DataSelection.main" display="main" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_fe2a1069.GetElementInnerText" display="GetElementInnerText" kind="function" help="">
+      <item.method />
+      <item.desc>获取元素String
+包含所有子元素的文本
+* @param web_page，
+* @param xpath，
+* @param 等待元素存在，
+* @return 元素内部文本，
+</item.desc>
+      <item name="xbot_extensions.activity_fe2a1069.GetElementInnerText.main" display="main" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_fe2a1069.GetDownloadPath" display="GetDownloadPath" kind="function" help="">
+      <item.method />
+      <item.desc>获取当前下载保存路径
+获取chrome文件保存路径并自动关闭下载保存询问
+* @return 默认下载路径，
+* @return 是否弹窗下载，
+* @return 下载路径下已存在文件数，
+</item.desc>
+      <item name="xbot_extensions.activity_fe2a1069.GetDownloadPath.sort_file_by_create_time" display="sort_file_by_create_time" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_fe2a1069.GetDownloadPath._get_chrome_pref_path" display="_get_chrome_pref_path" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_fe2a1069.GetDownloadPath.get_pref_path" display="get_pref_path" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_fe2a1069.GetDownloadPath.close_prompt_download" display="close_prompt_download" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_fe2a1069.GetDownloadPath.main" display="main" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_fe2a1069.process1" display="process1" kind="function" help="">
+      <item.method>process1()</item.method>
+      <item.desc>打开下载文件询问窗口
+临时指令，保证流程运行完毕后还原浏览器设置
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_fe2a1069.IsElementExists" display="IsElementExists" kind="function" help="">
+      <item.method />
+      <item.desc>元素是否存在
+
+* @param xpathSelector，
+* @param 获取元素超时，
+* @param web_page，为None/不填默认匹配当前激活的窗帘
+* @param 是否为iframe对象，
+* @return 是否存在，
+</item.desc>
+      <item name="xbot_extensions.activity_fe2a1069.IsElementExists.main" display="main" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_fe2a1069.GetShopName" display="GetShopName" kind="function" help="">
+      <item.method />
+      <item.desc>获取店铺名
+获取当前选择平台已登录的账户名【页面右上角的名称，暂不支持多店铺切换页面的多店铺获取】
+* @param 平台名称，
+* @param web_page，
+* @return 店铺名，
+</item.desc>
+      <item name="xbot_extensions.activity_fe2a1069.GetShopName.get_shopname_xpath" display="get_shopname_xpath" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_fe2a1069.GetShopName.main" display="main" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_fe2a1069.process2" display="process2" kind="function" help="">
+      <item.method>process2(web_page,url,跳转最大次数)</item.method>
+      <item.desc>URL检查
+检查页面url是否正确，不正确自动跳转
+* @param web_page，
+* @param url，
+* @param 跳转最大次数，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.activity_fe2a1069.HoverByXpath" display="HoverByXpath" kind="function" help="">
+      <item.method />
+      <item.desc>鼠标悬浮在元素上
+
+* @param web_page，
+* @param xpathSelector，
+* @param iframe跨域元素，
+* @param 模拟人工，
+* @param 等待元素存在，
+</item.desc>
+      <item name="xbot_extensions.activity_fe2a1069.HoverByXpath.main" display="main" kind="function" help="">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+  </item>
+</root>

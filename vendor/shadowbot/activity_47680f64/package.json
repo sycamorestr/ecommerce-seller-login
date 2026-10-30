@@ -1,0 +1,136 @@
+{
+  "uuid": "4ca1d406-b078-40cb-9c0d-6a94a6ed3335",
+  "name": "小工具指令集",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/computer.png",
+  "version": "1",
+  "tags": null,
+  "software": null,
+  "software_title": null,
+  "package_version": 2,
+  "description": "操作系统相关",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_47680f64",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null
+    },
+    {
+      "name": "DownAndMoveFile",
+      "filename": "DownAndMoveFile",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "文件相关"
+    },
+    {
+      "name": "CreateDir",
+      "filename": "CreateDir",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "文件相关"
+    },
+    {
+      "name": "test",
+      "filename": "test",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null
+    },
+    {
+      "name": "MoveToPardir",
+      "filename": "MoveToPardir",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "文件相关"
+    },
+    {
+      "name": "解压文件到当前目录",
+      "filename": "process1",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "文件相关"
+    },
+    {
+      "name": "下载一个文件",
+      "filename": "process2",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "文件相关"
+    },
+    {
+      "name": "快捷日期转换",
+      "filename": "process3",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "日期相关"
+    },
+    {
+      "name": "测试",
+      "filename": "process4",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null
+    },
+    {
+      "name": "入参校验",
+      "filename": "process5",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null
+    },
+    {
+      "name": "DateStringCheck",
+      "filename": "DateStringCheck",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "日期相关"
+    },
+    {
+      "name": "latest_email",
+      "filename": "latest_email",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null
+    },
+    {
+      "name": "get_SMS_code",
+      "filename": "get_SMS_code",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "日期相关"
+    },
+    {
+      "name": "文件相关"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [
+    "beautifulsoup4==4.12.2",
+    "bs4==0.0.1",
+    "DateTime==5.1",
+    "pytz==2023.3",
+    "soupsieve==2.4.1",
+    "zope.interface==6.0"
+  ],
+  "internaldependencies": [],
+  "internalautodependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "customItems": {}
+}

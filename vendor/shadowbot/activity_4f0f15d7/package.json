@@ -1,0 +1,281 @@
+{
+  "uuid": "06219532-065c-4568-a975-7ee5b9e7ac1a",
+  "name": "滑块拼图验证码(免费)",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/17/a1/17a1c148c522d40bf7e31a68809310a7.png",
+  "version": "1",
+  "tags": "official",
+  "software": null,
+  "software_title": null,
+  "package_version": 8,
+  "feature_list": [
+    2,
+    4,
+    8
+  ],
+  "description": "该指令集解决大部分滑块拼图验证码",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_4f0f15d7",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "通用滑块拼图验证码",
+      "filename": "process1",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "测试",
+      "filename": "process2",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "test",
+      "enableCopilot": false
+    },
+    {
+      "name": "test",
+      "filename": "test",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    },
+    {
+      "name": "通用滑块拼图验证码(win)",
+      "filename": "process3",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "Replace_Chinese_Path",
+      "filename": "Replace_Chinese_Path",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    },
+    {
+      "name": "utils",
+      "filename": "utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    },
+    {
+      "name": "slider_captcha",
+      "filename": "slider_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "slider_acceleration_captcha",
+      "filename": "slider_acceleration_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "slider_wanliniu",
+      "filename": "slider_wanliniu",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "bank_captcha_green",
+      "filename": "bank_captcha_green",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "shopee_captcha",
+      "filename": "shopee_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "arithmetic_captcha",
+      "filename": "arithmetic_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "zfb_rotate_captcha",
+      "filename": "zfb_rotate_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "dewu_captcha",
+      "filename": "dewu_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "temu_connect_captcha",
+      "filename": "temu_connect_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "shopee_similarity_silder_captcha",
+      "filename": "shopee_similarity_silder_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "temu_rotate_captcha",
+      "filename": "temu_rotate_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "temu_drag_photo_captcha",
+      "filename": "temu_drag_photo_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "temu_click_same_point_captcha",
+      "filename": "temu_click_same_point_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "shopee_similarity_move_captcha",
+      "filename": "shopee_similarity_move_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "fruit_content_captcha",
+      "filename": "fruit_content_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "svg_animation_captcha",
+      "filename": "svg_animation_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "gif_math_captcha",
+      "filename": "gif_math_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "tysfrzcs_slider_captcha",
+      "filename": "tysfrzcs_slider_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "captcha_vision",
+      "filename": "captcha_vision",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "src",
+      "enableCopilot": false
+    },
+    {
+      "name": "keeta_color_connect_capthca",
+      "filename": "keeta_color_connect_capthca",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "wph_color_charactor_captcha",
+      "filename": "wph_color_charactor_captcha",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "src"
+    },
+    {
+      "name": "test"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [
+    "numpy==1.21.6",
+    "opencv-python==4.11.0.86",
+    "scipy==1.7.3",
+    "requests==2.31.0"
+  ],
+  "internaldependencies": [],
+  "selectordependencies": [],
+  "internalautodependencies": [],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {
+    "videoUrl": null,
+    "imageUrl": null,
+    "imageName": null,
+    "gifUrl": null
+  },
+  "terminalTags": "win,macos,linux"
+}

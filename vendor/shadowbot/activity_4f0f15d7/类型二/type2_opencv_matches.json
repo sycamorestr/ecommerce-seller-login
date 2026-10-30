@@ -1,0 +1,3802 @@
+[
+  {
+    "group": "group_1",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3449,
+        "margin_to_next_reference": 0.0168,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4015,
+        "margin_to_next_reference": 0.0276,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4723,
+        "margin_to_next_reference": 0.0785,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.414,
+        "margin_to_next_reference": 0.0363,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_2",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4691,
+        "margin_to_next_reference": 0.0929,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5235,
+        "margin_to_next_reference": 0.08,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.2866,
+        "margin_to_next_reference": -0.1236,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4235,
+        "margin_to_next_reference": -0.0535,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_3",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4175,
+        "margin_to_next_reference": 0.0451,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3924,
+        "margin_to_next_reference": 0.023,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3658,
+        "margin_to_next_reference": 0.0181,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.2855,
+        "margin_to_next_reference": 0.0091,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_4",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3966,
+        "margin_to_next_reference": -0.0645,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5216,
+        "margin_to_next_reference": 0.0609,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4494,
+        "margin_to_next_reference": 0.0025,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.6464,
+        "margin_to_next_reference": 0.1925,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_5",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.433,
+        "margin_to_next_reference": 0.0104,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.331,
+        "margin_to_next_reference": -0.0197,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.6154,
+        "margin_to_next_reference": 0.1338,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3507,
+        "margin_to_next_reference": 0.008,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_6",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5123,
+        "margin_to_next_reference": 0.1393,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4747,
+        "margin_to_next_reference": 0.1039,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5445,
+        "margin_to_next_reference": 0.1121,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4022,
+        "margin_to_next_reference": -0.1002,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_7",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5242,
+        "margin_to_next_reference": 0.1071,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.483,
+        "margin_to_next_reference": 0.0095,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3299,
+        "margin_to_next_reference": -0.0344,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4882,
+        "margin_to_next_reference": 0.0367,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_8",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4282,
+        "margin_to_next_reference": 0.042,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3978,
+        "margin_to_next_reference": 0.0051,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.367,
+        "margin_to_next_reference": 0.0154,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4403,
+        "margin_to_next_reference": 0.0375,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_9",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4652,
+        "margin_to_next_reference": 0.0945,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3946,
+        "margin_to_next_reference": 0.0096,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4265,
+        "margin_to_next_reference": -0.015,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4518,
+        "margin_to_next_reference": 0.0656,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_10",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4633,
+        "margin_to_next_reference": 0.0779,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3765,
+        "margin_to_next_reference": -0.083,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5189,
+        "margin_to_next_reference": 0.1448,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.6401,
+        "margin_to_next_reference": 0.2502,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_11",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3988,
+        "margin_to_next_reference": 0.0643,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3553,
+        "margin_to_next_reference": 0.0383,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3102,
+        "margin_to_next_reference": 0.0294,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5179,
+        "margin_to_next_reference": 0.1767,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_12",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4045,
+        "margin_to_next_reference": -0.0254,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5084,
+        "margin_to_next_reference": 0.113,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4741,
+        "margin_to_next_reference": 0.0239,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4647,
+        "margin_to_next_reference": 0.0228,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_13",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3277,
+        "margin_to_next_reference": 0.0009,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.521,
+        "margin_to_next_reference": 0.1059,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4971,
+        "margin_to_next_reference": 0.002,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.487,
+        "margin_to_next_reference": 0.0358,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_14",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4654,
+        "margin_to_next_reference": 0.0885,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3614,
+        "margin_to_next_reference": 0.0917,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5082,
+        "margin_to_next_reference": 0.1586,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.2508,
+        "margin_to_next_reference": -0.0694,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_15",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4638,
+        "margin_to_next_reference": 0.0456,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4723,
+        "margin_to_next_reference": 0.0405,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4941,
+        "margin_to_next_reference": 0.1022,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4497,
+        "margin_to_next_reference": 0.0094,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_16",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4441,
+        "margin_to_next_reference": 0.0031,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4523,
+        "margin_to_next_reference": 0.0111,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4546,
+        "margin_to_next_reference": 0.0162,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.442,
+        "margin_to_next_reference": 0.0355,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_17",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5532,
+        "margin_to_next_reference": 0.0109,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5399,
+        "margin_to_next_reference": 0.1249,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5368,
+        "margin_to_next_reference": 0.0358,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4737,
+        "margin_to_next_reference": 0.0253,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_18",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4763,
+        "margin_to_next_reference": 0.0082,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4955,
+        "margin_to_next_reference": 0.0054,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.621,
+        "margin_to_next_reference": 0.2279,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5108,
+        "margin_to_next_reference": 0.0092,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_19",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3877,
+        "margin_to_next_reference": -0.0335,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4599,
+        "margin_to_next_reference": 0.0591,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5156,
+        "margin_to_next_reference": 0.0815,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4708,
+        "margin_to_next_reference": 0.0044,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_20",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4243,
+        "margin_to_next_reference": 0.018,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5787,
+        "margin_to_next_reference": 0.2385,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.2678,
+        "margin_to_next_reference": -0.053,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3831,
+        "margin_to_next_reference": 0.0027,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_21",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4934,
+        "margin_to_next_reference": 0.1379,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3935,
+        "margin_to_next_reference": 0.0161,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5224,
+        "margin_to_next_reference": 0.0614,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5221,
+        "margin_to_next_reference": 0.0849,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_22",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4086,
+        "margin_to_next_reference": 0.0298,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5367,
+        "margin_to_next_reference": 0.1662,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4865,
+        "margin_to_next_reference": 0.1599,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5029,
+        "margin_to_next_reference": 0.1007,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_23",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4613,
+        "margin_to_next_reference": 0.0467,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5087,
+        "margin_to_next_reference": 0.1269,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5321,
+        "margin_to_next_reference": 0.1497,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3889,
+        "margin_to_next_reference": -0.0853,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_24",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3941,
+        "margin_to_next_reference": -0.0091,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4675,
+        "margin_to_next_reference": 0.092,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4485,
+        "margin_to_next_reference": 0.0751,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.373,
+        "margin_to_next_reference": -0.0994,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_25",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4022,
+        "margin_to_next_reference": 0.0053,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4765,
+        "margin_to_next_reference": 0.1114,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4625,
+        "margin_to_next_reference": 0.105,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4182,
+        "margin_to_next_reference": 0.0291,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_26",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5272,
+        "margin_to_next_reference": 0.0494,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5322,
+        "margin_to_next_reference": 0.0219,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4762,
+        "margin_to_next_reference": 0.0031,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.54,
+        "margin_to_next_reference": 0.0673,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_27",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3231,
+        "margin_to_next_reference": -0.0406,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4562,
+        "margin_to_next_reference": 0.1141,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.417,
+        "margin_to_next_reference": 0.0826,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3611,
+        "margin_to_next_reference": -0.0462,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_28",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5633,
+        "margin_to_next_reference": 0.135,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4956,
+        "margin_to_next_reference": 0.1047,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5859,
+        "margin_to_next_reference": 0.1474,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4507,
+        "margin_to_next_reference": 0.008,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_29",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.457,
+        "margin_to_next_reference": -0.1052,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.6183,
+        "margin_to_next_reference": 0.1308,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3787,
+        "margin_to_next_reference": -0.1281,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5775,
+        "margin_to_next_reference": 0.126,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_30",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3855,
+        "margin_to_next_reference": 0.04,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4188,
+        "margin_to_next_reference": -0.0007,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3898,
+        "margin_to_next_reference": 0.0722,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.2872,
+        "margin_to_next_reference": -0.038,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_31",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.2768,
+        "margin_to_next_reference": -0.0261,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.506,
+        "margin_to_next_reference": 0.1367,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4875,
+        "margin_to_next_reference": 0.0707,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4909,
+        "margin_to_next_reference": 0.1322,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_32",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4724,
+        "margin_to_next_reference": 0.028,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4166,
+        "margin_to_next_reference": -0.0719,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4463,
+        "margin_to_next_reference": 0.0791,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5462,
+        "margin_to_next_reference": 0.1699,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_33",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5528,
+        "margin_to_next_reference": 0.1259,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4736,
+        "margin_to_next_reference": 0.0268,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4309,
+        "margin_to_next_reference": 0.0752,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3759,
+        "margin_to_next_reference": -0.0683,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_34",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4365,
+        "margin_to_next_reference": 0.0144,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3985,
+        "margin_to_next_reference": 0.0015,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4516,
+        "margin_to_next_reference": 0.0542,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4344,
+        "margin_to_next_reference": 0.0749,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_35",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.597,
+        "margin_to_next_reference": 0.1625,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4769,
+        "margin_to_next_reference": -0.0218,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.6044,
+        "margin_to_next_reference": 0.1913,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4641,
+        "margin_to_next_reference": 0.0388,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_36",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.597,
+        "margin_to_next_reference": 0.1625,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4769,
+        "margin_to_next_reference": -0.0218,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.6044,
+        "margin_to_next_reference": 0.1913,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4641,
+        "margin_to_next_reference": 0.0388,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_37",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.597,
+        "margin_to_next_reference": 0.1625,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4769,
+        "margin_to_next_reference": -0.0218,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.6044,
+        "margin_to_next_reference": 0.1913,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4641,
+        "margin_to_next_reference": 0.0388,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_38",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.597,
+        "margin_to_next_reference": 0.1625,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4769,
+        "margin_to_next_reference": -0.0218,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.6044,
+        "margin_to_next_reference": 0.1913,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4641,
+        "margin_to_next_reference": 0.0388,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_39",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4654,
+        "margin_to_next_reference": 0.0885,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3614,
+        "margin_to_next_reference": 0.0917,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5082,
+        "margin_to_next_reference": 0.1586,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.2508,
+        "margin_to_next_reference": -0.0694,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_40",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4363,
+        "margin_to_next_reference": 0.1376,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3695,
+        "margin_to_next_reference": -0.0811,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4143,
+        "margin_to_next_reference": 0.1281,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.325,
+        "margin_to_next_reference": -0.0064,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_41",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4611,
+        "margin_to_next_reference": 0.0099,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5291,
+        "margin_to_next_reference": 0.1189,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5325,
+        "margin_to_next_reference": 0.1695,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5171,
+        "margin_to_next_reference": 0.0586,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_42",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4319,
+        "margin_to_next_reference": 0.0974,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.347,
+        "margin_to_next_reference": 0.0224,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5312,
+        "margin_to_next_reference": 0.2011,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3525,
+        "margin_to_next_reference": -0.0419,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_43",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.371,
+        "margin_to_next_reference": 0.012,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3224,
+        "margin_to_next_reference": -0.0379,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5444,
+        "margin_to_next_reference": 0.1813,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4557,
+        "margin_to_next_reference": 0.0234,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_44",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5358,
+        "margin_to_next_reference": 0.0306,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3596,
+        "margin_to_next_reference": -0.0949,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.6415,
+        "margin_to_next_reference": 0.1945,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.634,
+        "margin_to_next_reference": 0.1814,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_45",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4266,
+        "margin_to_next_reference": 0.0119,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4898,
+        "margin_to_next_reference": 0.0291,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5576,
+        "margin_to_next_reference": 0.1227,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.342,
+        "margin_to_next_reference": -0.0745,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_46",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.531,
+        "margin_to_next_reference": 0.1772,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3789,
+        "margin_to_next_reference": -0.0131,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3945,
+        "margin_to_next_reference": -0.0581,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5124,
+        "margin_to_next_reference": 0.1726,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_47",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4633,
+        "margin_to_next_reference": 0.0779,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3765,
+        "margin_to_next_reference": -0.083,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5189,
+        "margin_to_next_reference": 0.1448,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.6401,
+        "margin_to_next_reference": 0.2502,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_48",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3449,
+        "margin_to_next_reference": 0.0168,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4015,
+        "margin_to_next_reference": 0.0276,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4723,
+        "margin_to_next_reference": 0.0785,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.414,
+        "margin_to_next_reference": 0.0363,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_49",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4698,
+        "margin_to_next_reference": 0.0357,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4395,
+        "margin_to_next_reference": 0.0461,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3855,
+        "margin_to_next_reference": -0.0327,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5354,
+        "margin_to_next_reference": 0.064,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_50",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.6632,
+        "margin_to_next_reference": 0.245,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4493,
+        "margin_to_next_reference": 0.1311,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.6445,
+        "margin_to_next_reference": 0.2481,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4127,
+        "margin_to_next_reference": -0.0554,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_51",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.452,
+        "margin_to_next_reference": -0.0058,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4657,
+        "margin_to_next_reference": 0.08,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.6025,
+        "margin_to_next_reference": 0.187,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4632,
+        "margin_to_next_reference": 0.1392,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_52",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.6032,
+        "margin_to_next_reference": 0.1153,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4951,
+        "margin_to_next_reference": 0.1447,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5501,
+        "margin_to_next_reference": 0.0488,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5072,
+        "margin_to_next_reference": 0.1425,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_53",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3877,
+        "margin_to_next_reference": -0.0335,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4599,
+        "margin_to_next_reference": 0.0591,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5156,
+        "margin_to_next_reference": 0.0815,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4708,
+        "margin_to_next_reference": 0.0044,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_54",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5665,
+        "margin_to_next_reference": 0.0971,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5322,
+        "margin_to_next_reference": 0.1146,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5134,
+        "margin_to_next_reference": 0.0753,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3459,
+        "margin_to_next_reference": -0.0401,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_55",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5528,
+        "margin_to_next_reference": 0.1259,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4736,
+        "margin_to_next_reference": 0.0268,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4309,
+        "margin_to_next_reference": 0.0752,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3759,
+        "margin_to_next_reference": -0.0683,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_56",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3922,
+        "margin_to_next_reference": -0.1024,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5472,
+        "margin_to_next_reference": 0.2276,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5616,
+        "margin_to_next_reference": 0.1706,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4967,
+        "margin_to_next_reference": 0.0479,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_57",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.6647,
+        "margin_to_next_reference": 0.1744,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.452,
+        "margin_to_next_reference": -0.0272,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.494,
+        "margin_to_next_reference": 0.0372,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5243,
+        "margin_to_next_reference": -0.0175,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_58",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5818,
+        "margin_to_next_reference": 0.2915,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3502,
+        "margin_to_next_reference": -0.0497,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5729,
+        "margin_to_next_reference": 0.2718,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3697,
+        "margin_to_next_reference": -0.0579,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_59",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3508,
+        "margin_to_next_reference": 0.0259,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5173,
+        "margin_to_next_reference": 0.0797,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4546,
+        "margin_to_next_reference": 0.139,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4803,
+        "margin_to_next_reference": 0.0909,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_60",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4498,
+        "margin_to_next_reference": 0.0958,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5329,
+        "margin_to_next_reference": 0.1692,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4607,
+        "margin_to_next_reference": 0.0976,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4007,
+        "margin_to_next_reference": 0.0555,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_61",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.6647,
+        "margin_to_next_reference": 0.1744,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.452,
+        "margin_to_next_reference": -0.0272,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.494,
+        "margin_to_next_reference": 0.0372,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5243,
+        "margin_to_next_reference": -0.0175,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_62",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.467,
+        "margin_to_next_reference": -0.0164,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.6204,
+        "margin_to_next_reference": 0.1024,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5687,
+        "margin_to_next_reference": 0.0527,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.6269,
+        "margin_to_next_reference": 0.091,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_63",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5299,
+        "margin_to_next_reference": 0.0891,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5851,
+        "margin_to_next_reference": 0.1547,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3792,
+        "margin_to_next_reference": -0.0607,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.557,
+        "margin_to_next_reference": 0.134,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_64",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5736,
+        "margin_to_next_reference": 0.1209,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4032,
+        "margin_to_next_reference": -0.0503,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.6245,
+        "margin_to_next_reference": 0.1691,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3496,
+        "margin_to_next_reference": -0.0469,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_65",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3878,
+        "margin_to_next_reference": 0.0173,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4508,
+        "margin_to_next_reference": 0.1426,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3585,
+        "margin_to_next_reference": 0.0106,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3307,
+        "margin_to_next_reference": 0.0253,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_66",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4753,
+        "margin_to_next_reference": -0.0017,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5297,
+        "margin_to_next_reference": 0.0455,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5232,
+        "margin_to_next_reference": 0.1208,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.6655,
+        "margin_to_next_reference": 0.1643,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_67",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4295,
+        "margin_to_next_reference": 0.0444,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3948,
+        "margin_to_next_reference": -0.0424,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5615,
+        "margin_to_next_reference": 0.0802,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5389,
+        "margin_to_next_reference": 0.0637,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_68",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4036,
+        "margin_to_next_reference": 0.0289,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4033,
+        "margin_to_next_reference": 0.0036,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4144,
+        "margin_to_next_reference": 0.0565,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.384,
+        "margin_to_next_reference": 0.0744,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_69",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4036,
+        "margin_to_next_reference": 0.0289,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4033,
+        "margin_to_next_reference": 0.0036,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4144,
+        "margin_to_next_reference": 0.0565,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.384,
+        "margin_to_next_reference": 0.0744,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_70",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3854,
+        "margin_to_next_reference": 0.056,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4791,
+        "margin_to_next_reference": 0.0382,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.355,
+        "margin_to_next_reference": -0.0671,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4576,
+        "margin_to_next_reference": 0.0793,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_71",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3854,
+        "margin_to_next_reference": 0.056,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4791,
+        "margin_to_next_reference": 0.0382,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.355,
+        "margin_to_next_reference": -0.0671,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4576,
+        "margin_to_next_reference": 0.0793,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_72",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3854,
+        "margin_to_next_reference": 0.056,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4791,
+        "margin_to_next_reference": 0.0382,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.355,
+        "margin_to_next_reference": -0.0671,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4576,
+        "margin_to_next_reference": 0.0793,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_73",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3854,
+        "margin_to_next_reference": 0.056,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4791,
+        "margin_to_next_reference": 0.0382,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.355,
+        "margin_to_next_reference": -0.0671,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4576,
+        "margin_to_next_reference": 0.0793,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_74",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3854,
+        "margin_to_next_reference": 0.056,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4791,
+        "margin_to_next_reference": 0.0382,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.355,
+        "margin_to_next_reference": -0.0671,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4576,
+        "margin_to_next_reference": 0.0793,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_75",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3854,
+        "margin_to_next_reference": 0.056,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4791,
+        "margin_to_next_reference": 0.0382,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.355,
+        "margin_to_next_reference": -0.0671,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4576,
+        "margin_to_next_reference": 0.0793,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_76",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3854,
+        "margin_to_next_reference": 0.056,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4791,
+        "margin_to_next_reference": 0.0382,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.355,
+        "margin_to_next_reference": -0.0671,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4576,
+        "margin_to_next_reference": 0.0793,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_77",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3854,
+        "margin_to_next_reference": 0.056,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4791,
+        "margin_to_next_reference": 0.0382,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.355,
+        "margin_to_next_reference": -0.0671,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4576,
+        "margin_to_next_reference": 0.0793,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_78",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3854,
+        "margin_to_next_reference": 0.056,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4791,
+        "margin_to_next_reference": 0.0382,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.355,
+        "margin_to_next_reference": -0.0671,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4576,
+        "margin_to_next_reference": 0.0793,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_79",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3854,
+        "margin_to_next_reference": 0.056,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4791,
+        "margin_to_next_reference": 0.0382,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.355,
+        "margin_to_next_reference": -0.0671,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4576,
+        "margin_to_next_reference": 0.0793,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_80",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3854,
+        "margin_to_next_reference": 0.056,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4791,
+        "margin_to_next_reference": 0.0382,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.355,
+        "margin_to_next_reference": -0.0671,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4576,
+        "margin_to_next_reference": 0.0793,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_81",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3854,
+        "margin_to_next_reference": 0.056,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4791,
+        "margin_to_next_reference": 0.0382,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.355,
+        "margin_to_next_reference": -0.0671,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4576,
+        "margin_to_next_reference": 0.0793,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_82",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.2943,
+        "margin_to_next_reference": -0.1222,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5842,
+        "margin_to_next_reference": 0.2673,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4702,
+        "margin_to_next_reference": 0.0795,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4771,
+        "margin_to_next_reference": 0.1435,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_83",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.558,
+        "margin_to_next_reference": 0.1187,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4616,
+        "margin_to_next_reference": 0.0345,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3599,
+        "margin_to_next_reference": -0.0685,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.5172,
+        "margin_to_next_reference": 0.0588,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_84",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4654,
+        "margin_to_next_reference": 0.0885,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.3614,
+        "margin_to_next_reference": 0.0917,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5082,
+        "margin_to_next_reference": 0.1586,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.2508,
+        "margin_to_next_reference": -0.0694,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_85",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4981,
+        "margin_to_next_reference": 0.0627,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5463,
+        "margin_to_next_reference": 0.0633,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5307,
+        "margin_to_next_reference": 0.0026,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3961,
+        "margin_to_next_reference": 0.0142,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_86",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5072,
+        "margin_to_next_reference": 0.0392,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4631,
+        "margin_to_next_reference": 0.0371,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5683,
+        "margin_to_next_reference": 0.1407,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4477,
+        "margin_to_next_reference": -0.0116,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_87",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4793,
+        "margin_to_next_reference": 0.0961,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5015,
+        "margin_to_next_reference": 0.1671,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5338,
+        "margin_to_next_reference": 0.2281,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4031,
+        "margin_to_next_reference": 0.067,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_88",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3107,
+        "margin_to_next_reference": -0.003,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4989,
+        "margin_to_next_reference": 0.1975,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5557,
+        "margin_to_next_reference": 0.2193,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4901,
+        "margin_to_next_reference": 0.1349,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_89",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5169,
+        "margin_to_next_reference": 0.0945,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3736,
+        "margin_to_next_reference": -0.0314,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5279,
+        "margin_to_next_reference": 0.0416,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5243,
+        "margin_to_next_reference": 0.0911,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_90",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5252,
+        "margin_to_next_reference": 0.1339,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4692,
+        "margin_to_next_reference": -0.0892,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.2607,
+        "margin_to_next_reference": -0.0405,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5276,
+        "margin_to_next_reference": 0.0946,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_91",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4981,
+        "margin_to_next_reference": 0.0627,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5463,
+        "margin_to_next_reference": 0.0633,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5307,
+        "margin_to_next_reference": 0.0026,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3961,
+        "margin_to_next_reference": 0.0142,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_92",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4774,
+        "margin_to_next_reference": 0.0022,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3601,
+        "margin_to_next_reference": -0.0837,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.5525,
+        "margin_to_next_reference": 0.0508,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.6515,
+        "margin_to_next_reference": 0.1369,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_93",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3363,
+        "margin_to_next_reference": -0.0621,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.494,
+        "margin_to_next_reference": 0.0279,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.545,
+        "margin_to_next_reference": 0.0699,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5202,
+        "margin_to_next_reference": -0.0001,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_94",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4025,
+        "margin_to_next_reference": 0.0415,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3531,
+        "margin_to_next_reference": -0.0622,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5181,
+        "margin_to_next_reference": 0.1483,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3908,
+        "margin_to_next_reference": 0.0009,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_95",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3505,
+        "margin_to_next_reference": 0.0163,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3928,
+        "margin_to_next_reference": 0.0588,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3643,
+        "margin_to_next_reference": 0.0664,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4354,
+        "margin_to_next_reference": 0.0289,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_96",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4946,
+        "margin_to_next_reference": 0.0215,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4507,
+        "margin_to_next_reference": 0.0201,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5403,
+        "margin_to_next_reference": 0.0067,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4228,
+        "margin_to_next_reference": 0.0189,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_97",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4403,
+        "margin_to_next_reference": 0.0147,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4945,
+        "margin_to_next_reference": 0.0193,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4915,
+        "margin_to_next_reference": 0.0108,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4547,
+        "margin_to_next_reference": 0.0911,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_98",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4068,
+        "margin_to_next_reference": 0.0756,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.2994,
+        "margin_to_next_reference": -0.0626,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4109,
+        "margin_to_next_reference": 0.0834,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.4355,
+        "margin_to_next_reference": 0.0982,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  },
+  {
+    "group": "group_99",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4228,
+        "margin_to_next_reference": 0.0519,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.4083,
+        "margin_to_next_reference": 0.0847,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.2932,
+        "margin_to_next_reference": -0.0266,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4537,
+        "margin_to_next_reference": 0.0736,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      }
+    ]
+  },
+  {
+    "group": "group_100",
+    "reference_card_count": 3,
+    "matches": [
+      {
+        "image": "img_2.png",
+        "same_animal_as_reference_card": 3,
+        "similarity": 0.4025,
+        "margin_to_next_reference": 0.0415,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_3.png",
+        "same_animal_as_reference_card": 2,
+        "similarity": 0.3531,
+        "margin_to_next_reference": -0.0622,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      },
+      {
+        "image": "img_4.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.5181,
+        "margin_to_next_reference": 0.1483,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": false
+      },
+      {
+        "image": "img_5.png",
+        "same_animal_as_reference_card": 1,
+        "similarity": 0.3908,
+        "margin_to_next_reference": 0.0009,
+        "assignment_mode": "cover_all_references",
+        "review_recommended": true
+      }
+    ]
+  }
+]

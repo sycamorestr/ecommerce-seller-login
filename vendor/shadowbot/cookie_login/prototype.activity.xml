@@ -1,0 +1,33 @@
+<root>
+  <item name="xbot_extensions.cookie_login" display="cookie_login" kind="module">
+    <item.method />
+    <item.desc>Cookie登录操作
+该指令集实现了保存Cookie和使用Cookie登录已经Cookie退出登录的操作</item.desc>
+    <item name="xbot_extensions.cookie_login.process1" display="process1" kind="function" help="/yddoc/rpa/zh-CN/889696286775353344">
+      <item.method>process1(网页对象,保存路径,partition_key)</item.method>
+      <item.desc>保存Cookie
+保存当前网页的 Cookie 和 local_storage，用于下次登录
+* @param 网页对象，
+* @param 保存路径，
+* @param partition_key，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.cookie_login.process2" display="process2" kind="function" help="/yddoc/rpa/zh-CN/889696295277207552">
+      <item.method>process2(网页对象,Cookie文件路径,添加本地存储)</item.method>
+      <item.desc>Cookie登录
+使用保存的Cookie实现登录操作
+* @param 网页对象，
+* @param Cookie文件路径，
+* @param 添加本地存储，
+</item.desc>
+    </item>
+    <item name="xbot_extensions.cookie_login.process3" display="process3" kind="function" help="/yddoc/rpa/zh-CN/889696304956309504">
+      <item.method>process3(网页对象,删除本地存储)</item.method>
+      <item.desc>Cookie退出登录
+通过删除Cookie实现退出登录操作
+* @param 网页对象，
+* @param 删除本地存储，
+</item.desc>
+    </item>
+  </item>
+</root>

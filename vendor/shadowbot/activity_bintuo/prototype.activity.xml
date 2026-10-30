@@ -1,0 +1,75 @@
+<root>
+  <item name="xbot_extensions.activity_bintuo" display="activity_bintuo" kind="module">
+    <item.method />
+    <item.desc>冰拓验证码扩展
+该指令集借助冰拓平台能力实现验证码自动化操作</item.desc>
+    <item name="xbot_extensions.activity_bintuo.zfb_click" display="zfb_click" kind="function" help="/yddoc/rpa/zh-CN/788248698962046976">
+      <item.method />
+      <item.desc>支付宝点选验证
+该指令调用冰拓的接口实现了支付宝点选验证码的验证
+* @param web_page，
+* @param username，
+* @param password，
+* @param background_ele，
+* @param retry，
+* @param engine，
+</item.desc>
+      <item name="xbot_extensions.activity_bintuo.zfb_click.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/788248698962046976">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_bintuo.zfb_click.test_func" display="test_func" kind="function" help="/yddoc/rpa/zh-CN/788248698962046976">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_bintuo.zfb_click.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/788248698962046976">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_bintuo.jd_route" display="jd_route" kind="function" help="/yddoc/rpa/zh-CN/791562641532317696">
+      <item.method />
+      <item.desc>京东旋转验证-冰拓
+该指令调用冰拓的接口实现了京东选择验证码的验证
+* @param web_page，
+* @param username，
+* @param password，
+* @param background_ele，
+* @param retry，
+* @param slider_elem，
+* @param drag_elem，
+* @param engine，
+</item.desc>
+      <item name="xbot_extensions.activity_bintuo.jd_route.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/791562641532317696">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_bintuo.jd_route.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/791562641532317696">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+    <item name="xbot_extensions.activity_bintuo.dw_slider" display="dw_slider" kind="function" help="/yddoc/rpa/zh-CN/803180005163638784">
+      <item.method />
+      <item.desc>得物拼图滑动验证
+该指令调用冰拓的接口实现了得物滑块拼图验证码的验证
+* @param web_page，
+* @param username，
+* @param password，
+* @param retry，
+* @param slider_elem，
+* @param drag_elem，
+* @param engine，
+* @param background_ele，
+</item.desc>
+      <item name="xbot_extensions.activity_bintuo.dw_slider.handle_captcha" display="handle_captcha" kind="function" help="/yddoc/rpa/zh-CN/803180005163638784">
+        <item.method />
+        <item.desc />
+      </item>
+      <item name="xbot_extensions.activity_bintuo.dw_slider.main" display="main" kind="function" help="/yddoc/rpa/zh-CN/803180005163638784">
+        <item.method />
+        <item.desc />
+      </item>
+    </item>
+  </item>
+</root>

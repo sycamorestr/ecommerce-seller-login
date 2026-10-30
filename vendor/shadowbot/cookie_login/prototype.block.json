@@ -1,0 +1,240 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.cookie_login.main",
+      "statement": "process.invoke_activity",
+      "title": "Cookie登录操作",
+      "keywords": "",
+      "description": "该指令集实现了保存Cookie和使用Cookie登录已经Cookie退出登录的操作",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/f5/f3/f5f365f650fced5a50ef39ebde3cf16c.png",
+      "function": "xbot_extensions.cookie_login.main",
+      "helpUrl": null,
+      "extension": "Cookie登录操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.cookie_login._core",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.cookie_login._core",
+      "helpUrl": null,
+      "extension": "Cookie登录操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.cookie_login.A1 保存Cookie",
+      "statement": "process.invoke_activity",
+      "title": "保存Cookie",
+      "keywords": "",
+      "description": "保存当前网页的 Cookie 和 local_storage，用于下次登录",
+      "comment": "将网页%网页对象%中的 Cookie 和 local_storage信息保存至文件%保存路径%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/a8/da/a8da91ca6de8b582926b2db5845945e5.png",
+      "function": "xbot_extensions.cookie_login.process1",
+      "helpUrl": "/yddoc/rpa/zh-CN/889696286775353344",
+      "extension": "Cookie登录操作",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": true,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "保存路径",
+          "label": "保存路径",
+          "required": true,
+          "tips": "用于存储Cookie信息的文件路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "填写完整的文件路径",
+            "dialog": {
+              "type": "SaveFile",
+              "filter": "json文件|*.json",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "partition_key",
+          "label": "partition_key",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.cookie_login.A2 Cookie登录",
+      "statement": "process.invoke_activity",
+      "title": "Cookie登录",
+      "keywords": "",
+      "description": "使用保存的Cookie实现登录操作",
+      "comment": "在网页%网页对象%中，使用 Cookie文件%Cookie文件路径%实现登录操作",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/db/91/db914d6e0fa3b26cb01d207dcaf0b8fd.png",
+      "function": "xbot_extensions.cookie_login.process2",
+      "helpUrl": "/yddoc/rpa/zh-CN/889696295277207552",
+      "extension": "Cookie登录操作",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": true,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true,
+            "options": []
+          },
+          "category": "general"
+        },
+        {
+          "name": "Cookie文件路径",
+          "label": "Cookie文件路径",
+          "required": true,
+          "tips": "通过【保存Cookie】指令存储的Cookie文件路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "通过【保存Cookie】指令存储的Cookie文件路径",
+            "dialog": {
+              "type": "OpenFile",
+              "filter": "所有文件|*.json",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "添加本地存储",
+          "label": "",
+          "required": false,
+          "tips": "有的网站需要添加本地存储才能登录，有的网站不需要添加本地存储，一定要根据网站来决定，不要一股脑勾选\r\n",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "添加本地存储"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.cookie_login.A3 Cookie退出登录",
+      "statement": "process.invoke_activity",
+      "title": "Cookie退出登录",
+      "keywords": "",
+      "description": "通过删除Cookie实现退出登录操作",
+      "comment": "删除网页%网页对象%中的Cookie信息，实现退出登录操作",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/a3/36/a33650dc842d323aacafb74303db4f5e.png",
+      "function": "xbot_extensions.cookie_login.process3",
+      "helpUrl": "/yddoc/rpa/zh-CN/889696304956309504",
+      "extension": "Cookie登录操作",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "删除本地存储",
+          "label": "",
+          "required": false,
+          "tips": "有的网站需要删除本地存储才能退出登录，有的网站不需要删除，一定要根据网站来决定，不要一股脑勾选",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "删除本地存储"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.cookie_login.test",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.cookie_login.test",
+      "helpUrl": null,
+      "extension": "Cookie登录操作",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    }
+  ]
+}

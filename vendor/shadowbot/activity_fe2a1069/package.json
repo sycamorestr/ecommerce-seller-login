@@ -1,0 +1,166 @@
+{
+  "uuid": "455acfa1-1e9c-4da4-8e02-0812f4092361",
+  "name": "Chrome指令集",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/04%E7%95%8C%E9%9D%A2/advertisement_page.png",
+  "version": "1",
+  "tags": "official",
+  "software": null,
+  "software_title": null,
+  "package_version": 2,
+  "feature_list": [
+    2
+  ],
+  "description": "个性化的chrome操作",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_fe2a1069",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "Start",
+      "filename": "Start",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "PopupBlocker",
+      "filename": "PopupBlocker",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "ClickByXpath",
+      "filename": "ClickByXpath",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "InputByXpath",
+      "filename": "InputByXpath",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "DataSelection",
+      "filename": "DataSelection",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "GetElementInnerText",
+      "filename": "GetElementInnerText",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "GetDownloadPath",
+      "filename": "GetDownloadPath",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "打开下载文件询问",
+      "filename": "process1",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "IsElementExists",
+      "filename": "IsElementExists",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "GetShopName",
+      "filename": "GetShopName",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "URL检查",
+      "filename": "process2",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "测试",
+      "filename": "process3",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "HoverByXpath",
+      "filename": "HoverByXpath",
+      "kind": "Code",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "test",
+      "filename": "test",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [],
+  "variables": [],
+  "external_dependencies": [
+    "DateTime==5.1",
+    "pytz==2023.3",
+    "zope.interface==6.0"
+  ],
+  "internaldependencies": [
+    "activity_ea8fd401==23.6.4"
+  ],
+  "selectordependencies": [],
+  "internalautodependencies": [
+    "activity_ea8fd401"
+  ],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {},
+  "terminalTags": null
+}

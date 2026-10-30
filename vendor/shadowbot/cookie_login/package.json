@@ -1,0 +1,89 @@
+{
+  "uuid": "69006cb7-dbed-4223-9df1-48e090e47f3b",
+  "name": "Cookie登录操作",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/f5/f3/f5f365f650fced5a50ef39ebde3cf16c.png",
+  "version": "1",
+  "tags": null,
+  "software": null,
+  "software_title": null,
+  "package_version": 2,
+  "feature_list": [
+    2
+  ],
+  "description": "该指令集实现了保存Cookie和使用Cookie登录已经Cookie退出登录的操作",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "cookie_login",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null
+    },
+    {
+      "name": "_core",
+      "filename": "_core",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "py"
+    },
+    {
+      "name": "A1 保存Cookie",
+      "filename": "process1",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A Cookie操作"
+    },
+    {
+      "name": "A2 Cookie登录",
+      "filename": "process2",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A Cookie操作"
+    },
+    {
+      "name": "A3 Cookie退出登录",
+      "filename": "process3",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A Cookie操作"
+    },
+    {
+      "name": "test",
+      "filename": "test",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "py"
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "A Cookie操作"
+    },
+    {
+      "name": "py"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [
+    "arrow==1.2.3"
+  ],
+  "internaldependencies": [],
+  "selectordependencies": [],
+  "internalautodependencies": [],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {},
+  "terminalTags": "win,macos,linux"
+}

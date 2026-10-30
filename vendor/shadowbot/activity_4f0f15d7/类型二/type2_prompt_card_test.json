@@ -1,0 +1,1411 @@
+[
+  {
+    "group": "group_1",
+    "detected": [
+      "鲸",
+      "兔",
+      "兔"
+    ],
+    "expected": [
+      "狮",
+      "猴",
+      "鲸"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_2",
+    "detected": [
+      "鹿",
+      "鹿",
+      "兔"
+    ],
+    "expected": [
+      "熊",
+      "狮",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_3",
+    "detected": [
+      "鲸",
+      "草莓",
+      "猴"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鲸"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_4",
+    "detected": [
+      "鹿",
+      "兔",
+      "狮"
+    ],
+    "expected": [
+      "熊",
+      "狮",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_5",
+    "detected": [
+      "兔",
+      "海豹",
+      "鲸"
+    ],
+    "expected": [
+      "兔",
+      "海豹",
+      "鲸"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_6",
+    "detected": [
+      "兔",
+      "兔",
+      "猴"
+    ],
+    "expected": [
+      "兔",
+      "狮",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_7",
+    "detected": [
+      "熊",
+      "海豹",
+      "鲸"
+    ],
+    "expected": [
+      "熊",
+      "猴",
+      "鲸"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_8",
+    "detected": [
+      "兔",
+      "草莓",
+      "兔"
+    ],
+    "expected": [
+      "海豹",
+      "狮",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_9",
+    "detected": [
+      "鹿",
+      "海豹",
+      "熊"
+    ],
+    "expected": [
+      "海豹",
+      "熊",
+      "鹿"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_10",
+    "detected": [
+      "兔",
+      "草莓",
+      "猴"
+    ],
+    "expected": [
+      "兔",
+      "熊",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_11",
+    "detected": [
+      "狮",
+      "鲸",
+      "猴"
+    ],
+    "expected": [
+      "海豹",
+      "狮",
+      "鲸"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_12",
+    "detected": [
+      "猴",
+      "海豹",
+      "熊"
+    ],
+    "expected": [
+      "海豹",
+      "熊",
+      "猴"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_13",
+    "detected": [
+      "兔",
+      "鲸",
+      "猴"
+    ],
+    "expected": [
+      "狮",
+      "猴",
+      "鲸"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_14",
+    "detected": [
+      "海豹",
+      "熊",
+      "鲸",
+      "鹿"
+    ],
+    "expected": [
+      "熊",
+      "鲸",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_15",
+    "detected": [
+      "鹿",
+      "兔",
+      "猴"
+    ],
+    "expected": [
+      "狮",
+      "猴",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_16",
+    "detected": [
+      "猴",
+      "猴",
+      "鹿"
+    ],
+    "expected": [
+      "熊",
+      "猴",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_17",
+    "detected": [
+      "熊",
+      "熊",
+      "草莓"
+    ],
+    "expected": [
+      "熊",
+      "狮",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_18",
+    "detected": [
+      "狮",
+      "猴",
+      "兔"
+    ],
+    "expected": [
+      "兔",
+      "狮",
+      "猴"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_19",
+    "detected": [
+      "兔",
+      "海豹",
+      "兔"
+    ],
+    "expected": [
+      "兔",
+      "海豹",
+      "猴"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_20",
+    "detected": [
+      "草莓",
+      "兔",
+      "熊"
+    ],
+    "expected": [
+      "熊",
+      "草莓",
+      "鲸"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_21",
+    "detected": [
+      "猴",
+      "草莓",
+      "鹿"
+    ],
+    "expected": [
+      "海豹",
+      "狮",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_22",
+    "detected": [
+      "草莓",
+      "猴",
+      "鲸"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鲸"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_23",
+    "detected": [
+      "兔",
+      "草莓",
+      "海豹"
+    ],
+    "expected": [
+      "熊",
+      "狮",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_24",
+    "detected": [
+      "兔",
+      "熊",
+      "兔"
+    ],
+    "expected": [
+      "海豹",
+      "熊",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_25",
+    "detected": [
+      "鲸",
+      "鹿",
+      "草莓"
+    ],
+    "expected": [
+      "草莓",
+      "鲸",
+      "鹿"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_26",
+    "detected": [
+      "兔",
+      "海豹",
+      "草莓"
+    ],
+    "expected": [
+      "海豹",
+      "狮",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_27",
+    "detected": [
+      "熊",
+      "兔",
+      "鹿"
+    ],
+    "expected": [
+      "兔",
+      "熊",
+      "鹿"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_28",
+    "detected": [
+      "草莓",
+      "海豹",
+      "草莓"
+    ],
+    "expected": [
+      "狮",
+      "猴",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_29",
+    "detected": [
+      "猴",
+      "草莓",
+      "猴"
+    ],
+    "expected": [
+      "兔",
+      "熊",
+      "猴"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_30",
+    "detected": [
+      "兔",
+      "草莓",
+      "兔"
+    ],
+    "expected": [
+      "兔",
+      "海豹",
+      "鲸"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_31",
+    "detected": [
+      "草莓",
+      "草莓",
+      "兔"
+    ],
+    "expected": [
+      "兔",
+      "狮",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_32",
+    "detected": [
+      "海豹",
+      "草莓",
+      "熊"
+    ],
+    "expected": [
+      "海豹",
+      "狮",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_33",
+    "detected": [
+      "猴",
+      "猴",
+      "狮"
+    ],
+    "expected": [
+      "狮",
+      "猴",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_34",
+    "detected": [
+      "猴",
+      "草莓",
+      "兔"
+    ],
+    "expected": [
+      "熊",
+      "猴",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_35",
+    "detected": [
+      "鹿",
+      "草莓",
+      "狮"
+    ],
+    "expected": [
+      "狮",
+      "猴",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_36",
+    "detected": [
+      "鹿",
+      "草莓",
+      "狮"
+    ],
+    "expected": [
+      "狮",
+      "猴",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_37",
+    "detected": [
+      "鹿",
+      "草莓",
+      "狮"
+    ],
+    "expected": [
+      "狮",
+      "猴",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_38",
+    "detected": [
+      "鹿",
+      "草莓",
+      "狮"
+    ],
+    "expected": [
+      "狮",
+      "猴",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_39",
+    "detected": [
+      "海豹",
+      "熊",
+      "鲸",
+      "鹿"
+    ],
+    "expected": [
+      "熊",
+      "鲸",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_40",
+    "detected": [
+      "兔",
+      "熊",
+      "鲸"
+    ],
+    "expected": [
+      "兔",
+      "熊",
+      "鲸"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_41",
+    "detected": [
+      "熊",
+      "海豹",
+      "草莓"
+    ],
+    "expected": [
+      "海豹",
+      "熊",
+      "草莓"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_42",
+    "detected": [
+      "熊",
+      "草莓",
+      "猴"
+    ],
+    "expected": [
+      "兔",
+      "狮",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_43",
+    "detected": [
+      "鲸",
+      "兔",
+      "草莓"
+    ],
+    "expected": [
+      "兔",
+      "草莓",
+      "鲸"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_44",
+    "detected": [
+      "猴",
+      "兔",
+      "狮"
+    ],
+    "expected": [
+      "兔",
+      "狮",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_45",
+    "detected": [
+      "兔",
+      "鹿",
+      "熊"
+    ],
+    "expected": [
+      "兔",
+      "熊",
+      "鹿"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_46",
+    "detected": [
+      "海豹",
+      "兔",
+      "猴"
+    ],
+    "expected": [
+      "兔",
+      "海豹",
+      "猴"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_47",
+    "detected": [
+      "兔",
+      "草莓",
+      "猴"
+    ],
+    "expected": [
+      "兔",
+      "熊",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_48",
+    "detected": [
+      "鲸",
+      "兔",
+      "兔"
+    ],
+    "expected": [
+      "狮",
+      "猴",
+      "鲸"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_49",
+    "detected": [
+      "海豹",
+      "兔",
+      "熊"
+    ],
+    "expected": [
+      "兔",
+      "熊",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_50",
+    "detected": [
+      "兔",
+      "草莓",
+      "草莓"
+    ],
+    "expected": [
+      "兔",
+      "海豹",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_51",
+    "detected": [
+      "海豹",
+      "熊",
+      "兔"
+    ],
+    "expected": [
+      "兔",
+      "海豹",
+      "熊"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_52",
+    "detected": [
+      "猴",
+      "兔",
+      "海豹"
+    ],
+    "expected": [
+      "兔",
+      "猴",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_53",
+    "detected": [
+      "兔",
+      "海豹",
+      "兔"
+    ],
+    "expected": [
+      "兔",
+      "海豹",
+      "猴"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_54",
+    "detected": [
+      "兔",
+      "兔",
+      "熊"
+    ],
+    "expected": [
+      "兔",
+      "熊",
+      "狮"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_55",
+    "detected": [
+      "猴",
+      "猴",
+      "狮"
+    ],
+    "expected": [
+      "狮",
+      "猴",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_56",
+    "detected": [
+      "草莓",
+      "草莓",
+      "鹿"
+    ],
+    "expected": [
+      "狮",
+      "猴",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_57",
+    "detected": [
+      "狮",
+      "兔",
+      "猴"
+    ],
+    "expected": [
+      "海豹",
+      "熊",
+      "狮",
+      "猴"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_58",
+    "detected": [
+      "兔",
+      "鲸",
+      "狮"
+    ],
+    "expected": [
+      "兔",
+      "狮",
+      "鲸"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_59",
+    "detected": [
+      "海豹",
+      "狮",
+      "鲸"
+    ],
+    "expected": [
+      "海豹",
+      "狮",
+      "鲸"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_60",
+    "detected": [
+      "鲸",
+      "草莓",
+      "熊"
+    ],
+    "expected": [
+      "兔",
+      "草莓",
+      "鲸"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_61",
+    "detected": [
+      "狮",
+      "兔",
+      "猴"
+    ],
+    "expected": [
+      "海豹",
+      "熊",
+      "狮",
+      "猴"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_62",
+    "detected": [
+      "海豹",
+      "狮",
+      "熊"
+    ],
+    "expected": [
+      "海豹",
+      "熊",
+      "狮"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_63",
+    "detected": [
+      "兔",
+      "鹿",
+      "海豹"
+    ],
+    "expected": [
+      "兔",
+      "狮",
+      "猴"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_64",
+    "detected": [
+      "兔",
+      "鹿",
+      "熊"
+    ],
+    "expected": [
+      "兔",
+      "熊",
+      "猴"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_65",
+    "detected": [
+      "猴",
+      "熊",
+      "猴",
+      "兔"
+    ],
+    "expected": [
+      "兔",
+      "海豹",
+      "鲸"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_66",
+    "detected": [
+      "草莓",
+      "草莓",
+      "熊"
+    ],
+    "expected": [
+      "熊",
+      "狮",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_67",
+    "detected": [
+      "兔",
+      "海豹",
+      "海豹"
+    ],
+    "expected": [
+      "兔",
+      "海豹",
+      "熊"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_68",
+    "detected": [
+      "兔",
+      "兔",
+      "鹿"
+    ],
+    "expected": [
+      "兔",
+      "狮",
+      "鲸"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_69",
+    "detected": [
+      "兔",
+      "兔",
+      "鹿"
+    ],
+    "expected": [
+      "兔",
+      "狮",
+      "鲸"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_70",
+    "detected": [
+      "兔",
+      "鹿",
+      "草莓"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_71",
+    "detected": [
+      "兔",
+      "鹿",
+      "草莓"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_72",
+    "detected": [
+      "兔",
+      "鹿",
+      "草莓"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_73",
+    "detected": [
+      "兔",
+      "鹿",
+      "草莓"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_74",
+    "detected": [
+      "兔",
+      "鹿",
+      "草莓"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_75",
+    "detected": [
+      "兔",
+      "鹿",
+      "草莓"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_76",
+    "detected": [
+      "兔",
+      "鹿",
+      "草莓"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_77",
+    "detected": [
+      "兔",
+      "鹿",
+      "草莓"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_78",
+    "detected": [
+      "兔",
+      "鹿",
+      "草莓"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_79",
+    "detected": [
+      "兔",
+      "鹿",
+      "草莓"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_80",
+    "detected": [
+      "兔",
+      "鹿",
+      "草莓"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_81",
+    "detected": [
+      "兔",
+      "鹿",
+      "草莓"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_82",
+    "detected": [
+      "草莓",
+      "狮",
+      "猴"
+    ],
+    "expected": [
+      "狮",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_83",
+    "detected": [
+      "兔",
+      "草莓",
+      "草莓"
+    ],
+    "expected": [
+      "兔",
+      "海豹",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_84",
+    "detected": [
+      "海豹",
+      "熊",
+      "鲸",
+      "鹿"
+    ],
+    "expected": [
+      "熊",
+      "鲸",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_85",
+    "detected": [
+      "狮",
+      "兔",
+      "熊"
+    ],
+    "expected": [
+      "兔",
+      "熊",
+      "狮"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_86",
+    "detected": [
+      "草莓",
+      "海豹",
+      "狮"
+    ],
+    "expected": [
+      "熊",
+      "狮",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_87",
+    "detected": [
+      "鹿",
+      "兔",
+      "鲸"
+    ],
+    "expected": [
+      "兔",
+      "草莓",
+      "鲸"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_88",
+    "detected": [
+      "海豹",
+      "草莓",
+      "猴"
+    ],
+    "expected": [
+      "猴",
+      "草莓",
+      "鲸"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_89",
+    "detected": [
+      "猴",
+      "猴",
+      "兔",
+      "狮"
+    ],
+    "expected": [
+      "海豹",
+      "狮",
+      "猴"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_90",
+    "detected": [
+      "鹿",
+      "草莓",
+      "兔"
+    ],
+    "expected": [
+      "兔",
+      "鲸",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_91",
+    "detected": [
+      "狮",
+      "兔",
+      "熊"
+    ],
+    "expected": [
+      "兔",
+      "熊",
+      "狮"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_92",
+    "detected": [
+      "草莓",
+      "鲸",
+      "兔"
+    ],
+    "expected": [
+      "兔",
+      "鲸",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_93",
+    "detected": [
+      "熊",
+      "猴",
+      "海豹",
+      "海豹"
+    ],
+    "expected": [
+      "海豹",
+      "熊",
+      "猴"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_94",
+    "detected": [
+      "海豹",
+      "猴",
+      "猴",
+      "兔"
+    ],
+    "expected": [
+      "兔",
+      "熊",
+      "草莓"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_95",
+    "detected": [
+      "鹿",
+      "海豹",
+      "草莓"
+    ],
+    "expected": [
+      "草莓",
+      "鲸",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_96",
+    "detected": [
+      "熊",
+      "鹿",
+      "海豹"
+    ],
+    "expected": [
+      "海豹",
+      "熊",
+      "鹿"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_97",
+    "detected": [
+      "草莓",
+      "猴",
+      "兔"
+    ],
+    "expected": [
+      "兔",
+      "猴",
+      "草莓"
+    ],
+    "set_match": true
+  },
+  {
+    "group": "group_98",
+    "detected": [
+      "鹿",
+      "海豹",
+      "鲸"
+    ],
+    "expected": [
+      "海豹",
+      "熊",
+      "鹿"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_99",
+    "detected": [
+      "熊",
+      "草莓",
+      "草莓"
+    ],
+    "expected": [
+      "熊",
+      "草莓",
+      "鲸"
+    ],
+    "set_match": false
+  },
+  {
+    "group": "group_100",
+    "detected": [
+      "海豹",
+      "猴",
+      "猴",
+      "兔"
+    ],
+    "expected": [
+      "兔",
+      "熊",
+      "草莓"
+    ],
+    "set_match": false
+  }
+]

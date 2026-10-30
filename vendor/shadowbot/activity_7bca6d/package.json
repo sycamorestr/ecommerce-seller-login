@@ -1,0 +1,671 @@
+{
+  "uuid": "580b3ebf-3b58-4225-a3eb-816095d6ae48",
+  "name": "登录扩展操作",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/2b/74/2b749bd06ddc78362fcafb714860d347.png",
+  "version": "24.1.13",
+  "tags": "official",
+  "software": null,
+  "software_title": null,
+  "package_version": 8,
+  "feature_list": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "description": "淘宝登录，京东登录，抖音登录，有赞登录，支付宝登录，抖音罗盘登录，拖动滑块，巨量登录等",
+  "instruction": "天猫超市登录使用说明：\nhttps://www.yingdao.com/yddoc/rpa/zh-CN/1008586857254637568",
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_7bca6d",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "utils",
+      "filename": "utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "巨量登录",
+      "filename": "process1",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A_抖音",
+      "enableCopilot": false
+    },
+    {
+      "name": "计算滑块距离",
+      "filename": "process2",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "拖动滑块",
+      "filename": "process3",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "抖店登录",
+      "filename": "process4",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A_抖音",
+      "enableCopilot": false
+    },
+    {
+      "name": "有赞登录",
+      "filename": "process5",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "京东登录",
+      "filename": "process6",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "B 京东登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "淘宝登录",
+      "filename": "process7",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "淘宝登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "滑块拖动",
+      "filename": "process11",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "巨量纵横登录",
+      "filename": "process12",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A_抖音",
+      "enableCopilot": false
+    },
+    {
+      "name": "电商罗盘登录",
+      "filename": "process15",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A_抖音",
+      "enableCopilot": false
+    },
+    {
+      "name": "支付宝登录",
+      "filename": "process20",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "支付宝登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "拼多多登录",
+      "filename": "process21",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "alipay_login",
+      "filename": "alipay_login",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_抖店登录",
+      "filename": "process22",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "test_pdd_login",
+      "filename": "test_pdd_login",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_电商罗盘",
+      "filename": "process25",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试抖店登录",
+      "filename": "process26",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试抖店循环登录",
+      "filename": "process27",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试巨量纵横登录",
+      "filename": "process28",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_京东登录",
+      "filename": "process29",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "taobao_reg",
+      "filename": "taobao_reg",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "淘宝登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试拼多多登录",
+      "filename": "process30",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试爱库存",
+      "filename": "process32",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "爱库存登录",
+      "filename": "process33",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_淘宝登录",
+      "filename": "process34",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试巨量登录",
+      "filename": "process35",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "退出巨量纵横登录",
+      "filename": "process36",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "A_抖音",
+      "enableCopilot": false
+    },
+    {
+      "name": "utils_douyin",
+      "filename": "utils_douyin",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "A_抖音",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_支付宝登录",
+      "filename": "process37",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_拼多多登录",
+      "filename": "process38",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "旺店通登录",
+      "filename": "process39",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "京准通登录",
+      "filename": "process40",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "B 京东登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "京准通登录后跳转",
+      "filename": "process41",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "B 京东登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "阿里妈妈数智登录",
+      "filename": "process42",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "淘宝登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "拼多多商家后台登录",
+      "filename": "process43",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "拼多多",
+      "enableCopilot": false
+    },
+    {
+      "name": "_抖音平台登录-文字点选验证",
+      "filename": "process44",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "A_抖音",
+      "enableCopilot": false
+    },
+    {
+      "name": "_抖音平台登录-滑块验证",
+      "filename": "process45",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "A_抖音",
+      "enableCopilot": false
+    },
+    {
+      "name": "计算滑块距离_xpath",
+      "filename": "process46",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "巨量引擎邮箱登录",
+      "filename": "process47",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A_抖音",
+      "enableCopilot": false
+    },
+    {
+      "name": "抖音平台登录验证",
+      "filename": "process48",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "A_抖音",
+      "enableCopilot": false
+    },
+    {
+      "name": "抖音平台邮箱验证",
+      "filename": "process49",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "A_抖音",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试-元素可见",
+      "filename": "process50",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "拼多多推广平台登录",
+      "filename": "process51",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "拼多多",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试悬停",
+      "filename": "process53",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_有赞登录",
+      "filename": "process54",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试-验证码",
+      "filename": "process55",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "京麦登录",
+      "filename": "process56",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "B 京东登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试京麦",
+      "filename": "process57",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_数智登录",
+      "filename": "process58",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "电商罗盘策略登陆",
+      "filename": "process59",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "A_抖音",
+      "enableCopilot": false
+    },
+    {
+      "name": "千牛登录",
+      "filename": "process62",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "淘宝登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "qn_login",
+      "filename": "qn_login",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "淘宝登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "taobao_mini",
+      "filename": "taobao_mini",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "淘宝登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试淘宝滑块拖动",
+      "filename": "process63",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "module1",
+      "filename": "module1",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "美团开店宝滑块",
+      "filename": "process65",
+      "kind": "Visual",
+      "opened": true,
+      "groupName": "常用滑块操作",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试美团",
+      "filename": "process66",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "zfb_login",
+      "filename": "zfb_login",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "支付宝登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "drag_captcha",
+      "filename": "drag_captcha",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "login_1688",
+      "filename": "login_1688",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "淘宝登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "子流程2",
+      "filename": "process67",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "子流程3",
+      "filename": "process68",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试-旺铺登录",
+      "filename": "process69",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "千牛登录测试",
+      "filename": "process70",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "测试_阿里妈妈",
+      "filename": "process71",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "click_captcha",
+      "filename": "click_captcha",
+      "kind": "Code",
+      "opened": false,
+      "groupName": "支付宝登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "子流程4",
+      "filename": "process75",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "T SD测试",
+      "filename": "process76",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": "T_测试",
+      "enableCopilot": false
+    },
+    {
+      "name": "login_tmall_supermarket",
+      "filename": "login_tmall_supermarket",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "淘宝登录",
+      "enableCopilot": false
+    },
+    {
+      "name": "天猫测试",
+      "filename": "process77",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "淘宝登录"
+    },
+    {
+      "name": "支付宝登录"
+    },
+    {
+      "name": "A_抖音"
+    },
+    {
+      "name": "T_测试"
+    },
+    {
+      "name": "B 京东登录"
+    },
+    {
+      "name": "拼多多"
+    },
+    {
+      "name": "常用滑块操作"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [
+    "beautifulsoup4==4.12.2",
+    "bs4==0.0.1",
+    "soupsieve==2.4.1",
+    "zope.interface==6.0",
+    "pytz==2023.3",
+    "base64-to-image==0.0.1",
+    "DateTime==5.1",
+    "numpy==1.21.6"
+  ],
+  "internaldependencies": [
+    "activity_ea8fd401==23.6.4",
+    "activity_47680f64==23.10.0",
+    "web_action==25.7.0",
+    "activity_bintuo==26.7.1",
+    "popup_detector==24.12.0",
+    "dynamic_call==25.11.2",
+    "activity_4db973e3==25.12.4",
+    "cookie_login==25.12.1",
+    "activity_fe2a1069==23.12.0",
+    "activity_jfbym==26.10.0",
+    "activity_4f0f15d7==26.9.10"
+  ],
+  "selectordependencies": [],
+  "internalautodependencies": [
+    "popup_detector",
+    "activity_jfbym",
+    "activity_4f0f15d7",
+    "activity_bintuo",
+    "cookie_login"
+  ],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {
+    "videoUrl": null,
+    "imageUrl": null,
+    "imageName": null,
+    "gifUrl": null
+  },
+  "terminalTags": "full"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository xmlns:x="rpa://imageselector/core">
+  <group name="默认分组">
+    <imageelement name="旺店通图像" sourcetype="screenshot" filepath="resources\images\8af7c5bd-766c-4fa9-886f-da37112d54f0.png" similarity="80" scalingfactor="1" adaptive="True" graying="False" />
+  </group>
+</repository>

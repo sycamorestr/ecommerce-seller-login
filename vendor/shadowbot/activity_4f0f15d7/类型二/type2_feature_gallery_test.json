@@ -1,0 +1,2373 @@
+{
+  "method": "dHash + ORB, no machine learning",
+  "candidate_images": 400,
+  "unique_visual_templates": 304,
+  "testable_repeated_images": 140,
+  "correct": 140,
+  "accuracy": 1.0,
+  "important_limit": "This accuracy only measures recognition of the same template image. It does not establish same-species recognition for different animal pictures.",
+  "gallery": [
+    {
+      "template_id": "003191d92ab5691c4df93012a3c68fd0230abff1c565b9669daefbe9aed9c028",
+      "representative": "group_63/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "00bc8fe3f80dded381bb5d6b77c86b674b26ad8697e641ef0b7ad34ac62e2152",
+      "representative": "group_42/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "00eb793afcf582d14fa82a33b068f537ef71c15e4fb2f89098688515dba51283",
+      "representative": "group_86/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "0166ae289877be9121ab057f79ae1084b42fe1d0d12ce2d9208878604d4a8dcd",
+      "representative": "group_87/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "018ab8f6600825d9fc09459a26bb39e1435e0e92afa940a0c7e3d4f81ebf5159",
+      "representative": "group_16/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "020fd7cab7996d374adac2a478c36de183524897b8ca046a601fd4a59b6cbdf9",
+      "representative": "group_93/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "03197229c798b22d77bb31b986f41977a4137abd62fa49f443d6970d759e05a6",
+      "representative": "group_89/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "0320b6646b9f46f6114023676805f6430bd1fd042f64befb99016539958b8e0f",
+      "representative": "group_29/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "070cb42e78d98907cc99bde5313f2bc26d5e88a7a1f83c1867d13f80995c12ff",
+      "representative": "group_5/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "07120778185d098d4445cb72504e463a4631736fbe803f3e62b7c0e365d6980c",
+      "representative": "group_96/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "078171339edc74996ab9592e977e79398bde0d9a4fbf17eeced0a8e9ae3eea18",
+      "representative": "group_6/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "07be50c7131f2d02a9fb192664efea89dae50d076eaf0cbc693f9f15d117a648",
+      "representative": "group_40/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "09aea8d15ea7a14a665938905f175a9c57011033fcb748a553a332e95d0174b9",
+      "representative": "group_19/img_2.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "0a3237a28f3c6b4a5f6a22c25341a450d60c84808d43c1056fce6318568e4b09",
+      "representative": "group_41/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "0a5dc062e204a68c6cf1befd995edc85bf99b25eb8d9faf3b67c20eadaea1b32",
+      "representative": "group_34/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "0abf15e1ab166254306bc90ff723d03d74e59394329d7197cfb9e94d0138c20b",
+      "representative": "group_34/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "0d71f8d2df5dfe7e9321511d14c4a73bfa6d7a16abcfae03f3dc2b3a907eff8f",
+      "representative": "group_13/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "0e2f665ba058808490948840ca7d88937c2a24f7b1e4066be8e5c7a2ccbe0fc9",
+      "representative": "group_93/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "0e34c9d5c6ec43023400bff539acf172243c58b89da4d5f04fbecb0ff69681e1",
+      "representative": "group_35/img_3.png",
+      "occurrences": 4
+    },
+    {
+      "template_id": "0e7e3e9ac971334f212164bfdfabc5e3ad1ab7944fe90f8130179ecdf8282452",
+      "representative": "group_9/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "0e9c86aa3a793f4b6490d7b86097f0c089babdf58bf9628948191a0a405ae9b6",
+      "representative": "group_59/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "10a75ef12b1c4c059247fec5c11319b8b1dac2e448941b9c5bec6f3188deac08",
+      "representative": "group_7/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "10fff73778f040ef0b6ca8be9e49e1358332817ce924ef10a316380a92534ad7",
+      "representative": "group_94/img_4.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "112f9db4fab74153b6440ac0fcb59041cce8e6f1f983c8d530e9a330e6d016f0",
+      "representative": "group_32/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "125542cf6be59227aeda2af98dfd232725610ff00c1d7eeb710c0a6db0d91c31",
+      "representative": "group_17/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "13e9d9f2150e3bc4bf5caddf3d7ec0c44ecc18c7baf393e3b8849e9cfed5be70",
+      "representative": "group_96/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "1441f5a88bb319d08302b72387cdb521de7f96e55b51467009a34a7573f82fa0",
+      "representative": "group_87/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "168cfbad3903ce0f4997f7a41c3e88cb6044ef6d51474af77f39f9bd1a9f80e5",
+      "representative": "group_94/img_2.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "1772e35f2005c878269caad37a65a0ff19a35853b37fd65c121c236e6320cc44",
+      "representative": "group_13/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "1781ba7e6e901c6881dcb34f09bed9e89fc43dcc01de27e1385b63c3e966af78",
+      "representative": "group_87/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "1824f10cae870d9ac90fae4913bd25ac56c3d40d265f8a8d5bfbb09c4ae65281",
+      "representative": "group_7/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "18328018a1e16b8dde45ea6f6db293ab57f950992b68c04c9ef2ae1eafddb3a6",
+      "representative": "group_98/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "187dbdb908fa03f65a5671f8b4b23258e122cd50a9c84a3d87b01430d74b1710",
+      "representative": "group_7/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "18d0b1833d014482a2b51c886b2dff73bdf64166143b40e39e2710ee20edd68e",
+      "representative": "group_68/img_5.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "1b28c3455e71905584f45c65e15ec65ba92be79af2fd4eae6b3e2a1a681bd079",
+      "representative": "group_28/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "1b9df9bfcf730b498dd2feb3dd7165a9b1f57fac32f6296a03aea2aa76a93bee",
+      "representative": "group_28/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "1d1846ef4dd21ad922c058b356d4545e18e1615248d8df540931ddd324181904",
+      "representative": "group_60/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "1de0355c054a282048f57cefb01baa795ca9a004ee36fdc1e30215f86549945a",
+      "representative": "group_67/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "1ec287d18232530f28c26a9e549a3eadc0af42102a7719d8386d0a2afab3347b",
+      "representative": "group_70/img_5.png",
+      "occurrences": 12
+    },
+    {
+      "template_id": "1fc8daefe108e84f5ef0226cfb48249287a7be226d97fb2921514a4bb63a26f7",
+      "representative": "group_57/img_2.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "20a616b06e7d67939425fb7d5438d55aaca3970752641cb136975d78d2ac8a03",
+      "representative": "group_14/img_2.png",
+      "occurrences": 3
+    },
+    {
+      "template_id": "20da1cdb34aa8942bf3553e68f1c43a3a9bbd266e3e753aa5ccf3a0c4bb89a44",
+      "representative": "group_3/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "21af12ffb373ee166a90d24037500ce666ecb9fc8dc6c6f0f033946ea22c8ef8",
+      "representative": "group_45/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "224f203121b27b9adc38e5cbd3cb5b6bf55c6a98945f644aceef6a18f56b03c1",
+      "representative": "group_29/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "228bb4c11aeb96485979ed0baa7e1f9493380d0213228721379b49805baa4af4",
+      "representative": "group_2/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "22e4dc99c4c586302898687aeb39270cb5da335f1c585b1f16e86623430827bc",
+      "representative": "group_13/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "2324519e1c7380b4195e7152e258a69e8d5a0b733067ef6ff9cd4d94505902cb",
+      "representative": "group_86/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "23333d9183800ee48255156c214ede365d255c39c391bacf2280ac7bc044f51b",
+      "representative": "group_19/img_5.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "23458887df97cf26f29e8411cbf692112021a6a8a83196271b31fbead1d6b7d8",
+      "representative": "group_19/img_4.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "24864d0ba747f3ef96d09dc66ac4fe7326ad29645f745c13e6be9602f1c9fef7",
+      "representative": "group_60/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "24d751b15651ae3fa3347e88f3a912eef2b01ba8b2c70c0550b7aa30fe1f5372",
+      "representative": "group_16/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "257b8ada991fedd24f4a5cd298a31969eaf0c4925468df0a8ede74f8e939843d",
+      "representative": "group_29/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "26a1a2a49b638b3c23e054f38f961e53647b9a29d5145b9816cd4a8c299f01b3",
+      "representative": "group_88/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "28c0ab86d56a32780842f676e78b94d8a2dba022e7e2a4a866372c29141b6cf1",
+      "representative": "group_11/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "290bacb94930de843d6f6b3c5186edff14a93ad1e9ef3272682ecaa3d9703316",
+      "representative": "group_49/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "2981f42f1b7b58b41bbbfcbb598270354702c7827b78f00f65e4c95b742886ba",
+      "representative": "group_15/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "2a58310ec5a1e4bf82027780f00afc44edd0b8577e03d91c180d6201070f1f74",
+      "representative": "group_45/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "2c59ec95ab3f093b96d83c687bbd935f9d1e4058c8bad7175af6756661f45c7b",
+      "representative": "group_44/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "2dcc75ae0338af17724167c1f03471ef1ec55f2fbbc9fd488003ce3f989b1c2c",
+      "representative": "group_22/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "2ef932d1be10b6648be33c2c1d674269f1aa4a350f579c5a74af55f4ba056b71",
+      "representative": "group_93/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "2f18dc409c8643ad6ea831033b78dddda401df163828b1cb792c220bfbd38175",
+      "representative": "group_51/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "30a07e957688f60d78b3d14e2a9e85665955d7e4eab808a3437656604d24270b",
+      "representative": "group_17/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "316fa9b4ed9c70b1b0d064430042df7d3c213d1370e20d81ba341c21561e38cb",
+      "representative": "group_14/img_3.png",
+      "occurrences": 3
+    },
+    {
+      "template_id": "31be2ca466c3753d093f483341f9772f73130ad672f92cf2bc64753061f19eed",
+      "representative": "group_1/img_4.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "31ebf9f10c64d5110958fa751ff367e15471b17a4a0fdfcbed5154f62a01fe16",
+      "representative": "group_42/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "32caf3e3dab0ab7b44880955f8430677b755bf00a6b2f1283f52a5b27fce7c0d",
+      "representative": "group_34/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "332a4bf4aec18ae674a928aa6db2155bfa132f1c78155d339ae884ed83d8e83b",
+      "representative": "group_35/img_5.png",
+      "occurrences": 4
+    },
+    {
+      "template_id": "33e52057628449702d0dd1c6ffb9a8b1c9d2b8ae0f9d3e0cfdfe60271799374d",
+      "representative": "group_67/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "34196dc055d06b7fb885da83479eec30520d624936a16821771c9687080a8686",
+      "representative": "group_82/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "37c2f526fa83b481b30a603f3df9f3152a9c3ae3d875af639d4f566d1d051a19",
+      "representative": "group_33/img_4.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "380564a810f186112798032c03ad4507122d235e71546ae8b8842830efa26119",
+      "representative": "group_54/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "3867ea3cde16ff4a53918f0394720d56cde1006e1fd44f58f95d639a0476c487",
+      "representative": "group_94/img_5.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "389799c9cf7dc7deb24f64951bcd58809f2b44cdcd574a252d9c4fd277905bca",
+      "representative": "group_49/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "3919de1df366c622901867ed4b2aaf343ab81cc18e3c349ea527b4976b794181",
+      "representative": "group_94/img_3.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "39c7a9d672d3182604a5796776730839e40db61608bc9c838f9c39f1c022c4d0",
+      "representative": "group_51/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "39f5f8d8d47fc0ad19828f5663b53e0a3eb9d3d90505dd98995b63fbca1b2465",
+      "representative": "group_59/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "3b8b4ee1de5ab86a70de3b841a85a9be83a8dbede11fb52c68de0f56a15b766e",
+      "representative": "group_65/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "3bcc6c62827ec1cf296d1ee0e0739acc3370da8a7811f4488091397806aca99f",
+      "representative": "group_40/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "3bd44258de12e6fbf764515e5f2828cfa0674ce64decc7547e94777e844b790f",
+      "representative": "group_85/img_3.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "3cd981aeea22fc172147ae7b136436525ea480e2aca3d7bacd9db777bdde7c09",
+      "representative": "group_40/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "3ed39a39c126170b68e615fafb9905edf0ef540629f947029b250a7670c37070",
+      "representative": "group_43/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "3eea3e2eb9cbd1faf42fe9c3e5d05ebaf401f2a67ab13f542a19bbe6ecc8e056",
+      "representative": "group_82/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "3f27017b785f63a1ccfa880b11ba77db71f078674014cd781d0f63cce3ee9738",
+      "representative": "group_14/img_5.png",
+      "occurrences": 3
+    },
+    {
+      "template_id": "4087573d7612b6c7ff2cb6cbd2c12b3c541156998c95d7412cb4331081edf7f0",
+      "representative": "group_99/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "41297b006ac7aa919aee1f1f57fd4ec6cba0c176a7ffe899057626fe31dc2193",
+      "representative": "group_31/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "413c195c65174ac613bc63e31dbdbf09bfa8de0a59416ef532d06efbcc1ce796",
+      "representative": "group_44/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "42c3c6c0087c62a62ac70e28c6849fc2238f82c85345007e977aad7ced7c7f93",
+      "representative": "group_24/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "431b9af37c9c9376f324d91d375b4b212c918fbee3a3b685e5fd75d87e132461",
+      "representative": "group_41/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "43a6b33c24e84adc47e9db38067475234f8fe8319d700285ae16416d2ded3147",
+      "representative": "group_65/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "458caefddba03ebc4c3e48c088d8628eaf46f17a8ef6844bfa3b85578843a855",
+      "representative": "group_63/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "467bc41b6dd4e87b9c70eace6a67ac20d9b4721405a292352b2727eea8f3fba0",
+      "representative": "group_66/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "46838457e29077f27a5f62f7adbf594070904e1dca3bf8af5f7ba9327463b447",
+      "representative": "group_16/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "46ecaa900a5f84e0708f029fd6ee48a47a1f8f475a22d2750089eeaba7ff3675",
+      "representative": "group_70/img_2.png",
+      "occurrences": 12
+    },
+    {
+      "template_id": "47a89fa54142dbc11867d30e02590fdd5eb79dffe3fdd8d31c7e5e4d75b2cf1b",
+      "representative": "group_52/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "48dc8f9864f97f3b55abd4d7a8ecef30461c2898cda6daef1f04d35659832eee",
+      "representative": "group_90/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "493c8b8af7f76c2109c569641d1bd9911737c9b3d683b6c2db641d8564b8ad7b",
+      "representative": "group_26/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "4c7d1c5f7744ed3e652d8925b0a2f5775acb5ebe4e98684072419bc019eb178f",
+      "representative": "group_54/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "4d877a29cc50b27048fb336d457e550e03a8cef41e415eeb8a241ad594d54e93",
+      "representative": "group_25/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "4f78382d46efcc49cfe45709f7a60b50bb5b1f3986e0bac7b049e457d5a9cd2a",
+      "representative": "group_28/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "4f958d8cdcc73c00a863d47a6072b9a86365344d9378bf68e81512ead8c613cc",
+      "representative": "group_27/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "4fa3c37cfcfdc2789f052f5848ee822af8571db3fb36a4fcbf89de8c694a9547",
+      "representative": "group_68/img_2.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "5063306f905649ff02f4540a7ff4d941c1fc861d5f0656617a8565693e571073",
+      "representative": "group_17/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "50bc2817939f8c6451ce9f4354e6f7f168ba63bc1ead1aaf3e97dc22c966e425",
+      "representative": "group_44/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "51a7b24d0e9f200f3f25bc3383da571e2f32335b9438e0be7a3b5f216b6fa66d",
+      "representative": "group_24/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "523db72d1112d03b0cf6cd6584879f9851f0a832aee8eadef08040a7a8208dd5",
+      "representative": "group_32/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "52beb2a8cbb6ec856f64ab92ed7d806b3d5c28951c3651430ebb5b216df6e03a",
+      "representative": "group_23/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "53d6ac560754a7dfa4dde053a78c458850a7dd9e022aa7b8d4ad693e9a8fdebf",
+      "representative": "group_59/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "542fdfa7b70d4c461e6a90d2ce8a4481ed7ffa20de8c4d1cffbc05ba3e79db05",
+      "representative": "group_67/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "54bae768ffef94759506b8cc8515ff42a48143eeabaa63f3f7ba563eab7dd288",
+      "representative": "group_15/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "54f879daf869197cb0a06906639c83a8d574685f1c2545e10ba0e53b3ae5a008",
+      "representative": "group_3/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "55187f8ccc63df9222a91f63033563b0b71695c163b20e5406249d1b0166a336",
+      "representative": "group_57/img_4.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "557c9350e84c44dd246ffc227daf36d82e537e9a4c5e64df69cd98ca1e7e60d8",
+      "representative": "group_58/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "55bd64da2c58e37155d53e03b873175764a801755af5f741073dbbd54df8ce0a",
+      "representative": "group_82/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "561de59a19269f1bc7d1b5b2a8676ea0de854a113d108ebc14f1dee9797f8b1a",
+      "representative": "group_41/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "580b65a23c3a71315cb114518afff5ef6842d60ecb2d9d7718a372335ebcceff",
+      "representative": "group_23/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "5a7bf96ff17abcac28537c1429fd040c3b62ad05c3103b546bac035c920e91c1",
+      "representative": "group_34/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "5a87f6c37d2086ebe1c9bd80f36a8ae82ecc45ec2584a449f4c687c6b57ba558",
+      "representative": "group_32/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "5b4122040420df2c2d604905a885da0278c803e107b5ee4dac91023713c2b1ac",
+      "representative": "group_19/img_3.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "5bb0eb3bb2ae34336513fb381e3ab72beaae0442adde95b6ae1fc56ae99a2bab",
+      "representative": "group_28/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "5c003fc166a668a1f55d822beeacc084dfa2d9d3f9c016ef26e606ace79348c6",
+      "representative": "group_43/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "5c340ce5973e103473c69a3e1cc8eb51cd5ac0fb691d621e9b49ced798811ad1",
+      "representative": "group_20/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "5d02e405440760512e4109946402371b5d8c9dd5b9d1eb70b06e5c4e98efac3e",
+      "representative": "group_63/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "5f2199894cbd9752c8170006c58666fcb03f468335563111a11482e2db3ac7ed",
+      "representative": "group_86/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "6010e7fef7c6fc4df807c7789a2458be5457fc8139fc52bdb653846c479a3cc3",
+      "representative": "group_51/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "61175e590f70234fa9c8cbe930a69d2c62242d8b66ca14c980d109f9268c4b6e",
+      "representative": "group_6/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "628ca3bef79af6de9484812cb15e2af8b38abecc7eb660a16f7f5b9b9b040411",
+      "representative": "group_49/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "6308e769c4e639755ab50fe41241a491dd7ae66aa739f7965c48576d24be9720",
+      "representative": "group_50/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "640a0470b8ada6c3ad55c48a0dc31405c053821c58a6513925c6cea1bac0788f",
+      "representative": "group_8/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "648028fde435d37b4ffcba3a609849a62d111e92b602df45908a61cce8ac2ef4",
+      "representative": "group_90/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "684d20df63b70b53b7b2e7cea5a4ad98c64d341a87251d4b8d8ef07fc322acf1",
+      "representative": "group_98/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "6a2b72ffa9cb9e3ed2e460521c192e31d4c31aad2f34df275c86a20ba26cab7a",
+      "representative": "group_18/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "6a2f0518efce9a330ab7d40b195cddfa99645ea7b4e3023854c485118556e015",
+      "representative": "group_26/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "6a5a0b9f80739421afc05b347f668f9dce837c55c1081764877b09df055d31da",
+      "representative": "group_89/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "6b1c43d4db2830d457b5fffdf2cee7f2b4be2336b6e8b74737d2dbb051eefa12",
+      "representative": "group_97/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "6dbdaada33d5061378c8eccbdfa9dcd46a66411774f9a3ae71b3d95e350290d7",
+      "representative": "group_10/img_3.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "6e48d44c47433699277d19c2c32d4d307de113dc67bd45fd8ae44ac017f480e3",
+      "representative": "group_43/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "7071b3f9a9bc45d9bc0e718ef3871af07eca46febdf19018da6030d5656e5f3d",
+      "representative": "group_22/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "707d0c6f93e2fadc9c734480c487d4a4e849175b281099efb866ec94bb54dad5",
+      "representative": "group_20/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "70ddd4e790087331c277bad0838654fa32f28dc722026e6ed36dcab861f2fc9f",
+      "representative": "group_27/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "71952e865c26753a486f0ef74fc2a4a27c39aaadd188b45917aade763b63c5ef",
+      "representative": "group_90/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "71bac1ed1d6c700555a9f30b596bc01c20d48ca87d025fe467dcea09443e7121",
+      "representative": "group_62/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "7203d3bf19da1b47c5b874808811cbab77f1598697c0fa219abad0741c840b5a",
+      "representative": "group_68/img_3.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "72700a54457fe27180f1cd61b2b59789b193ea02973f45be0244010908da0d27",
+      "representative": "group_12/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "740b9e676f8256db6f560999c2484f6bd0cb672ed9ecebc8dac1539752eba1a2",
+      "representative": "group_50/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "7441b028fe1efef7351feebf5f13c5f28f81ab848198f07b0e4426d828eedc47",
+      "representative": "group_66/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "744c779859aeac662b914c10fbc9a033277fdcb4df71934e5a4290d383608f5c",
+      "representative": "group_20/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "74a466ed787e2616a0ed22fb9dc6c6f054be524b8b4d6beff0b605eeb18a8b7a",
+      "representative": "group_6/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "768f341166514e53bbba5486d58b58d285ee3de90c83a01b0deeb68ce558ce0e",
+      "representative": "group_33/img_5.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "7717e6e779c0fcbd060a25c24c7324106e174794c0e01098edd0771c85528e1e",
+      "representative": "group_29/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "771f610fc4c441d091b0a6702e2f337a05480f11983fdd15cdefb07676342416",
+      "representative": "group_25/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "777b3fdb74a01b5bea47d340f385b95cc49fdea4760412755b7dbbb8cd1ec38c",
+      "representative": "group_1/img_3.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "77ff5a5bea4f065a4b1798b6a4b04426a33a5c26e49d149f6899947adec3368b",
+      "representative": "group_33/img_3.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "7af564706aa67e3d85d0bfc5e5579a4ce9647f219e529c824d017fab81ee9af2",
+      "representative": "group_30/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "7b8fb929eeba1a4920e6e73f5e1102180ad3422a394bbf49e96436d15ab22932",
+      "representative": "group_96/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "7e4b4bb39039cbd91c4125acbf361db575fd686ab2772198ee17a609b82a62b9",
+      "representative": "group_20/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "7f00b35987a0fa8ec16f4ebdca13c171472d0af0d3098029d97931c4dc6a26fa",
+      "representative": "group_58/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "80502a5ab86784befb3bfdd774f00d4a81385077427b4053ea0b81bd42eb8dc4",
+      "representative": "group_21/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "80741ce03e823ca788bc6bf5351c6c246cbdbce4e56e9332b10ed4ca195fa3e8",
+      "representative": "group_2/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "814ebc13d32631d982983e39df050c22669fc2cf8bd661b6b78bb8865ab3aeb4",
+      "representative": "group_12/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "82930728666b923a69f502fe2e256b86c628e6d36df4df2a07466c88935a530b",
+      "representative": "group_45/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "83ce584a029ed0a040853822b277315b793c35857a6f2b7d65764aa5a592fd6f",
+      "representative": "group_15/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "84076d40e56ad8725fd72085758bdd7439c0325d64870d88da8f6c859d3f4e3e",
+      "representative": "group_52/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "8423f89559a4fbb9ef08e4aaecf58262159dde5044f75992e14cdc74ba77fbb1",
+      "representative": "group_85/img_4.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "8502f27781626ff60087d1b45cb96e2576e2de92c2e61de2882ba1eb0bd221b7",
+      "representative": "group_57/img_5.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "85264163e61b73d47fd73ff23a24861769b209f000f4fdf8231e02f6114f3b70",
+      "representative": "group_4/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "877ec744fb2c13cb45b1384733baa36d14b6555c0b2a7a5fe54a7392f4423859",
+      "representative": "group_18/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "87c688818d56ec569bd0315dc5312ad15120ee244a5822eafb818e8ce585fb2d",
+      "representative": "group_6/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "895344c1145a2aa53b082d8c3ac64731badfc0cb2eb73c9933021aafd375f735",
+      "representative": "group_51/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "8b657987717c2a5ce35a46dff628d188746a864c57635b33cb55da7eaeeaeaa5",
+      "representative": "group_64/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "8ba8993a3c43c3104725b5f8449df6917601dfdd12772a943bcc6ccc0c007461",
+      "representative": "group_2/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "8d115e007c566c7906e01a2d5512df2fee8e969487c65d003e61109a57333fac",
+      "representative": "group_64/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "8e1edda890d13965aff2705cda86a654a675d802c1de64abbd6d2759dd09942e",
+      "representative": "group_18/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "8fb00762d187caf7e2c349f6afb30aa7336a344e13a6e32532b081290ba37187",
+      "representative": "group_8/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "9031f4fc0234d7d22b562e74c053f89bd6dbed1438f3e21a2d6fc000ac80ab33",
+      "representative": "group_23/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "903a7b53efdc069d62289b0e4b05e96df465e9b13901f1a8564505de0aeea579",
+      "representative": "group_3/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "906504513624d2ea25861bd003c9ee2cf92ecdde2dd186ef497e6b842cfa1f92",
+      "representative": "group_89/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "9151ee36f883bd09672acd1ca75a1c9de952ff833e8e911ea468abc3ac8fd32c",
+      "representative": "group_92/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "9234d54b8ff3e484048afabc01bd61f745df9f13347d4c0b3fd3e7ebeec94856",
+      "representative": "group_95/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "934cbe7bf4d4270ae6da4f0f50b0ebf5cb07e2a851144df597255ca4c8d811f1",
+      "representative": "group_41/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "9351a60aefdbff66f1f099c8b16b1099ef6bfd09c96481036c01fa13b3057eb9",
+      "representative": "group_93/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "938b915b71adf9dba2d4b660cac769c1aba5d479dda2062866fd16e38256bf0f",
+      "representative": "group_56/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "938ffafe2bf0801650573e4b672df2c5f6fb3f273a71af47e5388dcafdebc8ab",
+      "representative": "group_95/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "93cfd37556ea3c20012806348b1b00e7cb9c20cbf4f402839aa224915b2d17ef",
+      "representative": "group_25/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "9548eb9084d60f369aa6494ea379a037668692077468aca0d423e207554d7fb1",
+      "representative": "group_25/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "9576d39e88acf9a23d65d3bdc4dc4e52248f93d1aa0e3c18e7e2d203710b3676",
+      "representative": "group_31/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "968d1c0ef836988172c52f586dd43ec07a14c48bf1531a0c868a67df3c63eb9b",
+      "representative": "group_97/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "96e993d8f50c4538fc83d5d2d7e9c5e0a08446ec1162c9b2b3f0e1c46af9f1f8",
+      "representative": "group_23/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "98a0e2fd144af0aa2513c46e1be08a1a65b8cfc9e4bbf944c0a9743f96e24ba3",
+      "representative": "group_99/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "98bd0fc5b13bd01a4f519d8cbe5ea46d7a41a9968733720019d4413f49aae6fe",
+      "representative": "group_68/img_4.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "997865a5352aa6210d12e57ed0083b02fe66ad670594801d412f4283870f6910",
+      "representative": "group_5/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "9b7e5dbfccddb6d29847638e81e7924a39c9008763e8cbcb92151b44998481dd",
+      "representative": "group_31/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "9cb33876626e6ee3976e254caad2be22caba2b2e903e39064a47aa341ec1564c",
+      "representative": "group_17/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "9d9b4e06731ba698e284d2f73932948a3b8832609de49b8a7e8f278546454745",
+      "representative": "group_3/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "9e8255606f6a08e4fc68d98fa96529e15ed0dc889f27d1648177e0b8371d2476",
+      "representative": "group_56/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "9ed5bb82c23da4032023d20dcc2437cd21614a455746e514a0bf1cf839e09703",
+      "representative": "group_83/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "a1227c4c008685dd3c9236bae95ca9ede6ad05dca791c79d579854ca45c77219",
+      "representative": "group_64/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "a1716b6b9defd2b138d6559073cf93b0a246d99c98a90bd14c1dc69cc4fdd046",
+      "representative": "group_9/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "a206faf37f9bf1e65b9e126aebd99b245c48018e549f106fc581a86eaac97fec",
+      "representative": "group_14/img_4.png",
+      "occurrences": 3
+    },
+    {
+      "template_id": "a33049d2319da75d19ac3941c0f07ba0fb79e16968c0a1895511934b5eebd92d",
+      "representative": "group_44/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "a3b1c1dca42b0107cef001e5758291c420f89ea00998c0f398249d5622c7b6a8",
+      "representative": "group_92/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "a51d4b303c627b8b10f64a05c4078ae4abcd255b27db5876e6333ae583ae85d2",
+      "representative": "group_56/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "a6273d1e32e49d112c5bb7e89513f73862bda5c38a4875bd277ec675981e602f",
+      "representative": "group_21/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "a6d71085a7abf41a9dc39ac7b2e924897d6fc58e67334075bc52f8edcef90268",
+      "representative": "group_59/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "a6ec707ddd16584a9505a0ebaca1aaad50f94883f979ad8f9f08597870c32005",
+      "representative": "group_46/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "a7e3a10c5adeefca0b331b6f3138fb048718d457a3cf829a9e0e051198a684ad",
+      "representative": "group_62/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "a7e843f1f85e7500c387f924c6dd5ad00ddd451a52ee3146153613e40f01a02f",
+      "representative": "group_1/img_2.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "a82c036275e234b80cd52161a2b23f1bf8efcaa3d06b85276028ae9f1cf40f64",
+      "representative": "group_30/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "a9b1b567fc0b34197b238dc4e07b7f5a5f3a1c82a9ea4b329301102245b79f8b",
+      "representative": "group_66/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "ad3d6c4790cc56c9914d544991b2fa9a1c533ded840ece721f81a99432893fd2",
+      "representative": "group_88/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "ad67a6bcd7a6e3f72dbfe70540e62645ffe1d525e4d261e0d6f96435ca6a0632",
+      "representative": "group_54/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "ad7c20781552475e9ae121ebefebb3ab790a4cbc203b8d88601d5948601e9557",
+      "representative": "group_30/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "ae269e171262cc6dabeb5a22cc9eaa91831eb5145b10851d85f4cefbb60136eb",
+      "representative": "group_97/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "afab24b2e8d41f9b3ebb816d4119a056d03480c3817eca8beacaafb342395588",
+      "representative": "group_30/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "b171a6723445a5a3401b1d0a64b65a0259ee982ce5bb7894ec9a9c2b123c9034",
+      "representative": "group_21/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "b27edb045b44a691f972403e3ca0db78a413e0a67816292431ce75f0300861f5",
+      "representative": "group_88/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "b3d9f4b55257c8a1e0cddee4cce88d45f51ef441193b21559099959eba500c6d",
+      "representative": "group_62/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "b3f5337007125d5b523dbffe69b5d342b6757476fd7cc2be98419844181ad945",
+      "representative": "group_60/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "b4ec2a04222a2b8b0fdb366224351ba2d20ba4a33d4466d6e7ace0ca11b86c9d",
+      "representative": "group_43/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "b5814eb288e02c1a57889fa742f992190ade7523fd6760e7cd98fd876604bf1b",
+      "representative": "group_65/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "b58a12fc727aef33581281dd8b0f99013575a85993d700234635c0ffd5abe3f1",
+      "representative": "group_57/img_3.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "b7627608322ec6f896135b5bcac8db3912bf4fa329a333dcd98de31f05617027",
+      "representative": "group_52/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "b866907d192b847d3637d04104379bf2d66badb5b45f1fdf8f81044d9858758e",
+      "representative": "group_89/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "b91a4dbd86bb160d66a63f2be9dd8834041fe7cf15395770ddcda217785e23db",
+      "representative": "group_27/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "b9688dd5cfa9d1efb35c735647cb656403cd99496496e62fdc54df26563b05d4",
+      "representative": "group_21/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "b98a59f5375c1a323034a31bc488531e5984d700af6a47f4c2a7285d180b2156",
+      "representative": "group_2/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "ba4a5daf5ee863fb9676352688fc9424283b81870c7345bdeba6e0870e0d653b",
+      "representative": "group_13/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "bb0efa25631010a0250d1a994036bc7a576fd7050c76dd692c56c3bbc9527c98",
+      "representative": "group_90/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "bbde6beb98caece401e16fa871fe19de2f9dbfdf50e5d5c9adc58a28e8bd9cf1",
+      "representative": "group_96/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "bbeebd31d505471fe36d8dcbdbef9defd1ef8e5795a01edd030faaa59f22b2e2",
+      "representative": "group_12/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "bc62787f76a6389760e7a97d9325b7d9bbc85f3d640cfe9b165b78fbd138321a",
+      "representative": "group_98/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "bd610a8d435ed16c1efb9f43b30e7041fa6324cf4b0da63fc62beead9ad39426",
+      "representative": "group_15/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "bd6b3c7773c0b868180d5ef3776cfdc9386849b6beb21630619d4943ea7c9fbc",
+      "representative": "group_33/img_2.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "bdf302875cd11fd4c17c1f5dc2baeed71ef1fce7a50ed0515d6172113fb61f5e",
+      "representative": "group_83/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "bec334de2c796407cd7a38bf26c0862d7637cf50f5cfc5bc6f53dcaab6d06fd6",
+      "representative": "group_42/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "bf6b1320ed567427c5106a12c5072db9e1681db89b22c2a89408440d9837adec",
+      "representative": "group_85/img_2.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "bf91b0f38a5917ba196daf69edef19947f1be29ab0467c394b18b57cf563639f",
+      "representative": "group_50/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "c14725f3242ca314e95085570c79a46d9f5b65a8ef3fb0f7e726507d2d5f6242",
+      "representative": "group_83/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "c1ccaed8e6f1a6b1f2bb62d54abfe63c6f6134649cce8e3de3e52644bbe27898",
+      "representative": "group_27/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "c4873f622e8778ec28e88addc6e52348a3a29104f4091d02495d0522811a14bb",
+      "representative": "group_22/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "c5938e7f0a288e68eb140c6924b44584e4f52253bba679d17f035a1ac26bb385",
+      "representative": "group_52/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "c738109307f8548160a36ac8acd1096eac6eae38adf1de9ec4a4deeee0eb8e89",
+      "representative": "group_86/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "c7784b7391484c98acf28c667fcd209f301f490f798a9027f28e4b147628fe91",
+      "representative": "group_87/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "c7e596daa71807fa76dd9e40dd2eb0a07c4c9346485d2dcb712629d63cbd07c7",
+      "representative": "group_11/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "c8c9abeee7369f4b1f58ed8397b5513ba2b93c0a5690e03313eb4b6cf3dd40c3",
+      "representative": "group_98/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "c9483388a8ec0b0ca8469a0210a0c11d0cad44b6fdf9cd9fe626a72670b8f852",
+      "representative": "group_82/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "cb6227f1bac6e2485a35985b7f52bc35a12c04e3ad035f3249f0b0f07192cf65",
+      "representative": "group_63/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "cc6d8e91dd190fdd1908b8ea182573ceecac4c19381f21dba5012e179c2f14c5",
+      "representative": "group_8/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "cdf2e54473935b23c2998a0b8440940d9dd14534e58edef56ce70b52af1a81de",
+      "representative": "group_11/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "cf72a3e07a8dbc8f564290b0084da3223fecacb9031fe99d3b1b9fd203768013",
+      "representative": "group_16/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "cfa8801a8d501cf8bb13c116df1b0a5d78010d8b9b42f13e6f001a6e07575bd2",
+      "representative": "group_24/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "d002b9be6f42d2ecf8d9ea0a347f23b8089848bb244652e1d143827bfed61d53",
+      "representative": "group_31/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "d2a062434a5b880a71930ff53c50ee49cbf8d1f89ee3ed8698e72c5cba12aaf7",
+      "representative": "group_46/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "d2ba1b8644945fe035ff1b8ead698257741ac097e5bda39c8205b405473b4bbf",
+      "representative": "group_10/img_5.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "d484e6919a998c8d67560a40ab4a82c503e384a17d2a003d3d1e93943acf4039",
+      "representative": "group_66/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "d49eae845d1159f06418d0b1c1151ca78c42c4857c1d4c36bf3cde126d6bf98c",
+      "representative": "group_85/img_5.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "d4bc94d205b1635fa627412a3c9d0fdd370cb0309a968dd456fe12e6f871175e",
+      "representative": "group_83/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "d5053088710f590c66beed816446519455250089de3844265c383a5ea943b119",
+      "representative": "group_56/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "d7de72f6c1a214dcc0c5d481336a9224628aaa86cafcadfb700babf2018b958b",
+      "representative": "group_95/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "d7fa2e089f0213f2e152ba54b2390e80a5b4bd5a3e0008b4cfae53cbbd363935",
+      "representative": "group_10/img_2.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "d821015654c898ad7e72cc774d5222075f594eaf22212f390d3fb72e2c0dc8c8",
+      "representative": "group_70/img_3.png",
+      "occurrences": 12
+    },
+    {
+      "template_id": "da114459a95e91f143d384b1bbbc466365a23c3376928e93a5bde151087c0270",
+      "representative": "group_35/img_4.png",
+      "occurrences": 4
+    },
+    {
+      "template_id": "da160cf65b03341a9ffbda26497f6a26e7f02bb81e14cabf98f940312af2b30b",
+      "representative": "group_24/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "dc23b9fa48ea3a4a356a51e7640cd18d0f60a3427c4b95359a052d81c8ebb321",
+      "representative": "group_99/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "dcd49894a6524c7070b9190be3c193222f94bd1b452b24a944d660c57ab0208f",
+      "representative": "group_64/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "dd25d7567d9a60468121f5ace5f2353253c789c3df07c1fbb6e06ef9d62f7d24",
+      "representative": "group_58/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "dda94e27eaf7d41b7c1c7b358bf3b63d144411c7dc38884bd0c9c08a4f8b44fa",
+      "representative": "group_4/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "e0cda54e121046f7bcc522eb938c9d7c6b4c4378872dde22eb41934928cb1cd5",
+      "representative": "group_26/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "e13416a46a3d4696d9242d381677b2fba28faf92fbf5f6286bbcbe841a69be9a",
+      "representative": "group_95/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "e27e9e2f51814bf886ef87cc992973958532d31861494d8a67d1cc0368a242ab",
+      "representative": "group_11/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "e28edae980fdb9678934efb6886092278df6e5e1617b299c411e633f8b02cbce",
+      "representative": "group_9/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "e48429f0e963d02e97d97911a44815ae52f277fd4a2f083c6871381d0e02fe43",
+      "representative": "group_65/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "e638248cc55d1cda145eecb25e6af52b977b31bcb1a86c9349917eca65cbc1dd",
+      "representative": "group_42/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "e6f7abba295fabdeb314a4cd34d1d39a69f949db10dc435838aa06d21cbad116",
+      "representative": "group_62/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "e84336b666c73057a2cc6a325cde72219f4c3570922aba95af50b9e376afc7f7",
+      "representative": "group_12/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "e9885b76c9f686e283335b820abf71f9541c88a4c9fcacd1d0d98d6833985e10",
+      "representative": "group_4/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "ea8e3c84dd51db6214447d51771c3d22bf3183538d804f32e254d0f4eae0abec",
+      "representative": "group_49/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "eb8888efa9609c3d15077cd3b169fd1f386e498c86c86cd9bd765f00826ee93e",
+      "representative": "group_40/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "ec2848838a6c9d2238637c29f63ae957f0ec11cb369918385bf679c97850ca27",
+      "representative": "group_50/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "ec9b494820713ccfc051342766a37de00b01665c754eb04272527272930d21f2",
+      "representative": "group_58/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "edc3ae170d1e0b05fa135a8dd39c2f7d24448f6c2eadec6344468e680b4eafda",
+      "representative": "group_26/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "ee21df473666c97295a34e5dad164b884aaf81342d1d3d26bd2a8c61b1d3f045",
+      "representative": "group_8/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "f12f3fc392549a5afe8addbb8f3a72a83cc70c9770de8dbd4534cead334aa093",
+      "representative": "group_32/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "f1d2dea0eecc0e44452b43f3c23a0080b0f5799f1c4dcdb831cd58f1b5028833",
+      "representative": "group_88/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "f1d95ec75e7cbc425027e72e7509342f850aec569833e1b565f521440667cce8",
+      "representative": "group_46/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "f2734276dbc795bff3c9ff86cd7a9c3f5c5d6de9854948e80da48fd922b742f2",
+      "representative": "group_35/img_2.png",
+      "occurrences": 4
+    },
+    {
+      "template_id": "f31d11681a90ec3c5ad382d3d09fdf663c90afc84a5bfee2c6e423ec71c893cc",
+      "representative": "group_92/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "f358fb4454304947cfd39be35fdb24f82e10b9e6d69a3ab8b5348f249c2445b8",
+      "representative": "group_46/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "f399f90ce26f37d4f86045cbea4edb25157f2cb1d9d040c0f8bc79dae2a1a51b",
+      "representative": "group_5/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "f3e562b89a8ca7e8269b82f3deaddf809fad9fb6bc15113a06eaa3aa811f75fe",
+      "representative": "group_9/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "f4b73d25c4f69cf5d2228ddce7e0ca064086910e1f045c3cd6b4cc25422f5ad7",
+      "representative": "group_99/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "f57cf749db0de25d9fea6d702eaac2572abb61784380c90c465d13a6affe95cd",
+      "representative": "group_1/img_5.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "f58d16e11bdf541878cb6b17918cc97b08dbd4e4a3b2a3a5e398b5d797a46416",
+      "representative": "group_4/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "f6a3df6d53d8bac598ac3705819c57209c20db4b40ab850bee0caede7e86e7d7",
+      "representative": "group_92/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "f7093d19c02408f5a4976ee95bc8646999d33e61755c51cddfd984b7bd9311ab",
+      "representative": "group_54/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "fb22565ef3354a23982fee39360972dc56b8da8ac9679e3dea0aabb97f2a65cd",
+      "representative": "group_67/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "fb2da039345bf08a50b7318fbb9fe5ae2976e26cd1ad334b0188fe15eccd9f0e",
+      "representative": "group_97/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "fb539bd370870aeb73ec047a9d41d039e46a5e3c1fea0000d524ef82246c07cb",
+      "representative": "group_18/img_2.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "fb981d9047c6812bc4fdb41546b41b14527aff6d0bece17e995d277a373e55d0",
+      "representative": "group_22/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "fbb9ed1d351651ea6fa69f9afe4108974ec9e1b96b1fb8da1a7edde20c729616",
+      "representative": "group_45/img_3.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "fcd75eb1245b5ccb03217751711d4051339d1e2f11be75c3766f591ebc2eb879",
+      "representative": "group_5/img_4.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "fd7256c76b72e2dab9351c961331958a82644825ab243a79f59eb95b3a13d9b4",
+      "representative": "group_70/img_4.png",
+      "occurrences": 12
+    },
+    {
+      "template_id": "fd82fd3964c6fefd45919edef7b1c09357c04b2b8fc15bbd849817bb37259a8b",
+      "representative": "group_7/img_5.png",
+      "occurrences": 1
+    },
+    {
+      "template_id": "fd8fc97570555e1da58b4c9c731f7443e278bef2fe977531620b80a18f3e252e",
+      "representative": "group_10/img_4.png",
+      "occurrences": 2
+    },
+    {
+      "template_id": "fdadc552ca750ea128d45bc416054b2e789d53271d197f85a4e93e1ac2d3ad96",
+      "representative": "group_60/img_4.png",
+      "occurrences": 1
+    }
+  ],
+  "tests": [
+    {
+      "test": "group_1/img_2.png",
+      "matched_template": "group_48/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_1/img_3.png",
+      "matched_template": "group_48/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_1/img_4.png",
+      "matched_template": "group_48/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_1/img_5.png",
+      "matched_template": "group_48/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_10/img_2.png",
+      "matched_template": "group_47/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_10/img_3.png",
+      "matched_template": "group_47/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_10/img_4.png",
+      "matched_template": "group_47/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_10/img_5.png",
+      "matched_template": "group_47/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_14/img_2.png",
+      "matched_template": "group_39/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_14/img_3.png",
+      "matched_template": "group_39/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_14/img_4.png",
+      "matched_template": "group_39/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_14/img_5.png",
+      "matched_template": "group_39/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_19/img_2.png",
+      "matched_template": "group_53/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_19/img_3.png",
+      "matched_template": "group_53/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_19/img_4.png",
+      "matched_template": "group_53/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_19/img_5.png",
+      "matched_template": "group_53/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_33/img_2.png",
+      "matched_template": "group_55/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_33/img_3.png",
+      "matched_template": "group_55/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_33/img_4.png",
+      "matched_template": "group_55/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_33/img_5.png",
+      "matched_template": "group_55/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_35/img_2.png",
+      "matched_template": "group_36/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_35/img_3.png",
+      "matched_template": "group_36/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_35/img_4.png",
+      "matched_template": "group_36/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_35/img_5.png",
+      "matched_template": "group_36/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_36/img_2.png",
+      "matched_template": "group_35/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_36/img_3.png",
+      "matched_template": "group_35/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_36/img_4.png",
+      "matched_template": "group_35/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_36/img_5.png",
+      "matched_template": "group_35/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_37/img_2.png",
+      "matched_template": "group_35/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_37/img_3.png",
+      "matched_template": "group_35/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_37/img_4.png",
+      "matched_template": "group_35/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_37/img_5.png",
+      "matched_template": "group_35/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_38/img_2.png",
+      "matched_template": "group_35/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_38/img_3.png",
+      "matched_template": "group_35/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_38/img_4.png",
+      "matched_template": "group_35/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_38/img_5.png",
+      "matched_template": "group_35/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_39/img_2.png",
+      "matched_template": "group_14/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_39/img_3.png",
+      "matched_template": "group_14/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_39/img_4.png",
+      "matched_template": "group_14/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_39/img_5.png",
+      "matched_template": "group_14/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_47/img_2.png",
+      "matched_template": "group_10/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_47/img_3.png",
+      "matched_template": "group_10/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_47/img_4.png",
+      "matched_template": "group_10/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_47/img_5.png",
+      "matched_template": "group_10/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_48/img_2.png",
+      "matched_template": "group_1/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_48/img_3.png",
+      "matched_template": "group_1/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_48/img_4.png",
+      "matched_template": "group_1/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_48/img_5.png",
+      "matched_template": "group_1/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_53/img_2.png",
+      "matched_template": "group_19/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_53/img_3.png",
+      "matched_template": "group_19/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_53/img_4.png",
+      "matched_template": "group_19/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_53/img_5.png",
+      "matched_template": "group_19/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_55/img_2.png",
+      "matched_template": "group_33/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_55/img_3.png",
+      "matched_template": "group_33/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_55/img_4.png",
+      "matched_template": "group_33/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_55/img_5.png",
+      "matched_template": "group_33/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_57/img_2.png",
+      "matched_template": "group_61/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_57/img_3.png",
+      "matched_template": "group_61/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_57/img_4.png",
+      "matched_template": "group_61/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_57/img_5.png",
+      "matched_template": "group_61/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_61/img_2.png",
+      "matched_template": "group_57/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_61/img_3.png",
+      "matched_template": "group_57/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_61/img_4.png",
+      "matched_template": "group_57/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_61/img_5.png",
+      "matched_template": "group_57/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_68/img_2.png",
+      "matched_template": "group_69/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_68/img_3.png",
+      "matched_template": "group_69/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_68/img_4.png",
+      "matched_template": "group_69/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_68/img_5.png",
+      "matched_template": "group_69/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_69/img_2.png",
+      "matched_template": "group_68/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_69/img_3.png",
+      "matched_template": "group_68/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_69/img_4.png",
+      "matched_template": "group_68/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_69/img_5.png",
+      "matched_template": "group_68/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_70/img_2.png",
+      "matched_template": "group_71/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_70/img_3.png",
+      "matched_template": "group_71/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_70/img_4.png",
+      "matched_template": "group_71/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_70/img_5.png",
+      "matched_template": "group_71/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_71/img_2.png",
+      "matched_template": "group_70/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_71/img_3.png",
+      "matched_template": "group_70/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_71/img_4.png",
+      "matched_template": "group_70/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_71/img_5.png",
+      "matched_template": "group_70/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_72/img_2.png",
+      "matched_template": "group_70/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_72/img_3.png",
+      "matched_template": "group_70/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_72/img_4.png",
+      "matched_template": "group_70/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_72/img_5.png",
+      "matched_template": "group_70/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_73/img_2.png",
+      "matched_template": "group_70/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_73/img_3.png",
+      "matched_template": "group_70/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_73/img_4.png",
+      "matched_template": "group_70/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_73/img_5.png",
+      "matched_template": "group_70/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_74/img_2.png",
+      "matched_template": "group_70/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_74/img_3.png",
+      "matched_template": "group_70/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_74/img_4.png",
+      "matched_template": "group_70/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_74/img_5.png",
+      "matched_template": "group_70/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_75/img_2.png",
+      "matched_template": "group_70/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_75/img_3.png",
+      "matched_template": "group_70/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_75/img_4.png",
+      "matched_template": "group_70/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_75/img_5.png",
+      "matched_template": "group_70/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_76/img_2.png",
+      "matched_template": "group_70/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_76/img_3.png",
+      "matched_template": "group_70/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_76/img_4.png",
+      "matched_template": "group_70/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_76/img_5.png",
+      "matched_template": "group_70/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_77/img_2.png",
+      "matched_template": "group_70/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_77/img_3.png",
+      "matched_template": "group_70/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_77/img_4.png",
+      "matched_template": "group_70/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_77/img_5.png",
+      "matched_template": "group_70/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_78/img_2.png",
+      "matched_template": "group_70/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_78/img_3.png",
+      "matched_template": "group_70/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_78/img_4.png",
+      "matched_template": "group_70/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_78/img_5.png",
+      "matched_template": "group_70/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_79/img_2.png",
+      "matched_template": "group_70/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_79/img_3.png",
+      "matched_template": "group_70/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_79/img_4.png",
+      "matched_template": "group_70/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_79/img_5.png",
+      "matched_template": "group_70/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_80/img_2.png",
+      "matched_template": "group_70/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_80/img_3.png",
+      "matched_template": "group_70/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_80/img_4.png",
+      "matched_template": "group_70/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_80/img_5.png",
+      "matched_template": "group_70/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_81/img_2.png",
+      "matched_template": "group_70/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_81/img_3.png",
+      "matched_template": "group_70/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_81/img_4.png",
+      "matched_template": "group_70/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_81/img_5.png",
+      "matched_template": "group_70/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_84/img_2.png",
+      "matched_template": "group_14/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_84/img_3.png",
+      "matched_template": "group_14/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_84/img_4.png",
+      "matched_template": "group_14/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_84/img_5.png",
+      "matched_template": "group_14/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_85/img_2.png",
+      "matched_template": "group_91/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_85/img_3.png",
+      "matched_template": "group_91/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_85/img_4.png",
+      "matched_template": "group_91/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_85/img_5.png",
+      "matched_template": "group_91/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_91/img_2.png",
+      "matched_template": "group_85/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_91/img_3.png",
+      "matched_template": "group_85/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_91/img_4.png",
+      "matched_template": "group_85/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_91/img_5.png",
+      "matched_template": "group_85/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_94/img_2.png",
+      "matched_template": "group_100/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_94/img_3.png",
+      "matched_template": "group_100/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_94/img_4.png",
+      "matched_template": "group_100/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_94/img_5.png",
+      "matched_template": "group_100/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_100/img_2.png",
+      "matched_template": "group_94/img_2.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_100/img_3.png",
+      "matched_template": "group_94/img_3.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_100/img_4.png",
+      "matched_template": "group_94/img_4.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    },
+    {
+      "test": "group_100/img_5.png",
+      "matched_template": "group_94/img_5.png",
+      "similarity": 1.0,
+      "correct_exact_template": true
+    }
+  ]
+}

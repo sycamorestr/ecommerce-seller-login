@@ -266,3 +266,129 @@ def click_points_from_origin(
     for raw_x, raw_y in positions:
         points.append((origin_x + int(raw_x), origin_y + int(raw_y)))
     return points
+
+
+# ---- types used by the remaining activity_7bca6d login blocks ----
+
+YUNMA_TYPE_ALI_SLIDER = 20226
+YUNMA_TYPE_JD_CLICK = 30330
+YUNMA_TYPE_JD_ROTATE = 30330
+YUNMA_TYPE_JD_TRACE = 100015
+YUNMA_TYPE_STD_CLICK_PLUS = 30009
+STD_CLICK_PLUS_DIRECTION = "bottom"
+
+TTSHITU_JD_LEGACY_SLIDER_TYPE = "18"
+TTSHITU_JD_LEGACY_SLIDER_CODE = "ttshitu_18_predict"
+TTSHITU_PDD_ONE_CLICK_TYPE = "19"
+TTSHITU_PDD_ONE_CLICK_CODE = "ttshitu_19_predict"
+TTSHITU_WANGDIANTONG_TYPE = "3"
+TTSHITU_WANGDIANTONG_CODE = "ttshitu_3_predict"
+
+AIKUCUN_FREE_SLIDER_OFFSET = -4
+AIKUCUN_FREE_SLIDER_SPEED = "fast"
+WALMART_HOLD_SECONDS = 7
+MEITUAN_TRACE_SKIP = 25
+
+_IMAGE_LEFT_RE = re.compile(r"(\d+),")
+
+
+def ali_slider_payload(image_b64: str, token: str) -> dict:
+    """ali_slider_captcha.recg body. Same type as the 千牛 port (20226)."""
+    return {"image": image_b64, "token": token, "type": YUNMA_TYPE_ALI_SLIDER}
+
+
+def jd_click_payload(image_b64: str, token: str) -> dict:
+    """jd_click_select_captcha: type 30330, single image."""
+    return {"image": image_b64, "token": token, "type": YUNMA_TYPE_JD_CLICK}
+
+
+def jd_rotate_payload(big_b64: str, small_b64: str, token: str) -> dict:
+    """jd_rotate_captcha: type 30330 plus image2."""
+    return {
+        "image": big_b64,
+        "token": token,
+        "type": YUNMA_TYPE_JD_ROTATE,
+        "image2": small_b64,
+    }
+
+
+def jd_trace_payload(image_b64: str, token: str) -> dict:
+    """jd_trace_captcha: type 100015. Not called by process6; kept for that module."""
+    return {"image": image_b64, "token": token, "type": YUNMA_TYPE_JD_TRACE}
+
+
+def std_click_plus_payload(image_b64: str, token: str, direction: str = STD_CLICK_PLUS_DIRECTION) -> dict:
+    """std_click_select_captcha_plus.handle_captcha. process6 passes direction bottom."""
+    return {
+        "image": image_b64,
+        "token": token,
+        "type": YUNMA_TYPE_STD_CLICK_PLUS,
+        "direction": direction,
+    }
+
+
+def jd_legacy_slider_distance(captcha_text: str, slider_width: float, ppi: float = 1.0) -> float:
+    """process2: first ``(\\d+),`` plus the piece width, then times ppi."""
+    matched = _IMAGE_LEFT_RE.search(captcha_text or "")
+    if not matched:
+        raise SellerLoginError("计算滑块距离未返回坐标")
+    return (int(matched.group(1)) + float(slider_width)) * float(ppi)
+
+
+def canny_match_x(background_png: bytes, piece_png: bytes) -> int:
+    """activity_4f0f15d7.slider_captcha.get_x: Canny 150/152, TM_CCOEFF_NORMED."""
+    import cv2
+    import numpy as np
+
+    bg_img = cv2.imdecode(np.frombuffer(background_png, np.uint8), cv2.IMREAD_UNCHANGED)
+    tp_img = cv2.imdecode(np.frombuffer(piece_png, np.uint8), cv2.IMREAD_UNCHANGED)
+    bg_edge = cv2.Canny(bg_img[:, :, :3], 150, 152)
+    tp_edge = cv2.Canny(tp_img[:, :, :3], 150, 152)
+    _score, _max_val, _min_loc, max_loc = cv2.minMaxLoc(
+        cv2.matchTemplate(bg_edge, tp_edge, cv2.TM_CCOEFF_NORMED)
+    )
+    return int(max_loc[0])
+
+
+def free_slider_drag_distance(
+    match_x: float,
+    offset: float,
+    ppi: float = 1.0,
+    *,
+    windows: bool = False,
+) -> int:
+    """activity_4f0f15d7.slider_captcha: ``distance * ppi + offset``, then int.
+
+    On Windows the source divides by ppi again before the int cast.
+    """
+    drag = float(match_x) * float(ppi) + float(offset)
+    if windows:
+        drag = drag / float(ppi or 1)
+    return int(drag)
+
+
+def meituan_slider_distance(background_width: float, slider_width: float) -> float:
+    """process65: ``bound.width - bound_1.width``."""
+    return float(background_width) - float(slider_width)
+
+
+def meituan_trace_points(points: Sequence) -> list:
+    """process65 replays ``time_ease(...)[25:]``. The easing function itself
+    lives in ``resources.trace_api``, which is not in the export.
+    """
+    return list(points)[25:]
+
+
+def legacy_click_point(
+    raw_x: str,
+    raw_y: str,
+    prompt_left: float,
+    prompt_top: float,
+    bg_left: float,
+    bg_top: float,
+    ppi: float = 1.0,
+) -> Tuple[int, int]:
+    """activity_4db973e3.process21 点选1个坐标 screen point."""
+    x = int(float(raw_x) * float(ppi)) + min(prompt_left, bg_left)
+    y = int(float(raw_y) * float(ppi)) + min(prompt_top, bg_top)
+    return int(x), int(y)

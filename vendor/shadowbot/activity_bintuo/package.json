@@ -1,0 +1,87 @@
+{
+  "uuid": "83d7f11c-f5a2-42b4-aca6-99dec11102c9",
+  "name": "冰拓验证码扩展",
+  "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/0c/fa/0cfa57b8d2260276eb821b03d018161f.png",
+  "version": "1",
+  "tags": "official",
+  "software": null,
+  "software_title": null,
+  "package_version": 2,
+  "feature_list": [
+    2
+  ],
+  "description": "该指令集借助冰拓平台能力实现验证码自动化操作",
+  "instruction": null,
+  "use_latest_pip": false,
+  "videoName": null,
+  "startup": "main",
+  "robot_type": "activity",
+  "activity_code": "activity_bintuo",
+  "flows": [
+    {
+      "name": "main",
+      "filename": "main",
+      "kind": "Visual",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "utils",
+      "filename": "utils",
+      "kind": "Code",
+      "opened": false,
+      "groupName": null,
+      "enableCopilot": false
+    },
+    {
+      "name": "zfb_click",
+      "filename": "zfb_click",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "jd_route",
+      "filename": "jd_route",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    },
+    {
+      "name": "dw_slider",
+      "filename": "dw_slider",
+      "kind": "Code",
+      "opened": true,
+      "groupName": "activity",
+      "enableCopilot": false
+    }
+  ],
+  "flow_groups": [
+    {
+      "name": "activity"
+    }
+  ],
+  "variables": [],
+  "external_dependencies": [],
+  "internaldependencies": [],
+  "selectordependencies": [],
+  "internalautodependencies": [],
+  "ipaasDependencies": [],
+  "databook_columns": [],
+  "authority": "use",
+  "internalautoupgrade": false,
+  "isbrief": false,
+  "uia_type": "PC",
+  "persist_databook": false,
+  "encrypt_bot": false,
+  "customItems": {
+    "videoUrl": null,
+    "imageUrl": null,
+    "imageName": null,
+    "gifUrl": null
+  },
+  "terminalTags": "win,macos,linux"
+}

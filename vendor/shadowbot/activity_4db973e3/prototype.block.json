@@ -1,0 +1,2109 @@
+{
+  "types": [],
+  "blocks": [
+    {
+      "name": "xbot_extensions.activity_4db973e3.main",
+      "statement": "process.invoke_activity",
+      "title": "【付费】验证码识别(web)",
+      "keywords": "",
+      "description": "封装了常见但有使用难度的几类验证码，包含了滑动拼图验证、图片旋转验证、推理拼图验证以及点选验证等验证码识别指令",
+      "comment": "封装了常见但有使用难度的几类验证码，包含了滑动拼图验证、图片旋转验证、推理拼图验证以及点选验证等验证码识别指令",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/images/30/aa/30aad4172f6546b59001d3395853aa30.png",
+      "function": "xbot_extensions.activity_4db973e3.main",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.utils",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.utils",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.计算滑块距离",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process2",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "tj_username",
+          "label": "tj_username",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "tj_password",
+          "label": "tj_password",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "start_element",
+          "label": "start_element",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_element",
+          "label": "background_element",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "缺口类型",
+          "label": "缺口类型",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "ai_engine",
+          "label": "ai_engine",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "distince",
+          "label": "distince",
+          "name": "distince",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.拖动滑块",
+      "statement": "process.invoke_activity",
+      "title": "拖动滑块",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process3",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_start_element",
+          "label": "drag_start_element",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "distance",
+          "label": "distance",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.图片旋转验证",
+      "statement": "process.invoke_activity",
+      "title": "图片旋转验证",
+      "keywords": "",
+      "description": "基于验证码识别指令实现图片旋转验证",
+      "comment": "基于验证码识别指令实现图片旋转验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process15",
+      "helpUrl": "/yddoc/rpa/zh-CN/711939369749626880",
+      "extension": "【付费】验证码识别(web)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "验证码图片",
+          "label": "验证码图片",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "滑块元素",
+          "label": "滑块元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "滑动条",
+          "label": "滑动条",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "是否模拟人工",
+          "label": "",
+          "required": false,
+          "tips": "",
+          "type": "bool",
+          "default": "13:False",
+          "editor": {
+            "kind": "checkbox",
+            "label": "是否模拟人工"
+          },
+          "category": "general"
+        },
+        {
+          "name": "图鉴账号",
+          "label": "图鉴账号",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin",
+            "placeholder": ""
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "图鉴密码",
+          "label": "图鉴密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "偏移",
+          "label": "偏移",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.推理拼图验证",
+      "statement": "process.invoke_activity",
+      "title": "推理拼图验证",
+      "keywords": "",
+      "description": "基于验证码识别指令实现推理图片验证",
+      "comment": "基于验证码识别指令实现推理图片验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process16",
+      "helpUrl": "/yddoc/rpa/zh-CN/711938263345852416",
+      "extension": "【付费】验证码识别(web)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "验证码图片",
+          "label": "验证码图片",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "图鉴账号",
+          "label": "图鉴账号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": ""
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "图鉴密码",
+          "label": "图鉴密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.获取当前屏幕缩放比例",
+      "statement": "process.invoke_activity",
+      "title": "获取当前屏幕缩放比例",
+      "keywords": "",
+      "description": "获取当前显示器屏幕的缩放比例",
+      "comment": "获取当前显示器屏幕的缩放比例",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.get_scaling",
+      "helpUrl": "/yddoc/rpa/zh-CN/711936180284723200",
+      "extension": "【付费】验证码识别(web)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "scaling",
+          "label": "缩放比例",
+          "name": "scaling",
+          "type": "float"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.滑动拼图验证（去除界面 bug）",
+      "statement": "process.invoke_activity",
+      "title": "滑动拼图验证",
+      "keywords": "",
+      "description": "基于验证码识别指令实现滑块拼图验证",
+      "comment": "基于验证码识别指令实现滑块拼图验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process19",
+      "helpUrl": "/yddoc/rpa/zh-CN/711941651238391808",
+      "extension": "【付费】验证码识别(web)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "识别引擎",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎",
+                "value": "YD",
+                "Unicode": null
+              },
+              {
+                "display": "图鉴引擎",
+                "value": "TJ",
+                "Unicode": null
+              },
+              {
+                "display": "本地引擎",
+                "value": "LOCAL",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "缺口or单缺口",
+          "label": "识别模式",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "缺口识别",
+                "value": "缺口识别",
+                "Unicode": null
+              },
+              {
+                "display": "单缺口识别",
+                "value": "单缺口识别",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "图块所在背景",
+          "label": "图块所在背景",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "目标图块",
+          "label": "目标图块",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "拖拽元素",
+          "label": "拖拽滑块",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "图鉴帐号",
+          "label": "图鉴帐号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "留空则使用企业引擎"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "图鉴密码",
+          "label": "图鉴密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "留空则使用企业引擎"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "重试次数",
+          "label": "重试次数",
+          "required": false,
+          "tips": "滑动失败时的重试次数，最小为0，默认为5",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "偏移距离",
+          "label": "偏移距离",
+          "required": false,
+          "tips": "调整滑块的拖拽距离",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "移动速度",
+          "label": "移动速度",
+          "required": false,
+          "tips": "移动滑块的速度",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "中速",
+                "value": "middle",
+                "Unicode": null
+              },
+              {
+                "display": "慢速",
+                "value": "slow",
+                "Unicode": null
+              },
+              {
+                "display": "快速",
+                "value": "fast",
+                "Unicode": null
+              },
+              {
+                "display": "瞬间",
+                "value": "instant",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.超级鹰验证码识别",
+      "statement": "process.invoke_activity",
+      "title": "验证码识别(超级鹰)",
+      "keywords": "",
+      "description": "该指令使用超级鹰引擎进行验证码识别",
+      "comment": "在%网页对象%网页对象上, 使用超级鹰验证码引擎登录%账号%账号, 使用%验证码类型%类型识别%验证码元素%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process20",
+      "helpUrl": "/yddoc/rpa/zh-CN/711933754805501952",
+      "extension": "【付费】验证码识别(web)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "待处理的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "账号",
+          "label": "账号",
+          "required": false,
+          "tips": "超级鹰平台的登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "请输入超级鹰的账号"
+          },
+          "category": "general"
+        },
+        {
+          "name": "密码",
+          "label": "密码",
+          "required": false,
+          "tips": "超级鹰平台的登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "password"
+          },
+          "category": "general"
+        },
+        {
+          "name": "验证码类型",
+          "label": "验证码类型",
+          "required": false,
+          "tips": "验证码类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "常见4~6位英文数字",
+                "value": "1902",
+                "Unicode": null
+              },
+              {
+                "display": "1~4位英文数字",
+                "value": "1004",
+                "Unicode": null
+              },
+              {
+                "display": "1~5位英文数字",
+                "value": "1005",
+                "Unicode": null
+              },
+              {
+                "display": "1~6位英文数字",
+                "value": "1006",
+                "Unicode": null
+              },
+              {
+                "display": "1~7位英文数字",
+                "value": "1007",
+                "Unicode": null
+              },
+              {
+                "display": "1位纯汉字",
+                "value": "2001",
+                "Unicode": null
+              },
+              {
+                "display": "1~6位纯汉字",
+                "value": "2006",
+                "Unicode": null
+              },
+              {
+                "display": "1~4位纯英文",
+                "value": "3004",
+                "Unicode": null
+              },
+              {
+                "display": "1~5位纯英文",
+                "value": "3005",
+                "Unicode": null
+              },
+              {
+                "display": "1~6位纯英文",
+                "value": "3006",
+                "Unicode": null
+              },
+              {
+                "display": "1~4位纯数字",
+                "value": "4004",
+                "Unicode": null
+              },
+              {
+                "display": "1~5位纯数字",
+                "value": "4005",
+                "Unicode": null
+              },
+              {
+                "display": "1~6位纯数字",
+                "value": "4006",
+                "Unicode": null
+              },
+              {
+                "display": "不定长汉字英文数字",
+                "value": "5000",
+                "Unicode": null
+              },
+              {
+                "display": "8位英文数字(包含字符)",
+                "value": "5108",
+                "Unicode": null
+              },
+              {
+                "display": "拼音首字母，计算题，成语混合",
+                "value": "5201",
+                "Unicode": null
+              },
+              {
+                "display": "集装箱号 4位字母7位数字",
+                "value": "5211",
+                "Unicode": null
+              },
+              {
+                "display": "计算题",
+                "value": "6001",
+                "Unicode": null
+              },
+              {
+                "display": "复杂计算题",
+                "value": "6003",
+                "Unicode": null
+              },
+              {
+                "display": "选择题四选一(ABCD或1234)",
+                "value": "6002",
+                "Unicode": null
+              },
+              {
+                "display": "问答题，智能回答题",
+                "value": "6004",
+                "Unicode": null
+              },
+              {
+                "display": "坐标选一,返回格式:x,y",
+                "value": "9101",
+                "Unicode": null
+              },
+              {
+                "display": "点击两个相同的字,返回:x1,y1|x2,y2",
+                "value": "9102",
+                "Unicode": null
+              },
+              {
+                "display": "点击两个相同的动物或物品,返回:x1,y1|x2,y2",
+                "value": "9202",
+                "Unicode": null
+              },
+              {
+                "display": "坐标多选,返回1~4个坐标,如:x1,y1|x2,y2|x3,y3",
+                "value": "9004",
+                "Unicode": null
+              },
+              {
+                "display": "坐标选四,返回格式:x1,y1|x2,y2|x3,y3|x4,y4",
+                "value": "9104",
+                "Unicode": null
+              },
+              {
+                "display": "坐标多选,返回3~6个坐标,如:x1,y1|x2,y2|x3,y3",
+                "value": "9006",
+                "Unicode": null
+              },
+              {
+                "display": "文字定位与识别",
+                "value": "9501",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "验证码元素",
+          "label": "验证码元素",
+          "required": false,
+          "tips": "待识别的元素对象",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "软件ID",
+          "label": "软件ID",
+          "required": false,
+          "tips": "软件ID",
+          "type": "str",
+          "default": "10:96001",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "识别结果",
+          "label": "识别结果",
+          "tips": "验证码识别结果",
+          "name": "识别结果",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.emphasize_color",
+      "statement": "process.invoke_activity",
+      "title": "突出验证码颜色",
+      "keywords": "",
+      "description": "在需要输入图片中指定颜色的字符的验证码情景中，将验证码的某个颜色突出显示",
+      "comment": "在验证码图片 %验证码图片路径% 中 突出显示 %要突出的颜色%，保存在 %输出图片路径%",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.emphasize_color",
+      "helpUrl": "/yddoc/rpa/zh-CN/711935159508570112",
+      "extension": "【付费】验证码识别(web)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "验证码图片路径",
+          "label": "验证码图片路径",
+          "required": false,
+          "tips": "本地图片路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null,
+            "dialog": {
+              "type": "OpenFile",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "要突出的颜色",
+          "label": "要突出的颜色",
+          "required": false,
+          "tips": "输入“红色”或者“黄色”或者“蓝色”",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "输入“红色”或者“黄色”或者“蓝色”"
+          },
+          "category": "general"
+        },
+        {
+          "name": "输出图片路径",
+          "label": "输出图片路径",
+          "required": false,
+          "tips": "处理后的图片的输出路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "结果图片路径",
+          "label": "结果图片路径",
+          "tips": "结果图片路径",
+          "name": "结果图片路径",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.坐标点选验证（去除界面 bug）",
+      "statement": "process.invoke_activity",
+      "title": "坐标点选验证",
+      "keywords": "",
+      "description": "基于验证码识别指令实现坐标点选验证",
+      "comment": "在网页 %网页对象% 上对验证码图片 %验证码图片% 和点选提示%点选提示% 用 %识别模式% 进行坐标点选验证",
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process21",
+      "helpUrl": "/yddoc/rpa/zh-CN/711940556972539904",
+      "extension": "【付费】验证码识别(web)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "识别模式",
+          "label": "识别模式",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "点选1个坐标",
+                "value": "点选1个坐标",
+                "Unicode": null
+              },
+              {
+                "display": "点选3个坐标",
+                "value": "点选3个坐标",
+                "Unicode": null
+              },
+              {
+                "display": "点选1~4个坐标",
+                "value": "点选1~4个坐标",
+                "Unicode": null
+              },
+              {
+                "display": "点选3~5个坐标",
+                "value": "点选3~5个坐标",
+                "Unicode": null
+              },
+              {
+                "display": "点选5~8个坐标",
+                "value": "点选5~8个坐标",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "验证码图片",
+          "label": "验证码图片",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "点选提示",
+          "label": "点选提示",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "图鉴账号",
+          "label": "图鉴账号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "图鉴密码",
+          "label": "图鉴密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.测试-突出验证码颜色",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process23",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.超级鹰本地验证码识别",
+      "statement": "process.invoke_activity",
+      "title": "本地验证码识别(超级鹰)",
+      "keywords": "",
+      "description": "该指令使用超级鹰引擎进行本地验证码识别",
+      "comment": "使用超级鹰验证码引擎登录 %账号%, 使用 %验证码类型%识别%本地图片路径%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/puzzle.png",
+      "function": "xbot_extensions.activity_4db973e3.process24",
+      "helpUrl": "/yddoc/rpa/zh-CN/712145190271795200",
+      "extension": "【付费】验证码识别(web)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "账号",
+          "label": "账号",
+          "required": false,
+          "tips": "超级鹰平台的登录账号",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "密码",
+          "label": "密码",
+          "required": false,
+          "tips": "超级鹰平台的登录密码",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "general"
+        },
+        {
+          "name": "验证码类型",
+          "label": "验证码类型",
+          "required": false,
+          "tips": "验证码类型",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "常见4~6位英文数字",
+                "value": "1902",
+                "Unicode": null
+              },
+              {
+                "display": "1~4位英文数字",
+                "value": "1004",
+                "Unicode": null
+              },
+              {
+                "display": "1~5位英文数字",
+                "value": "1005",
+                "Unicode": null
+              },
+              {
+                "display": "1~6位英文数字",
+                "value": "1006",
+                "Unicode": null
+              },
+              {
+                "display": "1~7位英文数字",
+                "value": "1007",
+                "Unicode": null
+              },
+              {
+                "display": "1位纯汉字",
+                "value": "2001",
+                "Unicode": null
+              },
+              {
+                "display": "1~6位纯汉字",
+                "value": "2006",
+                "Unicode": null
+              },
+              {
+                "display": "1~4位纯英文",
+                "value": "3004",
+                "Unicode": null
+              },
+              {
+                "display": "1~5位纯英文",
+                "value": "3005",
+                "Unicode": null
+              },
+              {
+                "display": "1~6位纯英文",
+                "value": "3006",
+                "Unicode": null
+              },
+              {
+                "display": "1~4位纯数字",
+                "value": "4004",
+                "Unicode": null
+              },
+              {
+                "display": "1~5位纯数字",
+                "value": "4005",
+                "Unicode": null
+              },
+              {
+                "display": "1~6位纯数字",
+                "value": "4006",
+                "Unicode": null
+              },
+              {
+                "display": "不定长汉字英文数字",
+                "value": "5000",
+                "Unicode": null
+              },
+              {
+                "display": "8位英文数字(包含字符)",
+                "value": "5108",
+                "Unicode": null
+              },
+              {
+                "display": "拼音首字母，计算题，成语混合",
+                "value": "5201",
+                "Unicode": null
+              },
+              {
+                "display": "集装箱号 4位字母7位数字",
+                "value": "5211",
+                "Unicode": null
+              },
+              {
+                "display": "计算题",
+                "value": "6001",
+                "Unicode": null
+              },
+              {
+                "display": "复杂计算题",
+                "value": "6003",
+                "Unicode": null
+              },
+              {
+                "display": "选择题四选一(ABCD或1234)",
+                "value": "6002",
+                "Unicode": null
+              },
+              {
+                "display": "问答题，智能回答题",
+                "value": "6004",
+                "Unicode": null
+              },
+              {
+                "display": "坐标选一,返回格式:x,y",
+                "value": "9101",
+                "Unicode": null
+              },
+              {
+                "display": "点击两个相同的字,返回:x1,y1|x2,y2",
+                "value": "9102",
+                "Unicode": null
+              },
+              {
+                "display": "点击两个相同的动物或物品,返回:x1,y1|x2,y2",
+                "value": "9202",
+                "Unicode": null
+              },
+              {
+                "display": "坐标多选,返回1~4个坐标,如:x1,y1|x2,y2|x3,y3",
+                "value": "9004",
+                "Unicode": null
+              },
+              {
+                "display": "坐标选四,返回格式:x1,y1|x2,y2|x3,y3|x4,y4",
+                "value": "9104",
+                "Unicode": null
+              },
+              {
+                "display": "坐标多选,返回3~6个坐标,如:x1,y1|x2,y2|x3,y3",
+                "value": "9006",
+                "Unicode": null
+              },
+              {
+                "display": "文字定位与识别",
+                "value": "9501",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "本地图片路径",
+          "label": "本地图片路径",
+          "required": false,
+          "tips": "本地图片路径",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": "本地文件路径",
+            "dialog": {
+              "type": "OpenFile",
+              "filter": "所有文件|*.*",
+              "defaultFileName": null,
+              "maxSize": null
+            }
+          },
+          "category": "general"
+        },
+        {
+          "name": "软件ID",
+          "label": "软件ID",
+          "required": false,
+          "tips": "软件ID",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "识别结果",
+          "label": "识别结果",
+          "tips": "验证码识别结果",
+          "name": "识别结果",
+          "type": "str"
+        }
+      ]
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.测试-超级鹰本地验证码识别",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process25",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.测试-滑动拼图验证码",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process26",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.测试-获取屏幕缩放",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process27",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.测试-图片旋转验证",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process28",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.测试-坐标点选验证",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process29",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.测试-推理图片验证",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process30",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.test_invoke_modules",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.test_invoke_modules",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.淘宝新滑动验证-禁用",
+      "statement": "process.invoke_activity",
+      "title": "淘宝滑动验证-物体识别",
+      "keywords": "",
+      "description": "自动检查通过滑动验证",
+      "comment": "最多重试%最大重试次数%次，偏移%偏移量%",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/06%E6%95%B0%E6%8D%AE/remove_key.png",
+      "function": "xbot_extensions.activity_4db973e3.process31",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "web_page",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "最大重试次数",
+          "label": "最大重试次数",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:20",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        },
+        {
+          "name": "偏移量",
+          "label": "偏移量",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:1",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.A 单次运行",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process32",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "偏移",
+          "label": "偏移",
+          "required": false,
+          "tips": "",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "general"
+        },
+        {
+          "name": "背景图片_元素对象",
+          "label": "背景图片_元素对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "提示词_元素对象",
+          "label": "提示词_元素对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "滑块_元素对象",
+          "label": "滑块_元素对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.B_Tools",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.B_Tools",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.taobo_object_reg",
+      "statement": "process.invoke_activity",
+      "title": "物体识别验证码",
+      "keywords": "",
+      "description": "该指令实现了滑动淘宝物体识别验证码的功能",
+      "comment": "在%background_ele%元素上拖动%drag_ele%元素, 完成物体识别滑块验证",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/03%E7%94%B5%E5%95%86/token_card_code.png",
+      "function": "xbot_extensions.activity_4db973e3.taobo_object_reg",
+      "helpUrl": "/yddoc/rpa/zh-CN/889697344139821056",
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "web_page",
+          "label": "网页对象",
+          "required": false,
+          "tips": "待处理的网页对象",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "tip_ele",
+          "label": "验证码提示词",
+          "required": false,
+          "tips": "验证码的提示图",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "background_ele",
+          "label": "验证码背景图",
+          "required": false,
+          "tips": "待识别的背景图",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "slider_ele",
+          "label": "滑条元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "drag_ele",
+          "label": "拖拽滑块",
+          "required": false,
+          "tips": "待拖动的滑块",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "token",
+          "label": "云码 Token",
+          "required": false,
+          "tips": "云码账号对应的token",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "offset",
+          "label": "偏移",
+          "required": false,
+          "tips": "偏移量",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "retry_count",
+          "label": "重试次数",
+          "required": false,
+          "tips": "重试次数",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.测试-淘宝物体识别",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process33",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.模拟人工拖拽",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process34",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.京东风控滑块验证",
+      "statement": "process.invoke_activity",
+      "title": "京东风控滑块验证",
+      "keywords": "",
+      "description": "该指令用户京东风控验证码的识别",
+      "comment": "",
+      "icon": "https://winrobot-pub-a.oss-cn-hangzhou.aliyuncs.com/icons/activity-icons/01%E9%80%9A%E7%94%A8/air_play.png",
+      "function": "xbot_extensions.activity_4db973e3.process35",
+      "helpUrl": "/yddoc/rpa/zh-CN/889697303336337408",
+      "extension": "【付费】验证码识别(web)",
+      "hidden": false,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [
+        {
+          "name": "网页对象",
+          "label": "网页对象",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.browser.WebBrowser",
+          "default": "13:None",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": true
+          },
+          "category": "general"
+        },
+        {
+          "name": "目标图块",
+          "label": "目标图块",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "拖拽元素",
+          "label": "拖拽元素",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "图块所在背景",
+          "label": "图块所在背景",
+          "required": false,
+          "tips": "",
+          "type": "xbot._web.element.WebElement",
+          "default": "13:None",
+          "editor": {
+            "kind": "uitarget",
+            "selectorType": "simple",
+            "onlySelector": false
+          },
+          "category": "general"
+        },
+        {
+          "name": "缺口or单缺口",
+          "label": "缺口or单缺口",
+          "required": false,
+          "tips": "缺口识别\r\n单缺口识别",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "缺口识别",
+                "value": "缺口识别",
+                "Unicode": null
+              },
+              {
+                "display": "单缺口识别",
+                "value": "单缺口识别",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "识别引擎",
+          "label": "识别引擎",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "影刀引擎",
+                "value": "YD",
+                "Unicode": null
+              },
+              {
+                "display": "图鉴引擎",
+                "value": "TJ",
+                "Unicode": null
+              },
+              {
+                "display": "本地引擎",
+                "value": "LOCAL",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "移动速度",
+          "label": "移动速度",
+          "required": false,
+          "tips": "移动滑块的速度",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "select",
+            "useVariableOptions": false,
+            "options": [
+              {
+                "display": "中速",
+                "value": "middle",
+                "Unicode": null
+              },
+              {
+                "display": "慢速",
+                "value": "slow",
+                "Unicode": null
+              },
+              {
+                "display": "快速",
+                "value": "fast",
+                "Unicode": null
+              },
+              {
+                "display": "瞬间",
+                "value": "instant",
+                "Unicode": null
+              }
+            ]
+          },
+          "category": "general"
+        },
+        {
+          "name": "图鉴帐号",
+          "label": "图鉴帐号",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "图鉴密码",
+          "label": "图鉴密码",
+          "required": false,
+          "tips": "",
+          "type": "str",
+          "default": "10:",
+          "editor": {
+            "kind": "textbox",
+            "placeholder": null
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "重试次数",
+          "label": "重试次数",
+          "required": false,
+          "tips": "滑动失败时的重试次数，最小为0，默认为5",
+          "type": "int",
+          "default": "13:5",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        },
+        {
+          "name": "偏移距离",
+          "label": "偏移距离",
+          "required": false,
+          "tips": "调整滑块的拖拽距离",
+          "type": "int",
+          "default": "13:0",
+          "editor": {
+            "kind": "spin"
+          },
+          "category": "advanced"
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.jd_utiles",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.jd_utiles",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.测试-京东风控滑动验证",
+      "statement": "process.invoke_activity",
+      "title": "子流程1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.process37",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.xz_utils",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.xz_utils",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    },
+    {
+      "name": "xbot_extensions.activity_4db973e3.xtrace",
+      "statement": "process.invoke_activity",
+      "title": "module1",
+      "keywords": "",
+      "description": null,
+      "comment": null,
+      "icon": "BlockIcons/21-2.png",
+      "function": "xbot_extensions.activity_4db973e3.xtrace",
+      "helpUrl": null,
+      "extension": "【付费】验证码识别(web)",
+      "hidden": true,
+      "canDebug": true,
+      "isCondition": false,
+      "isLoop": false,
+      "isPseudo": false,
+      "inputs": [],
+      "outputs": []
+    }
+  ]
+}
