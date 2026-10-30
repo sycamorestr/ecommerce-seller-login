@@ -2,7 +2,7 @@
 
 状态：`ported` 已有 Playwright 或 API 模块；`desktop-only` 只有 Windows 客户端；`captcha-only` 识别参数在该平台目录的 `captcha.py`；`skipped` 没有登录实现，原因见 [`unported.md`](unported.md)。
 
-每个产品一个目录（`platforms/<product>/` 或 `banks/<bank>/`），入口和 `helpers.py` 放在一起。根目录同名 `*_login_pw.py` 以及 `banks/<旧文件名>.py` 只是废弃的重新导出。
+每个产品一个目录（`platforms/<product>/` 或 `banks/<bank>/`），入口和 `helpers.py` 放在一起。调用参数、选择器和验证码以该目录的 `README.md` 为准。根目录同名 `*_login_pw.py` 以及 `banks/<旧文件名>.py` 只是废弃的重新导出。
 
 ## 1. 国内电商登录
 

@@ -1,23 +1,185 @@
-# 交通银行
+# 交通银行客户号、交通银行
 
-This folder is the copy unit. It contains the login entrypoint and the helpers it imports (`helpers.py`, and `captcha.py` when the login calls Yunma or 图鉴).
+## 模块简介
 
-签名控件或 UKey 提示为 `helpers.NeedsHumanError`。个人/企业地址在登录模块的 `LOGIN_URLS`。
+这个目录是交通银行客户号、交通银行的网银登录。它移植影刀应用「登陆拓展合集」里的 `activity_e05c2690/pbank_load_custom.py`、`activity_e05c2690/pbank_load.py`。
+对外入口是 `jiaotong_custom_login_pw.py`, `jiaotong_login_pw.py` 里的登录函数，内部都调用本目录 `helpers.bank_login`。影刀里对应指令是公开块。
+浏览器流程是同一套：打开对应网址、检查控件提示、按选择器填写、按验证码类型决定是否请求云码、点击登录。
+短信、扫码、人脸、UKey 安装都不会在这里自动完成。
 
-## Files
+## 目录与文件说明
 
-- `helpers.py`
-- `captcha.py`
-- `jiaotong_custom_login_pw.py`
-- `jiaotong_login_pw.py`
+- `__init__.py`：空文件，用来把该银行标成 Python 包，这样可以从 `banks.bocom` 导入。
+- `captcha.py`：云码 POST（`yunma_post`）以及数英、滑块、点选的请求体。银行登录实际用到的是 `alphanum_payload`、`yunma_post`、`require_yunma_token`。其余函数随目录拷贝，这个入口不一定调用。不要在这个文件里填写 token。
+- `helpers.py`：本目录自带的运行内核。公开类型有 `OnError`、`SellerLoginError`、`NeedsHumanError`、`CredentialsRejected`、`DesktopOnlyLogin`、`SellerLoginResult`、`BankSpec`。公开函数有 `open_page`、`create_browser`、`goto_with_retry`、`visible`、`fill_checked`、`mouse_drag`、`finish`、`close_result`、`resolve_url`、`bank_login`。`_creds` 是内部函数，按参数或环境变量取账号密码。`SellerLoginResult` 字段是 `ok`、`web_page`、`error`、`yunma_calls`、`shots`，自建浏览器用 `_browser`、`_context`、`_playwright` 保存。
+- `jiaotong_custom_login_pw.py`：影刀网银登录的 Playwright 入口。公开函数见下文。模块级常量 `LOGIN_URLS`、`ENV_PREFIX`、`CAPTCHA_TYPES`、`SPEC` 描述这一家的网址和选择器。
+- `jiaotong_login_pw.py`：影刀网银登录的 Playwright 入口。公开函数见下文。模块级常量 `LOGIN_URLS`、`ENV_PREFIX`、`CAPTCHA_TYPES`、`SPEC` 描述这一家的网址和选择器。
 
-## 影刀来源
+## 实现逻辑
 
-- Playwright port of 影刀「交通银行登录」 activity_e05c2690/pbank_load.py.
-- Playwright port of 影刀「交通银行登录-客户号登录」 activity_e05c2690/pbank_load_custom.py.
+### 交通银行客户号（`jiaotong_custom_login`）
 
-## 环境变量
+来源 `activity_e05c2690/pbank_load_custom.py`。环境变量前缀 `BOCOM_CUSTOM`。
 
-- `BOCOM_CUSTOM_USER`
+网址：
 
-Do not put accounts, passwords, or tokens in this folder.
+- `default`（默认）：https://ebank.bankcomm.cn/NEBS/CLG/CNLGAAA01?loginType=1
+
+选择器：
+
+- 用户名：`input[placeholder='请输入客户号']`
+- 密码：`input#safeLogonPwd1`
+- 登录按钮：空，这一步跳过
+- 验证码图片：空，这一步跳过
+- 验证码输入框：空，这一步跳过
+- 控件/UKey 提示：空，这一步跳过
+
+步骤：
+
+1. `jiaotong_custom_login` 若没传 `load_type`，读取 `BOCOM_CUSTOM_LOAD_TYPE`；空字符串当成未指定，再用默认键 `default`。
+2. `resolve_url` 按键取网址。键不在表里会抛 `ValueError`，并列出源码里有的键。网址是空字符串也会抛 `ValueError`，不会编造地址。
+3. `_creds` 取账号密码。参数优先；参数是 `None` 时读 `BOCOM_CUSTOM_ACCOUNT` 和 `BOCOM_CUSTOM_PASSWORD`。任一为空抛 `ValueError`，文案是「缺少交通银行客户号账号或密码」。
+4. `yunma_token` 为 `None` 时读 `YUNMA_TOKEN`。
+5. `open_page` 在未传入 `page` 时启动有头 Chromium，然后 `goto` 上述网址（只试 1 次，超时 40 秒），接着尝试 `reload`。
+6. `ukey_css` 为空，打开页面后不会因为控件提示中断。常量里的控件文案是「当前浏览器可能未安装签名控件」，当前这条路径用不到。
+7. 用户名选择器可见时点击并填写，最多 3 次。读回的值与账号不一致则抛 `CredentialsRejected`，文案是「输入失败，请手动登录」。
+8. 密码选择器可见时填写密码，不回读校验。
+9. 记录的类型是 `22222`，但 `captcha_image_css` 为空。`bank_login` 只有在验证码图片选择器非空且可见时才调用 `captcha.require_yunma_token`。当前既不检查 token，也不计算缺口，也不拖动滑块。
+10. 登录按钮选择器可见时点击。
+11. 选择器为空的步骤会跳过：不点登录按钮。
+12. `user_num` 参数和 `BOCOM_CUSTOM_USER` 会被读入后丢掉，没有传给 `bank_login`。`account` 写入客户号选择器 `input[placeholder='请输入客户号']`。用户编号选择器留在模块常量 `USER_CSS`，`SPEC.username_css` 用的是客户号选择器，用户编号框保持原样。
+
+### 交通银行（`jiaotong_login`）
+
+来源 `activity_e05c2690/pbank_load.py`。环境变量前缀 `BOCOM`。
+
+网址：
+
+- `个人网上银行`（默认）：https://pbank.bankcomm.cn/personbank/system/index.html#/login
+- `企业网上银行`：https://ebank.bankcomm.cn/NEBS/CLG/CNLGAAA01?loginType=1
+
+选择器：
+
+- 用户名：空，这一步跳过
+- 密码：空，这一步跳过
+- 登录按钮：空，这一步跳过
+- 验证码图片：空，这一步跳过
+- 验证码输入框：空，这一步跳过
+- 控件/UKey 提示：空，这一步跳过
+
+步骤：
+
+1. `jiaotong_login` 若没传 `load_type`，读取 `BOCOM_LOAD_TYPE`；空字符串当成未指定，再用默认键 `个人网上银行`。
+2. `resolve_url` 按键取网址。键不在表里会抛 `ValueError`，并列出源码里有的键。网址是空字符串也会抛 `ValueError`，不会编造地址。
+3. `_creds` 取账号密码。参数优先；参数是 `None` 时读 `BOCOM_ACCOUNT` 和 `BOCOM_PASSWORD`。任一为空抛 `ValueError`，文案是「缺少交通银行账号或密码」。
+4. `yunma_token` 为 `None` 时读 `YUNMA_TOKEN`。
+5. `open_page` 在未传入 `page` 时启动有头 Chromium，然后 `goto` 上述网址（只试 1 次，超时 40 秒），接着尝试 `reload`。
+6. `ukey_css` 为空，打开页面后不会因为控件提示中断。常量里的控件文案是「当前浏览器可能未安装签名控件」，当前这条路径用不到。
+7. 用户名选择器可见时点击并填写，最多 3 次。读回的值与账号不一致则抛 `CredentialsRejected`，文案是「输入失败，请手动登录」。
+8. 密码选择器可见时填写密码，不回读校验。
+9. 记录的类型是 `22222`，但 `captcha_image_css` 为空。`bank_login` 只有在验证码图片选择器非空且可见时才调用 `captcha.require_yunma_token`。当前既不检查 token，也不计算缺口，也不拖动滑块。
+10. 登录按钮选择器可见时点击。
+11. 选择器为空的步骤会跳过：不填用户名、不填密码、不点登录按钮。
+
+公共收尾：`finish` 成功时 `ok=True`。`NeedsHumanError` 不向外抛，返回 `ok=False` 且 `error` 为原因。
+`on_error` 默认 `OnError.TERMINATE`，其他异常包成 `SellerLoginError`。设成 `OnError.IGNORE` 时返回 `ok=False`。
+缺账号或密码时，`_creds` 在进入 `finish` 之前抛出 `ValueError`。
+
+## 依赖与环境
+
+- Python 3.10 及以上，Playwright `>=1.40`（同步 API）。本目录不使用 Selenium。
+- 登录函数固定 `open_page(..., headless=False)`，也就是有头 Chromium，视口 1280×900。
+- 只有环境变量 `SELLER_HTTP_PROXY` 非空时，`create_browser` 才给浏览器加代理。不要把代理账号写进仓库。
+- 云码地址写在 `captcha.py`：主机 `api.jfbym.com`，路径 `/api/YmServer/customApi`。Token 只用环境变量 `YUNMA_TOKEN`，或调用时传入 `yunma_token`。
+- 本目录自带 `helpers.py` 和 `captcha.py`，拷走这一家银行时带上这两个文件即可，不必再拷其他银行。
+- 仓库根上的 `banks/<旧文件名>.py` 只是重新导出，已废弃。请从 `banks.<目录>.<模块>` 导入。
+
+环境变量（只写名字，值放在进程环境里，不要写进仓库）：
+
+- `BOCOM_CUSTOM_ACCOUNT`、`BOCOM_CUSTOM_PASSWORD`：账号和密码。
+- `BOCOM_CUSTOM_LOAD_TYPE`：可选，对应 `LOGIN_URLS` 的键。
+- `BOCOM_CUSTOM_USER`：会被读取，随后丢弃，用户编号框保持原样。
+- `BOCOM_ACCOUNT`、`BOCOM_PASSWORD`：账号和密码。
+- `BOCOM_LOAD_TYPE`：可选，对应 `LOGIN_URLS` 的键。
+- `YUNMA_TOKEN`：云码 token。只有验证码分支真正发请求或调用 `require_yunma_token` 时才需要。
+- `SELLER_HTTP_PROXY`：可选 HTTP 代理。
+
+## 调用方法
+
+```python
+from banks.bocom.jiaotong_custom_login_pw import jiaotong_custom_login
+from banks.bocom.helpers import close_result, OnError
+
+# 账号密码来自 BOCOM_CUSTOM_ACCOUNT / BOCOM_CUSTOM_PASSWORD，不要写在代码里
+result = jiaotong_custom_login(on_error=OnError.TERMINATE)
+print(result.ok, result.error)
+if result.web_page is not None:
+    print(result.web_page.url)
+close_result(result)  # 只关闭本次新建的浏览器
+```
+
+传入已有页面时，本函数不会关闭它：
+
+```python
+from playwright.sync_api import sync_playwright
+from banks.bocom.jiaotong_custom_login_pw import jiaotong_custom_login
+
+with sync_playwright() as playwright:
+    browser = playwright.chromium.launch(headless=False)
+    page = browser.new_page()
+    result = jiaotong_custom_login(page=page, on_error=OnError.IGNORE)
+    browser.close()
+```
+
+```python
+from banks.bocom.jiaotong_login_pw import jiaotong_login
+from banks.bocom.helpers import close_result, OnError
+
+# 账号密码来自 BOCOM_ACCOUNT / BOCOM_PASSWORD，不要写在代码里
+result = jiaotong_login(on_error=OnError.TERMINATE, load_type="企业网上银行")
+print(result.ok, result.error)
+if result.web_page is not None:
+    print(result.web_page.url)
+close_result(result)  # 只关闭本次新建的浏览器
+```
+
+传入已有页面时，本函数不会关闭它：
+
+```python
+from playwright.sync_api import sync_playwright
+from banks.bocom.jiaotong_login_pw import jiaotong_login
+
+with sync_playwright() as playwright:
+    browser = playwright.chromium.launch(headless=False)
+    page = browser.new_page()
+    result = jiaotong_login(page=page, on_error=OnError.IGNORE)
+    browser.close()
+```
+
+## 注意事项
+
+- 选择器来自影刀源码。银行页面改版后，class 和 placeholder 很容易失效，失败时先对一下本目录模块里的 CSS，不要另写一套选择器。
+- 过宽的选择器（单独的 `button`、`a`、`input[type=text]`）在移植时已清空，避免点错元素。清空后对应步骤会跳过，这是当前代码的行为。
+- 有头模式是写死的。无头环境下银行控件和滑块更容易失败，本模块没有 `headless=True` 的开关。
+- `22222` 在这个公共流程里只检查 token，不拖滑块。需要拖动的话不在 `bank_login` 里。
+- 图鉴类型 `4`（成都农商）和 `66`（绵阳商行）只记在 `SPEC` 和 `captcha.py`，登录函数不会去调用图鉴。
+- 不要把账号、密码、UKey 口令、云码 token、手机号写进本目录或提交到仓库。
+- 登录成功后的页面留在 `result.web_page`。Cookie 不会自动落盘；若要保存，使用 `platforms/cookie/`，并单独传入页面。
+- 交通银行客户号登录是 `jiaotong_custom_login`，与同目录 `jiaotong_login` 分开。客户号入口只填客户号和 `input#safeLogonPwd1`。用户编号框保持原样。登录按钮选择器为空，因此停在填表之后。
+- `交通银行客户号` 虽标记滑块类型 `22222`，图片选择器为空，运行时不会向云码要缺口。
+- 交通银行普通登录的用户名、密码、登录按钮选择器都是空字符串。函数打开个人或企业网址后，填表和点击都会跳过。企业网址与客户号登录相同。
+- `交通银行` 虽标记滑块类型 `22222`，图片选择器为空，运行时不会向云码要缺口。
+
+## 测试
+
+离线测试在 `tests/test_login_ext_pw.py` 的 `test_bank_urls_and_missing_creds`。
+它会导入本目录的登录模块，核对 `LOGIN_URLS` 能被 `resolve_url` 解析，并在清空对应环境变量后调用登录函数，期望得到 `ValueError`。
+不打开网银页面，也不读取真实账号。
+
+只跑银行相关测试：
+
+```bash
+pytest tests/test_login_ext_pw.py::test_bank_urls_and_missing_creds -q
+```
+
+验证码请求体（含 `10103` 区分大小写）在同文件的 `test_captcha_payloads`，它导入的是 `platforms.jd.captcha`，与各银行目录里的 `captcha.py` 内容一致。

@@ -9,7 +9,7 @@ platforms/<product>/     # 同一产品的登录、切店入口放在一起
   *_login_pw.py          # 入口：*_login() 和 main()
   helpers.py             # 这个目录用到的浏览器、异常、结果对象
   captcha.py             # 仅当该登录调用云码或图鉴
-  README.md              # 环境变量、影刀来源、拷贝说明
+  README.md              # 该登录的文件、流程、调用示例和测试
 banks/<bank>/            # 每家银行单独一个目录，结构同上
 vendor/shadowbot/        # 已脱敏的影刀原文，不参与运行
 docs/CATALOG.md          # 指令 → 目录 → 状态
@@ -32,7 +32,7 @@ scripts/                 # 千牛实机入口
 | Cookie | `platforms/cookie/` |
 | 未做成网页登录 | [`docs/unported.md`](docs/unported.md) |
 
-完整矩阵：[`docs/CATALOG.md`](docs/CATALOG.md)。
+完整矩阵：[`docs/CATALOG.md`](docs/CATALOG.md)。每个 `platforms/<product>/README.md` 和 `banks/<bank>/README.md` 按该目录里的函数写了调用方式和注意点，矩阵只做索引。
 
 ## 运行与测试
 
