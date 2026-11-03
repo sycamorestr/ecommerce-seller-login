@@ -77,4 +77,10 @@
 | 保存 Cookie / Cookie 登录 / 退出 | `platforms/cookie/` | ported |
 | 云码、图鉴、银行滑块 | 各登录目录里的 `captcha.py` | captcha-only |
 
+## 7. 网页对象
+
+| 指令 | 模块 | 状态 |
+| --- | --- | --- |
+| 获取已打开的网页对象 | `platforms/web_get/` | ported。`chrome` / `edge` 经 CDP；`cef` / `ie` / `firefox` / `360se` / `auto` 不支持 |
+
 未列入上表、且没有登录 URL 的子流程见 [`unported.md`](unported.md)。

@@ -30,6 +30,7 @@ scripts/                 # 千牛实机入口
 | 跨境 | `platforms/temu` `aliexpress` |
 | ERP / 税务 | `platforms/jushuitan` `sycm`；阿里妈妈平台登录在 `platforms/alimama/`；巨量合集登录在 `platforms/oceanengine/` |
 | Cookie | `platforms/cookie/` |
+| 获取已打开的网页 | `platforms/web_get/` |
 | 未做成网页登录 | [`docs/unported.md`](docs/unported.md) |
 
 完整矩阵：[`docs/CATALOG.md`](docs/CATALOG.md)。每个 `platforms/<product>/README.md` 和 `banks/<bank>/README.md` 按该目录里的函数写了调用方式和注意点，矩阵只做索引。
