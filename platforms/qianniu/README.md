@@ -1,5 +1,7 @@
 # 千牛
 
+> 配置文件、指定已有浏览器、精简代码和 Cursor 调试请使用最新版 [`qianniu/`](../../qianniu/README.md)。本目录保留原有 API，下面说明仅针对旧接口。
+
 ## 模块简介
 
 这个目录移植影刀市场指令「千牛登录」：`activity_7bca6d` 的 `qn_login`，加上 `activity_jfbym` 的阿里滑块 `ali_slider_captcha`。

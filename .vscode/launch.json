@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "千牛登录（连接已有浏览器）",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/qianniu/main.py",
+      "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "cwd": "${workspaceFolder}/qianniu",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

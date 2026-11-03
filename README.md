@@ -2,9 +2,24 @@
 
 影刀登录流程的 Playwright 移植。每个产品一个目录，目录里带上它自己的 `helpers.py`（以及需要云码时的 `captcha.py`），拷走该目录即可放到别的项目里用。
 
+## 千牛新版入口
+
+最新版千牛登录位于 [`qianniu/`](qianniu/README.md)：通过 `config.json` 指定已有浏览器的调试地址，在新标签页登录并沿用 Cookie；程序结束后保留浏览器。代码分为入口、登录步骤和验证码处理三个文件，便于阅读和调试。
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+Copy-Item qianniu\config.example.json qianniu\config.json
+# 填写 config.json 中的 cdp_url、account、password 后运行
+.\.venv\Scripts\python.exe qianniu\main.py
+```
+
+复制配置模板只需做一次。所有平台共用根目录的 `.venv`。Cursor 打开仓库后可按 F5 选择“千牛登录（连接已有浏览器）”。完整说明和函数调用示例见 [千牛文档](qianniu/README.md)。原 `platforms/qianniu/` 接口继续保留，以下目录说明主要针对原有平台模块。
+
 ## 目录规则
 
 ```
+qianniu/               # 新版千牛：main.py、login.py、captcha.py 与配置模板
 platforms/<product>/     # 同一产品的登录、切店入口放在一起
   *_login_pw.py          # 入口：*_login() 和 main()
   helpers.py             # 这个目录用到的浏览器、异常、结果对象
@@ -24,7 +39,7 @@ scripts/                 # 千牛实机入口
 
 | 类别 | 位置 |
 | --- | --- |
-| 国内电商 | `platforms/qianniu` `jingmai` `pdd` `doudian` `alipay` `oceanengine` `youzan` `jd` `jzt` `taobao` `compass` `aikucun` `alimama` `ali1688` `tmall` |
+| 国内电商 | 新版千牛见 `qianniu/`；原模块位于 `platforms/qianniu` `jingmai` `pdd` `doudian` `alipay` `oceanengine` `youzan` `jd` `jzt` `taobao` `compass` `aikucun` `alimama` `ali1688` `tmall` |
 | 抖店多店 / 切店 | 与单店同在 `platforms/doudian/` |
 | 银行 | `banks/pingan` `boc` `ccb` `icbc` `cmb` `bocom` 等，见 [`docs/banks.md`](docs/banks.md) |
 | 跨境 | `platforms/temu` `aliexpress` |
@@ -46,7 +61,7 @@ pytest
 python -m platforms.qianniu.qianniu_login_pw
 ```
 
-`pytest` 不打开登录页，也不读取真实凭据。实机千牛入口是 `scripts/run_live_login_pw.py`。
+`pytest` 同时检查原有模块和新版千牛，不打开登录页，也不读取真实凭据。新版千牛入口是 `qianniu/main.py`；`scripts/run_live_login_pw.py` 仅用于原有千牛接口。
 
 银行环境变量是各目录 README 里的 `<ENV_PREFIX>_ACCOUNT` / `<ENV_PREFIX>_PASSWORD`，可选 `<ENV_PREFIX>_LOAD_TYPE`。云码统一是 `YUNMA_TOKEN`。
 

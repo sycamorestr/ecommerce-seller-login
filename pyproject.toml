@@ -9,7 +9,7 @@ description = "电商平台登录：影刀登录指令的 Playwright 移植。�
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-  "playwright>=1.40",
+  "playwright>=1.64",
   "Pillow>=10",
 ]
 
