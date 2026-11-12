@@ -1,93 +1,74 @@
-# Cookie 保存 / 登录 / 退出
+# Cookie
 
-## 模块简介
+影刀应用「cookie」主流程里的 7 条指令。网页对象是 Playwright `Page`。没有页面、且浏览器类型是 `chrome` 或 `edge` 时，通过 `platforms/web_get` 的 CDP 连接已打开的浏览器。
 
-这个目录移植影刀 Cookie 指令：保存登录信息、用文件恢复登录、退出。对应源码里的保存、登录、退出三个 process。
+## 文件
 
-它不打开某个电商的登录页，也不读账号密码。所有函数都要求调用方传入已经存在的 Playwright `Page`。`page is None` 时 `require_page` 抛 `SellerLoginError("Cookie 操作需要已打开的 Playwright 页面")`。
-
-`partition_key` 参数保留，与影刀 CEF 分区对应，但函数体把它丢掉。Playwright 没有 CEF partition。
-
-## 目录与文件说明
-
+- `cookie_login_pw.py`：7 条指令和 `visual_*` 包装。
+- `helpers.py`：`SellerLoginError` 等，本目录自带。
+- `example_main_flow.py`：按应用 main 的顺序调用（获取已打开网页 → 保存 → Cookie登录 → 获取指定 Cookie）。
 - `__init__.py`：包标记。
-- `cookie_login_pw.py`：公开函数见下。没有 `main`，不返回 `SellerLoginResult`。
-- `helpers.py`：只使用其中的 `SellerLoginError`。本文件不调用 `open_page`。
-- 没有 `captcha.py`。
 
-公开函数：
+## 影刀指令 → Python
 
-- `extract_domain_from_url(url)`：用正则 `(?:://)(?:www\.)?([a-zA-Z0-9\-\.]+)(?=/)` 取域名。匹配不到返回 `None`。
-- `cookie_expires(cookie)`：优先 `expires`；否则解析 `expirationDate`（把 `/` 换成 `-` 后 `fromisoformat`）。失败返回 `None`。
-- `normalize_cookie(cookie)`：写入 `expires` 和 `sessionCookie`，删掉 `expirationDate`。
-- `save_login_info(page, save_path="")`：导出当前 URL、context cookies、localStorage。`save_path` 非空时写入该文件。返回 JSON 文本。
-- `logout(page, del_local_storage=False)`：`clear_cookies()`。`del_local_storage=True` 时再 `localStorage.clear()`。
-- `login(page, cookie_file_path, add_local_storage=False)`：读 JSON，必要时先打开其中的 URL，清空 cookie，写回，再打开 URL。
-- `save_cookies(page, save_path="", partition_key="")`：`process1` 包装，忽略 `partition_key`。
-- `load_cookies(page, cookie_file_path, add_local_storage=False)`：`process2`。路径空则「Cookie文件路径为空」。
-- `logout_cookies(page, del_local_storage=False)`：`process3`。
+| 影刀指令 | 函数 |
+| --- | --- |
+| Cookie登录 `cookie_login.process2` | `login` / `load_cookies` |
+| 保存Cookie `cookie_login.process1` | `save_login_info` / `save_cookies` |
+| Cookie退出登录 `cookie_login.process3` | `logout` / `logout_cookies` |
+| 设置Cookie `xbot_visual.web.set_cookie` | `set_cookie` / `visual_set_cookie` |
+| 获取筛选所有Cookie `get_cookies_v2` | `get_cookies_v2` / `visual_get_cookies_v2` |
+| 获取指定Cookie信息 `get_cookie` | `get_cookie` / `visual_get_cookie` |
+| 移除Cookie `remove_cookie` | `remove_cookie` / `visual_remove_cookie` |
+
+`get_cookies` / `visual_get_cookies` 是旧版筛选（url 可空则不做网址筛选），保存 Cookie 内部会调用它。
 
 ## 实现逻辑
 
-保存：
-
-1. 读 `page.url`、`page.context.cookies()`、整份 `localStorage`。
-2. 每条 cookie 走 `normalize_cookie`。
-3. JSON 形如 `{"url", "cookies", "local_storage"}`，`ensure_ascii=False`，缩进 4。
-
-恢复：
-
-1. 读文件。若当前 `window.origin` 不在保存的 URL 里，先 `goto` 该 URL（20 秒）。
-2. `logout` 清空 cookie。
-3. 只保留 Playwright 认识的字段：`name`、`value`、`domain`、`path`、`expires`、`httpOnly`、`secure`、`sameSite`、`url`。空 `expires` 会删掉。没有 `url` 也没有 `domain` 时，用保存的页面 URL。无名 cookie 跳过。
-4. `add_cookies`。`add_local_storage=True` 时按键写回 localStorage。
-5. 再 `goto` 保存的 URL。导航失败被忽略。
-
-退出：清空 context cookie。可选清空 localStorage。源码按名字删除；这里用 `clear_cookies` 清掉全部，包括空名字。
-
-## 依赖与环境
-
-- Playwright `>=1.40`。无云码，无账号环境变量。
-- 调用方自己持有 `Page`。本模块的 `create_browser` 不会被这些函数调用。
-- 拷贝 `platforms/cookie/`。cookie 文件路径由调用方指定，不要把导出的 JSON 提交进仓库（里面有会话）。
+- 保存：用页面当前地址覆盖传入的 `url`。有地址时按该 URL 筛选 cookie；没有地址时取页面上下文里的全部。`partition_key` 非空时再取一次并追加。`expirationDate` 数字直接当 unix 秒；字符串按 UTC 解析（含 `Z` 和 `10/5/2026, 05:41:39`）。写出 `expires`、`sessionCookie`，去掉 `expirationDate`。localStorage 为空则存 `{}`。JSON `ensure_ascii=False`、缩进 4。
+- Cookie登录：`window.origin` 不在文件里的 url 中就先打开该 url。然后按名称逐个 `remove_cookie`（空名称跳过），再 `set_cookie`。`sessionCookie=True` 不写过期时间；`False` 时 `expires` 是从现在起的秒数（文件里的绝对时间戳会原样传给这个参数，与 `_core.login` 的 `**cookie` 一致）。`添加本地存储` 默认关。最后再打开 url，失败忽略。
+- 退出：删除每个非空名称的 cookie。`删除本地存储` 默认关。
+- 设置：`url_type=auto` 用网页对象地址，`manual` 用传入 url。默认会话 Cookie、HttpOnly 关、Secure 关、有效期 100 秒。
+- 筛选：`name` / `domain` / `path` / `url` / `partition_key` 空字符串忽略。`domain` 为完全相等或子域。`path` 完全相等。`url` 按域名、路径前缀、Secure 与协议是否匹配。`filter_secure` / `filter_session` 为假时不过滤；为真时 `secure` / `session` 的 True/False 才生效。返回键含 `expirationDate`、`name`、`value`、`domain`、`path`、`httpOnly`、`secure`。
+- 指定 Cookie：同一套筛选，返回第一条；没有则 `{}`。
+- 移除：`appoint_cookie` 按 url + name；`all` / `all_cookie` 删掉该 url 下的 cookie，url 为空则清空 context。
 
 ## 调用方法
 
 ```python
 from playwright.sync_api import sync_playwright
-from platforms.cookie.cookie_login_pw import save_cookies, load_cookies, logout_cookies
+from platforms.cookie.cookie_login_pw import (
+    get_cookie, get_cookies_v2, load_cookies, logout_cookies,
+    remove_cookie, save_cookies, set_cookie,
+)
 
 with sync_playwright() as playwright:
-    browser = playwright.chromium.launch(headless=False)
-    page = browser.new_page()
+    browser = playwright.chromium.launch(headless=True)
+    page = browser.new_context().new_page()
     page.goto("https://example.com/")
-    text = save_cookies(page, save_path="/tmp/session.json", partition_key="ignored")
-    logout_cookies(page, del_local_storage=True)
-    load_cookies(page, "/tmp/session.json", add_local_storage=True)
+    set_cookie("https://example.com/", page=page, name="sid", value="1", sessionCookie=False, expires=100)
+    print(get_cookies_v2(page=page, name="sid"))
+    print(get_cookie("https://example.com/", page=page, name="sid"))
+    text = save_cookies(page, "/tmp/cookies.json")
+    load_cookies(page, "/tmp/cookies.json", add_local_storage=False)
+    remove_cookie("https://example.com/", "sid", page=page, remove_type="appoint_cookie")
+    logout_cookies(page, del_local_storage=False)
     browser.close()
 ```
 
-`save_cookies` 返回 JSON 字符串。`load_cookies` / `logout_cookies` 返回 `None`。
+已打开的 Chrome：`get_cookies_v2(mode="chrome", cdp_url="http://127.0.0.1:9222", url="https://example.com/")`。
 
-域名辅助：
-
-```python
-from platforms.cookie.cookie_login_pw import extract_domain_from_url
-print(extract_domain_from_url("https://www.example.com/path"))
-```
+应用主流程示例：`python -m platforms.cookie.example_main_flow --cdp-url http://127.0.0.1:9222 --cookie-file /tmp/cookies.json`。
 
 ## 注意事项
 
-- 必须先有页面。不要指望 `load_cookies()` 自己启动浏览器。
-- `partition_key` 不生效。
-- 导出文件含 cookie 和 localStorage，等同会话密钥，不要提交。
-- 恢复时若 origin 已经包含在 URL 中，不会先跳转，直接在当前页清 cookie 再写回。
-- `sameSite` 取值要符合 Playwright 要求，源码里的异常值可能导致 `add_cookies` 抛错。
+- `cef` / `ie` / `firefox` / `360se` / `auto` 在没有 Page 时不支持，需已打开的 Playwright 页面，或 `chrome`/`edge` 的 CDP。
+- Playwright 读出的 cookie 通常没有 `partitionKey`。传入 `partition_key` 时只保留带该字段且相等的项。
+- 不要把 cookie 文件提交进仓库。
+- 保存路径为空时只返回 JSON 字符串，不写文件。
 
 ## 测试
 
-`tests/test_remaining_logins_pw.py` 的 `test_cookie_roundtrip` 在临时目录做保存、规范化过期时间和加载。不访问真实店铺。
-
 ```bash
-pytest tests/test_remaining_logins_pw.py::test_cookie_roundtrip -q
+pytest tests/test_cookie_app_pw.py tests/test_remaining_logins_pw.py::test_cookie_roundtrip -q
 ```

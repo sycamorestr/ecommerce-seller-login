@@ -74,7 +74,7 @@
 
 | 指令 | 模块 | 状态 |
 | --- | --- | --- |
-| 保存 Cookie / Cookie 登录 / 退出 | `platforms/cookie/` | ported |
+| Cookie登录 / 保存Cookie / Cookie退出登录 / 设置Cookie / 获取筛选所有Cookie / 获取指定Cookie / 移除Cookie | `platforms/cookie/` | ported |
 | 云码、图鉴、银行滑块 | 各登录目录里的 `captcha.py` | captcha-only |
 
 ## 7. 网页对象
